@@ -15,9 +15,9 @@ def get_ligature_source(fontname):
     fontname = fontname.lower()
     for weight in ['Bold', 'Medium', 'Regular', 'Light']:
         if fontname.endswith('-' + weight.lower()):
-            return 'input/FiraCode/distr/otf/FiraCode-%s.otf' % weight
+            return 'input/fira/distr/otf/FiraCode-%s.otf' % weight
 
-    return 'input/FiraCode/distr/otf/FiraCode-Regular.otf'
+    return 'input/fira/distr/otf/FiraCode-Regular.otf'
     
 
 class LigatureCreator(object):
