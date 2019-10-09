@@ -1,0 +1,22 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install FontForge
+      run: |
+        sudo apt-get install fontforge python-fontforge
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Clone Fira Code and IBM Plex repositories
+      run: ./scripts/download.sh
+    - name: Build Lilex
+      run: ./scripts/build.sh
+    - name: Upload results
+      uses: actions/upload-artifact@v1
+      with:
+        name: Lilex
+        path: build/
