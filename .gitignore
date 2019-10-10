@@ -1,3 +1,4 @@
 input/fira
 input/plex
 build/
+src/__pycache__/
