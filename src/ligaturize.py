@@ -5,9 +5,9 @@ from os import path
 
 from ligatures import ligatures
 
-COPYRIGHT = '''
-Programming ligatures added by Mikhael Khrustik from FiraCode
-FiraCode Copyright (c) 2015 by Nikita Prokopov'''
+COPYRIGHT = 'Copyright 2019 The Lilex by Mikhael Khrustik (https://github.com/mishamyrt/lilex)'
+
+FONT_NAME = 'Lilex'
 
 PLEX_MONO_GLOB = 'input/plex/IBM-Plex-Mono/fonts/complete/otf/*.otf'
 
@@ -141,11 +141,14 @@ def update_font_metadata(font, new_name):
 
     print("Ligaturizing font %s" % (path.basename(font.path)))
 
-    font.copyright += COPYRIGHT
-    replace_sfnt(font, 'UniqueID', '%s; Ligaturized' % font.fullname)
+    font.copyright = COPYRIGHT
+    font.familyname = FONT_NAME
+    replace_sfnt(font, 'UniqueID', font.fullname)
     replace_sfnt(font, 'Preferred Family', new_name)
     replace_sfnt(font, 'Compatible Full', new_name)
     replace_sfnt(font, 'WWS Family', new_name)
+    replace_sfnt(font, 'Manufacturer', 'Mikhael Khrstik')
+
 
 def ligaturize_font(input_font_file, output_dir,
                     output_name, **kwargs):
@@ -153,10 +156,7 @@ def ligaturize_font(input_font_file, output_dir,
 
     ligature_font_file = get_ligature_source(font.fontname)
 
-    if output_name:
-        name = output_name
-    else:
-        name = font.familyname
+    name = output_name
 
     update_font_metadata(font, name)
 
@@ -188,4 +188,4 @@ files = glob(PLEX_MONO_GLOB)
 for input_file in files:
     ligaturize_font(
       input_file, output_dir='build/',
-      output_name='Lilex')
+      output_name=FONT_NAME)
