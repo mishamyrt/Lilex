@@ -140,6 +140,7 @@ def update_font_metadata(font, new_name):
 
     font.copyright = COPYRIGHT
     font.familyname = FONT_NAME
+    font.sfntRevision = 1.0
     replace_sfnt(font, 'UniqueID', font.fullname)
     replace_sfnt(font, 'Preferred Family', new_name)
     replace_sfnt(font, 'Compatible Full', new_name)
