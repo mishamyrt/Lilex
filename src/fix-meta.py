@@ -32,6 +32,7 @@ def get_font_name(table):
 
 def fix_meta(font_path):
     font = TTFont(font_path)
+    del font['FFTM']    
     table = font["name"]
     designers = get_designers(table) + ', Nikita Prokopov, Mikhael Khrustik'
     font_name = get_font_name(table)
@@ -51,9 +52,6 @@ def fix_meta(font_path):
             table.names.remove(rec)
 
     font.save(font_path)
-
-
-fix_meta('build/otf/Lilex-Regular.otf')
 
 files = glob(LILEX_OTF_GLOB)
 for input_file in files:
