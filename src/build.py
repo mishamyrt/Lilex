@@ -6,7 +6,7 @@ from os import path
 from ligatures import ligatures
 from fonts import fonts
 
-COPYRIGHT = 'Copyright 2019 The Lilex Authors (https://github.com/mishamyrt/lilex/blob/master/AUTHORS)'
+COPYRIGHT = 'Copyright 2019 The Lilex Project Authors (https://github.com/mishamyrt/lilex/blob/master/AUTHORS)'
 
 FONT_NAME = 'Lilex'
 
