@@ -139,8 +139,6 @@ def update_font_metadata(font, new_name):
         font.fullname = "%s %s" % (new_name, 'Regular') 
         font.fontname = "%s-Regular" % new_name.replace(' ', '')
 
-    print("Ligaturizing font %s" % (path.basename(font.path)))
-
     font.copyright = COPYRIGHT
     font.familyname = FONT_NAME
     replace_sfnt(font, 'UniqueID', font.fullname)
@@ -160,7 +158,6 @@ def ligaturize_font(input_font_file, output_dir,
 
     update_font_metadata(font, name)
 
-    print('    ...using ligatures from %s' % ligature_font_file)
     firacode = fontforge.open(ligature_font_file)
 
     creator = LigatureCreator(font, firacode, **kwargs)
@@ -181,7 +178,7 @@ def ligaturize_font(input_font_file, output_dir,
 
     # Generate font & move to output directory
     output_font_file = path.join(output_dir, output_font_type[1:], font.fontname + output_font_type)
-    print("    ...saving to '%s' (%s)" % (output_font_file, font.fullname))
+    print("Saving %s..." % font.fullname)
     font.generate(output_font_file)
 
 files = glob(PLEX_MONO_GLOB)
