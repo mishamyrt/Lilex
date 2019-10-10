@@ -6,9 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Install FontForge
+    - name: Install dependencies
       run: |
-        sudo apt-get install fontforge python-fontforge
+        sudo apt-get install fontforge python-fontforge -y
+        sudo pip3 install fonttools
     - name: Checkout
       uses: actions/checkout@v1
     - name: Clone Fira Code and IBM Plex repositories
