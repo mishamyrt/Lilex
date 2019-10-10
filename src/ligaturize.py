@@ -4,12 +4,11 @@ from glob import glob
 from os import path
 
 from ligatures import ligatures
+from fonts import fonts
 
 COPYRIGHT = 'Copyright 2019 The Lilex by Mikhael Khrustik (https://github.com/mishamyrt/lilex)'
 
 FONT_NAME = 'Lilex'
-
-PLEX_MONO_GLOB = 'input/plex/IBM-Plex-Mono/fonts/complete/otf/*.otf'
 
 def get_ligature_source(fontname):
     fontname = fontname.lower()
@@ -181,8 +180,7 @@ def ligaturize_font(input_font_file, output_dir,
     print("Saving %s..." % font.fullname)
     font.generate(output_font_file)
 
-files = glob(PLEX_MONO_GLOB)
-for input_file in files:
+for input_file in fonts:
     ligaturize_font(
       input_file, output_dir='build/',
       output_name=FONT_NAME)
