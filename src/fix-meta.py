@@ -8,7 +8,8 @@ FAMILY_RELATED_IDS = dict(
     VERSION=5,
     DESIGNER=9,
     DESIGNER_URL=11,
-    MANUFACTOR_URL=12
+    MANUFACTOR_URL=12,
+    TRADEMARK=7
 )
 
 
@@ -46,6 +47,8 @@ def fix_meta(font_path):
             rec.string = designers
         if name_id == FAMILY_RELATED_IDS['FONT_NAME']:
             rec.string = font_name
+        if name_id == FAMILY_RELATED_IDS['TRADEMARK']:
+            table.names.remove(rec)
 
     font.save(font_path)
 
