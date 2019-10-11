@@ -171,10 +171,7 @@ def ligaturize_font(input_font_file, output_dir,
 
     font.upos += font.uwidth
 
-    if input_font_file[-4:].lower() == '.otf':
-        output_font_type = '.otf'
-    else:
-        output_font_type = '.ttf'
+    output_font_type = '.otf'
 
     # Generate font & move to output directory
     output_font_file = path.join(output_dir, output_font_type[1:], font.fontname + output_font_type)
