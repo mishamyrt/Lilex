@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<designspace format="3">
+ <axes>
+  <axis default="400" maximum="700" name="weight" tag="wght" minimum="340">
+   <labelname xml:lang="en">Weight</labelname>
+  </axis>
+ </axes>
+ <sources>
+  <source familyname="Lilex" name="Regular" stylename="Regular" filename="masters/Lilex-Regular.ufo">
+   <lib copy="1"/>
+   <groups copy="1"/>
+   <info copy="1"/>
+   <features copy="1"/>
+   <location>
+    <dimension name="weight" xvalue="400"/>
+   </location>
+  </source>
+  <source familyname="Lilex" name="Bold" stylename="Light" filename="masters/Lilex-Bold.ufo">
+   <location>
+    <dimension name="weight" xvalue="700"/>
+   </location>
+  </source>
+ </sources>
+ <instances>
+  <instance familyname="Lilex" name="Regular" stylename="Regular" filename="instances/Lilex-Regular.ufo">
+   <location>
+    <dimension name="weight" xvalue="400"/>
+   </location>
+  </instance>
+  <instance familyname="Lilex" name="Bold" stylename="Bold" filename="instances/Lilex-Bold.ufo">
+   <location>
+    <dimension name="weight" xvalue="700"/>
+   </location>
+  </instance>
+  <instance familyname="Lilex" name="Light" stylename="Light" filename="instances/Lilex-Light.ufo">
+   <location>
+    <dimension name="weight" xvalue="340"/>
+   </location>
+  </instance>
+  <instance familyname="Lilex" name="Retina" stylename="Retina" filename="instances/Lilex-Retina.ufo">
+   <location>
+    <dimension name="weight" xvalue="410"/>
+   </location>
+  </instance>
+ </instances>
+</designspace>

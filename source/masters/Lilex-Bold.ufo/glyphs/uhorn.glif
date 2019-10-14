@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uhorn" format="1">
+  <unicode hex="01B0"/>
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="1196" y="1262" type="line"/>
+      <point x="948" y="1262" type="line"/>
+      <point x="948" y="1032" type="line"/>
+      <point x="774" y="1032" type="line" name="hr01"/>
+      <point x="774" y="354" type="line" smooth="yes"/>
+      <point x="774" y="254"/>
+      <point x="684" y="204"/>
+      <point x="592" y="204" type="curve" smooth="yes"/>
+      <point x="476" y="204"/>
+      <point x="418" y="274"/>
+      <point x="418" y="404" type="curve"/>
+      <point x="418" y="404"/>
+      <point x="418" y="404"/>
+      <point x="418" y="404" type="curve"/>
+      <point x="418" y="1032" type="line"/>
+      <point x="122" y="1032" type="line"/>
+      <point x="122" y="364" type="line" smooth="yes"/>
+      <point x="122" y="114"/>
+      <point x="260" y="-24"/>
+      <point x="458" y="-24" type="curve" smooth="yes"/>
+      <point x="624" y="-24"/>
+      <point x="716" y="72"/>
+      <point x="762" y="188" type="curve"/>
+      <point x="774" y="188" type="line"/>
+      <point x="774" y="0" type="line" name="hr02"/>
+      <point x="1070" y="0" type="line"/>
+      <point x="1070" y="860" type="line"/>
+      <point x="1095" y="865"/>
+      <point x="1115" y="873"/>
+      <point x="1131" y="884" type="curve" smooth="yes"/>
+      <point x="1180" y="916"/>
+      <point x="1196" y="974"/>
+      <point x="1196" y="1056" type="curve" smooth="yes" name="hr03"/>
+    </contour>
+    <contour>
+      <point x="596" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="596" y="1032" type="move" name="top"/>
+    </contour>
+  </outline>
+</glyph>
