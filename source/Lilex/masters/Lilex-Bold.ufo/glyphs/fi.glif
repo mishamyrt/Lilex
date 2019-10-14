@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fi" format="1">
+  <unicode hex="FB01"/>
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="150" y="0" type="line"/>
+      <point x="446" y="0" type="line"/>
+      <point x="446" y="802" type="line"/>
+      <point x="774" y="802" type="line"/>
+      <point x="774" y="0" type="line"/>
+      <point x="1070" y="0" type="line"/>
+      <point x="1070" y="1032" type="line"/>
+      <point x="446" y="1032" type="line"/>
+      <point x="446" y="1250" type="line"/>
+      <point x="658" y="1250" type="line"/>
+      <point x="658" y="1480" type="line"/>
+      <point x="464" y="1480" type="line" smooth="yes"/>
+      <point x="250" y="1480"/>
+      <point x="150" y="1356"/>
+      <point x="150" y="1182" type="curve" smooth="yes"/>
+      <point x="150" y="1032" type="line"/>
+      <point x="62" y="1032" type="line"/>
+      <point x="62" y="802" type="line"/>
+      <point x="150" y="802" type="line"/>
+    </contour>
+    <contour>
+      <point x="922" y="1164" type="curve" smooth="yes" name="hr01"/>
+      <point x="1054" y="1164"/>
+      <point x="1100" y="1226"/>
+      <point x="1100" y="1304" type="curve" smooth="yes"/>
+      <point x="1100" y="1362" type="line" smooth="yes"/>
+      <point x="1100" y="1442"/>
+      <point x="1054" y="1502"/>
+      <point x="922" y="1502" type="curve" smooth="yes"/>
+      <point x="790" y="1502"/>
+      <point x="744" y="1442"/>
+      <point x="744" y="1362" type="curve" smooth="yes"/>
+      <point x="744" y="1304" type="line" smooth="yes"/>
+      <point x="744" y="1226"/>
+      <point x="790" y="1164"/>
+    </contour>
+  </outline>
+</glyph>

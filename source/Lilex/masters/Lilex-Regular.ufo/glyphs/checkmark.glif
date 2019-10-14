@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="checkmark" format="1">
+  <unicode hex="2713"/>
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="456" y="0" type="line" name="hr00"/>
+      <point x="628" y="0" type="line"/>
+      <point x="1188" y="1374" type="line"/>
+      <point x="1046" y="1424" type="line"/>
+      <point x="718" y="610" type="line"/>
+      <point x="552" y="178" type="line"/>
+      <point x="542" y="178" type="line"/>
+      <point x="392" y="610" type="line"/>
+      <point x="244" y="1012" type="line"/>
+      <point x="92" y="968" type="line"/>
+    </contour>
+  </outline>
+</glyph>

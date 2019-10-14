@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ohook" format="1">
+  <unicode hex="1ECF"/>
+  <advance width="1200" height="1560"/>
+  <outline>
+    <component base="o"/>
+    <component base="hookcomb" xOffset="600"/>
+  </outline>
+</glyph>

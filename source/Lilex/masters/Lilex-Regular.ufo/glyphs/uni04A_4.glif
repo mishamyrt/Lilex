@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04A4" format="1">
+  <unicode hex="04A4"/>
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="98" y="0" type="line" name="hr00"/>
+      <point x="266" y="0" type="line"/>
+      <point x="266" y="634" type="line"/>
+      <point x="630" y="634" type="line"/>
+      <point x="630" y="0" type="line"/>
+      <point x="798" y="0" type="line"/>
+      <point x="798" y="1250" type="line"/>
+      <point x="1172" y="1250" type="line"/>
+      <point x="1172" y="1396" type="line"/>
+      <point x="630" y="1396" type="line"/>
+      <point x="630" y="780" type="line"/>
+      <point x="266" y="780" type="line"/>
+      <point x="266" y="1396" type="line"/>
+      <point x="98" y="1396" type="line"/>
+    </contour>
+  </outline>
+</glyph>

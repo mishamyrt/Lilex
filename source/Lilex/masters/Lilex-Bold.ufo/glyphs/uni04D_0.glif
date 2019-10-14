@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04D0" format="1">
+  <unicode hex="04D0"/>
+  <advance width="1200" height="1560"/>
+  <outline>
+    <component base="A"/>
+    <component base="breve.cyrl_case"/>
+  </outline>
+</glyph>

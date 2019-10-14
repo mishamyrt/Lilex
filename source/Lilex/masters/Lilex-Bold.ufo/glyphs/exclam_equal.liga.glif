@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="exclam_equal.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="1074" y="722" type="line" name="hr00.1"/>
+      <point x="1074" y="958" type="line"/>
+      <point x="-1082" y="958" type="line"/>
+      <point x="-1082" y="722" type="line"/>
+    </contour>
+    <contour>
+      <point x="1074" y="262" type="line"/>
+      <point x="1074" y="498" type="line"/>
+      <point x="-1082" y="498" type="line"/>
+      <point x="-1082" y="262" type="line"/>
+    </contour>
+    <contour>
+      <point x="480" y="1228" type="line" name="hr00.1"/>
+      <point x="276" y="1346" type="line"/>
+      <point x="-480" y="26" type="line"/>
+      <point x="-274" y="-92" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.guides</key>
+  <array>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>958</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>262</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>498</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>722</real>
+    </dict>
+  </array>
+  </dict>
+  </lib>
+</glyph>

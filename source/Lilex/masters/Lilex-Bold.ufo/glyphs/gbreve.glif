@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="gbreve" format="1">
+  <unicode hex="011F"/>
+  <advance width="1200" height="1560"/>
+  <outline>
+    <component base="g.alt02"/>
+    <component base="breve" xOffset="-12"/>
+  </outline>
+</glyph>

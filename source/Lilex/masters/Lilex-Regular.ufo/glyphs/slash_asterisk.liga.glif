@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="slash_asterisk.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <component base="slash" xOffset="-1106"/>
+    <component base="asterisk" xOffset="-196" yOffset="44"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.guides</key>
+  <array>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>1146</real>
+    </dict>
+  </array>
+  </dict>
+  </lib>
+</glyph>
