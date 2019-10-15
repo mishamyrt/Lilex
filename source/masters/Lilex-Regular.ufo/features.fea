@@ -586,6 +586,14 @@ feature calt {
         sub underscore'  underscore  by LIG;
     } underscore_underscore;
 
+    lookup slash_equal {
+        ignore sub slash slash' equal;
+        ignore sub slash' equal equal;
+        sub LIG equal' by slash_equal.liga;
+        sub slash'  equal  by LIG;
+    } slash_equal;
+
+
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
 } calt;

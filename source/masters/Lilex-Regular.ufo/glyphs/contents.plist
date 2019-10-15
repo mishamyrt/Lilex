@@ -1236,6 +1236,8 @@
   <string>slash.glif</string>
   <key>slash_asterisk.liga</key>
   <string>slash_asterisk.liga.glif</string>
+  <key>slash_equal.liga</key>
+  <string>slash_equal.liga.glif</string>
   <key>slash_greater.liga</key>
   <string>slash_greater.liga.glif</string>
   <key>slash_slash.liga</key>
