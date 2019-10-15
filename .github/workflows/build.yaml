@@ -15,10 +15,8 @@ jobs:
         sudo pip3 install fontmake
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Clone Fira Code and IBM Plex repositories
-      run: ./scripts/download.sh
     - name: Build Lilex
-      run: ./scripts/build.sh
+      run: ./scripts/build
     - name: Upload results
       uses: actions/upload-artifact@v1
       with:
