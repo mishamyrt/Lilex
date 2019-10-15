@@ -7,6 +7,8 @@ Refused from using the patching method to create my own source code based on IBM
 
 Made a variable TTF.
 
+Added `&&` `==` `===` `!=` `!==` `~~` `||` `**` `***` `//` `=>` `~~>` `>=` `<=` `*>` `/*` `*/` `.?` `~=` `--` `++` `..` `...` `::` `#!` `</` `/>` `www` `__`
+
 ## [1.000 beta1] — October 9, 2019
 
 Initial release:
