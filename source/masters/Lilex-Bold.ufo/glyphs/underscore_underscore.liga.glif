@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="underscore_underscore.liga" format="1">
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="-1081" y="-142" type="line"/>
+      <point x="-1081" y="-384" type="line"/>
+      <point x="1079" y="-384" type="line" name="hr00.1"/>
+      <point x="1079" y="-142" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

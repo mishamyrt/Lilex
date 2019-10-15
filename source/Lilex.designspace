@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <designspace format="3">
  <axes>
-  <axis name="weight" maximum="700" minimum="340" default="400" tag="wght">
+  <axis name="weight" default="400" tag="wght" minimum="340" maximum="700">
    <labelname xml:lang="en">Weight</labelname>
   </axis>
  </axes>
  <sources>
-  <source filename="masters/Lilex-Regular.ufo" familyname="Lilex" stylename="Regular" name="Regular">
+  <source name="Regular" familyname="Lilex" filename="masters/Lilex-Regular.ufo" stylename="Regular">
    <lib copy="1"/>
    <groups copy="1"/>
    <info copy="1"/>
@@ -15,29 +15,29 @@
     <dimension name="weight" xvalue="400"/>
    </location>
   </source>
-  <source filename="masters/Lilex-Bold.ufo" familyname="Lilex" stylename="Bold" name="Bold">
+  <source name="Bold" familyname="Lilex" filename="masters/Lilex-Bold.ufo" stylename="Bold">
    <location>
     <dimension name="weight" xvalue="700"/>
    </location>
   </source>
  </sources>
  <instances>
-  <instance filename="instances/Lilex-Regular.ufo" familyname="Lilex" stylename="Regular" name="Regular">
+  <instance name="Regular" familyname="Lilex" filename="instances/Lilex-Regular.ufo" stylename="Regular">
    <location>
     <dimension name="weight" xvalue="400"/>
    </location>
   </instance>
-  <instance filename="instances/Lilex-Bold.ufo" familyname="Lilex" stylename="Bold" name="Bold">
+  <instance name="Bold" familyname="Lilex" filename="instances/Lilex-Bold.ufo" stylename="Bold">
    <location>
     <dimension name="weight" xvalue="700"/>
    </location>
   </instance>
-  <instance filename="instances/Lilex-Light.ufo" familyname="Lilex" stylename="Light" name="Light">
+  <instance name="Light" familyname="Lilex" filename="instances/Lilex-Light.ufo" stylename="Light">
    <location>
     <dimension name="weight" xvalue="340"/>
    </location>
   </instance>
-  <instance filename="instances/Lilex-Retina.ufo" familyname="Lilex" stylename="Retina" name="Retina">
+  <instance name="Retina" familyname="Lilex" filename="instances/Lilex-Retina.ufo" stylename="Retina">
    <location>
     <dimension name="weight" xvalue="410"/>
    </location>

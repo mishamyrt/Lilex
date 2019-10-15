@@ -579,6 +579,13 @@ feature calt {
         sub w'   w  w  by LIG;
     } w_w_w;
 
+    lookup underscore_underscore {
+        ignore sub underscore underscore' underscore;
+        ignore sub underscore' underscore underscore;
+        sub LIG underscore' by underscore_underscore.liga;
+        sub underscore'  underscore  by LIG;
+    } underscore_underscore;
+
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
 } calt;
