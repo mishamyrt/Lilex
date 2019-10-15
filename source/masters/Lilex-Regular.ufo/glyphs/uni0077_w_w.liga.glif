@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0077_w_w.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-1898.32" y="0" type="line"/>
+      <point x="-1716.7" y="737" type="line"/>
+      <point x="-1699.9" y="737" type="line"/>
+      <point x="-1523.53" y="0" type="line"/>
+      <point x="-1298.86" y="0" type="line"/>
+      <point x="-1164.49" y="737" type="line"/>
+      <point x="-1147.69" y="737" type="line"/>
+      <point x="-1013.31" y="0" type="line"/>
+      <point x="-788.65" y="0" type="line"/>
+      <point x="-608.08" y="737" type="line"/>
+      <point x="-591.282" y="737" type="line"/>
+      <point x="-413.862" y="0" type="line"/>
+      <point x="-190.249" y="0" type="line"/>
+      <point x="-54.8214" y="737" type="line"/>
+      <point x="-36.9743" y="737" type="line"/>
+      <point x="98.4532" y="0" type="line"/>
+      <point x="322.066" y="0" type="line"/>
+      <point x="502.636" y="737" type="line"/>
+      <point x="520.483" y="737" type="line"/>
+      <point x="696.854" y="0" type="line"/>
+      <point x="920.467" y="0" type="line"/>
+      <point x="1090.54" y="1032" type="line"/>
+      <point x="942.513" y="1032" type="line"/>
+      <point x="815.484" y="140" type="line"/>
+      <point x="795.537" y="140" type="line"/>
+      <point x="606.569" y="905" type="line"/>
+      <point x="416.55" y="905" type="line"/>
+      <point x="227.582" y="140" type="line"/>
+      <point x="207.635" y="140" type="line"/>
+      <point x="50.1612" y="905" type="line"/>
+      <point x="-139.857" y="905" type="line"/>
+      <point x="-296.281" y="140" type="line"/>
+      <point x="-315.178" y="140" type="line"/>
+      <point x="-504.147" y="905" type="line"/>
+      <point x="-694.165" y="905" type="line"/>
+      <point x="-883.134" y="140" type="line"/>
+      <point x="-903.081" y="140" type="line"/>
+      <point x="-1061.6" y="905" type="line"/>
+      <point x="-1251.62" y="905" type="line"/>
+      <point x="-1404.9" y="140" type="line"/>
+      <point x="-1423.79" y="140" type="line"/>
+      <point x="-1613.81" y="905" type="line"/>
+      <point x="-1802.78" y="905" type="line"/>
+      <point x="-1992.8" y="140" type="line"/>
+      <point x="-2011.7" y="140" type="line"/>
+      <point x="-2138.73" y="1032" type="line"/>
+      <point x="-2292" y="1032" type="line"/>
+      <point x="-2121.93" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.typemytype.robofont.guides</key>
+  <array>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>-600</real>
+      <key>y</key>
+      <real>0</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>-610</real>
+      <key>y</key>
+      <real>0</real>
+    </dict>
+  </array>
+  </dict>
+  </lib>
+</glyph>

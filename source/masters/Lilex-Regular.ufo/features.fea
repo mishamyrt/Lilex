@@ -576,6 +576,14 @@ feature calt {
         sub slash'  greater  by LIG;
     } slash_greater;
 
+    lookup w_w_w {
+        ignore sub w w' w w;
+        ignore sub w' w w w;
+        sub LIG LIG w' by uni0077_w_w.liga;
+        sub LIG  w' w  by LIG;
+        sub w'   w  w  by LIG;
+    } w_w_w;
+
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
 } calt;

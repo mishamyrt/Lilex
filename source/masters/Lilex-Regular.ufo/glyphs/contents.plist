@@ -1332,6 +1332,8 @@
   <string>umacron.glif</string>
   <key>underscore</key>
   <string>underscore.glif</string>
+  <key>uni0077_w_w.liga</key>
+  <string>uni0077_w_w.liga.glif</string>
   <key>uni0400</key>
   <string>uni0400.glif</string>
   <key>uni0401</key>
