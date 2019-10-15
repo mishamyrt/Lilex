@@ -1120,6 +1120,8 @@
   <string>percent.glif</string>
   <key>period</key>
   <string>period.glif</string>
+  <key>period_equal.liga</key>
+  <string>period_equal.liga.glif</string>
   <key>period_period.liga</key>
   <string>period_period.liga.glif</string>
   <key>period_period_period.liga</key>

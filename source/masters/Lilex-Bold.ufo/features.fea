@@ -593,6 +593,13 @@ feature calt {
         sub slash'  equal  by LIG;
     } slash_equal;
 
+    lookup period_equal {
+        ignore sub period period' equal;
+        ignore sub period' equal equal;
+        sub LIG equal' by period_equal.liga;
+        sub period'  equal  by LIG;
+    } period_equal;
+
 
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
