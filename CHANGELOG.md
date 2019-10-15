@@ -3,9 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [1.000 beta2] — Unreleased
 
-Refused from using the patching assembly to create its own source code based on IBM Plex Mono.
+Refused from using the patching method to create my own source code based on IBM Plex Mono.
 
-Made a variable TTF. 
+Made a variable TTF.
 
 ## [1.000 beta1] — October 9, 2019
 
