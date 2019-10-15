@@ -15,7 +15,7 @@
   <key>italicAngle</key>
   <integer>-0</integer>
   <key>openTypeHeadCreated</key>
-  <string>2019/10/14 19:37:09</string>
+  <string>2019/10/15 16:13:39</string>
   <key>openTypeHeadFlags</key>
   <array>
   </array>
@@ -40,7 +40,7 @@
   <key>openTypeNamePreferredFamilyName</key>
   <string>Lilex</string>
   <key>openTypeNamePreferredSubfamilyName</key>
-  <string>Light</string>
+  <string>Bold</string>
   <key>openTypeNameVersion</key>
   <string>Version 1.000</string>
   <key>openTypeOS2Selection</key>
@@ -124,14 +124,6 @@
     <integer>724</integer>
     <integer>726</integer>
   </array>
-  <key>postscriptStemSnapH</key>
-  <array>
-    <integer>96</integer>
-  </array>
-  <key>postscriptStemSnapV</key>
-  <array>
-    <integer>122</integer>
-  </array>
   <key>postscriptUnderlinePosition</key>
   <integer>-314</integer>
   <key>postscriptUnderlineThickness</key>
@@ -143,7 +135,7 @@
   <key>styleMapStyleName</key>
   <string>regular</string>
   <key>styleName</key>
-  <string>Light</string>
+  <string>Bold</string>
   <key>unitsPerEm</key>
   <integer>2000</integer>
   <key>versionMajor</key>

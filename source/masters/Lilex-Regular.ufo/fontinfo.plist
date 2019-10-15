@@ -15,7 +15,7 @@
   <key>italicAngle</key>
   <integer>-0</integer>
   <key>openTypeHeadCreated</key>
-  <string>2019/10/14 19:37:09</string>
+  <string>2019/10/15 16:13:39</string>
   <key>openTypeHeadFlags</key>
   <array>
   </array>
@@ -123,14 +123,6 @@
     <integer>658</integer>
     <integer>724</integer>
     <integer>726</integer>
-  </array>
-  <key>postscriptStemSnapH</key>
-  <array>
-    <integer>146</integer>
-  </array>
-  <key>postscriptStemSnapV</key>
-  <array>
-    <integer>228</integer>
   </array>
   <key>postscriptUnderlinePosition</key>
   <integer>-280</integer>
