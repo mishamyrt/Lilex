@@ -1,0 +1,22 @@
+#!/bin/bash
+. scripts/_paths
+
+ttf_directory="${build_directory}/ttf"
+
+echo "Building TTF..."
+fontmake -m $designspace_file -o ttf --output-dir $ttf_directory -i > /dev/null 2>&1
+
+statics=$(ls $ttf_directory/*.ttf)
+for file in $statics; do 
+    echo "Fixing DSIG in " ${file}
+    gftools fix-dsig --autofix ${file} > /dev/null 2>&1
+
+    echo "Autohint" ${file}
+    # autohint with detailed info
+    hintedFile=${file/".ttf"/"-hinted.ttf"}
+    ttfautohint -I ${file} ${hintedFile} --stem-width-mode nnn --composites --windows-compatibility > /dev/null 2>&1
+    cp ${hintedFile} ${file}
+    rm -rf ${hintedFile}
+done
+
+echo "TTF builded!"
