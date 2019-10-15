@@ -248,11 +248,6 @@ feature salt {
 } salt;
 
 feature mark {
-	# Created: Sun May 21 13:18:12 2017
-	# PS Name: IBMEliotMono
-	# MM Inst: IBM Eliot Mono
-	# exported from FontLab
-
 	@mGC_bottom_0_0 = [cedillacomb commabelowcomb dotbelowcomb];
 	@mGC_top_0_516 = [acutecomb breveacute brevecomb brevegrave brevehook brevetilde caroncomb circumflexacute circumflexbreve circumflexcomb circumflexgrave circumflexhook circumflextilde commaturnedtopcomb dieresisacute dieresiscaron dieresiscomb dieresisgrave dieresismacron dotaccentcomb gravecomb hookcomb hungarumlautcomb macroncomb ringcomb tildecomb];
 	@mGC_top_0_698 = [breveacute.case brevegrave.case brevehook.case brevetilde.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case circumflextilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case dieresismacron.case hookcomb.case];
