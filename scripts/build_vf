@@ -5,7 +5,7 @@ vf_directory="${build_directory}/variable_ttf"
 vf_file="${vf_directory}/Lilex-VF.ttf"
 
 echo "Building variable TTF..."
-фывfontmake -m $designspace_file -o variable --output-dir $vf_directory > /dev/null 2>&1
+fontmake -m $designspace_file -o variable --output-dir $vf_directory > /dev/null 2>&1
 
 echo "Fixing meta..."
 gftools fix-vf-meta $vf_file > /dev/null 2>&1
