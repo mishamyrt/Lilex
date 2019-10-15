@@ -600,6 +600,14 @@ feature calt {
         sub period'  equal  by LIG;
     } period_equal;
 
+lookup colon_equal {
+  ignore sub colon colon' equal;
+  ignore sub colon' equal equal;
+  ignore sub parenleft question colon' equal;
+  sub LIG equal' by colon_equal.liga;
+  sub colon'  equal  by LIG;
+} colon_equal;
+
 
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;

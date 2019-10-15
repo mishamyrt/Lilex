@@ -1049,6 +1049,7 @@
     <string>underscore_underscore.liga</string>
     <string>slash_equal.liga</string>
     <string>period_equal.liga</string>
+    <string>colon_equal.liga</string>
   </array>
 </dict>
 </plist>

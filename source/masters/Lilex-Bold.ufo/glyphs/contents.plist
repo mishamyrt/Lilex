@@ -670,6 +670,8 @@
   <string>colon.glif</string>
   <key>colon_colon.liga</key>
   <string>colon_colon.liga.glif</string>
+  <key>colon_equal.liga</key>
+  <string>colon_equal.liga.glif</string>
   <key>coloncurrency</key>
   <string>coloncurrency.glif</string>
   <key>comma</key>

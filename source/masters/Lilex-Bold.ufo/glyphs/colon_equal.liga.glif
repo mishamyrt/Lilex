@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="period_equal.liga" format="1">
+<glyph name="colon_equal.liga" format="1">
   <advance width="1200" height="1560"/>
   <outline>
-    <component base="period" xScale="1.19095" yScale="1.19095" xOffset="-1274.47" yOffset="403.202"/>
-    <component base="equal" xScale="1.14639" yScale="1" xOffset="-198.127" yOffset="-1.13687e-13"/>
+    <component base="colon" xOffset="-1162" yOffset="94"/>
+    <component base="equal" xScale="1.14839" xOffset="-201.375" yOffset="-5.68434e-14"/>
   </outline>
   <lib>
   <dict>
@@ -64,17 +64,7 @@
       <key>x</key>
       <real>0</real>
       <key>y</key>
-      <real>744</real>
-    </dict>
-    <dict>
-      <key>isGlobal</key>
-      <false/>
-      <key>magnetic</key>
-      <integer>5</integer>
-      <key>x</key>
-      <real>0</real>
-      <key>y</key>
-      <real>480</real>
+      <real>610</real>
     </dict>
   </array>
   </dict>
