@@ -12,7 +12,7 @@ jobs:
         sudo pip3 install fonttools
         sudo pip3 install git+https://github.com/googlefonts/gftools
         sudo pip3 install --upgrade cu2qu
-        sudi pip3 install fontmake
+        sudo pip3 install fontmake
     - name: Checkout
       uses: actions/checkout@v1
     - name: Clone Fira Code and IBM Plex repositories
