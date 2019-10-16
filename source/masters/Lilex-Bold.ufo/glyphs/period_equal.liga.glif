@@ -3,14 +3,14 @@
   <advance width="1200" height="1560"/>
   <outline>
     <component base="period" xScale="1.19095" yScale="1.19095" xOffset="-1274.47" yOffset="403.202"/>
-    <component base="equal" xScale="1.14639" yScale="1" xOffset="-198.127" yOffset="-1.13687e-13"/>
+    <component base="equal" xScale="1.14639" xOffset="-198.127" yOffset="-1.13687e-13"/>
   </outline>
   <lib>
   <dict>
   <key>com.typemytype.robofont.mark</key>
   <array>
-    <real>0.604</real>
     <real>0.6</real>
+    <real>0.602</real>
     <real>1</real>
     <real>1</real>
   </array>
