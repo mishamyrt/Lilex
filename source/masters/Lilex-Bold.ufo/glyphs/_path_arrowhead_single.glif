@@ -3,13 +3,15 @@
   <advance width="1200" height="1560"/>
   <outline>
     <contour>
-      <point x="1170" y="604" type="line" name="hr00"/>
-      <point x="441" y="1333" type="line"/>
-      <point x="286" y="1178" type="line"/>
-      <point x="848" y="616" type="line"/>
-      <point x="848" y="592" type="line"/>
-      <point x="286" y="31" type="line"/>
-      <point x="441" y="-124" type="line"/>
+      <point x="1204" y="609" type="line" name="hr00.1"/>
+      <point x="475" y="1338" type="line"/>
+      <point x="320" y="1183" type="line"/>
+      <point x="590" y="913" type="line"/>
+      <point x="882" y="684" type="line"/>
+      <point x="882" y="534" type="line"/>
+      <point x="590" y="306" type="line"/>
+      <point x="320" y="36" type="line"/>
+      <point x="475" y="-119" type="line"/>
     </contour>
   </outline>
   <lib>
