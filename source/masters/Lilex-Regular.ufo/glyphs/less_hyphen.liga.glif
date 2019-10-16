@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="period_period.liga" format="1">
-  <advance width="1200" height="780"/>
+<glyph name="less_hyphen.liga" format="1">
+  <advance width="1200" height="1560"/>
   <outline>
-    <component base="period" xOffset="-1050"/>
-    <component base="period" xOffset="-150"/>
+    <component base="hyphen_greater.liga" xScale="-1" xOffset="145"/>
   </outline>
   <lib>
   <dict>
   <key>com.typemytype.robofont.mark</key>
   <array>
+    <real>0.604</real>
     <real>0.6</real>
-    <real>0.642</real>
     <real>1</real>
     <real>1</real>
   </array>

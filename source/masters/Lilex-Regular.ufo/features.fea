@@ -615,6 +615,12 @@ lookup hyphen_greater {
   sub hyphen'  greater  by LIG;
 } hyphen_greater;
 
+lookup less_hyphen {
+  ignore sub less less' hyphen;
+  ignore sub less' hyphen hyphen;
+  sub LIG hyphen' by less_hyphen.liga;
+  sub less'  hyphen  by LIG;
+} less_hyphen;
 
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
