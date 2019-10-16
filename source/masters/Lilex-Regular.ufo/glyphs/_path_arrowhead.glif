@@ -4,8 +4,8 @@
   <outline>
     <contour>
       <point x="1163" y="604" type="line" name="hr00"/>
-      <point x="538" y="1236" type="line"/>
-      <point x="426" y="1124" type="line"/>
+      <point x="535" y="1233" type="line"/>
+      <point x="429" y="1127" type="line"/>
       <point x="616" y="940" type="line"/>
       <point x="718" y="860" type="line"/>
       <point x="806" y="756" type="line"/>
@@ -14,8 +14,8 @@
       <point x="810" y="462" type="line"/>
       <point x="718" y="362" type="line"/>
       <point x="608" y="270" type="line"/>
-      <point x="426" y="96" type="line"/>
-      <point x="538" y="-16" type="line"/>
+      <point x="430" y="92" type="line"/>
+      <point x="540" y="-18" type="line"/>
     </contour>
   </outline>
 </glyph>

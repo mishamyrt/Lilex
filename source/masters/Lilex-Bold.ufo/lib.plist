@@ -1021,6 +1021,8 @@
     <string>slash_equal.liga</string>
     <string>period_equal.liga</string>
     <string>colon_equal.liga</string>
+    <string>_path_arrowhead_single</string>
+    <string>hyphen_greater.liga</string>
   </array>
 </dict>
 </plist>

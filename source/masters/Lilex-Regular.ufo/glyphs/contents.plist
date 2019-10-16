@@ -374,6 +374,8 @@
   <string>Z_dotaccent.glif</string>
   <key>_path_arrowhead</key>
   <string>_path_arrowhead.glif</string>
+  <key>_path_arrowhead_single</key>
+  <string>_path_arrowhead_single.glif</string>
   <key>a</key>
   <string>a.glif</string>
   <key>a.alt01</key>
@@ -912,6 +914,8 @@
   <string>hungarumlautcomb.glif</string>
   <key>hyphen</key>
   <string>hyphen.glif</string>
+  <key>hyphen_greater.liga</key>
+  <string>hyphen_greater.liga.glif</string>
   <key>hyphen_hyphen.liga</key>
   <string>hyphen_hyphen.liga.glif</string>
   <key>i</key>

@@ -608,6 +608,13 @@ lookup colon_equal {
   sub colon'  equal  by LIG;
 } colon_equal;
 
+lookup hyphen_greater {
+  ignore sub hyphen hyphen' greater;
+  ignore sub hyphen' greater greater;
+  sub LIG greater' by hyphen_greater.liga;
+  sub hyphen'  greater  by LIG;
+} hyphen_greater;
+
 
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
