@@ -980,6 +980,8 @@
   <string>less_hyphen.liga.glif</string>
   <key>less_slash.liga</key>
   <string>less_slash.liga.glif</string>
+  <key>less_slash_greater.liga</key>
+  <string>less_slash_greater.liga.glif</string>
   <key>lessequal</key>
   <string>lessequal.glif</string>
   <key>lira</key>

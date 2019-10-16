@@ -367,6 +367,14 @@ feature calt {
         sub exclam'   equal  equal  by LIG;
     } exclam_equal_equal;
 
+lookup less_slash_greater {
+  ignore sub less less' slash greater;
+  ignore sub less' slash greater greater;
+  sub LIG LIG greater' by less_slash_greater.liga;
+  sub LIG  slash' greater  by LIG;
+  sub less'   slash  greater  by LIG;
+} less_slash_greater;
+
     lookup period_period_period {
         ignore sub period period' period period;
         ignore sub period' period period period;
