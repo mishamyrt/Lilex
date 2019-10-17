@@ -16,7 +16,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Build Lilex
-      run: ./scripts/build
+      run: make
     - name: Upload results
       uses: actions/upload-artifact@v1
       with:
