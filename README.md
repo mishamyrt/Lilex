@@ -8,9 +8,11 @@
     monospaced font with programming ligatures
 </h2>
 
-Lilex is the font containing a set of ligatures from for common programming multi-character combinations. This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like .. or //, ligatures allow us to correct spacing.
+Lilex is the modern programming font containing a set of ligatures for common programming multi-character combinations.
 
-Compiled version are available under [releases](https://github.com/mishamyrt/Lilex/releases)
+This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like .. or //, ligatures allow us to correct spacing.
+
+Compiled versions are available under [releases](https://github.com/mishamyrt/Lilex/releases).
 
 ## Examples
 
