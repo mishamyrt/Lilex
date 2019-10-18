@@ -1,23 +1,64 @@
+BUILD_DIRECTORY=build
+DESIGNSPACE_FILE=source/Lilex.designspace
+VF_FILE="$(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf"
 UNAME := $(shell uname)
+ifeq (, $(shell which lsb_release))
+OS := $(UNAME)
+else
+OS := $(shell lsb_release -si)
+endif
 
-all: ttf otf vf
+all: ttf otf variable_ttf
 
-ttf:
-	./scripts/build_ttf
+ttf: raw_ttf
+	$(foreach file,$(wildcard $(BUILD_DIRECTORY)/ttf/*.ttf),$(call ttf_fix,$(file)))
+
+raw_ttf:
+	fontmake -m $(DESIGNSPACE_FILE) -o ttf --output-dir "$(BUILD_DIRECTORY)/ttf" -i
 
 otf:
-	./scripts/build_otf
+	fontmake -m $(DESIGNSPACE_FILE) -o otf  \
+	--output-dir "$(BUILD_DIRECTORY)/otf" -i
 
-vf:
-	./scripts/build_vf
+variable_ttf:
+	fontmake -m $(DESIGNSPACE_FILE) -o variable \
+	--output-dir "$(BUILD_DIRECTORY)/variable_ttf"
+	gftools fix-vf-meta $(VF_FILE)
+	gftools fix-nonhinting $(VF_FILE) $(VF_FILE)
+	gftools fix-gasp --autofix $(VF_FILE)
+	gftools fix-dsig --autofix $(VF_FILE)
+	rm $(BUILD_DIRECTORY)/variable_ttf/Lilex-VF-backup-fonttools-prep-gasp.ttf
+	rm $(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf.fix
 
 install:
 	 -@make install_$(UNAME)
+
+bootstrap:
+	 -@make bootstrap_$(OS)
 
 install_Darwin:
 	rm -rf ~/Library/Fonts/Lilex
 	cp -r build/otf ~/Library/Fonts/Lilex
 
+bootstrap_Darwin:
+	brew install cairo freetype harfbuzz pkg-config ttfautohint python3
+	-@make bootstrap_pip
+
+bootstrap_Ubuntu:
+	apt install python3-setuptools ttfautohint
+	-@make bootstrap_pip
+
+bootstrap_pip:
+	pip3 install fonttools git+https://github.com/googlefonts/gftools fontmake
+	pip3 install -U cu2qu
+
 install_Linux:
 	mkdir -p ~/.fonts
 	rm -rf ~/.fonts/Lilex
+
+define ttf_fix
+	gftools fix-dsig --autofix $(1)
+	ttfautohint -I $(1) $(1)-hinted --stem-width-mode nnn --composites --windows-compatibility
+	mv $(1)-hinted $(1)
+
+endef

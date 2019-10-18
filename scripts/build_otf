@@ -1,9 +1,0 @@
-#!/bin/bash
-. scripts/_paths
-
-otf_directory="${build_directory}/otf"
-
-echo "Building OTF..."
-fontmake -m $designspace_file -o otf --output-dir $otf_directory -i
-
-echo "OTF builded!"
