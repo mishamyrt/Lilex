@@ -18,6 +18,20 @@ Compiled version are available under [releases](https://github.com/mishamyrt/Lil
 
 <img src="./showcases/js@2x.png">
 
+## Build
+
+At the moment building is possible on Ubuntu and macOS. First, install the build dependencies.
+
+```sh
+sudo make bootstrap
+```
+
+Now run the command to build it.
+
+```sh
+make
+```
+
 ## Credits
 
 -   Author: Mikhael Khrustik
