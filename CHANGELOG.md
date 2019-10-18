@@ -3,7 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [1.000] — Unreleased
 
+Rebuilt from bash scripts to Makefile.
 
+Added `##`.
 
 ## [1.000 beta2] — October 16, 2019
 
@@ -11,7 +13,7 @@ Refused from using the patching method to create my own source code based on IBM
 
 Made a variable TTF.
 
-Added `&&` `==` `===` `!=` `!==` `~~` `||` `**` `***` `//` `=>` `~~>` `>=` `<=` `*>` `/*` `*/` `.?` `~=` `--` `++` `..` `...` `::` `#!` `</` `/>` `www` `__` `/=` `.=` `:=` `->` `<-` `</>`
+Added `&&` `==` `===` `!=` `!==` `~~` `||` `**` `***` `//` `=>` `~~>` `>=` `<=` `*>` `/*` `*/` `.?` `~=` `--` `++` `..` `...` `::` `#!` `</` `/>` `www` `__` `/=` `.=` `:=` `->` `<-` `</>`.
 
 ## [1.000 beta1] — October 9, 2019
 

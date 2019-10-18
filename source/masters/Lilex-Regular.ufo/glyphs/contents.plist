@@ -1042,6 +1042,8 @@
   <string>numbersign.glif</string>
   <key>numbersign_exclam.liga</key>
   <string>numbersign_exclam.liga.glif</string>
+  <key>numbersign_numbersign.liga</key>
+  <string>numbersign_numbersign.liga.glif</string>
   <key>numerosign</key>
   <string>numerosign.glif</string>
   <key>o</key>

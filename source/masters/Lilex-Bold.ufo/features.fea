@@ -630,6 +630,13 @@ lookup less_hyphen {
   sub less'  hyphen  by LIG;
 } less_hyphen;
 
+lookup numbersign_numbersign {
+  ignore sub numbersign numbersign' numbersign;
+  ignore sub numbersign' numbersign numbersign;
+  sub LIG numbersign' by numbersign_numbersign.liga;
+  sub numbersign'  numbersign  by LIG;
+} numbersign_numbersign;
+
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
 } calt;

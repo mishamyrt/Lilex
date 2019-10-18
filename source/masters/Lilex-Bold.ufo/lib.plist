@@ -1025,6 +1025,7 @@
     <string>hyphen_greater.liga</string>
     <string>less_hyphen.liga</string>
     <string>less_slash_greater.liga</string>
+    <string>numbersign_numbersign.liga</string>
   </array>
 </dict>
 </plist>
