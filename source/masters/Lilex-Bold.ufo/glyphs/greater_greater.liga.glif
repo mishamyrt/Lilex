@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="period_period.liga" format="1">
-  <advance width="1200" height="780"/>
+<glyph name="greater_greater.liga" format="1">
+  <advance width="1200" height="1560"/>
   <outline>
-    <component base="period" xOffset="-1050"/>
-    <component base="period" xOffset="-150"/>
+    <component base="greater" xOffset="-1082"/>
+    <component base="greater" xOffset="-122"/>
   </outline>
   <lib>
   <dict>
   <key>com.typemytype.robofont.mark</key>
   <array>
     <real>0.6</real>
-    <real>0.656</real>
+    <real>0.602</real>
     <real>1</real>
     <real>1</real>
   </array>

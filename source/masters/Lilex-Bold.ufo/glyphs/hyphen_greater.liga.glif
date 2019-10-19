@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hyphen_greater.liga" format="1">
-  <advance width="1201" height="1560"/>
+  <advance width="1201"/>
   <outline>
+    <component base="_path_arrowhead_single"/>
     <contour>
-      <point x="799" y="514" type="line" name="hr00"/>
-      <point x="799" y="702" type="line"/>
-      <point x="309" y="721" type="line"/>
+      <point x="975" y="514" type="line" name="hr00"/>
+      <point x="975" y="702" type="line"/>
+      <point x="435" y="721" type="line"/>
       <point x="-918" y="721" type="line"/>
       <point x="-918" y="487" type="line"/>
-      <point x="309" y="495" type="line"/>
-    </contour>
-    <contour>
-      <point x="1091" y="604" type="line" name="hr00.1"/>
-      <point x="362" y="1333" type="line"/>
-      <point x="207" y="1178" type="line"/>
-      <point x="477" y="908" type="line"/>
-      <point x="769" y="679" type="line"/>
-      <point x="769" y="529" type="line"/>
-      <point x="477" y="301" type="line"/>
-      <point x="207" y="31" type="line"/>
-      <point x="362" y="-124" type="line"/>
+      <point x="435" y="495" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -27,9 +17,22 @@
   <key>com.typemytype.robofont.mark</key>
   <array>
     <real>0.6</real>
-    <real>0.609</real>
+    <real>0.616</real>
     <real>1</real>
     <real>1</real>
+  </array>
+  <key>com.typemytype.robofont.guides</key>
+  <array>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>1035</real>
+      <key>y</key>
+      <real>0</real>
+    </dict>
   </array>
   </dict>
   </lib>

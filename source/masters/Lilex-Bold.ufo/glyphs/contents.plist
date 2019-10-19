@@ -800,6 +800,8 @@
   <string>equal_equal_equal.liga.glif</string>
   <key>equal_greater.liga</key>
   <string>equal_greater.liga.glif</string>
+  <key>equal_greater_greater.liga</key>
+  <string>equal_greater_greater.liga.glif</string>
   <key>estimated</key>
   <string>estimated.glif</string>
   <key>eth</key>
@@ -880,6 +882,8 @@
   <string>greater.glif</string>
   <key>greater_equal.liga</key>
   <string>greater_equal.liga.glif</string>
+  <key>greater_greater.liga</key>
+  <string>greater_greater.liga.glif</string>
   <key>greaterequal</key>
   <string>greaterequal.glif</string>
   <key>guarani</key>
