@@ -794,6 +794,8 @@
   <string>eogonek.glif</string>
   <key>equal</key>
   <string>equal.glif</string>
+  <key>equal_colon_equal.liga</key>
+  <string>equal_colon_equal.liga.glif</string>
   <key>equal_equal.liga</key>
   <string>equal_equal.liga.glif</string>
   <key>equal_equal_equal.liga</key>

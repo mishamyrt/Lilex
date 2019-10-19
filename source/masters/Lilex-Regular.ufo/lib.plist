@@ -1060,6 +1060,7 @@
     <string>less_equal_greater.liga</string>
     <string>greater_greater.liga</string>
     <string>equal_greater_greater.liga</string>
+    <string>equal_colon_equal.liga</string>
   </array>
 </dict>
 </plist>

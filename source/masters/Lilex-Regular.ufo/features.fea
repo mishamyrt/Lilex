@@ -393,6 +393,16 @@ lookup less_slash_greater {
   sub less'   slash  greater  by LIG;
 } less_slash_greater;
 
+lookup equal_colon_equal {
+  ignore sub equal equal' colon equal;
+  ignore sub equal' colon equal equal;
+  ignore sub parenleft question equal' colon equal;
+  ignore sub parenleft question less equal' colon equal;
+  sub LIG LIG equal' by equal_colon_equal.liga;
+  sub LIG  colon' equal  by LIG;
+  sub equal'   colon  equal  by LIG;
+} equal_colon_equal;
+
 lookup equal_greater_greater {
   ignore sub equal equal' greater greater;
   ignore sub equal' greater greater greater;
