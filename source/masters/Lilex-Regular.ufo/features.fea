@@ -417,16 +417,6 @@ lookup numbersign_numbersign_numbersign {
   sub numbersign'   numbersign  numbersign  by LIG;
 } numbersign_numbersign_numbersign;
 
-
-lookup less_equal_greater {
-  ignore sub less less' equal greater;
-  ignore sub less' equal greater greater;
-  ignore sub parenleft question less' equal greater;
-  sub LIG LIG greater' by less_equal_greater.liga;
-  sub LIG  equal' greater  by LIG;
-  sub less'   equal  greater  by LIG;
-} less_equal_greater;
-
     lookup slash_asterisk {
         ignore sub slash slash' asterisk;
         ignore sub slash' asterisk asterisk;
@@ -663,6 +653,16 @@ lookup numbersign_numbersign {
   sub LIG numbersign' by numbersign_numbersign.liga;
   sub numbersign'  numbersign  by LIG;
 } numbersign_numbersign;
+
+lookup greater_greater {
+  ignore sub greater greater' greater;
+  ignore sub greater' greater greater;
+  ignore sub asterisk greater' greater;
+  ignore sub plus greater' greater;
+  ignore sub dollar greater' greater;
+  sub LIG greater' by greater_greater.liga;
+  sub greater'  greater  by LIG;
+} greater_greater;
 
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
