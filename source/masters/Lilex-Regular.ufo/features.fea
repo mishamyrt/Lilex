@@ -376,6 +376,15 @@ lookup numbersign_numbersign_numbersign_numbersign {
         sub exclam'   equal  equal  by LIG;
     } exclam_equal_equal;
 
+lookup less_equal_greater {
+  ignore sub less less' equal greater;
+  ignore sub less' equal greater greater;
+  ignore sub parenleft question less' equal greater;
+  sub LIG LIG greater' by less_equal_greater.liga;
+  sub LIG  equal' greater  by LIG;
+  sub less'   equal  greater  by LIG;
+} less_equal_greater;
+
 lookup less_slash_greater {
   ignore sub less less' slash greater;
   ignore sub less' slash greater greater;
