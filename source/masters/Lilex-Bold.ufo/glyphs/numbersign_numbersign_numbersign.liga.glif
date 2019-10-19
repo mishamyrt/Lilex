@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="numbersign_numbersign_numbersign.liga" format="1">
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="-1653" y="0" type="line"/>
+      <point x="-1585" y="388" type="line"/>
+      <point x="-1007" y="388" type="line"/>
+      <point x="-1075" y="0" type="line" name="hr00.1"/>
+      <point x="-841" y="0" type="line"/>
+      <point x="-687" y="873" type="line"/>
+      <point x="-595" y="1396" type="line"/>
+      <point x="-829" y="1396" type="line"/>
+      <point x="-897" y="1008" type="line"/>
+      <point x="-1475" y="1008" type="line"/>
+      <point x="-1407" y="1396" type="line"/>
+      <point x="-1641" y="1396" type="line"/>
+      <point x="-1733" y="873" type="line"/>
+      <point x="-1795" y="524" type="line"/>
+      <point x="-1887" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="-441" y="1396" type="line"/>
+      <point x="-595" y="524" type="line"/>
+      <point x="-687" y="0" type="line"/>
+      <point x="-453" y="0" type="line"/>
+      <point x="-385" y="388" type="line"/>
+      <point x="193" y="388" type="line"/>
+      <point x="125" y="0" type="line" name="hr00.2"/>
+      <point x="359" y="0" type="line"/>
+      <point x="513" y="873" type="line"/>
+      <point x="605" y="1396" type="line"/>
+      <point x="371" y="1396" type="line"/>
+      <point x="303" y="1008" type="line"/>
+      <point x="-275" y="1008" type="line"/>
+      <point x="-207" y="1396" type="line"/>
+    </contour>
+    <contour>
+      <point x="-2423" y="388" type="line"/>
+      <point x="-2207" y="388" type="line"/>
+      <point x="-2275" y="0" type="line" name="hr00"/>
+      <point x="-2041" y="0" type="line"/>
+      <point x="-1890" y="859" type="line"/>
+      <point x="-1795" y="1396" type="line"/>
+      <point x="-2029" y="1396" type="line"/>
+      <point x="-2097" y="1008" type="line"/>
+      <point x="-2347" y="1008" type="line"/>
+      <point x="-2347" y="788" type="line"/>
+      <point x="-2137" y="788" type="line"/>
+      <point x="-2167" y="608" type="line"/>
+      <point x="-2423" y="608" type="line"/>
+    </contour>
+    <contour>
+      <point x="747" y="0" type="line"/>
+      <point x="815" y="388" type="line"/>
+      <point x="1065" y="388" type="line"/>
+      <point x="1065" y="608" type="line"/>
+      <point x="855" y="608" type="line"/>
+      <point x="885" y="788" type="line"/>
+      <point x="1141" y="788" type="line"/>
+      <point x="1141" y="1008" type="line"/>
+      <point x="925" y="1008" type="line"/>
+      <point x="993" y="1396" type="line"/>
+      <point x="759" y="1396" type="line"/>
+      <point x="664" y="859" type="line"/>
+      <point x="608" y="537" type="line"/>
+      <point x="513" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="-315" y="788" type="line"/>
+      <point x="263" y="788" type="line"/>
+      <point x="233" y="608" type="line"/>
+      <point x="-345" y="608" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1515" y="788" type="line"/>
+      <point x="-937" y="788" type="line"/>
+      <point x="-967" y="608" type="line"/>
+      <point x="-1545" y="608" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

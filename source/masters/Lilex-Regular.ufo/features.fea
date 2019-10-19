@@ -357,6 +357,15 @@ feature calt {
 
     @HexDigit = [@Digit a b c d e f A B C D E F];
 
+lookup numbersign_numbersign_numbersign_numbersign {
+  ignore sub numbersign numbersign' numbersign numbersign numbersign;
+  ignore sub numbersign' numbersign numbersign numbersign numbersign;
+  sub LIG LIG LIG numbersign' by numbersign_numbersign_numbersign_numbersign.liga;
+  sub LIG LIG  numbersign' numbersign  by LIG;
+  sub LIG  numbersign'  numbersign  numbersign  by LIG;
+  sub numbersign'   numbersign   numbersign  numbersign  by LIG;
+} numbersign_numbersign_numbersign_numbersign;
+
     lookup exclam_equal_equal {
         ignore sub exclam exclam' equal equal;
         ignore sub exclam' equal equal equal;
@@ -399,6 +408,14 @@ lookup less_slash_greater {
         sub LIG  asterisk' asterisk  by LIG;
         sub asterisk'   asterisk  asterisk  by LIG;
     } asterisk_asterisk_asterisk;
+
+lookup numbersign_numbersign_numbersign {
+  ignore sub numbersign numbersign' numbersign numbersign;
+  ignore sub numbersign' numbersign numbersign numbersign;
+  sub LIG LIG numbersign' by numbersign_numbersign_numbersign.liga;
+  sub LIG  numbersign' numbersign  by LIG;
+  sub numbersign'   numbersign  numbersign  by LIG;
+} numbersign_numbersign_numbersign;
 
     lookup slash_asterisk {
         ignore sub slash slash' asterisk;

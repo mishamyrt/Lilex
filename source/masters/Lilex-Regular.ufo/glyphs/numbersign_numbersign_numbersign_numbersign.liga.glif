@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="numbersign_numbersign_numbersign_numbersign.liga" format="1">
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="-1566" y="1396" type="line"/>
+      <point x="-1713" y="564" type="line"/>
+      <point x="-1812" y="0" type="line"/>
+      <point x="-1666" y="0" type="line"/>
+      <point x="-1590" y="432" type="line"/>
+      <point x="-904" y="432" type="line"/>
+      <point x="-980" y="0" type="line"/>
+      <point x="-834" y="0" type="line"/>
+      <point x="-687" y="832" type="line"/>
+      <point x="-588" y="1396" type="line"/>
+      <point x="-734" y="1396" type="line"/>
+      <point x="-810" y="964" type="line"/>
+      <point x="-1496" y="964" type="line"/>
+      <point x="-1420" y="1396" type="line"/>
+    </contour>
+    <contour>
+      <point x="-366" y="1396" type="line"/>
+      <point x="-513" y="564" type="line"/>
+      <point x="-612" y="0" type="line"/>
+      <point x="-466" y="0" type="line"/>
+      <point x="-390" y="432" type="line"/>
+      <point x="296" y="432" type="line"/>
+      <point x="220" y="0" type="line"/>
+      <point x="366" y="0" type="line"/>
+      <point x="513" y="832" type="line"/>
+      <point x="612" y="1396" type="line"/>
+      <point x="466" y="1396" type="line"/>
+      <point x="390" y="964" type="line"/>
+      <point x="-296" y="964" type="line"/>
+      <point x="-220" y="1396" type="line"/>
+    </contour>
+    <contour>
+      <point x="-2766" y="1396" type="line"/>
+      <point x="-2865" y="832" type="line"/>
+      <point x="-2913" y="564" type="line"/>
+      <point x="-3012" y="0" type="line"/>
+      <point x="-2866" y="0" type="line"/>
+      <point x="-2790" y="432" type="line"/>
+      <point x="-2104" y="432" type="line"/>
+      <point x="-2180" y="0" type="line"/>
+      <point x="-2034" y="0" type="line"/>
+      <point x="-1887" y="832" type="line"/>
+      <point x="-1788" y="1396" type="line"/>
+      <point x="-1934" y="1396" type="line"/>
+      <point x="-2010" y="964" type="line"/>
+      <point x="-2696" y="964" type="line"/>
+      <point x="-2620" y="1396" type="line"/>
+    </contour>
+    <contour>
+      <point x="-3568" y="432" type="line"/>
+      <point x="-3304" y="432" type="line"/>
+      <point x="-3380" y="0" type="line"/>
+      <point x="-3234" y="0" type="line"/>
+      <point x="-3087" y="832" type="line"/>
+      <point x="-2988" y="1396" type="line"/>
+      <point x="-3134" y="1396" type="line"/>
+      <point x="-3210" y="964" type="line"/>
+      <point x="-3496" y="964" type="line"/>
+      <point x="-3496" y="832" type="line"/>
+      <point x="-3234" y="832" type="line"/>
+      <point x="-3280" y="564" type="line"/>
+      <point x="-3568" y="564" type="line"/>
+    </contour>
+    <contour>
+      <point x="734" y="0" type="line"/>
+      <point x="810" y="432" type="line"/>
+      <point x="1096" y="432" type="line"/>
+      <point x="1096" y="564" type="line"/>
+      <point x="834" y="564" type="line"/>
+      <point x="880" y="832" type="line"/>
+      <point x="1168" y="832" type="line"/>
+      <point x="1168" y="964" type="line"/>
+      <point x="904" y="964" type="line"/>
+      <point x="980" y="1396" type="line"/>
+      <point x="834" y="1396" type="line"/>
+      <point x="735" y="832" type="line"/>
+      <point x="687" y="564" type="line"/>
+      <point x="588" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="-2766" y="564" type="line"/>
+      <point x="-2720" y="832" type="line"/>
+      <point x="-2034" y="832" type="line"/>
+      <point x="-2080" y="564" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1566" y="564" type="line"/>
+      <point x="-1520" y="832" type="line"/>
+      <point x="-834" y="832" type="line"/>
+      <point x="-880" y="564" type="line"/>
+    </contour>
+    <contour>
+      <point x="-320" y="832" type="line"/>
+      <point x="366" y="832" type="line"/>
+      <point x="320" y="564" type="line"/>
+      <point x="-366" y="564" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>
