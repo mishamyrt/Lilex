@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="less_equal_greater.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="-1923" y="742" type="line"/>
+      <point x="-1923" y="878" type="line"/>
+      <point x="698" y="878" type="line"/>
+      <point x="698" y="742" type="line"/>
+    </contour>
+    <contour>
+      <point x="-1923" y="342" type="line"/>
+      <point x="-1923" y="478" type="line"/>
+      <point x="698" y="478" type="line"/>
+      <point x="698" y="342" type="line"/>
+    </contour>
+    <contour>
+      <point x="400" y="-18" type="line"/>
+      <point x="290" y="92" type="line"/>
+      <point x="468" y="270" type="line"/>
+      <point x="578" y="362" type="line"/>
+      <point x="670" y="462" type="line"/>
+      <point x="826" y="600" type="line"/>
+      <point x="826" y="608" type="line"/>
+      <point x="666" y="756" type="line"/>
+      <point x="578" y="860" type="line"/>
+      <point x="476" y="940" type="line"/>
+      <point x="289" y="1127" type="line"/>
+      <point x="395" y="1233" type="line"/>
+      <point x="1023" y="604" type="line"/>
+    </contour>
+    <contour>
+      <point x="-2229" y="604" type="line"/>
+      <point x="-1601" y="1233" type="line"/>
+      <point x="-1495" y="1127" type="line"/>
+      <point x="-1682" y="940" type="line"/>
+      <point x="-1784" y="860" type="line"/>
+      <point x="-1872" y="756" type="line"/>
+      <point x="-2032" y="608" type="line"/>
+      <point x="-2032" y="600" type="line"/>
+      <point x="-1876" y="462" type="line"/>
+      <point x="-1784" y="362" type="line"/>
+      <point x="-1674" y="270" type="line"/>
+      <point x="-1496" y="92" type="line"/>
+      <point x="-1606" y="-18" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

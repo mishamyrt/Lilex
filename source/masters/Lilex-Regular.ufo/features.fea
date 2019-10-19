@@ -417,6 +417,16 @@ lookup numbersign_numbersign_numbersign {
   sub numbersign'   numbersign  numbersign  by LIG;
 } numbersign_numbersign_numbersign;
 
+
+lookup less_equal_greater {
+  ignore sub less less' equal greater;
+  ignore sub less' equal greater greater;
+  ignore sub parenleft question less' equal greater;
+  sub LIG LIG greater' by less_equal_greater.liga;
+  sub LIG  equal' greater  by LIG;
+  sub less'   equal  greater  by LIG;
+} less_equal_greater;
+
     lookup slash_asterisk {
         ignore sub slash slash' asterisk;
         ignore sub slash' asterisk asterisk;
