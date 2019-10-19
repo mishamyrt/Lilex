@@ -393,6 +393,16 @@ lookup less_slash_greater {
   sub less'   slash  greater  by LIG;
 } less_slash_greater;
 
+lookup equal_greater_greater {
+  ignore sub equal equal' greater greater;
+  ignore sub equal' greater greater greater;
+  ignore sub parenleft question equal' greater greater;
+  ignore sub parenleft question less equal' greater greater;
+  sub LIG LIG greater' by equal_greater_greater.liga;
+  sub LIG  greater' greater  by LIG;
+  sub equal'   greater  greater  by LIG;
+} equal_greater_greater;
+
     lookup period_period_period {
         ignore sub period period' period period;
         ignore sub period' period period period;
