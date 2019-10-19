@@ -800,6 +800,8 @@
   <string>equal_equal.liga.glif</string>
   <key>equal_equal_equal.liga</key>
   <string>equal_equal_equal.liga.glif</string>
+  <key>equal_exclam_equal.liga</key>
+  <string>equal_exclam_equal.liga.glif</string>
   <key>equal_greater.liga</key>
   <string>equal_greater.liga.glif</string>
   <key>equal_greater_greater.liga</key>

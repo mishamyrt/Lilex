@@ -385,6 +385,16 @@ lookup less_equal_greater {
   sub less'   equal  greater  by LIG;
 } less_equal_greater;
 
+lookup equal_exclam_equal.liga {
+  ignore sub equal equal' exclam equal;
+  ignore sub equal' exclam equal equal;
+  ignore sub parenleft question equal' exclam equal;
+  ignore sub parenleft question less equal' exclam equal;
+  sub LIG LIG equal' by equal_exclam_equal.liga;
+  sub LIG  exclam' equal  by LIG;
+  sub equal'   exclam  equal  by LIG;
+} equal_exclam_equal.liga;
+
 lookup less_slash_greater {
   ignore sub less less' slash greater;
   ignore sub less' slash greater greater;
@@ -692,6 +702,8 @@ lookup greater_greater {
   sub LIG greater' by greater_greater.liga;
   sub greater'  greater  by LIG;
 } greater_greater;
+
+
 
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
