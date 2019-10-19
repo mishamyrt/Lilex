@@ -2,19 +2,47 @@
 <glyph name="less_equal_greater.liga" format="1">
   <advance width="1200"/>
   <outline>
-    <component base="_path_arrowhead" xOffset="-143"/>
-    <component base="_path_arrowhead" xScale="-1" xOffset="-1062.41" yOffset="4.3201e-12"/>
     <contour>
-      <point x="-1923" y="742" type="line"/>
-      <point x="-1923" y="878" type="line"/>
-      <point x="698" y="878" type="line"/>
-      <point x="698" y="742" type="line"/>
+      <point x="-1928.07" y="742" type="line"/>
+      <point x="-1928.07" y="878" type="line"/>
+      <point x="719.228" y="878" type="line"/>
+      <point x="719.228" y="742" type="line"/>
     </contour>
     <contour>
-      <point x="-1923" y="342" type="line"/>
-      <point x="-1923" y="478" type="line"/>
-      <point x="698" y="478" type="line"/>
-      <point x="698" y="342" type="line"/>
+      <point x="-1928.07" y="342" type="line"/>
+      <point x="-1928.07" y="478" type="line"/>
+      <point x="719.228" y="478" type="line"/>
+      <point x="719.228" y="342" type="line"/>
+    </contour>
+    <contour>
+      <point x="1020.22" y="608" type="line"/>
+      <point x="396.017" y="-17" type="line"/>
+      <point x="286.934" y="92" type="line"/>
+      <point x="464.7" y="270" type="line"/>
+      <point x="574.793" y="362" type="line"/>
+      <point x="666.706" y="462" type="line"/>
+      <point x="823.261" y="604" type="line"/>
+      <point x="823.261" y="612" type="line"/>
+      <point x="666.706" y="754" type="line"/>
+      <point x="574.793" y="854" type="line"/>
+      <point x="464.7" y="946" type="line"/>
+      <point x="286.934" y="1124" type="line"/>
+      <point x="396.017" y="1233" type="line"/>
+    </contour>
+    <contour>
+      <point x="-2225.02" y="608" type="line"/>
+      <point x="-1601.83" y="1233" type="line"/>
+      <point x="-1492.74" y="1124" type="line"/>
+      <point x="-1670.51" y="946" type="line"/>
+      <point x="-1780.6" y="854" type="line"/>
+      <point x="-1872.52" y="754" type="line"/>
+      <point x="-2028.06" y="612" type="line"/>
+      <point x="-2028.06" y="604" type="line"/>
+      <point x="-1872.52" y="462" type="line"/>
+      <point x="-1780.6" y="362" type="line"/>
+      <point x="-1670.51" y="270" type="line"/>
+      <point x="-1492.74" y="92" type="line"/>
+      <point x="-1601.83" y="-17" type="line"/>
     </contour>
   </outline>
   <lib>

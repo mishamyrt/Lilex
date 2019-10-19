@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 Rebuilt from bash scripts to Makefile.
 
-Added `##` `###` `####` `<=>` `=>>`. 
+Added `##` `###` `####` `<=>` `>>` `=>>`. 
 
 ## [1.000 beta2] — October 16, 2019
 
