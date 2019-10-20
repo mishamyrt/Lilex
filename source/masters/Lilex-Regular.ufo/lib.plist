@@ -1063,6 +1063,7 @@
     <string>equal_colon_equal.liga</string>
     <string>equal_exclam_equal.liga</string>
     <string>colon.valign</string>
+    <string>less_less_equal.liga</string>
   </array>
 </dict>
 </plist>

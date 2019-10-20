@@ -385,6 +385,14 @@ lookup less_equal_greater {
   sub less'   equal  greater  by LIG;
 } less_equal_greater;
 
+lookup less_less_equal {
+  ignore sub less less' less equal;
+  ignore sub less' less equal equal;
+  sub LIG LIG equal' by less_less_equal.liga;
+  sub LIG  less' equal  by LIG;
+  sub less'   less  equal  by LIG;
+} less_less_equal;
+
 lookup equal_exclam_equal.liga {
   ignore sub equal equal' exclam equal;
   ignore sub equal' exclam equal equal;
