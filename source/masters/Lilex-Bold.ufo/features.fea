@@ -707,4 +707,5 @@ lookup greater_greater {
 
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
+    sub @Digit colon' @Digit by colon.valign;
 } calt;

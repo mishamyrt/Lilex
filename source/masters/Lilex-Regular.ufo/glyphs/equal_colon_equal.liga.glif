@@ -2,7 +2,7 @@
 <glyph name="equal_colon_equal.liga" format="1">
   <advance width="1200" height="1560"/>
   <outline>
-    <component base="equal" xScale="1.24895" yScale="1" xOffset="-2433.37" yOffset="3.97904e-13"/>
+    <component base="equal" xScale="1.24895" xOffset="-2433.37" yOffset="3.97904e-13"/>
     <component base="colon" xOffset="-1202" yOffset="95"/>
     <component base="equal" xScale="1.24939" xOffset="-269.849" yOffset="-5.68434e-14"/>
   </outline>
@@ -10,8 +10,8 @@
   <dict>
   <key>com.typemytype.robofont.mark</key>
   <array>
-    <real>0.604</real>
     <real>0.6</real>
+    <real>0.602</real>
     <real>1</real>
     <real>1</real>
   </array>

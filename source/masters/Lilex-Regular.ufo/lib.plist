@@ -1062,6 +1062,7 @@
     <string>equal_greater_greater.liga</string>
     <string>equal_colon_equal.liga</string>
     <string>equal_exclam_equal.liga</string>
+    <string>colon.valign</string>
   </array>
 </dict>
 </plist>

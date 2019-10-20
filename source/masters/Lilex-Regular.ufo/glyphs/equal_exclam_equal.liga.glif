@@ -2,7 +2,7 @@
 <glyph name="equal_exclam_equal.liga" format="1">
   <advance width="1200" height="1560"/>
   <outline>
-    <component base="equal" xScale="1.40258" yScale="1" xOffset="-2449.73" yOffset="-5.68434e-14"/>
+    <component base="equal" xScale="1.40258" xOffset="-2449.73" yOffset="-5.68434e-14"/>
     <component base="exclam" xOffset="-1199"/>
     <component base="equal" xScale="1.40295" xOffset="-431.772"/>
   </outline>
@@ -10,8 +10,8 @@
   <dict>
   <key>com.typemytype.robofont.mark</key>
   <array>
-    <real>0.604</real>
     <real>0.6</real>
+    <real>0.602</real>
     <real>1</real>
     <real>1</real>
   </array>

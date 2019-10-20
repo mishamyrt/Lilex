@@ -670,6 +670,8 @@
   <string>circumflextilde.case.glif</string>
   <key>colon</key>
   <string>colon.glif</string>
+  <key>colon.valign</key>
+  <string>colon.valign.glif</string>
   <key>colon_colon.liga</key>
   <string>colon_colon.liga.glif</string>
   <key>colon_equal.liga</key>

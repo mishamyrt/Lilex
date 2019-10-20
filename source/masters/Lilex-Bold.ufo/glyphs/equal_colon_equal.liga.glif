@@ -4,14 +4,14 @@
   <outline>
     <component base="equal" xScale="1.24684" xOffset="-2431.1" yOffset="-5.68434e-14"/>
     <component base="colon" xOffset="-1200" yOffset="95"/>
-    <component base="equal" xScale="1.25" yScale="1" xOffset="-268.5" yOffset="-1.13687e-13"/>
+    <component base="equal" xScale="1.25" xOffset="-268.5" yOffset="-1.13687e-13"/>
   </outline>
   <lib>
   <dict>
   <key>com.typemytype.robofont.mark</key>
   <array>
-    <real>0.604</real>
     <real>0.6</real>
+    <real>0.602</real>
     <real>1</real>
     <real>1</real>
   </array>
