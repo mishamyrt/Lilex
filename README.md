@@ -21,6 +21,10 @@ Compiled versions are available under [releases](https://github.com/mishamyrt/Li
 
 <img src="./showcases/php@2x.png">
 
+### Go
+
+<img src="./showcases/go@2x.png">
+
 ## Stylistic sets
 
 Additional features are available in the font, which are disabled by default.
