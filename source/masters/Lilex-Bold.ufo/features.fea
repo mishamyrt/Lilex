@@ -393,6 +393,14 @@ lookup less_less_equal {
   sub less'   less  equal  by LIG;
 } less_less_equal;
 
+lookup slash_asciitilde_backslash {
+  ignore sub slash slash' asciitilde backslash;
+  ignore sub slash' asciitilde backslash backslash;
+  sub LIG LIG backslash' by slash_asciitilde_backslash.liga;
+  sub LIG  asciitilde' backslash  by LIG;
+  sub slash'   asciitilde  backslash  by LIG;
+} slash_asciitilde_backslash;
+
 lookup equal_exclam_equal.liga {
   ignore sub equal equal' exclam equal;
   ignore sub equal' exclam equal equal;

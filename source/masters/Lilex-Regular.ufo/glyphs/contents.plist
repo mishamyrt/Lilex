@@ -1266,6 +1266,8 @@
   <string>sixsuperior.glif</string>
   <key>slash</key>
   <string>slash.glif</string>
+  <key>slash_asciitilde_backslash.liga</key>
+  <string>slash_asciitilde_backslash.liga.glif</string>
   <key>slash_asterisk.liga</key>
   <string>slash_asterisk.liga.glif</string>
   <key>slash_equal.liga</key>

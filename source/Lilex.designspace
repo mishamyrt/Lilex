@@ -1,45 +1,45 @@
 <?xml version='1.0' encoding='utf-8'?>
 <designspace format="3">
  <axes>
-  <axis name="weight" default="400" minimum="340" maximum="700" tag="wght">
+  <axis name="weight" tag="wght" minimum="340" maximum="700" default="400">
    <labelname xml:lang="en">Weight</labelname>
   </axis>
  </axes>
  <sources>
-  <source filename="masters/Lilex-Regular.ufo" familyname="Lilex" stylename="Regular" name="Regular">
+  <source name="Regular" filename="masters/Lilex-Regular.ufo" stylename="Regular" familyname="Lilex">
    <lib copy="1"/>
    <groups copy="1"/>
    <info copy="1"/>
    <features copy="1"/>
    <location>
-    <dimension xvalue="400" name="weight"/>
+    <dimension name="weight" xvalue="400"/>
    </location>
   </source>
-  <source filename="masters/Lilex-Bold.ufo" familyname="Lilex" stylename="Bold" name="Bold">
+  <source name="Bold" filename="masters/Lilex-Bold.ufo" stylename="Bold" familyname="Lilex">
    <location>
-    <dimension xvalue="700" name="weight"/>
+    <dimension name="weight" xvalue="700"/>
    </location>
   </source>
  </sources>
  <instances>
-  <instance filename="instances/Lilex-Regular.ufo" familyname="Lilex" stylename="Regular" name="Regular">
+  <instance name="Regular" filename="instances/Lilex-Regular.ufo" stylename="Regular" familyname="Lilex">
    <location>
-    <dimension xvalue="400" name="weight"/>
+    <dimension name="weight" xvalue="400"/>
    </location>
   </instance>
-  <instance filename="instances/Lilex-Bold.ufo" familyname="Lilex" stylename="Bold" name="Bold">
+  <instance name="Bold" filename="instances/Lilex-Bold.ufo" stylename="Bold" familyname="Lilex">
    <location>
-    <dimension xvalue="700" name="weight"/>
+    <dimension name="weight" xvalue="700"/>
    </location>
   </instance>
-  <instance filename="instances/Lilex-Light.ufo" familyname="Lilex" stylename="Light" name="Light">
+  <instance name="Light" filename="instances/Lilex-Light.ufo" stylename="Light" familyname="Lilex">
    <location>
-    <dimension xvalue="340" name="weight"/>
+    <dimension name="weight" xvalue="340"/>
    </location>
   </instance>
-  <instance filename="instances/Lilex-Retina.ufo" familyname="Lilex" stylename="Retina" name="Retina">
+  <instance name="Retina" filename="instances/Lilex-Retina.ufo" stylename="Retina" familyname="Lilex">
    <location>
-    <dimension xvalue="410" name="weight"/>
+    <dimension name="weight" xvalue="410"/>
    </location>
   </instance>
  </instances>
