@@ -1,11 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.000] — Unreleased
+## [1.000 rc1] — October 21, 2019
 
 Rebuilt from bash scripts to Makefile.
 
 Added `##` `###` `####` `<=>` `>>` `=>>` `=:=` `=!=` `<<=` `/~\`.
+
+Fixed arrows hinting.
 
 Added colon vertical alignment in time sequences `10:22`.
 
@@ -30,4 +32,4 @@ IBM Plex Mono version: 3.000
 
 [1.000 beta2]: https://github.com/mishamyrt/Lilex/releases/tag/1.000-beta2
 
-[1.000]: https://github.com/mishamyrt/Lilex/compare/1.000-beta2...develop
+[1.000 rc1]: https://github.com/mishamyrt/Lilex/releases/tag/1.000-rc1
