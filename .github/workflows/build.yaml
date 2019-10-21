@@ -11,7 +11,7 @@ jobs:
     - name: Bootstrap
       run: sudo make bootstrap
     - name: Build Lilex
-      run: make -j3
+      run: make
     - name: Upload results
       uses: actions/upload-artifact@v1
       with:
