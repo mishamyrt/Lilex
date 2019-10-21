@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="equal_greater_greater.liga" format="1">
+  <advance width="1200"/>
+  <outline>
+    <contour>
+      <point x="47" y="724" type="line" name="hr00.1.1"/>
+      <point x="4" y="960" type="line"/>
+      <point x="-2269" y="960" type="line"/>
+      <point x="-2269" y="724" type="line"/>
+    </contour>
+    <contour>
+      <point x="4" y="264" type="line"/>
+      <point x="71" y="500" type="line"/>
+      <point x="-2269" y="500" type="line"/>
+      <point x="-2269" y="264" type="line"/>
+    </contour>
+    <contour>
+      <point x="429" y="604" type="line" name="hr00.2"/>
+      <point x="-284" y="1318" type="line"/>
+      <point x="-439" y="1163" type="line"/>
+      <point x="-286" y="1010" type="line"/>
+      <point x="-124" y="909" type="line"/>
+      <point x="-28" y="758" type="line"/>
+      <point x="132" y="618" type="line"/>
+      <point x="132" y="594" type="line"/>
+      <point x="-24" y="472" type="line"/>
+      <point x="-124" y="314" type="line"/>
+      <point x="-284" y="214" type="line"/>
+      <point x="-447" y="51" type="line"/>
+      <point x="-285" y="-111" type="line"/>
+    </contour>
+    <contour>
+      <point x="1034" y="603" type="line" name="hr00.1.2"/>
+      <point x="305" y="1332" type="line"/>
+      <point x="150" y="1177" type="line"/>
+      <point x="437" y="890" type="line"/>
+      <point x="580" y="747" type="line"/>
+      <point x="723" y="603" type="line"/>
+      <point x="580" y="460" type="line"/>
+      <point x="437" y="317" type="line"/>
+      <point x="150" y="30" type="line"/>
+      <point x="305" y="-125" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.616</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.typemytype.robofont.guides</key>
+  <array>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>958</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>262</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>498</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>722</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>1035</real>
+      <key>y</key>
+      <real>0</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>-2269</real>
+      <key>y</key>
+      <real>0</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>1236</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>604</real>
+    </dict>
+  </array>
+  </dict>
+  </lib>
+</glyph>

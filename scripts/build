@@ -1,8 +1,0 @@
-#!/bin/bash
-. scripts/_paths
-
-mkdir -p $build_directory
-
-. scripts/build_vf & \
-. scripts/build_ttf & \
-. scripts/build_otf

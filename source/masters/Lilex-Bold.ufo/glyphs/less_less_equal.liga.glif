@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="less_less_equal.liga" format="1">
+  <advance width="1200" height="1560"/>
+  <outline>
+    <component base="equal_greater_greater.liga" xScale="-1" xOffset="-1235"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.6</real>
+    <real>0.602</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

@@ -13,9 +13,9 @@
   <key>familyName</key>
   <string>Lilex</string>
   <key>italicAngle</key>
-  <integer>-0</integer>
+  <integer>0</integer>
   <key>openTypeHeadCreated</key>
-  <string>2019/10/16 19:39:26</string>
+  <string>2019/10/20 21:32:44</string>
   <key>openTypeHeadFlags</key>
   <array>
   </array>
@@ -42,7 +42,7 @@
   <key>openTypeNamePreferredSubfamilyName</key>
   <string>Regular</string>
   <key>openTypeNameVersion</key>
-  <string>Version 1.000 beta2</string>
+  <string>Version 1.000 rc1</string>
   <key>openTypeOS2Selection</key>
   <array>
   </array>

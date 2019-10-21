@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="slash_asciitilde_backslash.liga" format="1">
+  <advance width="1200" height="1560"/>
+  <outline>
+    <component base="slash" xOffset="-2402"/>
+    <component base="backslash" xOffset="-2"/>
+    <component base="asciitilde_asciitilde.liga" xScale="0.953107" xOffset="-624.906" yOffset="-671"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

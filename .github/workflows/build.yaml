@@ -6,17 +6,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Install dependencies
-      run: |
-        sudo apt-get install python3-setuptools ttfautohint -y
-        sudo pip3 install fonttools
-        sudo pip3 install git+https://github.com/googlefonts/gftools
-        sudo pip3 install --upgrade cu2qu
-        sudo pip3 install fontmake
-    - name: Checkout
+    - name: Checkout  
       uses: actions/checkout@v1
+    - name: Bootstrap
+      run: sudo make bootstrap
     - name: Build Lilex
-      run: ./scripts/build
+      run: make
     - name: Upload results
       uses: actions/upload-artifact@v1
       with:

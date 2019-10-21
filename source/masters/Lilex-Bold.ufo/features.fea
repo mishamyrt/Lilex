@@ -357,6 +357,15 @@ feature calt {
 
     @HexDigit = [@Digit a b c d e f A B C D E F];
 
+lookup numbersign_numbersign_numbersign_numbersign {
+  ignore sub numbersign numbersign' numbersign numbersign numbersign;
+  ignore sub numbersign' numbersign numbersign numbersign numbersign;
+  sub LIG LIG LIG numbersign' by numbersign_numbersign_numbersign_numbersign.liga;
+  sub LIG LIG  numbersign' numbersign  by LIG;
+  sub LIG  numbersign'  numbersign  numbersign  by LIG;
+  sub numbersign'   numbersign   numbersign  numbersign  by LIG;
+} numbersign_numbersign_numbersign_numbersign;
+
     lookup exclam_equal_equal {
         ignore sub exclam exclam' equal equal;
         ignore sub exclam' equal equal equal;
@@ -367,6 +376,41 @@ feature calt {
         sub exclam'   equal  equal  by LIG;
     } exclam_equal_equal;
 
+lookup less_equal_greater {
+  ignore sub less less' equal greater;
+  ignore sub less' equal greater greater;
+  ignore sub parenleft question less' equal greater;
+  sub LIG LIG greater' by less_equal_greater.liga;
+  sub LIG  equal' greater  by LIG;
+  sub less'   equal  greater  by LIG;
+} less_equal_greater;
+
+lookup less_less_equal {
+  ignore sub less less' less equal;
+  ignore sub less' less equal equal;
+  sub LIG LIG equal' by less_less_equal.liga;
+  sub LIG  less' equal  by LIG;
+  sub less'   less  equal  by LIG;
+} less_less_equal;
+
+lookup slash_asciitilde_backslash {
+  ignore sub slash slash' asciitilde backslash;
+  ignore sub slash' asciitilde backslash backslash;
+  sub LIG LIG backslash' by slash_asciitilde_backslash.liga;
+  sub LIG  asciitilde' backslash  by LIG;
+  sub slash'   asciitilde  backslash  by LIG;
+} slash_asciitilde_backslash;
+
+lookup equal_exclam_equal.liga {
+  ignore sub equal equal' exclam equal;
+  ignore sub equal' exclam equal equal;
+  ignore sub parenleft question equal' exclam equal;
+  ignore sub parenleft question less equal' exclam equal;
+  sub LIG LIG equal' by equal_exclam_equal.liga;
+  sub LIG  exclam' equal  by LIG;
+  sub equal'   exclam  equal  by LIG;
+} equal_exclam_equal.liga;
+
 lookup less_slash_greater {
   ignore sub less less' slash greater;
   ignore sub less' slash greater greater;
@@ -374,6 +418,26 @@ lookup less_slash_greater {
   sub LIG  slash' greater  by LIG;
   sub less'   slash  greater  by LIG;
 } less_slash_greater;
+
+lookup equal_colon_equal {
+  ignore sub equal equal' colon equal;
+  ignore sub equal' colon equal equal;
+  ignore sub parenleft question equal' colon equal;
+  ignore sub parenleft question less equal' colon equal;
+  sub LIG LIG equal' by equal_colon_equal.liga;
+  sub LIG  colon' equal  by LIG;
+  sub equal'   colon  equal  by LIG;
+} equal_colon_equal;
+
+lookup equal_greater_greater {
+  ignore sub equal equal' greater greater;
+  ignore sub equal' greater greater greater;
+  ignore sub parenleft question equal' greater greater;
+  ignore sub parenleft question less equal' greater greater;
+  sub LIG LIG greater' by equal_greater_greater.liga;
+  sub LIG  greater' greater  by LIG;
+  sub equal'   greater  greater  by LIG;
+} equal_greater_greater;
 
     lookup period_period_period {
         ignore sub period period' period period;
@@ -399,6 +463,14 @@ lookup less_slash_greater {
         sub LIG  asterisk' asterisk  by LIG;
         sub asterisk'   asterisk  asterisk  by LIG;
     } asterisk_asterisk_asterisk;
+
+lookup numbersign_numbersign_numbersign {
+  ignore sub numbersign numbersign' numbersign numbersign;
+  ignore sub numbersign' numbersign numbersign numbersign;
+  sub LIG LIG numbersign' by numbersign_numbersign_numbersign.liga;
+  sub LIG  numbersign' numbersign  by LIG;
+  sub numbersign'   numbersign  numbersign  by LIG;
+} numbersign_numbersign_numbersign;
 
     lookup slash_asterisk {
         ignore sub slash slash' asterisk;
@@ -630,6 +702,26 @@ lookup less_hyphen {
   sub less'  hyphen  by LIG;
 } less_hyphen;
 
+lookup numbersign_numbersign {
+  ignore sub numbersign numbersign' numbersign;
+  ignore sub numbersign' numbersign numbersign;
+  sub LIG numbersign' by numbersign_numbersign.liga;
+  sub numbersign'  numbersign  by LIG;
+} numbersign_numbersign;
+
+lookup greater_greater {
+  ignore sub greater greater' greater;
+  ignore sub greater' greater greater;
+  ignore sub asterisk greater' greater;
+  ignore sub plus greater' greater;
+  ignore sub dollar greater' greater;
+  sub LIG greater' by greater_greater.liga;
+  sub greater'  greater  by LIG;
+} greater_greater;
+
+
+
     sub zero x' @HexDigit by multiply;
     sub @Digit x' @Digit by multiply;
+    sub @Digit colon' @Digit by colon.valign;
 } calt;
