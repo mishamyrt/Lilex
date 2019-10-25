@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.000] — October 25, 2019
+
+Removed Retina, added Medium.
+
 ## [1.000 rc1] — October 21, 2019
 
 Rebuilt from bash scripts to Makefile.
@@ -33,3 +37,5 @@ IBM Plex Mono version: 3.000
 [1.000 beta2]: https://github.com/mishamyrt/Lilex/releases/tag/1.000-beta2
 
 [1.000 rc1]: https://github.com/mishamyrt/Lilex/releases/tag/1.000-rc1
+
+[1.000]: https://github.com/mishamyrt/Lilex/releases/tag/1.000
