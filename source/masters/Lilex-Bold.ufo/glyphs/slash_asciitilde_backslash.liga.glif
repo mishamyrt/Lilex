@@ -4,14 +4,14 @@
   <outline>
     <component base="slash" xOffset="-2403"/>
     <component base="backslash" xOffset="-3"/>
-    <component base="asciitilde_asciitilde.liga" xScale="0.951864" yScale="1" xOffset="-650.989" yOffset="-718"/>
+    <component base="asciitilde_asciitilde.liga" xScale="0.951864" xOffset="-650.989" yOffset="-718"/>
   </outline>
   <lib>
   <dict>
   <key>com.typemytype.robofont.mark</key>
   <array>
-    <real>0.604</real>
     <real>0.6</real>
+    <real>0.602</real>
     <real>1</real>
     <real>1</real>
   </array>
