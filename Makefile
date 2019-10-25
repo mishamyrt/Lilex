@@ -1,11 +1,11 @@
-BUILD_DIRECTORY=build
-DESIGNSPACE_FILE=source/Lilex.designspace
-VF_FILE="$(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf"
+BUILD_DIRECTORY := "build"
+DESIGNSPACE_FILE := "source/Lilex.designspace"
+VF_FILE := "$(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf"
 UNAME := $(shell uname)
 ifeq (, $(shell which lsb_release))
-OS := $(UNAME)
+OS := "$(UNAME)"
 else
-OS := $(shell lsb_release -si)
+OS := "$(shell lsb_release -si)"
 endif
 
 all: ttf otf variable_ttf
