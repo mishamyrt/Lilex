@@ -547,6 +547,16 @@ lookup numbersign_numbersign_numbersign {
         sub LIG slash' by slash_slash.liga;
         sub slash'  slash  by LIG;
     } slash_slash;
+
+lookup exclam_exclam {
+  ignore sub exclam exclam' exclam;
+  ignore sub exclam' exclam exclam;
+  ignore sub parenleft question exclam' exclam;
+  ignore sub parenleft question less exclam' exclam;
+  sub LIG exclam' by exclam_exclam.liga;
+  sub exclam'  exclam  by LIG;
+} exclam_exclam;
+
     lookup equal_greater {
         ignore sub equal equal' greater;
         ignore sub equal' greater greater;

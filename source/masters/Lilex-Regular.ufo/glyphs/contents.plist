@@ -820,6 +820,8 @@
   <string>exclam_equal.liga.glif</string>
   <key>exclam_equal_equal.liga</key>
   <string>exclam_equal_equal.liga.glif</string>
+  <key>exclam_exclam.liga</key>
+  <string>exclam_exclam.liga.glif</string>
   <key>exclamdown</key>
   <string>exclamdown.glif</string>
   <key>f</key>

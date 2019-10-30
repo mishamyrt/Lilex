@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="exclam_exclam.liga" format="1">
+  <advance width="1200" height="1560"/>
+  <outline>
+    <component base="exclam" xOffset="-1049" yOffset="2.95586e-12"/>
+    <component base="exclam" xOffset="-141" yOffset="2.95586e-12"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>
