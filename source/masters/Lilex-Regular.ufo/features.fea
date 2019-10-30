@@ -709,6 +709,27 @@ lookup numbersign_numbersign {
   sub numbersign'  numbersign  by LIG;
 } numbersign_numbersign;
 
+lookup numbersign_braceleft {
+  ignore sub numbersign numbersign' braceleft;
+  ignore sub numbersign' braceleft braceleft;
+  sub LIG braceleft' by numbersign_braceleft.liga;
+  sub numbersign'  braceleft  by LIG;
+} numbersign_braceleft;
+
+lookup numbersign_bracketleft {
+  ignore sub numbersign numbersign' bracketleft;
+  ignore sub numbersign' bracketleft bracketleft;
+  sub LIG bracketleft' by numbersign_bracketleft.liga;
+  sub numbersign'  bracketleft  by LIG;
+} numbersign_bracketleft;
+
+lookup numbersign_parenleft {
+  ignore sub numbersign numbersign' parenleft;
+  ignore sub numbersign' parenleft parenleft;
+  sub LIG parenleft' by numbersign_parenleft.liga;
+  sub numbersign'  parenleft  by LIG;
+} numbersign_parenleft;
+
 lookup greater_greater {
   ignore sub greater greater' greater;
   ignore sub greater' greater greater;

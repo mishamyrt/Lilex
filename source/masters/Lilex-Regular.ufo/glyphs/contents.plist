@@ -1054,6 +1054,10 @@
   <string>ntilde.glif</string>
   <key>numbersign</key>
   <string>numbersign.glif</string>
+  <key>numbersign_braceleft.liga</key>
+  <string>numbersign_braceleft.liga.glif</string>
+  <key>numbersign_bracketleft.liga</key>
+  <string>numbersign_bracketleft.liga.glif</string>
   <key>numbersign_exclam.liga</key>
   <string>numbersign_exclam.liga.glif</string>
   <key>numbersign_numbersign.liga</key>
@@ -1062,6 +1066,8 @@
   <string>numbersign_numbersign_numbersign.liga.glif</string>
   <key>numbersign_numbersign_numbersign_numbersign.liga</key>
   <string>numbersign_numbersign_numbersign_numbersign.liga.glif</string>
+  <key>numbersign_parenleft.liga</key>
+  <string>numbersign_parenleft.liga.glif</string>
   <key>numerosign</key>
   <string>numerosign.glif</string>
   <key>o</key>

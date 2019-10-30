@@ -1036,6 +1036,9 @@
     <string>colon.valign</string>
     <string>less_less_equal.liga</string>
     <string>slash_asciitilde_backslash.liga</string>
+    <string>numbersign_braceleft.liga</string>
+    <string>numbersign_bracketleft.liga</string>
+    <string>numbersign_parenleft.liga</string>
   </array>
 </dict>
 </plist>
