@@ -723,6 +723,13 @@ lookup numbersign_bracketleft {
   sub numbersign'  bracketleft  by LIG;
 } numbersign_bracketleft;
 
+lookup numbersign_parenleft {
+  ignore sub numbersign numbersign' parenleft;
+  ignore sub numbersign' parenleft parenleft;
+  sub LIG parenleft' by numbersign_parenleft.liga;
+  sub numbersign'  parenleft  by LIG;
+} numbersign_parenleft;
+
 lookup greater_greater {
   ignore sub greater greater' greater;
   ignore sub greater' greater greater;

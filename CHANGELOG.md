@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.100] — Unreleased
 
-Added `#{` `#[`
+Added `#{` `#[` `#(`
 
 ## [1.000] — October 25, 2019
 
