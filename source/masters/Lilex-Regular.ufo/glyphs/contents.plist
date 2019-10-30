@@ -1054,6 +1054,8 @@
   <string>ntilde.glif</string>
   <key>numbersign</key>
   <string>numbersign.glif</string>
+  <key>numbersign_braceleft.liga</key>
+  <string>numbersign_braceleft.liga.glif</string>
   <key>numbersign_exclam.liga</key>
   <string>numbersign_exclam.liga.glif</string>
   <key>numbersign_numbersign.liga</key>

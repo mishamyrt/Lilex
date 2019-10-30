@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <designspace format="3">
  <axes>
-  <axis maximum="700" default="400" minimum="340" tag="wght" name="weight">
+  <axis name="weight" minimum="340" tag="wght" maximum="700" default="400">
    <labelname xml:lang="en">Weight</labelname>
   </axis>
  </axes>
  <sources>
-  <source familyname="Lilex" stylename="Regular" name="Regular" filename="masters/Lilex-Regular.ufo">
+  <source name="Regular" familyname="Lilex" filename="masters/Lilex-Regular.ufo" stylename="Regular">
    <lib copy="1"/>
    <groups copy="1"/>
    <info copy="1"/>
@@ -15,29 +15,29 @@
     <dimension name="weight" xvalue="400"/>
    </location>
   </source>
-  <source familyname="Lilex" stylename="Bold" name="Bold" filename="masters/Lilex-Bold.ufo">
+  <source name="Bold" familyname="Lilex" filename="masters/Lilex-Bold.ufo" stylename="Bold">
    <location>
     <dimension name="weight" xvalue="700"/>
    </location>
   </source>
  </sources>
  <instances>
-  <instance familyname="Lilex" stylename="Light" name="Light" filename="instances/Lilex-Light.ufo">
+  <instance name="Light" familyname="Lilex" filename="instances/Lilex-Light.ufo" stylename="Light">
    <location>
     <dimension name="weight" xvalue="340"/>
    </location>
   </instance>
-  <instance familyname="Lilex" stylename="Regular" name="Regular" filename="instances/Lilex-Regular.ufo">
+  <instance name="Regular" familyname="Lilex" filename="instances/Lilex-Regular.ufo" stylename="Regular">
    <location>
     <dimension name="weight" xvalue="400"/>
    </location>
   </instance>
-  <instance familyname="Lilex" stylename="Medium" name="Medium" filename="instances/Lilex-Medium.ufo">
+  <instance name="Medium" familyname="Lilex" filename="instances/Lilex-Medium.ufo" stylename="Medium">
    <location>
     <dimension name="weight" xvalue="500"/>
    </location>
   </instance>
-  <instance familyname="Lilex" stylename="Bold" name="Bold" filename="instances/Lilex-Bold.ufo">
+  <instance name="Bold" familyname="Lilex" filename="instances/Lilex-Bold.ufo" stylename="Bold">
    <location>
     <dimension name="weight" xvalue="700"/>
    </location>
