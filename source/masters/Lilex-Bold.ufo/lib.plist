@@ -1037,6 +1037,7 @@
     <string>less_less_equal.liga</string>
     <string>slash_asciitilde_backslash.liga</string>
     <string>numbersign_braceleft.liga</string>
+    <string>numbersign_bracketleft.liga</string>
   </array>
 </dict>
 </plist>

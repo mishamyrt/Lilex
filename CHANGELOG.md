@@ -3,13 +3,13 @@ All notable changes to this project will be documented in this file.
 
 ## [1.100] — Unreleased
 
-Added `#{`
+Added `#{` `#[`
 
 ## [1.000] — October 25, 2019
 
 Removed Retina, added Medium.
 
-## [1.000 rc1] — October 21, 2019
+## [1.000 rc1] — October A21, 2019
 
 Rebuilt from bash scripts to Makefile.
 

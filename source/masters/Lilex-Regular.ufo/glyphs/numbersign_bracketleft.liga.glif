@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="numbersign_bracketleft.liga" format="1">
+  <advance width="1200" height="1560"/>
+  <outline>
+    <contour>
+      <point x="-821" y="-71" type="line" name="hr00"/>
+      <point x="-675" y="-71" type="line"/>
+      <point x="-429" y="1325" type="line"/>
+      <point x="-575" y="1325" type="line"/>
+      <point x="-651" y="893" type="line"/>
+      <point x="-937" y="893" type="line"/>
+      <point x="-937" y="761" type="line"/>
+      <point x="-675" y="761" type="line"/>
+      <point x="-721" y="493" type="line"/>
+      <point x="-1009" y="493" type="line"/>
+      <point x="-1009" y="361" type="line"/>
+      <point x="-745" y="361" type="line"/>
+    </contour>
+    <contour>
+      <point x="-453" y="-71" type="line"/>
+      <point x="-307" y="-71" type="line"/>
+      <point x="-231" y="361" type="line"/>
+      <point x="432" y="361" type="line"/>
+      <point x="432" y="493" type="line"/>
+      <point x="-207" y="493" type="line"/>
+      <point x="-161" y="761" type="line"/>
+      <point x="504" y="761" type="line"/>
+      <point x="504" y="893" type="line"/>
+      <point x="-137" y="893" type="line"/>
+      <point x="-61" y="1325" type="line"/>
+      <point x="-207" y="1325" type="line"/>
+    </contour>
+    <contour>
+      <point x="948" y="-276" type="line" name="hr00.1"/>
+      <point x="948" y="-152" type="line"/>
+      <point x="526" y="-152" type="line"/>
+      <point x="526" y="1396" type="line"/>
+      <point x="948" y="1396" type="line"/>
+      <point x="948" y="1520" type="line"/>
+      <point x="388" y="1520" type="line"/>
+      <point x="388" y="-276" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>0.604</real>
+    <real>0.6</real>
+    <real>1</real>
+    <real>1</real>
+  </array>
+  <key>com.typemytype.robofont.guides</key>
+  <array>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>2828</real>
+    </dict>
+    <dict>
+      <key>isGlobal</key>
+      <false/>
+      <key>magnetic</key>
+      <integer>5</integer>
+      <key>x</key>
+      <real>0</real>
+      <key>y</key>
+      <real>622</real>
+    </dict>
+  </array>
+  </dict>
+  </lib>
+</glyph>

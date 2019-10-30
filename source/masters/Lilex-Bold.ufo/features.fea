@@ -716,6 +716,13 @@ lookup numbersign_braceleft {
   sub numbersign'  braceleft  by LIG;
 } numbersign_braceleft;
 
+lookup numbersign_bracketleft {
+  ignore sub numbersign numbersign' bracketleft;
+  ignore sub numbersign' bracketleft bracketleft;
+  sub LIG bracketleft' by numbersign_bracketleft.liga;
+  sub numbersign'  bracketleft  by LIG;
+} numbersign_bracketleft;
+
 lookup greater_greater {
   ignore sub greater greater' greater;
   ignore sub greater' greater greater;
