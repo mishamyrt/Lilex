@@ -1376,6 +1376,8 @@
   <string>underscore.glif</string>
   <key>underscore_underscore.liga</key>
   <string>underscore_underscore.liga.glif</string>
+  <key>underscore_underscore_parenleft.liga</key>
+  <string>underscore_underscore_parenleft.liga.glif</string>
   <key>uni0077_w_w.liga</key>
   <string>uni0077_w_w.liga.glif</string>
   <key>uni0400</key>

@@ -1039,6 +1039,7 @@
     <string>numbersign_braceleft.liga</string>
     <string>numbersign_bracketleft.liga</string>
     <string>numbersign_parenleft.liga</string>
+    <string>underscore_underscore_parenleft.liga</string>
   </array>
 </dict>
 </plist>

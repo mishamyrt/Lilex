@@ -401,6 +401,14 @@ lookup slash_asciitilde_backslash {
   sub slash'   asciitilde  backslash  by LIG;
 } slash_asciitilde_backslash;
 
+lookup underscore_underscore_parenleft {
+  ignore sub underscore underscore' underscore parenleft;
+  ignore sub underscore' underscore parenleft parenleft;
+  sub LIG LIG parenleft' by underscore_underscore_parenleft.liga;
+  sub LIG  underscore' parenleft  by LIG;
+  sub underscore'   underscore  parenleft  by LIG;
+} underscore_underscore_parenleft;
+
 lookup equal_exclam_equal.liga {
   ignore sub equal equal' exclam equal;
   ignore sub equal' exclam equal equal;
