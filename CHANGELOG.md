@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 Added `#{` `#[` `#(` `__(` `!!`
 
-Improved `/*` `*/`
+Improved `/*` `*/` `:=`
 
 ## [1.000] — October 25, 2019
 
