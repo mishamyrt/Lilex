@@ -7,7 +7,7 @@
   <key>capHeight</key>
   <integer>1396</integer>
   <key>copyright</key>
-  <string>Copyright 2019 The Lilex Project Authors (https://github.com/mishamyrt/lilex/blob/master/AUTHORS)</string>
+  <string>Copyright 2019-2020 The Lilex Project Authors (https://github.com/mishamyrt/lilex/blob/master/AUTHORS)</string>
   <key>descender</key>
   <integer>-440</integer>
   <key>familyName</key>
@@ -38,7 +38,7 @@
   </dict>
   </array>
   <key>openTypeHeadCreated</key>
-  <string>2020/01/18 13:11:05</string>
+  <string>2020/01/18 16:14:06</string>
   <key>openTypeHeadFlags</key>
   <array>
   </array>
@@ -65,7 +65,7 @@
   <key>openTypeNamePreferredSubfamilyName</key>
   <string>Regular</string>
   <key>openTypeNameVersion</key>
-  <string>Version 1.000</string>
+  <string>Version 1.100</string>
   <key>openTypeOS2Selection</key>
   <array>
   </array>
@@ -164,7 +164,7 @@
   <key>versionMajor</key>
   <integer>1</integer>
   <key>versionMinor</key>
-  <integer>0</integer>
+  <integer>100</integer>
   <key>xHeight</key>
   <integer>1032</integer>
 </dict>
