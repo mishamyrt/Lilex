@@ -3,6 +3,7 @@
   <advance width="0" height="1560"/>
   <anchor x="0" y="1396" name="_top"/>
   <anchor x="0" y="698" name="_m.tildecomb"/>
+  <anchor x="0" y="698" name="_t.tildecomb"/>
   <outline>
     <contour>
       <point x="-2" y="1510" type="curve" smooth="yes" name="hr00"/>

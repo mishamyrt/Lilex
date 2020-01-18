@@ -7,6 +7,8 @@ Added `#{` `#[` `#(` `__(` `!!`
 
 Improved `/*` `*/` `:=`
 
+Slighty decreased width.
+
 ## [1.000] — October 25, 2019
 
 Removed Retina, added Medium.

@@ -6,6 +6,8 @@
   <anchor x="1116" y="0" name="bottomright"/>
   <anchor x="332" y="0" name="b.cedillacomb"/>
   <anchor x="546" y="0" name="b.ogonekcomb"/>
+  <anchor x="332" y="0" name="m.cedillacomb"/>
+  <anchor x="546" y="0" name="m.ogonekcomb"/>
   <outline>
     <contour>
       <point x="664" y="1164" type="curve" smooth="yes"/>

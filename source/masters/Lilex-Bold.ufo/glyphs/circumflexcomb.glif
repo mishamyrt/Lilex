@@ -3,6 +3,7 @@
   <advance width="0" height="1560"/>
   <unicode hex="0302"/>
   <anchor x="0" y="516" name="_m.tildecomb"/>
+  <anchor x="0" y="516" name="_t.tildecomb"/>
   <outline>
     <component base="circumflex" xOffset="-600"/>
   </outline>

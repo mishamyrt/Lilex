@@ -7,6 +7,9 @@
   <anchor x="287" y="0" name="b.cedillacomb"/>
   <anchor x="505" y="0" name="b.ogonekcomb"/>
   <anchor x="287" y="516" name="m.tildecomb"/>
+  <anchor x="287" y="0" name="m.cedillacomb"/>
+  <anchor x="505" y="0" name="m.ogonekcomb"/>
+  <anchor x="287" y="516" name="t.tildecomb"/>
   <outline>
     <contour>
       <point x="786" y="0" type="line"/>

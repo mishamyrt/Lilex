@@ -4,6 +4,7 @@
   <unicode hex="0067"/>
   <anchor x="588" y="1032" name="top"/>
   <anchor x="297" y="516" name="m.tildecomb"/>
+  <anchor x="297" y="516" name="t.tildecomb"/>
   <outline>
     <contour>
       <point x="1166" y="-104" type="curve" smooth="yes"/>

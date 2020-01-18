@@ -6,6 +6,8 @@
   <anchor x="774" y="1520" name="topright"/>
   <anchor x="375" y="0" name="b.cedillacomb"/>
   <anchor x="387" y="760" name="m.caronslovakcomb"/>
+  <anchor x="375" y="0" name="m.cedillacomb"/>
+  <anchor x="387" y="760" name="t.caronslovakcomb"/>
   <outline>
     <contour>
       <point x="1052" y="0" type="line" name="hr00"/>

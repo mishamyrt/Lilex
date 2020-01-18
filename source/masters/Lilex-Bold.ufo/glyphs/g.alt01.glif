@@ -3,6 +3,7 @@
   <advance width="1200" height="1560"/>
   <anchor x="582" y="1032" name="top"/>
   <anchor x="287" y="516" name="m.tildecomb"/>
+  <anchor x="287" y="516" name="t.tildecomb"/>
   <outline>
     <contour>
       <point x="1082" y="1032" type="line"/>

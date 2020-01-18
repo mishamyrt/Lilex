@@ -8,6 +8,9 @@
   <anchor x="300" y="0" name="b.cedillacomb"/>
   <anchor x="300" y="698" name="m.tildecomb"/>
   <anchor x="426" y="740" name="m.caronslovakcomb"/>
+  <anchor x="300" y="0" name="m.cedillacomb"/>
+  <anchor x="300" y="698" name="t.tildecomb"/>
+  <anchor x="426" y="740" name="t.caronslovakcomb"/>
   <outline>
     <contour>
       <point x="136" y="0" type="line" name="hr00"/>
