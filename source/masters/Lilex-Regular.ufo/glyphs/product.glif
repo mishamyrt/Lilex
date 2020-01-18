@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="product" format="1">
-  <unicode hex="220F"/>
+<glyph name="product" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="220F"/>
   <outline>
     <contour>
       <point x="156" y="0" type="line" name="hr00"/>

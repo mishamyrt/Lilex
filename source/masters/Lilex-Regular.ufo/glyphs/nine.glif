@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="nine" format="1">
-  <unicode hex="0039"/>
+<glyph name="nine" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0039"/>
   <outline>
     <contour>
       <point x="1072" y="884" type="curve" smooth="yes" name="hr00"/>

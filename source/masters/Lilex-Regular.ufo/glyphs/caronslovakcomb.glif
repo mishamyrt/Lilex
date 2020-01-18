@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="caronslovakcomb" format="1">
-  <unicode hex="0315"/>
+<glyph name="caronslovakcomb" format="2">
   <advance width="0" height="1560"/>
+  <unicode hex="0315"/>
+  <anchor x="0" y="740" name="_m.caronslovakcomb"/>
   <outline>
     <component base="caronslovak" xOffset="-380"/>
   </outline>

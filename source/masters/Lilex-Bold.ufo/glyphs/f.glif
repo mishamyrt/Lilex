@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="f" format="1">
-  <unicode hex="0066"/>
+<glyph name="f" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0066"/>
+  <anchor x="594" y="0" name="bottom"/>
+  <anchor x="308" y="0" name="b.cedillacomb"/>
   <outline>
     <contour>
       <point x="142" y="0" type="line" name="hr00"/>
@@ -25,9 +27,6 @@
       <point x="446" y="802" type="line"/>
       <point x="446" y="230" type="line"/>
       <point x="142" y="230" type="line"/>
-    </contour>
-    <contour>
-      <point x="594" y="0" type="move" name="bottom"/>
     </contour>
   </outline>
 </glyph>

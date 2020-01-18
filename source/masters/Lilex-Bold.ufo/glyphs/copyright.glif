@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="copyright" format="1">
-  <unicode hex="00A9"/>
+<glyph name="copyright" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00A9"/>
   <outline>
     <contour>
       <point x="600" y="36" type="curve" smooth="yes" name="hr00"/>

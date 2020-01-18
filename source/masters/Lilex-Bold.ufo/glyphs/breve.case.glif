@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="breve.case" format="1">
+<glyph name="breve.case" format="2">
   <advance width="1200" height="1560"/>
+  <anchor x="600" y="1396" name="_top"/>
   <outline>
     <contour>
       <point x="600" y="1480" type="curve" smooth="yes" name="hr00"/>
@@ -19,9 +20,6 @@
       <point x="212" y="1820" type="line"/>
       <point x="262" y="1676"/>
       <point x="360" y="1480"/>
-    </contour>
-    <contour>
-      <point x="600" y="1396" type="move" name="_top"/>
     </contour>
   </outline>
 </glyph>

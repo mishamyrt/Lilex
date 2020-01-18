@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Eogonek" format="1">
-  <unicode hex="0118"/>
+<glyph name="Eogonek" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0118"/>
   <outline>
     <contour>
       <point x="180" y="0" type="line" name="hr00"/>

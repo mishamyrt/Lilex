@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="oslash" format="1">
-  <unicode hex="00F8"/>
+<glyph name="oslash" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00F8"/>
+  <anchor x="600" y="1032" name="top"/>
+  <anchor x="300" y="516" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="184" y="-80" type="line" name="hr00"/>
@@ -54,9 +56,6 @@
       <point x="898" y="442" type="line" smooth="yes"/>
       <point x="898" y="220"/>
       <point x="778" y="114"/>
-    </contour>
-    <contour>
-      <point x="600" y="1032" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

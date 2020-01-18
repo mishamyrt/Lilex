@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Obreve" format="1">
-  <unicode hex="014E"/>
+<glyph name="Obreve" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="014E"/>
   <outline>
     <component base="O"/>
     <component base="breve.case"/>

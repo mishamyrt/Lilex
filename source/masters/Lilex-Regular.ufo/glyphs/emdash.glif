@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="emdash" format="1">
-  <unicode hex="2014"/>
+<glyph name="emdash" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2014"/>
   <outline>
     <contour>
       <point x="1200" y="534" type="line" name="hr00"/>

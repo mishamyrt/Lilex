@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="underscore" format="1">
-  <unicode hex="005F"/>
+<glyph name="underscore" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="005F"/>
   <outline>
     <contour>
       <point x="1080" y="-338" type="line" name="hr00"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni215A" format="1">
-  <unicode hex="215A"/>
+<glyph name="uni215A" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="215A"/>
   <outline>
     <component base="five.numr" xOffset="-300"/>
     <component base="fraction"/>

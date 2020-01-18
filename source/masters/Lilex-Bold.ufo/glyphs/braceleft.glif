@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="braceleft" format="1">
-  <unicode hex="007B"/>
+<glyph name="braceleft" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="007B"/>
   <outline>
     <contour>
       <point x="1016" y="-276" type="line"/>

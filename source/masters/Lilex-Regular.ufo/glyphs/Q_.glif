@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Q" format="1">
-  <unicode hex="0051"/>
+<glyph name="Q" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0051"/>
+  <anchor x="600" y="1396" name="top"/>
+  <anchor x="300" y="698" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="982" y="-192" type="line" name="hr00"/>
@@ -40,9 +42,6 @@
       <point x="910" y="584" type="line" smooth="yes"/>
       <point x="910" y="304"/>
       <point x="822" y="122"/>
-    </contour>
-    <contour>
-      <point x="600" y="1396" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

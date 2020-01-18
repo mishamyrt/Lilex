@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dcaron" format="1">
-  <unicode hex="010F"/>
+<glyph name="dcaron" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="010F"/>
   <outline>
     <contour>
       <point x="370" y="-24" type="curve" smooth="yes"/>

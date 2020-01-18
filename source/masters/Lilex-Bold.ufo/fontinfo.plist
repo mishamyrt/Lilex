@@ -12,10 +12,33 @@
   <integer>-440</integer>
   <key>familyName</key>
   <string>Lilex</string>
+  <key>guidelines</key>
+  <array>
+  <dict>
+    <key>y</key>
+    <integer>500</integer>
+    <key>name</key>
+    <string>m</string>
+  </dict>
+  </array>
   <key>italicAngle</key>
   <integer>0</integer>
+  <key>openTypeGaspRangeRecords</key>
+  <array>
+  <dict>
+    <key>rangeGaspBehavior</key>
+      <array>
+        <integer>0</integer>
+        <integer>1</integer>
+        <integer>2</integer>
+        <integer>3</integer>
+      </array>
+    <key>rangeMaxPPEM</key>
+    <integer>65535</integer>
+  </dict>
+  </array>
   <key>openTypeHeadCreated</key>
-  <string>2019/10/30 17:37:59</string>
+  <string>2020/01/18 04:34:35</string>
   <key>openTypeHeadFlags</key>
   <array>
   </array>

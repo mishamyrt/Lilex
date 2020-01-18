@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Gcircumflex" format="1">
-  <unicode hex="011C"/>
+<glyph name="Gcircumflex" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="011C"/>
   <outline>
     <component base="G"/>
     <component base="circumflex.case" xOffset="12"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="greater" format="1">
-  <unicode hex="003E"/>
+<glyph name="greater" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="003E"/>
   <outline>
     <contour>
       <point x="170" y="32" type="line" name="hr00"/>

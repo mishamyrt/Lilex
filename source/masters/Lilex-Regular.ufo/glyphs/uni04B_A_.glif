@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni04BA" format="1">
-  <unicode hex="04BA"/>
+<glyph name="uni04BA" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="04BA"/>
   <outline>
     <contour>
       <point x="176" y="0" type="line" name="hr00"/>

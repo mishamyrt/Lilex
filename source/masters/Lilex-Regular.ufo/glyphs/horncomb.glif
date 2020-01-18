@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="horncomb" format="1">
-  <unicode hex="031B"/>
+<glyph name="horncomb" format="2">
   <advance width="0" height="1560"/>
+  <unicode hex="031B"/>
   <outline>
     <contour>
       <point x="154" y="1256" type="line" name="hr00"/>

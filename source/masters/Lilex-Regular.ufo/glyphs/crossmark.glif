@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="crossmark" format="1">
-  <unicode hex="274C"/>
+<glyph name="crossmark" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="274C"/>
   <outline>
     <contour>
       <point x="226" y="30" type="line" name="hr00"/>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ring.case" format="1">
+<glyph name="ring.case" format="2">
   <advance width="1200" height="1560"/>
+  <anchor x="600" y="1396" name="_top"/>
   <outline>
     <contour>
       <point x="600" y="1492" type="curve" smooth="yes" name="hr00"/>
@@ -31,9 +32,6 @@
       <point x="716" y="1700" type="line" smooth="yes"/>
       <point x="716" y="1630"/>
       <point x="672" y="1590"/>
-    </contour>
-    <contour>
-      <point x="600" y="1396" type="move" name="_top"/>
     </contour>
   </outline>
 </glyph>

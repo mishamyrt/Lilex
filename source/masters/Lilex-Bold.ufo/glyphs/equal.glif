@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="equal" format="1">
-  <unicode hex="003D"/>
+<glyph name="equal" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="003D"/>
   <outline>
     <contour>
       <point x="1074" y="722" type="line" name="hr00.1"/>
@@ -16,51 +16,14 @@
       <point x="126" y="262" type="line"/>
     </contour>
   </outline>
+  <guideline y="958" color="1,0,0,1"/>
+  <guideline y="262" color="1,0,0,1"/>
+  <guideline y="498" color="1,0,0,1"/>
+  <guideline y="722" color="1,0,0,1"/>
   <lib>
   <dict>
-  <key>com.typemytype.robofont.guides</key>
-  <array>
-    <dict>
-      <key>isGlobal</key>
-      <false/>
-      <key>magnetic</key>
-      <integer>5</integer>
-      <key>x</key>
-      <real>0</real>
-      <key>y</key>
-      <real>958</real>
-    </dict>
-    <dict>
-      <key>isGlobal</key>
-      <false/>
-      <key>magnetic</key>
-      <integer>5</integer>
-      <key>x</key>
-      <real>0</real>
-      <key>y</key>
-      <real>262</real>
-    </dict>
-    <dict>
-      <key>isGlobal</key>
-      <false/>
-      <key>magnetic</key>
-      <integer>5</integer>
-      <key>x</key>
-      <real>0</real>
-      <key>y</key>
-      <real>498</real>
-    </dict>
-    <dict>
-      <key>isGlobal</key>
-      <false/>
-      <key>magnetic</key>
-      <integer>5</integer>
-      <key>x</key>
-      <real>0</real>
-      <key>y</key>
-      <real>722</real>
-    </dict>
-  </array>
+  <key>public.markColor</key>
+  <string>0.6,0.662,1,1</string>
   </dict>
   </lib>
 </glyph>

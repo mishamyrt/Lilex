@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="scaron" format="1">
-  <unicode hex="0161"/>
+<glyph name="scaron" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0161"/>
   <outline>
     <component base="s"/>
     <component base="caron" xOffset="10"/>

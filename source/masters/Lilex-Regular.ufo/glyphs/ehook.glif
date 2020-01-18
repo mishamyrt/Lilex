@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ehook" format="1">
-  <unicode hex="1EBB"/>
+<glyph name="ehook" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="1EBB"/>
   <outline>
     <component base="e"/>
     <component base="hookcomb" xOffset="604"/>

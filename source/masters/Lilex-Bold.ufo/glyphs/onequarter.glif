@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="onequarter" format="1">
-  <unicode hex="00BC"/>
+<glyph name="onequarter" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00BC"/>
   <outline>
     <component base="one.numr" xOffset="-300"/>
     <component base="fraction"/>

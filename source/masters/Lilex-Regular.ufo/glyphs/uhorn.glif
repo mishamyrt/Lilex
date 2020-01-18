@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uhorn" format="1">
-  <unicode hex="01B0"/>
+<glyph name="uhorn" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="01B0"/>
+  <anchor x="594" y="0" name="bottom"/>
+  <anchor x="594" y="1032" name="top"/>
+  <anchor x="297" y="0" name="b.cedillacomb"/>
+  <anchor x="297" y="516" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="1174" y="1256" type="line"/>
@@ -37,12 +41,6 @@
       <point x="1148" y="926"/>
       <point x="1174" y="982"/>
       <point x="1174" y="1052" type="curve" smooth="yes"/>
-    </contour>
-    <contour>
-      <point x="594" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="594" y="1032" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

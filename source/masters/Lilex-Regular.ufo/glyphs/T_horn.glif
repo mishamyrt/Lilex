@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Thorn" format="1">
-  <unicode hex="00DE"/>
+<glyph name="Thorn" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00DE"/>
   <outline>
     <contour>
       <point x="348" y="0" type="line" name="hr00"/>

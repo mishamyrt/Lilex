@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="caron.case" format="1">
+<glyph name="caron.case" format="2">
   <advance width="1200" height="1560"/>
+  <anchor x="600" y="1396" name="_top"/>
   <outline>
     <contour>
       <point x="700" y="1538" type="line" name="hr00"/>
@@ -10,9 +11,6 @@
       <point x="368" y="1886" type="line"/>
       <point x="278" y="1824" type="line"/>
       <point x="500" y="1538" type="line"/>
-    </contour>
-    <contour>
-      <point x="600" y="1396" type="move" name="_top"/>
     </contour>
   </outline>
 </glyph>

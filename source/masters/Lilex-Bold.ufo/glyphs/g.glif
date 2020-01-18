@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="g" format="1">
-  <unicode hex="0067"/>
+<glyph name="g" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0067"/>
+  <anchor x="588" y="1032" name="top"/>
+  <anchor x="297" y="516" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="1166" y="-104" type="curve" smooth="yes"/>
@@ -89,9 +91,6 @@
       <point x="760" y="664" type="line" smooth="yes"/>
       <point x="760" y="574"/>
       <point x="706" y="508"/>
-    </contour>
-    <contour>
-      <point x="588" y="1032" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="arrowleftarrowright" format="1">
-  <unicode hex="21C6"/>
+<glyph name="arrowleftarrowright" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="21C6"/>
   <outline>
     <component base="arrowleft" yOffset="308"/>
     <component base="arrowright" yOffset="-308"/>
