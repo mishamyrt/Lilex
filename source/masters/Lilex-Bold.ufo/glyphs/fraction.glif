@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="fraction" format="1">
-  <unicode hex="2044"/>
+<glyph name="fraction" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2044"/>
   <outline>
     <contour>
       <point x="646" y="796" type="line" name="hr00"/>

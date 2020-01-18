@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="threeinferior" format="1">
-  <unicode hex="2083"/>
+<glyph name="threeinferior" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2083"/>
   <outline>
     <contour>
       <point x="502" y="458" type="line"/>

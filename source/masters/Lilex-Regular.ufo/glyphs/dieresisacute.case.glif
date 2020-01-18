@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dieresisacute.case" format="1">
+<glyph name="dieresisacute.case" format="2">
   <advance width="0" height="1560"/>
+  <anchor x="0" y="1396" name="_top"/>
+  <anchor x="0" y="698" name="_m.tildecomb"/>
   <outline>
     <contour>
       <point x="236" y="2082" type="line" name="hr00"/>
@@ -39,9 +41,6 @@
       <point x="84" y="1626" type="line" smooth="yes"/>
       <point x="84" y="1574"/>
       <point x="116" y="1534"/>
-    </contour>
-    <contour>
-      <point x="0" y="1396" type="move" name="_top"/>
     </contour>
   </outline>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="arrowupleftcounterclock" format="1">
-  <unicode hex="21BA"/>
+<glyph name="arrowupleftcounterclock" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="21BA"/>
   <outline>
     <contour>
       <point x="552" y="1396" type="line" name="hr00"/>

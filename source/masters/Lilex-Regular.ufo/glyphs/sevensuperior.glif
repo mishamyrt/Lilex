@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="sevensuperior" format="1">
-  <unicode hex="2077"/>
+<glyph name="sevensuperior" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2077"/>
   <outline>
     <contour>
       <point x="584" y="658" type="line" name="hr00"/>

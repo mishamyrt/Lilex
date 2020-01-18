@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni0447" format="1">
-  <unicode hex="0447"/>
+<glyph name="uni0447" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0447"/>
+  <anchor x="578" y="1032" name="top"/>
   <outline>
     <contour>
       <point x="748" y="0" type="line" name="hr00"/>
@@ -25,9 +26,6 @@
       <point x="674" y="346"/>
       <point x="738" y="430" type="curve"/>
       <point x="748" y="430" type="line"/>
-    </contour>
-    <contour>
-      <point x="578" y="1032" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

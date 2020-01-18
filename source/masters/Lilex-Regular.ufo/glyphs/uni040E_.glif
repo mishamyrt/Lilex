@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni040E" format="1">
-  <unicode hex="040E"/>
+<glyph name="uni040E" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="040E"/>
   <outline>
     <component base="uni0423"/>
     <component base="breve.cyrl_case"/>

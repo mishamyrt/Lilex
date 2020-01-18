@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="cedi" format="1">
-  <unicode hex="20B5"/>
+<glyph name="cedi" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="20B5"/>
   <outline>
     <contour>
       <point x="388" y="-226" type="line"/>

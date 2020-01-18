@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="AE" format="1">
-  <unicode hex="00C6"/>
+<glyph name="AE" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00C6"/>
+  <anchor x="786" y="1396" name="top"/>
+  <anchor x="393" y="698" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="624" y="0" type="line" name="hr00"/>
@@ -26,9 +28,6 @@
       <point x="624" y="540" type="line"/>
       <point x="356" y="540" type="line"/>
       <point x="562" y="1276" type="line"/>
-    </contour>
-    <contour>
-      <point x="786" y="1396" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="eth" format="1">
-  <unicode hex="00F0"/>
+<glyph name="eth" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00F0"/>
   <outline>
     <contour>
       <point x="842" y="1506" type="line" name="hr00"/>

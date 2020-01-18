@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dotlessi" format="1">
-  <unicode hex="0131"/>
+<glyph name="dotlessi" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0131"/>
+  <anchor x="664" y="0" name="bottom"/>
+  <anchor x="1092" y="0" name="bottomright"/>
+  <anchor x="664" y="1032" name="top"/>
+  <anchor x="332" y="0" name="b.cedillacomb"/>
+  <anchor x="546" y="0" name="b.ogonekcomb"/>
+  <anchor x="332" y="516" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="212" y="0" type="line" name="hr00"/>
@@ -14,15 +20,6 @@
       <point x="584" y="896" type="line"/>
       <point x="584" y="136" type="line"/>
       <point x="212" y="136" type="line"/>
-    </contour>
-    <contour>
-      <point x="664" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1092" y="0" type="move" name="bottomright"/>
-    </contour>
-    <contour>
-      <point x="664" y="1032" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

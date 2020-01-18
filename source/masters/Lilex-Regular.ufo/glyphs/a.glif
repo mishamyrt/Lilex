@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="a" format="1">
-  <unicode hex="0061"/>
+<glyph name="a" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0061"/>
+  <anchor x="566" y="0" name="bottom"/>
+  <anchor x="1100" y="0" name="bottomright"/>
+  <anchor x="566" y="1032" name="top"/>
+  <anchor x="283" y="0" name="b.cedillacomb"/>
+  <anchor x="550" y="0" name="b.ogonekcomb"/>
+  <anchor x="283" y="516" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="1100" y="0" type="line"/>
@@ -50,15 +56,6 @@
       <point x="796" y="300" type="line" smooth="yes"/>
       <point x="796" y="194"/>
       <point x="678" y="110"/>
-    </contour>
-    <contour>
-      <point x="566" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1100" y="0" type="move" name="bottomright"/>
-    </contour>
-    <contour>
-      <point x="566" y="1032" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

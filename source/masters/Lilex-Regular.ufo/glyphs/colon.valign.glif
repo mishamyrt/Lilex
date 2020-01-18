@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="colon.valign" format="1">
+<glyph name="colon.valign" format="2">
   <advance width="1200" height="1560"/>
   <outline>
-    <component base="colon" xOffset="-5.68434e-14" yOffset="175"/>
+    <component base="colon" yOffset="175"/>
   </outline>
   <lib>
   <dict>
-  <key>com.typemytype.robofont.mark</key>
-  <array>
-    <real>0.6</real>
-    <real>0.622</real>
-    <real>1</real>
-    <real>1</real>
-  </array>
+  <key>public.markColor</key>
+  <string>0.6,0.622,1,1</string>
   </dict>
   </lib>
 </glyph>

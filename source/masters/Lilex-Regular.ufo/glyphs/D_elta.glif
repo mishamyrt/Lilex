@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Delta" format="1">
-  <unicode hex="2206"/>
+<glyph name="Delta" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2206"/>
   <outline>
     <contour>
       <point x="92" y="0" type="line" name="hr00"/>

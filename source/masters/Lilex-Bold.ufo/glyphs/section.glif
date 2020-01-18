@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="section" format="1">
-  <unicode hex="00A7"/>
+<glyph name="section" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00A7"/>
   <outline>
     <contour>
       <point x="1022" y="6" type="curve" smooth="yes"/>

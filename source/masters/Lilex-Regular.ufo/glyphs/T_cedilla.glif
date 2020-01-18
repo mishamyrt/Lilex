@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Tcedilla" format="1">
-  <unicode hex="021A"/>
+<glyph name="Tcedilla" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="021A"/>
   <outline>
     <component base="T"/>
     <component base="commabelowcomb" xOffset="600"/>

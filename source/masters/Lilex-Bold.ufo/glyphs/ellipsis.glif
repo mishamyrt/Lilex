@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ellipsis" format="1">
-  <unicode hex="2026"/>
+<glyph name="ellipsis" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2026"/>
   <outline>
     <contour>
       <point x="204" y="-14" type="curve" smooth="yes" name="hr00"/>

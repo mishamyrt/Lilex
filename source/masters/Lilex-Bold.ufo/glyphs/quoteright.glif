@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="quoteright" format="1">
-  <unicode hex="2019"/>
+<glyph name="quoteright" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2019"/>
   <outline>
     <contour>
       <point x="382" y="828" type="line" name="hr00"/>

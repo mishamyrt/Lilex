@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="coloncurrency" format="1">
-  <unicode hex="20A1"/>
+<glyph name="coloncurrency" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="20A1"/>
   <outline>
     <contour>
       <point x="622" y="-226" type="line" name="hr00"/>

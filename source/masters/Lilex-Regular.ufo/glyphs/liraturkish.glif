@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="liraturkish" format="1">
-  <unicode hex="20BA"/>
+<glyph name="liraturkish" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="20BA"/>
   <outline>
     <contour>
       <point x="310" y="0" type="line" name="hr00"/>

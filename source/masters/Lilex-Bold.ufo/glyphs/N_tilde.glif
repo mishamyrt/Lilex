@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Ntilde" format="1">
-  <unicode hex="00D1"/>
+<glyph name="Ntilde" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00D1"/>
   <outline>
     <component base="N"/>
     <component base="tilde.case"/>

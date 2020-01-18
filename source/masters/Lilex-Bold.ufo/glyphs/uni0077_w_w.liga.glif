@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni0077_w_w.liga" format="1">
+<glyph name="uni0077_w_w.liga" format="2">
   <advance width="1195"/>
+  <anchor x="595" y="0" name="bottom"/>
+  <anchor x="595" y="1032" name="top"/>
   <outline>
     <contour>
       <point x="-2216" y="0" type="line" name="hr00.3"/>
@@ -52,35 +54,12 @@
       <point x="-2089" y="1032" type="line"/>
       <point x="-2341" y="1032" type="line"/>
     </contour>
-    <contour>
-      <point x="595" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="595" y="1032" type="move" name="top"/>
-    </contour>
   </outline>
+  <guideline x="-615" color="1,0,0,1"/>
   <lib>
   <dict>
-  <key>com.typemytype.robofont.mark</key>
-  <array>
-    <real>0.6</real>
-    <real>0.669</real>
-    <real>1</real>
-    <real>1</real>
-  </array>
-  <key>com.typemytype.robofont.guides</key>
-  <array>
-    <dict>
-      <key>isGlobal</key>
-      <false/>
-      <key>magnetic</key>
-      <integer>5</integer>
-      <key>x</key>
-      <real>-615</real>
-      <key>y</key>
-      <real>0</real>
-    </dict>
-  </array>
+  <key>public.markColor</key>
+  <string>0.6,0.669,1,1</string>
   </dict>
   </lib>
 </glyph>

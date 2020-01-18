@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="brevehook" format="1">
+<glyph name="brevehook" format="2">
   <advance width="0" height="1560"/>
+  <anchor x="0" y="1032" name="_top"/>
+  <anchor x="0" y="516" name="_m.tildecomb"/>
   <outline>
     <contour>
       <point x="2" y="1170" type="curve" smooth="yes" name="hr00"/>
@@ -33,9 +35,6 @@
       <point x="120" y="1780"/>
       <point x="18" y="1780" type="curve" smooth="yes"/>
       <point x="-170" y="1780" type="line"/>
-    </contour>
-    <contour>
-      <point x="0" y="1032" type="move" name="_top"/>
     </contour>
   </outline>
 </glyph>

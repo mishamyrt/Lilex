@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="naira" format="1">
-  <unicode hex="20A6"/>
+<glyph name="naira" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="20A6"/>
   <outline>
     <contour>
       <point x="1016" y="778" type="line" name="hr00"/>

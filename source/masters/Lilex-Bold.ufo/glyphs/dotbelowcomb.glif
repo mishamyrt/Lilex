@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dotbelowcomb" format="1">
-  <unicode hex="0323"/>
+<glyph name="dotbelowcomb" format="2">
   <advance width="0" height="1560"/>
+  <unicode hex="0323"/>
+  <anchor x="0" y="0" name="_bottom"/>
+  <anchor x="0" y="0" name="_b.cedillacomb"/>
   <outline>
     <contour>
       <point x="0" y="-406" type="curve" smooth="yes" name="hr00"/>
@@ -18,9 +20,6 @@
       <point x="-162" y="-282" type="line" smooth="yes"/>
       <point x="-162" y="-352"/>
       <point x="-118" y="-406"/>
-    </contour>
-    <contour>
-      <point x="0" y="0" type="move" name="_bottom"/>
     </contour>
   </outline>
 </glyph>

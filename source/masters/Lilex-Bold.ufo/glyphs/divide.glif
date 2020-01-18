@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="divide" format="1">
-  <unicode hex="00F7"/>
+<glyph name="divide" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00F7"/>
   <outline>
     <contour>
       <point x="1076" y="492" type="line" name="hr00"/>

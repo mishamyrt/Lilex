@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="oe" format="1">
-  <unicode hex="0153"/>
+<glyph name="oe" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0153"/>
   <outline>
     <contour>
       <point x="366" y="168" type="curve" smooth="yes" name="hr00"/>

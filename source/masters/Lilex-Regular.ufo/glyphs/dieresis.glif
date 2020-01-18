@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dieresis" format="1">
-  <unicode hex="00A8"/>
+<glyph name="dieresis" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00A8"/>
+  <anchor x="600" y="1032" name="_top"/>
   <outline>
     <contour>
       <point x="414" y="1236" type="curve" smooth="yes" name="hr00"/>
@@ -34,9 +35,6 @@
       <point x="672" y="1328" type="line" smooth="yes"/>
       <point x="672" y="1276"/>
       <point x="704" y="1236"/>
-    </contour>
-    <contour>
-      <point x="600" y="1032" type="move" name="_top"/>
     </contour>
   </outline>
 </glyph>

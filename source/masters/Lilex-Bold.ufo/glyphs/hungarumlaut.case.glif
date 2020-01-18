@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="hungarumlaut.case" format="1">
+<glyph name="hungarumlaut.case" format="2">
   <advance width="1200" height="1560"/>
+  <anchor x="600" y="1396" name="_top"/>
   <outline>
     <contour>
       <point x="688" y="1832" type="line" name="hr00"/>
@@ -13,9 +14,6 @@
       <point x="866" y="1946" type="line"/>
       <point x="668" y="1558" type="line"/>
       <point x="830" y="1480" type="line"/>
-    </contour>
-    <contour>
-      <point x="600" y="1396" type="move" name="_top"/>
     </contour>
   </outline>
 </glyph>

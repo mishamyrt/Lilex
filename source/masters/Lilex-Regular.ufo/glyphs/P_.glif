@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="P" format="1">
-  <unicode hex="0050"/>
+<glyph name="P" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0050"/>
+  <anchor x="264" y="0" name="bottom"/>
+  <anchor x="600" y="1396" name="top"/>
+  <anchor x="132" y="0" name="b.cedillacomb"/>
+  <anchor x="300" y="698" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="348" y="0" type="line" name="hr00"/>
@@ -27,12 +31,6 @@
       <point x="824" y="738"/>
       <point x="684" y="738" type="curve" smooth="yes"/>
       <point x="348" y="738" type="line"/>
-    </contour>
-    <contour>
-      <point x="264" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="600" y="1396" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="colon_colon.liga" format="1">
+<glyph name="colon_colon.liga" format="2">
   <advance width="1200" height="780"/>
   <outline>
-    <component base="colon" xOffset="-1046" yOffset="1.13687e-12"/>
-    <component base="colon" xOffset="-146" yOffset="1.13687e-12"/>
+    <component base="colon" xOffset="-1046"/>
+    <component base="colon" xOffset="-146"/>
   </outline>
   <lib>
   <dict>
-  <key>com.typemytype.robofont.mark</key>
-  <array>
-    <real>0.6</real>
-    <real>0.689</real>
-    <real>1</real>
-    <real>1</real>
-  </array>
+  <key>public.markColor</key>
+  <string>0.6,0.689,1,1</string>
   </dict>
   </lib>
 </glyph>

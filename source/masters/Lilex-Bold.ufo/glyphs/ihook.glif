@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ihook" format="1">
-  <unicode hex="1EC9"/>
+<glyph name="ihook" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="1EC9"/>
   <outline>
     <component base="dotlessi"/>
     <component base="hookcomb" xOffset="664"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="acircumflexdotbelow" format="1">
-  <unicode hex="1EAD"/>
+<glyph name="acircumflexdotbelow" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="1EAD"/>
   <outline>
     <component base="a"/>
     <component base="circumflex" xOffset="-16"/>

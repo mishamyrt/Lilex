@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="arrowup" format="1">
-  <unicode hex="2191"/>
+<glyph name="arrowup" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2191"/>
   <outline>
     <contour>
       <point x="600" y="1420" type="line" name="hr00"/>

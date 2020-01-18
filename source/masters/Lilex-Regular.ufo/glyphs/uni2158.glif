@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni2158" format="1">
-  <unicode hex="2158"/>
+<glyph name="uni2158" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="2158"/>
   <outline>
     <component base="four.numr" xOffset="-300"/>
     <component base="fraction"/>

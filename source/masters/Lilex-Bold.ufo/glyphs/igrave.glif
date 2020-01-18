@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="igrave" format="1">
-  <unicode hex="00EC"/>
+<glyph name="igrave" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="00EC"/>
   <outline>
     <component base="dotlessi"/>
     <component base="grave" xOffset="64"/>

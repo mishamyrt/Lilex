@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="nacute" format="1">
-  <unicode hex="0144"/>
+<glyph name="nacute" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0144"/>
   <outline>
     <component base="n"/>
     <component base="acute" xOffset="6"/>

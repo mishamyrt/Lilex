@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="s" format="1">
-  <unicode hex="0073"/>
+<glyph name="s" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="0073"/>
+  <anchor x="588" y="0" name="bottom"/>
+  <anchor x="596" y="1032" name="top"/>
+  <anchor x="294" y="0" name="b.cedillacomb"/>
+  <anchor x="298" y="516" name="m.tildecomb"/>
   <outline>
     <contour>
       <point x="612" y="-24" type="curve" smooth="yes" name="hr00"/>
@@ -44,12 +48,6 @@
       <point x="134" y="178" type="line"/>
       <point x="242" y="56"/>
       <point x="396" y="-24"/>
-    </contour>
-    <contour>
-      <point x="588" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="596" y="1032" type="move" name="top"/>
     </contour>
   </outline>
 </glyph>

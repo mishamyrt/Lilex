@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ruble" format="1">
-  <unicode hex="20BD"/>
+<glyph name="ruble" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="20BD"/>
   <outline>
     <contour>
       <point x="878" y="268" type="line" name="hr00"/>

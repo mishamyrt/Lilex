@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="lira" format="1">
-  <unicode hex="20A4"/>
+<glyph name="lira" format="2">
   <advance width="1200" height="1560"/>
+  <unicode hex="20A4"/>
   <outline>
     <contour>
       <point x="1106" y="256" type="line"/>
