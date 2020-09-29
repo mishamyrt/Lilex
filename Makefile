@@ -46,8 +46,8 @@ bootstrap_Darwin:
 	make bootstrap_pip
 
 bootstrap_Ubuntu:
-	apt install python3-setuptools ttfautohint
-	make bootstrap_pip
+	sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2-dev
+	sudo make bootstrap_pip
 
 bootstrap_pip:
 	pip3 install fonttools git+https://github.com/googlefonts/gftools fontmake
