@@ -1,5 +1,5 @@
 BUILD_DIRECTORY := "build"
-DESIGNSPACE_FILE := "source/Lilex.designspace"
+GLYPHS_FILE := "Lilex.glyphs"
 VF_FILE := "$(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf"
 UNAME := $(shell uname)
 ifeq (, $(shell which lsb_release))
@@ -14,16 +14,16 @@ ttf: raw_ttf
 	$(foreach file,$(wildcard $(BUILD_DIRECTORY)/ttf/*.ttf),$(call ttf_fix,$(file)))
 
 raw_ttf:
-	fontmake -m $(DESIGNSPACE_FILE) -o ttf \
+	fontmake -g $(GLYPHS_FILE) -o ttf \
 	--output-dir "$(BUILD_DIRECTORY)/ttf" -i
 
 otf:
-	fontmake -m $(DESIGNSPACE_FILE) -o otf \
+	fontmake -g $(GLYPHS_FILE) -o otf \
 	--output-dir "$(BUILD_DIRECTORY)/otf" -i
 
 variable_ttf:
-	fontmake -m $(DESIGNSPACE_FILE) -o variable \
-	--output-dir "$(BUILD_DIRECTORY)/variable_ttf"
+	fontmake -g $(GLYPHS_FILE) -o variable \
+		--output-dir "$(BUILD_DIRECTORY)/variable_ttf"
 	gftools fix-vf-meta $(VF_FILE)
 	gftools fix-nonhinting $(VF_FILE) $(VF_FILE)
 	gftools fix-gasp --autofix $(VF_FILE)

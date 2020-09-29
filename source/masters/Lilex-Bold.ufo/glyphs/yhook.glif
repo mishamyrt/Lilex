@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<glyph name="yhook" format="2">
-  <advance width="1200" height="1560"/>
-  <unicode hex="1EF7"/>
-  <outline>
-    <component base="y"/>
-    <component base="hookcomb" xOffset="606"/>
-  </outline>
-</glyph>

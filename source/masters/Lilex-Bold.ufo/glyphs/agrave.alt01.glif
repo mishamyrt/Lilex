@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<glyph name="agrave.alt01" format="2">
-  <advance width="1200" height="1560"/>
-  <outline>
-    <component base="a.alt01"/>
-    <component base="grave" xOffset="-18"/>
-  </outline>
-</glyph>

@@ -1,4 +1,3 @@
 build/
-source/masters/Lilex-Regular.ufo/data
-source/masters/Lilex-Bold.ufo/data
-source/instances
+instance_ufo/
+master_ufo/

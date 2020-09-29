@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Acircumflexhook" format="2">
-  <advance width="1200" height="1560"/>
-  <unicode hex="1EA8"/>
-  <outline>
-    <component base="A"/>
-    <component base="circumflexhook.case" xOffset="600"/>
-  </outline>
-</glyph>
