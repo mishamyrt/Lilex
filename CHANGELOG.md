@@ -9,6 +9,8 @@ Improved `/*` `*/` `:=`
 
 Slighty decreased width.
 
+Migrated to Glyphs.
+
 ## [1.000] — October 25, 2019
 
 Removed Retina, added Medium.
