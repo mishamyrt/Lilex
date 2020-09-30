@@ -46,7 +46,8 @@ bootstrap_Darwin:
 	make bootstrap_pip
 
 bootstrap_Ubuntu:
-	sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2
+	sudo pip3 install -U pip
+	sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2-dev
 	sudo make bootstrap_pip
 
 bootstrap_pip:
