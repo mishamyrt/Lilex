@@ -1,13 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.100] — Unreleased
+## [1.100] — November 21, 2020
 
 Added `#{` `#[` `#(` `__(` `!!`
 
 Improved `/*` `*/` `:=`
 
-Slighty decreased width.
+Slightly decreased width.
 
 Migrated to Glyphs.
 
