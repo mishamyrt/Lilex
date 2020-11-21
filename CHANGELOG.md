@@ -50,4 +50,4 @@ IBM Plex Mono version: 3.000
 
 [1.000]: https://github.com/mishamyrt/Lilex/releases/tag/1.000
 
-[1.100]: https://github.com/mishamyrt/Lilex/compare/1.000...develop
+[1.100]: https://github.com/mishamyrt/Lilex/releases/tag/1.100
