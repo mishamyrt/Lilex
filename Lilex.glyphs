@@ -47,6 +47,18 @@ name = numbers_sinf;
 {
 code = "zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior";
 name = numbers_sups;
+},
+{
+code = "a a.alt01 b c d e f g g.alt01 g.alt02 h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z zero zero.alt01 zero.alt02 one two three four five six seven eight nine ampersand at hyphen softhyphen endash emdash underscore period ellipsis colon comma semicolon quotesingle quotedbl quoteleft quoteright quotedblleft quotedblright quotesinglbase quotedblbase guilsinglleft guilsinglright guillemotleft guillemotright exclamdown exclam questiondown question parenleft parenright bracketleft bracketright braceleft braceright slash backslash fraction percent perthousand bar brokenbar section paragraph copyright registered trademark ordfeminine ordmasculine degree asterisk dagger daggerdbl numbersign asciicircum asciitilde plus minus plusminus multiply divide equal approxequal notequal less greater lessequal greaterequal periodcentered bullet lozenge logicalnot radical integral infinity estimated litre numerosign partialdiff cent Euro florin sterling dollar yen baht coloncurrency lira naira rupee won sheqel dong kip tugrik peso guarani hryvnia cedi tenge rupeeindian liraturkish ruble bitcoin fi fl aacute abreve acircumflex adieresis adotbelow agrave ahook amacron aogonek aring aringacute atilde abreveacute abrevedotbelow abrevegrave abrevehook abrevetilde acircumflexacute acircumflexdotbelow acircumflexgrave acircumflexhook acircumflextilde aacute.alt01 abreve.alt01 acircumflex.alt01 adieresis.alt01 adotbelow.alt01 agrave.alt01 ahook.alt01 amacron.alt01 aogonek.alt01 aring.alt01 aringacute.alt01 atilde.alt01 abreveacute.alt01 abrevedotbelow.alt01 abrevegrave.alt01 abrevehook.alt01 abrevetilde.alt01 acircumflexacute.alt01 acircumflexdotbelow.alt01 acircumflexgrave.alt01 acircumflexhook.alt01 acircumflextilde.alt01 ae aeacute cacute ccaron ccedilla ccircumflex cdotaccent dcaron dcroat eth eacute ebreve ecaron ecircumflex edieresis edotaccent edotbelow egrave ehook emacron eogonek etilde ecircumflexacute ecircumflexdotbelow ecircumflexgrave ecircumflexhook ecircumflextilde schwa gbreve gcircumflex gcommaaccent gdotaccent gbreve.alt01 gcircumflex.alt01 gcommaaccent.alt01 gdotaccent.alt01 hbar hcircumflex dotlessi iacute ibreve icircumflex idieresis idotbelow igrave ihook imacron iogonek itilde ij ijacute dotlessj jacute jcircumflex kcommaaccent kgreenlandic lacute lcaron lcommaaccent ldot lslash nacute ncaron ncommaaccent ntilde napostrophe eng oacute obreve ocircumflex odieresis odotbelow ograve ohook ohungarumlaut omacron oslash oslashacute otilde ohorn ohornacute ohorndotbelow ohorngrave ohornhook ohorntilde ocircumflexacute ocircumflexdotbelow ocircumflexgrave ocircumflexhook ocircumflextilde oe racute rcaron rcommaaccent sacute scaron scedilla scircumflex scommaaccent germandbls germandbls.alt01 tbar tcaron tcommaaccent tcedilla thorn uacute ubreve ucircumflex udieresis udotbelow ugrave uhook uhungarumlaut umacron uogonek uring utilde uhorn uhornacute uhorndotbelow uhorngrave uhornhook uhorntilde wacute wcircumflex wdieresis wgrave yacute ycircumflex ydieresis ydotbelow ygrave yhook ytilde zacute zcaron zdotaccent Aacute Abreve Acircumflex Adieresis Adotbelow Agrave Ahook Amacron Aogonek Aring Aringacute Atilde Abreveacute Abrevedotbelow Abrevegrave Abrevehook Abrevetilde Acircumflexacute Acircumflexdotbelow Acircumflexgrave Acircumflexhook Acircumflextilde AE AEacute Cacute Ccaron Ccedilla Ccircumflex Cdotaccent Dcaron Dcroat Eth Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Edotbelow Egrave Ehook Emacron Eogonek Etilde Ecircumflexacute Ecircumflexdotbelow Ecircumflexgrave Ecircumflexhook Ecircumflextilde Schwa Gbreve Gcircumflex Gcommaaccent Gdotaccent Hbar Hcircumflex Iacute Ibreve Icircumflex Idieresis Idotaccent Idotbelow Igrave Ihook Imacron Iogonek Itilde IJ IJacute Jacute Jcircumflex Kcommaaccent Lacute Lcaron Lcommaaccent Ldot Lslash Nacute Ncaron Ncommaaccent Ntilde Eng Oacute Obreve Ocircumflex Odieresis Odotbelow Ograve Ohook Ohungarumlaut Omacron Oslash Oslashacute Otilde Ohorn Ohornacute Ohorndotbelow Ohorngrave Ohornhook Ohorntilde Ocircumflexacute Ocircumflexdotbelow Ocircumflexgrave Ocircumflexhook Ocircumflextilde OE Racute Rcaron Rcommaaccent Sacute Scaron Scedilla Scircumflex Scommaaccent Germandbls Tbar Tcaron Tcommaaccent Tcedilla Thorn Uacute Ubreve Ucircumflex Udieresis Udotbelow Ugrave Uhook Uhungarumlaut Umacron Uogonek Uring Utilde Uhorn Uhornacute Uhorndotbelow Uhorngrave Uhornhook Uhorntilde Wacute Wcircumflex Wdieresis Wgrave Yacute Ycircumflex Ydotbelow Ydieresis Ygrave Yhook Ytilde Zacute Zcaron Zdotaccent mu Delta product summation Omega pi uni0430 uni0430.alt01 uni0431 uni0432 uni0433 uni0434 uni0435 uni0436 uni0437 uni0438 uni0439 uni043A uni043B uni043C uni043D uni043E uni043F uni0440 uni0441 uni0442 uni0443 uni0444 uni0445 uni0446 uni0447 uni0448 uni0449 uni044A uni044B uni044C uni044D uni044E uni044F uni0410 uni0411 uni0412 uni0413 uni0414 uni0415 uni0416 uni0417 uni0418 uni0419 uni041A uni041B uni041C uni041D uni041E uni041F uni0420 uni0421 uni0422 uni0423 uni0424 uni0425 uni0426 uni0427 uni0428 uni0429 uni042A uni042B uni042C uni042D uni042E uni042F uni04D3 uni04D1 uni04D3.alt01 uni04D1.alt01 uni04D5 uni0453 uni0491 uni0493 uni0495 uni0450 uni0451 uni04D7 uni0454 uni04DD uni04C2 uni0497 uni04DF uni0499 uni04CF uni04E5 uni045D uni04E3 uni045C uni049B uni049D uni04A1 uni0459 uni04A3 uni045A uni04A5 uni04E7 uni0473 uni04E9 uni04AB uni04EF uni04F1 uni04F3 uni045E uni04AF uni04B1 uni04B3 uni04F5 uni04B7 uni04B9 uni04F9 uni0455 uni045F uni0456 uni0457 uni0458 uni0452 uni045B uni04BB uni04D9 uni04D2 uni04D0 uni04D4 uni0403 uni0490 uni0492 uni0494 uni0400 uni0401 uni04D6 uni0404 uni04DC uni04C1 uni0496 uni04DE uni0498 uni04C0 uni04E4 uni040D uni04E2 uni040C uni049A uni049C uni04A0 uni0409 uni04A2 uni040A uni04A4 uni04E6 uni04E8 uni04AA uni04EE uni04F0 uni04F2 uni040E uni04AE uni04B0 uni04B2 uni04F4 uni04B6 uni04B8 uni04F8 uni0405 uni040F uni0406 uni0407 uni0408 uni0402 uni040B uni04BA uni04D8 zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zeroinferior oneinferior twoinferior threeinferior fourinferior fiveinferior sixinferior seveninferior eightinferior nineinferior zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom onehalf uni2153 uni2154 onequarter threequarters uni2155 uni2156 uni2157 uni2158 uni2159 uni215A uni2150 uni215B uni215C uni215D uni215E uni2151 checkmark crossmark arrowleft arrowup arrowdown arrowright arrowupleft arrowupright arrowdownleft arrowdownright arrowupleftcorner arrowdownleftcorner arrowleftupcorner arrowrightupcorner arrowleftdowncorner arrowrightdowncorner arrowuprightcorner arrowdownrightcorner arrowleftarrowright arrowrightarrowleft arrowleftright arrowupdown arrowdowncounterclockhalf arrowdownclockhalf arrowhookleft arrowhookright arrowupleftcounterclock arrowuprightclock tilde tilde.alt01 macron dotaccent dieresis hungarumlaut acute grave circumflex caron breve breve.cyrl ring ringacute commaturnedtop caronslovak cedilla ogonek tildecomb macroncomb dotaccentcomb dieresiscomb hungarumlautcomb acutecomb gravecomb circumflexcomb caroncomb brevecomb ringcomb hookcomb commaturnedtopcomb caronslovakcomb horncomb cedillacomb dotbelowcomb commabelowcomb ogonekcomb breveacute brevegrave brevehook brevetilde dieresisacute dieresiscaron dieresisgrave circumflexacute circumflexbreve circumflexgrave circumflexhook dieresismacron circumflextilde tilde.case tilde.alt01.case macron.case dotaccent.case dieresis.case hungarumlaut.case acute.case grave.case circumflex.case caron.case breve.case breve.cyrl_case ring.case ringacute.case hookcomb.case breveacute.case brevegrave.case brevehook.case brevetilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case dieresismacron.case circumflextilde.case";
+name = NotSpace;
+},
+{
+code = "zero one two three four five six seven eight nine";
+name = Digit;
+},
+{
+code = "@Digit a b c d e f A B C D E F";
+name = HexDigit;
 }
 );
 copyright = "Copyright 2019-2020 The Lilex Project Authors (https://github.com/mishamyrt/lilex/blob/master/AUTHORS)";
@@ -1162,7 +1174,7 @@ code = "	@mGC_bottom_0_0 = [cedillacomb commabelowcomb dotbelowcomb];\012	@mGC_t
 name = mark;
 },
 {
-code = "    @NotSpace = [a a.alt01 b c d e f g g.alt01 g.alt02 h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z zero zero.alt01 zero.alt02 one two three four five six seven eight nine ampersand at hyphen softhyphen endash emdash underscore period ellipsis colon comma semicolon quotesingle quotedbl quoteleft quoteright quotedblleft quotedblright quotesinglbase quotedblbase guilsinglleft guilsinglright guillemotleft guillemotright exclamdown exclam questiondown question parenleft parenright bracketleft bracketright braceleft braceright slash backslash fraction percent perthousand bar brokenbar section paragraph copyright registered trademark ordfeminine ordmasculine degree asterisk dagger daggerdbl numbersign asciicircum asciitilde plus minus plusminus multiply divide equal approxequal notequal less greater lessequal greaterequal periodcentered bullet lozenge logicalnot radical integral infinity estimated litre numerosign partialdiff cent Euro florin sterling dollar yen baht coloncurrency lira naira rupee won sheqel dong kip tugrik peso guarani hryvnia cedi tenge rupeeindian liraturkish ruble bitcoin fi fl aacute abreve acircumflex adieresis adotbelow agrave ahook amacron aogonek aring aringacute atilde abreveacute abrevedotbelow abrevegrave abrevehook abrevetilde acircumflexacute acircumflexdotbelow acircumflexgrave acircumflexhook acircumflextilde aacute.alt01 abreve.alt01 acircumflex.alt01 adieresis.alt01 adotbelow.alt01 agrave.alt01 ahook.alt01 amacron.alt01 aogonek.alt01 aring.alt01 aringacute.alt01 atilde.alt01 abreveacute.alt01 abrevedotbelow.alt01 abrevegrave.alt01 abrevehook.alt01 abrevetilde.alt01 acircumflexacute.alt01 acircumflexdotbelow.alt01 acircumflexgrave.alt01 acircumflexhook.alt01 acircumflextilde.alt01 ae aeacute cacute ccaron ccedilla ccircumflex cdotaccent dcaron dcroat eth eacute ebreve ecaron ecircumflex edieresis edotaccent edotbelow egrave ehook emacron eogonek etilde ecircumflexacute ecircumflexdotbelow ecircumflexgrave ecircumflexhook ecircumflextilde schwa gbreve gcircumflex gcommaaccent gdotaccent gbreve.alt01 gcircumflex.alt01 gcommaaccent.alt01 gdotaccent.alt01 hbar hcircumflex dotlessi iacute ibreve icircumflex idieresis idotbelow igrave ihook imacron iogonek itilde ij ijacute dotlessj jacute jcircumflex kcommaaccent kgreenlandic lacute lcaron lcommaaccent ldot lslash nacute ncaron ncommaaccent ntilde napostrophe eng oacute obreve ocircumflex odieresis odotbelow ograve ohook ohungarumlaut omacron oslash oslashacute otilde ohorn ohornacute ohorndotbelow ohorngrave ohornhook ohorntilde ocircumflexacute ocircumflexdotbelow ocircumflexgrave ocircumflexhook ocircumflextilde oe racute rcaron rcommaaccent sacute scaron scedilla scircumflex scommaaccent germandbls germandbls.alt01 tbar tcaron tcommaaccent tcedilla thorn uacute ubreve ucircumflex udieresis udotbelow ugrave uhook uhungarumlaut umacron uogonek uring utilde uhorn uhornacute uhorndotbelow uhorngrave uhornhook uhorntilde wacute wcircumflex wdieresis wgrave yacute ycircumflex ydieresis ydotbelow ygrave yhook ytilde zacute zcaron zdotaccent Aacute Abreve Acircumflex Adieresis Adotbelow Agrave Ahook Amacron Aogonek Aring Aringacute Atilde Abreveacute Abrevedotbelow Abrevegrave Abrevehook Abrevetilde Acircumflexacute Acircumflexdotbelow Acircumflexgrave Acircumflexhook Acircumflextilde AE AEacute Cacute Ccaron Ccedilla Ccircumflex Cdotaccent Dcaron Dcroat Eth Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Edotbelow Egrave Ehook Emacron Eogonek Etilde Ecircumflexacute Ecircumflexdotbelow Ecircumflexgrave Ecircumflexhook Ecircumflextilde Schwa Gbreve Gcircumflex Gcommaaccent Gdotaccent Hbar Hcircumflex Iacute Ibreve Icircumflex Idieresis Idotaccent Idotbelow Igrave Ihook Imacron Iogonek Itilde IJ IJacute Jacute Jcircumflex Kcommaaccent Lacute Lcaron Lcommaaccent Ldot Lslash Nacute Ncaron Ncommaaccent Ntilde Eng Oacute Obreve Ocircumflex Odieresis Odotbelow Ograve Ohook Ohungarumlaut Omacron Oslash Oslashacute Otilde Ohorn Ohornacute Ohorndotbelow Ohorngrave Ohornhook Ohorntilde Ocircumflexacute Ocircumflexdotbelow Ocircumflexgrave Ocircumflexhook Ocircumflextilde OE Racute Rcaron Rcommaaccent Sacute Scaron Scedilla Scircumflex Scommaaccent Germandbls Tbar Tcaron Tcommaaccent Tcedilla Thorn Uacute Ubreve Ucircumflex Udieresis Udotbelow Ugrave Uhook Uhungarumlaut Umacron Uogonek Uring Utilde Uhorn Uhornacute Uhorndotbelow Uhorngrave Uhornhook Uhorntilde Wacute Wcircumflex Wdieresis Wgrave Yacute Ycircumflex Ydotbelow Ydieresis Ygrave Yhook Ytilde Zacute Zcaron Zdotaccent mu Delta product summation Omega pi uni0430 uni0430.alt01 uni0431 uni0432 uni0433 uni0434 uni0435 uni0436 uni0437 uni0438 uni0439 uni043A uni043B uni043C uni043D uni043E uni043F uni0440 uni0441 uni0442 uni0443 uni0444 uni0445 uni0446 uni0447 uni0448 uni0449 uni044A uni044B uni044C uni044D uni044E uni044F uni0410 uni0411 uni0412 uni0413 uni0414 uni0415 uni0416 uni0417 uni0418 uni0419 uni041A uni041B uni041C uni041D uni041E uni041F uni0420 uni0421 uni0422 uni0423 uni0424 uni0425 uni0426 uni0427 uni0428 uni0429 uni042A uni042B uni042C uni042D uni042E uni042F uni04D3 uni04D1 uni04D3.alt01 uni04D1.alt01 uni04D5 uni0453 uni0491 uni0493 uni0495 uni0450 uni0451 uni04D7 uni0454 uni04DD uni04C2 uni0497 uni04DF uni0499 uni04CF uni04E5 uni045D uni04E3 uni045C uni049B uni049D uni04A1 uni0459 uni04A3 uni045A uni04A5 uni04E7 uni0473 uni04E9 uni04AB uni04EF uni04F1 uni04F3 uni045E uni04AF uni04B1 uni04B3 uni04F5 uni04B7 uni04B9 uni04F9 uni0455 uni045F uni0456 uni0457 uni0458 uni0452 uni045B uni04BB uni04D9 uni04D2 uni04D0 uni04D4 uni0403 uni0490 uni0492 uni0494 uni0400 uni0401 uni04D6 uni0404 uni04DC uni04C1 uni0496 uni04DE uni0498 uni04C0 uni04E4 uni040D uni04E2 uni040C uni049A uni049C uni04A0 uni0409 uni04A2 uni040A uni04A4 uni04E6 uni04E8 uni04AA uni04EE uni04F0 uni04F2 uni040E uni04AE uni04B0 uni04B2 uni04F4 uni04B6 uni04B8 uni04F8 uni0405 uni040F uni0406 uni0407 uni0408 uni0402 uni040B uni04BA uni04D8 zerosuperior onesuperior twosuperior threesuperior foursuperior fivesuperior sixsuperior sevensuperior eightsuperior ninesuperior zeroinferior oneinferior twoinferior threeinferior fourinferior fiveinferior sixinferior seveninferior eightinferior nineinferior zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr zero.dnom one.dnom two.dnom three.dnom four.dnom five.dnom six.dnom seven.dnom eight.dnom nine.dnom onehalf uni2153 uni2154 onequarter threequarters uni2155 uni2156 uni2157 uni2158 uni2159 uni215A uni2150 uni215B uni215C uni215D uni215E uni2151 checkmark crossmark arrowleft arrowup arrowdown arrowright arrowupleft arrowupright arrowdownleft arrowdownright arrowupleftcorner arrowdownleftcorner arrowleftupcorner arrowrightupcorner arrowleftdowncorner arrowrightdowncorner arrowuprightcorner arrowdownrightcorner arrowleftarrowright arrowrightarrowleft arrowleftright arrowupdown arrowdowncounterclockhalf arrowdownclockhalf arrowhookleft arrowhookright arrowupleftcounterclock arrowuprightclock tilde tilde.alt01 macron dotaccent dieresis hungarumlaut acute grave circumflex caron breve breve.cyrl ring ringacute commaturnedtop caronslovak cedilla ogonek tildecomb macroncomb dotaccentcomb dieresiscomb hungarumlautcomb acutecomb gravecomb circumflexcomb caroncomb brevecomb ringcomb hookcomb commaturnedtopcomb caronslovakcomb horncomb cedillacomb dotbelowcomb commabelowcomb ogonekcomb breveacute brevegrave brevehook brevetilde dieresisacute dieresiscaron dieresisgrave circumflexacute circumflexbreve circumflexgrave circumflexhook dieresismacron circumflextilde tilde.case tilde.alt01.case macron.case dotaccent.case dieresis.case hungarumlaut.case acute.case grave.case circumflex.case caron.case breve.case breve.cyrl_case ring.case ringacute.case hookcomb.case breveacute.case brevegrave.case brevehook.case brevetilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case dieresismacron.case circumflextilde.case];\012\012    @Digit = [zero one two three four five six seven eight nine];\012\012    @HexDigit = [@Digit a b c d e f A B C D E F];\012\012lookup numbersign_numbersign_numbersign_numbersign {\012  ignore sub numbersign numbersign' numbersign numbersign numbersign;\012  ignore sub numbersign' numbersign numbersign numbersign numbersign;\012  sub LIG LIG LIG numbersign' by numbersign_numbersign_numbersign_numbersign.liga;\012  sub LIG LIG  numbersign' numbersign  by LIG;\012  sub LIG  numbersign'  numbersign  numbersign  by LIG;\012  sub numbersign'   numbersign   numbersign  numbersign  by LIG;\012} numbersign_numbersign_numbersign_numbersign;\012\012    lookup exclam_equal_equal {\012        ignore sub exclam exclam' equal equal;\012        ignore sub exclam' equal equal equal;\012        ignore sub parenleft question exclam' equal equal;\012        ignore sub parenleft question less exclam' equal equal;\012        sub LIG LIG equal' by exclam_equal_equal.liga;\012        sub LIG  equal' equal  by LIG;\012        sub exclam'   equal  equal  by LIG;\012    } exclam_equal_equal;\012\012lookup less_equal_greater {\012  ignore sub less less' equal greater;\012  ignore sub less' equal greater greater;\012  ignore sub parenleft question less' equal greater;\012  sub LIG LIG greater' by less_equal_greater.liga;\012  sub LIG  equal' greater  by LIG;\012  sub less'   equal  greater  by LIG;\012} less_equal_greater;\012\012lookup less_less_equal {\012  ignore sub less less' less equal;\012  ignore sub less' less equal equal;\012  sub LIG LIG equal' by less_less_equal.liga;\012  sub LIG  less' equal  by LIG;\012  sub less'   less  equal  by LIG;\012} less_less_equal;\012\012lookup slash_asciitilde_backslash {\012  ignore sub slash slash' asciitilde backslash;\012  ignore sub slash' asciitilde backslash backslash;\012  sub LIG LIG backslash' by slash_asciitilde_backslash.liga;\012  sub LIG  asciitilde' backslash  by LIG;\012  sub slash'   asciitilde  backslash  by LIG;\012} slash_asciitilde_backslash;\012\012lookup underscore_underscore_parenleft {\012  ignore sub underscore underscore' underscore parenleft;\012  ignore sub underscore' underscore parenleft parenleft;\012  sub LIG LIG parenleft' by underscore_underscore_parenleft.liga;\012  sub LIG  underscore' parenleft  by LIG;\012  sub underscore'   underscore  parenleft  by LIG;\012} underscore_underscore_parenleft;\012\012lookup equal_exclam_equal.liga {\012  ignore sub equal equal' exclam equal;\012  ignore sub equal' exclam equal equal;\012  ignore sub parenleft question equal' exclam equal;\012  ignore sub parenleft question less equal' exclam equal;\012  sub LIG LIG equal' by equal_exclam_equal.liga;\012  sub LIG  exclam' equal  by LIG;\012  sub equal'   exclam  equal  by LIG;\012} equal_exclam_equal.liga;\012\012lookup less_slash_greater {\012  ignore sub less less' slash greater;\012  ignore sub less' slash greater greater;\012  sub LIG LIG greater' by less_slash_greater.liga;\012  sub LIG  slash' greater  by LIG;\012  sub less'   slash  greater  by LIG;\012} less_slash_greater;\012\012lookup equal_colon_equal {\012  ignore sub equal equal' colon equal;\012  ignore sub equal' colon equal equal;\012  ignore sub parenleft question equal' colon equal;\012  ignore sub parenleft question less equal' colon equal;\012  sub LIG LIG equal' by equal_colon_equal.liga;\012  sub LIG  colon' equal  by LIG;\012  sub equal'   colon  equal  by LIG;\012} equal_colon_equal;\012\012lookup equal_greater_greater {\012  ignore sub equal equal' greater greater;\012  ignore sub equal' greater greater greater;\012  ignore sub parenleft question equal' greater greater;\012  ignore sub parenleft question less equal' greater greater;\012  sub LIG LIG greater' by equal_greater_greater.liga;\012  sub LIG  greater' greater  by LIG;\012  sub equal'   greater  greater  by LIG;\012} equal_greater_greater;\012\012    lookup period_period_period {\012        ignore sub period period' period period;\012        ignore sub period' period period period;\012        sub LIG LIG period' by period_period_period.liga;\012        sub LIG  period' period  by LIG;\012        sub period'   period  period  by LIG;\012    } period_period_period;\012\012    lookup asciitilde_asciitilde_greater {\012        ignore sub asciitilde asciitilde' asciitilde greater;\012        ignore sub asciitilde' asciitilde greater greater;\012        sub LIG LIG greater' by asciitilde_asciitilde_greater.liga;\012        sub LIG  asciitilde' greater  by LIG;\012        sub asciitilde'   asciitilde  greater  by LIG;\012    } asciitilde_asciitilde_greater;\012    lookup asterisk_asterisk_asterisk {\012        ignore sub asterisk asterisk' asterisk asterisk;\012        ignore sub asterisk' asterisk asterisk asterisk;\012        ignore sub slash asterisk' asterisk asterisk;\012        ignore sub asterisk' asterisk asterisk slash;\012        sub LIG LIG asterisk' by asterisk_asterisk_asterisk.liga;\012        sub LIG  asterisk' asterisk  by LIG;\012        sub asterisk'   asterisk  asterisk  by LIG;\012    } asterisk_asterisk_asterisk;\012\012lookup numbersign_numbersign_numbersign {\012  ignore sub numbersign numbersign' numbersign numbersign;\012  ignore sub numbersign' numbersign numbersign numbersign;\012  sub LIG LIG numbersign' by numbersign_numbersign_numbersign.liga;\012  sub LIG  numbersign' numbersign  by LIG;\012  sub numbersign'   numbersign  numbersign  by LIG;\012} numbersign_numbersign_numbersign;\012\012    lookup slash_asterisk {\012        ignore sub slash slash' asterisk;\012        ignore sub slash' asterisk asterisk;\012        ignore sub slash' asterisk slash;\012        ignore sub asterisk slash' asterisk;\012        sub LIG asterisk' by slash_asterisk.liga;\012        sub slash'  asterisk  by LIG;\012    } slash_asterisk;\012\012    lookup ampersand_ampersand {\012      ignore sub ampersand ampersand' ampersand;\012      ignore sub ampersand' ampersand ampersand;\012      sub LIG ampersand' by ampersand_ampersand.liga;\012      sub ampersand'  ampersand  by LIG;\012    } ampersand_ampersand;\012    lookup equal_equal {\012        ignore sub equal equal' equal;\012        ignore sub equal' equal equal;\012        ignore sub parenleft question equal' equal;\012        ignore sub parenleft question less equal' equal;\012        sub LIG equal' by equal_equal.liga;\012        sub equal'  equal  by LIG;\012    } equal_equal;\012    lookup equal_equal_equal {\012        ignore sub equal equal' equal equal;\012        ignore sub equal' equal equal equal;\012        ignore sub parenleft question equal' equal equal;\012        ignore sub parenleft question less equal' equal equal;\012        sub LIG LIG equal' by equal_equal_equal.liga;\012        sub LIG  equal' equal  by LIG;\012        sub equal'   equal  equal  by LIG;\012    } equal_equal_equal;\012    lookup exclam_equal {\012        ignore sub exclam exclam' equal;\012        ignore sub exclam' equal equal;\012        ignore sub parenleft question exclam' equal;\012        ignore sub parenleft question less exclam' equal;\012        sub LIG equal' by exclam_equal.liga;\012        sub exclam'  equal  by LIG;\012    } exclam_equal;\012    lookup asciitilde_asciitilde {\012        ignore sub asciitilde asciitilde' asciitilde;\012        ignore sub asciitilde' asciitilde asciitilde;\012        sub LIG asciitilde' by asciitilde_asciitilde.liga;\012        sub asciitilde'  asciitilde  by LIG;\012    } asciitilde_asciitilde;\012    lookup bar_bar {\012        ignore sub bar bar' bar;\012        ignore sub bar' bar bar;\012        sub LIG bar' by bar_bar.liga;\012        sub bar'  bar  by LIG;\012    } bar_bar;\012    lookup asterisk_asterisk {\012        ignore sub asterisk asterisk' asterisk;\012        ignore sub asterisk' asterisk asterisk;\012        ignore sub slash asterisk' asterisk;\012        ignore sub asterisk' asterisk slash;\012        sub LIG asterisk' by asterisk_asterisk.liga;\012        sub asterisk'  asterisk  by LIG;\012    } asterisk_asterisk;\012\012    lookup slash_slash {\012        ignore sub slash slash' slash;\012        ignore sub slash' slash slash;\012        sub LIG slash' by slash_slash.liga;\012        sub slash'  slash  by LIG;\012    } slash_slash;\012\012lookup exclam_exclam {\012  ignore sub exclam exclam' exclam;\012  ignore sub exclam' exclam exclam;\012  ignore sub parenleft question exclam' exclam;\012  ignore sub parenleft question less exclam' exclam;\012  sub LIG exclam' by exclam_exclam.liga;\012  sub exclam'  exclam  by LIG;\012} exclam_exclam;\012\012    lookup equal_greater {\012        ignore sub equal equal' greater;\012        ignore sub equal' greater greater;\012        ignore sub parenleft question equal' greater;\012        ignore sub parenleft question less equal' greater;\012        sub LIG greater' by equal_greater.liga;\012        sub equal'  greater  by LIG;\012    } equal_greater;\012\012    lookup period_period {\012        ignore sub period period' period;\012        ignore sub period' period period;\012        sub LIG period' by period_period.liga;\012        sub period'  period  by LIG;\012    } period_period;\012\012    lookup colon_colon {\012        ignore sub colon colon' colon;\012        ignore sub colon' colon colon;\012        ignore sub parenleft question colon' colon;\012        sub LIG colon' by colon_colon.liga;\012        sub colon'  colon  by LIG;\012    } colon_colon;\012\012    lookup numbersign_exclam {\012        ignore sub numbersign numbersign' exclam;\012        ignore sub numbersign' exclam exclam;\012        sub LIG exclam' by numbersign_exclam.liga;\012        sub numbersign'  exclam  by LIG;\012    } numbersign_exclam;\012\012    lookup greater_equal {\012        ignore sub greater greater' equal;\012        ignore sub greater' equal equal;\012        ignore sub greater' equal less;\012        sub LIG equal' by greater_equal.liga;\012        sub greater'  equal  by LIG;\012    } greater_equal;\012\012    lookup less_slash {\012        ignore sub less less' slash;\012        ignore sub less' slash slash;\012        sub LIG slash' by less_slash.liga;\012        sub less'  slash  by LIG;\012    } less_slash;\012\012    lookup less_equal {\012        ignore sub less less' equal;\012        ignore sub less' equal equal;\012        ignore sub parenleft question less' equal;\012        sub LIG equal' by less_equal.liga;\012        sub less'  equal  by LIG;\012    } less_equal;\012\012    lookup asterisk_greater {\012        ignore sub asterisk asterisk' greater;\012        ignore sub asterisk' greater greater;\012        sub LIG greater' by asterisk_greater.liga;\012        sub asterisk'  greater  by LIG;\012    } asterisk_greater;\012\012    lookup asterisk_slash {\012        ignore sub asterisk asterisk' slash;\012        ignore sub asterisk' slash slash;\012        ignore sub slash asterisk' slash;\012        ignore sub asterisk' slash asterisk;\012        sub LIG slash' by asterisk_slash.liga;\012        sub asterisk'  slash  by LIG;\012    } asterisk_slash;\012\012    lookup backslash_slash {\012        ignore sub @NotSpace backslash' slash;\012        ignore sub backslash' slash @NotSpace;\012        sub LIG slash' by backslash_slash.liga;\012        sub backslash' slash by LIG;\012    } backslash_slash;\012\012    lookup period_question {\012        ignore sub period period' question;\012        ignore sub period' question question;\012        sub LIG question' by period_question.liga;\012        sub period'  question  by LIG;\012    } period_question;\012\012    lookup asciitilde_equal {\012        ignore sub asciitilde asciitilde' equal;\012        ignore sub asciitilde' equal equal;\012        sub LIG equal' by asciitilde_equal.liga;\012        sub asciitilde'  equal  by LIG;\012    } asciitilde_equal;\012\012    lookup hyphen_hyphen {\012        ignore sub hyphen hyphen' hyphen;\012        ignore sub hyphen' hyphen hyphen;\012        sub LIG hyphen' by hyphen_hyphen.liga;\012        sub hyphen'  hyphen  by LIG;\012    } hyphen_hyphen;\012\012    lookup plus_plus {\012        ignore sub plus plus' plus;\012        ignore sub plus' plus plus;\012        sub LIG plus' by plus_plus.liga;\012        sub plus'  plus  by LIG;\012    } plus_plus;\012\012    lookup slash_greater {\012        ignore sub slash slash' greater;\012        ignore sub slash' greater greater;\012        sub LIG greater' by slash_greater.liga;\012        sub slash'  greater  by LIG;\012    } slash_greater;\012\012    lookup w_w_w {\012        ignore sub w w' w w;\012        ignore sub w' w w w;\012        sub LIG LIG w' by uni0077_w_w.liga;\012        sub LIG  w' w  by LIG;\012        sub w'   w  w  by LIG;\012    } w_w_w;\012\012    lookup underscore_underscore {\012        ignore sub underscore underscore' underscore;\012        ignore sub underscore' underscore underscore;\012        sub LIG underscore' by underscore_underscore.liga;\012        sub underscore'  underscore  by LIG;\012    } underscore_underscore;\012\012    lookup slash_equal {\012        ignore sub slash slash' equal;\012        ignore sub slash' equal equal;\012        sub LIG equal' by slash_equal.liga;\012        sub slash'  equal  by LIG;\012    } slash_equal;\012\012    lookup period_equal {\012        ignore sub period period' equal;\012        ignore sub period' equal equal;\012        sub LIG equal' by period_equal.liga;\012        sub period'  equal  by LIG;\012    } period_equal;\012\012lookup colon_equal {\012  ignore sub colon colon' equal;\012  ignore sub colon' equal equal;\012  ignore sub parenleft question colon' equal;\012  sub LIG equal' by colon_equal.liga;\012  sub colon'  equal  by LIG;\012} colon_equal;\012\012lookup hyphen_greater {\012  ignore sub hyphen hyphen' greater;\012  ignore sub hyphen' greater greater;\012  sub LIG greater' by hyphen_greater.liga;\012  sub hyphen'  greater  by LIG;\012} hyphen_greater;\012\012lookup less_hyphen {\012  ignore sub less less' hyphen;\012  ignore sub less' hyphen hyphen;\012  sub LIG hyphen' by less_hyphen.liga;\012  sub less'  hyphen  by LIG;\012} less_hyphen;\012\012lookup numbersign_numbersign {\012  ignore sub numbersign numbersign' numbersign;\012  ignore sub numbersign' numbersign numbersign;\012  sub LIG numbersign' by numbersign_numbersign.liga;\012  sub numbersign'  numbersign  by LIG;\012} numbersign_numbersign;\012\012lookup numbersign_braceleft {\012  ignore sub numbersign numbersign' braceleft;\012  ignore sub numbersign' braceleft braceleft;\012  sub LIG braceleft' by numbersign_braceleft.liga;\012  sub numbersign'  braceleft  by LIG;\012} numbersign_braceleft;\012\012lookup numbersign_bracketleft {\012  ignore sub numbersign numbersign' bracketleft;\012  ignore sub numbersign' bracketleft bracketleft;\012  sub LIG bracketleft' by numbersign_bracketleft.liga;\012  sub numbersign'  bracketleft  by LIG;\012} numbersign_bracketleft;\012\012lookup numbersign_parenleft {\012  ignore sub numbersign numbersign' parenleft;\012  ignore sub numbersign' parenleft parenleft;\012  sub LIG parenleft' by numbersign_parenleft.liga;\012  sub numbersign'  parenleft  by LIG;\012} numbersign_parenleft;\012\012lookup greater_greater {\012  ignore sub greater greater' greater;\012  ignore sub greater' greater greater;\012  ignore sub asterisk greater' greater;\012  ignore sub plus greater' greater;\012  ignore sub dollar greater' greater;\012  sub LIG greater' by greater_greater.liga;\012  sub greater'  greater  by LIG;\012} greater_greater;\012\012\012\012    sub zero x' @HexDigit by multiply;\012    sub @Digit x' @Digit by multiply;\012    sub @Digit colon' @Digit by colon.valign;";
+code = "lookup numbersign_numbersign_numbersign_numbersign {\012  ignore sub numbersign numbersign' numbersign numbersign numbersign;\012  ignore sub numbersign' numbersign numbersign numbersign numbersign;\012  sub LIG LIG LIG numbersign' by numbersign_numbersign_numbersign_numbersign.liga;\012  sub LIG LIG  numbersign' numbersign  by LIG;\012  sub LIG  numbersign'  numbersign  numbersign  by LIG;\012  sub numbersign'   numbersign   numbersign  numbersign  by LIG;\012} numbersign_numbersign_numbersign_numbersign;\012\012    lookup exclam_equal_equal {\012        ignore sub exclam exclam' equal equal;\012        ignore sub exclam' equal equal equal;\012        ignore sub parenleft question exclam' equal equal;\012        ignore sub parenleft question less exclam' equal equal;\012        sub LIG LIG equal' by exclam_equal_equal.liga;\012        sub LIG  equal' equal  by LIG;\012        sub exclam'   equal  equal  by LIG;\012    } exclam_equal_equal;\012\012lookup less_equal_greater {\012  ignore sub less less' equal greater;\012  ignore sub less' equal greater greater;\012  ignore sub parenleft question less' equal greater;\012  sub LIG LIG greater' by less_equal_greater.liga;\012  sub LIG  equal' greater  by LIG;\012  sub less'   equal  greater  by LIG;\012} less_equal_greater;\012\012lookup less_less_equal {\012  ignore sub less less' less equal;\012  ignore sub less' less equal equal;\012  sub LIG LIG equal' by less_less_equal.liga;\012  sub LIG  less' equal  by LIG;\012  sub less'   less  equal  by LIG;\012} less_less_equal;\012\012lookup slash_asciitilde_backslash {\012  ignore sub slash slash' asciitilde backslash;\012  ignore sub slash' asciitilde backslash backslash;\012  sub LIG LIG backslash' by slash_asciitilde_backslash.liga;\012  sub LIG  asciitilde' backslash  by LIG;\012  sub slash'   asciitilde  backslash  by LIG;\012} slash_asciitilde_backslash;\012\012lookup underscore_underscore_parenleft {\012  ignore sub underscore underscore' underscore parenleft;\012  ignore sub underscore' underscore parenleft parenleft;\012  sub LIG LIG parenleft' by underscore_underscore_parenleft.liga;\012  sub LIG  underscore' parenleft  by LIG;\012  sub underscore'   underscore  parenleft  by LIG;\012} underscore_underscore_parenleft;\012\012lookup equal_exclam_equal.liga {\012  ignore sub equal equal' exclam equal;\012  ignore sub equal' exclam equal equal;\012  ignore sub parenleft question equal' exclam equal;\012  ignore sub parenleft question less equal' exclam equal;\012  sub LIG LIG equal' by equal_exclam_equal.liga;\012  sub LIG  exclam' equal  by LIG;\012  sub equal'   exclam  equal  by LIG;\012} equal_exclam_equal.liga;\012\012lookup less_slash_greater {\012  ignore sub less less' slash greater;\012  ignore sub less' slash greater greater;\012  sub LIG LIG greater' by less_slash_greater.liga;\012  sub LIG  slash' greater  by LIG;\012  sub less'   slash  greater  by LIG;\012} less_slash_greater;\012\012lookup equal_colon_equal {\012  ignore sub equal equal' colon equal;\012  ignore sub equal' colon equal equal;\012  ignore sub parenleft question equal' colon equal;\012  ignore sub parenleft question less equal' colon equal;\012  sub LIG LIG equal' by equal_colon_equal.liga;\012  sub LIG  colon' equal  by LIG;\012  sub equal'   colon  equal  by LIG;\012} equal_colon_equal;\012\012lookup equal_greater_greater {\012  ignore sub equal equal' greater greater;\012  ignore sub equal' greater greater greater;\012  ignore sub parenleft question equal' greater greater;\012  ignore sub parenleft question less equal' greater greater;\012  sub LIG LIG greater' by equal_greater_greater.liga;\012  sub LIG  greater' greater  by LIG;\012  sub equal'   greater  greater  by LIG;\012} equal_greater_greater;\012\012    lookup period_period_period {\012        ignore sub period period' period period;\012        ignore sub period' period period period;\012        sub LIG LIG period' by period_period_period.liga;\012        sub LIG  period' period  by LIG;\012        sub period'   period  period  by LIG;\012    } period_period_period;\012\012    lookup asciitilde_asciitilde_greater {\012        ignore sub asciitilde asciitilde' asciitilde greater;\012        ignore sub asciitilde' asciitilde greater greater;\012        sub LIG LIG greater' by asciitilde_asciitilde_greater.liga;\012        sub LIG  asciitilde' greater  by LIG;\012        sub asciitilde'   asciitilde  greater  by LIG;\012    } asciitilde_asciitilde_greater;\012    lookup asterisk_asterisk_asterisk {\012        ignore sub asterisk asterisk' asterisk asterisk;\012        ignore sub asterisk' asterisk asterisk asterisk;\012        ignore sub slash asterisk' asterisk asterisk;\012        ignore sub asterisk' asterisk asterisk slash;\012        sub LIG LIG asterisk' by asterisk_asterisk_asterisk.liga;\012        sub LIG  asterisk' asterisk  by LIG;\012        sub asterisk'   asterisk  asterisk  by LIG;\012    } asterisk_asterisk_asterisk;\012\012lookup numbersign_numbersign_numbersign {\012  ignore sub numbersign numbersign' numbersign numbersign;\012  ignore sub numbersign' numbersign numbersign numbersign;\012  sub LIG LIG numbersign' by numbersign_numbersign_numbersign.liga;\012  sub LIG  numbersign' numbersign  by LIG;\012  sub numbersign'   numbersign  numbersign  by LIG;\012} numbersign_numbersign_numbersign;\012\012    lookup slash_asterisk {\012        ignore sub slash slash' asterisk;\012        ignore sub slash' asterisk asterisk;\012        ignore sub slash' asterisk slash;\012        ignore sub asterisk slash' asterisk;\012        sub LIG asterisk' by slash_asterisk.liga;\012        sub slash'  asterisk  by LIG;\012    } slash_asterisk;\012\012    lookup ampersand_ampersand {\012      ignore sub ampersand ampersand' ampersand;\012      ignore sub ampersand' ampersand ampersand;\012      sub LIG ampersand' by ampersand_ampersand.liga;\012      sub ampersand'  ampersand  by LIG;\012    } ampersand_ampersand;\012    lookup equal_equal {\012        ignore sub equal equal' equal;\012        ignore sub equal' equal equal;\012        ignore sub parenleft question equal' equal;\012        ignore sub parenleft question less equal' equal;\012        sub LIG equal' by equal_equal.liga;\012        sub equal'  equal  by LIG;\012    } equal_equal;\012    lookup equal_equal_equal {\012        ignore sub equal equal' equal equal;\012        ignore sub equal' equal equal equal;\012        ignore sub parenleft question equal' equal equal;\012        ignore sub parenleft question less equal' equal equal;\012        sub LIG LIG equal' by equal_equal_equal.liga;\012        sub LIG  equal' equal  by LIG;\012        sub equal'   equal  equal  by LIG;\012    } equal_equal_equal;\012    lookup exclam_equal {\012        ignore sub exclam exclam' equal;\012        ignore sub exclam' equal equal;\012        ignore sub parenleft question exclam' equal;\012        ignore sub parenleft question less exclam' equal;\012        sub LIG equal' by exclam_equal.liga;\012        sub exclam'  equal  by LIG;\012    } exclam_equal;\012    lookup asciitilde_asciitilde {\012        ignore sub asciitilde asciitilde' asciitilde;\012        ignore sub asciitilde' asciitilde asciitilde;\012        sub LIG asciitilde' by asciitilde_asciitilde.liga;\012        sub asciitilde'  asciitilde  by LIG;\012    } asciitilde_asciitilde;\012    lookup bar_bar {\012        ignore sub bar bar' bar;\012        ignore sub bar' bar bar;\012        sub LIG bar' by bar_bar.liga;\012        sub bar'  bar  by LIG;\012    } bar_bar;\012    lookup asterisk_asterisk {\012        ignore sub asterisk asterisk' asterisk;\012        ignore sub asterisk' asterisk asterisk;\012        ignore sub slash asterisk' asterisk;\012        ignore sub asterisk' asterisk slash;\012        sub LIG asterisk' by asterisk_asterisk.liga;\012        sub asterisk'  asterisk  by LIG;\012    } asterisk_asterisk;\012\012    lookup slash_slash {\012        ignore sub slash slash' slash;\012        ignore sub slash' slash slash;\012        sub LIG slash' by slash_slash.liga;\012        sub slash'  slash  by LIG;\012    } slash_slash;\012\012lookup exclam_exclam {\012  ignore sub exclam exclam' exclam;\012  ignore sub exclam' exclam exclam;\012  ignore sub parenleft question exclam' exclam;\012  ignore sub parenleft question less exclam' exclam;\012  sub LIG exclam' by exclam_exclam.liga;\012  sub exclam'  exclam  by LIG;\012} exclam_exclam;\012\012    lookup equal_greater {\012        ignore sub equal equal' greater;\012        ignore sub equal' greater greater;\012        ignore sub parenleft question equal' greater;\012        ignore sub parenleft question less equal' greater;\012        sub LIG greater' by equal_greater.liga;\012        sub equal'  greater  by LIG;\012    } equal_greater;\012\012    lookup period_period {\012        ignore sub period period' period;\012        ignore sub period' period period;\012        sub LIG period' by period_period.liga;\012        sub period'  period  by LIG;\012    } period_period;\012\012    lookup colon_colon {\012        ignore sub colon colon' colon;\012        ignore sub colon' colon colon;\012        ignore sub parenleft question colon' colon;\012        sub LIG colon' by colon_colon.liga;\012        sub colon'  colon  by LIG;\012    } colon_colon;\012\012    lookup numbersign_exclam {\012        ignore sub numbersign numbersign' exclam;\012        ignore sub numbersign' exclam exclam;\012        sub LIG exclam' by numbersign_exclam.liga;\012        sub numbersign'  exclam  by LIG;\012    } numbersign_exclam;\012\012    lookup greater_equal {\012        ignore sub greater greater' equal;\012        ignore sub greater' equal equal;\012        ignore sub greater' equal less;\012        sub LIG equal' by greater_equal.liga;\012        sub greater'  equal  by LIG;\012    } greater_equal;\012\012    lookup less_slash {\012        ignore sub less less' slash;\012        ignore sub less' slash slash;\012        sub LIG slash' by less_slash.liga;\012        sub less'  slash  by LIG;\012    } less_slash;\012\012    lookup less_equal {\012        ignore sub less less' equal;\012        ignore sub less' equal equal;\012        ignore sub parenleft question less' equal;\012        sub LIG equal' by less_equal.liga;\012        sub less'  equal  by LIG;\012    } less_equal;\012\012    lookup asterisk_greater {\012        ignore sub asterisk asterisk' greater;\012        ignore sub asterisk' greater greater;\012        sub LIG greater' by asterisk_greater.liga;\012        sub asterisk'  greater  by LIG;\012    } asterisk_greater;\012\012    lookup asterisk_slash {\012        ignore sub asterisk asterisk' slash;\012        ignore sub asterisk' slash slash;\012        ignore sub slash asterisk' slash;\012        ignore sub asterisk' slash asterisk;\012        sub LIG slash' by asterisk_slash.liga;\012        sub asterisk'  slash  by LIG;\012    } asterisk_slash;\012\012    lookup backslash_slash {\012        ignore sub @NotSpace backslash' slash;\012        ignore sub backslash' slash @NotSpace;\012        sub LIG slash' by backslash_slash.liga;\012        sub backslash' slash by LIG;\012    } backslash_slash;\012\012    lookup period_question {\012        ignore sub period period' question;\012        ignore sub period' question question;\012        sub LIG question' by period_question.liga;\012        sub period'  question  by LIG;\012    } period_question;\012\012    lookup asciitilde_equal {\012        ignore sub asciitilde asciitilde' equal;\012        ignore sub asciitilde' equal equal;\012        sub LIG equal' by asciitilde_equal.liga;\012        sub asciitilde'  equal  by LIG;\012    } asciitilde_equal;\012\012    lookup hyphen_hyphen {\012        ignore sub hyphen hyphen' hyphen;\012        ignore sub hyphen' hyphen hyphen;\012        sub LIG hyphen' by hyphen_hyphen.liga;\012        sub hyphen'  hyphen  by LIG;\012    } hyphen_hyphen;\012\012    lookup plus_plus {\012        ignore sub plus plus' plus;\012        ignore sub plus' plus plus;\012        sub LIG plus' by plus_plus.liga;\012        sub plus'  plus  by LIG;\012    } plus_plus;\012\012    lookup slash_greater {\012        ignore sub slash slash' greater;\012        ignore sub slash' greater greater;\012        sub LIG greater' by slash_greater.liga;\012        sub slash'  greater  by LIG;\012    } slash_greater;\012\012    lookup w_w_w {\012        ignore sub w w' w w;\012        ignore sub w' w w w;\012        sub LIG LIG w' by uni0077_w_w.liga;\012        sub LIG  w' w  by LIG;\012        sub w'   w  w  by LIG;\012    } w_w_w;\012\012    lookup underscore_underscore {\012        ignore sub underscore underscore' underscore;\012        ignore sub underscore' underscore underscore;\012        sub LIG underscore' by underscore_underscore.liga;\012        sub underscore'  underscore  by LIG;\012    } underscore_underscore;\012\012    lookup slash_equal {\012        ignore sub slash slash' equal;\012        ignore sub slash' equal equal;\012        sub LIG equal' by slash_equal.liga;\012        sub slash'  equal  by LIG;\012    } slash_equal;\012\012    lookup period_equal {\012        ignore sub period period' equal;\012        ignore sub period' equal equal;\012        sub LIG equal' by period_equal.liga;\012        sub period'  equal  by LIG;\012    } period_equal;\012\012lookup colon_equal {\012  ignore sub colon colon' equal;\012  ignore sub colon' equal equal;\012  ignore sub parenleft question colon' equal;\012  sub LIG equal' by colon_equal.liga;\012  sub colon'  equal  by LIG;\012} colon_equal;\012\012lookup hyphen_greater {\012  ignore sub hyphen hyphen' greater;\012  ignore sub hyphen' greater greater;\012  sub LIG greater' by hyphen_greater.liga;\012  sub hyphen'  greater  by LIG;\012} hyphen_greater;\012\012lookup less_hyphen {\012  ignore sub less less' hyphen;\012  ignore sub less' hyphen hyphen;\012  sub LIG hyphen' by less_hyphen.liga;\012  sub less'  hyphen  by LIG;\012} less_hyphen;\012\012lookup numbersign_numbersign {\012  ignore sub numbersign numbersign' numbersign;\012  ignore sub numbersign' numbersign numbersign;\012  sub LIG numbersign' by numbersign_numbersign.liga;\012  sub numbersign'  numbersign  by LIG;\012} numbersign_numbersign;\012\012lookup numbersign_braceleft {\012  ignore sub numbersign numbersign' braceleft;\012  ignore sub numbersign' braceleft braceleft;\012  sub LIG braceleft' by numbersign_braceleft.liga;\012  sub numbersign'  braceleft  by LIG;\012} numbersign_braceleft;\012\012lookup numbersign_bracketleft {\012  ignore sub numbersign numbersign' bracketleft;\012  ignore sub numbersign' bracketleft bracketleft;\012  sub LIG bracketleft' by numbersign_bracketleft.liga;\012  sub numbersign'  bracketleft  by LIG;\012} numbersign_bracketleft;\012\012lookup numbersign_parenleft {\012  ignore sub numbersign numbersign' parenleft;\012  ignore sub numbersign' parenleft parenleft;\012  sub LIG parenleft' by numbersign_parenleft.liga;\012  sub numbersign'  parenleft  by LIG;\012} numbersign_parenleft;\012\012lookup greater_greater {\012  ignore sub greater greater' greater;\012  ignore sub greater' greater greater;\012  ignore sub asterisk greater' greater;\012  ignore sub plus greater' greater;\012  ignore sub dollar greater' greater;\012  sub LIG greater' by greater_greater.liga;\012  sub greater'  greater  by LIG;\012} greater_greater;\012\012\012\012    sub zero x' @HexDigit by multiply;\012    sub @Digit x' @Digit by multiply;\012    sub @Digit colon' @Digit by colon.valign;";
 name = calt;
 }
 );
@@ -19160,7 +19172,7 @@ unicode = 00E4;
 },
 {
 glyphname = adotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -19169,7 +19181,7 @@ name = a;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 584, 0}";
+transform = "{1, 0, 0, 1, 283, 0}";
 }
 );
 layerId = master01;
@@ -19182,7 +19194,7 @@ name = a;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 566, 0}";
+transform = "{1, 0, 0, 1, 283, 0}";
 }
 );
 layerId = master02;
@@ -19594,7 +19606,7 @@ unicode = 1EAF;
 },
 {
 glyphname = abrevedotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -19607,7 +19619,7 @@ transform = "{1, 0, 0, 1, -16, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 584, 0}";
+transform = "{1, 0, 0, 1, 283, 0}";
 }
 );
 layerId = master01;
@@ -19624,7 +19636,7 @@ transform = "{1, 0, 0, 1, -34, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 566, 0}";
+transform = "{1, 0, 0, 1, 283, 0}";
 }
 );
 layerId = master02;
@@ -19783,7 +19795,7 @@ unicode = 1EA5;
 },
 {
 glyphname = acircumflexdotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -19796,7 +19808,7 @@ transform = "{1, 0, 0, 1, -16, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 584, 0}";
+transform = "{1, 0, 0, 1, 283, 0}";
 }
 );
 layerId = master01;
@@ -19813,7 +19825,7 @@ transform = "{1, 0, 0, 1, -34, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 566, 0}";
+transform = "{1, 0, 0, 1, 283, 0}";
 }
 );
 layerId = master02;
@@ -20063,7 +20075,7 @@ width = 1200;
 },
 {
 glyphname = adotbelow.alt01;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -20072,7 +20084,7 @@ name = a.alt01;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 582, 0}";
+transform = "{1, 0, 0, 1, 287, 0}";
 }
 );
 layerId = master01;
@@ -20085,7 +20097,7 @@ name = a.alt01;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 574, 0}";
+transform = "{1, 0, 0, 1, 287, 0}";
 }
 );
 layerId = master02;
@@ -20468,7 +20480,7 @@ width = 1200;
 },
 {
 glyphname = abrevedotbelow.alt01;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -20481,7 +20493,7 @@ transform = "{1, 0, 0, 1, -18, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 582, 0}";
+transform = "{1, 0, 0, 1, 287, 0}";
 }
 );
 layerId = master01;
@@ -20498,7 +20510,7 @@ transform = "{1, 0, 0, 1, -26, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 574, 0}";
+transform = "{1, 0, 0, 1, 287, 0}";
 }
 );
 layerId = master02;
@@ -20652,7 +20664,7 @@ width = 1200;
 },
 {
 glyphname = acircumflexdotbelow.alt01;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -20665,7 +20677,7 @@ transform = "{1, 0, 0, 1, -18, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 582, 0}";
+transform = "{1, 0, 0, 1, 287, 0}";
 }
 );
 layerId = master01;
@@ -20682,7 +20694,7 @@ transform = "{1, 0, 0, 1, -26, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 574, 0}";
+transform = "{1, 0, 0, 1, 287, 0}";
 }
 );
 layerId = master02;
@@ -21892,7 +21904,7 @@ unicode = 0117;
 },
 {
 glyphname = edotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -21901,7 +21913,7 @@ name = e;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 612, 0}";
+transform = "{1, 0, 0, 1, 309, 0}";
 }
 );
 layerId = master01;
@@ -21914,7 +21926,7 @@ name = e;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 618, 0}";
+transform = "{1, 0, 0, 1, 309, 0}";
 }
 );
 layerId = master02;
@@ -22242,7 +22254,7 @@ unicode = 1EBF;
 },
 {
 glyphname = ecircumflexdotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -22255,7 +22267,7 @@ transform = "{1, 0, 0, 1, 2, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 612, 0}";
+transform = "{1, 0, 0, 1, 309, 0}";
 }
 );
 layerId = master01;
@@ -22272,7 +22284,7 @@ transform = "{1, 0, 0, 1, 4, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 618, 0}";
+transform = "{1, 0, 0, 1, 309, 0}";
 }
 );
 layerId = master02;
@@ -23133,7 +23145,7 @@ unicode = 00EF;
 },
 {
 glyphname = idotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -23142,7 +23154,7 @@ name = i;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 664, 0}";
+transform = "{1, 0, 0, 1, 332, 0}";
 }
 );
 layerId = master01;
@@ -23155,7 +23167,7 @@ name = i;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 664, 0}";
+transform = "{1, 0, 0, 1, 332, 0}";
 }
 );
 layerId = master02;
@@ -23814,7 +23826,7 @@ unicode = 0135;
 },
 {
 glyphname = kcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -23823,7 +23835,7 @@ name = k;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 616, 0}";
+transform = "{1, 0, 0, 1, 323, 0}";
 }
 );
 layerId = master01;
@@ -23836,7 +23848,7 @@ name = k;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 646, 0}";
+transform = "{1, 0, 0, 1, 323, 0}";
 }
 );
 layerId = master02;
@@ -23971,7 +23983,7 @@ unicode = 013E;
 },
 {
 glyphname = lcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -23980,7 +23992,7 @@ name = l;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -23993,7 +24005,7 @@ name = l;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -24174,7 +24186,7 @@ unicode = 0148;
 },
 {
 glyphname = ncommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -24183,7 +24195,7 @@ name = n;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 604, 0}";
+transform = "{1, 0, 0, 1, 303, 0}";
 }
 );
 layerId = master01;
@@ -24196,7 +24208,7 @@ name = n;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 606, 0}";
+transform = "{1, 0, 0, 1, 303, 0}";
 }
 );
 layerId = master02;
@@ -24536,7 +24548,7 @@ unicode = 00F6;
 },
 {
 glyphname = odotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -24545,7 +24557,7 @@ name = o;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -24558,7 +24570,7 @@ name = o;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -25128,7 +25140,7 @@ unicode = 1EDB;
 },
 {
 glyphname = ohorndotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -25137,7 +25149,7 @@ name = ohorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -25150,7 +25162,7 @@ name = ohorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -25296,7 +25308,7 @@ unicode = 1ED1;
 },
 {
 glyphname = ocircumflexdotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -25308,7 +25320,7 @@ name = circumflex;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -25324,7 +25336,7 @@ name = circumflex;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -25680,7 +25692,7 @@ unicode = 0159;
 },
 {
 glyphname = rcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -25689,7 +25701,7 @@ name = r;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 534, 0}";
+transform = "{1, 0, 0, 1, 268, 0}";
 }
 );
 layerId = master01;
@@ -25702,7 +25714,7 @@ name = r;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 536, 0}";
+transform = "{1, 0, 0, 1, 268, 0}";
 }
 );
 layerId = master02;
@@ -25974,7 +25986,7 @@ unicode = 015D;
 },
 {
 glyphname = scommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -25983,7 +25995,7 @@ name = s;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 586, 0}";
+transform = "{1, 0, 0, 1, 294, 0}";
 }
 );
 layerId = master01;
@@ -25996,7 +26008,7 @@ name = s;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 588, 0}";
+transform = "{1, 0, 0, 1, 294, 0}";
 }
 );
 layerId = master02;
@@ -26361,7 +26373,7 @@ unicode = 0165;
 },
 {
 glyphname = tcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -26370,7 +26382,7 @@ name = t;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 722, 0}";
+transform = "{1, 0, 0, 1, 375, 0}";
 }
 );
 layerId = master01;
@@ -26383,7 +26395,7 @@ name = t;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 750, 0}";
+transform = "{1, 0, 0, 1, 375, 0}";
 }
 );
 layerId = master02;
@@ -26394,7 +26406,7 @@ unicode = 0163;
 },
 {
 glyphname = tcedilla;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -26403,7 +26415,7 @@ name = t;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 722, 0}";
+transform = "{1, 0, 0, 1, 375, 0}";
 }
 );
 layerId = master01;
@@ -26416,7 +26428,7 @@ name = t;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 750, 0}";
+transform = "{1, 0, 0, 1, 375, 0}";
 }
 );
 layerId = master02;
@@ -26665,7 +26677,7 @@ unicode = 00FC;
 },
 {
 glyphname = udotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -26674,7 +26686,7 @@ name = u;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 596, 0}";
+transform = "{1, 0, 0, 1, 297, 0}";
 }
 );
 layerId = master01;
@@ -26687,7 +26699,7 @@ name = u;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 594, 0}";
+transform = "{1, 0, 0, 1, 297, 0}";
 }
 );
 layerId = master02;
@@ -27189,7 +27201,7 @@ unicode = 1EE9;
 },
 {
 glyphname = uhorndotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -27198,7 +27210,7 @@ name = uhorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 596, 0}";
+transform = "{1, 0, 0, 1, 297, 0}";
 }
 );
 layerId = master01;
@@ -27211,7 +27223,7 @@ name = uhorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 594, 0}";
+transform = "{1, 0, 0, 1, 297, 0}";
 }
 );
 layerId = master02;
@@ -27541,7 +27553,7 @@ unicode = 00FF;
 },
 {
 glyphname = ydotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -27550,7 +27562,7 @@ name = y;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 964, 0}";
+transform = "{1, 0, 0, 1, 460, 0}";
 }
 );
 layerId = master01;
@@ -27563,7 +27575,7 @@ name = y;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 920, 0}";
+transform = "{1, 0, 0, 1, 460, 0}";
 }
 );
 layerId = master02;
@@ -27888,7 +27900,7 @@ unicode = 00C4;
 },
 {
 glyphname = Adotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -27897,7 +27909,7 @@ name = A;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -27910,7 +27922,7 @@ name = A;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -28254,7 +28266,7 @@ unicode = 1EAE;
 },
 {
 glyphname = Abrevedotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -28266,7 +28278,7 @@ name = breve.case;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -28282,7 +28294,7 @@ name = breve.case;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -28441,7 +28453,7 @@ unicode = 1EA4;
 },
 {
 glyphname = Acircumflexdotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -28453,7 +28465,7 @@ name = circumflex.case;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -28469,7 +28481,7 @@ name = circumflex.case;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -29350,7 +29362,7 @@ unicode = 0116;
 },
 {
 glyphname = Edotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -29359,7 +29371,7 @@ name = E;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 606, 0}";
+transform = "{1, 0, 0, 1, 305, 0}";
 }
 );
 layerId = master01;
@@ -29372,7 +29384,7 @@ name = E;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 610, 0}";
+transform = "{1, 0, 0, 1, 305, 0}";
 }
 );
 layerId = master02;
@@ -29650,7 +29662,7 @@ unicode = 1EBE;
 },
 {
 glyphname = Ecircumflexdotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -29663,7 +29675,7 @@ transform = "{1, 0, 0, 1, 6, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 606, 0}";
+transform = "{1, 0, 0, 1, 305, 0}";
 }
 );
 layerId = master01;
@@ -29680,7 +29692,7 @@ transform = "{1, 0, 0, 1, 10, 0}";
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 610, 0}";
+transform = "{1, 0, 0, 1, 305, 0}";
 }
 );
 layerId = master02;
@@ -29970,7 +29982,7 @@ unicode = 011C;
 },
 {
 glyphname = Gcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -29979,7 +29991,7 @@ name = G;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 596, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -29992,7 +30004,7 @@ name = G;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -30310,7 +30322,7 @@ unicode = 0130;
 },
 {
 glyphname = Idotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -30319,7 +30331,7 @@ name = I;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -30332,7 +30344,7 @@ name = I;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -30753,7 +30765,7 @@ unicode = 0134;
 },
 {
 glyphname = Kcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -30762,7 +30774,7 @@ name = K;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 650, 0}";
+transform = "{1, 0, 0, 1, 322, 0}";
 }
 );
 layerId = master01;
@@ -30775,7 +30787,7 @@ name = K;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 644, 0}";
+transform = "{1, 0, 0, 1, 322, 0}";
 }
 );
 layerId = master02;
@@ -30852,7 +30864,7 @@ unicode = 013D;
 },
 {
 glyphname = Lcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -30861,7 +30873,7 @@ name = L;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 634, 0}";
+transform = "{1, 0, 0, 1, 327, 0}";
 }
 );
 layerId = master01;
@@ -30874,7 +30886,7 @@ name = L;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 654, 0}";
+transform = "{1, 0, 0, 1, 327, 0}";
 }
 );
 layerId = master02;
@@ -31042,7 +31054,7 @@ unicode = 0147;
 },
 {
 glyphname = Ncommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -31051,7 +31063,7 @@ name = N;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -31064,7 +31076,7 @@ name = N;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -31298,7 +31310,7 @@ unicode = 00D6;
 },
 {
 glyphname = Odotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -31307,7 +31319,7 @@ name = O;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -31320,7 +31332,7 @@ name = O;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -31900,7 +31912,7 @@ unicode = 1EDA;
 },
 {
 glyphname = Ohorndotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -31909,7 +31921,7 @@ name = Ohorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -31922,7 +31934,7 @@ name = Ohorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -32069,7 +32081,7 @@ unicode = 1ED0;
 },
 {
 glyphname = Ocircumflexdotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -32081,7 +32093,7 @@ name = circumflex.case;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -32097,7 +32109,7 @@ name = circumflex.case;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -32379,7 +32391,7 @@ unicode = 0158;
 },
 {
 glyphname = Rcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -32388,7 +32400,7 @@ name = R;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 630, 0}";
+transform = "{1, 0, 0, 1, 308, 0}";
 }
 );
 layerId = master01;
@@ -32401,7 +32413,7 @@ name = R;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 616, 0}";
+transform = "{1, 0, 0, 1, 308, 0}";
 }
 );
 layerId = master02;
@@ -32673,7 +32685,7 @@ unicode = 015C;
 },
 {
 glyphname = Scommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -32682,7 +32694,7 @@ name = S;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 584, 0}";
+transform = "{1, 0, 0, 1, 297, 0}";
 }
 );
 layerId = master01;
@@ -32695,7 +32707,7 @@ name = S;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 594, 0}";
+transform = "{1, 0, 0, 1, 297, 0}";
 }
 );
 layerId = master02;
@@ -32891,7 +32903,7 @@ unicode = 0164;
 },
 {
 glyphname = Tcommaaccent;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -32900,7 +32912,7 @@ name = T;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -32913,7 +32925,7 @@ name = T;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -32924,7 +32936,7 @@ unicode = 0162;
 },
 {
 glyphname = Tcedilla;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -32933,7 +32945,7 @@ name = T;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -32946,7 +32958,7 @@ name = T;
 },
 {
 name = commabelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -33167,7 +33179,7 @@ unicode = 00DC;
 },
 {
 glyphname = Udotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -33176,7 +33188,7 @@ name = U;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -33189,7 +33201,7 @@ name = U;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -33673,7 +33685,7 @@ unicode = 1EE8;
 },
 {
 glyphname = Uhorndotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -33682,7 +33694,7 @@ name = Uhorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -33695,7 +33707,7 @@ name = Uhorn;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
@@ -33991,7 +34003,7 @@ unicode = 0176;
 },
 {
 glyphname = Ydotbelow;
-lastChange = "2020-09-29 21:54:56 +0000";
+lastChange = "2020-11-21 14:55:02 +0000";
 layers = (
 {
 components = (
@@ -34000,7 +34012,7 @@ name = Y;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master01;
@@ -34013,7 +34025,7 @@ name = Y;
 },
 {
 name = dotbelowcomb;
-transform = "{1, 0, 0, 1, 600, 0}";
+transform = "{1, 0, 0, 1, 300, 0}";
 }
 );
 layerId = master02;
