@@ -1,0 +1,2 @@
+# simple lowercase g
+sub @lcg_dflt by @lcg_alt1;

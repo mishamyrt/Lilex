@@ -1,3 +1,5 @@
+.PHONY: regenerate
+
 BUILD_DIRECTORY := "build"
 GLYPHS_FILE := "Lilex.glyphs"
 VF_FILE := "$(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf"
@@ -7,6 +9,9 @@ OS := "$(UNAME)"
 else
 OS := "$(shell lsb_release -si)"
 endif
+
+regenerate:
+	python3 generator/main.py
 
 all: ttf otf variable_ttf
 

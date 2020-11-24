@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.200] — Unreleased
+
+Added feature generator.
+
 ## [1.100] — November 21, 2020
 
 Added `#{` `#[` `#(` `__(` `!!`
@@ -51,3 +55,5 @@ IBM Plex Mono version: 3.000
 [1.000]: https://github.com/mishamyrt/Lilex/releases/tag/1.000
 
 [1.100]: https://github.com/mishamyrt/Lilex/releases/tag/1.100
+
+[1.200]: https://github.com/mishamyrt/Lilex/compare/1.100...master

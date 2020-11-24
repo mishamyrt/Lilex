@@ -1,0 +1,4 @@
+# Multiply align
+# Examples: 0xDEADBEEF, 10x2
+sub zero x' @numbers_hex by multiply;
+sub @numbers_dflt x' @numbers_dflt by multiply;
