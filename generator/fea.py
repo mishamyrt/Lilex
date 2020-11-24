@@ -3,7 +3,7 @@
 fea files helpers
 '''
 
-from re import search, M
+from re import search
 
 ignore_name = [
     'calt',
