@@ -1,5 +1,8 @@
-build/
-instance_ufo/
-master_ufo/
-Lilex (Autosaved).glyphs
-generator/__pycache__
+.DS_Store
+/build/
+/venv/
+/.vscode
+/instance_ufo/
+/master_ufo/
+/Lilex (Autosaved).glyphs
+/generator/__pycache__
