@@ -1,71 +1,65 @@
-.PHONY: regenerate
+VENV_DIR = ./venv
+VENV = . $(VENV_DIR)/bin/activate;
 
-BUILD_DIRECTORY := "build"
-GLYPHS_FILE := "Lilex.glyphs"
-VF_FILE := "$(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf"
-UNAME := $(shell uname)
-ifeq (, $(shell which lsb_release))
-OS := "$(UNAME)"
-else
-OS := "$(shell lsb_release -si)"
-endif
+BUILD_DIR = build
+GLYPHS_FILE = Lilex.glyphs
+
+OTF_DIR = $(BUILD_DIR)/otf
+TTF_DIR = $(BUILD_DIR)/ttf
+VTTF_DIR = $(BUILD_DIR)/variable_ttf
+VTTF_FILE = $(VTTF_DIR)/Lilex-VF.ttf
+
+OS := $(shell uname)
+
+define build_font
+	$(VENV) fontmake \
+		-g $(GLYPHS_FILE) \
+		-o "$(1)" \
+		--output-dir "$(2)"
+endef
+
+
+define hint_ttf
+	gftools fix-font "$(1)"
+	rm "$(1)"
+	mv "$(1).fix" "$(1)"
+
+endef
+
+configure: requirements.txt
+	rm -rf $(VENV_DIR)
+	make $(VENV_DIR)
 
 regenerate:
 	python3 generator/main.py
 
-all: ttf otf variable_ttf
+build: ttf otf variable_ttf
 
-ttf: raw_ttf
-	$(foreach file,$(wildcard $(BUILD_DIRECTORY)/ttf/*.ttf),$(call ttf_fix,$(file)))
-
-raw_ttf:
-	fontmake -g $(GLYPHS_FILE) -o ttf \
-	--output-dir "$(BUILD_DIRECTORY)/ttf" -i
-
+ttf:
+	$(call build_font,ttf,$(TTF_DIR))
+	$(VENV) $(foreach file,$(wildcard $(TTF_DIR)/*.ttf),$(call hint_ttf,$(file)))
+	
 otf:
-	fontmake -g $(GLYPHS_FILE) -o otf \
-	--output-dir "$(BUILD_DIRECTORY)/otf" -i
+	$(call build_font,otf,$(OTF_DIR))
 
 variable_ttf:
-	fontmake -g $(GLYPHS_FILE) -o variable \
-		--output-dir "$(BUILD_DIRECTORY)/variable_ttf"
-	gftools fix-vf-meta $(VF_FILE)
-	gftools fix-nonhinting $(VF_FILE) $(VF_FILE)
-	gftools fix-gasp --autofix $(VF_FILE)
-	gftools fix-dsig --autofix $(VF_FILE)
-	rm $(BUILD_DIRECTORY)/variable_ttf/Lilex-VF-backup-fonttools-prep-gasp.ttf
-	rm $(BUILD_DIRECTORY)/variable_ttf/Lilex-VF.ttf.fix
+	$(call build_font,variable,$(VTTF_DIR))
+	gftools fix-font "$(VTTF_FILE)"
+	rm "$(VTTF_FILE)"
+	mv "$(VTTF_FILE).fix" "$(VTTF_FILE)"
 
 install:
-	make install_$(UNAME)
-
-bootstrap:
-	make bootstrap_$(OS)
+	make install_$(OS)
 
 install_Darwin:
 	rm -rf ~/Library/Fonts/Lilex
 	cp -r build/otf ~/Library/Fonts/Lilex
 
-bootstrap_Darwin:
-	brew install cairo freetype harfbuzz pkg-config ttfautohint python3
-	make bootstrap_pip
-
-bootstrap_Ubuntu:
-	sudo pip3 install -U pip
-	sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2-dev
-	sudo make bootstrap_pip
-
-bootstrap_pip:
-	pip3 install fonttools git+https://github.com/googlefonts/gftools fontmake
-	pip3 install -U cu2qu
-
 install_Linux:
 	mkdir -p ~/.fonts
 	rm -rf ~/.fonts/Lilex
 
-define ttf_fix
-	gftools fix-dsig --autofix $(1)
-	ttfautohint -I $(1) $(1)-hinted --stem-width-mode nnn --composites --windows-compatibility
-	mv $(1)-hinted $(1)
-
-endef
+$(VENV_DIR): requirements.txt
+	rm -rf "$(VENV_DIR)"
+	python3 -m venv "$(VENV_DIR)"
+	$(VENV) pip install -r requirements.txt

@@ -35,18 +35,39 @@ Additional features are available in the font, which are disabled by default.
 
 <img src="./showcases/stylistic@2x.png">
 
-## Build
+## Setup
+
 
 At the moment building is possible on Ubuntu and macOS. First, install the build dependencies.
 
+### macOS
+
 ```sh
-sudo make bootstrap
+brew install cairo freetype harfbuzz pkg-config
 ```
+
+### Ubuntu
+
+```sh
+sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2-dev
+```
+
+### Common
+
+And then setup virtual environment:
+
+```sh
+make configure
+```
+
+
+
+## Build
 
 Now run the command to build it.
 
 ```sh
-make
+make build
 ```
 
 ## Credits
