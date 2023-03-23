@@ -1,0 +1,98 @@
+# Name: Mark positioning
+@mGC_bottom_0_0 = [cedillacomb commabelowcomb dotbelowcomb];
+@mGC_top_0_516 = [acutecomb breveacute brevecomb brevegrave brevehook brevetilde caroncomb circumflexacute circumflexbreve circumflexcomb circumflexgrave circumflexhook circumflextilde commaturnedtopcomb dieresisacute dieresiscaron dieresiscomb dieresisgrave dieresismacron dotaccentcomb gravecomb hookcomb hungarumlautcomb macroncomb ringcomb tildecomb];
+@mGC_top_0_698 = [breveacute.case brevegrave.case brevehook.case brevetilde.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case circumflextilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case dieresismacron.case hookcomb.case];
+
+markClass @mGC_bottom_0_0 <anchor 0 0> @MC_bottom;
+markClass @mGC_top_0_516 <anchor 0 516> @MC_top;
+markClass @mGC_top_0_698 <anchor 0 698> @MC_top;
+markClass caronslovakcomb <anchor 0 740> @MC_topright;
+markClass ogonekcomb <anchor 0 0> @MC_bottomright;
+
+lookup MARK_BASE_bottom {
+    @bGC_D_bottom = [D J];
+    @bGC_F_bottom = [F P];
+    @bGC_c_bottom = [c h n];
+    @bGC_f_bottom = [f C R];
+    @bGC_i_bottom = [i dotlessi];
+    @bGC_l_bottom = [l m o v w x z A G H I M N O T U V W X Y Z ohorn Ohorn Uhorn];
+    @bGC_u_bottom = [u S uhorn];
+    pos base @bGC_D_bottom <anchor 277 0> mark @MC_bottom;
+    pos base @bGC_F_bottom <anchor 132 0> mark @MC_bottom;
+    pos base @bGC_c_bottom <anchor 303 0> mark @MC_bottom;
+    pos base @bGC_f_bottom <anchor 308 0> mark @MC_bottom;
+    pos base @bGC_i_bottom <anchor 332 0> mark @MC_bottom;
+    pos base @bGC_l_bottom <anchor 300 0> mark @MC_bottom;
+    pos base @bGC_u_bottom <anchor 297 0> mark @MC_bottom;
+    pos base B <anchor 315 0> mark @MC_bottom;
+    pos base E <anchor 305 0> mark @MC_bottom;
+    pos base K <anchor 322 0> mark @MC_bottom;
+    pos base L <anchor 327 0> mark @MC_bottom;
+    pos base a <anchor 283 0> mark @MC_bottom;
+    pos base a.alt01 <anchor 287 0> mark @MC_bottom;
+    pos base b <anchor 317 0> mark @MC_bottom;
+    pos base d <anchor 282 0> mark @MC_bottom;
+    pos base e <anchor 309 0> mark @MC_bottom;
+    pos base k <anchor 323 0> mark @MC_bottom;
+    pos base r <anchor 268 0> mark @MC_bottom;
+    pos base s <anchor 294 0> mark @MC_bottom;
+    pos base t <anchor 375 0> mark @MC_bottom;
+    pos base y <anchor 460 0> mark @MC_bottom;
+} MARK_BASE_bottom;
+
+
+lookup MARK_BASE_bottomright {
+    @bGC_i_bottomright = [i dotlessi];
+    pos base @bGC_i_bottomright <anchor 546 0> mark @MC_bottomright;
+    pos base A <anchor 570 0> mark @MC_bottomright;
+    pos base E <anchor 520 0> mark @MC_bottomright;
+    pos base I <anchor 516 0> mark @MC_bottomright;
+    pos base U <anchor 394 0> mark @MC_bottomright;
+    pos base a <anchor 550 0> mark @MC_bottomright;
+    pos base a.alt01 <anchor 505 0> mark @MC_bottomright;
+    pos base e <anchor 391 0> mark @MC_bottomright;
+    pos base u <anchor 502 0> mark @MC_bottomright;
+} MARK_BASE_bottomright;
+
+
+lookup MARK_BASE_top {
+    @bGC_J_top = [J K];
+    @bGC_a.alt01_top = [a.alt01 g.alt01];
+    @bGC_g.alt02_top = [g.alt02 m o v w x y z ae oslash ohorn];
+    @bGC_g_top = [g u uhorn];
+    @bGC_l_top = [l A H I M N O P Q T U V W X Y Z Oslash Ohorn Uhorn];
+    pos base @bGC_J_top <anchor 313 698> mark @MC_top;
+    pos base @bGC_a.alt01_top <anchor 287 516> mark @MC_top;
+    pos base @bGC_g.alt02_top <anchor 300 516> mark @MC_top;
+    pos base @bGC_g_top <anchor 297 516> mark @MC_top;
+    pos base @bGC_l_top <anchor 300 698> mark @MC_top;
+    pos base AE <anchor 393 698> mark @MC_top;
+    pos base B <anchor 295 698> mark @MC_top;
+    pos base C <anchor 328 698> mark @MC_top;
+    pos base D <anchor 277 698> mark @MC_top;
+    pos base E <anchor 305 698> mark @MC_top;
+    pos base F <anchor 310 698> mark @MC_top;
+    pos base G <anchor 306 698> mark @MC_top;
+    pos base L <anchor 162 698> mark @MC_top;
+    pos base R <anchor 308 698> mark @MC_top;
+    pos base S <anchor 298 698> mark @MC_top;
+    pos base a <anchor 283 516> mark @MC_top;
+    pos base c <anchor 313 516> mark @MC_top;
+    pos base dotlessi <anchor 332 516> mark @MC_top;
+    pos base dotlessj <anchor 392 516> mark @MC_top;
+    pos base e <anchor 302 516> mark @MC_top;
+    pos base h <anchor 138 698> mark @MC_top;
+    pos base n <anchor 303 516> mark @MC_top;
+    pos base p <anchor 317 516> mark @MC_top;
+    pos base q <anchor 282 516> mark @MC_top;
+    pos base r <anchor 353 516> mark @MC_top;
+    pos base s <anchor 298 516> mark @MC_top;
+} MARK_BASE_top;
+
+
+lookup MARK_BASE_topright {
+    pos base L <anchor 290 740> mark @MC_topright;
+    pos base d <anchor 567 740> mark @MC_topright;
+    pos base l <anchor 426 740> mark @MC_topright;
+    pos base t <anchor 387 760> mark @MC_topright;
+} MARK_BASE_topright;

@@ -1,0 +1,2 @@
+# Name: Scientific inferiors
+sub @numbers_dflt by @numbers_sinf;
