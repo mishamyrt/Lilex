@@ -35,7 +35,6 @@ classes = []
 for f in list_files(CLASSES_DIR):
     classes.append(ClassFile(path=f))
 
-font = GlyphsFile(FONT_FILE)
 font.set_classes(classes)
 font.set_features(features)
 font.write()
