@@ -31,7 +31,7 @@ configure: requirements.txt
 	make $(VENV_DIR)
 
 regenerate:
-	python3 generator/main.py
+	python3 scripts/apply-features.py
 
 build: ttf otf variable_ttf
 

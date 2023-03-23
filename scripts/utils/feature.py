@@ -1,6 +1,8 @@
 from re import search
 from os.path import basename
 
+from glyphsLib import GSFeature, GSClass
+
 def format_feature (feature: str) -> str:
     result = search(r'Name:(.*)', feature)
     try:
@@ -14,8 +16,8 @@ def format_feature (feature: str) -> str:
     except AttributeError:
         return feature
 
-class OTFeature:
-    _content: str
+class FeatureFile:
+    _content: str = ""
     name: str = None
 
     def __init__(self, name: str = None, path: str = None) -> None:
@@ -24,11 +26,17 @@ class OTFeature:
         else:
             self.name = name
         if path is not None:
-            self._load_from_file(path)
+            self.append_file(path)
+    
+    def append(self, code: str) -> None:
+        self._content += self._format(code + "\n")
 
-    def _load_from_file(self, path: str) -> None:
+    def append_file(self, path: str) -> None:
         with open(path, mode="r", encoding="utf-8") as file:
-            self._content = self._format(file.read())
+            self._content += self._format(file.read()) + "\n"
+
+    def GS(self) -> GSFeature:
+        return GSFeature(self.name, self._content)
 
     def _format(self, content: str) -> str:
         if self.name.startswith("ss"):
@@ -38,6 +46,10 @@ class OTFeature:
     def __str__(self) -> str:
         return self._content
 
-class OTClass(OTFeature):
+class ClassFile(FeatureFile):
+
+    def GS(self) -> GSClass:
+        return GSClass(self.name, self._content)
+
     def _format(self, content: str) -> str:
         return content

@@ -1,18 +1,39 @@
-from utils import OTFeature, OTClass, GlyphsFile, list_files
+from os.path import join
+from utils import (
+    FeatureFile,
+    ClassFile,
+    GlyphsFile,
+    list_files,
+    ligature_lookups
+)
 
 FONT_FILE = "Lilex.glyphs"
-FEATURES_DIR = "./features"
 CLASSES_DIR = "./classes"
+FEATURES_DIR = "./features"
+CALT_DIR = join(FEATURES_DIR, "calt")
+
+font = GlyphsFile(FONT_FILE)
+
+# Find ligatures
+ligatures = []
+for ligature in font.glyphs_with_suffix(".liga"):
+    ligatures.append(ligature.split('.')[0])
+
+# Build calt feature
+calt = FeatureFile(name="calt")
+for f in list_files(CALT_DIR):
+    calt.append_file(f)
+calt.append(ligature_lookups(ligatures))
 
 # Load features
-features = []
+features = [calt]
 for f in list_files(FEATURES_DIR):
-    features.append(OTFeature(path=f))
+    features.append(FeatureFile(path=f))
 
 # Load classes
 classes = []
 for f in list_files(CLASSES_DIR):
-    classes.append(OTClass(path=f))
+    classes.append(ClassFile(path=f))
 
 font = GlyphsFile(FONT_FILE)
 font.set_classes(classes)
