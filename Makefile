@@ -44,9 +44,6 @@ otf:
 
 variable_ttf:
 	$(call build_font,variable,$(VTTF_DIR))
-	gftools fix-font "$(VTTF_FILE)"
-	rm "$(VTTF_FILE)"
-	mv "$(VTTF_FILE).fix" "$(VTTF_FILE)"
 
 install:
 	make install_$(OS)
