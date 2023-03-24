@@ -21,6 +21,7 @@ for ligature in font.glyphs_with_suffix(".liga"):
     name = ligature.split('.')[0]
     print(f" - {name}")
     ligatures.append(name)
+ligatures.sort(key=lambda x: len(x.split('_')), reverse=True)
 
 # Build calt feature
 calt = FeatureFile(name="calt")

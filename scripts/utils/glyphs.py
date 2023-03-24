@@ -33,7 +33,6 @@ class GlyphsFile:
                 self._font.classes.append(c.GS())
 
     def set_features(self, features: List[FeatureFile]):
-        features.sort(key=lambda x: x.name)
         for c in features:
             if c.name in self._font.features:
                 self._font.features[c.name] = c.GS()
