@@ -16,8 +16,11 @@ font = GlyphsFile(FONT_FILE)
 
 # Find ligatures
 ligatures = []
+print("Ligatures:")
 for ligature in font.glyphs_with_suffix(".liga"):
-    ligatures.append(ligature.split('.')[0])
+    name = ligature.split('.')[0]
+    print(f" - {name}")
+    ligatures.append(name)
 
 # Build calt feature
 calt = FeatureFile(name="calt")
