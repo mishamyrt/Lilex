@@ -10,7 +10,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Bootstrap
-      run: sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2-dev -y
+      run: |
+        sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev -y
+        make configure
 
     - name: Build Lilex
       run: make build

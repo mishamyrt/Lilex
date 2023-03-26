@@ -49,7 +49,7 @@ brew install cairo freetype harfbuzz pkg-config
 ### Ubuntu
 
 ```sh
-sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2-dev
+sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev
 ```
 
 ### Common
