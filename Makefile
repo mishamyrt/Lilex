@@ -14,16 +14,9 @@ OS := $(shell uname)
 define build_font
 	$(VENV) fontmake \
 		-g $(GLYPHS_FILE) \
+		-a \
 		-o "$(1)" \
 		--output-dir "$(2)"
-endef
-
-
-define hint_ttf
-	gftools fix-font "$(1)"
-	rm "$(1)"
-	mv "$(1).fix" "$(1)"
-
 endef
 
 configure: requirements.txt
@@ -37,8 +30,7 @@ build: ttf otf variable_ttf
 
 ttf:
 	$(call build_font,ttf,$(TTF_DIR))
-	$(VENV) $(foreach file,$(wildcard $(TTF_DIR)/*.ttf),$(call hint_ttf,$(file)))
-	
+
 otf:
 	$(call build_font,otf,$(OTF_DIR))
 
