@@ -25,9 +25,9 @@ ligatures.sort(key=lambda x: len(x.split('_')), reverse=True)
 
 # Build calt feature
 calt = FeatureFile(name="calt")
+calt.append(ligature_lookups(ligatures))
 for f in list_files(CALT_DIR):
     calt.append_file(f)
-calt.append(ligature_lookups(ligatures))
 
 # Load features
 features = [calt]
