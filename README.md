@@ -7,7 +7,7 @@
 
 Lilex is the modern programming font containing a set of ligatures for common programming multi-character combinations.
 
-This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like .. or //, ligatures allow us to correct spacing like kerning pairs.
+This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like `..` or `//`, ligatures allow us to correct spacing like kerning pairs.
 
 Compiled versions are available under [releases](https://github.com/mishamyrt/Lilex/releases).
 
@@ -59,8 +59,6 @@ And then setup virtual environment:
 ```sh
 make configure
 ```
-
-
 
 ## Build
 
