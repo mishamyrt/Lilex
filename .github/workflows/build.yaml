@@ -9,6 +9,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9.6' 
+
     - name: Bootstrap
       run: |
         sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev -y
