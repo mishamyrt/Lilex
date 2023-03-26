@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.000-rc — Unreleased
+
+## Added
+
+* Generative hashtag ligature. The `#` string can now be any length
+
 ## [2.000-b1] — March 27, 2023
 
 Based on IBM Plex Mono v6.0.0.
