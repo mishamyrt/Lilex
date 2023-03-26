@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## 2.000-rc — Unreleased
 
+## Removed
+
+* Ugly `fl` and `fi`
+
 ## Added
 
 * Generative hashtag ligature. The `#` string can now be any length
