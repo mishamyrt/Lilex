@@ -28,6 +28,11 @@ regenerate:
 
 build: ttf otf variable_ttf
 
+bundle:
+	rm -rf "$(BUILD_DIR)"
+	make build
+	cd "$(BUILD_DIR)"; zip -r Lilex.zip ./*
+
 ttf:
 	$(call build_font,ttf,$(TTF_DIR))
 
