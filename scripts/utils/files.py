@@ -7,6 +7,6 @@ def list_files(dir_path: str) -> List[str]:
     files = []
     for file in listdir(dir_path):
         file_path = join(dir_path, file)
-        if isfile(file_path) and not file_path.startswith('.'):
+        if isfile(file_path) and not file.startswith('.'):
             files.append(file_path)
     return files
