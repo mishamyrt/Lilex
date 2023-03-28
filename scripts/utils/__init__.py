@@ -1,4 +1,3 @@
-from .feature import FeatureFile, ClassFile
-from .files import list_files
-from .glyphs import GlyphsFile
-from .ligatures import ligature_lookups
+"""Lilex utilities module"""
+from .cli import print_gs
+from .files import read_classes, read_features, read_files

@@ -12,35 +12,43 @@ VTTF_FILE = $(VTTF_DIR)/Lilex-VF.ttf
 OS := $(shell uname)
 
 define build_font
-	$(VENV) fontmake \
-		-g $(GLYPHS_FILE) \
-		-a \
-		-o "$(1)" \
-		--output-dir "$(2)"
+	$(VENV) python scripts/lilex.py build $(1)
 endef
 
 configure: requirements.txt
 	rm -rf $(VENV_DIR)
 	make $(VENV_DIR)
 
+.PHONY: lint
+lint:
+	$(VENV) ruff scripts/
+	$(VENV) pylint scripts/
+
+.PHONY: regenerate
 regenerate:
-	python3 scripts/apply-features.py
+	$(VENV) python scripts/lilex.py regenerate
 
-build: ttf otf variable_ttf
+.PHONY: build
+build:
+	$(call build_font)
 
+.PHONY: bundle
 bundle:
 	rm -rf "$(BUILD_DIR)"
 	make build
 	cd "$(BUILD_DIR)"; zip -r Lilex.zip ./*
 
+.PHONY: ttf
 ttf:
-	$(call build_font,ttf,$(TTF_DIR))
+	$(call build_font,ttf)
 
+.PHONY: otf
 otf:
-	$(call build_font,otf,$(OTF_DIR))
+	$(call build_font,otf)
 
+.PHONY: variable_ttf
 variable_ttf:
-	$(call build_font,variable,$(VTTF_DIR))
+	$(call build_font,variable)
 
 install:
 	make install_$(OS)

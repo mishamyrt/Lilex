@@ -1,4 +1,7 @@
 fontmake==3.5.1
 cu2qu==1.6.7
 gftools==0.9.27
-glyphsLib
+glyphsLib==6.2.1
+arrrgs==0.0.5
+ruff==0.0.259
+pylint==2.17.1
