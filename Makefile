@@ -12,41 +12,43 @@ VTTF_FILE = $(VTTF_DIR)/Lilex-VF.ttf
 OS := $(shell uname)
 
 define build_font
-	$(VENV) fontmake \
-		-g $(GLYPHS_FILE) \
-		-o "$(1)" \
-		--output-dir "$(2)"
-endef
-
-
-define hint_ttf
-	gftools fix-font "$(1)"
-	rm "$(1)"
-	mv "$(1).fix" "$(1)"
-
+	$(VENV) python scripts/lilex.py build $(1)
 endef
 
 configure: requirements.txt
 	rm -rf $(VENV_DIR)
 	make $(VENV_DIR)
 
+.PHONY: lint
+lint:
+	$(VENV) ruff scripts/
+	$(VENV) pylint scripts/
+
+.PHONY: regenerate
 regenerate:
-	python3 generator/main.py
+	$(VENV) python scripts/lilex.py regenerate
 
-build: ttf otf variable_ttf
+.PHONY: build
+build:
+	$(call build_font)
 
+.PHONY: bundle
+bundle:
+	rm -rf "$(BUILD_DIR)"
+	make build
+	cd "$(BUILD_DIR)"; zip -r Lilex.zip ./*
+
+.PHONY: ttf
 ttf:
-	$(call build_font,ttf,$(TTF_DIR))
-	$(VENV) $(foreach file,$(wildcard $(TTF_DIR)/*.ttf),$(call hint_ttf,$(file)))
-	
-otf:
-	$(call build_font,otf,$(OTF_DIR))
+	$(call build_font,ttf)
 
+.PHONY: otf
+otf:
+	$(call build_font,otf)
+
+.PHONY: variable_ttf
 variable_ttf:
-	$(call build_font,variable,$(VTTF_DIR))
-	gftools fix-font "$(VTTF_FILE)"
-	rm "$(VTTF_FILE)"
-	mv "$(VTTF_FILE).fix" "$(VTTF_FILE)"
+	$(call build_font,variable)
 
 install:
 	make install_$(OS)

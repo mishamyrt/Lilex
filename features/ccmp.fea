@@ -1,0 +1,29 @@
+# Name: Glyph Composition / Decomposition
+@uc_basic = [A AE Aogonek B C Ccedilla D E Eogonek F G H I Iogonek J K L M N O OE Ohorn Oslash P Q R S Schwa T U Uhorn Uogonek V W X Y Z]; # 37 glyphs
+@acc_comb_top = [acutecomb breveacute brevecomb brevegrave brevehook brevetilde caroncomb caronslovakcomb circumflexacute circumflexbreve circumflexcomb circumflexgrave circumflexhook circumflextilde commaturnedtopcomb dieresisacute dieresiscaron dieresiscomb dieresisgrave dieresismacron dotaccentcomb gravecomb hookcomb horncomb hungarumlautcomb macroncomb ringcomb tildecomb]; # 28 glyphs
+@acc_comb_dflt = [breveacute brevegrave brevehook brevetilde circumflexacute circumflexbreve circumflexgrave circumflexhook circumflextilde dieresisacute dieresiscaron dieresisgrave dieresismacron hookcomb]; # 14 glyphs
+@acc_comb_case = [breveacute.case brevegrave.case brevehook.case brevetilde.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case circumflextilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case dieresismacron.case hookcomb.case]; # 14 glyphs
+
+lookup nonContextSubs {
+    sub brevecomb acutecomb by breveacute;
+    sub brevecomb gravecomb by brevegrave;
+    sub brevecomb hookcomb by brevehook;
+    sub brevecomb tildecomb by brevetilde;
+    sub circumflexcomb acutecomb by circumflexacute;
+    sub circumflexcomb gravecomb by circumflexgrave;
+    sub circumflexcomb hookcomb by circumflexhook;
+    sub circumflexcomb tildecomb by circumflextilde;
+    sub circumflexcomb brevecomb by circumflexbreve;
+    sub dieresiscomb acutecomb by dieresisacute;
+    sub dieresiscomb caroncomb by dieresiscaron;
+    sub dieresiscomb gravecomb by dieresisgrave;
+    sub dieresiscomb macroncomb by dieresismacron;
+} nonContextSubs;
+
+lookup contextSubs {
+    sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
+    sub g commabelowcomb' by commaturnedtopcomb; # /gcommaaccent
+    sub i' @acc_comb_top by dotlessi;
+    sub j' @acc_comb_top by dotlessj;
+    sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
+} contextSubs;

@@ -7,7 +7,7 @@
 
 Lilex is the modern programming font containing a set of ligatures for common programming multi-character combinations.
 
-This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like .. or //, ligatures allow us to correct spacing like kerning pairs.
+This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like `..` or `//`, ligatures allow us to correct spacing like kerning pairs.
 
 Compiled versions are available under [releases](https://github.com/mishamyrt/Lilex/releases).
 
@@ -49,7 +49,7 @@ brew install cairo freetype harfbuzz pkg-config
 ### Ubuntu
 
 ```sh
-sudo apt install python3-setuptools ttfautohint build-essential libffi-dev python-dev libgit2-dev
+sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev
 ```
 
 ### Common
@@ -59,8 +59,6 @@ And then setup virtual environment:
 ```sh
 make configure
 ```
-
-
 
 ## Build
 

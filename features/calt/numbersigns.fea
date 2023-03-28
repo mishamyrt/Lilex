@@ -1,0 +1,9 @@
+# Generative hashtag ligature
+# Example: ##################
+lookup numbersigns {
+  sub [numbersign_start.seq numbersign_middle.seq] numbersign' numbersign by numbersign_middle.seq;
+
+  sub [numbersign_start.seq numbersign_middle.seq] numbersign' by numbersign_end.seq;
+
+  sub numbersign' numbersign by numbersign_start.seq; 
+} numbersigns;

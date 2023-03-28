@@ -1,0 +1,11 @@
+# Generative underscore ligature
+# Example: _____________________
+
+lookup underscores {
+  sub [underscore_start.seq underscore_middle.seq] underscore' underscore by underscore_middle.seq;
+
+  sub [underscore_start.seq underscore_middle.seq] underscore' by underscore_end.seq;
+
+  sub underscore' underscore by underscore_start.seq; 
+} underscores;
+

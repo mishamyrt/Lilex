@@ -1,3 +1,3 @@
-# Digit color align
+# Digit colon align
 # Example: 10:20
 sub @numbers_dflt colon' @numbers_dflt by colon.valign;
