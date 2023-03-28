@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 2.000-rc — Unreleased
+## [2.000] — March 28, 2023
 
 ## Removed
 
@@ -9,7 +9,11 @@ All notable changes to this project will be documented in this file.
 
 ## Added
 
-* Generative `#` and `_` ligatures. Sequences of these characters can now be of any length
+* Generative `##` and `__` ligatures. Sequences of these characters can now be of any length
+
+## Fixed
+
+* `_` alignment
 
 ## [2.000-b1] — March 27, 2023
 
@@ -80,3 +84,5 @@ IBM Plex Mono version: 3.000
 [1.100]: https://github.com/mishamyrt/Lilex/releases/tag/1.100
 
 [2.000-b1]: https://github.com/mishamyrt/Lilex/releases/tag/2.000-b1
+
+[2.000]: https://github.com/mishamyrt/Lilex/releases/tag/2.000
