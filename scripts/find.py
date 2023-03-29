@@ -25,7 +25,6 @@ def missing(_, gls: List[str]):
     for glyph in gls:
         if glyph not in font.glyphs:
             missing_glyphs.append(glyph)
-    print("Missing glyphs:")
     print("\n".join(missing_glyphs))
 
     stock = len(gls) - len(missing_glyphs)
@@ -60,7 +59,8 @@ def glyphs_from_fea(path: str) -> List[str]:
     content = sub(" +", " ", content)
     # Filter keywords
     words = content.split(" ")
-    return list(filter(_is_glyph_name, words))
+    glyphs = filter(_is_glyph_name, words)
+    return list(set(glyphs))
 
 def load_words(args):
     words = glyphs_from_fea(args.file)
