@@ -60,7 +60,7 @@ def glyphs_from_fea(path: str) -> List[str]:
     # Filter keywords
     words = content.split(" ")
     glyphs = filter(_is_glyph_name, words)
-    return list(set(glyphs))
+    return sorted(list(set(glyphs)))
 
 def load_words(args):
     words = glyphs_from_fea(args.file)
