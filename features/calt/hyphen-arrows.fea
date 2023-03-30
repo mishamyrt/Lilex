@@ -1,0 +1,54 @@
+# Arbitrary-length arrows
+# Ported from FiraCode
+
+lookup hyphen_arrows {
+  # Disable |||
+  ignore sub bar bar' bar hyphen;
+  ignore sub bar bar' hyphen;
+  ignore sub [hyphen_start.seq hyphen_middle.seq] bar' bar bar;
+
+  # hyphen middle & end
+  sub [less_hyphen_start.seq less_less_hyphen_start.seq less_hyphen_middle.seq less_less_hyphen_middle.seq greater_hyphen_start.seq greater_greater_hyphen_start.seq greater_hyphen_middle.seq greater_greater_hyphen_middle.seq bar_hyphen_start.seq bar_bar_hyphen_start.seq bar_hyphen_middle.seq bar_bar_hyphen_middle.seq hyphen_start.seq hyphen_middle.seq] hyphen' [hyphen less greater bar] by hyphen_middle.seq;
+
+  sub [less_hyphen_start.seq less_less_hyphen_start.seq less_hyphen_middle.seq less_less_hyphen_middle.seq greater_hyphen_start.seq greater_greater_hyphen_start.seq greater_hyphen_middle.seq greater_greater_hyphen_middle.seq bar_hyphen_start.seq bar_bar_hyphen_start.seq bar_hyphen_middle.seq bar_bar_hyphen_middle.seq hyphen_start.seq hyphen_middle.seq] hyphen' by hyphen_end.seq;
+
+  # double middles
+  sub [hyphen_start.seq hyphen_middle.seq] less.spacer    less'    hyphen by less_less_hyphen_middle.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] less'          less     hyphen by less.spacer;
+  sub [hyphen_start.seq hyphen_middle.seq] greater.spacer greater' hyphen by greater_greater_hyphen_middle.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] greater'       greater  hyphen by greater.spacer;
+  sub [hyphen_start.seq hyphen_middle.seq] bar.spacer     bar'     hyphen by bar_bar_hyphen_middle.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] bar'           bar      hyphen by bar.spacer;
+
+  # single middles
+  sub [hyphen_start.seq hyphen_middle.seq] less'    hyphen by less_hyphen_middle.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] greater' hyphen by greater_hyphen_middle.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] bar'     hyphen by bar_hyphen_middle.seq;
+
+  # double ends
+  sub [hyphen_start.seq hyphen_middle.seq] less.spacer    less'    by less_less_hyphen_end.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] less'          less     by less.spacer;
+  sub [hyphen_start.seq hyphen_middle.seq] greater.spacer greater' by greater_greater_hyphen_end.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] greater'       greater  by greater.spacer;
+  sub [hyphen_start.seq hyphen_middle.seq] bar.spacer     bar'     by bar_bar_hyphen_end.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] bar'           bar      by bar.spacer;
+
+  # single ends
+  sub [hyphen_start.seq hyphen_middle.seq] less'    by less_hyphen_end.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] greater' by greater_hyphen_end.seq;
+  sub [hyphen_start.seq hyphen_middle.seq] bar'     by bar_hyphen_end.seq;
+
+  # double beginnings
+  sub less.spacer    less'    hyphen by less_less_hyphen_start.seq;
+  sub less'          less     hyphen by less.spacer;
+  sub greater.spacer greater' hyphen by greater_greater_hyphen_start.seq;
+  sub greater'       greater  hyphen by greater.spacer;
+  sub bar.spacer     bar'     hyphen by bar_bar_hyphen_start.seq;
+  sub bar'           bar      hyphen by bar.spacer;
+
+  # single beginnings
+  sub less'    hyphen by less_hyphen_start.seq;
+  sub greater' hyphen by greater_hyphen_start.seq;
+  sub bar'     hyphen by bar_hyphen_start.seq;
+  sub hyphen' [hyphen less greater bar] by hyphen_start.seq;
+} hyphen_arrows;
