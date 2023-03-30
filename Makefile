@@ -24,9 +24,9 @@ lint:
 	$(VENV) ruff scripts/
 	$(VENV) pylint scripts/
 
-.PHONY: regenerate
-regenerate:
-	$(VENV) python scripts/lilex.py regenerate
+.PHONY: generate
+generate:
+	$(VENV) python scripts/lilex.py generate
 
 .PHONY: build
 build:
@@ -46,8 +46,8 @@ ttf:
 otf:
 	$(call build_font,otf)
 
-.PHONY: variable_ttf
-variable_ttf:
+.PHONY: variable
+variable:
 	$(call build_font,variable)
 
 install:
@@ -64,4 +64,5 @@ install_Linux:
 $(VENV_DIR): requirements.txt
 	rm -rf "$(VENV_DIR)"
 	python3 -m venv "$(VENV_DIR)"
+	$(VENV) pip install wheel
 	$(VENV) pip install -r requirements.txt
