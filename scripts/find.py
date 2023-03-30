@@ -8,41 +8,60 @@ Usage: find.py ../features/calt/hyphen-arrows.fea missing
 from re import sub
 from typing import List
 
-from arrrgs import arg, command, global_args, run
+from arrrgs import arg, command, run
+from builder import GlyphsFont
 from glyphsLib import GSFont
 
 FONT_FILE = "Lilex.glyphs"
 
-global_args(
-    arg("--file", "-f", required=True, help="Input .fea file")
+@command(
+    arg("file", help="Input .fea file")
 )
-
-@command()
-def missing(_, gls: List[str]):
+def glyphs(args):
     """Finds missing glyphs"""
     font = GSFont(FONT_FILE)
     missing_glyphs = []
+    gls = glyphs_from_fea(args.file)
     for glyph in gls:
         if glyph not in font.glyphs:
             missing_glyphs.append(glyph)
-    print("\n".join(missing_glyphs))
+    if len(missing_glyphs) > 0:
+        print("\n".join(missing_glyphs))
 
-    stock = len(gls) - len(missing_glyphs)
-    percent = stock / len(gls)
-    print(f"\nGlyphs coverage: {(percent * 100):.1f}% ({stock}/{len(gls)})")
-
-
+    available = len(gls) - len(missing_glyphs)
+    _report_progress("Glyphs coverage", len(gls), available)
 
 @command()
-def glyphs(_, gls: List[str]):
-    print("\n".join(gls))
+def spacers():
+    """Finds missing spacers"""
+    font = GlyphsFont(FONT_FILE)
+    ligas = font.ligatures()
+    unique = []
+    for liga in ligas:
+        first = liga.split("_")[0]
+        if first not in unique:
+            unique.append(first)
+    missing = []
+    for glh in unique:
+        spacer = f"{glh}.spacer"
+        if spacer not in font.file.glyphs:
+            missing.append(spacer)
+
+    available = len(unique) - len(missing)
+    for name in missing:
+        print(f" - {name}")
+    _report_progress("Spacers coverage", len(unique), available)
+
+def _report_progress(title: str, total: int, current: int):
+    percent = current / total
+    print(f"{title}: {(percent * 100):.1f}% ({current}/{total})")
 
 KEYWORDS = [
     "ignore", "sub", "by"
 ]
 
 def _is_glyph_name(word: str) -> bool:
-    return len(word) > 0 and word not in KEYWORDS
+    return len(word) > 0 and word[0] != "@" and word not in KEYWORDS
 
 def glyphs_from_fea(path: str) -> List[str]:
     with open(path, mode="r", encoding="utf-8") as file:
@@ -63,9 +82,5 @@ def glyphs_from_fea(path: str) -> List[str]:
     unique_glyphs = list(set(glyph_names))
     return sorted(unique_glyphs)
 
-def load_words(args):
-    words = glyphs_from_fea(args.file)
-    return args, words
-
 if __name__ == "__main__":
-    run(prepare=load_words)
+    run()

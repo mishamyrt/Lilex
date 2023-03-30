@@ -27,14 +27,19 @@ class GlyphsFont:
         self._font = GSFont(path)
         self._path = path
 
-    def ligatures(self) -> str:
+    @property
+    def file(self) -> GSFont:
+        return self._font
+
+    def ligatures(self) -> List[str]:
         glyphs = self.glyphs(lambda x: x.name.endswith(LIGATURE_SUFFIX))
         ligatures = []
         for glyph in glyphs:
-            ligatures.append(glyph.name.replace(LIGATURE_SUFFIX, ""))
+            if glyph.export:
+                ligatures.append(glyph.name)
         return ligatures
 
-    def glyphs(self, _filter: GlyphFilter) -> List[str]:
+    def glyphs(self, _filter: GlyphFilter) -> List[GSGlyph]:
         """Returns a list of glyphs that match filter"""
         result = []
         for glyph in self._font.glyphs:

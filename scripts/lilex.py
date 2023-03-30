@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 """Lilex helper entrypoint"""
-from arrrgs import arg, command, run
+from arrrgs import arg, command, run, global_args
 from builder import SUPPORTED_FORMATS, GlyphsFont
-from generator import render_ligatures
+from generator import generate_spacers, render_ligatures
 from glyphsLib import GSFeature
 from utils import read_classes, read_features, read_files
 
@@ -10,10 +11,16 @@ CLASSES_DIR = "./classes"
 FEATURES_DIR = "./features"
 OUT_DIR = "./build"
 
-@command()
-def regenerate(_, font: GlyphsFont):
+global_args(
+    arg("--input", "-i", default=FONT_FILE, help="Input .glyphs file")
+)
+
+@command(
+    arg("--output", "-o", default=FONT_FILE, help="Output file")
+)
+def generate(args, font: GlyphsFont):
     """Saves the generated source file with features and classes"""
-    font.save()
+    font.save_to(args.output)
     print("☺️ Font source successfully regenerated")
 
 @command(
@@ -30,11 +37,15 @@ def generate_calt(font: GlyphsFont) -> GSFeature:
     return GSFeature("calt", code)
 
 def prepare(args):
-    font = GlyphsFont(FONT_FILE)
+    font = GlyphsFont(args.input)
 
     cls = read_classes(CLASSES_DIR)
     fea = read_features(FEATURES_DIR)
+
+    print(generate_calt(font))
     fea.append(generate_calt(font))
+
+    generate_spacers(font.ligatures(), font.file.glyphs)
 
     font.set_classes(cls)
     font.set_features(fea)
