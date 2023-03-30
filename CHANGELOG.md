@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.100 — Unreleased
+
+## Added
+
+* Dynamic arrows (and Markdown tables). `<<-|->>`, `|--|--|--|`
+
 ## [2.000] — March 28, 2023
 
 ## Removed
