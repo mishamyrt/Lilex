@@ -1,9 +1,6 @@
 {
 .appVersion = "3134";
 .formatVersion = 3;
-DisplayStrings = (
-"/bar_hyphen_end"
-);
 axes = (
 {
 name = Weight;
@@ -196,8 +193,13 @@ lookup contextSubs {
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
 } contextSubs;
 ";
+labels = (
+{
+language = dflt;
+value = "Glyph Composition / Decomposition";
+}
+);
 tag = ccmp;
-notes = "Name: Glyph Composition / Decomposition";
 },
 {
 code = "# Name: Fractions
@@ -219,8 +221,13 @@ sub five [slash fraction] eight by uni215D;
 sub seven [slash fraction] eight by uni215E;
 sub one [slash fraction] nine by uni2151;
 ";
+labels = (
+{
+language = dflt;
+value = Fractions;
+}
+);
 tag = frac;
-notes = "Name: Fractions";
 },
 {
 code = "lookup locl_latn_0 {
@@ -353,22 +360,37 @@ lookup MARK_BASE_topright {
     pos base t <anchor 387 760> mark @MC_topright;
 } MARK_BASE_topright;
 ";
+labels = (
+{
+language = dflt;
+value = "Mark positioning";
+}
+);
 tag = mark;
-notes = "Name: Mark positioning";
 },
 {
 code = "# Name: numerators
 sub @numbers_dflt by @numbers_numr;
 ";
+labels = (
+{
+language = dflt;
+value = numerators;
+}
+);
 tag = numr;
-notes = "Name: numerators";
 },
 {
 code = "# Name: Ordinals
 sub [a o] by [ordfeminine ordmasculine];
 ";
+labels = (
+{
+language = dflt;
+value = Ordinals;
+}
+);
 tag = ordn;
-notes = "Name: Ordinals";
 },
 {
 code = "# Name: Stylistic alternates - all stylistic sets combined
@@ -378,72 +400,122 @@ sub @lca_cyrl_dflt by @lca_cyrl_alt1;
 sub zero by zero.alt02;
 sub germandbls by germandbls.alt01;
 ";
+labels = (
+{
+language = dflt;
+value = "Stylistic alternates - all stylistic sets combined";
+}
+);
 tag = salt;
-notes = "Name: Stylistic alternates - all stylistic sets combined";
 },
 {
 code = "# Name: Scientific inferiors
 sub @numbers_dflt by @numbers_sinf;
 ";
+labels = (
+{
+language = dflt;
+value = "Scientific inferiors";
+}
+);
 tag = sinf;
-notes = "Name: Scientific inferiors";
 },
 {
 code = "# Name: Simple lowercase a
 sub @lca_dflt by @lca_alt1;
 sub @lca_cyrl_dflt by @lca_cyrl_alt1;
 ";
+labels = (
+{
+language = dflt;
+value = "Simple lowercase a";
+}
+);
 tag = ss01;
-notes = "Name: Simple lowercase a";
 },
 {
 code = "# Name: Simple lowercase g
 sub @lcg_dflt by @lcg_alt1;
 ";
+labels = (
+{
+language = dflt;
+value = "Simple lowercase g";
+}
+);
 tag = ss02;
-notes = "Name: Simple lowercase g";
 },
 {
 code = "# Name: Slashed number zero
 sub zero by zero.alt01;
 ";
+labels = (
+{
+language = dflt;
+value = "Slashed number zero";
+}
+);
 tag = ss03;
-notes = "Name: Slashed number zero";
 },
 {
 code = "# Name: Plain number zero
 sub zero by zero.alt02;
 ";
+labels = (
+{
+language = dflt;
+value = "Plain number zero";
+}
+);
 tag = ss04;
-notes = "Name: Plain number zero";
 },
 {
 code = "# Name: Alternate lowercase eszett
 sub germandbls by germandbls.alt01;
 ";
+labels = (
+{
+language = dflt;
+value = "Alternate lowercase eszett";
+}
+);
 tag = ss05;
-notes = "Name: Alternate lowercase eszett";
 },
 {
 code = "# Name: ~Original tilda~
 sub asciitilde by asciitilde.original;
 ";
+labels = (
+{
+language = dflt;
+value = "~Original tilda~";
+}
+);
 tag = ss06;
-notes = "Name: ~Original tilda~";
 },
 {
 code = "# Name: Superiors
 sub @numbers_dflt by @numbers_sups;
 ";
+labels = (
+{
+language = dflt;
+value = Superiors;
+}
+);
 tag = sups;
-notes = "Name: Superiors";
 },
 {
 code = "# Name: Slashed zero
 sub zero by zero.alt01;
 ";
+labels = (
+{
+language = dflt;
+value = "Slashed zero";
+}
+);
 tag = zero;
-notes = "Name: Slashed zero";
 },
 {
 code = "lookup hyphen_hyphen { 
@@ -1037,7 +1109,6 @@ iconName = Light;
 id = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1048,7 +1119,6 @@ pos = 698;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
@@ -1148,7 +1218,6 @@ pos = (545,306);
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1159,7 +1228,6 @@ pos = 698;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
@@ -1261,7 +1329,6 @@ iconName = Bold;
 id = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1272,7 +1339,6 @@ pos = 698;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
@@ -68796,9 +68862,8 @@ width = 600;
 );
 },
 {
-color = 4;
 glyphname = bar_hyphen_end;
-lastChange = "2023-03-30 09:15:37 +0000";
+lastChange = "2023-03-30 09:42:24 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -68867,17 +68932,17 @@ width = 600;
 },
 {
 glyphname = bar_bar.liga;
-lastChange = "2023-03-24 15:40:40 +0000";
+lastChange = "2023-03-30 10:04:19 +0000";
 layers = (
 {
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 shapes = (
 {
-pos = (-472,0);
+pos = (-443,0);
 ref = bar;
 },
 {
-pos = (-129,0);
+pos = (-157,0);
 ref = bar;
 }
 );
@@ -68887,11 +68952,11 @@ width = 600;
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 shapes = (
 {
-pos = (-480,0);
+pos = (-444,0);
 ref = bar;
 },
 {
-pos = (-121,0);
+pos = (-156,0);
 ref = bar;
 }
 );
@@ -68901,11 +68966,11 @@ width = 600;
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 shapes = (
 {
-pos = (-482,0);
+pos = (-462,0);
 ref = bar;
 },
 {
-pos = (-119,0);
+pos = (-138,0);
 ref = bar;
 }
 );
@@ -70793,42 +70858,50 @@ pos = (485,307);
 hints = (
 {
 horizontal = 1;
-place = (236,20);
+place = (236, 20);
+place = (236, 20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (390,20);
+place = (390, 20);
+place = (390, 20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (236,20);
+place = (236, 20);
+place = (236, 20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (390,20);
+place = (390, 20);
+place = (390, 20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (244,20);
+place = (244, 20);
+place = (244, 20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (398,20);
+place = (398, 20);
+place = (398, 20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (244,20);
+place = (244, 20);
+place = (244, 20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (398,20);
+place = (398, 20);
+place = (398, 20);
 type = Stem;
 }
 );
@@ -71224,7 +71297,7 @@ width = 600;
 },
 {
 glyphname = bar_bar_hyphen_end.seq;
-lastChange = "2023-03-30 09:15:45 +0000";
+lastChange = "2023-03-30 10:04:17 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -71232,27 +71305,27 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-170,-39,l,{
+(-134,-39,l,{
 name = hr00;
 }),
-(-170,651,l),
-(-190,651,l),
-(-190,315,l),
+(-134,651,l),
+(-154,651,l),
+(-154,315,l),
 (-600,315,l),
 (-600,297,l),
-(-190,297,l),
-(-190,-39,l)
+(-154,297,l),
+(-154,-39,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(189,-39,l,{
+(154,-39,l,{
 name = hr00;
 }),
-(189,651,l),
-(169,651,l),
-(169,-39,l)
+(154,651,l),
+(134,651,l),
+(134,-39,l)
 );
 }
 );
@@ -71264,27 +71337,27 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-137,-66,l,{
+(-108,-66,l,{
 name = hr00;
 }),
-(-137,679,l),
-(-207,679,l),
-(-207,340,l),
+(-108,679,l),
+(-178,679,l),
+(-178,340,l),
 (-600,340,l),
 (-600,272,l),
-(-207,272,l),
-(-207,-66,l)
+(-178,272,l),
+(-178,-66,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(206,-66,l,{
+(178,-66,l,{
 name = hr00;
 }),
-(206,679,l),
-(136,679,l),
-(136,-66,l)
+(178,679,l),
+(108,679,l),
+(108,-66,l)
 );
 }
 );
@@ -71296,27 +71369,27 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-119,-91,l,{
+(-100,-91,l,{
 name = hr00;
 }),
-(-119,703,l),
-(-245,703,l),
-(-245,367,l),
+(-100,703,l),
+(-226,703,l),
+(-226,367,l),
 (-600,367,l),
 (-600,245,l),
-(-245,245,l),
-(-245,-91,l)
+(-226,245,l),
+(-226,-91,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(244,-91,l,{
+(225,-91,l,{
 name = hr00;
 }),
-(244,703,l),
-(118,703,l),
-(118,-91,l)
+(225,703,l),
+(99,703,l),
+(99,-91,l)
 );
 }
 );
@@ -71326,7 +71399,7 @@ width = 600;
 },
 {
 glyphname = bar_bar_hyphen_middle.seq;
-lastChange = "2023-03-30 09:15:45 +0000";
+lastChange = "2023-03-30 10:04:15 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -71334,33 +71407,33 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-170,-39,l,{
+(-134,-39,l,{
 name = hr00;
 }),
-(-170,651,l),
-(-190,651,l),
-(-190,315,l),
+(-134,651,l),
+(-154,651,l),
+(-154,315,l),
 (-600,315,l),
 (-600,297,l),
-(-190,297,l),
-(-190,-39,l)
+(-154,297,l),
+(-154,-39,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(189,-39,l,{
+(154,-39,l,{
 name = hr00;
 }),
-(189,297,l),
+(154,297,l),
 (600,297,l,{
 name = hr00;
 }),
 (600,315,l),
-(189,315,l),
-(189,651,l),
-(169,651,l),
-(169,-39,l)
+(154,315,l),
+(154,651,l),
+(134,651,l),
+(134,-39,l)
 );
 }
 );
@@ -71372,33 +71445,33 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-137,-66,l,{
+(-108,-66,l,{
 name = hr00;
 }),
-(-137,679,l),
-(-207,679,l),
-(-207,340,l),
+(-108,679,l),
+(-178,679,l),
+(-178,340,l),
 (-600,340,l),
 (-600,272,l),
-(-207,272,l),
-(-207,-66,l)
+(-178,272,l),
+(-178,-66,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(206,-66,l,{
+(178,-66,l,{
 name = hr00;
 }),
-(206,272,l),
+(178,272,l),
 (600,272,l,{
 name = hr00;
 }),
 (600,340,l),
-(206,340,l),
-(206,679,l),
-(136,679,l),
-(136,-66,l)
+(178,340,l),
+(178,679,l),
+(108,679,l),
+(108,-66,l)
 );
 }
 );
@@ -71410,33 +71483,33 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-119,-91,l,{
+(-99,-91,l,{
 name = hr00;
 }),
-(-119,703,l),
-(-245,703,l),
-(-245,367,l),
+(-99,703,l),
+(-225,703,l),
+(-225,367,l),
 (-600,367,l),
 (-600,245,l),
-(-245,245,l),
-(-245,-91,l)
+(-225,245,l),
+(-225,-91,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(244,-91,l,{
+(225,-91,l,{
 name = hr00;
 }),
-(244,245,l),
+(225,245,l),
 (600,245,l,{
 name = hr00;
 }),
 (600,367,l),
-(244,367,l),
-(244,703,l),
-(118,703,l),
-(118,-91,l)
+(225,367,l),
+(225,703,l),
+(99,703,l),
+(99,-91,l)
 );
 }
 );
@@ -71446,7 +71519,7 @@ width = 600;
 },
 {
 glyphname = bar_bar_hyphen_start.seq;
-lastChange = "2023-03-30 09:15:45 +0000";
+lastChange = "2023-03-30 10:04:13 +0000";
 layers = (
 {
 guides = (
@@ -71460,32 +71533,8 @@ pos = (169,-39);
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 shapes = (
 {
-closed = 1;
-nodes = (
-(-170,-39,l,{
-name = hr00;
-}),
-(-170,651,l),
-(-190,651,l),
-(-190,-39,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(189,-39,l,{
-name = hr00;
-}),
-(189,297,l),
-(600,297,l,{
-name = hr00;
-}),
-(600,315,l),
-(189,315,l),
-(189,651,l),
-(169,651,l),
-(169,-39,l)
-);
+ref = bar_bar_hyphen_end.seq;
+scale = (-1,1);
 }
 );
 width = 600;
@@ -71502,32 +71551,8 @@ pos = (136,-66);
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 shapes = (
 {
-closed = 1;
-nodes = (
-(-137,-66,l,{
-name = hr00;
-}),
-(-137,679,l),
-(-207,679,l),
-(-207,-66,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(206,-66,l,{
-name = hr00;
-}),
-(206,272,l),
-(600,272,l,{
-name = hr00;
-}),
-(600,340,l),
-(206,340,l),
-(206,679,l),
-(136,679,l),
-(136,-66,l)
-);
+ref = bar_bar_hyphen_end.seq;
+scale = (-1,1);
 }
 );
 width = 600;
@@ -71544,32 +71569,8 @@ pos = (118,703);
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 shapes = (
 {
-closed = 1;
-nodes = (
-(-119,-91,l,{
-name = hr00;
-}),
-(-119,703,l),
-(-245,703,l),
-(-245,-91,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(244,-91,l,{
-name = hr00;
-}),
-(244,245,l),
-(600,245,l,{
-name = hr00;
-}),
-(600,367,l),
-(244,367,l),
-(244,703,l),
-(118,703,l),
-(118,-91,l)
-);
+ref = bar_bar_hyphen_end.seq;
+scale = (-1,1);
 }
 );
 width = 600;
@@ -74357,6 +74358,7 @@ unicode = 8243;
 },
 {
 glyphname = bar;
+lastChange = "2023-03-30 09:38:54 +0000";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -74364,12 +74366,12 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(363,-138,l,{
+(363,-108,l,{
 name = hr00;
 }),
-(363,760,l),
-(237,760,l),
-(237,-138,l)
+(363,740,l),
+(237,740,l),
+(237,-108,l)
 );
 }
 );
@@ -74381,12 +74383,12 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(335,-138,l,{
+(335,-108,l,{
 name = hr00;
 }),
-(335,760,l),
-(265,760,l),
-(265,-138,l)
+(335,740,l),
+(265,740,l),
+(265,-108,l)
 );
 }
 );
@@ -74398,12 +74400,12 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(310,-138,l,{
+(310,-108,l,{
 name = hr00;
 }),
-(310,760,l),
-(290,760,l),
-(290,-138,l)
+(310,740,l),
+(290,740,l),
+(290,-108,l)
 );
 }
 );
@@ -80942,7 +80944,7 @@ width = 600;
 unicode = 94;
 },
 {
-glyphname = "infinity";
+glyphname = infinity;
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -105525,7 +105527,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -105558,7 +105559,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -105591,7 +105591,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -105631,7 +105630,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -105654,7 +105652,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -105677,7 +105674,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -105706,7 +105702,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -105723,7 +105718,6 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -105740,7 +105734,6 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -105763,7 +105756,6 @@ layers = (
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -105780,7 +105772,6 @@ width = 0;
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -105797,7 +105788,6 @@ width = 0;
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -115224,7 +115214,6 @@ name = ExtraLight;
 weightClass = 200;
 },
 {
-active = 0;
 axesValues = (
 80
 );
@@ -115234,6 +115223,7 @@ instanceInterpolations = {
 "C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.42857;
 };
 name = Light;
+visible = 0;
 weightClass = 300;
 },
 {
@@ -115257,7 +115247,6 @@ name = Meduim;
 weightClass = 500;
 },
 {
-active = 0;
 axesValues = (
 150
 );
@@ -115267,6 +115256,7 @@ instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.42857;
 };
 name = SemiBold;
+visible = 0;
 weightClass = 600;
 },
 {
@@ -115282,8 +115272,6 @@ name = Bold;
 weightClass = 700;
 }
 );
-kerningLTR = {
-};
 metrics = (
 {
 type = ascender;
