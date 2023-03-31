@@ -103,12 +103,12 @@ IGNORES = {
         "equal exclam' equal equal",
     ],
     # =<= <=< <=> <=| <=: <=! <=/
-    ("less" "equal"): [
+    ("less", "equal"): [
         "equal less' equal",
         "less' equal [less greater bar colon exclam slash]",
     ],
     # >=< =>= >=> >=< >=| >=: >=! >=/
-    ("greater" "equal"): [
+    ("greater", "equal"): [
         "equal greater' equal",
         "less' greater' equal [less greater bar colon exclam slash]",
     ],
@@ -175,6 +175,26 @@ IGNORE_TPL = {
         "1  1' 2  3  4",
         "1' 2  3  4  4"
     ]
+}
+
+
+PRIORITIES = {
+    # <|>
+    ("less", "bar", "greater"): 0,
+    # |||> ||> |> <| <|| <|||
+    ("bar", "bar", "bar", "greater"): 1,
+    ("bar", "bar", "greater"): 1,
+    ("bar", "greater"): 1,
+    ("less", "bar", "bar", "bar"): 1,
+    ("less", "bar", "bar"): 1,
+    ("less", "bar"): 1,
+    # << <<< >> >>> || ||| before -- --- == ===
+    ("less", "less"): 2,
+    ("less", "less", "less"): 2,
+    ("greater", "greater"): 2,
+    ("greater", "greater", "greater"): 2,
+    ("bar", "bar"): 2,
+    ("bar", "bar", "bar"): 2,
 }
 
 # Replacement templates map

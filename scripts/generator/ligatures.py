@@ -1,7 +1,9 @@
 """Ligatures feature generator module"""
+from __future__ import annotations
+
 from typing import List
 
-from .const import IGNORE_PREFIXES, IGNORE_TPL, IGNORES, REPLACE_TPL
+from .const import IGNORE_PREFIXES, IGNORE_TPL, IGNORES, PRIORITIES, REPLACE_TPL
 
 
 def _populate_tpl(templates: List[str], prefix: str) -> str:
@@ -24,6 +26,12 @@ class LigatureLookup:
     subs: List[str] = []
     glyphs: tuple
     name: str
+
+    @property
+    def priority(self) -> int:
+        if self.glyphs in PRIORITIES:
+            return PRIORITIES[self.glyphs]
+        return 99
 
     def __init__(self, name: str):
         basename = name.replace(".liga", "")
@@ -55,8 +63,11 @@ class LigatureLookup:
 
 def render_ligatures(items: List[str]) -> str:
     """Renders the list of ligatures in the OpenType feature"""
-    result = ""
+    lookups = []
     for name in items:
-        lookup = LigatureLookup(name)
-        result += f"{lookup}\n\n"
-    return result.rstrip()
+        lookups.append(LigatureLookup(name))
+    lookups.sort(key=lambda x: (x.priority, -len(x.glyphs), x.name))
+    code = ""
+    for lookup in lookups:
+        code += f"{lookup}\n"
+    return code.rstrip()
