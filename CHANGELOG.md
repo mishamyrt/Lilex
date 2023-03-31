@@ -3,9 +3,13 @@ All notable changes to this project will be documented in this file.
 
 ## 2.100 — Unreleased
 
+## Fixed
+
+* `04F8` point order (In 400-700 the scaling was broken)
+
 ## Added
 
-* Dynamic arrows (and Markdown tables). `<<-|->>`, `|--|--|--|`
+* Arrows (and Markdown tables). `<<-|->>`, `|--|--|--|`
 
 ## [2.000] — March 28, 2023
 
