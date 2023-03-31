@@ -71,12 +71,14 @@ class GlyphsFont:
             else:
                 self._font.features.append(fea)
 
-    def build(self, formats: List[str], out_dir: str):
+    def build(self, formats: List[str], out_dir: str) -> bool:
         print("Generating master UFOs")
         build_masters(self._path, UFO_PATH, write_skipexportglyphs=True)
         ds_path = f"{UFO_PATH}/{self._font.familyName}.designspace"
+        success = True
         for fmt in formats:
             if fmt not in SUPPORTED_FORMATS:
                 print(f"Unsupported format '{fmt}'")
                 sys.exit(1)
-            make(ds_path, fmt, f"{out_dir}/{fmt}")
+            success = success and make(ds_path, fmt, f"{out_dir}/{fmt}")
+        return success

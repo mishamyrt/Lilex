@@ -33,8 +33,11 @@ def generate(args, font: GlyphsFont):
 )
 def build(args, font: GlyphsFont):
     """Builds a binary font file"""
-    font.build(args.formats, OUT_DIR)
-    print("☺️ Font binaries successfully builded")
+    if font.build(args.formats, OUT_DIR):
+        print("☺️ Font binaries successfully builded")
+    else:
+        print("💔 Failed to build font binaries")
+        sys.exit(1)
 
 def generate_calt(font: GlyphsFont) -> GSFeature:
     glyphs = font.ligatures()
