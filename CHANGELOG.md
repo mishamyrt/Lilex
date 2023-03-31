@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * Medium and ExtraLight (they're back!)
 * Arrows (and Markdown tables). `<<-|->>`, `<<=|=>> `, `|--|--|`
 * Forced feature activation in the builder
+* `<*`, `<*>`
 
 ## [2.000] — March 28, 2023
 
