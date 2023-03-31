@@ -1,7 +1,8 @@
 """Glyphs helper"""
 from __future__ import annotations
 
-import sys
+from shutil import rmtree
+from tempfile import mkdtemp
 from typing import Callable, List
 
 from glyphsLib import (
@@ -72,13 +73,18 @@ class GlyphsFont:
                 self._font.features.append(fea)
 
     def build(self, formats: List[str], out_dir: str) -> bool:
+        print("Writing temporary .glyphs file")
+        temp_dir = mkdtemp(prefix="LilexBuild")
+        path = f"{temp_dir}/{self._font.familyName}.glyphs"
+        self.save_to(path)
         print("Generating master UFOs")
-        build_masters(self._path, UFO_PATH, write_skipexportglyphs=True)
+        build_masters(path, UFO_PATH, write_skipexportglyphs=True)
         ds_path = f"{UFO_PATH}/{self._font.familyName}.designspace"
         success = True
         for fmt in formats:
             if fmt not in SUPPORTED_FORMATS:
                 print(f"Unsupported format '{fmt}'")
-                sys.exit(1)
+                break
             success = success and make(ds_path, fmt, f"{out_dir}/{fmt}")
+        rmtree(temp_dir)
         return success
