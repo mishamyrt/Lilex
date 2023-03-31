@@ -7,7 +7,7 @@ from arrrgs import arg, command, global_args, run
 from builder import SUPPORTED_FORMATS, GlyphsFont
 from generator import generate_spacers, render_ligatures
 from glyphsLib import GSFeature, GSFont
-from utils import read_classes, read_features, read_files
+from utils import print_warn, read_classes, read_features, read_files
 
 FONT_FILE = "Lilex.glyphs"
 CLASSES_DIR = "./classes"
@@ -74,6 +74,7 @@ def create_font(args):
     if args.features is not None:
         features = args.features.split(",")
         move_to_calt(font.file, features)
+        print_warn(f"Forced features: {', '.join(features)}")
     return args, font
 
 if __name__ == "__main__":
