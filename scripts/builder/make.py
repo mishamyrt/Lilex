@@ -11,6 +11,8 @@ def make(ds_path: str, fmt: str, out_dir: str) -> bool:
         f"--output-dir '{out_dir}'",
         "--autohint"
     ])
+    if fmt != "variable":
+        cmd += " --interpolate"
     with sp.Popen(cmd, shell=True, stdout=sp.PIPE) as child:
         child.communicate()
         return child.returncode == 0
