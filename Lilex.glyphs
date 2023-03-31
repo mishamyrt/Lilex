@@ -1,11 +1,6 @@
 {
 .appVersion = "3134";
 .formatVersion = 3;
-DisplayStrings = (
-"Ӹ",
-"ы",
-"Ы"
-);
 axes = (
 {
 name = Weight;
@@ -115303,7 +115298,7 @@ key = copyrights;
 values = (
 {
 language = dflt;
-value = "Copyright 2019-2023 The Lilex Project Authors (https://github.com/mishamyrt/lilex/blob/master/AUTHORS)";
+value = "Copyright 2019-2023 The Lilex Project Authors (https://github.com/mishamyrt/Lilex/blob/master/AUTHORS)";
 }
 );
 },
