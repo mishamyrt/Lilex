@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Lilex helper entrypoint"""
-from arrrgs import arg, command, run, global_args
+import sys
+from typing import List
+
+from arrrgs import arg, command, global_args, run
 from builder import SUPPORTED_FORMATS, GlyphsFont
 from generator import generate_spacers, render_ligatures
-from glyphsLib import GSFeature
+from glyphsLib import GSFeature, GSFont
 from utils import read_classes, read_features, read_files
 
 FONT_FILE = "Lilex.glyphs"
@@ -12,7 +15,9 @@ FEATURES_DIR = "./features"
 OUT_DIR = "./build"
 
 global_args(
-    arg("--input", "-i", default=FONT_FILE, help="Input .glyphs file")
+    arg("--input", "-i", default=FONT_FILE, help="Input .glyphs file"),
+    arg("--features", "-f",
+    help="A list of features that will be \"baked\" into the font. Comma separated, no spaces")
 )
 
 @command(
@@ -36,20 +41,37 @@ def generate_calt(font: GlyphsFont) -> GSFeature:
     code = render_ligatures(glyphs) + read_files(f"{FEATURES_DIR}/calt")
     return GSFeature("calt", code)
 
-def prepare(args):
+def move_to_calt(font: GSFont, features: List[str]):
+    for fea in features:
+        if fea not in font.features:
+            print(f"Unknown feature: '{fea}'")
+            print(font.features)
+            sys.exit(1)
+        # Move the code of the feature to the calt,
+        # which is executed in most cases
+        feature = font.features[fea]
+        feature.disabled = True
+        font.features["calt"].code += "\n" + feature.code
+        # Remove feature from aalt
+        aalt = font.features["aalt"]
+        aalt.code = aalt.code.replace(f"feature {fea};\n", "")
+
+def create_font(args):
     font = GlyphsFont(args.input)
 
     cls = read_classes(CLASSES_DIR)
     fea = read_features(FEATURES_DIR)
 
-    print(generate_calt(font))
-    fea.append(generate_calt(font))
-
+    calt = generate_calt(font)
+    fea.append(calt)
     generate_spacers(font.ligatures(), font.file.glyphs)
-
     font.set_classes(cls)
     font.set_features(fea)
+
+    if args.features is not None:
+        features = args.features.split(",")
+        move_to_calt(font.file, features)
     return args, font
 
 if __name__ == "__main__":
-    run(prepare=prepare)
+    run(prepare=create_font)

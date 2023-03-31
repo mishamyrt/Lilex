@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ## Fixed
 
-* `04F8`, `042B` (ы, Ы) point order (In 400-700 the scaling was broken)
+* `044B` (`ы`), `042B` (`Ы`) point order (In 400-700 the scaling was broken)
 
 ## Added
 
 * Arrows (and Markdown tables). `<<-|->>`, `|--|--|--|`
+* Forced feature activation in the builder
 
 ## [2.000] — March 28, 2023
 
