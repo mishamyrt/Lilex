@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ## Fixed
 
-* `04F8` point order (In 400-700 the scaling was broken)
+* `04F8`, `042B` (ы, Ы) point order (In 400-700 the scaling was broken)
 
 ## Added
 
