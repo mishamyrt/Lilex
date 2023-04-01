@@ -1,6 +1,9 @@
 {
 .appVersion = "3134";
 .formatVersion = 3;
+DisplayStrings = (
+"/less_asciitilde_asciitilde.liga"
+);
 axes = (
 {
 name = Weight;
@@ -1250,7 +1253,7 @@ value = -275;
 );
 guides = (
 {
-pos = (342,306);
+pos = (342,304);
 }
 );
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -70955,6 +70958,151 @@ layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 shapes = (
 {
 ref = greater_greater.liga;
+scale = (-1,1);
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = less_asciitilde.liga;
+lastChange = "2023-04-01 10:00:17 +0000";
+layers = (
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+ref = asciitilde_greater.liga;
+scale = (-1,1);
+}
+);
+width = 600;
+},
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+ref = asciitilde_greater.liga;
+scale = (-1,1);
+}
+);
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+ref = asciitilde_greater.liga;
+scale = (-1,1);
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = less_asciitilde_greater.liga;
+lastChange = "2023-04-01 10:09:10 +0000";
+layers = (
+{
+guides = (
+{
+pos = (-259,-2);
+},
+{
+pos = (439,304);
+}
+);
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+pos = (-1200,0);
+ref = less;
+},
+{
+ref = greater;
+},
+{
+pos = (-259,-4);
+ref = asciitilde_asciitilde.liga;
+}
+);
+width = 600;
+},
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+pos = (-1200,0);
+ref = less;
+},
+{
+ref = greater;
+},
+{
+pos = (-259,-1);
+ref = asciitilde_asciitilde.liga;
+}
+);
+width = 600;
+},
+{
+guides = (
+{
+pos = (382,305);
+}
+);
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+pos = (-1200,0);
+ref = less;
+},
+{
+ref = greater;
+},
+{
+pos = (-259,1);
+ref = asciitilde_asciitilde.liga;
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = less_asciitilde_asciitilde.liga;
+lastChange = "2023-04-01 10:09:34 +0000";
+layers = (
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+pos = (-600,0);
+ref = asciitilde_asciitilde_greater.liga;
+scale = (-1,1);
+}
+);
+width = 600;
+},
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+pos = (-600,0);
+ref = asciitilde_asciitilde_greater.liga;
+scale = (-1,1);
+}
+);
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+pos = (-600,0);
+ref = asciitilde_asciitilde_greater.liga;
 scale = (-1,1);
 }
 );
