@@ -31,6 +31,28 @@ def glyphs(args):
     available = len(gls) - len(missing_glyphs)
     _report_progress("Glyphs coverage", len(gls), available)
 
+@command(
+    arg("file", help="Input .glyphs file")
+)
+def ligatures(args):
+    """Finds missing ligatures"""
+    other_font = GSFont(args.file)
+    lilex = GSFont(FONT_FILE)
+
+    liga_count = 0
+    missing_ligatures = []
+    for glyph in other_font.glyphs:
+        name = glyph.name
+        if name.endswith(".liga"):
+            liga_count += 1
+            if name not in lilex.glyphs:
+                missing_ligatures.append(name)
+    if len(missing_ligatures) > 0:
+        print("\n".join(missing_ligatures))
+
+    available = liga_count - len(missing_ligatures)
+    _report_progress("Ligatures coverage", liga_count, available)
+
 @command()
 def spacers():
     """Finds missing spacers"""
