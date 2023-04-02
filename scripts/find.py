@@ -43,7 +43,7 @@ def ligatures(args):
     missing_ligatures = []
     for glyph in other_font.glyphs:
         name = glyph.name
-        if name.endswith(".liga"):
+        if glyph.export and name.endswith(".liga"):
             liga_count += 1
             if name not in lilex.glyphs:
                 missing_ligatures.append(name)
