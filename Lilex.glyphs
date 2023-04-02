@@ -122,6 +122,14 @@ pos = "-200";
 size = "-12";
 }
 );
+},
+{
+name = blueScale;
+value = 0.062;
+},
+{
+name = blueShift;
+value = 7;
 }
 );
 date = "2023-03-22 17:19:30 +0000";
@@ -1141,7 +1149,7 @@ tag = ss07;
 fontMaster = (
 {
 axesValues = (
-40
+100
 );
 customParameters = (
 {
@@ -1250,7 +1258,7 @@ stemValues = (
 },
 {
 axesValues = (
-110
+400
 );
 customParameters = (
 {
@@ -1365,7 +1373,7 @@ visible = 1;
 },
 {
 axesValues = (
-180
+700
 );
 customParameters = (
 {
@@ -120866,7 +120874,7 @@ width = 600;
 instances = (
 {
 axesValues = (
-40
+100
 );
 instanceInterpolations = {
 "C7B35BE3-AA13-4B78-992E-F05F1268D666" = 1;
@@ -120876,23 +120884,23 @@ weightClass = 100;
 },
 {
 axesValues = (
-60
+200
 );
 instanceInterpolations = {
-"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.28571;
-"C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.71429;
+"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.33333;
+"C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.66667;
 };
 name = ExtraLight;
 weightClass = 200;
 },
 {
 axesValues = (
-80
+300
 );
 exports = 0;
 instanceInterpolations = {
-"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.57143;
-"C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.42857;
+"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.66667;
+"C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.33333;
 };
 name = Light;
 visible = 0;
@@ -120900,7 +120908,7 @@ weightClass = 300;
 },
 {
 axesValues = (
-110
+400
 );
 instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 1;
@@ -120909,23 +120917,33 @@ name = Regular;
 },
 {
 axesValues = (
-125
+460
 );
 instanceInterpolations = {
-"055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.21429;
-"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.78571;
+"055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.2;
+"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.8;
+};
+name = Regular;
+},
+{
+axesValues = (
+500
+);
+instanceInterpolations = {
+"055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.33333;
+"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.66667;
 };
 name = Meduim;
 weightClass = 500;
 },
 {
 axesValues = (
-150
+600
 );
 exports = 0;
 instanceInterpolations = {
-"055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.57143;
-"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.42857;
+"055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.66667;
+"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.33333;
 };
 name = SemiBold;
 visible = 0;
@@ -120933,7 +120951,7 @@ weightClass = 600;
 },
 {
 axesValues = (
-180
+700
 );
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 1;
