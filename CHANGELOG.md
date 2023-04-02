@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.200 — Unreleased
+
+## Added
+
+* `..=`, `^=`, `..<`,
+* `:::`, `;;`, `%%`, `>>>`, `<<<`
+* `<>`, `|>`, `<|`
+
 ## [2.100] — April 2, 2023
 
 ## Fixed
