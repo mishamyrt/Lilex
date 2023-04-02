@@ -19,6 +19,9 @@ configure: requirements.txt
 	rm -rf $(VENV_DIR)
 	make $(VENV_DIR)
 
+configure_preview: preview/*.yaml preview/*.json
+	cd preview; pnpm install
+
 .PHONY: lint
 lint:
 	$(VENV) ruff scripts/
@@ -31,6 +34,14 @@ generate:
 .PHONY: build
 build:
 	$(call build_font)
+
+.PHONY: build_preview
+build_preview:
+	cd preview; pnpm run build
+
+.PHONY: run_preview
+run_preview:
+	cd preview; pnpm run dev
 
 .PHONY: bundle
 bundle:
