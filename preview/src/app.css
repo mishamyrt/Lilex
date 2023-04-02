@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Lilex";
+    src: url('public/variable/Lilex-VF.ttf');
+}
+
+:root {
+  --color-text-light: #212529;
+  --color-text-dark: #F3F3F3;
+  --color-background-light: #F3F3F3;
+  --color-background-dark: #242424;
+
+  --color-text: var(--color-text-light);
+  --color-background: var(--color-background-light);
+  --font-family: "Lilex";
+  --padding-layout: 24px;
+
+  font-family: 'Lilex';
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: var(--color-text-dark);
+    --color-background: var(--color-background-dark);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+body {
+  margin: 0;
+}
