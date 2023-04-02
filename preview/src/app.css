@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Lilex";
-    src: url('public/variable/Lilex-VF.ttf');
+    src: url('/variable/Lilex-VF.ttf');
 }
 
 :root {
