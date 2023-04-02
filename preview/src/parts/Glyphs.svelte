@@ -18,7 +18,7 @@
   $: width = height * 1.3
 
   onMount(() => {
-    const requests = VARIANTS.map(v => load(`/otf/Lilex-${v}.otf`))
+    const requests = VARIANTS.map(v => load(`./otf/Lilex-${v}.otf`))
     Promise.all(requests)
       .then(masters => {
         fonts.push(...masters)

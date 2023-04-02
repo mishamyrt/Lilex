@@ -1,6 +1,9 @@
-name: Build
+name: Publish preview
 
-on: [push]
+on:
+  push:
+    branches:
+      - dev
 
 jobs:
   build:
