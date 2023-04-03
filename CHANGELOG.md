@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## 2.200 — Unreleased
 
+## Fixed
+
+* Long `----` and `====` are no longer breaking in iTerm2
+
 ## Added
 
 * `..=`, `^=`, `..<`,
