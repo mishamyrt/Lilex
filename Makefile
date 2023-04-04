@@ -3,6 +3,7 @@ VENV = . $(VENV_DIR)/bin/activate;
 
 BUILD_DIR = build
 GLYPHS_FILE = Lilex.glyphs
+REPORT_PREFIX = fontbakery_report_
 
 OS := $(shell uname)
 
@@ -13,7 +14,7 @@ endef
 define check_font
 	$(VENV) fontbakery check-universal \
 		--auto-jobs \
-		--ghmarkdown "fontbakery_report_$(1).md" \
+		--ghmarkdown "$(REPORT_PREFIX)$(1).md" \
 		"$(BUILD_DIR)/$(1)/"* || true
 endef
 
