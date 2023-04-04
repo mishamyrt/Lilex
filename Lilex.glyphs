@@ -1250,7 +1250,7 @@ value = -220;
 },
 {
 name = typoLineGap;
-value = 300;
+value = 0;
 },
 {
 name = winAscent;
@@ -1258,7 +1258,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 275;
+value = -275;
 },
 {
 name = underlineThickness;
@@ -1303,6 +1303,10 @@ value = 1025;
 {
 name = hheaDescender;
 value = -275;
+},
+{
+name = hheaLineGap;
+value = 0;
 }
 );
 guides = (
@@ -1355,7 +1359,7 @@ value = -220;
 },
 {
 name = typoLineGap;
-value = 300;
+value = 0;
 },
 {
 name = winAscent;
@@ -1363,7 +1367,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 275;
+value = -275;
 },
 {
 name = underlineThickness;
@@ -1408,6 +1412,10 @@ value = 1025;
 {
 name = hheaDescender;
 value = -275;
+},
+{
+name = hheaLineGap;
+value = 0;
 }
 );
 guides = (
@@ -1458,15 +1466,15 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 780;
+value = 1025;
 },
 {
 name = typoDescender;
-value = -220;
+value = -275;
 },
 {
 name = typoLineGap;
-value = 300;
+value = 0;
 },
 {
 name = winAscent;
@@ -1474,7 +1482,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 275;
+value = -275;
 },
 {
 name = underlineThickness;
@@ -1519,6 +1527,10 @@ value = 1025;
 {
 name = hheaDescender;
 value = -275;
+},
+{
+name = hheaLineGap;
+value = 0;
 }
 );
 iconName = Bold;
@@ -121983,7 +121995,6 @@ axesValues = (
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 1;
 };
-isBold = 1;
 name = Bold;
 weightClass = 700;
 }
