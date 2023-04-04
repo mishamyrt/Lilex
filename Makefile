@@ -57,9 +57,14 @@ run_preview:
 
 .PHONY: bundle
 bundle:
-	rm -rf "$(BUILD_DIR)"
+	make clean
 	make build
 	cd "$(BUILD_DIR)"; zip -r Lilex.zip ./*
+
+.PHONY: clean
+clean:
+	rm -f "$(REPORT_PREFIX)"*.md
+	rm -rf "$(BUILD_DIR)"
 
 .PHONY: ttf
 ttf:
