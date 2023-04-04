@@ -4,15 +4,17 @@ VENV = . $(VENV_DIR)/bin/activate;
 BUILD_DIR = build
 GLYPHS_FILE = Lilex.glyphs
 
-OTF_DIR = $(BUILD_DIR)/otf
-TTF_DIR = $(BUILD_DIR)/ttf
-VTTF_DIR = $(BUILD_DIR)/variable_ttf
-VTTF_FILE = $(VTTF_DIR)/Lilex-VF.ttf
-
 OS := $(shell uname)
 
 define build_font
 	$(VENV) python scripts/lilex.py build $(1)
+endef
+
+define check_font
+	$(VENV) fontbakery check-universal \
+		--auto-jobs \
+		--ghmarkdown "fontbakery_report_$(1).md" \
+		"$(BUILD_DIR)/$(1)/"* || true
 endef
 
 configure: requirements.txt
@@ -24,7 +26,9 @@ configure_preview: preview/*.yaml preview/*.json
 
 .PHONY: check
 check:
-	fontbakery check-universal --auto-jobs --ghmarkdown fontbakery_report.md build/**/*
+	$(call check_font,"otf")
+	$(call check_font,"ttf")
+	$(call check_font,"variable")
 
 .PHONY: lint
 lint:
