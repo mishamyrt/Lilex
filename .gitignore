@@ -2,8 +2,6 @@
 /build/
 /venv/
 /.vscode
-/instance_ufo/
-/master_ufo/
 /Lilex (Autosaved).glyphs
 /generator/__pycache__
 .ruff_cache

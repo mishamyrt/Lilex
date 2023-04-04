@@ -13,7 +13,7 @@ from glyphsLib import (
     build_masters,
 )
 
-from .const import SUPPORTED_FORMATS, UFO_PATH
+from .const import SUPPORTED_FORMATS
 from .make import make
 
 LIGATURE_SUFFIX = ".liga"
@@ -75,11 +75,12 @@ class GlyphsFont:
     def build(self, formats: List[str], out_dir: str) -> bool:
         print("Writing temporary .glyphs file")
         temp_dir = mkdtemp(prefix="LilexBuild")
-        path = f"{temp_dir}/{self._font.familyName}.glyphs"
-        self.save_to(path)
+        glyphs_path = f'{temp_dir}/{self._font.familyName}.glyphs'
+        ufo_path = f'{temp_dir}/master_ufo'
+        self.save_to(glyphs_path)
         print("Generating master UFOs")
-        build_masters(path, UFO_PATH, write_skipexportglyphs=True)
-        ds_path = f"{UFO_PATH}/{self._font.familyName}.designspace"
+        build_masters(glyphs_path, ufo_path, write_skipexportglyphs=True)
+        ds_path = f"{ufo_path}/{self._font.familyName}.designspace"
         success = True
         for fmt in formats:
             if fmt not in SUPPORTED_FORMATS:
