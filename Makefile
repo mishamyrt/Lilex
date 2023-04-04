@@ -27,6 +27,10 @@ lint:
 	$(VENV) ruff scripts/
 	$(VENV) pylint scripts/
 
+.PHONY: preview
+preview:
+	$(VENV) python scripts/show.py
+
 .PHONY: generate
 generate:
 	$(VENV) python scripts/lilex.py generate

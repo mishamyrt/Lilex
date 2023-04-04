@@ -5,3 +5,4 @@ glyphsLib==6.2.1
 arrrgs==2.0.0
 ruff==0.0.259
 pylint==2.17.1
+colored==1.4.4
