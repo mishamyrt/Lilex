@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
 * `:::`, `;;`, `%%`, `>>>`, `<<<`
 * `<>`, `|>`, `<|`
 * Powerline support (`uniE0A0`, `uniE0A2`, `uniE0B0`, `uniE0B1`, `uniE0B2`, `uniE0B3`)
-* `Retina` option
+* Retina option (Read [commit](https://github.com/mishamyrt/Lilex/commit/fe983370a278eca78a27434f2ddbf75e8505e8ed) message)
 
 ## [2.100] — April 2, 2023
 
