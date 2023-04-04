@@ -1262,11 +1262,11 @@ value = 275;
 },
 {
 name = underlineThickness;
-value = 16;
+value = 60;
 },
 {
 name = underlinePosition;
-value = -184;
+value = -140;
 },
 {
 name = strikeoutPosition;
@@ -1486,11 +1486,11 @@ value = 275;
 },
 {
 name = underlineThickness;
-value = 100;
+value = 60;
 },
 {
 name = underlinePosition;
-value = -100;
+value = -140;
 },
 {
 name = strikeoutPosition;
