@@ -1273,10 +1273,6 @@ name = strikeoutPosition;
 value = 304;
 },
 {
-name = strikeoutSize;
-value = 16;
-},
-{
 name = subscriptXSize;
 value = 700;
 },
@@ -1380,10 +1376,6 @@ value = -140;
 {
 name = strikeoutPosition;
 value = 304;
-},
-{
-name = strikeoutSize;
-value = 60;
 },
 {
 name = subscriptXSize;
@@ -1495,10 +1487,6 @@ value = -140;
 {
 name = strikeoutPosition;
 value = 304;
-},
-{
-name = strikeoutSize;
-value = 100;
 },
 {
 name = subscriptXSize;

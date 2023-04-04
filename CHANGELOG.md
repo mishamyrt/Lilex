@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ## Fixed
 
 * Long `----` and `====` are no longer breaking in iTerm2
+* Metrics (`underlineThickness`)
 
 ## Added
 
