@@ -22,6 +22,10 @@ configure: requirements.txt
 configure_preview: preview/*.yaml preview/*.json
 	cd preview; pnpm install
 
+.PHONY: check
+check:
+	fontbakery check-universal --auto-jobs --ghmarkdown fontbakery_report.md build/**/*
+
 .PHONY: lint
 lint:
 	$(VENV) ruff scripts/
