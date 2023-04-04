@@ -34,9 +34,9 @@ class PowerlineFeature(FeaturePreview):
 
     def _print_examples(self):
         self._print_line([
-            ("blue", "~"),
+            ("grey_11", "~"),
             ("grey_30", "Git/Lilex"),
-            ("green", f'{VC_BRANCH_CHAR} dev'),
+            ("grey_46", f'{VC_BRANCH_CHAR} dev'),
         ])
 
 
