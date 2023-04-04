@@ -9,7 +9,8 @@ def make(ds_path: str, fmt: str, out_dir: str) -> bool:
         f"-m '{ds_path}'",
         f"-o '{fmt}'",
         f"--output-dir '{out_dir}'",
-        "--autohint"
+        "--autohint",
+        "--filter DecomposeTransformedComponentsFilter"
     ])
     if fmt != "variable":
         cmd += " --interpolate"
