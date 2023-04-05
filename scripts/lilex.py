@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Lilex helper entrypoint"""
 import sys
+from argparse import BooleanOptionalAction
 from typing import List
 
 from arrrgs import arg, command, global_args, run
@@ -21,10 +22,18 @@ global_args(
 )
 
 @command(
-    arg("--output", "-o", default=FONT_FILE, help="Output file")
+    arg("--output", "-o", default=FONT_FILE, help="Output file"),
+    arg("--params", "-p", action=BooleanOptionalAction, help="Clear masters custom parameters")
 )
 def generate(args, font: GlyphsFont):
     """Saves the generated source file with features and classes"""
+    if args.params:
+        for master in font.file.masters:
+            names = []
+            for param in master.customParameters:
+                names.append(param.name)
+            for name in names:
+                del master.customParameters[name]
     font.save_to(args.output)
     print("☺️ Font source successfully regenerated")
 
