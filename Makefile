@@ -2,8 +2,8 @@ VENV_DIR = ./venv
 VENV = . $(VENV_DIR)/bin/activate;
 
 BUILD_DIR = build
+REPORTS_DIR = reports
 GLYPHS_FILE = Lilex.glyphs
-REPORT_PREFIX = fontbakery_report_
 
 OS := $(shell uname)
 
@@ -14,7 +14,7 @@ endef
 define check_font
 	$(VENV) fontbakery check-universal \
 		--auto-jobs \
-		--ghmarkdown "$(REPORT_PREFIX)$(1).md" \
+		--ghmarkdown "$(REPORTS_DIR)/universal_$(1).md" \
 		"$(BUILD_DIR)/$(1)/"*
 endef
 
@@ -27,6 +27,8 @@ configure_preview: preview/*.yaml preview/*.json
 
 .PHONY: check
 check:
+	rm -rf "$(REPORTS_DIR)"
+	mkdir "$(REPORTS_DIR)"
 	$(call check_font,"ttf")
 	$(call check_font,"variable")
 
@@ -63,7 +65,7 @@ bundle:
 
 .PHONY: clean
 clean:
-	rm -f "$(REPORT_PREFIX)"*.md
+	rm -rf "$(REPORTS_DIR)"
 	rm -rf "$(BUILD_DIR)"
 
 .PHONY: ttf
