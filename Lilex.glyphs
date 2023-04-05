@@ -130,6 +130,21 @@ value = 0.062;
 {
 name = blueShift;
 value = 7;
+},
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
 }
 );
 date = "2023-03-22 17:19:30 +0000";
@@ -121933,6 +121948,23 @@ instances = (
 axesValues = (
 100
 );
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
+);
 instanceInterpolations = {
 "C7B35BE3-AA13-4B78-992E-F05F1268D666" = 1;
 };
@@ -121942,6 +121974,23 @@ weightClass = 100;
 {
 axesValues = (
 200
+);
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
 );
 instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.33333;
@@ -121953,6 +122002,23 @@ weightClass = 200;
 {
 axesValues = (
 300
+);
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
 );
 exports = 0;
 instanceInterpolations = {
@@ -121967,6 +122033,23 @@ weightClass = 300;
 axesValues = (
 400
 );
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
+);
 instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 1;
 };
@@ -121975,6 +122058,23 @@ name = Regular;
 {
 axesValues = (
 450
+);
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
 );
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.16667;
@@ -121987,6 +122087,23 @@ weightClass = 450;
 axesValues = (
 500
 );
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
+);
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.33333;
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.66667;
@@ -121997,6 +122114,23 @@ weightClass = 500;
 {
 axesValues = (
 600
+);
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
 );
 exports = 0;
 instanceInterpolations = {
@@ -122010,6 +122144,23 @@ weightClass = 600;
 {
 axesValues = (
 700
+);
+customParameters = (
+{
+name = panose;
+value = (
+2,
+0,
+0,
+9,
+0,
+0,
+0,
+0,
+0,
+0
+);
+}
 );
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 1;
