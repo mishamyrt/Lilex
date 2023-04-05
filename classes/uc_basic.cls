@@ -1,0 +1,1 @@
+A AE Aogonek B C Ccedilla D E Eogonek F G H I Iogonek J K L M N O OE Ohorn Oslash P Q R S Schwa T U Uhorn Uogonek V W X Y Z
