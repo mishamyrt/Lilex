@@ -1,0 +1,20 @@
+"Lilex-VF.ttf":
+  - tag: wght
+    name: Weight
+    values:
+      - name: Regular
+        value: 100
+      - name: ExtraLight
+        value: 200
+      - name: Light
+        value: 300
+      - name: Regular
+        value: 400
+      - name: Retina
+        value: 450
+      - name: Medium
+        value: 500
+      - name: SemiBold
+        value: 600
+      - name: Bold
+        value: 700

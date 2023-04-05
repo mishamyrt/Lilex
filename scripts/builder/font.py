@@ -14,7 +14,7 @@ from glyphsLib import (
 )
 
 from .const import SUPPORTED_FORMATS
-from .make import make
+from .make import gen_stat, make
 
 LIGATURE_SUFFIX = ".liga"
 GlyphFilter = Callable[[GSGlyph], bool]
@@ -84,8 +84,12 @@ class GlyphsFont:
         success = True
         for fmt in formats:
             if fmt not in SUPPORTED_FORMATS:
-                print(f"Unsupported format '{fmt}'")
+                print(f'Unsupported format "{fmt}"')
                 break
-            success = success and make(ds_path, fmt, f"{out_dir}/{fmt}")
+            fmt_dir = f'{out_dir}/{fmt}'
+            success = success and make(ds_path, fmt, fmt_dir)
+            if fmt == 'variable':
+                print("Generating STAT table")
+                gen_stat(f'{fmt_dir}/{self.file.familyName}-VF.ttf')
         rmtree(temp_dir)
         return success
