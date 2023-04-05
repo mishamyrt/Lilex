@@ -5,7 +5,7 @@ from argparse import BooleanOptionalAction
 from typing import List
 
 from arrrgs import arg, command, global_args, run
-from builder import SUPPORTED_FORMATS, GlyphsFont
+from builder import DEFAULT_FORMATS, GlyphsFont
 from generator import generate_spacers, render_ligatures
 from glyphsLib import GSFeature, GSFont
 from utils import print_warn, read_classes, read_features, read_files
@@ -38,7 +38,7 @@ def generate(args, font: GlyphsFont):
     print("☺️ Font source successfully regenerated")
 
 @command(
-    arg("formats", nargs="*", help="Format list", default=SUPPORTED_FORMATS)
+    arg("formats", nargs="*", help="Format list", default=DEFAULT_FORMATS)
 )
 def build(args, font: GlyphsFont):
     """Builds a binary font file"""

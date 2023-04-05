@@ -8,7 +8,10 @@ All notable changes to this project will be documented in this file.
 * Long `----` and `====` are no longer breaking in iTerm2
 * Metrics (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`)
 * Width of some glyphs
-* 
+
+## Removed
+
+* OTF is no longer available in the bundle. But you still have the option of building it yourself.
 
 ## Added
 

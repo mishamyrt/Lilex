@@ -5,3 +5,8 @@ SUPPORTED_FORMATS = [
     "otf",
     "variable"
 ]
+
+DEFAULT_FORMATS = [
+    "ttf",
+    "variable"
+]
