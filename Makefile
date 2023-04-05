@@ -15,7 +15,7 @@ define check_font
 	$(VENV) fontbakery check-universal \
 		--auto-jobs \
 		--ghmarkdown "$(REPORT_PREFIX)$(1).md" \
-		"$(BUILD_DIR)/$(1)/"* || true
+		"$(BUILD_DIR)/$(1)/"*
 endef
 
 configure: requirements.txt
