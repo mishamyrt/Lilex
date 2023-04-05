@@ -1,6 +1,0 @@
-# Name: Stylistic alternates - all stylistic sets combined
-sub @lca_dflt by @lca_alt1;
-sub @lcg_dflt by @lcg_alt1;
-sub @lca_cyrl_dflt by @lca_cyrl_alt1;
-sub zero by zero.alt02;
-sub germandbls by germandbls.alt01;

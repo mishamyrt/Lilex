@@ -1,0 +1,17 @@
+feature frac;
+feature locl;
+feature numr;
+feature ordn;
+feature sinf;
+feature ss01;
+feature sups;
+# feature zero; Ignore zero because cv02 will be used
+feature cv01;
+feature cv02;
+feature cv03;
+feature cv04;
+feature cv05;
+feature calt;
+feature subs;
+feature dnom;
+feature case;

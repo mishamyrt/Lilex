@@ -201,20 +201,18 @@ code = "feature frac;
 feature locl;
 feature numr;
 feature ordn;
-feature salt;
 feature sinf;
 feature ss01;
-feature ss02;
-feature ss03;
-feature ss04;
-feature ss05;
-feature ss06;
 feature sups;
-feature zero;
+# feature zero; Ignore zero because cv02 will be used
+feature cv01;
+feature cv02;
+feature cv03;
+feature cv04;
+feature cv05;
 feature calt;
 feature subs;
 feature dnom;
-feature ss07;
 feature case;
 ";
 tag = aalt;
@@ -391,65 +389,11 @@ tag = ordn;
 notes = "Name: Ordinals";
 },
 {
-code = "# Name: Stylistic alternates - all stylistic sets combined
-sub @lca_dflt by @lca_alt1;
-sub @lcg_dflt by @lcg_alt1;
-sub @lca_cyrl_dflt by @lca_cyrl_alt1;
-sub zero by zero.alt02;
-sub germandbls by germandbls.alt01;
-";
-tag = salt;
-notes = "Name: Stylistic alternates - all stylistic sets combined";
-},
-{
 code = "# Name: Scientific inferiors
 sub @numbers_dflt by @numbers_sinf;
 ";
 tag = sinf;
 notes = "Name: Scientific inferiors";
-},
-{
-code = "# Name: Simple lowercase a
-sub @lca_dflt by @lca_alt1;
-sub @lca_cyrl_dflt by @lca_cyrl_alt1;
-";
-tag = ss01;
-notes = "Name: Simple lowercase a";
-},
-{
-code = "# Name: Simple lowercase g
-sub @lcg_dflt by @lcg_alt1;
-";
-tag = ss02;
-notes = "Name: Simple lowercase g";
-},
-{
-code = "# Name: Slashed number zero
-sub zero by zero.alt01;
-";
-tag = ss03;
-notes = "Name: Slashed number zero";
-},
-{
-code = "# Name: Plain number zero
-sub zero by zero.alt02;
-";
-tag = ss04;
-notes = "Name: Plain number zero";
-},
-{
-code = "# Name: Alternate lowercase eszett
-sub germandbls by germandbls.alt01;
-";
-tag = ss05;
-notes = "Name: Alternate lowercase eszett";
-},
-{
-code = "# Name: ~Original tilda~
-sub asciitilde by asciitilde.original;
-";
-tag = ss06;
-notes = "Name: ~Original tilda~";
 },
 {
 code = "# Name: Superiors
@@ -464,6 +408,134 @@ sub zero by zero.alt01;
 ";
 tag = zero;
 notes = "Name: Slashed zero";
+},
+{
+automatic = 1;
+code = "sub zero by zeroinferior;
+sub one by oneinferior;
+sub two by twoinferior;
+sub three by threeinferior;
+sub four by fourinferior;
+sub five by fiveinferior;
+sub six by sixinferior;
+sub seven by seveninferior;
+sub eight by eightinferior;
+sub nine by nineinferior;
+";
+tag = subs;
+},
+{
+automatic = 1;
+code = "sub zero by zero.dnom;
+sub one by one.dnom;
+sub two by two.dnom;
+sub three by three.dnom;
+sub four by four.dnom;
+sub five by five.dnom;
+sub six by six.dnom;
+sub seven by seven.dnom;
+sub eight by eight.dnom;
+sub nine by nine.dnom;
+";
+tag = dnom;
+},
+{
+code = "# Name: Form cases
+sub dieresis by dieresis.case;
+sub dotaccent by dotaccent.case;
+sub grave by grave.case;
+sub acute by acute.case;
+sub hungarumlaut by hungarumlaut.case;
+sub circumflex by circumflex.case;
+sub caron by caron.case;
+sub breve by breve.case;
+sub ring by ring.case;
+sub tilde by tilde.case;
+sub macron by macron.case;
+sub tilde.alt01 by tilde.alt01.case;
+sub breveacute by breveacute.case;
+sub brevegrave by brevegrave.case;
+sub brevehook by brevehook.case;
+sub brevetilde by brevetilde.case;
+sub circumflexacute by circumflexacute.case;
+sub circumflexbreve by circumflexbreve.case;
+sub circumflexgrave by circumflexgrave.case;
+sub circumflexhook by circumflexhook.case;
+sub circumflextilde by circumflextilde.case;
+sub dieresisacute by dieresisacute.case;
+sub dieresiscaron by dieresiscaron.case;
+sub dieresisgrave by dieresisgrave.case;
+sub dieresismacron by dieresismacron.case;
+sub hookcomb by hookcomb.case;
+sub ringacute by ringacute.case;";
+tag = case;
+notes = "Name: Form cases";
+},
+{
+code = "";
+disabled = 1;
+tag = liga;
+},
+{
+code = "# Name: ~Original tilda~
+sub asciitilde by asciitilde.original;
+";
+tag = cv05;
+notes = "Name: ~Original tilda~";
+},
+{
+code = "# Name: Alternate lowercase eszett
+sub germandbls by germandbls.alt01;
+";
+tag = cv04;
+notes = "Name: Alternate lowercase eszett";
+},
+{
+code = "# Name: Restore <<= >>= ||= |= as arrows
+lookup restore_greater_greater_equal {
+  sub greater_greater_equal_start.seq equal' by equal_end.seq;
+  sub greater_greater.liga' equal by greater_greater_equal_start.seq;
+} restore_greater_greater_equal;
+
+lookup restore_less_less_equal {
+  sub less_less_equal_start.seq equal' by equal_end.seq;
+  sub less_less.liga' equal by less_less_equal_start.seq;
+} restore_less_less_equal;
+
+lookup restore_bar_bar_equal {
+  sub bar_bar_equal_start.seq equal' by equal_end.seq;
+  sub bar_bar.liga' equal by bar_bar_equal_start.seq;
+} restore_bar_bar_equal;
+
+lookup restore_bar_equal {
+  sub bar_equal_start.seq equal' by equal_end.seq;
+  sub bar' equal by bar_equal_start.seq;
+} restore_bar_equal;
+";
+tag = ss01;
+notes = "Name: Restore <<= >>= ||= |= as arrows";
+},
+{
+code = "# Name: Simple lowercase a
+sub @lca_dflt by @lca_alt1;
+sub @lca_cyrl_dflt by @lca_cyrl_alt1;
+";
+tag = cv01;
+notes = "Name: Simple lowercase a";
+},
+{
+code = "# Name: Plain number zero
+sub zero by zero.alt02;
+";
+tag = cv03;
+notes = "Name: Plain number zero";
+},
+{
+code = "# Name: Simple lowercase g
+sub @lcg_dflt by @lcg_alt1;
+";
+tag = cv02;
+notes = "Name: Simple lowercase g";
 },
 {
 code = "lookup less_bar_greater { 
@@ -1109,97 +1181,6 @@ lookup hyphen_arrows {
 
 ";
 tag = calt;
-},
-{
-automatic = 1;
-code = "sub zero by zeroinferior;
-sub one by oneinferior;
-sub two by twoinferior;
-sub three by threeinferior;
-sub four by fourinferior;
-sub five by fiveinferior;
-sub six by sixinferior;
-sub seven by seveninferior;
-sub eight by eightinferior;
-sub nine by nineinferior;
-";
-tag = subs;
-},
-{
-automatic = 1;
-code = "sub zero by zero.dnom;
-sub one by one.dnom;
-sub two by two.dnom;
-sub three by three.dnom;
-sub four by four.dnom;
-sub five by five.dnom;
-sub six by six.dnom;
-sub seven by seven.dnom;
-sub eight by eight.dnom;
-sub nine by nine.dnom;
-";
-tag = dnom;
-},
-{
-code = "# Name: Form cases
-sub dieresis by dieresis.case;
-sub dotaccent by dotaccent.case;
-sub grave by grave.case;
-sub acute by acute.case;
-sub hungarumlaut by hungarumlaut.case;
-sub circumflex by circumflex.case;
-sub caron by caron.case;
-sub breve by breve.case;
-sub ring by ring.case;
-sub tilde by tilde.case;
-sub macron by macron.case;
-sub tilde.alt01 by tilde.alt01.case;
-sub breveacute by breveacute.case;
-sub brevegrave by brevegrave.case;
-sub brevehook by brevehook.case;
-sub brevetilde by brevetilde.case;
-sub circumflexacute by circumflexacute.case;
-sub circumflexbreve by circumflexbreve.case;
-sub circumflexgrave by circumflexgrave.case;
-sub circumflexhook by circumflexhook.case;
-sub circumflextilde by circumflextilde.case;
-sub dieresisacute by dieresisacute.case;
-sub dieresiscaron by dieresiscaron.case;
-sub dieresisgrave by dieresisgrave.case;
-sub dieresismacron by dieresismacron.case;
-sub hookcomb by hookcomb.case;
-sub ringacute by ringacute.case;";
-tag = case;
-notes = "Name: Form cases";
-},
-{
-code = "";
-disabled = 1;
-tag = liga;
-},
-{
-code = "# Name: Restore <<= >>= ||= |= as arrows
-lookup restore_greater_greater_equal {
-  sub greater_greater_equal_start.seq equal' by equal_end.seq;
-  sub greater_greater.liga' equal by greater_greater_equal_start.seq;
-} restore_greater_greater_equal;
-
-lookup restore_less_less_equal {
-  sub less_less_equal_start.seq equal' by equal_end.seq;
-  sub less_less.liga' equal by less_less_equal_start.seq;
-} restore_less_less_equal;
-
-lookup restore_bar_bar_equal {
-  sub bar_bar_equal_start.seq equal' by equal_end.seq;
-  sub bar_bar.liga' equal by bar_bar_equal_start.seq;
-} restore_bar_bar_equal;
-
-lookup restore_bar_equal {
-  sub bar_equal_start.seq equal' by equal_end.seq;
-  sub bar' equal by bar_equal_start.seq;
-} restore_bar_equal;";
-tag = ss07;
-notes = "Name: Restore <<= >>= ||= |= as arrows";
 }
 );
 fontMaster = (
