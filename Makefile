@@ -27,7 +27,6 @@ configure_preview: preview/*.yaml preview/*.json
 
 .PHONY: check
 check:
-	$(call check_font,"otf")
 	$(call check_font,"ttf")
 	$(call check_font,"variable")
 
@@ -84,11 +83,11 @@ install:
 
 install_Darwin:
 	rm -rf ~/Library/Fonts/Lilex
-	cp -r build/otf ~/Library/Fonts/Lilex
+	cp -r build/ttf ~/Library/Fonts/Lilex
 
 install_Linux:
-	mkdir -p ~/.fonts
 	rm -rf ~/.fonts/Lilex
+	cp -r build/ttf ~/.fonts/Lilex
 
 $(VENV_DIR): requirements.txt
 	rm -rf "$(VENV_DIR)"
