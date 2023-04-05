@@ -1,10 +1,6 @@
 {
 .appVersion = "3134";
 .formatVersion = 3;
-DisplayStrings = (
-"і",
-"̦"
-);
 axes = (
 {
 name = Weight;
@@ -169,6 +165,20 @@ value = (
 0,
 0
 );
+},
+{
+name = "Axis Mappings";
+value = {
+wght = {
+"100" = 100;
+"200" = 200;
+"300" = 300;
+"400" = 400;
+"500" = 500;
+"600" = 600;
+"700" = 700;
+};
+};
 }
 );
 date = "2023-03-22 17:19:30 +0000";
@@ -917,7 +927,7 @@ lookup comb_comb {
     sub dieresiscomb caroncomb by dieresiscaron;
     sub dieresiscomb gravecomb by dieresisgrave;
     sub dieresiscomb macroncomb by dieresismacron;
-} nonContextSubs;
+} comb_comb;
 
 lookup letter_comb {
     sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
@@ -931,7 +941,7 @@ lookup letter_comb {
     sub j' @acc_comb_top by dotlessj;
     sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
-} contextSubs;
+} letter_comb;
 
 
 # Generative underscore ligature

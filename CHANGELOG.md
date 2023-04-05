@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 * Long `----` and `====` are no longer breaking in iTerm2
 * Metrics (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`, `panose`)
 * Width of some glyphs
+* `fsSelection` and `macStyle`
 
 ## Removed
 
