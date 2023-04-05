@@ -72,7 +72,7 @@ class GlyphsFont:
             else:
                 self._font.features.append(fea)
 
-    def build(self, formats: List[str], out_dir: str) -> bool:
+    def build(self, formats: List[str], out_dir: str, store_temp=False) -> bool:
         print("Writing temporary .glyphs file")
         temp_dir = mkdtemp(prefix="LilexBuild")
         glyphs_path = f'{temp_dir}/{self._font.familyName}.glyphs'
@@ -88,5 +88,8 @@ class GlyphsFont:
                 break
             fmt_dir = f'{out_dir}/{fmt}'
             success = success and make(self.file.familyName, ds_path, fmt, fmt_dir)
-        rmtree(temp_dir)
+        if store_temp:
+            print(f'Build directory: {temp_dir}')
+        else:
+            rmtree(temp_dir)
         return success

@@ -38,11 +38,13 @@ def generate(args, font: GlyphsFont):
     print("☺️ Font source successfully regenerated")
 
 @command(
-    arg("formats", nargs="*", help="Format list", default=DEFAULT_FORMATS)
+    arg("formats", nargs="*", help="Format list", default=DEFAULT_FORMATS),
+    arg("--store_temp", "-s", action=BooleanOptionalAction,
+        help="Not to delete the temporary folder after build")
 )
 def build(args, font: GlyphsFont):
     """Builds a binary font file"""
-    if font.build(args.formats, OUT_DIR):
+    if font.build(args.formats, OUT_DIR, args.store_temp):
         print("☺️ Font binaries successfully builded")
     else:
         print("💔 Failed to build font binaries")
