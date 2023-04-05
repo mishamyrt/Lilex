@@ -20,7 +20,9 @@ jobs:
         make configure
 
     - name: Build
-      run: make bundle
+      run: |
+        make bundle
+        rm bundle/Lilex.zip
 
     - name: Upload bundle
       uses: actions/upload-artifact@v3
