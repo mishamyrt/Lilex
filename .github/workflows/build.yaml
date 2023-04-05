@@ -19,11 +19,11 @@ jobs:
         sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev -y
         make configure
 
-    - name: Build Lilex
-      run: make build
+    - name: Build
+      run: make bundle
 
-    - name: Upload results
+    - name: Upload bundle
       uses: actions/upload-artifact@v3
       with:
         name: Lilex
-        path: build/
+        path: bundle/
