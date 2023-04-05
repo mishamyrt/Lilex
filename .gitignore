@@ -6,3 +6,4 @@
 /generator/__pycache__
 .ruff_cache
 reports/
+bundle/

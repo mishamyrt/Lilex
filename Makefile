@@ -1,6 +1,7 @@
 VENV_DIR = ./venv
 VENV = . $(VENV_DIR)/bin/activate;
 
+BUNDLE_DIR = bundle
 BUILD_DIR = build
 REPORTS_DIR = reports
 GLYPHS_FILE = Lilex.glyphs
@@ -27,7 +28,7 @@ configure_preview: preview/*.yaml preview/*.json
 
 .PHONY: check
 check:
-	rm -rf "$(REPORTS_DIR)"
+	make clean_reports
 	mkdir "$(REPORTS_DIR)"
 	$(call check_font,"ttf")
 	$(call check_font,"variable")
@@ -47,6 +48,7 @@ generate:
 
 .PHONY: build
 build:
+	make clean_build
 	$(call build_font)
 
 .PHONY: build_preview
@@ -59,14 +61,28 @@ run_preview:
 
 .PHONY: bundle
 bundle:
-	make clean
 	make build
-	cd "$(BUILD_DIR)"; zip -r Lilex.zip ./*
+	make check
+	rm -rf "$(BUNDLE_DIR)"
+	mkdir "$(BUNDLE_DIR)"
+# Copy fonts
+	cp -r "$(BUILD_DIR)/"* "$(BUNDLE_DIR)/"
+# Copy reports
+	cp "$(REPORTS_DIR)/"* "$(BUNDLE_DIR)/"
+	cd "$(BUNDLE_DIR)"; zip -r Lilex.zip ./*
 
 .PHONY: clean
 clean:
-	rm -rf "$(REPORTS_DIR)"
+	make clean_build
+	make clean_reports
+
+.PHONY: clean_build
+clean_build:
 	rm -rf "$(BUILD_DIR)"
+
+.PHONY: clean_reports
+clean_reports:
+	rm -rf "$(REPORTS_DIR)"
 
 .PHONY: ttf
 ttf:
