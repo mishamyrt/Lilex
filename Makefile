@@ -101,7 +101,7 @@ install:
 
 install_Darwin:
 	rm -rf ~/Library/Fonts/Lilex
-	cp -r build/ttf ~/Library/Fonts/Lilex
+	cp -r build/variable ~/Library/Fonts/Lilex
 
 install_Linux:
 	rm -rf ~/.fonts/Lilex
