@@ -15,7 +15,7 @@ endef
 define check_font
 	$(VENV) fontbakery check-universal \
 		--auto-jobs \
-		--ghmarkdown "$(REPORTS_DIR)/universal_$(1).md" \
+		--html "$(REPORTS_DIR)/universal_$(1).html" \
 		"$(BUILD_DIR)/$(1)/"*
 endef
 
