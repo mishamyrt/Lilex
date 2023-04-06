@@ -64,31 +64,27 @@ IGNORES = {
     ("bar", "bracketright"): [
         "bracketleft bar' bracketright"
     ],
-    # <*>>> <+>>> <$>>>
+    # <*>>> <+>>> <$>>> >>->> >>=>> >>=
     ("greater", "greater"): [
-        "[asterisk plus dollar] greater' greater"
+        "[asterisk plus dollar] greater' greater",
+        "[hyphen equal] greater' greater",
+        "greater' greater hyphen",
+        "greater' greater equal [equal less greater bar colon exclam slash]",
     ],
     # <*>>> <+>>> <$>>>
     ("greater", "greater", "greater"): [
         "[asterisk plus dollar] greater' greater greater"
     ],
-    # <<*> <<+> <<$>
+    # <<*> <<+> <<$> <<-<< <<=<< <<=
     ("less", "less"): [
-        "less' less [asterisk plus dollar]"
+        "less' less [asterisk plus dollar]",
+        "[hyphen equal] less' less",
+        "less' less hyphen",
+        "less' less equal [equal less greater bar colon exclam slash]",
     ],
     # <<<*> <<<+> <<<$>
     ("less", "less", "less"): [
         "less' less less [asterisk plus dollar]"
-    ],
-    # [==[ ]==]     [== ==]
-    ("equal", "equal"): [
-        "bracketleft equal' equal",
-        "equal' equal bracketright"
-    ],
-    # [===[ ]===]     [=== ===]
-    ("equal", "equal", "equal"): [
-        "bracketleft equal' equal equal",
-        "equal' equal equal bracketright"
     ],
     # =:=
     ("colon", "equal"): [
@@ -110,19 +106,7 @@ IGNORES = {
     # >=< =>= >=> >=< >=| >=: >=! >=/
     ("greater", "equal"): [
         "equal greater' equal",
-        "less' greater' equal [less greater bar colon exclam slash]",
-    ],
-    # >>->> >>=>> >>=
-    ("greater", "greater"): [
-        "[hyphen equal] greater' greater",
-        "greater' greater hyphen",
-        "greater' greater equal [equal less greater bar colon exclam slash]",
-    ],
-    # <<-<< <<=<< <<=
-    ("less", "less"): [
-        "[hyphen equal] less' less",
-        "less' less hyphen",
-        "less' less equal [equal less greater bar colon exclam slash]",
+        "greater' equal [less greater bar colon exclam slash]",
     ],
     # ||-|| ||=|| ||=
     ("bar", "bar"): [
@@ -140,15 +124,19 @@ IGNORES = {
         "[less greater bar] hyphen' hyphen",
         "hyphen' hyphen [less greater bar]",
     ],
-    # <==> >==< |==| /==/ =:== =!== ==:= ==!=
+    # <==> >==< |==| /==/ =:== =!== ==:= ==!= [==[ ]==] [== ==]
     ("equal", "equal"): [
+        "bracketleft equal' equal",
+        "equal' equal bracketright",
         "equal [colon exclam] equal' equal",
         "[less greater bar slash] equal' equal",
         "equal' equal [less greater bar slash]",
         "equal' equal [colon exclam] equal",
     ],
-    # <===> >===< |===| /===/ =:=== =!=== ===:= ===!=
+    # <===> >===< |===| /===/ =:=== =!=== ===:= ===!= [===[ ]===] [=== ===]
     ("equal", "equal", "equal"): [
+        "bracketleft equal' equal equal",
+        "equal' equal equal bracketright",
         "equal [colon exclam] equal' equal equal",
         "[less greater bar slash] equal' equal equal",
         "equal' equal equal [less greater bar slash]",

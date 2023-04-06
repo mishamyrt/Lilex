@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 * Metrics (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`, `panose`)
 * Width of some glyphs
 * `fsSelection` and `macStyle`
+* `=<<`
 
 ## Removed
 

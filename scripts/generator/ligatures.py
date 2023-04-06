@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import List
 
-from .const import IGNORE_PREFIXES, IGNORE_TPL, IGNORES, PRIORITIES, REPLACE_TPL
+from .const import IGNORE_TPL, IGNORES, PRIORITIES, REPLACE_TPL, SKIP_IGNORES
 
 
 def _populate_tpl(templates: List[str], prefix: str) -> str:
@@ -46,11 +46,11 @@ class LigatureLookup:
 
     def __str__(self) -> str:
         count = len(self.glyphs)
-        template = f"lookup {self.name}" + " { \n"
+        template = f"lookup {self.name}" + " {\n"
+        if self.name not in SKIP_IGNORES:
+            template += _populate_ignore(IGNORE_TPL[count])
         if self.glyphs in IGNORES:
             template += _populate_ignore(IGNORES[self.glyphs])
-        if self.name not in IGNORE_PREFIXES:
-            template += _populate_ignore(IGNORE_TPL[count])
         template += _populate_sub(REPLACE_TPL[count])
         template += "} " + f"{self.name};"
         return self._hydrate(template)
@@ -69,5 +69,5 @@ def render_ligatures(items: List[str]) -> str:
     lookups.sort(key=lambda x: (x.priority, -len(x.glyphs), x.name))
     code = ""
     for lookup in lookups:
-        code += f"{lookup}\n"
+        code += f"{lookup}\n\n"
     return code.rstrip()
