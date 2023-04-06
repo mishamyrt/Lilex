@@ -1,6 +1,7 @@
 """Ligatures feature generator module"""
 from __future__ import annotations
 
+from re import sub
 from typing import List
 
 from .const import IGNORE_TPL, IGNORES, PRIORITIES, REPLACE_TPL, SKIP_IGNORES
@@ -47,7 +48,7 @@ class LigatureLookup:
     def __str__(self) -> str:
         count = len(self.glyphs)
         template = f"lookup {self.name}" + " {\n"
-        if self.name not in SKIP_IGNORES:
+        if self.glyphs not in SKIP_IGNORES:
             template += _populate_ignore(IGNORE_TPL[count])
         if self.glyphs in IGNORES:
             template += _populate_ignore(IGNORES[self.glyphs])
