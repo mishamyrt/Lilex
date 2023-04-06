@@ -17,7 +17,7 @@ function lnFontDir (format: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
-  lnFontDir('otf')
+  lnFontDir('ttf')
   lnFontDir('variable')
   return {
     base: '',
