@@ -1,8 +1,9 @@
 import type { Font } from 'opentype.js'
 
-interface Glyph {
+export interface Glyph {
   name: string
-  svg: string
+  svg: string,
+  unicode?: number
 }
 
 export function renderGlyphs (font: Font) {
@@ -17,13 +18,12 @@ export function renderGlyphs (font: Font) {
 
     svgNode.innerHTML = path.toSVG(10)
 
-    console.log(glyph.name, path.getBoundingBox())
-
     const pathNode = svgNode.children[0] as SVGPathElement
     pathNode.style.transform = 'translate(32px, 90px)'
     glyphs.push({
       name: glyph.name,
-      svg: parentNode.innerHTML
+      svg: parentNode.innerHTML,
+      unicode: glyph.unicode
     })
   }
   return glyphs

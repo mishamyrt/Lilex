@@ -2,6 +2,7 @@
   import { load, Font } from 'opentype.js'
   import { onMount } from 'svelte'
   import { renderGlyphs } from '../utils/glyphs'
+  import type { Glyph } from '../utils/glyphs'
   import RangeSlider from '../components/RangeSlider.svelte'
   import Toolbar from '../components/Toolbar.svelte'
 
@@ -29,6 +30,13 @@
   function handleHover (e: MouseEvent) {
     (e.target as HTMLDivElement).classList.add('hover')
     hovered = true
+  }
+
+  function handleClick (glyph: Glyph) {
+    if (glyph.unicode === undefined) {
+      return
+    }
+    navigator.clipboard.writeText(String.fromCharCode(glyph.unicode))
   }
 
   function handleLeave (e: MouseEvent) {
@@ -66,7 +74,13 @@
     class="glyphs"
     class:hover={hovered}>
     {#each glyphs as glyph}
-      <div on:mouseenter={handleHover} on:mouseleave={handleLeave} class="glyph-container">
+      <div
+        on:click={() => handleClick(glyph)}
+        on:keypress={() => handleClick(glyph)}
+        on:mouseenter={handleHover}
+        on:mouseleave={handleLeave}
+        class:clickable={glyph.unicode !== undefined}
+        class="glyph-container">
         <div class="glyph-path">
           {@html glyph.svg}
         </div>
@@ -147,6 +161,10 @@
     border-radius: 4px;
     transition: opacity .3s ease-out;
     overflow: hidden;
+  }
+
+  .glyph-container.clickable {
+    cursor: pointer;
   }
 
   .glyphs .glyph-container:hover {
