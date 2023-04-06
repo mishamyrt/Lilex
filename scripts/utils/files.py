@@ -16,7 +16,7 @@ def list_files(dir_path: str) -> List[str]:
         file_path = join(dir_path, file)
         if isfile(file_path) and not file.startswith('.'):
             files.append(file_path)
-    return files
+    return sorted(files)
 
 def read_classes(dir_path: str) -> List[GSClass]:
     classes = []
