@@ -23,7 +23,11 @@ global_args(
 
 @command(
     arg("--output", "-o", default=FONT_FILE, help="Output file"),
-    arg("--params", "-p", action=BooleanOptionalAction, help="Clear masters custom parameters")
+    arg("--params", "-p", action=BooleanOptionalAction, help="Clear masters custom parameters"),
+    arg("--calt_dump", "-c", action=BooleanOptionalAction,
+        help="Save the resulting calt code to file (debugging)"),
+    arg("--dry_run", "-d", action=BooleanOptionalAction,
+        help="Only run code without actually updating source file (debugging)")
 )
 def generate(args, font: GlyphsFont):
     """Saves the generated source file with features and classes"""
@@ -34,7 +38,11 @@ def generate(args, font: GlyphsFont):
                 names.append(param.name)
             for name in names:
                 del master.customParameters[name]
-    font.save_to(args.output)
+    if not args.dry_run:
+        font.save_to(args.output)
+    if args.calt_dump:
+        with open("calt.fea", mode="w", encoding="utf-8") as file:
+            file.write(font.file.features["calt"].code)
     print("☺️ Font source successfully regenerated")
 
 @command(
