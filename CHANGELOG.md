@@ -5,12 +5,12 @@ All notable changes to this project will be documented in this file.
 
 ## Fixed
 
-* Long `----` and `====` are no longer breaking in iTerm2
-* Metrics (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`, `panose`)
-* Width of some glyphs
-* `fsSelection` and `macStyle`
-* Arrows with `ss01`
-* `||` distance in arrows
+* Long `----` and `====` are no longer breaking in iTerm2.
+* Metrics (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`, `panose`).
+* Width of some glyphs.
+* `fsSelection` and `macStyle`.
+* Arrows with `ss01`.
+* `||` distance in arrows.
 
 ## Removed
 
@@ -19,20 +19,21 @@ All notable changes to this project will be documented in this file.
 
 ## Added
 
-* `..=`, `#=`, `+=`, `^=`, `..<`, `#?`, 
-* `:::`, `;;`, `%%`, `>>>`, `<<<`, `+++`, `??`
-* `<>`, `|>`, `<|`, `<+>`, `||>`, `<||`, `|||`
-* `<$`, `$>`, `<$>`
-* Generated bar-underscores `_|_|_`
-* Powerline support (`uniE0A0`, `uniE0A2`, `uniE0B0`, `uniE0B1`, `uniE0B2`, `uniE0B3`)
-* ExtraThick weight (Read [commit](https://github.com/mishamyrt/Lilex/commit/fe983370a278eca78a27434f2ddbf75e8505e8ed) message)
+* `..=`, `#=`, `+=`, `^=`, `..<`, `#?`.
+* `:::`, `;;`, `%%`, `>>>`, `<<<`, `+++`, `??`.
+* `<>`, `|>`, `<|`, `<+>`, `||>`, `<||`, `|||`.
+* `<$`, `$>`, `<$>`.
+* Generated bar-underscores `_|_|_`.
+* Powerline support (`uniE0A0`, `uniE0A2`, `uniE0B0`, `uniE0B1`, `uniE0B2`, `uniE0B3`).
+* ExtraThick weight (Read [commit](https://github.com/mishamyrt/Lilex/commit/fe983370a278eca78a27434f2ddbf75e8505e8ed) message).
 * Fontbakery reports to bundle.
+* `ss02` for gap in equals (`==`, `!=`, `===`, `!==`).
 
 ## [2.100] — April 2, 2023
 
 ## Fixed
 
-* `044B` (`ы`), `042B` (`Ы`) point order (In 400-700 the scaling was broken)
+* `044B` (`ы`), `042B` (`Ы`) point order (In 400-700 the scaling was broken).
 
 ## Added
 
