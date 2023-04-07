@@ -10,7 +10,7 @@
         value: 300
       - name: Regular
         value: 400
-      - name: Retina
+      - name: ExtraThick
         value: 450
       - name: Medium
         value: 500
