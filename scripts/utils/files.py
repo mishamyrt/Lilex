@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from os import listdir
-from os.path import basename, isfile, join
+from os.path import basename, isfile, join, splitext
 from re import search
 from typing import List, TypeVar
 
@@ -13,6 +13,10 @@ T = TypeVar("T")
 def list_files(dir_path: str) -> List[str]:
     files = []
     for file in listdir(dir_path):
+        name = splitext(file)[0]
+        if splitext(file)[0].endswith(".disabled"):
+            print(f'WARN: "{splitext(name)[0]}" is ignored')
+            continue
         file_path = join(dir_path, file)
         if isfile(file_path) and not file.startswith('.'):
             files.append(file_path)

@@ -30,3 +30,4 @@ lookup letter_comb {
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
 } letter_comb;
 
+# dotlessj+ringcomb=jring
