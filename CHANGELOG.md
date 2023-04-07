@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * Width of some glyphs
 * `fsSelection` and `macStyle`
 * Arrows with `ss01`
+* `||` distance in arrows
 
 ## Removed
 
