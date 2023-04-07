@@ -11,7 +11,8 @@ def _populate_tpl(templates: List[str], prefix: str) -> str:
     """Renders fea statements"""
     result = ""
     for value in templates:
-        result += f"  {prefix} {value};\n"
+        normalized_value = sub(" +", " ", value)
+        result += f'  {prefix} {normalized_value};\n'
     return result
 
 def _populate_ignore(templates: List[str]) -> str:
