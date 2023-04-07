@@ -1,2 +1,2 @@
-# Name: Alternate lowercase eszett
-sub germandbls by germandbls.alt01;
+# Name: Plain number zero
+sub zero by zero.alt02;
