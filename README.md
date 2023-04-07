@@ -1,68 +1,106 @@
 <p align="center">
     <img
-        src="./showcases/logo@2x.png"
-        alt="Lilex logo"
-        width="464px">
+        src="./images/main@2x.png"
+        alt="Lilex. The font for developers."
+        width="362px">
 <p>
+
+[![Build](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml/badge.svg)](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml)
 
 Lilex is the modern programming font containing a set of ligatures for common programming multi-character combinations.
 
-This is just a font rendering feature: underlying code remains ASCII-compatible. This helps to read and understand code faster. For some frequent sequences like `..` or `//`, ligatures allow us to correct spacing like kerning pairs.
+This is just a font rendering feature: underlying code remains ASCII-compatible. This makes it easier to read and understand the code. In some cases, the ligatures connect closely related characters (`==`, `---`), while in others they optically align the glyphs (`..`, `??`).
 
-Compiled versions are available under [releases](https://github.com/mishamyrt/Lilex/releases).
+Compiled versions are available under [releases](https://github.com/mishamyrt/Lilex/releases). Bleeding edge builds can be downloaded in the [build](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml) workflow artifacts.
 
-## Examples
+## Installation
 
-### JavaScript (JSX)
+1. [Download font](https://github.com/mishamyrt/Lilex/releases/latest).
+2. Unzip the archive and install the font:
+    * Mac: Select `Lilex-VF.ttf` in the `variable` folder and double-click it. Click the `Install Font` button.
+    * Windows: Select all font files in the `ttf` folder, right-click any of them, then pick `Install` from the menu.
 
-<img src="./showcases/js@2x.png">
+### Visual Studio Code
 
-### PHP
+1. From the `Code` menu (`File` on Windows)  go to `Preferences` → `Settings`, or use keyboard shortcut <kbd>⌘</kbd>+<kbd>,</kbd> (<kbd>Ctrl</kbd>+<kbd>,</kbd> on Windows).
+2. In the `Editor: Font Family` input box type `Lilex`.
+3. To enable ligatures, go to `Editor: Font Ligatures`, click `Edit in settings.json`, and copy `"editor.fontLigatures": true` into file.
 
-<img src="./showcases/php@2x.png">
+### iTerm2
+1. From the `iTerm2` menu go to `Settings`. Under `Profiles`, find the `Text` tab.
+2. If you have more than one profile, select the one you want to change. Or change the default one (with an asterisk).
+3. Click on the font name under the 'Font' heading, find `Lilex` and select it.
 
-### Go
+> **Note** I recommend using ExtraThick instead of Regular for iTerm2, so the letter thickness will roughly match VS Code.
 
-<img src="./showcases/go@2x.png">
+## Weight
 
-### C
+There are 6 font weights available in Lilex, ranging from Thin to Bold. In addition, a variation font is available.
 
-<img src="./showcases/c@2x.png">
+<img src="./images/styles@2x.png">
 
-## Stylistic sets
+## Character Set
 
-Additional features are available in the font, which are disabled by default.
+The font has support for Latin, Cyrillic and Greek. It also includes ligatures and powerline symbols.
 
-<img src="./showcases/stylistic@2x.png">
+<img src="./images/character-set@2x.png">
 
-## Setup
+A full glyph table can be found on the [preview page](https://mishamyrt.github.io/Lilex/).
 
+## Features
 
-At the moment building is possible on Ubuntu and macOS. First, install the build dependencies.
+The font has additional styles for some characters, so it can be configured to better fit your needs. Instructions on how to activate OpenType features in your IDE can be found on the internet, or [build your own variation](#forced-feature-activation) of the font with forced features
 
-### macOS
+<img src="./images/alternatives@2x.png">
+
+Some ligatures also have additional options. For example, certain arrows are initially switched off to avoid conflicts with logical operations.
+
+<img src="./images/alt_ligatures@2x.png">
+
+### Arrows
+
+Lilex uses generated ligatures for arrows, so they can be infinite. Combine that to assemble your unique arrows.
+
+There is also a full set of single-character arrows (`↑`, `↓`, etc.) in the font.
+
+<img src="./images/arrows@2x.png">
+
+## Build
+
+### Setup
+
+At the moment building is possible on Ubuntu and macOS. First, install the system dependencies.
+
+#### macOS
 
 ```sh
 brew install cairo freetype harfbuzz pkg-config
 ```
 
-### Ubuntu
+#### Ubuntu
 
 ```sh
 sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev
 ```
 
-### Common
+#### Common
 
-And then setup virtual environment:
+Clone the repository and navigate to the project folder:
+
+```
+git clone https://github.com/mishamyrt/Lilex
+cd Lilex
+```
+
+And then setup python virtual environment:
 
 ```sh
 make configure
 ```
 
-## Build
+### Compile
 
-Now run the command to build it.
+Now run the command to build Lilex.
 
 ```sh
 make build
@@ -76,18 +114,12 @@ or
 
 ### Forced feature activation
 
-The builder gives you the ability to forcibly enable any font features. This works by moving their code to the calt. If ligatures work, the selected features will also work.
+The builder gives you the ability to forcibly enable any font features. This works by moving their code to the calt. If the ligatures work, the selected features will also work.
 
-To do this, regenerate the source file with the features:
-
-```sh
-./scripts/lilex.py --features 'sups,zero' generate -o Lilex.custom.glyphs
-```
-
-And then build the binaries from the new source:
+To do this, build the binaries from the source file with the features:
 
 ```sh
-./scripts/lilex.py -i Lilex.custom.glyphs build
+./scripts/lilex.py --features 'ss01,zero' build
 ```
 
 ## Credits
