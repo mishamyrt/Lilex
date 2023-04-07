@@ -34,6 +34,7 @@ All notable changes to this project will be documented in this file.
 ## Fixed
 
 * `044B` (`ы`), `042B` (`Ы`) point order (In 400-700 the scaling was broken).
+* Updated the clock arrows (`↺`, `↻`) to make them round. The original arrows are available in `cv07`.
 
 ## Added
 
