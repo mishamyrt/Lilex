@@ -1,6 +1,9 @@
 {
 .appVersion = "3151";
 .formatVersion = 3;
+DisplayStrings = (
+"/colon.valign_eq"
+);
 axes = (
 {
 name = Weight;
@@ -170,13 +173,13 @@ value = (
 name = "Axis Mappings";
 value = {
 wght = {
-100 = 100;
-200 = 200;
-300 = 300;
-400 = 400;
-500 = 500;
-600 = 600;
-700 = 700;
+"100" = 100;
+"200" = 200;
+"300" = 300;
+"400" = 400;
+"500" = 500;
+"600" = 600;
+"700" = 700;
 };
 };
 }
@@ -198,177 +201,177 @@ name = Languagesystems;
 features = (
 {
 code = "lookup less_bar_greater {
- ignore sub less less' bar greater;
- ignore sub less' bar greater greater;
+  ignore sub less less' bar greater;
+  ignore sub less' bar greater greater;
   sub less.spacer bar.spacer greater' by less_bar_greater.liga;
-  sub less.spacer bar'       greater  by bar.spacer;
-  sub less'       bar        greater  by less.spacer;
+  sub less.spacer bar' greater by bar.spacer;
+  sub less' bar greater by less.spacer;
 } less_bar_greater;
 
 lookup bar_bar_bar_greater {
- ignore sub bar bar' bar bar greater;
- ignore sub bar' bar bar greater greater;
+  ignore sub bar bar' bar bar greater;
+  ignore sub bar' bar bar greater greater;
   sub bar.spacer bar.spacer bar.spacer greater' by bar_bar_bar_greater.liga;
-  sub bar.spacer bar.spacer bar'       greater  by bar.spacer;
-  sub bar.spacer bar'       bar        greater  by bar.spacer;
-  sub bar'       bar        bar        greater  by bar.spacer;
+  sub bar.spacer bar.spacer bar' greater by bar.spacer;
+  sub bar.spacer bar' bar greater by bar.spacer;
+  sub bar' bar bar greater by bar.spacer;
 } bar_bar_bar_greater;
 
 lookup less_bar_bar_bar {
- ignore sub less less' bar bar bar;
- ignore sub less' bar bar bar bar;
+  ignore sub less less' bar bar bar;
+  ignore sub less' bar bar bar bar;
   sub less.spacer bar.spacer bar.spacer bar' by less_bar_bar_bar.liga;
-  sub less.spacer bar.spacer bar'       bar  by bar.spacer;
-  sub less.spacer bar'       bar        bar  by bar.spacer;
-  sub less'       bar        bar        bar  by less.spacer;
+  sub less.spacer bar.spacer bar' bar by bar.spacer;
+  sub less.spacer bar' bar bar by bar.spacer;
+  sub less' bar bar bar by less.spacer;
 } less_bar_bar_bar;
 
 lookup bar_bar_greater {
- ignore sub bar bar' bar greater;
- ignore sub bar' bar greater greater;
+  ignore sub bar bar' bar greater;
+  ignore sub bar' bar greater greater;
   ignore sub less bar' bar greater;
   sub bar.spacer bar.spacer greater' by bar_bar_greater.liga;
-  sub bar.spacer bar'       greater  by bar.spacer;
-  sub bar'       bar        greater  by bar.spacer;
+  sub bar.spacer bar' greater by bar.spacer;
+  sub bar' bar greater by bar.spacer;
 } bar_bar_greater;
 
 lookup less_bar_bar {
- ignore sub less less' bar bar;
- ignore sub less' bar bar bar;
+  ignore sub less less' bar bar;
+  ignore sub less' bar bar bar;
   ignore sub less' bar bar greater;
   sub less.spacer bar.spacer bar' by less_bar_bar.liga;
-  sub less.spacer bar'       bar  by bar.spacer;
-  sub less'       bar        bar  by less.spacer;
+  sub less.spacer bar' bar by bar.spacer;
+  sub less' bar bar by less.spacer;
 } less_bar_bar;
 
 lookup bar_greater {
- ignore sub bar bar' greater;
- ignore sub bar' greater greater;
+  ignore sub bar bar' greater;
+  ignore sub bar' greater greater;
   sub bar.spacer greater' by bar_greater.liga;
-  sub bar'       greater  by bar.spacer;
+  sub bar' greater by bar.spacer;
 } bar_greater;
 
 lookup less_bar {
- ignore sub less less' bar;
- ignore sub less' bar bar;
+  ignore sub less less' bar;
+  ignore sub less' bar bar;
   sub less.spacer bar' by less_bar.liga;
-  sub less'       bar  by less.spacer;
+  sub less' bar by less.spacer;
 } less_bar;
 
 lookup bar_bar_bar {
- ignore sub bar bar' bar bar;
- ignore sub bar' bar bar bar;
+  ignore sub bar bar' bar bar;
+  ignore sub bar' bar bar bar;
   sub bar.spacer bar.spacer bar' by bar_bar_bar.liga;
-  sub bar.spacer bar'       bar  by bar.spacer;
-  sub bar'       bar        bar  by bar.spacer;
+  sub bar.spacer bar' bar by bar.spacer;
+  sub bar' bar bar by bar.spacer;
 } bar_bar_bar;
 
 lookup greater_greater_greater {
- ignore sub greater greater' greater greater;
- ignore sub greater' greater greater greater;
+  ignore sub greater greater' greater greater;
+  ignore sub greater' greater greater greater;
   ignore sub [asterisk plus dollar] greater' greater greater;
   sub greater.spacer greater.spacer greater' by greater_greater_greater.liga;
-  sub greater.spacer greater'       greater  by greater.spacer;
-  sub greater'       greater        greater  by greater.spacer;
+  sub greater.spacer greater' greater by greater.spacer;
+  sub greater' greater greater by greater.spacer;
 } greater_greater_greater;
 
 lookup less_less_less {
- ignore sub less less' less less;
- ignore sub less' less less less;
+  ignore sub less less' less less;
+  ignore sub less' less less less;
   ignore sub less' less less [asterisk plus dollar];
   sub less.spacer less.spacer less' by less_less_less.liga;
-  sub less.spacer less'       less  by less.spacer;
-  sub less'       less        less  by less.spacer;
+  sub less.spacer less' less by less.spacer;
+  sub less' less less by less.spacer;
 } less_less_less;
 
 lookup bar_bar {
- ignore sub bar bar' bar;
- ignore sub bar' bar bar;
+  ignore sub bar bar' bar;
+  ignore sub bar' bar bar;
   ignore sub [hyphen equal] bar' bar;
   ignore sub bar' bar hyphen;
   ignore sub bar' bar equal [equal less greater bar colon exclam slash];
   sub bar.spacer bar' by bar_bar.liga;
-  sub bar'       bar  by bar.spacer;
+  sub bar' bar by bar.spacer;
 } bar_bar;
 
 lookup greater_greater {
- ignore sub greater greater' greater;
- ignore sub greater' greater greater;
+  ignore sub greater greater' greater;
+  ignore sub greater' greater greater;
   ignore sub [asterisk plus dollar] greater' greater;
   ignore sub [hyphen equal] greater' greater;
   ignore sub greater' greater hyphen;
   ignore sub greater' greater equal [equal less greater bar colon exclam slash];
   sub greater.spacer greater' by greater_greater.liga;
-  sub greater'       greater  by greater.spacer;
+  sub greater' greater by greater.spacer;
 } greater_greater;
 
 lookup less_less {
- ignore sub less less' less;
- ignore sub less' less less;
+  ignore sub less less' less;
+  ignore sub less' less less;
   ignore sub less' less [asterisk plus dollar];
   ignore sub [hyphen equal] less' less;
   ignore sub less' less hyphen;
   ignore sub less' less equal [equal less greater bar colon exclam slash];
   sub less.spacer less' by less_less.liga;
-  sub less'       less  by less.spacer;
+  sub less' less by less.spacer;
 } less_less;
 
 lookup less_exclam_hyphen_hyphen {
- ignore sub less less' exclam hyphen hyphen;
- ignore sub less' exclam hyphen hyphen hyphen;
+  ignore sub less less' exclam hyphen hyphen;
+  ignore sub less' exclam hyphen hyphen hyphen;
   sub less.spacer exclam.spacer hyphen.spacer hyphen' by less_exclam_hyphen_hyphen.liga;
-  sub less.spacer exclam.spacer hyphen'       hyphen  by hyphen.spacer;
-  sub less.spacer exclam'       hyphen        hyphen  by exclam.spacer;
-  sub less'       exclam        hyphen        hyphen  by less.spacer;
+  sub less.spacer exclam.spacer hyphen' hyphen by hyphen.spacer;
+  sub less.spacer exclam' hyphen hyphen by exclam.spacer;
+  sub less' exclam hyphen hyphen by less.spacer;
 } less_exclam_hyphen_hyphen;
 
 lookup asciitilde_asciitilde_greater {
- ignore sub asciitilde asciitilde' asciitilde greater;
- ignore sub asciitilde' asciitilde greater greater;
+  ignore sub asciitilde asciitilde' asciitilde greater;
+  ignore sub asciitilde' asciitilde greater greater;
   sub asciitilde.spacer asciitilde.spacer greater' by asciitilde_asciitilde_greater.liga;
-  sub asciitilde.spacer asciitilde'       greater  by asciitilde.spacer;
-  sub asciitilde'       asciitilde        greater  by asciitilde.spacer;
+  sub asciitilde.spacer asciitilde' greater by asciitilde.spacer;
+  sub asciitilde' asciitilde greater by asciitilde.spacer;
 } asciitilde_asciitilde_greater;
 
 lookup asterisk_asterisk_asterisk {
- ignore sub asterisk asterisk' asterisk asterisk;
- ignore sub asterisk' asterisk asterisk asterisk;
+  ignore sub asterisk asterisk' asterisk asterisk;
+  ignore sub asterisk' asterisk asterisk asterisk;
   ignore sub slash asterisk' asterisk asterisk;
   ignore sub asterisk' asterisk asterisk slash;
   sub asterisk.spacer asterisk.spacer asterisk' by asterisk_asterisk_asterisk.liga;
-  sub asterisk.spacer asterisk'       asterisk  by asterisk.spacer;
-  sub asterisk'       asterisk        asterisk  by asterisk.spacer;
+  sub asterisk.spacer asterisk' asterisk by asterisk.spacer;
+  sub asterisk' asterisk asterisk by asterisk.spacer;
 } asterisk_asterisk_asterisk;
 
 lookup colon_colon_colon {
- ignore sub colon colon' colon colon;
- ignore sub colon' colon colon colon;
+  ignore sub colon colon' colon colon;
+  ignore sub colon' colon colon colon;
   ignore sub colon' colon colon [less greater];
   ignore sub [less greater] colon' colon colon;
   sub colon.spacer colon.spacer colon' by colon_colon_colon.liga;
-  sub colon.spacer colon'       colon  by colon.spacer;
-  sub colon'       colon        colon  by colon.spacer;
+  sub colon.spacer colon' colon by colon.spacer;
+  sub colon' colon colon by colon.spacer;
 } colon_colon_colon;
 
 lookup colon_colon_equal {
- ignore sub colon colon' colon equal;
- ignore sub colon' colon equal equal;
+  ignore sub colon colon' colon equal;
+  ignore sub colon' colon equal equal;
   sub colon.spacer colon.spacer equal' by colon_colon_equal.liga;
-  sub colon.spacer colon'       equal  by colon.spacer;
-  sub colon'       colon        equal  by colon.spacer;
+  sub colon.spacer colon' equal by colon.spacer;
+  sub colon' colon equal by colon.spacer;
 } colon_colon_equal;
 
 lookup equal_colon_equal {
- ignore sub equal equal' colon equal;
- ignore sub equal' colon equal equal;
+  ignore sub equal equal' colon equal;
+  ignore sub equal' colon equal equal;
   sub equal.spacer colon.spacer equal' by equal_colon_equal.liga;
-  sub equal.spacer colon'       equal  by colon.spacer;
-  sub equal'       colon        equal  by equal.spacer;
+  sub equal.spacer colon' equal by colon.spacer;
+  sub equal' colon equal by equal.spacer;
 } equal_colon_equal;
 
 lookup equal_equal_equal {
- ignore sub equal equal' equal equal;
- ignore sub equal' equal equal equal;
+  ignore sub equal equal' equal equal;
+  ignore sub equal' equal equal equal;
   ignore sub bracketleft equal' equal equal;
   ignore sub equal' equal equal bracketright;
   ignore sub equal [colon exclam] equal' equal equal;
@@ -376,243 +379,243 @@ lookup equal_equal_equal {
   ignore sub equal' equal equal [less greater bar slash];
   ignore sub equal' equal equal [colon exclam] equal;
   sub equal.spacer equal.spacer equal' by equal_equal_equal.liga;
-  sub equal.spacer equal'       equal  by equal.spacer;
-  sub equal'       equal        equal  by equal.spacer;
+  sub equal.spacer equal' equal by equal.spacer;
+  sub equal' equal equal by equal.spacer;
 } equal_equal_equal;
 
 lookup equal_exclam_equal {
- ignore sub equal equal' exclam equal;
- ignore sub equal' exclam equal equal;
+  ignore sub equal equal' exclam equal;
+  ignore sub equal' exclam equal equal;
   sub equal.spacer exclam.spacer equal' by equal_exclam_equal.liga;
-  sub equal.spacer exclam'       equal  by exclam.spacer;
-  sub equal'       exclam        equal  by equal.spacer;
+  sub equal.spacer exclam' equal by exclam.spacer;
+  sub equal' exclam equal by equal.spacer;
 } equal_exclam_equal;
 
 lookup exclam_equal_equal {
- ignore sub exclam exclam' equal equal;
- ignore sub exclam' equal equal equal;
+  ignore sub exclam exclam' equal equal;
+  ignore sub exclam' equal equal equal;
   sub exclam.spacer equal.spacer equal' by exclam_equal_equal.liga;
-  sub exclam.spacer equal'       equal  by equal.spacer;
-  sub exclam'       equal        equal  by exclam.spacer;
+  sub exclam.spacer equal' equal by equal.spacer;
+  sub exclam' equal equal by exclam.spacer;
 } exclam_equal_equal;
 
 lookup exclam_exclam_period {
- ignore sub exclam exclam' exclam period;
- ignore sub exclam' exclam period period;
+  ignore sub exclam exclam' exclam period;
+  ignore sub exclam' exclam period period;
   sub exclam.spacer exclam.spacer period' by exclam_exclam_period.liga;
-  sub exclam.spacer exclam'       period  by exclam.spacer;
-  sub exclam'       exclam        period  by exclam.spacer;
+  sub exclam.spacer exclam' period by exclam.spacer;
+  sub exclam' exclam period by exclam.spacer;
 } exclam_exclam_period;
 
 lookup less_asciitilde_asciitilde {
- ignore sub less less' asciitilde asciitilde;
- ignore sub less' asciitilde asciitilde asciitilde;
+  ignore sub less less' asciitilde asciitilde;
+  ignore sub less' asciitilde asciitilde asciitilde;
   sub less.spacer asciitilde.spacer asciitilde' by less_asciitilde_asciitilde.liga;
-  sub less.spacer asciitilde'       asciitilde  by asciitilde.spacer;
-  sub less'       asciitilde        asciitilde  by less.spacer;
+  sub less.spacer asciitilde' asciitilde by asciitilde.spacer;
+  sub less' asciitilde asciitilde by less.spacer;
 } less_asciitilde_asciitilde;
 
 lookup less_asciitilde_greater {
- ignore sub less less' asciitilde greater;
- ignore sub less' asciitilde greater greater;
+  ignore sub less less' asciitilde greater;
+  ignore sub less' asciitilde greater greater;
   sub less.spacer asciitilde.spacer greater' by less_asciitilde_greater.liga;
-  sub less.spacer asciitilde'       greater  by asciitilde.spacer;
-  sub less'       asciitilde        greater  by less.spacer;
+  sub less.spacer asciitilde' greater by asciitilde.spacer;
+  sub less' asciitilde greater by less.spacer;
 } less_asciitilde_greater;
 
 lookup less_asterisk_greater {
   sub less.spacer asterisk.spacer greater' by less_asterisk_greater.liga;
-  sub less.spacer asterisk'       greater  by asterisk.spacer;
-  sub less'       asterisk        greater  by less.spacer;
+  sub less.spacer asterisk' greater by asterisk.spacer;
+  sub less' asterisk greater by less.spacer;
 } less_asterisk_greater;
 
 lookup less_dollar_greater {
   sub less.spacer dollar.spacer greater' by less_dollar_greater.liga;
-  sub less.spacer dollar'       greater  by dollar.spacer;
-  sub less'       dollar        greater  by less.spacer;
+  sub less.spacer dollar' greater by dollar.spacer;
+  sub less' dollar greater by less.spacer;
 } less_dollar_greater;
 
 lookup less_plus_greater {
   sub less.spacer plus.spacer greater' by less_plus_greater.liga;
-  sub less.spacer plus'       greater  by plus.spacer;
-  sub less'       plus        greater  by less.spacer;
+  sub less.spacer plus' greater by plus.spacer;
+  sub less' plus greater by less.spacer;
 } less_plus_greater;
 
 lookup less_slash_greater {
- ignore sub less less' slash greater;
- ignore sub less' slash greater greater;
+  ignore sub less less' slash greater;
+  ignore sub less' slash greater greater;
   sub less.spacer slash.spacer greater' by less_slash_greater.liga;
-  sub less.spacer slash'       greater  by slash.spacer;
-  sub less'       slash        greater  by less.spacer;
+  sub less.spacer slash' greater by slash.spacer;
+  sub less' slash greater by less.spacer;
 } less_slash_greater;
 
 lookup period_period_equal {
- ignore sub period period' period equal;
- ignore sub period' period equal equal;
+  ignore sub period period' period equal;
+  ignore sub period' period equal equal;
   sub period.spacer period.spacer equal' by period_period_equal.liga;
-  sub period.spacer period'       equal  by period.spacer;
-  sub period'       period        equal  by period.spacer;
+  sub period.spacer period' equal by period.spacer;
+  sub period' period equal by period.spacer;
 } period_period_equal;
 
 lookup period_period_less {
- ignore sub period period' period less;
- ignore sub period' period less less;
+  ignore sub period period' period less;
+  ignore sub period' period less less;
   sub period.spacer period.spacer less' by period_period_less.liga;
-  sub period.spacer period'       less  by period.spacer;
-  sub period'       period        less  by period.spacer;
+  sub period.spacer period' less by period.spacer;
+  sub period' period less by period.spacer;
 } period_period_less;
 
 lookup period_period_period {
- ignore sub period period' period period;
- ignore sub period' period period period;
+  ignore sub period period' period period;
+  ignore sub period' period period period;
   sub period.spacer period.spacer period' by period_period_period.liga;
-  sub period.spacer period'       period  by period.spacer;
-  sub period'       period        period  by period.spacer;
+  sub period.spacer period' period by period.spacer;
+  sub period' period period by period.spacer;
 } period_period_period;
 
 lookup plus_plus_plus {
- ignore sub plus plus' plus plus;
- ignore sub plus' plus plus plus;
+  ignore sub plus plus' plus plus;
+  ignore sub plus' plus plus plus;
   sub plus.spacer plus.spacer plus' by plus_plus_plus.liga;
-  sub plus.spacer plus'       plus  by plus.spacer;
-  sub plus'       plus        plus  by plus.spacer;
+  sub plus.spacer plus' plus by plus.spacer;
+  sub plus' plus plus by plus.spacer;
 } plus_plus_plus;
 
 lookup slash_slash_slash {
- ignore sub slash slash' slash slash;
- ignore sub slash' slash slash slash;
+  ignore sub slash slash' slash slash;
+  ignore sub slash' slash slash slash;
   sub slash.spacer slash.spacer slash' by slash_slash_slash.liga;
-  sub slash.spacer slash'       slash  by slash.spacer;
-  sub slash'       slash        slash  by slash.spacer;
+  sub slash.spacer slash' slash by slash.spacer;
+  sub slash' slash slash by slash.spacer;
 } slash_slash_slash;
 
 lookup underscore_underscore_parenleft {
- ignore sub underscore underscore' underscore parenleft;
- ignore sub underscore' underscore parenleft parenleft;
+  ignore sub underscore underscore' underscore parenleft;
+  ignore sub underscore' underscore parenleft parenleft;
   sub underscore.spacer underscore.spacer parenleft' by underscore_underscore_parenleft.liga;
-  sub underscore.spacer underscore'       parenleft  by underscore.spacer;
-  sub underscore'       underscore        parenleft  by underscore.spacer;
+  sub underscore.spacer underscore' parenleft by underscore.spacer;
+  sub underscore' underscore parenleft by underscore.spacer;
 } underscore_underscore_parenleft;
 
 lookup ampersand_ampersand {
- ignore sub ampersand ampersand' ampersand;
- ignore sub ampersand' ampersand ampersand;
+  ignore sub ampersand ampersand' ampersand;
+  ignore sub ampersand' ampersand ampersand;
   sub ampersand.spacer ampersand' by ampersand_ampersand.liga;
-  sub ampersand'       ampersand  by ampersand.spacer;
+  sub ampersand' ampersand by ampersand.spacer;
 } ampersand_ampersand;
 
 lookup asciicircum_equal {
- ignore sub asciicircum asciicircum' equal;
- ignore sub asciicircum' equal equal;
+  ignore sub asciicircum asciicircum' equal;
+  ignore sub asciicircum' equal equal;
   sub asciicircum.spacer equal' by asciicircum_equal.liga;
-  sub asciicircum'       equal  by asciicircum.spacer;
+  sub asciicircum' equal by asciicircum.spacer;
 } asciicircum_equal;
 
 lookup asciitilde_asciitilde {
- ignore sub asciitilde asciitilde' asciitilde;
- ignore sub asciitilde' asciitilde asciitilde;
+  ignore sub asciitilde asciitilde' asciitilde;
+  ignore sub asciitilde' asciitilde asciitilde;
   sub asciitilde.spacer asciitilde' by asciitilde_asciitilde.liga;
-  sub asciitilde'       asciitilde  by asciitilde.spacer;
+  sub asciitilde' asciitilde by asciitilde.spacer;
 } asciitilde_asciitilde;
 
 lookup asciitilde_greater {
- ignore sub asciitilde asciitilde' greater;
- ignore sub asciitilde' greater greater;
+  ignore sub asciitilde asciitilde' greater;
+  ignore sub asciitilde' greater greater;
   sub asciitilde.spacer greater' by asciitilde_greater.liga;
-  sub asciitilde'       greater  by asciitilde.spacer;
+  sub asciitilde' greater by asciitilde.spacer;
 } asciitilde_greater;
 
 lookup asterisk_asterisk {
- ignore sub asterisk asterisk' asterisk;
- ignore sub asterisk' asterisk asterisk;
+  ignore sub asterisk asterisk' asterisk;
+  ignore sub asterisk' asterisk asterisk;
   ignore sub slash asterisk' asterisk;
   ignore sub asterisk' asterisk slash;
   sub asterisk.spacer asterisk' by asterisk_asterisk.liga;
-  sub asterisk'       asterisk  by asterisk.spacer;
+  sub asterisk' asterisk by asterisk.spacer;
 } asterisk_asterisk;
 
 lookup asterisk_greater {
- ignore sub asterisk asterisk' greater;
- ignore sub asterisk' greater greater;
+  ignore sub asterisk asterisk' greater;
+  ignore sub asterisk' greater greater;
   sub asterisk.spacer greater' by asterisk_greater.liga;
-  sub asterisk'       greater  by asterisk.spacer;
+  sub asterisk' greater by asterisk.spacer;
 } asterisk_greater;
 
 lookup asterisk_slash {
- ignore sub asterisk asterisk' slash;
- ignore sub asterisk' slash slash;
+  ignore sub asterisk asterisk' slash;
+  ignore sub asterisk' slash slash;
   ignore sub slash asterisk' slash;
   ignore sub asterisk' slash asterisk;
   sub asterisk.spacer slash' by asterisk_slash.liga;
-  sub asterisk'       slash  by asterisk.spacer;
+  sub asterisk' slash by asterisk.spacer;
 } asterisk_slash;
 
 lookup bar_braceright {
- ignore sub bar bar' braceright;
- ignore sub bar' braceright braceright;
+  ignore sub bar bar' braceright;
+  ignore sub bar' braceright braceright;
   ignore sub braceleft bar' braceright;
   sub bar.spacer braceright' by bar_braceright.liga;
-  sub bar'       braceright  by bar.spacer;
+  sub bar' braceright by bar.spacer;
 } bar_braceright;
 
 lookup bar_bracketright {
- ignore sub bar bar' bracketright;
- ignore sub bar' bracketright bracketright;
+  ignore sub bar bar' bracketright;
+  ignore sub bar' bracketright bracketright;
   ignore sub bracketleft bar' bracketright;
   sub bar.spacer bracketright' by bar_bracketright.liga;
-  sub bar'       bracketright  by bar.spacer;
+  sub bar' bracketright by bar.spacer;
 } bar_bracketright;
 
 lookup braceleft_bar {
- ignore sub braceleft braceleft' bar;
- ignore sub braceleft' bar bar;
+  ignore sub braceleft braceleft' bar;
+  ignore sub braceleft' bar bar;
   ignore sub braceleft' bar braceright;
   sub braceleft.spacer bar' by braceleft_bar.liga;
-  sub braceleft'       bar  by braceleft.spacer;
+  sub braceleft' bar by braceleft.spacer;
 } braceleft_bar;
 
 lookup bracketleft_bar {
- ignore sub bracketleft bracketleft' bar;
- ignore sub bracketleft' bar bar;
+  ignore sub bracketleft bracketleft' bar;
+  ignore sub bracketleft' bar bar;
   ignore sub bracketleft' bar bracketright;
   sub bracketleft.spacer bar' by bracketleft_bar.liga;
-  sub bracketleft'       bar  by bracketleft.spacer;
+  sub bracketleft' bar by bracketleft.spacer;
 } bracketleft_bar;
 
 lookup bracketright_numbersign {
- ignore sub bracketright bracketright' numbersign;
- ignore sub bracketright' numbersign numbersign;
+  ignore sub bracketright bracketright' numbersign;
+  ignore sub bracketright' numbersign numbersign;
   sub bracketright.spacer numbersign' by bracketright_numbersign.liga;
-  sub bracketright'       numbersign  by bracketright.spacer;
+  sub bracketright' numbersign by bracketright.spacer;
 } bracketright_numbersign;
 
 lookup colon_colon {
- ignore sub colon colon' colon;
- ignore sub colon' colon colon;
+  ignore sub colon colon' colon;
+  ignore sub colon' colon colon;
   ignore sub colon' colon [less greater];
   ignore sub [less greater] colon' colon;
   sub colon.spacer colon' by colon_colon.liga;
-  sub colon'       colon  by colon.spacer;
+  sub colon' colon by colon.spacer;
 } colon_colon;
 
 lookup colon_equal {
- ignore sub colon colon' equal;
- ignore sub colon' equal equal;
+  ignore sub colon colon' equal;
+  ignore sub colon' equal equal;
   ignore sub equal colon' equal;
   sub colon.spacer equal' by colon_equal.liga;
-  sub colon'       equal  by colon.spacer;
+  sub colon' equal by colon.spacer;
 } colon_equal;
 
 lookup dollar_greater {
- ignore sub dollar dollar' greater;
- ignore sub dollar' greater greater;
+  ignore sub dollar dollar' greater;
+  ignore sub dollar' greater greater;
   sub dollar.spacer greater' by dollar_greater.liga;
-  sub dollar'       greater  by dollar.spacer;
+  sub dollar' greater by dollar.spacer;
 } dollar_greater;
 
 lookup equal_equal {
- ignore sub equal equal' equal;
- ignore sub equal' equal equal;
+  ignore sub equal equal' equal;
+  ignore sub equal' equal equal;
   ignore sub bracketleft equal' equal;
   ignore sub equal' equal bracketright;
   ignore sub equal [colon exclam] equal' equal;
@@ -620,265 +623,248 @@ lookup equal_equal {
   ignore sub equal' equal [less greater bar slash];
   ignore sub equal' equal [colon exclam] equal;
   sub equal.spacer equal' by equal_equal.liga;
-  sub equal'       equal  by equal.spacer;
+  sub equal' equal by equal.spacer;
 } equal_equal;
 
 lookup exclam_equal {
- ignore sub exclam exclam' equal;
- ignore sub exclam' equal equal;
+  ignore sub exclam exclam' equal;
+  ignore sub exclam' equal equal;
   ignore sub equal exclam' equal;
   sub exclam.spacer equal' by exclam_equal.liga;
-  sub exclam'       equal  by exclam.spacer;
+  sub exclam' equal by exclam.spacer;
 } exclam_equal;
 
 lookup exclam_exclam {
- ignore sub exclam exclam' exclam;
- ignore sub exclam' exclam exclam;
+  ignore sub exclam exclam' exclam;
+  ignore sub exclam' exclam exclam;
   sub exclam.spacer exclam' by exclam_exclam.liga;
-  sub exclam'       exclam  by exclam.spacer;
+  sub exclam' exclam by exclam.spacer;
 } exclam_exclam;
 
 lookup greater_equal {
- ignore sub greater greater' equal;
- ignore sub greater' equal equal;
+  ignore sub greater greater' equal;
+  ignore sub greater' equal equal;
   ignore sub equal greater' equal;
   ignore sub greater' equal [less greater bar colon exclam slash];
   sub greater.spacer equal' by greater_equal.liga;
-  sub greater'       equal  by greater.spacer;
+  sub greater' equal by greater.spacer;
 } greater_equal;
 
 lookup hyphen_hyphen {
- ignore sub hyphen hyphen' hyphen;
- ignore sub hyphen' hyphen hyphen;
+  ignore sub hyphen hyphen' hyphen;
+  ignore sub hyphen' hyphen hyphen;
   ignore sub [less greater bar] hyphen' hyphen;
   ignore sub hyphen' hyphen [less greater bar];
   sub hyphen.spacer hyphen' by hyphen_hyphen.liga;
-  sub hyphen'       hyphen  by hyphen.spacer;
+  sub hyphen' hyphen by hyphen.spacer;
 } hyphen_hyphen;
 
 lookup less_asciitilde {
- ignore sub less less' asciitilde;
- ignore sub less' asciitilde asciitilde;
+  ignore sub less less' asciitilde;
+  ignore sub less' asciitilde asciitilde;
   sub less.spacer asciitilde' by less_asciitilde.liga;
-  sub less'       asciitilde  by less.spacer;
+  sub less' asciitilde by less.spacer;
 } less_asciitilde;
 
 lookup less_asterisk {
- ignore sub less less' asterisk;
- ignore sub less' asterisk asterisk;
+  ignore sub less less' asterisk;
+  ignore sub less' asterisk asterisk;
   sub less.spacer asterisk' by less_asterisk.liga;
-  sub less'       asterisk  by less.spacer;
+  sub less' asterisk by less.spacer;
 } less_asterisk;
 
 lookup less_dollar {
- ignore sub less less' dollar;
- ignore sub less' dollar dollar;
+  ignore sub less less' dollar;
+  ignore sub less' dollar dollar;
   sub less.spacer dollar' by less_dollar.liga;
-  sub less'       dollar  by less.spacer;
+  sub less' dollar by less.spacer;
 } less_dollar;
 
 lookup less_equal {
- ignore sub less less' equal;
- ignore sub less' equal equal;
+  ignore sub less less' equal;
+  ignore sub less' equal equal;
   ignore sub equal less' equal;
   ignore sub less' equal [less greater bar colon exclam slash];
   sub less.spacer equal' by less_equal.liga;
-  sub less'       equal  by less.spacer;
+  sub less' equal by less.spacer;
 } less_equal;
 
 lookup less_greater {
- ignore sub less less' greater;
- ignore sub less' greater greater;
+  ignore sub less less' greater;
+  ignore sub less' greater greater;
   sub less.spacer greater' by less_greater.liga;
-  sub less'       greater  by less.spacer;
+  sub less' greater by less.spacer;
 } less_greater;
 
 lookup less_plus {
- ignore sub less less' plus;
- ignore sub less' plus plus;
+  ignore sub less less' plus;
+  ignore sub less' plus plus;
   sub less.spacer plus' by less_plus.liga;
-  sub less'       plus  by less.spacer;
+  sub less' plus by less.spacer;
 } less_plus;
 
 lookup less_slash {
- ignore sub less less' slash;
- ignore sub less' slash slash;
+  ignore sub less less' slash;
+  ignore sub less' slash slash;
   sub less.spacer slash' by less_slash.liga;
-  sub less'       slash  by less.spacer;
+  sub less' slash by less.spacer;
 } less_slash;
 
 lookup numbersign_braceleft {
- ignore sub numbersign numbersign' braceleft;
- ignore sub numbersign' braceleft braceleft;
+  ignore sub numbersign numbersign' braceleft;
+  ignore sub numbersign' braceleft braceleft;
   sub numbersign.spacer braceleft' by numbersign_braceleft.liga;
-  sub numbersign'       braceleft  by numbersign.spacer;
+  sub numbersign' braceleft by numbersign.spacer;
 } numbersign_braceleft;
 
 lookup numbersign_bracketleft {
- ignore sub numbersign numbersign' bracketleft;
- ignore sub numbersign' bracketleft bracketleft;
+  ignore sub numbersign numbersign' bracketleft;
+  ignore sub numbersign' bracketleft bracketleft;
   sub numbersign.spacer bracketleft' by numbersign_bracketleft.liga;
-  sub numbersign'       bracketleft  by numbersign.spacer;
+  sub numbersign' bracketleft by numbersign.spacer;
 } numbersign_bracketleft;
 
 lookup numbersign_colon {
- ignore sub numbersign numbersign' colon;
- ignore sub numbersign' colon colon;
+  ignore sub numbersign numbersign' colon;
+  ignore sub numbersign' colon colon;
   sub numbersign.spacer colon' by numbersign_colon.liga;
-  sub numbersign'       colon  by numbersign.spacer;
+  sub numbersign' colon by numbersign.spacer;
 } numbersign_colon;
 
 lookup numbersign_equal {
- ignore sub numbersign numbersign' equal;
- ignore sub numbersign' equal equal;
+  ignore sub numbersign numbersign' equal;
+  ignore sub numbersign' equal equal;
   sub numbersign.spacer equal' by numbersign_equal.liga;
-  sub numbersign'       equal  by numbersign.spacer;
+  sub numbersign' equal by numbersign.spacer;
 } numbersign_equal;
 
 lookup numbersign_exclam {
- ignore sub numbersign numbersign' exclam;
- ignore sub numbersign' exclam exclam;
+  ignore sub numbersign numbersign' exclam;
+  ignore sub numbersign' exclam exclam;
   sub numbersign.spacer exclam' by numbersign_exclam.liga;
-  sub numbersign'       exclam  by numbersign.spacer;
+  sub numbersign' exclam by numbersign.spacer;
 } numbersign_exclam;
 
 lookup numbersign_parenleft {
- ignore sub numbersign numbersign' parenleft;
- ignore sub numbersign' parenleft parenleft;
+  ignore sub numbersign numbersign' parenleft;
+  ignore sub numbersign' parenleft parenleft;
   sub numbersign.spacer parenleft' by numbersign_parenleft.liga;
-  sub numbersign'       parenleft  by numbersign.spacer;
+  sub numbersign' parenleft by numbersign.spacer;
 } numbersign_parenleft;
 
 lookup numbersign_question {
- ignore sub numbersign numbersign' question;
- ignore sub numbersign' question question;
+  ignore sub numbersign numbersign' question;
+  ignore sub numbersign' question question;
   sub numbersign.spacer question' by numbersign_question.liga;
-  sub numbersign'       question  by numbersign.spacer;
+  sub numbersign' question by numbersign.spacer;
 } numbersign_question;
 
 lookup percent_percent {
- ignore sub percent percent' percent;
- ignore sub percent' percent percent;
+  ignore sub percent percent' percent;
+  ignore sub percent' percent percent;
   sub percent.spacer percent' by percent_percent.liga;
-  sub percent'       percent  by percent.spacer;
+  sub percent' percent by percent.spacer;
 } percent_percent;
 
 lookup period_period {
- ignore sub period period' period;
- ignore sub period' period period;
+  ignore sub period period' period;
+  ignore sub period' period period;
   sub period.spacer period' by period_period.liga;
-  sub period'       period  by period.spacer;
+  sub period' period by period.spacer;
 } period_period;
 
 lookup period_question {
- ignore sub period period' question;
- ignore sub period' question question;
+  ignore sub period period' question;
+  ignore sub period' question question;
   sub period.spacer question' by period_question.liga;
-  sub period'       question  by period.spacer;
+  sub period' question by period.spacer;
 } period_question;
 
 lookup plus_greater {
- ignore sub plus plus' greater;
- ignore sub plus' greater greater;
+  ignore sub plus plus' greater;
+  ignore sub plus' greater greater;
   sub plus.spacer greater' by plus_greater.liga;
-  sub plus'       greater  by plus.spacer;
+  sub plus' greater by plus.spacer;
 } plus_greater;
 
 lookup plus_plus {
- ignore sub plus plus' plus;
- ignore sub plus' plus plus;
+  ignore sub plus plus' plus;
+  ignore sub plus' plus plus;
   sub plus.spacer plus' by plus_plus.liga;
-  sub plus'       plus  by plus.spacer;
+  sub plus' plus by plus.spacer;
 } plus_plus;
 
 lookup question_equal {
- ignore sub question question' equal;
- ignore sub question' equal equal;
+  ignore sub question question' equal;
+  ignore sub question' equal equal;
   sub question.spacer equal' by question_equal.liga;
-  sub question'       equal  by question.spacer;
+  sub question' equal by question.spacer;
 } question_equal;
 
 lookup question_period {
- ignore sub question question' period;
- ignore sub question' period period;
+  ignore sub question question' period;
+  ignore sub question' period period;
   sub question.spacer period' by question_period.liga;
-  sub question'       period  by question.spacer;
+  sub question' period by question.spacer;
 } question_period;
 
 lookup question_question {
- ignore sub question question' question;
- ignore sub question' question question;
+  ignore sub question question' question;
+  ignore sub question' question question;
   sub question.spacer question' by question_question.liga;
-  sub question'       question  by question.spacer;
+  sub question' question by question.spacer;
 } question_question;
 
 lookup semicolon_semicolon {
- ignore sub semicolon semicolon' semicolon;
- ignore sub semicolon' semicolon semicolon;
+  ignore sub semicolon semicolon' semicolon;
+  ignore sub semicolon' semicolon semicolon;
   sub semicolon.spacer semicolon' by semicolon_semicolon.liga;
-  sub semicolon'       semicolon  by semicolon.spacer;
+  sub semicolon' semicolon by semicolon.spacer;
 } semicolon_semicolon;
 
 lookup slash_asterisk {
- ignore sub slash slash' asterisk;
- ignore sub slash' asterisk asterisk;
+  ignore sub slash slash' asterisk;
+  ignore sub slash' asterisk asterisk;
   ignore sub slash' asterisk slash;
   ignore sub asterisk slash' asterisk;
   sub slash.spacer asterisk' by slash_asterisk.liga;
-  sub slash'       asterisk  by slash.spacer;
+  sub slash' asterisk by slash.spacer;
 } slash_asterisk;
 
 lookup slash_greater {
- ignore sub slash slash' greater;
- ignore sub slash' greater greater;
+  ignore sub slash slash' greater;
+  ignore sub slash' greater greater;
   sub slash.spacer greater' by slash_greater.liga;
-  sub slash'       greater  by slash.spacer;
+  sub slash' greater by slash.spacer;
 } slash_greater;
 
 lookup slash_slash {
- ignore sub slash slash' slash;
- ignore sub slash' slash slash;
+  ignore sub slash slash' slash;
+  ignore sub slash' slash slash;
   ignore sub equal slash' slash;
   ignore sub slash' slash equal;
   sub slash.spacer slash' by slash_slash.liga;
-  sub slash'       slash  by slash.spacer;
-} slash_slash;# Digit colon align
+  sub slash' slash by slash.spacer;
+} slash_slash;# Greater/less colon align
+# Example: :> :< >: <: :>: :<: <:> >:< <:<>:>
+lookup colon_less_greater {
+    # :>= :<=
+    ignore sub colon' [less greater] [equal hyphen];
+
+    # ::< ::> <:: >::
+    ignore sub colon colon' [less greater];
+    ignore sub [less greater]' colon colon;
+
+    sub [less.center greater.center colon.valign_eq] colon' by colon.valign_eq;
+    sub colon.valign_eq [less greater]' by [less.center greater.center];
+
+    sub [less greater]' colon by [less.center greater.center];
+    sub colon' [less greater] by colon.valign_eq;
+} colon_less_greater;
+
+# Digit colon align
 # Example: 10:20
-sub @numbers_dflt colon' @numbers_dflt by colon.valign;
-
-# Name: Glyph Composition / Decomposition
-
-lookup comb_comb {
-    sub brevecomb acutecomb by breveacute;
-    sub brevecomb gravecomb by brevegrave;
-    sub brevecomb hookcomb by brevehook;
-    sub brevecomb tildecomb by brevetilde;
-    sub circumflexcomb acutecomb by circumflexacute;
-    sub circumflexcomb gravecomb by circumflexgrave;
-    sub circumflexcomb hookcomb by circumflexhook;
-    sub circumflexcomb tildecomb by circumflextilde;
-    sub circumflexcomb brevecomb by circumflexbreve;
-    sub dieresiscomb acutecomb by dieresisacute;
-    sub dieresiscomb caroncomb by dieresiscaron;
-    sub dieresiscomb gravecomb by dieresisgrave;
-    sub dieresiscomb macroncomb by dieresismacron;
-} comb_comb;
-
-lookup letter_comb {
-    sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
-    sub g commabelowcomb' by commaturnedtopcomb; # /gcommaaccent
-    sub i' @acc_comb_top by dotlessi;
-    sub i' @acc_comb_bottom @acc_comb_top by dotlessi;
-    sub uni0456' @acc_comb_top by dotlessi;
-    sub uni0456' @acc_comb_bottom @acc_comb_top by dotlessi;
-    sub iogonek' @acc_comb_top by dotlessiogonek;
-    sub idotbelow' @acc_comb_top by dotlessidotbelow;
-    sub j' @acc_comb_top by dotlessj;
-    sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
-    sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
-} letter_comb;
-
-
+sub @numbers_dflt colon' @numbers_dflt by colon.valign_num;
 # Arbitrary-length equal arrows
 # Ported from FiraCode
 
@@ -1089,13 +1075,8 @@ sub five [slash fraction] eight by uni215D;
 sub seven [slash fraction] eight by uni215E;
 sub one [slash fraction] nine by uni2151;
 ";
-labels = (
-{
-language = dflt;
-value = Fractions;
-}
-);
 tag = frac;
+notes = "Name: Fractions";
 },
 {
 code = "lookup locl_latn_0 {
@@ -1228,73 +1209,43 @@ lookup MARK_BASE_topright {
     pos base t <anchor 387 760> mark @MC_topright;
 } MARK_BASE_topright;
 ";
-labels = (
-{
-language = dflt;
-value = "Mark positioning";
-}
-);
 tag = mark;
+notes = "Name: Mark positioning";
 },
 {
 code = "# Name: numerators
 sub @numbers_dflt by @numbers_numr;
 ";
-labels = (
-{
-language = dflt;
-value = numerators;
-}
-);
 tag = numr;
+notes = "Name: numerators";
 },
 {
 code = "# Name: Ordinals
 sub [a o] by [ordfeminine ordmasculine];
 ";
-labels = (
-{
-language = dflt;
-value = Ordinals;
-}
-);
 tag = ordn;
+notes = "Name: Ordinals";
 },
 {
 code = "# Name: Scientific inferiors
 sub @numbers_dflt by @numbers_sinf;
 ";
-labels = (
-{
-language = dflt;
-value = "Scientific inferiors";
-}
-);
 tag = sinf;
+notes = "Name: Scientific inferiors";
 },
 {
 code = "# Name: Superiors
 sub @numbers_dflt by @numbers_sups;
 ";
-labels = (
-{
-language = dflt;
-value = Superiors;
-}
-);
 tag = sups;
+notes = "Name: Superiors";
 },
 {
 code = "# Name: Slashed zero
 sub zero by zero.alt01;
 ";
-labels = (
-{
-language = dflt;
-value = "Slashed zero";
-}
-);
 tag = zero;
+notes = "Name: Slashed zero";
 },
 {
 automatic = 1;
@@ -1355,13 +1306,8 @@ sub dieresisgrave by dieresisgrave.case;
 sub dieresismacron by dieresismacron.case;
 sub hookcomb by hookcomb.case;
 sub ringacute by ringacute.case;";
-labels = (
-{
-language = dflt;
-value = "Form cases";
-}
-);
 tag = case;
+notes = "Name: Form cases";
 },
 {
 code = "";
@@ -1369,28 +1315,18 @@ disabled = 1;
 tag = liga;
 },
 {
-code = "# Name: ~Original tilda~
-sub asciitilde by asciitilde.original;
-";
-labels = (
-{
-language = dflt;
-value = "~Original tilda~";
-}
-);
-tag = cv05;
-},
-{
 code = "# Name: Alternate lowercase eszett
 sub germandbls by germandbls.alt01;
 ";
-labels = (
+tag = cv05;
+notes = "Name: Alternate lowercase eszett";
+},
 {
-language = dflt;
-value = "Alternate lowercase eszett";
-}
-);
+code = "# Name: Plain number zero
+sub zero by zero.alt02;
+";
 tag = cv04;
+notes = "Name: Plain number zero";
 },
 {
 code = "# Name: Restore <<= >>= ||= |= as arrows
@@ -1414,50 +1350,56 @@ lookup restore_bar_equal {
   sub bar' equal by bar_equal_start.seq;
 } restore_bar_equal;
 ";
-labels = (
-{
-language = dflt;
-value = "Restore <<= >>= ||= |= as arrows";
-}
-);
 tag = ss01;
+notes = "Name: Restore <<= >>= ||= |= as arrows";
 },
 {
 code = "# Name: Simple lowercase a
 sub @lca_dflt by @lca_alt1;
 sub @lca_cyrl_dflt by @lca_cyrl_alt1;
 ";
-labels = (
-{
-language = dflt;
-value = "Simple lowercase a";
-}
-);
 tag = cv01;
+notes = "Name: Simple lowercase a";
 },
 {
-code = "# Name: Plain number zero
-sub zero by zero.alt02;
+code = "# Name: Lowercase g with low stem
+sub g by g.alt02;
 ";
-labels = (
-{
-language = dflt;
-value = "Plain number zero";
-}
-);
 tag = cv03;
+notes = "Name: Lowercase g with low stem";
 },
 {
 code = "# Name: Simple lowercase g
 sub @lcg_dflt by @lcg_alt1;
 ";
-labels = (
-{
-language = dflt;
-value = "Simple lowercase g";
-}
-);
 tag = cv02;
+notes = "Name: Simple lowercase g";
+},
+{
+code = "# Name: ~Original tilda~
+sub asciitilde by asciitilde.original;
+";
+tag = cv06;
+notes = "Name: ~Original tilda~";
+},
+{
+code = "# Name: Original clock arrows
+sub arrowuprightclock by arrowuprightclock.alt01;
+sub arrowupleftcounterclock by arrowupleftcounterclock.alt01;
+";
+tag = cv07;
+notes = "Name: Original clock arrows";
+},
+{
+code = "# Name: Gaps in equals
+
+sub equal_equal.liga by equal_equal.ss02;
+sub equal_equal_equal.liga by equal_equal_equal.ss02;
+sub exclam_equal.liga by exclam_equal.ss02;
+sub exclam_equal_equal.liga by exclam_equal_equal.ss02;
+";
+tag = ss02;
+notes = "Name: Gaps in equals";
 }
 );
 fontMaster = (
@@ -1537,13 +1479,14 @@ value = 650;
 );
 guides = (
 {
-pos = (552,317);
+pos = (524,305);
 }
 );
 iconName = Light;
 id = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1554,6 +1497,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -1652,6 +1596,7 @@ pos = (342,304);
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1662,6 +1607,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -1763,6 +1709,7 @@ iconName = Bold;
 id = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1773,6 +1720,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -51835,163 +51783,6 @@ width = 600;
 unicode = 960;
 },
 {
-glyphname = arrowupleftcounterclock;
-lastChange = "2023-04-07 17:00:01 +0000";
-layers = (
-{
-layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
-shapes = (
-{
-closed = 1;
-nodes = (
-(475,-4,o),
-(596,133,o),
-(596,291,cs),
-(596,416,o),
-(523,505,o),
-(471,550,cs),
-(456,563,l),
-(458,567,l),
-(516,556,l),
-(596,556,l),
-(596,668,l),
-(269,668,l,{
-name = hr00;
-}),
-(269,341,l),
-(381,341,l),
-(381,425,l),
-(375,488,l),
-(379,490,l),
-(408,464,l),
-(433,442,o),
-(488,390,o),
-(488,291,cs),
-(488,172,o),
-(394,104,o),
-(301,104,cs),
-(208,104,o),
-(114,171,o),
-(114,291,cs),
-(114,334,o),
-(126,374,o),
-(158,411,c),
-(75,481,l),
-(32,430,o),
-(6,364,o),
-(6,291,cs),
-(6,128,o),
-(131,-4,o),
-(301,-4,cs)
-);
-}
-);
-width = 600;
-},
-{
-layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
-shapes = (
-{
-closed = 1;
-nodes = (
-(465,27,o),
-(590,163,o),
-(590,317,cs),
-(590,464,o),
-(476,557,o),
-(420,597,cs),
-(399,612,l),
-(400,615,l),
-(464,607,l),
-(579,607,l),
-(579,675,l),
-(291,675,l,{
-name = hr00;
-}),
-(291,387,l),
-(359,387,l),
-(359,503,l),
-(354,564,l),
-(357,565,l),
-(376,549,l),
-(418,516,o),
-(522,454,o),
-(522,317,cs),
-(522,196,o),
-(441,93,o),
-(300,93,cs),
-(171,93,o),
-(76,179,o),
-(76,317,cs),
-(76,408,o),
-(118,476,o),
-(195,516,c),
-(165,575,l),
-(72,527,o),
-(10,429,o),
-(10,317,cs),
-(10,154,o),
-(141,27,o),
-(300,27,cs)
-);
-}
-);
-width = 600;
-},
-{
-layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
-shapes = (
-{
-closed = 1;
-nodes = (
-(460,32,o),
-(587,170,o),
-(587,317,cs),
-(587,448,o),
-(486,538,o),
-(410,595,c),
-(347,644,l),
-(348,646,l),
-(421,643,l),
-(578,643,l),
-(578,664,l),
-(314,664,l,{
-name = hr00;
-}),
-(314,400,l),
-(335,400,l),
-(335,557,l),
-(332,630,l),
-(334,631,l),
-(398,582,ls),
-(456,538,o),
-(567,454,o),
-(567,317,cs),
-(567,176,o),
-(454,52,o),
-(302,52,cs),
-(155,52,o),
-(37,167,o),
-(37,317,cs),
-(37,416,o),
-(88,500,o),
-(165,545,c),
-(156,562,l),
-(72,512,o),
-(17,421,o),
-(17,317,cs),
-(17,159,o),
-(145,32,o),
-(302,32,cs)
-);
-}
-);
-width = 600;
-}
-);
-unicode = 8634;
-},
-{
 glyphname = zero;
 layers = (
 {
@@ -61068,6 +60859,96 @@ width = 600;
 );
 },
 {
+glyphname = colon.valign_eq;
+lastChange = "2023-04-07 23:34:11 +0000";
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+pos = (0,47);
+ref = colon;
+}
+);
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+pos = (0,47);
+ref = colon;
+}
+);
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+pos = (0,47);
+ref = colon;
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = colon.valign_num;
+lastChange = "2023-04-07 22:30:16 +0000";
+layers = (
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+alignment = -1;
+pos = (0,69);
+ref = period;
+},
+{
+alignment = -1;
+pos = (0,408);
+ref = period;
+}
+);
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+alignment = -1;
+pos = (0,69);
+ref = period;
+},
+{
+alignment = -1;
+pos = (0,465);
+ref = period;
+}
+);
+width = 600;
+},
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+alignment = -1;
+pos = (0,72);
+ref = period;
+},
+{
+alignment = -1;
+pos = (0,536);
+ref = period;
+}
+);
+width = 600;
+}
+);
+},
+{
 glyphname = hyphen_hyphen.liga;
 lastChange = "2023-03-30 00:37:18 +0000";
 layers = (
@@ -67324,14 +67205,12 @@ width = 600;
 hints = (
 {
 horizontal = 1;
-place = (217, 20);
-place = (217, 20);
+place = (217,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (371, 20);
-place = (371, 20);
+place = (371,20);
 type = Stem;
 }
 );
@@ -69723,60 +69602,6 @@ width = 600;
 },
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
-width = 600;
-}
-);
-},
-{
-glyphname = colon.valign;
-lastChange = "2023-03-23 15:11:38 +0000";
-layers = (
-{
-layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
-shapes = (
-{
-alignment = -1;
-pos = (0,69);
-ref = period;
-},
-{
-alignment = -1;
-pos = (0,408);
-ref = period;
-}
-);
-width = 600;
-},
-{
-layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
-shapes = (
-{
-alignment = -1;
-pos = (0,69);
-ref = period;
-},
-{
-alignment = -1;
-pos = (0,465);
-ref = period;
-}
-);
-width = 600;
-},
-{
-layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
-shapes = (
-{
-alignment = -1;
-pos = (0,72);
-ref = period;
-},
-{
-alignment = -1;
-pos = (0,536);
-ref = period;
-}
-);
 width = 600;
 }
 );
@@ -75886,20 +75711,18 @@ pos = (-1200,-95);
 hints = (
 {
 horizontal = 1;
-place = (-3, 21);
+place = (-3,21);
 target = up;
 type = BottomGhost;
 },
 {
 horizontal = 1;
-place = (221, 67);
-place = (221, 67);
+place = (221,67);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (326, 39);
-place = (326, 39);
+place = (326,39);
 type = Stem;
 },
 {
@@ -75974,50 +75797,42 @@ width = 600;
 hints = (
 {
 horizontal = 1;
-place = (236, 20);
-place = (236, 20);
+place = (236,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (390, 20);
-place = (390, 20);
+place = (390,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (236, 20);
-place = (236, 20);
+place = (236,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (390, 20);
-place = (390, 20);
+place = (390,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (244, 20);
-place = (244, 20);
+place = (244,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (398, 20);
-place = (398, 20);
+place = (398,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (244, 20);
-place = (244, 20);
+place = (244,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (398, 20);
-place = (398, 20);
+place = (398,20);
 type = Stem;
 }
 );
@@ -76437,50 +76252,42 @@ pos = (485,307);
 hints = (
 {
 horizontal = 1;
-place = (236, 20);
-place = (236, 20);
+place = (236,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (390, 20);
-place = (390, 20);
+place = (390,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (236, 20);
-place = (236, 20);
+place = (236,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (390, 20);
-place = (390, 20);
+place = (390,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (244, 20);
-place = (244, 20);
+place = (244,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (398, 20);
-place = (398, 20);
+place = (398,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (244, 20);
-place = (244, 20);
+place = (244,20);
 type = Stem;
 },
 {
 horizontal = 1;
-place = (398, 20);
-place = (398, 20);
+place = (398,20);
 type = Stem;
 }
 );
@@ -79670,13 +79477,13 @@ hints = (
 {
 horizontal = 1;
 options = 4;
-place = (172, 68);
+place = (172,68);
 type = TTStem;
 },
 {
 horizontal = 1;
 options = 4;
-place = (372, 68);
+place = (372,68);
 type = TTStem;
 },
 {
@@ -80321,12 +80128,12 @@ shapes = (
 {
 pos = (-603,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-26,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 }
 );
 width = 600;
@@ -80337,12 +80144,12 @@ shapes = (
 {
 pos = (-603,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-26,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 }
 );
 width = 600;
@@ -80353,12 +80160,12 @@ shapes = (
 {
 pos = (-603,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-26,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 }
 );
 width = 600;
@@ -80381,17 +80188,17 @@ shapes = (
 {
 pos = (-26,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-615,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-1203,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 }
 );
 width = 600;
@@ -80402,17 +80209,17 @@ shapes = (
 {
 pos = (-26,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-615,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-1203,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 }
 );
 width = 600;
@@ -80423,17 +80230,17 @@ shapes = (
 {
 pos = (-26,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-615,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 },
 {
 pos = (-1203,0);
 ref = equal;
-scale = (1.0492,1);
+scale = (1.049,1);
 }
 );
 width = 600;
@@ -89550,7 +89357,7 @@ width = 600;
 unicode = 94;
 },
 {
-glyphname = infinity;
+glyphname = "infinity";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -91429,6 +91236,84 @@ nodes = (
 name = hr00;
 })
 );
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = greater.center;
+lastChange = "2023-04-07 22:12:35 +0000";
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+pos = (-25,0);
+ref = greater;
+scale = (1.082,1);
+}
+);
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+pos = (-25,0);
+ref = greater;
+scale = (1.082,1);
+}
+);
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+pos = (-25,0);
+ref = greater;
+scale = (1.082,1);
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = less.center;
+lastChange = "2023-04-07 22:13:11 +0000";
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+pos = (600,0);
+ref = greater.center;
+scale = (-1,1);
+}
+);
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+pos = (600,0);
+ref = greater.center;
+scale = (-1,1);
+}
+);
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+pos = (600,0);
+ref = greater.center;
+scale = (-1,1);
 }
 );
 width = 600;
@@ -93930,6 +93815,163 @@ width = 600;
 }
 );
 unicode = 8631;
+},
+{
+glyphname = arrowupleftcounterclock;
+lastChange = "2023-04-07 17:00:01 +0000";
+layers = (
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+closed = 1;
+nodes = (
+(475,-4,o),
+(596,133,o),
+(596,291,cs),
+(596,416,o),
+(523,505,o),
+(471,550,cs),
+(456,563,l),
+(458,567,l),
+(516,556,l),
+(596,556,l),
+(596,668,l),
+(269,668,l,{
+name = hr00;
+}),
+(269,341,l),
+(381,341,l),
+(381,425,l),
+(375,488,l),
+(379,490,l),
+(408,464,l),
+(433,442,o),
+(488,390,o),
+(488,291,cs),
+(488,172,o),
+(394,104,o),
+(301,104,cs),
+(208,104,o),
+(114,171,o),
+(114,291,cs),
+(114,334,o),
+(126,374,o),
+(158,411,c),
+(75,481,l),
+(32,430,o),
+(6,364,o),
+(6,291,cs),
+(6,128,o),
+(131,-4,o),
+(301,-4,cs)
+);
+}
+);
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+closed = 1;
+nodes = (
+(465,27,o),
+(590,163,o),
+(590,317,cs),
+(590,464,o),
+(476,557,o),
+(420,597,cs),
+(399,612,l),
+(400,615,l),
+(464,607,l),
+(579,607,l),
+(579,675,l),
+(291,675,l,{
+name = hr00;
+}),
+(291,387,l),
+(359,387,l),
+(359,503,l),
+(354,564,l),
+(357,565,l),
+(376,549,l),
+(418,516,o),
+(522,454,o),
+(522,317,cs),
+(522,196,o),
+(441,93,o),
+(300,93,cs),
+(171,93,o),
+(76,179,o),
+(76,317,cs),
+(76,408,o),
+(118,476,o),
+(195,516,c),
+(165,575,l),
+(72,527,o),
+(10,429,o),
+(10,317,cs),
+(10,154,o),
+(141,27,o),
+(300,27,cs)
+);
+}
+);
+width = 600;
+},
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+closed = 1;
+nodes = (
+(460,32,o),
+(587,170,o),
+(587,317,cs),
+(587,448,o),
+(486,538,o),
+(410,595,c),
+(347,644,l),
+(348,646,l),
+(421,643,l),
+(578,643,l),
+(578,664,l),
+(314,664,l,{
+name = hr00;
+}),
+(314,400,l),
+(335,400,l),
+(335,557,l),
+(332,630,l),
+(334,631,l),
+(398,582,ls),
+(456,538,o),
+(567,454,o),
+(567,317,cs),
+(567,176,o),
+(454,52,o),
+(302,52,cs),
+(155,52,o),
+(37,167,o),
+(37,317,cs),
+(37,416,o),
+(88,500,o),
+(165,545,c),
+(156,562,l),
+(72,512,o),
+(17,421,o),
+(17,317,cs),
+(17,159,o),
+(145,32,o),
+(302,32,cs)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 8634;
 },
 {
 glyphname = arrowuprightclock;
@@ -113897,6 +113939,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -113929,6 +113972,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -113961,6 +114005,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -114000,6 +114045,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -114022,6 +114068,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -114044,6 +114091,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -114072,6 +114120,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -114088,6 +114137,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -114104,6 +114154,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -114127,6 +114178,7 @@ layers = (
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -114143,6 +114195,7 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -114159,6 +114212,7 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -124981,9 +125035,11 @@ name = ExtraLight;
 weightClass = 200;
 },
 {
+active = 0;
 axesValues = (
 300
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -125001,13 +125057,11 @@ value = (
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.66667;
 "C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.33333;
 };
 name = Light;
-visible = 0;
 weightClass = 300;
 },
 {
@@ -125093,9 +125147,11 @@ name = Meduim;
 weightClass = 500;
 },
 {
+active = 0;
 axesValues = (
 600
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -125113,13 +125169,11 @@ value = (
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.66667;
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.33333;
 };
 name = SemiBold;
-visible = 0;
 weightClass = 600;
 },
 {
@@ -125150,6 +125204,8 @@ name = Bold;
 weightClass = 700;
 }
 );
+kerningLTR = {
+};
 metrics = (
 {
 type = ascender;

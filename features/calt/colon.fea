@@ -1,3 +1,20 @@
+# Greater/less colon align
+# Example: :> :< >: <: :>: :<: <:> >:< <:<>:>
+lookup colon_less_greater {
+    # :>= :<=
+    ignore sub colon' [less greater] [equal hyphen];
+
+    # ::< ::> <:: >::
+    ignore sub colon colon' [less greater];
+    ignore sub [less greater]' colon colon;
+
+    sub [less.center greater.center colon.valign_eq] colon' by colon.valign_eq;
+    sub colon.valign_eq [less greater]' by [less.center greater.center];
+
+    sub [less greater]' colon by [less.center greater.center];
+    sub colon' [less greater] by colon.valign_eq;
+} colon_less_greater;
+
 # Digit colon align
 # Example: 10:20
-sub @numbers_dflt colon' @numbers_dflt by colon.valign;
+sub @numbers_dflt colon' @numbers_dflt by colon.valign_num;
