@@ -13,8 +13,9 @@ from glyphsLib import (
     build_masters,
 )
 
-from .const import SUPPORTED_FORMATS
+from .const import NAME_TPL, SUPPORTED_FORMATS
 from .make import make
+from .name import feature_prefix, name_from_code
 
 LIGATURE_SUFFIX = ".liga"
 GlyphFilter = Callable[[GSGlyph], bool]
@@ -73,23 +74,36 @@ class GlyphsFont:
                 self._font.features.append(fea)
 
     def build(self, formats: List[str], out_dir: str, store_temp=False) -> bool:
-        print("Writing temporary .glyphs file")
-        temp_dir = mkdtemp(prefix="LilexBuild")
-        glyphs_path = f'{temp_dir}/{self._font.familyName}.glyphs'
-        ufo_path = f'{temp_dir}/master_ufo'
-        self.save_to(glyphs_path)
-        print("Generating master UFOs")
-        build_masters(glyphs_path, ufo_path, write_skipexportglyphs=True)
-        ds_path = f"{ufo_path}/{self._font.familyName}.designspace"
+        print("Preparing build environment")
+        temp_dir, ds_file = self._prepare_build()
         success = True
         for fmt in formats:
             if fmt not in SUPPORTED_FORMATS:
                 print(f'Unsupported format "{fmt}"')
                 break
             fmt_dir = f'{out_dir}/{fmt}'
-            success = success and make(self.file.familyName, ds_path, fmt, fmt_dir)
+            success = success and make(self.file.familyName, ds_file, fmt, fmt_dir)
         if store_temp:
             print(f'Build directory: {temp_dir}')
         else:
             rmtree(temp_dir)
         return success
+
+    def _set_fea_names(self):
+        for fea in self._font.features:
+            prefix = feature_prefix(fea.name)
+            if prefix in NAME_TPL:
+                feature = self._font.features[fea.name]
+                name = name_from_code(feature.code)
+                if name is not None:
+                    feature.code = NAME_TPL[prefix].replace("$NAME", name) + feature.code
+
+    def _prepare_build(self) -> str:
+        self._set_fea_names()
+        temp_dir = mkdtemp(prefix="LilexBuild")
+        glyphs_file = f'{temp_dir}/{self._font.familyName}.glyphs'
+        ufo_dir = f'{temp_dir}/master_ufo'
+        ds_file = f"{ufo_dir}/{self._font.familyName}.designspace"
+        self.save_to(glyphs_file)
+        build_masters(glyphs_file, ufo_dir, write_skipexportglyphs=True)
+        return (temp_dir, ds_file)

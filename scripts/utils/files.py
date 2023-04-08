@@ -3,7 +3,6 @@ from __future__ import annotations
 
 from os import listdir
 from os.path import basename, isfile, join, splitext
-from re import search
 from typing import List, TypeVar
 
 from glyphsLib import GSClass, GSFeature
@@ -29,20 +28,10 @@ def read_classes(dir_path: str) -> List[GSClass]:
         classes.append(cls)
     return classes
 
-def _extract_name(content: str) -> str | None:
-    result = search(r'Name:(.*)', content)
-    try:
-        return result.group(1).strip()
-    except AttributeError:
-        return None
-
 def read_features(dir_path: str) -> List[GSFeature]:
     features = []
     for path in list_files(dir_path):
         fea = _read_gs_file(path, GSFeature)
-        name = _extract_name(fea.code)
-        if name is not None:
-            fea.notes = f"Name: {name}"
         features.append(fea)
     return features
 
