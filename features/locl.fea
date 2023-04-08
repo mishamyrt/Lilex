@@ -1,10 +1,12 @@
 lookup locl_latn_0 {
 	script latn;
+    # Romanian
 	language ROM;
 	sub Scedilla by Scommaaccent;
 	sub scedilla by scommaaccent;
 	sub Tcedilla by Tcommaaccent;
 	sub tcedilla by tcommaaccent;
+    # Moldavian
 	language MOL;
 	sub Scedilla by Scommaaccent;
 	sub scedilla by scommaaccent;
@@ -14,6 +16,7 @@ lookup locl_latn_0 {
 
 lookup locl_latn_1 {
 	script latn;
+    # Catalan
 	language CAT;
 	sub  l' periodcentered' l by ldot;
 	sub  L' periodcentered' L by Ldot;
@@ -21,6 +24,7 @@ lookup locl_latn_1 {
 
 lookup locl_latn_2 {
 	script latn;
+    # Dutch
 	language NLD;
 	sub iacute j' by jacute;
 	sub Iacute J' by Jacute;
