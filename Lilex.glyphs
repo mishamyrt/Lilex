@@ -1480,7 +1480,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 350;
+value = 403;
 },
 {
 name = hheaDescender;
@@ -1589,7 +1589,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 350;
+value = 403;
 },
 {
 name = hheaDescender;
@@ -1704,7 +1704,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 350;
+value = 403;
 },
 {
 name = hheaDescender;
