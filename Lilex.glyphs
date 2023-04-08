@@ -862,40 +862,6 @@ lookup colon_less_greater {
 # Digit colon align
 # Example: 10:20
 sub @numbers_dflt colon' @numbers_dflt by colon.valign_num;
-# Name: Glyph Composition / Decomposition
-
-lookup comb_combs {
-    sub brevecomb acutecomb by breveacute;
-    sub brevecomb gravecomb by brevegrave;
-    sub brevecomb hookcomb by brevehook;
-    sub brevecomb tildecomb by brevetilde;
-    sub circumflexcomb acutecomb by circumflexacute;
-    sub circumflexcomb gravecomb by circumflexgrave;
-    sub circumflexcomb hookcomb by circumflexhook;
-    sub circumflexcomb tildecomb by circumflextilde;
-    sub circumflexcomb brevecomb by circumflexbreve;
-    sub dieresiscomb acutecomb by dieresisacute;
-    sub dieresiscomb caroncomb by dieresiscaron;
-    sub dieresiscomb gravecomb by dieresisgrave;
-    sub dieresiscomb macroncomb by dieresismacron;
-} comb_combs;
-
-lookup letter_combs {
-    sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
-    sub g commabelowcomb' by commaturnedtopcomb; # /gcommaaccent
-
-    # Soft-dotted
-    sub i' @acc_comb_top by dotlessi;
-    sub i' @acc_comb_bottom @acc_comb_top by dotlessi;
-    sub uni0456' @acc_comb_top by dotlessi;
-    sub uni0456' @acc_comb_bottom @acc_comb_top by dotlessi;
-    sub iogonek' @acc_comb_top by dotlessiogonek;
-    sub idotbelow' @acc_comb_top by dotlessidotbelow;
-    sub j' @acc_comb_top by dotlessj;
-    sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
-    sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
-} letter_combs;
-
 # Arbitrary-length equal arrows
 # Ported from FiraCode
 
@@ -1433,7 +1399,8 @@ tag = ss02;
 notes = "Name: Gaps in equals";
 },
 {
-code = "# Name: Thin backslash
+code = "# Name: Thin backslash for regexps
+# Example: \\n \\\\ 
 
 lookup backslash_thin {
   ignore sub backslash.ss03 backslash';
@@ -1441,7 +1408,45 @@ lookup backslash_thin {
 } backslash_thin;
 ";
 tag = ss03;
-notes = "Name: Thin backslash";
+notes = "Name: Thin backslash for regexps";
+},
+{
+code = "# Name: Glyph Composition / Decomposition
+
+lookup comb_combs {
+    sub brevecomb acutecomb by breveacute;
+    sub brevecomb gravecomb by brevegrave;
+    sub brevecomb hookcomb by brevehook;
+    sub brevecomb tildecomb by brevetilde;
+    sub circumflexcomb acutecomb by circumflexacute;
+    sub circumflexcomb gravecomb by circumflexgrave;
+    sub circumflexcomb hookcomb by circumflexhook;
+    sub circumflexcomb tildecomb by circumflextilde;
+    sub circumflexcomb brevecomb by circumflexbreve;
+    sub dieresiscomb acutecomb by dieresisacute;
+    sub dieresiscomb caroncomb by dieresiscaron;
+    sub dieresiscomb gravecomb by dieresisgrave;
+    sub dieresiscomb macroncomb by dieresismacron;
+} comb_combs;
+
+lookup letter_combs {
+    sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
+    sub g commabelowcomb' by commaturnedtopcomb; # /gcommaaccent
+
+    # Soft-dotted
+    sub i' @acc_comb_top by dotlessi;
+    sub i' @acc_comb_bottom @acc_comb_top by dotlessi;
+    sub uni0456' @acc_comb_top by dotlessi;
+    sub uni0456' @acc_comb_bottom @acc_comb_top by dotlessi;
+    sub iogonek' @acc_comb_top by dotlessiogonek;
+    sub idotbelow' @acc_comb_top by dotlessidotbelow;
+    sub j' @acc_comb_top by dotlessj;
+    sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
+    sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
+} letter_combs;
+";
+tag = ccmp;
+notes = "Name: Glyph Composition / Decomposition";
 }
 );
 fontMaster = (

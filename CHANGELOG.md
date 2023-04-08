@@ -14,7 +14,6 @@ All notable changes to this project will be documented in this file.
 
 ## Removed
 
-* The `ccmp` feature is no longer available.
 * OTF is no longer available in the bundle. But you still have the option of building it yourself.
 
 ## Added
