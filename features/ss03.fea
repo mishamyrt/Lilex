@@ -1,0 +1,7 @@
+# Name: Thin backslash for regexps
+# Example: \n \\ 
+
+lookup backslash_thin {
+  ignore sub backslash.ss03 backslash';
+  sub backslash' by backslash.ss03;
+} backslash_thin;
