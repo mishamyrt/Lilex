@@ -1,6 +1,6 @@
 # Name: Glyph Composition / Decomposition
 
-lookup comb_comb {
+lookup comb_combs {
     sub brevecomb acutecomb by breveacute;
     sub brevecomb gravecomb by brevegrave;
     sub brevecomb hookcomb by brevehook;
@@ -16,9 +16,11 @@ lookup comb_comb {
     sub dieresiscomb macroncomb by dieresismacron;
 } comb_comb;
 
-lookup letter_comb {
+lookup letter_combs {
     sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
     sub g commabelowcomb' by commaturnedtopcomb; # /gcommaaccent
+
+    # Soft-dotted
     sub i' @acc_comb_top by dotlessi;
     sub i' @acc_comb_bottom @acc_comb_top by dotlessi;
     sub uni0456' @acc_comb_top by dotlessi;
@@ -29,5 +31,3 @@ lookup letter_comb {
     sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
 } letter_comb;
-
-# dotlessj+ringcomb=jring
