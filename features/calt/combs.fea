@@ -14,7 +14,7 @@ lookup comb_combs {
     sub dieresiscomb caroncomb by dieresiscaron;
     sub dieresiscomb gravecomb by dieresisgrave;
     sub dieresiscomb macroncomb by dieresismacron;
-} comb_comb;
+} comb_combs;
 
 lookup letter_combs {
     sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
@@ -30,4 +30,4 @@ lookup letter_combs {
     sub j' @acc_comb_top by dotlessj;
     sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
-} letter_comb;
+} letter_combs;
