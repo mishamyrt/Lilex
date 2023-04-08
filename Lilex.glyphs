@@ -1073,16 +1073,17 @@ sub seven [slash fraction] eight by uni215E;
 sub one [slash fraction] nine by uni2151;
 ";
 tag = frac;
-notes = "Name: Fractions";
 },
 {
 code = "lookup locl_latn_0 {
 	script latn;
+    # Romanian
 	language ROM;
 	sub Scedilla by Scommaaccent;
 	sub scedilla by scommaaccent;
 	sub Tcedilla by Tcommaaccent;
 	sub tcedilla by tcommaaccent;
+    # Moldavian
 	language MOL;
 	sub Scedilla by Scommaaccent;
 	sub scedilla by scommaaccent;
@@ -1092,6 +1093,7 @@ code = "lookup locl_latn_0 {
 
 lookup locl_latn_1 {
 	script latn;
+    # Catalan
 	language CAT;
 	sub  l' periodcentered' l by ldot;
 	sub  L' periodcentered' L by Ldot;
@@ -1099,6 +1101,7 @@ lookup locl_latn_1 {
 
 lookup locl_latn_2 {
 	script latn;
+    # Dutch
 	language NLD;
 	sub iacute j' by jacute;
 	sub Iacute J' by Jacute;
@@ -1207,42 +1210,36 @@ lookup MARK_BASE_topright {
 } MARK_BASE_topright;
 ";
 tag = mark;
-notes = "Name: Mark positioning";
 },
 {
 code = "# Name: numerators
 sub @numbers_dflt by @numbers_numr;
 ";
 tag = numr;
-notes = "Name: numerators";
 },
 {
 code = "# Name: Ordinals
 sub [a o] by [ordfeminine ordmasculine];
 ";
 tag = ordn;
-notes = "Name: Ordinals";
 },
 {
 code = "# Name: Scientific inferiors
 sub @numbers_dflt by @numbers_sinf;
 ";
 tag = sinf;
-notes = "Name: Scientific inferiors";
 },
 {
 code = "# Name: Superiors
 sub @numbers_dflt by @numbers_sups;
 ";
 tag = sups;
-notes = "Name: Superiors";
 },
 {
 code = "# Name: Slashed zero
 sub zero by zero.alt01;
 ";
 tag = zero;
-notes = "Name: Slashed zero";
 },
 {
 automatic = 1;
@@ -1304,7 +1301,6 @@ sub dieresismacron by dieresismacron.case;
 sub hookcomb by hookcomb.case;
 sub ringacute by ringacute.case;";
 tag = case;
-notes = "Name: Form cases";
 },
 {
 code = "";
@@ -1316,14 +1312,12 @@ code = "# Name: Alternate lowercase eszett
 sub germandbls by germandbls.alt01;
 ";
 tag = cv05;
-notes = "Name: Alternate lowercase eszett";
 },
 {
 code = "# Name: Plain number zero
 sub zero by zero.alt02;
 ";
 tag = cv04;
-notes = "Name: Plain number zero";
 },
 {
 code = "# Name: Restore <<= >>= ||= |= as arrows
@@ -1347,8 +1341,13 @@ lookup restore_bar_equal {
   sub bar' equal by bar_equal_start.seq;
 } restore_bar_equal;
 ";
+labels = (
+{
+language = dflt;
+value = "Restore <<= >>= ||= |= as arrows";
+}
+);
 tag = ss01;
-notes = "Name: Restore <<= >>= ||= |= as arrows";
 },
 {
 code = "# Name: Simple lowercase a
@@ -1356,28 +1355,24 @@ sub @lca_dflt by @lca_alt1;
 sub @lca_cyrl_dflt by @lca_cyrl_alt1;
 ";
 tag = cv01;
-notes = "Name: Simple lowercase a";
 },
 {
 code = "# Name: Lowercase g with low stem
 sub g by g.alt02;
 ";
 tag = cv03;
-notes = "Name: Lowercase g with low stem";
 },
 {
 code = "# Name: Simple lowercase g
 sub @lcg_dflt by @lcg_alt1;
 ";
 tag = cv02;
-notes = "Name: Simple lowercase g";
 },
 {
 code = "# Name: ~Original tilda~
 sub asciitilde by asciitilde.original;
 ";
 tag = cv06;
-notes = "Name: ~Original tilda~";
 },
 {
 code = "# Name: Original clock arrows
@@ -1385,7 +1380,6 @@ sub arrowuprightclock by arrowuprightclock.alt01;
 sub arrowupleftcounterclock by arrowupleftcounterclock.alt01;
 ";
 tag = cv07;
-notes = "Name: Original clock arrows";
 },
 {
 code = "# Name: Gaps in equals
@@ -1395,8 +1389,13 @@ sub equal_equal_equal.liga by equal_equal_equal.ss02;
 sub exclam_equal.liga by exclam_equal.ss02;
 sub exclam_equal_equal.liga by exclam_equal_equal.ss02;
 ";
+labels = (
+{
+language = dflt;
+value = "Gaps in equals";
+}
+);
 tag = ss02;
-notes = "Name: Gaps in equals";
 },
 {
 code = "# Name: Thin backslash for regexps
@@ -1407,8 +1406,13 @@ lookup backslash_thin {
   sub backslash' by backslash.ss03;
 } backslash_thin;
 ";
+labels = (
+{
+language = dflt;
+value = "Thin backslash for regexps";
+}
+);
 tag = ss03;
-notes = "Name: Thin backslash for regexps";
 },
 {
 code = "# Name: Glyph Composition / Decomposition
@@ -1446,7 +1450,6 @@ lookup letter_combs {
 } letter_combs;
 ";
 tag = ccmp;
-notes = "Name: Glyph Composition / Decomposition";
 }
 );
 fontMaster = (
