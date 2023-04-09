@@ -1,3 +1,4 @@
-# Name: Original clock arrows
+# Name: Vertically extended clock arrows
+# Example: ↻ ↺
 sub arrowuprightclock by arrowuprightclock.alt01;
 sub arrowupleftcounterclock by arrowupleftcounterclock.alt01;

@@ -1,4 +1,5 @@
-# Name: Restore <<= >>= ||= |= as arrows
+# Name: Restore logical operations as arrows
+# Example: <<= >>= ||= |=
 lookup restore_greater_greater_equal {
   sub greater_greater_equal_start.seq equal' by equal_end.seq;
   sub greater_greater.liga' equal by greater_greater_equal_start.seq;
