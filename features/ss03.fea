@@ -1,4 +1,4 @@
-# Name: Thin backslash for regexps
+# Name: Thin backslash
 # Example: \n \\ 
 
 lookup backslash_thin {
