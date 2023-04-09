@@ -1,6 +1,10 @@
 {
 .appVersion = "3184";
 .formatVersion = 3;
+DisplayStrings = (
+"ª",
+"/st.ordn"
+);
 axes = (
 {
 name = Weight;
@@ -36399,7 +36403,7 @@ width = 600;
 },
 {
 glyphname = ordfeminine;
-lastChange = "2023-03-22 22:29:14 +0000";
+lastChange = "2023-04-09 18:33:01 +0000";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -125029,6 +125033,66 @@ width = 600;
 },
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+width = 600;
+}
+);
+},
+{
+glyphname = st.ordn;
+lastChange = "2023-04-09 19:44:50 +0000";
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+alignment = -1;
+pos = (-395,379);
+ref = s;
+scale = (0.6388,0.6388);
+},
+{
+alignment = -1;
+pos = (42,381);
+ref = t;
+scale = (0.6388,0.6388);
+}
+);
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+alignment = -1;
+pos = (-395,378);
+ref = s;
+scale = (0.6388,0.6388);
+},
+{
+alignment = -1;
+pos = (42,380);
+ref = t;
+scale = (0.6388,0.6388);
+}
+);
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+alignment = -1;
+pos = (-395,378);
+ref = s;
+scale = (0.6388,0.6388);
+},
+{
+alignment = -1;
+pos = (42,380);
+ref = t;
+scale = (0.6388,0.6388);
+}
+);
 width = 600;
 }
 );
