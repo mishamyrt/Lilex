@@ -27,6 +27,7 @@ All notable changes to this project will be documented in this file.
 * ExtraThick weight (Read [commit](https://github.com/mishamyrt/Lilex/commit/fe983370a278eca78a27434f2ddbf75e8505e8ed) message).
 * Fontbakery reports to bundle.
 * `ss02` for gap in equals (`==`, `!=`, `===`, `!==`).
+* `cv08` for classical `>=`, `<=` with horizontal bar.
 * Greater/less colon vertical alignment.
 
 ## [2.100] — April 2, 2023

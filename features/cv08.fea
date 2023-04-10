@@ -1,0 +1,4 @@
+# Name: Classical greater/less then
+
+sub greater_equal.liga by greater_equal.liga.cv08;
+sub less_equal.liga by less_equal.liga.cv08;
