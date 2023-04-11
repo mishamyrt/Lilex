@@ -1,2 +1,3 @@
 # Name: Open g
+
 sub @lcg_dflt by @lcg_alt1;

@@ -1,4 +1,4 @@
-# Name: Emprty dollar and cent
+# Name: Empty dollar and cent
 
 sub cent by cent.cv09;
 sub dollar by dollar.cv09;

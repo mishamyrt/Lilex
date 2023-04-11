@@ -4,13 +4,20 @@ feature numr;
 feature ordn;
 feature sinf;
 feature ss01;
+feature ss02;
+feature ss03;
 feature sups;
-# feature zero; Ignore zero because cv02 will be used
+feature zero; 
 feature cv01;
-feature cv02;
+# feature cv02; Ignore cv02 because zero will be used
 feature cv03;
 feature cv04;
 feature cv05;
+feature cv06;
+feature cv07;
+feature cv08;
+feature cv09;
+feature cv10;
 feature calt;
 feature subs;
 feature dnom;
