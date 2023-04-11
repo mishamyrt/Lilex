@@ -29,6 +29,7 @@ All notable changes to this project will be documented in this file.
 * `ss02` for gap in equals (`==`, `!=`, `===`, `!==`).
 * `cv08` for classical `>=`, `<=` with horizontal bar.
 * `cv09` for barless `$` and `¢`.
+* `cv10` for top–aligned `*`.
 * Greater/less colon vertical alignment.
 
 ## [2.100] — April 2, 2023
