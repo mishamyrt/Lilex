@@ -1,6 +1,6 @@
 # Name: Broken equals ligatures
 # Example: != !==
-sub equal_equal.liga by equal_equal.ss02;
-sub equal_equal_equal.liga by equal_equal_equal.ss02;
-sub exclam_equal.liga by exclam_equal.ss02;
-sub exclam_equal_equal.liga by exclam_equal_equal.ss02;
+sub equal_equal.liga by equal_equal.liga.ss02;
+sub equal_equal_equal.liga by equal_equal_equal.liga.ss02;
+sub exclam_equal.liga by exclam_equal.liga.ss02;
+sub exclam_equal_equal.liga by exclam_equal_equal.liga.ss02;
