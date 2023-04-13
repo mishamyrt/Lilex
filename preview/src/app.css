@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Lilex";
+  font-family: "LilexVF";
   src: url('./variable/Lilex-VF.ttf');
 }
 
@@ -11,7 +11,7 @@
 
   --color-text: var(--color-text-light);
   --color-background: var(--color-background-light);
-  --font-family: "Lilex";
+  --font-family: "LilexVF";
   --padding-layout: 24px;
 
   font-family: 'Lilex';
