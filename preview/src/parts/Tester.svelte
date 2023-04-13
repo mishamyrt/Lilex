@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import RangeSlider from '../components/RangeSlider.svelte'
   import SchemeSelect from '../components/SchemeSelect.svelte'
   import Toolbar from '../components/Toolbar.svelte'
@@ -17,6 +18,11 @@
     const percent = position / window.innerWidth
     weight = (percent * weightDiff) + minWeight
   }
+
+  onMount(() => {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    scheme = isDark ? 'dark' : 'light'
+  })
 </script>
 
 <div class="container {scheme}">
