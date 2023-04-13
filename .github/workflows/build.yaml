@@ -1,6 +1,7 @@
 name: Build
 
-on: [push]
+on:
+  - push
 
 jobs:
   build:
