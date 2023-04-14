@@ -53,7 +53,7 @@ def generate(args, font: GlyphsFont):
 def build(args, font: GlyphsFont):
     """Builds a binary font file"""
     if font.build(args.formats, OUT_DIR, args.store_temp):
-        print("☺️ Font binaries successfully builded")
+        print("☺️ Font binaries successfully built")
     else:
         print("💔 Failed to build font binaries")
         sys.exit(1)
