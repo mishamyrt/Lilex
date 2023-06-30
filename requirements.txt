@@ -6,4 +6,4 @@ arrrgs==2.0.0
 ruff==0.0.259
 pylint==2.17.1
 colored==1.4.4
-fontbakery[freetype]==0.8.11
+fontbakery[freetype]==0.8.13

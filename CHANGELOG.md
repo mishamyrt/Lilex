@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.210 — Unreleased
+
+## Fixed
+
+* `Medium` naming.
+
 ## [2.200] — April 13, 2023
 
 ## Fixed
