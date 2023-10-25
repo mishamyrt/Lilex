@@ -1,9 +1,10 @@
-fontmake==3.5.1
+fontmake==3.7.1
 cu2qu==1.6.7
-gftools==0.9.27
-glyphsLib==6.2.1
+gftools==0.9.35
+glyphsLib==6.4.1
 arrrgs==2.0.0
-ruff==0.0.259
-pylint==2.17.1
-colored==1.4.4
-fontbakery[freetype]==0.8.13
+ruff==0.1.2
+pylint==3.0.2
+colored==2.2.3
+pylance==0.8.7
+fontbakery[freetype]==0.10.2

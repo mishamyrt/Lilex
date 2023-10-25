@@ -1,12 +1,12 @@
 """Powerline preview"""
-from typing import Tuple
 
-from colored import attr
+from colored import Style
 
 from .base import FeaturePreview
+
 
 class UnderlineFeature(FeaturePreview):
     name = "Underline alignment"
 
     def show(self):
-        print(f'{attr("underlined")}Te{attr("bold")}st{attr("reset")}')
+        print(f'{Style.underline}Te{Style.bold}st{Style.reset}')

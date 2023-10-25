@@ -3,7 +3,7 @@
 /venv/
 /.vscode
 /Lilex (Autosaved).glyphs
-/generator/__pycache__
+__pycache__
 .ruff_cache
 reports/
 bundle/

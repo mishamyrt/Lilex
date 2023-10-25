@@ -1,7 +1,7 @@
 """Feature preview base"""
 from typing import List
 
-from colored import attr
+from colored import Style
 
 
 class FeaturePreview():
@@ -15,5 +15,5 @@ class FeaturePreview():
 
 def print_features(features: List[FeaturePreview]):
     for fea in features:
-        print(f'{attr("bold")}{fea.name}{attr("reset")}')
+        print(f'{Style.BOLD}{fea.name}{Style.reset}')
         fea.show()

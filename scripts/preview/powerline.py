@@ -1,11 +1,10 @@
 """Powerline preview"""
 from typing import List, Tuple
 
-from colored import attr, bg, fg
+from colored import Style, back, fore
 
 from .base import FeaturePreview
 
-# (color, text)
 PowerlineEntry = Tuple[str, str]
 
 VC_BRANCH_CHAR = "\uE0A0"
@@ -51,15 +50,15 @@ class PowerlineFeature(FeaturePreview):
         for i, entry in enumerate(entries):
             (color, text) = entry
             content = f' {text.replace("/", f" {arrow} ")} '
-            template = f'{bg(color)}{fg("light_gray")}{content}'
+            template = f'{back(color)}{fore("light_gray")}{content}'
             if i == len(entries) - 1:
-                template += f'{attr("reset")}'
+                template += f'{Style.reset}'
             else:
-                template += f'{bg(entries[i+1][0])}'
-            template += f'{fg(color)}{arrow_black}'
+                template += f'{back(entries[i+1][0])}'
+            template += f'{fore(color)}{arrow_black}'
             line += template
         print(line)
 
     def _print_glyph(self, glyph: str, name: str, width=30):
         padding = ' ' * (width - len(name))
-        print(f'{fg("dark_gray")}{name}{attr("reset")}{padding}{glyph}')
+        print(f'{fore("dark_gray")}{name}{Style.reset}{padding}{glyph}')
