@@ -35,7 +35,7 @@ Compiled versions are available under [releases](https://github.com/mishamyrt/Li
 
 ## Weight
 
-There are 6 font weights available in Lilex, ranging from Thin to Bold. In addition, a variation font is available.
+There are 6 font weights available in Lilex, ranging from Thin to Bold. In addition, a variable font is available.
 
 <img src="./images/styles@2x.png">
 
