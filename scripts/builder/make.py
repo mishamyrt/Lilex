@@ -1,7 +1,7 @@
 """Make helpers"""
 import subprocess as sp
 from os import unlink
-from shutil import move
+from shutil import move, which
 
 STAT_CONFIG = 'STAT.yaml'
 
@@ -44,7 +44,7 @@ POST_FIXES = {
 def make(family_name: str, ds_path: str, fmt: str, out_dir: str, ) -> bool:
     """Wrapper for fontmake"""
     cmd = [
-        "fontmake",
+        which("fontmake"),
         f'-m "{ds_path}"',
         f'-o "{fmt}"',
         f'--output-dir "{out_dir}"',
