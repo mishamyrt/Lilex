@@ -1,7 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 2.210 — Unreleased
+## 2.300 — Unreleased
+
+## Added
+
+* `cv11` for connected bar with less or greater (`<|`, `|>`)
 
 ## Fixed
 
