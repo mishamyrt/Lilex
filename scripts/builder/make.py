@@ -10,9 +10,20 @@ def _run(*args: str) -> bool:
         child.communicate()
         return child.returncode == 0
 
+def _which(cmd: str) -> str:
+    """shutil.which that throws on None"""
+    result = which(cmd)
+    if result is None:
+        raise ValueError(f"""
+        Can't find {cmd}. Make sure you have venv configured with
+        `make configure` and activated. Alternatively, install {cmd}
+        externally and check by running `which {cmd}`.
+        """)
+    return result
+
 def _gftools(subcommand: str, *args: str) -> bool:
     """Runs gftools subcommand"""
-    return _run("gftools " + " ".join([subcommand, *args]))
+    return _run(_which("gftools"), subcommand, *args)
 
 def _fix_variable(font_dir, family_name) -> bool:
     """Generate STAT table for variable ttf"""
@@ -44,7 +55,7 @@ POST_FIXES = {
 def make(family_name: str, ds_path: str, fmt: str, out_dir: str, ) -> bool:
     """Wrapper for fontmake"""
     cmd = [
-        which("fontmake"),
+        _which("fontmake"),
         f'-m "{ds_path}"',
         f'-o "{fmt}"',
         f'--output-dir "{out_dir}"',
