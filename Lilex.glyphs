@@ -1,5 +1,5 @@
 {
-.appVersion = "3184";
+.appVersion = "3134";
 .formatVersion = 3;
 axes = (
 {
@@ -123,7 +123,7 @@ size = 6;
 },
 {
 pos = 363;
-size = -6;
+size = "-6";
 },
 {
 pos = 335;
@@ -131,15 +131,15 @@ size = 6;
 },
 {
 pos = 329;
-size = -6;
+size = "-6";
 },
 {
 pos = 0;
-size = -12;
+size = "-12";
 },
 {
-pos = -200;
-size = -12;
+pos = "-200";
+size = "-12";
 }
 );
 },
@@ -170,13 +170,13 @@ value = (
 name = "Axis Mappings";
 value = {
 wght = {
-100 = 100;
-200 = 200;
-300 = 300;
-400 = 400;
-500 = 500;
-600 = 600;
-700 = 700;
+"100" = 100;
+"200" = 200;
+"300" = 300;
+"400" = 400;
+"500" = 500;
+"600" = 600;
+"700" = 700;
 };
 };
 }
@@ -1038,13 +1038,20 @@ feature numr;
 feature ordn;
 feature sinf;
 feature ss01;
+feature ss02;
+feature ss03;
 feature sups;
-# feature zero; Ignore zero because cv02 will be used
+feature zero; 
 feature cv01;
-feature cv02;
+# feature cv02; Ignore cv02 because zero will be used
 feature cv03;
 feature cv04;
 feature cv05;
+feature cv06;
+feature cv07;
+feature cv08;
+feature cv09;
+feature cv10;
 feature calt;
 feature subs;
 feature dnom;
@@ -1072,12 +1079,6 @@ sub five [slash fraction] eight by uni215D;
 sub seven [slash fraction] eight by uni215E;
 sub one [slash fraction] nine by uni2151;
 ";
-labels = (
-{
-language = dflt;
-value = Fractions;
-}
-);
 tag = frac;
 },
 {
@@ -1215,72 +1216,36 @@ lookup MARK_BASE_topright {
     pos base t <anchor 387 760> mark @MC_topright;
 } MARK_BASE_topright;
 ";
-labels = (
-{
-language = dflt;
-value = "Mark positioning";
-}
-);
 tag = mark;
 },
 {
 code = "# Name: numerators
 sub @numbers_dflt by @numbers_numr;
 ";
-labels = (
-{
-language = dflt;
-value = numerators;
-}
-);
 tag = numr;
 },
 {
 code = "# Name: Ordinals
 sub [a o] by [ordfeminine ordmasculine];
 ";
-labels = (
-{
-language = dflt;
-value = Ordinals;
-}
-);
 tag = ordn;
 },
 {
 code = "# Name: Scientific inferiors
 sub @numbers_dflt by @numbers_sinf;
 ";
-labels = (
-{
-language = dflt;
-value = "Scientific inferiors";
-}
-);
 tag = sinf;
 },
 {
 code = "# Name: Superiors
 sub @numbers_dflt by @numbers_sups;
 ";
-labels = (
-{
-language = dflt;
-value = Superiors;
-}
-);
 tag = sups;
 },
 {
 code = "# Name: Slashed zero
 sub zero by zero.alt01;
 ";
-labels = (
-{
-language = dflt;
-value = "Slashed zero";
-}
-);
 tag = zero;
 },
 {
@@ -1315,6 +1280,7 @@ tag = dnom;
 },
 {
 code = "# Name: Form cases
+
 sub dieresis by dieresis.case;
 sub dotaccent by dotaccent.case;
 sub grave by grave.case;
@@ -1342,12 +1308,6 @@ sub dieresisgrave by dieresisgrave.case;
 sub dieresismacron by dieresismacron.case;
 sub hookcomb by hookcomb.case;
 sub ringacute by ringacute.case;";
-labels = (
-{
-language = dflt;
-value = "Form cases";
-}
-);
 tag = case;
 },
 {
@@ -1357,30 +1317,21 @@ tag = liga;
 },
 {
 code = "# Name: Alternate lowercase eszett
+
 sub germandbls by germandbls.alt01;
 ";
-labels = (
-{
-language = dflt;
-value = "Alternate lowercase eszett";
-}
-);
 tag = cv05;
 },
 {
 code = "# Name: Plain number zero
+
 sub zero by zero.alt02;
 ";
-labels = (
-{
-language = dflt;
-value = "Plain number zero";
-}
-);
 tag = cv04;
 },
 {
-code = "# Name: Restore <<= >>= ||= |= as arrows
+code = "# Name: Restore logical operations as arrows
+# Example: <<= >>= ||= |=
 lookup restore_greater_greater_equal {
   sub greater_greater_equal_start.seq equal' by equal_end.seq;
   sub greater_greater.liga' equal by greater_greater_equal_start.seq;
@@ -1401,94 +1352,59 @@ lookup restore_bar_equal {
   sub bar' equal by bar_equal_start.seq;
 } restore_bar_equal;
 ";
-labels = (
-{
-language = dflt;
-value = "Restore <<= >>= ||= |= as arrows";
-}
-);
 tag = ss01;
 },
 {
-code = "# Name: Simple lowercase a
+code = "# Name: One storey a
+
 sub @lca_dflt by @lca_alt1;
 sub @lca_cyrl_dflt by @lca_cyrl_alt1;
 ";
-labels = (
-{
-language = dflt;
-value = "Simple lowercase a";
-}
-);
 tag = cv01;
 },
 {
-code = "# Name: Lowercase g with low stem
+code = "# Name: Low stem g
+
 sub g by g.alt02;
 ";
-labels = (
-{
-language = dflt;
-value = "Lowercase g with low stem";
-}
-);
 tag = cv03;
 },
 {
-code = "# Name: Simple lowercase g
+code = "# Name: Open g
+
 sub @lcg_dflt by @lcg_alt1;
 ";
-labels = (
-{
-language = dflt;
-value = "Simple lowercase g";
-}
-);
 tag = cv02;
 },
 {
-code = "# Name: ~Original tilda~
+code = "# Name: Elongated tilda
+# Example: ~
+
 sub asciitilde by asciitilde.original;
 ";
-labels = (
-{
-language = dflt;
-value = "~Original tilda~";
-}
-);
 tag = cv06;
 },
 {
-code = "# Name: Original clock arrows
+code = "# Name: Vertically extended clock arrows
+# Example: ↻ ↺
+
 sub arrowuprightclock by arrowuprightclock.alt01;
 sub arrowupleftcounterclock by arrowupleftcounterclock.alt01;
 ";
-labels = (
-{
-language = dflt;
-value = "Original clock arrows";
-}
-);
 tag = cv07;
 },
 {
-code = "# Name: Gaps in equals
-
-sub equal_equal.liga by equal_equal.ss02;
-sub equal_equal_equal.liga by equal_equal_equal.ss02;
-sub exclam_equal.liga by exclam_equal.ss02;
-sub exclam_equal_equal.liga by exclam_equal_equal.ss02;
+code = "# Name: Broken equals ligatures
+# Example: != !==
+sub equal_equal.liga by equal_equal.liga.ss02;
+sub equal_equal_equal.liga by equal_equal_equal.liga.ss02;
+sub exclam_equal.liga by exclam_equal.liga.ss02;
+sub exclam_equal_equal.liga by exclam_equal_equal.liga.ss02;
 ";
-labels = (
-{
-language = dflt;
-value = "Gaps in equals";
-}
-);
 tag = ss02;
 },
 {
-code = "# Name: Thin backslash for regexps
+code = "# Name: Thin backslash
 # Example: \\n \\\\ 
 
 lookup backslash_thin {
@@ -1496,12 +1412,6 @@ lookup backslash_thin {
   sub backslash' by backslash.ss03;
 } backslash_thin;
 ";
-labels = (
-{
-language = dflt;
-value = "Thin backslash for regexps";
-}
-);
 tag = ss03;
 },
 {
@@ -1539,13 +1449,33 @@ lookup letter_combs {
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
 } letter_combs;
 ";
-labels = (
-{
-language = dflt;
-value = "Glyph Composition / Decomposition";
-}
-);
 tag = ccmp;
+},
+{
+code = "# Name: Classical greater/less then
+
+sub greater_equal.liga by greater_equal.liga.cv08;
+sub less_equal.liga by less_equal.liga.cv08;
+";
+tag = cv08;
+},
+{
+code = "# Name: Empty dollar and cent
+
+sub cent by cent.cv09;
+sub dollar by dollar.cv09;
+sub dollar_greater.liga by dollar_greater.liga.cv09;
+sub less_dollar.liga by less_dollar.liga.cv09;
+sub less_dollar_greater.liga by less_dollar_greater.liga.cv09;
+";
+tag = cv09;
+},
+{
+code = "# Name: High asterisk
+
+sub asterisk by asterisk.cv10;
+";
+tag = cv10;
 }
 );
 fontMaster = (
@@ -1632,6 +1562,7 @@ iconName = Light;
 id = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1642,6 +1573,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -1740,6 +1672,7 @@ pos = (342,304);
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1750,6 +1683,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -1850,6 +1784,7 @@ iconName = Bold;
 id = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1860,6 +1795,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -90461,7 +90397,7 @@ width = 600;
 unicode = 94;
 },
 {
-glyphname = infinity;
+glyphname = "infinity";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -115043,6 +114979,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -115075,6 +115012,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -115107,6 +115045,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -115146,6 +115085,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -115168,6 +115108,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -115190,6 +115131,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -115218,6 +115160,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -115234,6 +115177,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -115250,6 +115194,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -115273,6 +115218,7 @@ layers = (
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -115289,6 +115235,7 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -115305,6 +115252,7 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -125917,13 +125865,13 @@ shapes = (
 alignment = -1;
 pos = (-395,379);
 ref = s;
-scale = (0.6388,0.6388);
+scale = (0.639,0.639);
 },
 {
 alignment = -1;
 pos = (42,381);
 ref = t;
-scale = (0.6388,0.6388);
+scale = (0.639,0.639);
 }
 );
 width = 600;
@@ -125935,13 +125883,13 @@ shapes = (
 alignment = -1;
 pos = (-395,378);
 ref = s;
-scale = (0.6388,0.6388);
+scale = (0.639,0.639);
 },
 {
 alignment = -1;
 pos = (42,380);
 ref = t;
-scale = (0.6388,0.6388);
+scale = (0.639,0.639);
 }
 );
 width = 600;
@@ -125953,13 +125901,13 @@ shapes = (
 alignment = -1;
 pos = (-395,378);
 ref = s;
-scale = (0.6388,0.6388);
+scale = (0.639,0.639);
 },
 {
 alignment = -1;
 pos = (42,380);
 ref = t;
-scale = (0.6388,0.6388);
+scale = (0.639,0.639);
 }
 );
 width = 600;
@@ -126233,9 +126181,11 @@ name = ExtraLight;
 weightClass = 200;
 },
 {
+active = 0;
 axesValues = (
 300
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -126253,13 +126203,11 @@ value = (
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.66667;
 "C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.33333;
 };
 name = Light;
-visible = 0;
 weightClass = 300;
 },
 {
@@ -126345,9 +126293,11 @@ name = Medium;
 weightClass = 500;
 },
 {
+active = 0;
 axesValues = (
 600
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -126365,13 +126315,11 @@ value = (
 );
 }
 );
-exports = 0;
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.66667;
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.33333;
 };
 name = SemiBold;
-visible = 0;
 weightClass = 600;
 },
 {
@@ -126402,6 +126350,8 @@ name = Bold;
 weightClass = 700;
 }
 );
+kerningLTR = {
+};
 metrics = (
 {
 type = ascender;
