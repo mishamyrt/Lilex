@@ -14,7 +14,11 @@ def _which(cmd: str) -> str:
     """shutil.which that throws on None"""
     result = which(cmd)
     if result is None:
-        raise ValueError(f"Can't find {cmd}, check your PATH.")
+        raise ValueError(f"""
+        Can't find {cmd}. Make sure you have venv configured with
+        `make configure` and activated. Alternatively, install {cmd}
+        externally and check by running `which {cmd}`.
+        """)
     return result
 
 def _gftools(subcommand: str, *args: str) -> bool:
