@@ -52,9 +52,9 @@
   }
 
   @media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: var(--color-text-dark);
-    --color-background: var(--color-background-dark);
+    :root {
+      --color-content: var(--color-content-dark);
+      --color-background: var(--color-background-dark);
+    }
   }
-}
 </style>

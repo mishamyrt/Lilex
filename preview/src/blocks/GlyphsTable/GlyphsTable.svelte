@@ -1,10 +1,10 @@
 <script lang="ts">
   import { load, Font } from 'opentype.js'
   import { onMount } from 'svelte'
-  import { renderGlyphs } from '../utils/glyphs'
-  import type { Glyph } from '../utils/glyphs'
-  import RangeSlider from '../components/RangeSlider.svelte'
-  import Toolbar from '../components/Toolbar.svelte'
+  import { renderGlyphs } from '../../utils/glyphs'
+  import type { Glyph } from '../../utils/glyphs'
+  import RangeSlider from '../../components/RangeSlider.svelte'
+  import Toolbar from '../../components/Block/Toolbar.svelte'
 
   const VARIANTS = ['Thin', 'Regular', 'Bold']
 
@@ -75,6 +75,8 @@
     class:hover={hovered}>
     {#each glyphs as glyph}
       <div
+        role="button"
+        tabindex="0"
         on:click={() => handleClick(glyph)}
         on:keypress={() => handleClick(glyph)}
         on:mouseenter={handleHover}
@@ -110,7 +112,7 @@
     background-color: transparent;
     border: none;
     background-color: transparent;
-    color: var(--color-text);
+    color: var(--color-content);
     font-family: "Lilex";
     border-radius: 16px;
     padding: 6px 15px 5px;
@@ -119,7 +121,7 @@
 
   .variants-item button.active {
     pointer-events: none;
-    background-color: var(--color-text);
+    background-color: var(--color-content);
     color: var(--color-background);
   }
 
@@ -143,7 +145,7 @@
       display: block;
       width: calc(var(--width) - (var(--card-padding) * 2));
       height: var(--height);
-      fill: var(--color-text);
+      fill: var(--color-content);
       overflow: visible;
   }
 
@@ -159,7 +161,7 @@
     background-color: var(--color-card-background);
     padding: calc(var(--height) / 3) 0 10px 0;
     border-radius: 4px;
-    transition: opacity .3s ease-out;
+    transition: opacity var(--transition-default);
     overflow: hidden;
   }
 

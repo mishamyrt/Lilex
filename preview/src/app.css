@@ -4,15 +4,24 @@
 }
 
 :root {
-  --color-text-light: #212529;
-  --color-text-dark: #F3F3F3;
+  --color-content-light: #212529;
+  --color-content-dimmed-light: rgb(0 0 0 / 35%);
+  --color-accent-light: #226aff;
+  --color-content-dark: #F3F3F3;
+  --color-content-dimmed-dark: rgb(255 255 255 / 20%);
+  --color-accent-dark: #749FF8;
   --color-background-light: #F3F3F3;
   --color-background-dark: #242424;
-
-  --color-text: var(--color-text-light);
-  --color-background: var(--color-background-light);
   --font-family: "LilexVF";
-  --padding-layout: 24px;
+  --transition-default: .3s ease-out;
+  --transition-fast: .15s ease-out;
+  --space-2xl: 32px;
+  --space-xl: 24px;
+  --space-l: 16px;
+  --space-m: 12px;
+  --space-s: 8px;
+  --space-xs: 4px;
+  --padding-layout: var(--space-xl);
 
   font-family: 'Lilex';
   line-height: 1.5;
@@ -27,21 +36,29 @@
   -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: var(--color-text-dark);
-    --color-background: var(--color-background-dark);
-  }
-}
-
 * {
   box-sizing: border-box;
 }
+
 html {
     background-color: var(--color-background);
-    color: var(--color-text);
+    color: var(--color-content);
 }
 
 body {
   margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 14px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-content-dimmed);
+  border-radius: 20px;
+  border: 3px solid var(--color-background);
 }

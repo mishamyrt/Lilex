@@ -1,0 +1,46 @@
+<script lang="ts">
+  import { createEventDispatcher, onDestroy, onMount } from 'svelte'
+  import FeatureToggle from './FeatureToggle.svelte'
+  import { createFeaturesContext } from './context'
+
+  let unsubscribeFeatures
+
+  const dispatch = createEventDispatcher()
+  const { features } = createFeaturesContext()
+
+  onMount(() => {
+    unsubscribeFeatures = features.subscribe(value => {
+      dispatch('change', value)
+    })
+  })
+
+  onDestroy(() => {
+    unsubscribeFeatures()
+  })
+</script>
+
+<div class="container">
+  <FeatureToggle title="Alt g" symbols="g" variants={['cv02', 'cv03']} />
+  <FeatureToggle title="Alt zero" symbols="0" variants={['zero', 'cv04']} />
+  <FeatureToggle title="Barless units" symbols="$¢" variants={['cv09']} />
+  <FeatureToggle title="Alt arrows" symbols="↻" variants={['cv07']} />
+  <FeatureToggle title="High asterisk" symbols="*" variants={['cv10']} />
+  <FeatureToggle title="One storey a" symbols="a" variants={['cv01']} />
+  <FeatureToggle title="Alt tilda" symbols="~" variants={['cv06']} />
+  <FeatureToggle title="Alt eszett" symbols="ß" variants={['cv05']} />
+  <FeatureToggle title="More arrows" symbols="<<=" variants={['ss01']} />
+  <FeatureToggle title="Broken equals" symbols="!=" variants={['ss02']} />
+  <FeatureToggle title="Alt equality" symbols=">=" variants={['cv08']} />
+  <FeatureToggle title="Thin backslash" symbols="\\" variants={['ss03']} />
+  <FeatureToggle title="Connected bar" symbols="|>" variants={['cv11']} />
+</div>
+
+<style>
+  .container {
+    background-color: var(--color-background);
+    transition: background-color var(--transition-default);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+</style>

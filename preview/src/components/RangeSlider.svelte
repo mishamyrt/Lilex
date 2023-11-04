@@ -1,7 +1,7 @@
 <script lang="ts">
-	export let value
-	export let min
-	export let max
+	export let value: number
+	export let min: number
+	export let max: number
 </script>
 
 <div class="container">
@@ -23,18 +23,18 @@
   span {
     font-size: 15px;
     line-height: 16px;
-    color: var(--color-text);
+    color: var(--color-content);
   }
 
 	input[type=range] {
 		position: relative;
 		appearance: none;
-		width: 100%; /* Specific width is required for Firefox. */
-		background: transparent; /* Otherwise white in Chrome */
+		width: 100%;
+		background: transparent;
 	}
 
 	input[type=range]::after {
-		background-color: var(--color-text);
+		background-color: var(--color-content);
     opacity: 0.3;
 		pointer-events: none;
 		width: 100%;
@@ -46,8 +46,6 @@
 		z-index: 11;
 	}
 
-	/* Special styling for WebKit/Blink */
-	/* input[type=range]::-moz-range-thumb, */
 	input[type=range]::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		z-index: 12;
@@ -56,8 +54,7 @@
 		height: 12px;
 		width: 12px;
 		border-radius: 50px;
-		background: var(--color-text);
+		background: var(--color-content);
 		cursor: pointer;
 	}
-
 </style>

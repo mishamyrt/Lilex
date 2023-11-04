@@ -1,9 +1,8 @@
 <script lang="ts">
-  import Glyphs from './parts/Glyphs.svelte'
-  import Tester from './parts/Tester.svelte'
+  import { GlyphsTable, TypeTester } from './blocks'
 </script>
 
 <main>
-    <Tester />
-    <Glyphs />
+  <TypeTester />
+  <GlyphsTable />
 </main>
