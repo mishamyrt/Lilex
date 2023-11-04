@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { execSync } from 'child_process'
 import { viteSingleFile } from 'vite-plugin-singlefile'
+import { resolve } from 'path'
 
 const FONTS_SOURCE = '../build'
 const FONTS_TARGET = './public'
@@ -22,5 +23,10 @@ export default defineConfig(() => {
   return {
     base: '',
     plugins: [svelte(), viteSingleFile()],
+    resolve: {
+      alias: {
+        $components: resolve(__dirname, 'src/components')
+      }
+    }
   }
 })
