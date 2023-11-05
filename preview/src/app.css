@@ -12,6 +12,8 @@
   --color-accent-dark: #749FF8;
   --color-background-light: #F3F3F3;
   --color-background-dark: #242424;
+  --color-background-overlay-dark: rgb(255 255 255 / 6%);
+  --color-background-overlay-light: rgb(0 0 0 / 6%);
   --font-family: "LilexVF";
   --transition-default: .3s ease-out;
   --transition-fast: .15s ease-out;

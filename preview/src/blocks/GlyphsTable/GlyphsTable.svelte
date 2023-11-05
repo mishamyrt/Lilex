@@ -1,10 +1,9 @@
 <script lang="ts">
-  import { load, Font } from 'opentype.js'
   import { onMount } from 'svelte'
-  import { renderGlyphs } from '../../utils/glyphs'
-  import type { Glyph } from '../../utils/glyphs'
-  import RangeSlider from '../../components/RangeSlider.svelte'
-  import Toolbar from '../../components/Block/Toolbar.svelte'
+  import { load, Font } from 'opentype.js'
+  import { RangeSlider, Block } from '$components'
+  import { renderGlyphs } from './render'
+  import Glyph from './Glyph.svelte'
 
   const VARIANTS = ['Thin', 'Regular', 'Bold']
 
@@ -14,6 +13,8 @@
 
   let fontSize = 70
   let hovered = false
+
+  let leaveTimeout: number
 
   $: height = fontSize + 30
   $: width = height * 1.3
@@ -27,34 +28,28 @@
       })
   })
 
-  function handleHover (e: MouseEvent) {
-    (e.target as HTMLDivElement).classList.add('hover')
+  function handleHover () {
     hovered = true
-  }
-
-  function handleClick (glyph: Glyph) {
-    if (glyph.unicode === undefined) {
-      return
+    if (leaveTimeout) {
+      window.clearTimeout(leaveTimeout)
     }
-    navigator.clipboard.writeText(String.fromCharCode(glyph.unicode))
   }
 
-  function handleLeave (e: MouseEvent) {
-    hovered = false
+  function handleLeave () {
+    leaveTimeout = window.setTimeout(() => {
+      hovered = false
+    }, 500)
   }
 
-  $: glyphs = (() => {
-    if (loading) {
-      return []
-    }
-    return renderGlyphs(fonts[selectedVariant])
-  })()
+  $: glyphs = loading || !(selectedVariant in fonts)
+    ? []
+    : renderGlyphs(fonts[selectedVariant])
 </script>
 
+
 {#if !loading}
-<div class="container">
-  <h1>Glyphs</h1>
-  <Toolbar>
+<Block title="Glyphs" dark={true}>
+  <svelte:fragment slot="toolbar">
     <RangeSlider bind:value={fontSize} min={50} max={150} />
     <ul class="variants">
       {#each VARIANTS as variant, i}
@@ -67,44 +62,22 @@
         </li>
       {/each}
     </ul>
-  </Toolbar>
+  </svelte:fragment>
   <div
-    style:--width="{width}px"
-    style:--height="{height}px"
+    style:--glyph-width="{width}px"
+    style:--glyph-height="{height}px"
     class="glyphs"
     class:hover={hovered}>
     {#each glyphs as glyph}
-      <div
-        role="button"
-        tabindex="0"
-        on:click={() => handleClick(glyph)}
-        on:keypress={() => handleClick(glyph)}
-        on:mouseenter={handleHover}
-        on:mouseleave={handleLeave}
-        class:clickable={glyph.unicode !== undefined}
-        class="glyph-container">
-        <div class="glyph-path">
-          {@html glyph.svg}
-        </div>
-        <span class="glyph-name">{glyph.name}</span>
+      <div class="glyph">
+        <Glyph on:mouseenter={handleHover} on:mouseleave={handleLeave} {glyph} />
       </div>
     {/each}
   </div>
-</div>
+</Block>
 {/if}
 
 <style>
-  h1 {
-    font-size: 7vw;
-    font-weight: 200;
-  }
-
-  .container {
-    --color-card-background: #282828;
-
-    padding: var(--padding-layout);
-  }
-
   .variants-item button {
     appearance: none;
     font-size: 15px;
@@ -128,25 +101,21 @@
   .glyphs {
     --card-padding: 16px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, var(--width));
+    grid-template-columns: repeat(auto-fill, var(--glyph-width));
     gap: 8px
   }
 
-  .glyphs.hover .glyph-container {
+  .glyph {
+    transition: opacity var(--transition-fast);
+  }
+
+  .glyphs.hover .glyph {
     opacity: 0.2;
   }
 
-  .glyph-path {
-    display: flex;
-    justify-content: center;
-  }
-
-  .glyph-path :global(svg) {
-      display: block;
-      width: calc(var(--width) - (var(--card-padding) * 2));
-      height: var(--height);
-      fill: var(--color-content);
-      overflow: visible;
+  .glyphs .glyph:hover {
+    opacity: 1;
+    transition: opacity 0s;
   }
 
   ul {
@@ -155,36 +124,5 @@
     padding: 0;
     gap: 8px;
     margin: 0;
-  }
-
-  .glyph-container {
-    background-color: var(--color-card-background);
-    padding: calc(var(--height) / 3) 0 10px 0;
-    border-radius: 4px;
-    transition: opacity var(--transition-default);
-    overflow: hidden;
-  }
-
-  .glyph-container.clickable {
-    cursor: pointer;
-  }
-
-  .glyphs .glyph-container:hover {
-    position: relative;
-    overflow: visible;
-    transition: opacity 0s;
-    opacity: 1;
-  }
-
-  .glyph-name {
-    font-size: 12px;
-    display: block;
-    text-align: center;
-    text-overflow: ellipsis;
-    line-height: 16px;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 12px;
-    mix-blend-mode: exclusion;
   }
 </style>
