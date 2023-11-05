@@ -86,7 +86,7 @@
     border: none;
     background-color: transparent;
     color: var(--color-content);
-    font-family: "Lilex";
+    font-family: var(--font-family);
     border-radius: 16px;
     padding: 6px 15px 5px;
     cursor: pointer;
