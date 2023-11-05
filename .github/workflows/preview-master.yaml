@@ -44,7 +44,7 @@ jobs:
   deploy:
     environment:
       name: Production
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://lilex.myrt.co
     runs-on: ubuntu-latest
     needs: publish
     steps:
