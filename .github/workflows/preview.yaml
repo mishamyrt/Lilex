@@ -28,6 +28,9 @@ jobs:
           name: Lilex
           path: build/
 
+      - name: Verify font files
+        run: ls -lah build/
+
       - name: Bootstrap
         run: |
           make configure_preview
