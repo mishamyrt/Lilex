@@ -50,6 +50,7 @@
     --color-accent: var(--color-accent-light);
     --color-background: var(--color-background-light);
     --color-background-overlay: var(--color-background-overlay-light);
+    --color-background-overlay-active: var(--color-background-overlay-active-light);
     --color-background-dimmed: var(--color-background-dimmed-light);
 
     font-family: var(--font-family);
@@ -65,6 +66,7 @@
       --color-accent: var(--color-accent-dark);
       --color-background: var(--color-background-dark);
       --color-background-overlay: var(--color-background-overlay-dark);
+      --color-background-overlay-active: var(--color-background-overlay-active-dark);
       --color-background-dimmed: var(--color-background-dimmed-dark);
 
       color-scheme: dark;

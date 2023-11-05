@@ -53,7 +53,7 @@
   .feature-wrapper {
     position: sticky;
     top: 48px;
-    max-height: calc(100vh - 55px);
+    max-height: calc(100vh - 85px);
     overflow-y: auto;
   }
 

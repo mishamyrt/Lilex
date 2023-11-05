@@ -13,7 +13,9 @@
   --color-background-light: #F3F3F3;
   --color-background-dark: #242424;
   --color-background-overlay-dark: rgb(255 255 255 / 6%);
+  --color-background-overlay-active-dark: rgb(255 255 255 / 15%);
   --color-background-overlay-light: rgb(0 0 0 / 6%);
+  --color-background-overlay-active-light: rgb(0 0 0 / 15%);
   --color-background-dimmed-light: rgb(0 0 0 / 35%);
   --color-background-dimmed-dark: rgb(255 255 255 / 20%);
   --font-family: "LilexVF";

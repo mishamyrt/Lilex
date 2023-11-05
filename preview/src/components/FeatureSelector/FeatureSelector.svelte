@@ -3,7 +3,7 @@
   import FeatureToggle from './FeatureToggle.svelte'
   import { createFeaturesContext } from './context'
 
-  let unsubscribeFeatures
+  let unsubscribeFeatures: () => void
 
   const dispatch = createEventDispatcher()
   const { features } = createFeaturesContext()
@@ -37,10 +37,9 @@
 
 <style>
   .container {
-    background-color: var(--color-background);
     transition: background-color var(--transition-default);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: var(--space-s) var(--space-m);
   }
 </style>

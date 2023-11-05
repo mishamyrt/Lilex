@@ -26,23 +26,29 @@ function emitClick () {
 <style>
   .code {
     color: var(--color-content-dimmed);
+    position: absolute;
+    bottom: -25px;
   }
 
   .variant {
+    padding: 5px 0;
     user-select: none;
     display: flex;
     flex-direction: column;
     flex: 1;
+    position: relative;
     align-items: center;
-    border: 1px solid;
-    border-color: var(--color-background-dimmed);
+    font-weight: 300;
+    border-radius: 4px;
+    background-color: transparent;
     margin-left: -1px;
     cursor: pointer;
-    transition: border-color 0.2s ease-out;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
   }
 
   .variant.selected {
-    border: 1px solid var(--color-accent);
+    background-color: var(--color-background-overlay-active);
+    cursor: default;
   }
 
   .preview {
@@ -50,14 +56,11 @@ function emitClick () {
     font-family: var(--font-family);
     font-size: 26px;
     color: var(--color-content);
+    line-height: 1;
   }
 
   .variant:hover .preview {
-    font-weight: 700;
-  }
-
-  .variant.selected .preview {
-    color: var(--color-accent);
+    font-weight: 600;
   }
 
   .variant:first-child {
@@ -73,5 +76,7 @@ function emitClick () {
 
   .code {
     font-size: 12px;
+    font-weight: 400;
+    color: var(--color-content-dimmed);
   }
 </style>

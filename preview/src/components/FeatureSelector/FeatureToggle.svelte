@@ -4,7 +4,7 @@
 
   export let title: string
   export let symbols: string
-  export let variants
+  export let variants: string[]
 
   let selected = ''
 
@@ -16,7 +16,7 @@
   }
 </script>
 
-<div>
+<div class="toggle">
   <span class="title">{title}</span>
   <div class="variants">
     <FeatureVariant
@@ -39,6 +39,13 @@
 <style>
   .variants {
     display: flex;
+    background-color: var(--color-background-overlay);
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  .toggle {
+    margin-bottom: 25px;
   }
 
   .title {
