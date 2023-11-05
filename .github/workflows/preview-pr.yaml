@@ -1,0 +1,39 @@
+name: Netlify Preview Deploy
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'synchronize']
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+    with:
+      preview: true
+  deploy:
+    environment:
+      name: PR preview
+      url: https://preview--lilex.netlify.app
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download preview
+        uses: actions/download-artifact@v3
+        with:
+          name: Preview
+          path: preview/dist
+
+      - name: Verify build
+        run: ls -lah preview/dist
+
+      - uses: jsmrcaga/action-netlify-deploy@master
+        id: deploy
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          deploy_alias: preview
+          build_directory: preview/dist
+          install_command: "echo Skipping installing the dependencies"
+          build_command: "echo Skipping building the web files"

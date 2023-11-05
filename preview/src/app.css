@@ -1,18 +1,33 @@
 @font-face {
-  font-family: "Lilex";
+  font-family: "LilexVF";
   src: url('./variable/Lilex-VF.ttf');
 }
 
 :root {
-  --color-text-light: #212529;
-  --color-text-dark: #F3F3F3;
+  --color-content-light: #010406;
+  --color-content-dimmed-light: rgb(0 0 0 / 40%);
+  --color-accent-light: #226aff;
+  --color-content-dark: #F3F3F3;
+  --color-content-dimmed-dark: rgb(255 255 255 / 40%);
+  --color-accent-dark: #749FF8;
   --color-background-light: #F3F3F3;
   --color-background-dark: #242424;
-
-  --color-text: var(--color-text-light);
-  --color-background: var(--color-background-light);
-  --font-family: "Lilex";
-  --padding-layout: 24px;
+  --color-background-overlay-dark: rgb(255 255 255 / 6%);
+  --color-background-overlay-active-dark: rgb(255 255 255 / 15%);
+  --color-background-overlay-light: rgb(0 0 0 / 6%);
+  --color-background-overlay-active-light: rgb(0 0 0 / 15%);
+  --color-background-dimmed-light: rgb(0 0 0 / 35%);
+  --color-background-dimmed-dark: rgb(255 255 255 / 20%);
+  --font-family: "LilexVF";
+  --transition-default: .3s ease-out;
+  --transition-fast: .15s ease-out;
+  --space-2xl: 32px;
+  --space-xl: 24px;
+  --space-l: 16px;
+  --space-m: 12px;
+  --space-s: 8px;
+  --space-xs: 4px;
+  --padding-layout: var(--space-xl);
 
   font-family: 'Lilex';
   line-height: 1.5;
@@ -27,21 +42,29 @@
   -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: var(--color-text-dark);
-    --color-background: var(--color-background-dark);
-  }
-}
-
 * {
   box-sizing: border-box;
 }
+
 html {
-    background-color: var(--color-background);
-    color: var(--color-text);
+  background-color: var(--color-background);
+  color: var(--color-content);
 }
 
 body {
   margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 14px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-content-dimmed);
+  border-radius: 20px;
+  border: 3px solid var(--color-background);
 }

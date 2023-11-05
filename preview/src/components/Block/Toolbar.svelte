@@ -13,6 +13,6 @@
     margin-top: -12px;
     padding: 12px 0;
     background-color: var(--color-background);
-    transition: background-color .3s ease-out;
+    transition: background-color var(--transition-default);
   }
 </style>

@@ -1,0 +1,16 @@
+name: Quality Assurance
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "!**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+    with:
+      check: true
+  

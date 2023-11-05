@@ -14,6 +14,9 @@ export function renderGlyphs (font: Font) {
   svgNode.setAttribute('viewBox', '0 0 162 71')
   for (let i = 0; i < font.glyphs.length; i++) {
     const glyph = font.glyphs.get(i)
+    if (!glyph.name) {
+      continue
+    }
     const path = glyph.getPath(0, 0, 162)
 
     svgNode.innerHTML = path.toSVG(10)
