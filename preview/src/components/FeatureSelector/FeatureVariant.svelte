@@ -35,7 +35,7 @@ function emitClick () {
     flex: 1;
     align-items: center;
     border: 1px solid;
-    border-color: var(--color-content-dimmed);
+    border-color: var(--color-background-dimmed);
     margin-left: -1px;
     cursor: pointer;
     transition: border-color 0.2s ease-out;

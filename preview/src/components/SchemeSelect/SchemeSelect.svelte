@@ -24,7 +24,7 @@
     width: 16px;
     height: 16px;
     border-radius: 16px;
-    border: 1px solid var(--color-content-dimmed);
+    border: 1px solid var(--color-background-dimmed);
 
     &.light {
       background-color: var(--color-background-light);

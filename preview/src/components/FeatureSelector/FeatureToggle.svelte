@@ -23,7 +23,7 @@
       bind:symbols
       on:click={() => setSelected('')}
       selected={selected === ''}
-      code="-"
+      code="—"
     />
     {#each variants as fea}
       <FeatureVariant

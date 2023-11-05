@@ -4,16 +4,18 @@
 }
 
 :root {
-  --color-content-light: #212529;
-  --color-content-dimmed-light: rgb(0 0 0 / 35%);
+  --color-content-light: #010406;
+  --color-content-dimmed-light: rgb(0 0 0 / 40%);
   --color-accent-light: #226aff;
   --color-content-dark: #F3F3F3;
-  --color-content-dimmed-dark: rgb(255 255 255 / 20%);
+  --color-content-dimmed-dark: rgb(255 255 255 / 40%);
   --color-accent-dark: #749FF8;
   --color-background-light: #F3F3F3;
   --color-background-dark: #242424;
   --color-background-overlay-dark: rgb(255 255 255 / 6%);
   --color-background-overlay-light: rgb(0 0 0 / 6%);
+  --color-background-dimmed-light: rgb(0 0 0 / 35%);
+  --color-background-dimmed-dark: rgb(255 255 255 / 20%);
   --font-family: "LilexVF";
   --transition-default: .3s ease-out;
   --transition-fast: .15s ease-out;
@@ -43,8 +45,8 @@
 }
 
 html {
-    background-color: var(--color-background);
-    color: var(--color-content);
+  background-color: var(--color-background);
+  color: var(--color-content);
 }
 
 body {
