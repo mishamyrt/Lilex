@@ -45,5 +45,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           deploy_alias: ${{ env.BRANCH_NAME }}
           build_directory: preview/dist
+          install_command: "echo Skipping installing the dependencies"
+          build_command: "echo Skipping building the web files"
 
 
