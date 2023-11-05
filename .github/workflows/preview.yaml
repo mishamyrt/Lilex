@@ -8,6 +8,9 @@ jobs:
   build-font:
     uses: ./.github/workflows/build.yaml
   build-preview:
+    environment:
+      name: PR preview
+      url: https://preview--lilex.netlify.app
     needs: build-font
     runs-on: ubuntu-latest
     permissions:
@@ -49,14 +52,3 @@ jobs:
           build_directory: preview/dist
           install_command: "echo Skipping installing the dependencies"
           build_command: "echo Skipping building the web files"
-
-      - name: Format comment
-        env:
-          DEPLOY_URL: ${{ steps.deploy.outputs.NETLIFY_PREVIEW_URL }}
-        run: echo "✅ Preview is [published]($DEPLOY_URL)" > message.md
-
-      - uses: mshick/add-pr-comment@v2
-        with:
-          message-path: message.md
-
-
