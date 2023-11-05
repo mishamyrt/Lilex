@@ -8,6 +8,7 @@ jobs:
   build-font:
     uses: ./.github/workflows/build.yaml
   build-preview:
+    needs: build-font
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
