@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .variants {
     display: flex;
     background-color: var(--color-background-overlay);

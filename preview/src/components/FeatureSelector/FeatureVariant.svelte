@@ -23,7 +23,7 @@ function emitClick () {
   <span class="code">{code}</span>
 </div>
 
-<style>
+<style lang="scss">
   .code {
     color: var(--color-content-dimmed);
     position: absolute;
