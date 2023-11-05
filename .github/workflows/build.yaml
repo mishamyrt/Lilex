@@ -1,7 +1,9 @@
-name: Build
-
 on:
-  - push
+  workflow_call:
+    inputs:
+      check:
+        default: false
+        type: boolean
 
 jobs:
   build:
@@ -22,11 +24,21 @@ jobs:
 
     - name: Build
       run: |
-        make bundle
-        rm bundle/Lilex.zip
+        make build
 
-    - name: Upload bundle
+    - name: Check
+      if: inputs.check
+      run: make check
+
+    - name: Upload build
       uses: actions/upload-artifact@v3
       with:
         name: Lilex
-        path: bundle/
+        path: build/
+    
+    - name: Upload reports
+      if: inputs.check
+      uses: actions/upload-artifact@v3
+      with:
+        name: Reports
+        path: reports/

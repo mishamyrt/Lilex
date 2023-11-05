@@ -59,10 +59,8 @@ build_preview:
 run_preview:
 	cd preview; pnpm run dev
 
-.PHONY: bundle
-bundle:
-	make build
-	make check
+.PHONY: pack-bundle
+pack-bundle:
 	rm -rf "$(BUNDLE_DIR)"
 	mkdir "$(BUNDLE_DIR)"
 # Copy fonts
@@ -70,6 +68,12 @@ bundle:
 # Copy reports
 	cp "$(REPORTS_DIR)/"* "$(BUNDLE_DIR)/"
 	cd "$(BUNDLE_DIR)"; zip -r Lilex.zip ./*
+
+.PHONY: bundle
+bundle:
+	make build
+	make check
+	make pack-bundle
 
 .PHONY: clean
 clean:
