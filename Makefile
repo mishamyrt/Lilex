@@ -8,11 +8,11 @@ GLYPHS_FILE = Lilex.glyphs
 
 OS := $(shell uname)
 
-define build_font
+define build-font
 	$(VENV) python scripts/lilex.py build $(1)
 endef
 
-define check_font
+define check-font
 	$(VENV) fontbakery check-universal \
 		--auto-jobs \
 		--html "$(REPORTS_DIR)/universal_$(1).html" \
@@ -23,15 +23,15 @@ configure: requirements.txt
 	rm -rf $(VENV_DIR)
 	make $(VENV_DIR)
 
-configure_preview: preview/*.yaml preview/*.json
+configure-preview: preview/*.yaml preview/*.json
 	cd preview; pnpm install
 
 .PHONY: check
 check:
-	make clean_reports
+	make clean-reports
 	mkdir "$(REPORTS_DIR)"
-	$(call check_font,"ttf")
-	$(call check_font,"variable")
+	$(call check-font,"ttf")
+	$(call check-font,"variable")
 
 .PHONY: lint
 lint:
@@ -48,15 +48,15 @@ generate:
 
 .PHONY: build
 build:
-	make clean_build
-	$(call build_font)
+	make clean-build
+	$(call build-font)
 
-.PHONY: build_preview
-build_preview:
+.PHONY: build-preview
+build-preview:
 	cd preview; pnpm run build
 
-.PHONY: run_preview
-run_preview:
+.PHONY: run-preview
+run-preview:
 	cd preview; pnpm run dev
 
 .PHONY: pack-bundle
@@ -77,37 +77,37 @@ bundle:
 
 .PHONY: clean
 clean:
-	make clean_build
-	make clean_reports
+	make clean-build
+	make clean-reports
 
-.PHONY: clean_build
-clean_build:
+.PHONY: clean-build
+clean-build:
 	rm -rf "$(BUILD_DIR)"
 
-.PHONY: clean_reports
-clean_reports:
+.PHONY: clean-reports
+clean-reports:
 	rm -rf "$(REPORTS_DIR)"
 
 .PHONY: ttf
 ttf:
-	$(call build_font,ttf)
+	$(call build-font,ttf)
 
 .PHONY: otf
 otf:
-	$(call build_font,otf)
+	$(call build-font,otf)
 
 .PHONY: variable
 variable:
-	$(call build_font,variable)
+	$(call build-font,variable)
 
 install:
-	make install_$(OS)
+	make install-$(OS)
 
-install_Darwin:
+install-Darwin:
 	rm -rf ~/Library/Fonts/Lilex
 	cp -r build/variable ~/Library/Fonts/Lilex
 
-install_Linux:
+install-Linux:
 	rm -rf ~/.fonts/Lilex
 	cp -r build/ttf ~/.fonts/Lilex
 
