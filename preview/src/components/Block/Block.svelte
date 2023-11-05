@@ -1,6 +1,6 @@
 <script lang="ts">
   import Toolbar from './Toolbar.svelte'
-  import { isDark } from './theme-utils'
+  import { isDark } from '$utils'
 
   export let dark: boolean = isDark()
 </script>
