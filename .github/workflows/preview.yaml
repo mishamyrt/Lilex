@@ -10,6 +10,8 @@ jobs:
   build-preview:
     needs: build-font
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -38,14 +40,23 @@ jobs:
       - name: Build preview
         run: make build_preview
 
-      - uses: nelonoel/branch-name@v1.0.1
       - uses: jsmrcaga/action-netlify-deploy@master
+        id: deploy
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          deploy_alias: ${{ env.BRANCH_NAME }}
+          deploy_alias: preview
           build_directory: preview/dist
           install_command: "echo Skipping installing the dependencies"
           build_command: "echo Skipping building the web files"
+
+      - name: Format comment
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.NETLIFY_PREVIEW_URL }}
+        run: echo "✅ Preview is [published]($DEPLOY_URL)" > message.md
+
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message-path: message.md
 
 
