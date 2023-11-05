@@ -5,43 +5,28 @@ on:
     types: ['opened', 'edited', 'synchronize']
 
 jobs:
-  build-font:
+  build:
     uses: ./.github/workflows/build.yaml
-  build-preview:
+    with:
+      preview: true
+  deploy:
     environment:
       name: PR preview
       url: https://preview--lilex.netlify.app
-    needs: build-font
+    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: '8.10.2'
-
-      - name: Download font build
+      - name: Download preview
         uses: actions/download-artifact@v3
         with:
-          name: Lilex
-          path: build/
+          name: Preview
+          path: preview/dist
 
-      - name: Verify font files
-        run: ls -lah build/
-
-      - name: Bootstrap
-        run: |
-          make configure_preview
-
-      - name: Build preview
-        run: make build_preview
+      - name: Verify build
+        run: ls -lah preview/dist
 
       - uses: jsmrcaga/action-netlify-deploy@master
         id: deploy

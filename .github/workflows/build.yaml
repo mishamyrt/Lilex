@@ -4,6 +4,9 @@ on:
       check:
         default: false
         type: boolean
+      preview:
+        default: false
+        type: boolean
 
 jobs:
   build:
@@ -17,18 +20,36 @@ jobs:
       with:
         python-version: '3.9' 
 
-    - name: Bootstrap
+    - name: Setup pnpm
+      if: inputs.preview
+      uses: pnpm/action-setup@v2
+      with:
+        version: '8.10.2'
+
+    - name: Bootstrap font builder
       run: |
-        sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev -y
+        sudo apt install -y \
+          python3-setuptools \
+          ttfautohint \
+          build-essential \
+          libffi-dev \
+          libgit2-dev
         make configure
 
+    - name: Bootstrap preview
+      if: inputs.preview
+      run: make configure_preview
+
     - name: Build
-      run: |
-        make build
+      run: make build
 
     - name: Check
       if: inputs.check
       run: make check
+      
+    - name: Build preview
+      if: inputs.preview
+      run: make build_preview
 
     - name: Upload build
       uses: actions/upload-artifact@v3
@@ -42,3 +63,10 @@ jobs:
       with:
         name: Reports
         path: reports/
+
+    - name: Upload preview
+      if: inputs.preview
+      uses: actions/upload-artifact@v3
+      with:
+        name: Preview
+        path: preview/dist
