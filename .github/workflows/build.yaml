@@ -38,7 +38,7 @@ jobs:
 
     - name: Bootstrap preview
       if: inputs.preview
-      run: make configure_preview
+      run: make configure-preview
 
     - name: Build
       run: make build
@@ -49,7 +49,7 @@ jobs:
       
     - name: Build preview
       if: inputs.preview
-      run: make build_preview
+      run: make build-preview
 
     - name: Upload build
       uses: actions/upload-artifact@v3
