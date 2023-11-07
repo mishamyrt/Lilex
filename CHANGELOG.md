@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 ## Fixed
 
 * `Medium` naming.
+* Vertical align for some arrow parts (`greater_greater_equal_end.seq`, `greater_greater_equal_middle.seq`)
 
 ## [2.200] — April 13, 2023
 
