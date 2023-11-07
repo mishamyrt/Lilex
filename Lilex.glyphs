@@ -1506,7 +1506,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 275;
+value = 403;
 },
 {
 name = hheaDescender;
@@ -1625,7 +1625,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 275;
+value = 403;
 },
 {
 name = hheaDescender;
@@ -1749,7 +1749,7 @@ value = 1025;
 },
 {
 name = winDescent;
-value = 275;
+value = 403;
 },
 {
 name = hheaDescender;
@@ -126398,7 +126398,7 @@ value = (
 },
 {
 name = "TTFAutohint options";
-value = "--increase-x-height=0";
+value = "--increase-x-height=0 -i";
 }
 );
 instanceInterpolations = {
