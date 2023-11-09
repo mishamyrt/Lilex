@@ -26,7 +26,7 @@
   <FeatureToggle title="Alt arrows" symbols="↻" variants={['cv07']} />
   <FeatureToggle title="High asterisk" symbols="*" variants={['cv10']} />
   <FeatureToggle title="One storey a" symbols="a" variants={['cv01']} />
-  <FeatureToggle title="Alt tilda" symbols="~" variants={['cv06']} />
+  <FeatureToggle title="Alt tilde" symbols="~" variants={['cv06']} />
   <FeatureToggle title="Alt eszett" symbols="ß" variants={['cv05']} />
   <FeatureToggle title="More arrows" symbols="<<=" variants={['ss01']} />
   <FeatureToggle title="Broken equals" symbols="!=" variants={['ss02']} />
