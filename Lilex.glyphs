@@ -1377,7 +1377,7 @@ sub @lcg_dflt by @lcg_alt1;
 tag = cv02;
 },
 {
-code = "# Name: Elongated tilda
+code = "# Name: Elongated tilde
 # Example: ~
 
 sub asciitilde by asciitilde.original;

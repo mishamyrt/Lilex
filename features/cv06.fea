@@ -1,4 +1,4 @@
-# Name: Elongated tilda
+# Name: Elongated tilde
 # Example: ~
 
 sub asciitilde by asciitilde.original;
