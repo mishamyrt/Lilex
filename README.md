@@ -26,6 +26,12 @@ Compiled versions are available under [releases](https://github.com/mishamyrt/Li
 2. In the `Editor: Font Family` input box type `Lilex`.
 3. To enable ligatures, go to `Editor: Font Ligatures`, click `Edit in settings.json`, and copy `"editor.fontLigatures": true` into file.
 
+If you want to enable stylistic sets, list them instead of `true`. Like:
+
+```json
+"editor.fontLigatures": "'calt', 'ss02', 'ss04'"
+```
+
 ### iTerm2
 1. From the `iTerm2` menu go to `Settings`. Under `Profiles`, find the `Text` tab.
 2. If you have more than one profile, select the one you want to change. Or change the default one (with an asterisk).
