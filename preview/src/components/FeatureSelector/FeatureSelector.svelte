@@ -33,6 +33,7 @@
   <FeatureToggle title="Alt equality" symbols=">=" variants={['cv08']} />
   <FeatureToggle title="Thin backslash" symbols="\\" variants={['ss03']} />
   <FeatureToggle title="Connected bar" symbols="|>" variants={['cv11']} />
+  <FeatureToggle title="Broken #" symbols="##" variants={['ss04']} />
 </div>
 
 <style>

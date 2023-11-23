@@ -7,4 +7,4 @@ ruff==0.1.2
 pylint==3.0.2
 colored==2.2.3
 pylance==0.8.7
-fontbakery[freetype]==0.10.3
+fontbakery[freetype]==0.10.4
