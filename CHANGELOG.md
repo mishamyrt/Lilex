@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.400 — Unreleased
+
+## Added
+
+* `ss04` for broken number signs (`####`)
+
 ## [2.300] — November 7, 2023
 
 ## Added
