@@ -1614,6 +1614,7 @@ stemValues = (
 24,
 58
 );
+visible = 1;
 },
 {
 axesValues = (
@@ -63458,7 +63459,7 @@ width = 600;
 },
 {
 glyphname = asterisk_slash.liga;
-lastChange = "2023-03-24 20:17:54 +0000";
+lastChange = "2023-11-23 20:07:27 +0000";
 layers = (
 {
 guides = (
@@ -63470,11 +63471,11 @@ pos = (-600,636);
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 shapes = (
 {
-pos = (-35,0);
+pos = (-85,0);
 ref = slash;
 },
 {
-pos = (-511,0);
+pos = (-600,0);
 ref = asterisk;
 }
 );
@@ -63484,11 +63485,11 @@ width = 600;
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 shapes = (
 {
-pos = (-35,0);
+pos = (-86,0);
 ref = slash;
 },
 {
-pos = (-511,0);
+pos = (-600,0);
 ref = asterisk;
 }
 );
@@ -63498,11 +63499,11 @@ width = 600;
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 shapes = (
 {
-pos = (-35,0);
+pos = (-78,0);
 ref = slash;
 },
 {
-pos = (-511,0);
+pos = (-600,0);
 ref = asterisk;
 }
 );
@@ -64790,7 +64791,7 @@ width = 600;
 },
 {
 glyphname = slash_asterisk.liga;
-lastChange = "2023-03-24 20:17:08 +0000";
+lastChange = "2023-11-23 20:13:29 +0000";
 layers = (
 {
 guides = (
@@ -64810,11 +64811,10 @@ pos = (279,-243);
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 shapes = (
 {
-pos = (-546,0);
+pos = (-521,0);
 ref = slash;
 },
 {
-pos = (-86,0);
 ref = asterisk;
 }
 );
@@ -64824,11 +64824,10 @@ width = 600;
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 shapes = (
 {
-pos = (-546,0);
+pos = (-522,0);
 ref = slash;
 },
 {
-pos = (-86,0);
 ref = asterisk;
 }
 );
@@ -64838,11 +64837,10 @@ width = 600;
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 shapes = (
 {
-pos = (-546,0);
+pos = (-515,0);
 ref = slash;
 },
 {
-pos = (-86,0);
 ref = asterisk;
 }
 );

@@ -5,25 +5,29 @@ All notable changes to this project will be documented in this file.
 
 ## Added
 
-* `ss04` for broken number signs (`####`)
+* `ss04` for broken number signs. (`####`) [#28](https://github.com/mishamyrt/Lilex/pull/28)
+
+## Fixed
+
+* Aligning slash asterisk sequences. (`/*`, `*/`) [#29](https://github.com/mishamyrt/Lilex/pull/29)
 
 ## [2.300] — November 7, 2023
 
 ## Added
 
-* `cv11` for connected bar with less or greater (`<|`, `|>`)
+* `cv11` for connected bar with less or greater. (`<|`, `|>`)
 
 ## Fixed
 
 * `Medium` naming.
-* Vertical align for some arrow parts (`greater_greater_equal_end.seq`, `greater_greater_equal_middle.seq`)
+* Vertical align for some arrow parts. (`greater_greater_equal_end.seq`, `greater_greater_equal_middle.seq`)
 
 ## [2.200] — April 13, 2023
 
 ## Fixed
 
 * Long `----` and `====` are no longer breaking in iTerm2.
-* Metrics (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`, `panose`).
+* Metrics. (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`, `panose`)
 * Width of some glyphs.
 * `fsSelection` and `macStyle`.
 * Arrows with `ss01`.
@@ -40,7 +44,7 @@ All notable changes to this project will be documented in this file.
 * `<>`, `|>`, `<|`, `<+>`, `||>`, `<||`, `|||`.
 * `<$`, `$>`, `<$>`.
 * Generated bar-underscores `_|_|_`.
-* Powerline support (`uniE0A0`, `uniE0A2`, `uniE0B0`, `uniE0B1`, `uniE0B2`, `uniE0B3`).
+* Powerline support. (`uniE0A0`, `uniE0A2`, `uniE0B0`, `uniE0B1`, `uniE0B2`, `uniE0B3`)
 * ExtraThick weight (Read [commit](https://github.com/mishamyrt/Lilex/commit/fe983370a278eca78a27434f2ddbf75e8505e8ed) message).
 * Fontbakery reports to bundle.
 * `ss02` for gap in equals (`==`, `!=`, `===`, `!==`).
