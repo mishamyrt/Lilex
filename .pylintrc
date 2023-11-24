@@ -2,3 +2,5 @@
 disable=
     C0115, # missing-class-docstring
     C0116, # missing-function-docstring
+    R0903, # too-few-public-methods
+    R1713, # consider-using-join
