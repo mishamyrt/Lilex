@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ## Added
 
 * `ss04` for broken number signs. (`####`) [#28](https://github.com/mishamyrt/Lilex/pull/28)
+* `(*`, `*)`.
 
 ## Fixed
 
