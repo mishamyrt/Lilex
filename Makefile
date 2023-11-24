@@ -37,6 +37,7 @@ check:
 lint:
 	$(VENV) ruff scripts/
 	$(VENV) pylint scripts/
+	cd preview; pnpm eslint 'src/**/*.{svlete,ts}'
 
 .PHONY: preview
 preview:
