@@ -7,11 +7,12 @@ from colored import Style
 class FeaturePreview():
     """Feature preview baseclass"""
     name: str = ""
+
     def __init__(self) -> None:
-        pass
+        """Initialized feature"""
 
     def show(self):
-        pass
+        """Prints feature"""
 
 def print_features(features: List[FeaturePreview]):
     for fea in features:

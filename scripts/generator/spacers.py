@@ -3,6 +3,7 @@ from typing import List
 
 from glyphsLib import GSGlyph
 
+
 def _required_spacers(name: str) -> List[str]:
     return name.split("_")[0:-1]
 
