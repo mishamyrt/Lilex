@@ -13,4 +13,5 @@ jobs:
     uses: ./.github/workflows/build.yaml
     with:
       check: true
+      preview: true
   

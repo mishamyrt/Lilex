@@ -46,6 +46,10 @@ jobs:
     - name: Check
       if: inputs.check
       run: make check
+
+    - name: Lint
+      if: inputs.preview && inputs.check
+      run: make lint
       
     - name: Build preview
       if: inputs.preview
