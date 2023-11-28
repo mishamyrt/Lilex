@@ -26,6 +26,11 @@ configure: requirements.txt
 configure-preview: preview/*.yaml preview/*.json
 	cd preview; pnpm install
 
+.PHONY: print-updates
+print-updates:
+	$(VENV) pip list --outdated
+	cd preview; pnpm outdated
+
 .PHONY: check
 check:
 	make clean-reports
