@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.500 — Unreleased
+
+## Added
+
+* Add [power symbols](https://unicodepowersymbol.com/).
+
 ## [2.400] — December 17, 2023
 
 ## Added
