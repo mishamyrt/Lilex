@@ -1,10 +1,6 @@
 {
 .appVersion = "3134";
 .formatVersion = 3;
-DisplayStrings = (
-"/zero.tosf.alt01",
-"/zero.tosf.alt02"
-);
 axes = (
 {
 name = Weight;
@@ -91474,45 +91470,9 @@ width = 600;
 unicode = 8470;
 },
 {
-glyphname = ampersand.spacer;
-layers = (
-{
-layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
-width = 600;
-},
-{
-layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
-width = 600;
-},
-{
-layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
-width = 600;
-}
-);
-},
-{
-glyphname = bar.spacer;
-lastChange = "2023-03-29 20:21:50 +0000";
-layers = (
-{
-layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
-width = 600;
-},
-{
-layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
-width = 600;
-},
-{
-layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
-width = 600;
-}
-);
-},
-{
 color = 10;
-export = 0;
 glyphname = powerSymbol;
-lastChange = "2024-03-17 20:39:13 +0000";
+lastChange = "2024-05-07 18:50:45 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -91662,9 +91622,8 @@ width = 600;
 unicode = 9211;
 },
 {
-export = 0;
 glyphname = powerOnOffSymbol;
-lastChange = "2024-03-17 20:39:13 +0000";
+lastChange = "2024-05-07 18:50:45 +0000";
 layers = (
 {
 guides = (
@@ -91734,9 +91693,8 @@ width = 600;
 unicode = 9212;
 },
 {
-export = 0;
 glyphname = heavyCircle;
-lastChange = "2024-03-17 20:39:13 +0000";
+lastChange = "2024-05-07 18:50:45 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -91862,9 +91820,8 @@ width = 600;
 unicode = 11096;
 },
 {
-export = 0;
 glyphname = powerOnSymbol;
-lastChange = "2024-03-17 20:39:13 +0000";
+lastChange = "2024-05-07 18:50:45 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -91903,9 +91860,8 @@ width = 600;
 unicode = 9213;
 },
 {
-export = 0;
 glyphname = powerSleepSymbol;
-lastChange = "2024-03-17 20:39:13 +0000";
+lastChange = "2024-05-07 18:50:45 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -92002,6 +91958,41 @@ width = 600;
 }
 );
 unicode = 9214;
+},
+{
+glyphname = ampersand.spacer;
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+width = 600;
+}
+);
+},
+{
+glyphname = bar.spacer;
+lastChange = "2023-03-29 20:21:50 +0000";
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+width = 600;
+}
+);
 },
 {
 glyphname = Euro;
