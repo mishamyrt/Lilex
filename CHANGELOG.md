@@ -7,6 +7,11 @@ All notable changes to this project will be documented in this file.
 
 * Add [power symbols](https://unicodepowersymbol.com/).
 
+## Fixed
+
+* No more arrows breaking on Windows with TTF.
+* Subpixel arrow shifts in small sizes
+
 ## [2.400] — December 17, 2023
 
 ## Added
