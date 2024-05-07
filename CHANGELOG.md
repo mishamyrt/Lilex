@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 
 * Add [power symbols](https://unicodepowersymbol.com/).
 * Add pre-1918 missing cyrillic. (`Ѣ`, `ѣ`, `Ѵ`, `ѵ`)
+* Math ratio symbol. (`uni2236`)
 
 ## Fixed
 
