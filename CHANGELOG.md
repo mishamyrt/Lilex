@@ -10,7 +10,11 @@ All notable changes to this project will be documented in this file.
 ## Fixed
 
 * No more arrows breaking on Windows with TTF.
-* Subpixel arrow shifts in small sizes
+
+## Improved
+
+* Subpixel equal combinations shifts in small sizes.
+* Shape for cyrillic fita. (uni0473, uni0472)
 
 ## [2.400] — December 17, 2023
 
