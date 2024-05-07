@@ -1,2 +1,4 @@
 # Name: Slashed zero
+
 sub zero by zero.alt01;
+sub zero.tosf by zero.tosf.alt01;

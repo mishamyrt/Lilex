@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 * Dashes. (`uni2010`—`uni2015`)
 * Spaces. (`uni2028`, `uni2029`, `uni202F`, `uni2008`, `uni200A`, `uni200B`)
 * Abkhazian cyrillic letters. (`Ӷӷ`, `Ӡӡ`, `Ҟҟ`, `Ԥԥ`, `Ҧҧ`, `Ҭҭ`, `Ҵҵ`, `Ҽҽ`, `Ҿҿ`, `Ҩҩ`)
+* Old-style numerals. (`onum`)
 
 ## Fixed
 

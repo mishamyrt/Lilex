@@ -1,3 +1,4 @@
 # Name: Plain number zero
 
 sub zero by zero.alt02;
+sub zero.tosf by zero.tosf.alt02;

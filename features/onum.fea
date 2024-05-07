@@ -1,0 +1,3 @@
+# Name: Old-style numerals
+
+sub @numbers_dflt by @numbers_onum;
