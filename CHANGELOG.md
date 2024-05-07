@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ## Added
 
 * Add [power symbols](https://unicodepowersymbol.com/).
+* Add pre-1918 missing cyrillic. (`Ѣ`, `ѣ`, `Ѵ`, `ѵ`)
 
 ## Fixed
 
