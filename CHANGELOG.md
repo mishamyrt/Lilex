@@ -6,11 +6,12 @@ All notable changes to this project will be documented in this file.
 ## Added
 
 * [Power symbols](https://unicodepowersymbol.com/).
-* Pre-1918 missing cyrillic. (`Ѣ`, `ѣ`, `Ѵ`, `ѵ`)
+* Pre-1918 missing cyrillic. (`Ѣѣ`, `Ѵѵ`)
 * Math ratio symbol. (`uni2236`)
 * Bullet operator symbol. (`∙`)
 * Dashes. (`uni2010`—`uni2015`)
 * Spaces. (`uni2028`, `uni2029`, `uni202F`, `uni2008`, `uni200A`, `uni200B`)
+* Abkhazian cyrillic letters. (`Ӷӷ`, `Ӡӡ`, `Ҟҟ`, `Ԥԥ`, `Ҧҧ`, `Ҭҭ`, `Ҵҵ`, `Ҽҽ`, `Ҿҿ`, `Ҩҩ`)
 
 ## Fixed
 
