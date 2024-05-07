@@ -14,7 +14,8 @@ All notable changes to this project will be documented in this file.
 ## Improved
 
 * Subpixel equal combinations shifts in small sizes.
-* Shape for cyrillic fita. (uni0473, uni0472)
+* Shapes for cyrillic fita. (`Ѳ`, `ѳ`)
+* Shapes for cyrillic es with descender. (`Ҫ`, `ҫ`)
 
 ## [2.400] — December 17, 2023
 
