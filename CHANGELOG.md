@@ -9,7 +9,8 @@ All notable changes to this project will be documented in this file.
 * Pre-1918 missing cyrillic. (`Ѣ`, `ѣ`, `Ѵ`, `ѵ`)
 * Math ratio symbol. (`uni2236`)
 * Bullet operator symbol. (`∙`)
-* `uni2010`—`uni2015` dashes.
+* Dashes. (`uni2010`—`uni2015`)
+* Spaces. (`uni2028`, `uni2029`, `uni202F`, `uni2008`, `uni200A`, `uni200B`)
 
 ## Fixed
 
