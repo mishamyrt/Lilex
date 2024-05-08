@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 ## Fixed
 
 * No more arrows breaking on Windows with TTF.
+* Greek support.
 
 ## Improved
 
