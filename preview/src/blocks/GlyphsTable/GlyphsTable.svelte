@@ -13,20 +13,12 @@
 
   let fontSize = 70
   let hovered = false
+  let scrolled = false
 
   let leaveTimeout: number
 
   $: height = fontSize + 30
   $: width = height * 1.3
-
-  onMount(() => {
-    const requests = VARIANTS.map(v => load(`./ttf/Lilex-${v}.ttf`))
-    Promise.all(requests)
-      .then(masters => {
-        fonts.push(...masters)
-        loading = false
-      })
-  })
 
   function handleHover () {
     hovered = true
@@ -40,6 +32,29 @@
       hovered = false
     }, 500)
   }
+
+  function handleScroll () {
+    if (!scrolled) {
+      scrolled = true
+      setTimeout(() => {
+        scrolled = false
+      }, 300)
+    }
+  }
+
+  onMount(() => {
+    const requests = VARIANTS.map(v => load(`./ttf/Lilex-${v}.ttf`))
+    Promise.all(requests)
+      .then(masters => {
+        fonts.push(...masters)
+        loading = false
+      })
+
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  })
 
   $: glyphs = loading || !(selectedVariant in fonts)
     ? []
@@ -67,7 +82,7 @@
     style:--glyph-width="{width}px"
     style:--glyph-height="{height}px"
     class="glyphs"
-    class:hover={hovered}>
+    class:hover={!scrolled && hovered}>
     {#each glyphs as glyph}
       <div class="glyph">
         <Glyph on:mouseenter={handleHover} on:mouseleave={handleLeave} {glyph} />
