@@ -145902,7 +145902,7 @@ type = descender;
 type = "x-height";
 }
 );
-note = "Based on IBM Plex Mono v6.0.0";
+note = "Based on IBM Plex v6.4.0";
 properties = (
 {
 key = copyrights;
@@ -146009,5 +146009,5 @@ tH = 19;
 };
 };
 versionMajor = 2;
-versionMinor = 400;
+versionMinor = 500;
 }
