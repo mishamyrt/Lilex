@@ -29,3 +29,34 @@ lookup locl_latn_2 {
 	sub iacute j' by jacute;
 	sub Iacute J' by Jacute;
 } locl_latn_2;
+
+lookup locl_cyr_bgr {
+    script cyrl;
+    # Bulgarian
+    language BGR;
+	sub uni0432 by uni0432.loclBGR;
+	sub uni0433 by uni0433.loclBGR;
+	sub uni0434 by uni0434.loclBGR;
+	sub uni0436 by uni0436.loclBGR;
+	sub uni0437 by uni0437.loclBGR;
+	sub uni0438 by uni0438.loclBGR;
+	sub uni0439 by uni0439.loclBGR;
+	sub uni043A by uni043A.loclBGR;
+	sub uni043B by uni043B.loclBGR;
+	sub uni043F by uni043F.loclBGR;
+	sub uni0442 by uni0442.loclBGR;
+	sub uni0444 by uni0444.loclBGR;
+	sub uni0446 by uni0446.loclBGR;
+	sub uni0448 by uni0448.loclBGR;
+	sub uni0449 by uni0449.loclBGR;
+	sub uni044A by uni044A.loclBGR;
+	sub uni044C by uni044C.loclBGR;
+	sub uni044E by uni044E.loclBGR;
+	sub uni044F by uni044F.loclBGR;
+	sub uni0414 by uni0414.loclBGR;
+	sub uni041A by uni041A.loclBGR;
+	sub uni041B by uni041B.loclBGR;
+	sub uni0424 by uni0424.loclBGR;
+	sub uni042F by uni042F.loclBGR;
+	sub uni045D by uni045D.loclBGR;
+} locl_cyr_bgr;
