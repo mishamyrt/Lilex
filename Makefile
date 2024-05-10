@@ -13,8 +13,9 @@ define build-font
 endef
 
 define check-font
-	$(VENV) fontbakery check-universal \
+	$(VENV) fontbakery check-googlefonts \
 		--auto-jobs \
+		--full-lists \
 		--html "$(REPORTS_DIR)/universal_$(1).html" \
 		"$(BUILD_DIR)/$(1)/"*
 endef
