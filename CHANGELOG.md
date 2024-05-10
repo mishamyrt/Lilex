@@ -7,6 +7,14 @@ All notable changes to this project will be documented in this file.
 
 * One storey alpha. (`α`, `ά`)
 
+## Fixed
+
+* Variable font interpolation problems for some glyphs.
+
+## Removed
+
+* Some unreachable glyphs.
+
 ## [2.500] — May 9, 2024
 
 ## Added
