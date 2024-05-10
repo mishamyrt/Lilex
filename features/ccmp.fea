@@ -21,12 +21,12 @@ lookup letter_combs {
     sub g commabelowcomb' by commaturnedtopcomb; # /gcommaaccent
 
     # Soft-dotted
-    sub i' @acc_comb_top by dotlessi;
-    sub i' @acc_comb_bottom @acc_comb_top by dotlessi;
-    sub uni0456' @acc_comb_top by dotlessi;
-    sub uni0456' @acc_comb_bottom @acc_comb_top by dotlessi;
-    sub iogonek' @acc_comb_top by dotlessiogonek;
-    sub idotbelow' @acc_comb_top by dotlessidotbelow;
+    sub i' @acc_comb_top by idotless;
+    sub i' @acc_comb_bottom @acc_comb_top by idotless;
+    sub i-cy' @acc_comb_top by idotless;
+    sub i-cy' @acc_comb_bottom @acc_comb_top by idotless;
+    sub iogonek' @acc_comb_top by idotlessogonek;
+    sub idotbelow' @acc_comb_top by idotlessdotbelow;
     sub j' @acc_comb_top by dotlessj;
     sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents

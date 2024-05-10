@@ -1,5 +1,5 @@
 # Name: Vertically extended clock arrows
 # Example: ↻ ↺
 
-sub arrowuprightclock by arrowuprightclock.alt01;
-sub arrowupleftcounterclock by arrowupleftcounterclock.alt01;
+sub upArrowrightclock by upArrowrightclock.alt01;
+sub upArrowleftcounterclock by upArrowleftcounterclock.alt01;

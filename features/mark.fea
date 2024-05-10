@@ -14,7 +14,7 @@ lookup MARK_BASE_bottom {
     @bGC_F_bottom = [F P];
     @bGC_c_bottom = [c h n];
     @bGC_f_bottom = [f C R];
-    @bGC_i_bottom = [i dotlessi];
+    @bGC_i_bottom = [i idotless];
     @bGC_l_bottom = [l m o v w x z A G H I M N O T U V W X Y Z ohorn Ohorn Uhorn];
     @bGC_u_bottom = [u S uhorn];
     pos base @bGC_D_bottom <anchor 277 0> mark @MC_bottom;
@@ -42,7 +42,7 @@ lookup MARK_BASE_bottom {
 
 
 lookup MARK_BASE_bottomright {
-    @bGC_i_bottomright = [i dotlessi];
+    @bGC_i_bottomright = [i idotless];
     pos base @bGC_i_bottomright <anchor 546 0> mark @MC_bottomright;
     pos base A <anchor 570 0> mark @MC_bottomright;
     pos base E <anchor 520 0> mark @MC_bottomright;
@@ -78,7 +78,7 @@ lookup MARK_BASE_top {
     pos base S <anchor 298 698> mark @MC_top;
     pos base a <anchor 283 516> mark @MC_top;
     pos base c <anchor 313 516> mark @MC_top;
-    pos base dotlessi <anchor 332 516> mark @MC_top;
+    pos base idotless <anchor 332 516> mark @MC_top;
     pos base dotlessj <anchor 392 516> mark @MC_top;
     pos base e <anchor 302 516> mark @MC_top;
     pos base h <anchor 138 698> mark @MC_top;
