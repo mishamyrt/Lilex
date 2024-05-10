@@ -41,7 +41,7 @@ class GlyphsFont:
                 ligatures.append(glyph.name)
         return ligatures
 
-    def glyphs(self, _filter: GlyphFilter) -> List[GSGlyph]:
+    def glyphs(self, _filter: GlyphFilter = lambda x: True) -> List[GSGlyph]:
         """Returns a list of glyphs that match filter"""
         result = []
         for glyph in self._font.glyphs:
