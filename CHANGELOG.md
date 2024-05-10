@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.510 — Unreleased
+
+## Added
+
+* One storey alpha. (`α`, `ά`)
+
 ## [2.500] — May 9, 2024
 
 ## Added
