@@ -59,6 +59,7 @@ def make(family_name: str, ds_path: str, fmt: str, out_dir: str, ) -> bool:
         f'-m "{ds_path}"',
         f'-o "{fmt}"',
         f'--output-dir "{out_dir}"',
+        "--flatten-components",
         "--autohint",
         "--filter DecomposeTransformedComponentsFilter"
     ]
