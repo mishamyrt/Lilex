@@ -11,3 +11,4 @@ pylance==0.8.17
 fontbakery[freetype]==0.12.5
 dehinter==4.0.0
 shaperglot==0.5.0
+uharfbuzz==0.39.1
