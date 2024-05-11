@@ -13,10 +13,10 @@ define build-font
 endef
 
 define check-font
-	$(VENV) fontbakery check-googlefonts \
+	$(VENV) fontbakery check-$(2) \
 		--auto-jobs \
 		--full-lists \
-		--html "$(REPORTS_DIR)/universal_$(1).html" \
+		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
 		"$(BUILD_DIR)/$(1)/"*
 endef
 
@@ -34,10 +34,22 @@ print-updates:
 
 .PHONY: check
 check:
+# "Hide" ExtraThick from checker
+ifneq ("$(wildcard $(BUILD_DIR)/ttf/Lilex-ExtraThick.ttf)","")
+	mv \
+		"$(BUILD_DIR)/ttf/Lilex-ExtraThick.ttf" \
+		"$(BUILD_DIR)/Lilex-ExtraThick.ttf.bak"
+endif
 	make clean-reports
 	mkdir "$(REPORTS_DIR)"
-	$(call check-font,"ttf")
-	$(call check-font,"variable")
+	$(call check-font,"ttf","googlefonts")
+	$(call check-font,"variable","adobefonts")
+# Restore ExtraThick
+ifneq ("$(wildcard $(BUILD_DIR)/Lilex-ExtraThick.ttf.bak)","")
+	mv \
+		"$(BUILD_DIR)/Lilex-ExtraThick.ttf.bak" \
+		"$(BUILD_DIR)/ttf/Lilex-ExtraThick.ttf"
+endif
 
 .PHONY: lint
 lint:
