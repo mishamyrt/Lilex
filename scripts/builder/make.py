@@ -33,7 +33,7 @@ def _fix_variable(font_dir, family_name) -> bool:
         f'--src "{STAT_CONFIG}"',
         f'"{font_dir}/{family_name}.ttf"')
 
-def _fix_ttf(font_dir, family_name) -> bool:
+def _fix_ttf(font_dir, _) -> bool:
     """Fix bold fsSelection and macStyle"""
     files = listdir(font_dir)
     print(files)
