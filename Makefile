@@ -14,7 +14,7 @@ endef
 
 define check-font
 	$(VENV) fontbakery check-$(2) \
-		--J 1 \
+		--auto-jobs \
 		--full-lists \
 		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
 		"$(BUILD_DIR)/$(1)/"*
@@ -34,22 +34,10 @@ print-updates:
 
 .PHONY: check
 check:
-# "Hide" ExtraThick from checker
-ifneq ("$(wildcard $(BUILD_DIR)/ttf/Lilex-ExtraThick.ttf)","")
-	mv \
-		"$(BUILD_DIR)/ttf/Lilex-ExtraThick.ttf" \
-		"$(BUILD_DIR)/Lilex-ExtraThick.ttf.bak"
-endif
 	make clean-reports
 	mkdir "$(REPORTS_DIR)"
 	$(call check-font,"ttf","googlefonts")
-	$(call check-font,"variable","adobefonts")
-# Restore ExtraThick
-ifneq ("$(wildcard $(BUILD_DIR)/Lilex-ExtraThick.ttf.bak)","")
-	mv \
-		"$(BUILD_DIR)/Lilex-ExtraThick.ttf.bak" \
-		"$(BUILD_DIR)/ttf/Lilex-ExtraThick.ttf"
-endif
+	$(call check-font,"variable","googlefonts")
 		
 .PHONY: lint
 lint:
