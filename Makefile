@@ -14,7 +14,7 @@ endef
 
 define check-font
 	$(VENV) fontbakery check-$(2) \
-		--auto-jobs \
+		--J 1 \
 		--full-lists \
 		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
 		"$(BUILD_DIR)/$(1)/"*
@@ -50,7 +50,7 @@ ifneq ("$(wildcard $(BUILD_DIR)/Lilex-ExtraThick.ttf.bak)","")
 		"$(BUILD_DIR)/Lilex-ExtraThick.ttf.bak" \
 		"$(BUILD_DIR)/ttf/Lilex-ExtraThick.ttf"
 endif
-
+		
 .PHONY: lint
 lint:
 	$(VENV) ruff scripts/
@@ -132,6 +132,6 @@ install-Linux:
 
 $(VENV_DIR): requirements.txt
 	rm -rf "$(VENV_DIR)"
-	python3 -m venv "$(VENV_DIR)"
+	python3.11 -m venv "$(VENV_DIR)"
 	$(VENV) pip install wheel
 	$(VENV) pip install -r requirements.txt
