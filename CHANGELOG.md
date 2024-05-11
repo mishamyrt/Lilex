@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 ## Fixed
 
 * Combs alignment. (`ỐỔỖǪǫ`, `Ḩḩ`, `ẲẴẤẨẢ`, `ỂỄ`)
+* Variable "Thin" variant.
+* Variable tables.
 
 ## [2.510] — May 10, 2024
 
