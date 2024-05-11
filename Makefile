@@ -30,6 +30,7 @@ endef
 configure: requirements.txt
 	rm -rf $(VENV_DIR)
 	make $(VENV_DIR)
+	$(VENV) python -m youseedee A > /dev/null
 
 configure-preview: preview/*.yaml preview/*.json
 	cd preview; pnpm install
