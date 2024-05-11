@@ -1,6 +1,11 @@
 {
 .appVersion = "3134";
 .formatVersion = 3;
+DisplayStrings = (
+"ё",
+"/bar_greater.liga.cv11",
+"/less_bar.liga.cv11"
+);
 axes = (
 {
 name = Weight;
@@ -48167,6 +48172,7 @@ unicode = 1104;
 },
 {
 glyphname = "io-cy";
+lastChange = "2024-05-11 17:15:39 +0000";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -48177,7 +48183,7 @@ ref = e;
 },
 {
 alignment = -1;
-pos = (1,0);
+pos = (301,0);
 ref = dieresis;
 }
 );
@@ -48192,7 +48198,7 @@ ref = e;
 },
 {
 alignment = -1;
-pos = (2,0);
+pos = (302,0);
 ref = dieresis;
 }
 );
@@ -48207,7 +48213,7 @@ ref = e;
 },
 {
 alignment = -1;
-pos = (2,0);
+pos = (302,0);
 ref = dieresis;
 }
 );
@@ -99656,7 +99662,7 @@ width = 600;
 {
 color = 0;
 glyphname = less_bar.liga.cv11;
-lastChange = "2023-10-30 20:25:56 +0000";
+lastChange = "2024-05-11 17:17:29 +0000";
 layers = (
 {
 guides = (
@@ -99670,10 +99676,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(235,-85,l),
-(-441,304,l),
-(-441,306,l),
-(235,717,l),
+(255,-108,l,{
+name = hr00;
+}),
+(255,740,l),
 (235,740,l),
 (-464,314,l),
 (-464,296,l),
@@ -99683,8 +99689,13 @@ name = hr00;
 );
 },
 {
-pos = (-55,0);
-ref = bar;
+closed = 1;
+nodes = (
+(-441,304,l),
+(-441,306,l),
+(235,717,l),
+(235,-85,l)
+);
 }
 );
 width = 600;
@@ -99701,10 +99712,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(210,-23,l),
-(-357,302,l),
-(-357,310,l),
-(210,657,l),
+(280,-108,l,{
+name = hr00;
+}),
+(280,740,l),
 (210,740,l),
 (-432,345,l),
 (-432,265,l),
@@ -99714,8 +99725,13 @@ name = hr00;
 );
 },
 {
-pos = (-55,0);
-ref = bar;
+closed = 1;
+nodes = (
+(-357,302,l),
+(-357,310,l),
+(210,657,l),
+(210,-23,l)
+);
 }
 );
 width = 600;
@@ -99740,10 +99756,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(182,30,l),
-(-331,301,l),
-(-331,309,l),
-(182,602,l),
+(308,-108,l,{
+name = hr00;
+}),
+(308,740,l),
 (182,740,l),
 (-464,374,l),
 (-464,236,l),
@@ -99753,8 +99769,13 @@ name = hr00;
 );
 },
 {
-pos = (-55,0);
-ref = bar;
+closed = 1;
+nodes = (
+(-331,301,l),
+(-331,309,l),
+(182,602,l),
+(182,30,l)
+);
 }
 );
 width = 600;
@@ -146321,38 +146342,6 @@ instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 1;
 };
 name = Regular;
-},
-{
-axesValues = (
-450
-);
-customParameters = (
-{
-name = panose;
-value = (
-2,
-0,
-0,
-9,
-0,
-0,
-0,
-0,
-0,
-0
-);
-},
-{
-name = "TTFAutohint options";
-value = "--increase-x-height=0";
-}
-);
-instanceInterpolations = {
-"055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.16667;
-"A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.83333;
-};
-name = ExtraThick;
-weightClass = 450;
 },
 {
 axesValues = (
