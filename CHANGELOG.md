@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.520 — Unreleased
+
+## Fixed
+
+* Combs alignment. (`ỐỔỖǪǫ`, `Ḩḩ`, `ẲẴẤẨẢ`, `ỂỄ`)
+
 ## [2.510] — May 10, 2024
 
 ## Added
