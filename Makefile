@@ -20,6 +20,13 @@ define check-font
 		"$(BUILD_DIR)/$(1)/"*
 endef
 
+define check-ttf-file
+	$(VENV) fontbakery check-$(2) \
+		--auto-jobs \
+		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
+		"$(BUILD_DIR)/ttf/Lilex-$(1).ttf"
+endef
+
 configure: requirements.txt
 	rm -rf $(VENV_DIR)
 	make $(VENV_DIR)
@@ -33,10 +40,17 @@ print-updates:
 	cd preview; pnpm outdated
 
 .PHONY: check
-check:
-	make clean-reports
-	mkdir "$(REPORTS_DIR)"
+check: clean-reports
 	$(call check-font,"ttf","googlefonts")
+	$(call check-font,"variable","googlefonts")
+
+.PHONY: check-sequential
+check-sequential: clean-reports
+	$(call check-ttf-file,"Bold","googlefonts")
+	$(call check-ttf-file,"ExtraLight","googlefonts")
+	$(call check-ttf-file,"Medium","googlefonts")
+	$(call check-ttf-file,"Regular","googlefonts")
+	$(call check-ttf-file,"Thin","googlefonts")
 	$(call check-font,"variable","googlefonts")
 		
 .PHONY: lint
@@ -94,6 +108,7 @@ clean-build:
 .PHONY: clean-reports
 clean-reports:
 	rm -rf "$(REPORTS_DIR)"
+	mkdir "$(REPORTS_DIR)"
 
 .PHONY: ttf
 ttf:
