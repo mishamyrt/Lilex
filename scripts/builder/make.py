@@ -1,9 +1,10 @@
 """Make helpers"""
 import subprocess as sp
-from os import listdir, unlink
-from shutil import move, which
+from os import listdir
+from shutil import which
 
 STAT_CONFIG = 'STAT.yaml'
+VARIABLE_SUFFIX = '[wght]'
 
 def _run(*args: str) -> bool:
     with sp.Popen(" ".join(args), shell=True, stdout=sp.PIPE) as child:
@@ -27,11 +28,18 @@ def _gftools(subcommand: str, *args: str) -> bool:
 
 def _fix_variable(font_dir, family_name) -> bool:
     """Generate STAT table for variable ttf"""
+    file_path = f'{font_dir}/{family_name}{VARIABLE_SUFFIX}.ttf'
     return _gftools(
+        "fix-font",
+        "--include-source-fixes",
+        f'--out "{file_path}"',
+        f'"{file_path}"'
+    ) and _gftools(
         "gen-stat",
         "--inplace",
         f'--src "{STAT_CONFIG}"',
-        f'"{font_dir}/{family_name}.ttf"')
+        f'"{file_path}"'
+    )
 
 def _fix_ttf(font_dir, _) -> bool:
     """Fix bold fsSelection and macStyle"""
@@ -42,12 +50,11 @@ def _fix_ttf(font_dir, _) -> bool:
         success = _gftools(
             "fix-font",
             "--include-source-fixes",
+            f'--out "{file_path}"',
             file_path
         )
         if not success:
             return False
-        unlink(file_path)
-        move(f'{file_path}.fix', file_path)
     return True
 
 POST_FIXES = {
@@ -66,7 +73,7 @@ def make(family_name: str, ds_path: str, fmt: str, out_dir: str) -> bool:
         "--filter DecomposeTransformedComponentsFilter"
     ]
     if fmt == "variable":
-        cmd.append(f'--output-path "{out_dir}/{family_name}.ttf"')
+        cmd.append(f'--output-path "{out_dir}/{family_name}{VARIABLE_SUFFIX}.ttf"')
     else:
         cmd.append("--interpolate")
         cmd.append(f'--output-dir "{out_dir}"')
