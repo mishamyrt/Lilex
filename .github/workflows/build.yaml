@@ -45,7 +45,7 @@ jobs:
 
     - name: Check
       if: inputs.check
-      run: make check
+      run: make check-sequential
 
     - name: Lint
       if: inputs.preview && inputs.check

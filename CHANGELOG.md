@@ -1,6 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.520 — Unreleased
+
+## Fixed
+
+* Combs alignment. (`ỐỔỖǪǫ`, `Ḩḩ`, `ẲẴẤẨẢ`, `ỂỄ`)
+* Variable "Thin" variant.
+* Variable tables.
+
+## Removed
+
+* ExtraThick variant. This is a non-standard variant that doesn't pass Google Fonts checks. If you want to get this typeface, take a variable font and give it a weight of 450.
+
 ## [2.510] — May 10, 2024
 
 ## Added

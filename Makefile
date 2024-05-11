@@ -13,15 +13,24 @@ define build-font
 endef
 
 define check-font
-	$(VENV) fontbakery check-universal \
+	$(VENV) fontbakery check-$(2) \
 		--auto-jobs \
-		--html "$(REPORTS_DIR)/universal_$(1).html" \
+		--full-lists \
+		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
 		"$(BUILD_DIR)/$(1)/"*
+endef
+
+define check-ttf-file
+	$(VENV) fontbakery check-$(2) \
+		--auto-jobs \
+		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
+		"$(BUILD_DIR)/ttf/Lilex-$(1).ttf"
 endef
 
 configure: requirements.txt
 	rm -rf $(VENV_DIR)
 	make $(VENV_DIR)
+	$(VENV) python -m youseedee A > /dev/null
 
 configure-preview: preview/*.yaml preview/*.json
 	cd preview; pnpm install
@@ -32,12 +41,19 @@ print-updates:
 	cd preview; pnpm outdated
 
 .PHONY: check
-check:
-	make clean-reports
-	mkdir "$(REPORTS_DIR)"
-	$(call check-font,"ttf")
-	$(call check-font,"variable")
+check: clean-reports
+	$(call check-font,"ttf","googlefonts")
+	$(call check-font,"variable","googlefonts")
 
+.PHONY: check-sequential
+check-sequential: clean-reports
+	$(call check-ttf-file,"Bold","googlefonts")
+	$(call check-ttf-file,"ExtraLight","googlefonts")
+	$(call check-ttf-file,"Medium","googlefonts")
+	$(call check-ttf-file,"Regular","googlefonts")
+	$(call check-ttf-file,"Thin","googlefonts")
+	$(call check-font,"variable","googlefonts")
+		
 .PHONY: lint
 lint:
 	$(VENV) ruff scripts/
@@ -93,6 +109,7 @@ clean-build:
 .PHONY: clean-reports
 clean-reports:
 	rm -rf "$(REPORTS_DIR)"
+	mkdir "$(REPORTS_DIR)"
 
 .PHONY: ttf
 ttf:
@@ -119,6 +136,6 @@ install-Linux:
 
 $(VENV_DIR): requirements.txt
 	rm -rf "$(VENV_DIR)"
-	python3 -m venv "$(VENV_DIR)"
+	python3.11 -m venv "$(VENV_DIR)"
 	$(VENV) pip install wheel
 	$(VENV) pip install -r requirements.txt
