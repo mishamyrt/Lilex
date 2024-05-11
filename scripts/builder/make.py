@@ -1,6 +1,6 @@
 """Make helpers"""
 import subprocess as sp
-from os import unlink
+from os import listdir, unlink
 from shutil import move, which
 
 STAT_CONFIG = 'STAT.yaml'
@@ -31,20 +31,23 @@ def _fix_variable(font_dir, family_name) -> bool:
         "gen-stat",
         "--inplace",
         f'--src "{STAT_CONFIG}"',
-        f'"{font_dir}/{family_name}-VF.ttf"')
+        f'"{font_dir}/{family_name}.ttf"')
 
 def _fix_ttf(font_dir, family_name) -> bool:
     """Fix bold fsSelection and macStyle"""
-    bold_path = f'{font_dir}/{family_name}-Bold.ttf'
-    success = _gftools(
-        "fix-font",
-        "--include-source-fixes",
-        bold_path
-    )
-    if not success:
-        return False
-    unlink(bold_path)
-    move(f'{bold_path}.fix', bold_path)
+    files = listdir(font_dir)
+    print(files)
+    for file in files:
+        file_path = f'{font_dir}/{file}'
+        success = _gftools(
+            "fix-font",
+            "--include-source-fixes",
+            file_path
+        )
+        if not success:
+            return False
+        unlink(file_path)
+        move(f'{file_path}.fix', file_path)
     return True
 
 POST_FIXES = {
@@ -52,19 +55,21 @@ POST_FIXES = {
     "variable": _fix_variable
 }
 
-def make(family_name: str, ds_path: str, fmt: str, out_dir: str, ) -> bool:
+def make(family_name: str, ds_path: str, fmt: str, out_dir: str) -> bool:
     """Wrapper for fontmake"""
     cmd = [
         _which("fontmake"),
         f'-m "{ds_path}"',
         f'-o "{fmt}"',
-        f'--output-dir "{out_dir}"',
         "--flatten-components",
         "--autohint",
         "--filter DecomposeTransformedComponentsFilter"
     ]
-    if fmt != "variable":
+    if fmt == "variable":
+        cmd.append(f'--output-path "{out_dir}/{family_name}.ttf"')
+    else:
         cmd.append("--interpolate")
+        cmd.append(f'--output-dir "{out_dir}"')
     success = _run(*cmd)
     if not success:
         return False
