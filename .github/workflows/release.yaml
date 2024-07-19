@@ -66,19 +66,23 @@ jobs:
         git commit -m "chore: release ${{ inputs.version }} 🔥"
         git tag "${{ inputs.version }}"
 
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     ssh: true
-    #     tags: true
+    - name: Pack build
+      run: |
+        cd fonts; zip -r ../Lilex.zip .
+        cd ..
 
-    # - name: Create GitHub release
-    #   if: github.event_name == 'push'
-    #   uses: softprops/action-gh-release@v2
-    #   with:
-    #     name: ${{ input.version }}
-    #     body_path: notes.md
-    #     token: ${{ secrets.USER_PAT }}
-    #     prerelease: ${{ contains(input.version, '-') }}
-    #     files: |
-    #       Lilex.zip
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        ssh: true
+        tags: true
+
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v2
+      with:
+        name: ${{ inputs.version }}
+        body_path: notes.md
+        token: ${{ secrets.USER_PAT }}
+        prerelease: ${{ contains(inputs.version, '-') }}
+        files: |
+          Lilex.zip
