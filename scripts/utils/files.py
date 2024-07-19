@@ -3,13 +3,13 @@ from __future__ import annotations
 
 from os import listdir
 from os.path import basename, isfile, join, splitext
-from typing import List, TypeVar
+from typing import TypeVar
 
 from glyphsLib import GSClass, GSFeature
 
 T = TypeVar("T")
 
-def list_files(dir_path: str) -> List[str]:
+def list_files(dir_path: str) -> list[str]:
     files = []
     for file in listdir(dir_path):
         name = splitext(file)[0]
@@ -21,14 +21,14 @@ def list_files(dir_path: str) -> List[str]:
             files.append(file_path)
     return sorted(files)
 
-def read_classes(dir_path: str) -> List[GSClass]:
+def read_classes(dir_path: str) -> list[GSClass]:
     classes = []
     for path in list_files(dir_path):
         cls = _read_gs_file(path, GSClass)
         classes.append(cls)
     return classes
 
-def read_features(dir_path: str) -> List[GSFeature]:
+def read_features(dir_path: str) -> list[GSFeature]:
     features = []
     for path in list_files(dir_path):
         fea = _read_gs_file(path, GSFeature)

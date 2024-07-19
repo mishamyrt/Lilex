@@ -1,12 +1,10 @@
 """CLI utilities"""
-from typing import List
-
 from glyphsLib import GSFeature
 
 ORANGE = "\033[93m"
 RESET = "\033[0m"
 
-def print_gs(title: str, items: List[GSFeature]):
+def print_gs(title: str, items: list[GSFeature]):
     print(f"{title}:")
     for item in items:
         print(f"  - {item.name}")

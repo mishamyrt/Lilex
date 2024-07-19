@@ -6,7 +6,6 @@ and checks which of them are present in the source font file.
 Usage: find.py ../features/calt/hyphen-arrows.fea missing
 """
 from re import sub
-from typing import List
 
 from arrrgs import arg, command, run
 from builder import GlyphsFont
@@ -85,7 +84,7 @@ KEYWORDS = [
 def _is_glyph_name(word: str) -> bool:
     return len(word) > 0 and word[0] != "@" and word not in KEYWORDS
 
-def glyphs_from_fea(path: str) -> List[str]:
+def glyphs_from_fea(path: str) -> list[str]:
     with open(path, mode="r", encoding="utf-8") as file:
         content = file.read()
     # Remove comments

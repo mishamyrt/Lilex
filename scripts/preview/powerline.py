@@ -1,11 +1,9 @@
 """Powerline preview"""
-from typing import List, Tuple
-
 from colored import Style, back, fore
 
 from .base import FeaturePreview
 
-PowerlineEntry = Tuple[str, str]
+PowerlineEntry = tuple[str, str]
 
 VC_BRANCH_CHAR = "\uE0A0"
 LN_CHAR = "\uE0A1"
@@ -39,7 +37,7 @@ class PowerlineFeature(FeaturePreview):
         ])
 
 
-    def _print_line(self, entries: List[PowerlineEntry], right=True):
+    def _print_line(self, entries: list[PowerlineEntry], right=True):
         line = ""
         if right:
             arrow = RIGHT_ARROW_CHAR

@@ -1,13 +1,11 @@
 """Spacer generator"""
-from typing import List
-
 from glyphsLib import GSGlyph
 
 
-def _required_spacers(name: str) -> List[str]:
+def _required_spacers(name: str) -> list[str]:
     return name.split("_")[0:-1]
 
-def generate_spacers(ligatures: List[str], glyphs: List[GSGlyph]) -> List[str]:
+def generate_spacers(ligatures: list[str], glyphs: list[GSGlyph]) -> list[str]:
     """Finds missing spacers"""
     unique = []
     for liga in ligatures:

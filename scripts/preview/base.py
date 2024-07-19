@@ -1,6 +1,4 @@
 """Feature preview base"""
-from typing import List
-
 from colored import Style
 
 
@@ -14,7 +12,7 @@ class FeaturePreview():
     def show(self):
         """Prints feature"""
 
-def print_features(features: List[FeaturePreview]):
+def print_features(features: list[FeaturePreview]):
     for fea in features:
         print(f'{Style.BOLD}{fea.name}{Style.reset}')
         fea.show()

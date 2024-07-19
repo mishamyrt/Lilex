@@ -2,7 +2,6 @@
 """Lilex helper entrypoint"""
 import sys
 from argparse import BooleanOptionalAction
-from typing import List
 
 from arrrgs import arg, command, global_args, run
 from builder import DEFAULT_FORMATS, GlyphsFont
@@ -66,7 +65,7 @@ def generate_calt(font: GlyphsFont) -> GSFeature:
     code = render_ligatures(glyphs) + read_files(f"{FEATURES_DIR}/calt")
     return GSFeature("calt", code)
 
-def move_to_calt(font: GSFont, features: List[str]):
+def move_to_calt(font: GSFont, features: list[str]):
     for fea in features:
         if fea not in font.features:
             print(f"Unknown feature: '{fea}'")

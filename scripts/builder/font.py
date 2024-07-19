@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from shutil import rmtree
 from tempfile import mkdtemp
-from typing import Callable, List
+from typing import Callable
 
 from glyphsLib import (
     GSClass,
@@ -33,7 +33,7 @@ class GlyphsFont:
     def file(self) -> GSFont:
         return self._font
 
-    def ligatures(self) -> List[str]:
+    def ligatures(self) -> list[str]:
         glyphs = self.glyphs(lambda x: x.name.endswith(LIGATURE_SUFFIX))
         ligatures = []
         for glyph in glyphs:
@@ -41,7 +41,7 @@ class GlyphsFont:
                 ligatures.append(glyph.name)
         return ligatures
 
-    def glyphs(self, _filter: GlyphFilter = lambda x: True) -> List[GSGlyph]:
+    def glyphs(self, _filter: GlyphFilter = lambda x: True) -> list[GSGlyph]:
         """Returns a list of glyphs that match filter"""
         result = []
         for glyph in self._font.glyphs:
@@ -57,7 +57,7 @@ class GlyphsFont:
         """Saves the file to the specified path"""
         self._font.save(path)
 
-    def set_classes(self, classes: List[GSClass]):
+    def set_classes(self, classes: list[GSClass]):
         """Sets the font classes"""
         for cls in classes:
             if cls.name in self._font.classes:
@@ -65,7 +65,7 @@ class GlyphsFont:
             else:
                 self._font.classes.append(cls)
 
-    def set_features(self, features: List[GSFeature]):
+    def set_features(self, features: list[GSFeature]):
         """Sets the font features"""
         for fea in features:
             if fea.name in self._font.features:
@@ -79,7 +79,7 @@ class GlyphsFont:
         self._font.versionMajor = int(parts[0])
         self._font.versionMinor = int(parts[1])
 
-    def build(self, formats: List[str], out_dir: str, store_temp=False) -> bool:
+    def build(self, formats: list[str], out_dir: str, store_temp=False) -> bool:
         print("Preparing build environment")
         temp_dir, ds_file = self._prepare_build()
         success = True

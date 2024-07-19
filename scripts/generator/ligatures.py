@@ -2,12 +2,11 @@
 from __future__ import annotations
 
 from re import sub
-from typing import List
 
 from .const import IGNORE_TPL, IGNORES, PRIORITIES, REPLACE_TPL, SKIP_IGNORES
 
 
-def _populate_tpl(templates: List[str], prefix: str) -> str:
+def _populate_tpl(templates: list[str], prefix: str) -> str:
     """Renders fea statements"""
     result = ""
     for value in templates:
@@ -15,17 +14,17 @@ def _populate_tpl(templates: List[str], prefix: str) -> str:
         result += f'  {prefix} {normalized_value};\n'
     return result
 
-def _populate_ignore(templates: List[str]) -> str:
+def _populate_ignore(templates: list[str]) -> str:
     """Renders ignore sub statements"""
     return _populate_tpl(templates, "ignore sub")
 
-def _populate_sub(templates: List[str]) -> str:
+def _populate_sub(templates: list[str]) -> str:
     """Renders sub statements"""
     return _populate_tpl(templates, "sub")
 
 class LigatureLookup:
-    ignores: List[str] = []
-    subs: List[str] = []
+    ignores: list[str] = []
+    subs: list[str] = []
     glyphs: tuple
     name: str
 
@@ -63,7 +62,7 @@ class LigatureLookup:
             result = result.replace(str(i + 1), glyph)
         return result
 
-def render_ligatures(items: List[str]) -> str:
+def render_ligatures(items: list[str]) -> str:
     """Renders the list of ligatures in the OpenType feature"""
     lookups = []
     for name in items:
