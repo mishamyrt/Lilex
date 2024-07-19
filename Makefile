@@ -1,9 +1,14 @@
+# Project variables
+VERSION = 2.520
+
+# Project paths
 BUNDLE_DIR = bundle
 BUILD_DIR = build
 REPORTS_DIR = reports
 SCRIPTS_DIR = scripts
 GLYPHS_FILE = sources/Lilex.glyphs
 
+# Internal build variables
 OS := $(shell uname)
 VENV_DIR = ./venv
 VENV = . $(VENV_DIR)/bin/activate;
@@ -43,26 +48,26 @@ configure: requirements.txt ## setup build environment
 
 .PHONY: configure
 configure-preview: ## setup preview environment
-	cd preview; pnpm install
+	@cd preview; pnpm install
 
 .PHONY: print-updates
 print-updates: ## print list of outdated packages
-	$(VENV) pip list --outdated
-	cd preview; pnpm outdated
+	@$(VENV) pip list --outdated
+	@cd preview; pnpm outdated
 
 .PHONY: check
 check: clean-reports ## check font quality
-	$(call check-font,"ttf","googlefonts")
-	$(call check-font,"variable","googlefonts")
+	@$(call check-font,"ttf","googlefonts")
+	@$(call check-font,"variable","googlefonts")
 
 .PHONY: check-sequential
 check-sequential: clean-reports ## check each font file quality
-	$(call check-ttf-file,"Bold","googlefonts")
-	$(call check-ttf-file,"ExtraLight","googlefonts")
-	$(call check-ttf-file,"Medium","googlefonts")
-	$(call check-ttf-file,"Regular","googlefonts")
-	$(call check-ttf-file,"Thin","googlefonts")
-	$(call check-font,"variable","googlefonts")
+	@$(call check-ttf-file,"Bold","googlefonts")
+	@$(call check-ttf-file,"ExtraLight","googlefonts")
+	@$(call check-ttf-file,"Medium","googlefonts")
+	@$(call check-ttf-file,"Regular","googlefonts")
+	@$(call check-ttf-file,"Thin","googlefonts")
+	@$(call check-font,"variable","googlefonts")
 		
 .PHONY: lint
 lint: ## check code quality
@@ -72,11 +77,12 @@ lint: ## check code quality
 
 .PHONY: preview
 preview: ## show CLI special symbols preview
-	$(VENV) python $(SCRIPTS_DIR)/show.py
+	@$(VENV) python $(SCRIPTS_DIR)/show.py
 
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
-	$(VENV) python $(SCRIPTS_DIR)/lilex.py generate
+	@$(VENV) python $(SCRIPTS_DIR)/lilex.py generate \
+		--version "$(VERSION)"
 
 .PHONY: build
 build: ## build the font

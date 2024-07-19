@@ -73,6 +73,12 @@ class GlyphsFont:
             else:
                 self._font.features.append(fea)
 
+    def set_version(self, version: str):
+        parts = version.split(".")
+        assert len(parts) == 2
+        self._font.versionMajor = int(parts[0])
+        self._font.versionMinor = int(parts[1])
+
     def build(self, formats: List[str], out_dir: str, store_temp=False) -> bool:
         print("Preparing build environment")
         temp_dir, ds_file = self._prepare_build()
