@@ -19,6 +19,7 @@ define check-font
 		--auto-jobs \
 		--full-lists \
 		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
+		-x com.google.fonts/check/fontdata_namecheck \
 		"$(BUILD_DIR)/$(1)/"*
 endef
 
@@ -26,6 +27,7 @@ define check-ttf-file
 	$(VENV) fontbakery check-$(2) \
 		--auto-jobs \
 		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
+		-x com.google.fonts/check/fontdata_namecheck \
 		"$(BUILD_DIR)/ttf/Lilex-$(1).ttf"
 endef
 
