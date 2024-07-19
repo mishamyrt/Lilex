@@ -1,8 +1,5 @@
-# Project variables
-VERSION = 2.520
-
 # Project paths
-BUNDLE_DIR = bundle
+# BUNDLE_DIR = bundle
 BUILD_DIR = build
 REPORTS_DIR = reports
 SCRIPTS_DIR = scripts
@@ -81,8 +78,7 @@ preview: ## show CLI special symbols preview
 
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
-	@$(VENV) python $(SCRIPTS_DIR)/lilex.py generate \
-		--version "$(VERSION)"
+	@$(VENV) python $(SCRIPTS_DIR)/lilex.py generate
 
 .PHONY: build
 build: ## build the font
@@ -97,21 +93,31 @@ build-preview: ## build the preview
 run-preview: ## run the preview
 	cd preview; pnpm run dev
 
-.PHONY: pack-bundle
-pack-bundle: ## pack the bundle
-	rm -rf "$(BUNDLE_DIR)"
-	mkdir "$(BUNDLE_DIR)"
-# Copy fonts
-	cp -r "$(BUILD_DIR)/"* "$(BUNDLE_DIR)/"
-# Copy reports
-	cp "$(REPORTS_DIR)/"* "$(BUNDLE_DIR)/"
-	cd "$(BUNDLE_DIR)"; zip -r Lilex.zip ./*
+# .PHONY: pack-bundle
+# pack-bundle: ## pack the bundle
+# 	rm -rf "$(BUNDLE_DIR)"
+# 	mkdir "$(BUNDLE_DIR)"
+# # Copy fonts
+# 	cp -r "$(BUILD_DIR)/"* "$(BUNDLE_DIR)/"
+# # Copy reports
+# 	cp "$(REPORTS_DIR)/"* "$(BUNDLE_DIR)/"
+# 	cd "$(BUNDLE_DIR)"; zip -r Lilex.zip ./*
 
-.PHONY: bundle
-bundle: ## build the bundle
+# .PHONY: bundle
+# bundle: ## build the bundle
+# 	@make build
+# 	@make check
+# 	@make pack-bundle
+
+.PHONY: release 
+release:
 	@make build
-	@make check
-	@make pack-bundle
+
+.PHONY: release-notes
+release-notes:
+	echo $(ARGS)
+#	@mkdir -p ./$(BUILD_DIR)
+#	$(VENV) python ./scripts/changelog.py notes Next > "./$(BUILD_DIR)/release-notes.md"
 
 .PHONY: clean
 clean: ## clean up
