@@ -1,0 +1,86 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version
+        required: true
+        type: string
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+    with:
+      check: true
+      preview: true
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref }}
+        ssh-key: ${{ secrets.RELEASE_PRIVATE_KEY }}
+        fetch-depth: 0
+        persist-credentials: true
+
+    - name: Setup GitHub Actions bot
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Setup release environment
+      run: make configure
+
+    - name: Download build
+      uses: actions/download-artifact@v3
+      with:
+        name: Lilex
+        path: build
+
+    - name: Generate source with new version
+      run: python scripts/lilex.py generate --version "${{ inputs.version }}"
+
+    - name: Save release notes
+      run: python scripts/changelog.py notes Next > notes.md
+
+    - name: Update changelog with new version
+      run: python scripts/changelog.py release "${{ inputs.version }}"
+
+    - name: Replace builded font files
+      run: |
+        rm -rf fonts
+        mv build fonts
+
+    - name: Create git commit and tag
+      run: |
+        git add sources/Lilex.glyphs
+        git add CHANGELOG.md
+        git add fonts
+        git status
+        git commit -m "chore: release ${{ inputs.version }} 🔥"
+        git tag "${{ inputs.version }}"
+
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     ssh: true
+    #     tags: true
+
+    # - name: Create GitHub release
+    #   if: github.event_name == 'push'
+    #   uses: softprops/action-gh-release@v2
+    #   with:
+    #     name: ${{ input.version }}
+    #     body_path: notes.md
+    #     token: ${{ secrets.USER_PAT }}
+    #     prerelease: ${{ contains(input.version, '-') }}
+    #     files: |
+    #       Lilex.zip
