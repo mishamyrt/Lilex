@@ -56,21 +56,21 @@ jobs:
       run: make build-preview
 
     - name: Upload build
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Lilex
         path: build/
     
     - name: Upload reports
       if: inputs.check
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Reports
         path: reports/
 
     - name: Upload preview
       if: inputs.preview
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Preview
         path: preview/dist
