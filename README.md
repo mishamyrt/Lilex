@@ -5,7 +5,7 @@
         width="362px">
 <p>
 
-[![Build](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml/badge.svg)](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml) [![Version](https://img.shields.io/github/v/tag/mishamyrt/Lilex?sort=semver)](https://github.com/mishamyrt/Lilex/tags)
+[![Build](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml/badge.svg)](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml) [![Version](https://img.shields.io/github/v/tag/mishamyrt/Lilex?sort=semver)](https://github.com/mishamyrt/Lilex/releases/latest)
 
 
 Lilex is the modern programming font containing a set of ligatures for common programming multi-character combinations.
