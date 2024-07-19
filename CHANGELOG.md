@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## Next
+## [2.520] — July 19, 2024
 
 ### Fixed
 
@@ -217,3 +217,5 @@ IBM Plex Mono version: 3.000
 [2.500]: https://github.com/mishamyrt/Lilex/releases/tag/2.500
 
 [2.510]: https://github.com/mishamyrt/Lilex/releases/tag/2.510
+
+[2.520]: https://github.com/mishamyrt/Lilex/releases/tag/2.520
