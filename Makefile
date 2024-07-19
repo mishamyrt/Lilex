@@ -1,15 +1,15 @@
-VENV_DIR = ./venv
-VENV = . $(VENV_DIR)/bin/activate;
-
 BUNDLE_DIR = bundle
 BUILD_DIR = build
 REPORTS_DIR = reports
-GLYPHS_FILE = Lilex.glyphs
+SCRIPTS_DIR = scripts
+GLYPHS_FILE = sources/Lilex.glyphs
 
 OS := $(shell uname)
+VENV_DIR = ./venv
+VENV = . $(VENV_DIR)/bin/activate;
 
 define build-font
-	$(VENV) python scripts/lilex.py build $(1)
+	@$(VENV) python $(SCRIPTS_DIR)/lilex.py build $(1)
 endef
 
 define check-font
@@ -27,26 +27,28 @@ define check-ttf-file
 		"$(BUILD_DIR)/ttf/Lilex-$(1).ttf"
 endef
 
-configure: requirements.txt
-	rm -rf $(VENV_DIR)
-	make $(VENV_DIR)
-	$(VENV) python -m youseedee A > /dev/null
+.PHONY: configure
+configure: requirements.txt ## setup build environment
+	@rm -rf $(VENV_DIR)
+	@make $(VENV_DIR)
+	@$(VENV) python -m youseedee A > /dev/null
 
-configure-preview: preview/*.yaml preview/*.json
+.PHONY: configure
+configure-preview: ## setup preview environment
 	cd preview; pnpm install
 
 .PHONY: print-updates
-print-updates:
+print-updates: ## print list of outdated packages
 	$(VENV) pip list --outdated
 	cd preview; pnpm outdated
 
 .PHONY: check
-check: clean-reports
+check: clean-reports ## check font quality
 	$(call check-font,"ttf","googlefonts")
 	$(call check-font,"variable","googlefonts")
 
 .PHONY: check-sequential
-check-sequential: clean-reports
+check-sequential: clean-reports ## check each font file quality
 	$(call check-ttf-file,"Bold","googlefonts")
 	$(call check-ttf-file,"ExtraLight","googlefonts")
 	$(call check-ttf-file,"Medium","googlefonts")
@@ -55,34 +57,34 @@ check-sequential: clean-reports
 	$(call check-font,"variable","googlefonts")
 		
 .PHONY: lint
-lint:
-	$(VENV) ruff scripts/
-	$(VENV) pylint scripts/
+lint: ## check code quality
+	$(VENV) ruff $(SCRIPTS_DIR)/
+	$(VENV) pylint $(SCRIPTS_DIR)/
 	cd preview; pnpm eslint 'src/**/*.{svlete,ts}'
 
 .PHONY: preview
-preview:
-	$(VENV) python scripts/show.py
+preview: ## show CLI special symbols preview
+	$(VENV) python $(SCRIPTS_DIR)/show.py
 
 .PHONY: generate
-generate:
-	$(VENV) python scripts/lilex.py generate
+generate: ## regenerate the font sources with classes and features
+	$(VENV) python $(SCRIPTS_DIR)/lilex.py generate
 
 .PHONY: build
-build:
-	make clean-build
-	$(call build-font)
+build: ## build the font
+	@make clean-build
+	@$(call build-font)
 
 .PHONY: build-preview
-build-preview:
+build-preview: ## build the preview
 	cd preview; pnpm run build
 
 .PHONY: run-preview
-run-preview:
+run-preview: ## run the preview
 	cd preview; pnpm run dev
 
 .PHONY: pack-bundle
-pack-bundle:
+pack-bundle: ## pack the bundle
 	rm -rf "$(BUNDLE_DIR)"
 	mkdir "$(BUNDLE_DIR)"
 # Copy fonts
@@ -92,50 +94,52 @@ pack-bundle:
 	cd "$(BUNDLE_DIR)"; zip -r Lilex.zip ./*
 
 .PHONY: bundle
-bundle:
-	make build
-	make check
-	make pack-bundle
+bundle: ## build the bundle
+	@make build
+	@make check
+	@make pack-bundle
 
 .PHONY: clean
-clean:
-	make clean-build
-	make clean-reports
+clean: ## clean up
+	@make clean-build
+	@make clean-reports
 
 .PHONY: clean-build
-clean-build:
-	rm -rf "$(BUILD_DIR)"
+clean-build: ## clean up build artifacts
+	@rm -rf "$(BUILD_DIR)"
 
 .PHONY: clean-reports
-clean-reports:
-	rm -rf "$(REPORTS_DIR)"
-	mkdir "$(REPORTS_DIR)"
+clean-reports: ## clean up reports
+	@rm -rf "$(REPORTS_DIR)"
+	@mkdir "$(REPORTS_DIR)"
 
 .PHONY: ttf
-ttf:
+ttf: ## build ttf font
 	$(call build-font,ttf)
 
 .PHONY: otf
-otf:
+otf: ## build otf font
 	$(call build-font,otf)
 
 .PHONY: variable
-variable:
+variable: ## build variable font
 	$(call build-font,variable)
 
-install:
-	make install-$(OS)
+.PHONY: install
+install: ## install font to system
+	@make install-$(OS)
 
-install-Darwin:
-	rm -rf ~/Library/Fonts/Lilex
-	cp -r build/variable ~/Library/Fonts/Lilex
+.PHONY: install-Darwin
+install-Darwin: ## install font to macOS
+	@rm -rf ~/Library/Fonts/Lilex
+	@cp -r build/variable ~/Library/Fonts/Lilex
 
-install-Linux:
-	rm -rf ~/.fonts/Lilex
-	cp -r build/ttf ~/.fonts/Lilex
+install-Linux: ## install font to Linux based systems
+	@rm -rf ~/.fonts/Lilex
+	@cp -r build/ttf ~/.fonts/Lilex
 
 $(VENV_DIR): requirements.txt
-	rm -rf "$(VENV_DIR)"
-	python3.11 -m venv "$(VENV_DIR)"
-	$(VENV) pip install wheel
-	$(VENV) pip install -r requirements.txt
+	@rm -rf "$(VENV_DIR)"
+	@python3.11 -m venv "$(VENV_DIR)"
+	@$(VENV) pip install wheel
+	@$(VENV) pip install -r requirements.txt

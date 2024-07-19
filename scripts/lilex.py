@@ -10,10 +10,10 @@ from generator import generate_spacers, render_ligatures
 from glyphsLib import GSFeature, GSFont
 from utils import print_warn, read_classes, read_features, read_files
 
-FONT_FILE = "Lilex.glyphs"
-CLASSES_DIR = "./classes"
-FEATURES_DIR = "./features"
-OUT_DIR = "./build"
+FONT_FILE = "sources/Lilex.glyphs"
+CLASSES_DIR = "sources/classes"
+FEATURES_DIR = "sources/features"
+OUT_DIR = "build"
 
 global_args(
     arg("--input", "-i", default=FONT_FILE, help="Input .glyphs file"),

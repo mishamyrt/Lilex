@@ -3,7 +3,7 @@ import subprocess as sp
 from os import listdir
 from shutil import which
 
-STAT_CONFIG = 'STAT.yaml'
+STAT_CONFIG = 'sources/STAT.yaml'
 VARIABLE_SUFFIX = '[wght]'
 
 def _run(*args: str) -> bool:
