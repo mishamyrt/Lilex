@@ -63,7 +63,7 @@
     font-family: var(--font-family);
     font-size: var(--preview-size);
     font-weight: var(--preview-weight);
-    font-feature-settings: var(--preview-features);
+    font-feature-settings: "locl", var(--preview-features);
     height: var(--preview-height);
 
     overflow-y: hidden;
