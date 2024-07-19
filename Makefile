@@ -70,7 +70,7 @@ check-sequential: clean-reports ## check each font file quality
 		
 .PHONY: lint
 lint: ## check code quality
-	$(VENV) ruff $(SCRIPTS_DIR)/
+	$(VENV) ruff check $(SCRIPTS_DIR)/
 	$(VENV) pylint $(SCRIPTS_DIR)/
 	cd preview; pnpm eslint 'src/**/*.{svlete,ts}'
 
