@@ -27,6 +27,14 @@ define check-ttf-file
 		"$(BUILD_DIR)/ttf/Lilex-$(1).ttf"
 endef
 
+.PHONY: help
+help: ## print this message
+	@awk \
+		'BEGIN {FS = ":.*?## "} \
+		/^[a-zA-Z_-]+:.*?## / \
+		{printf "\033[33m%-20s\033[0m %s\n", $$1, $$2}' \
+		$(MAKEFILE_LIST)
+
 .PHONY: configure
 configure: requirements.txt ## setup build environment
 	@rm -rf $(VENV_DIR)
@@ -126,15 +134,15 @@ variable: ## build variable font
 	$(call build-font,variable)
 
 .PHONY: install
-install: ## install font to system
+install: ## install font to system (macOS and Linux only)
 	@make install-$(OS)
 
 .PHONY: install-Darwin
-install-Darwin: ## install font to macOS
+install-Darwin:
 	@rm -rf ~/Library/Fonts/Lilex
 	@cp -r build/variable ~/Library/Fonts/Lilex
 
-install-Linux: ## install font to Linux based systems
+install-Linux:
 	@rm -rf ~/.fonts/Lilex
 	@cp -r build/ttf ~/.fonts/Lilex
 
