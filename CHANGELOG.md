@@ -1,35 +1,35 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 2.520 — Unreleased
+## Next
 
-## Fixed
+### Fixed
 
 * Combs alignment. (`ỐỔỖǪǫ`, `Ḩḩ`, `ẲẴẤẨẢ`, `ỂỄ`)
 * Variable "Thin" variant.
 * Variable tables.
 
-## Removed
+### Removed
 
 * ExtraThick variant. This is a non-standard variant that doesn't pass Google Fonts checks. If you want to get this typeface, take a variable font and give it a weight of 450.
 
 ## [2.510] — May 10, 2024
 
-## Added
+### Added
 
 * One storey alpha. (`α`, `ά`)
 
-## Fixed
+### Fixed
 
 * Variable font interpolation problems for some glyphs.
 
-## Removed
+### Removed
 
 * Some unreachable glyphs.
 
 ## [2.500] — May 9, 2024
 
-## Added
+### Added
 
 * [Power symbols](https://unicodepowersymbol.com/).
 * Pre-1918 missing cyrillic. (`Ѣѣ`, `Ѵѵ`)
@@ -41,12 +41,12 @@ All notable changes to this project will be documented in this file.
 * Old-style numerals. (`onum`)
 * Bulgarian localized forms.
 
-## Fixed
+### Fixed
 
 * No more arrows breaking on Windows with TTF.
 * Greek support.
 
-## Improved
+### Improved
 
 * Subpixel equal combinations shifts in small sizes.
 * Shapes for cyrillic fita. (`Ѳ`, `ѳ`)
@@ -54,29 +54,29 @@ All notable changes to this project will be documented in this file.
 
 ## [2.400] — December 17, 2023
 
-## Added
+### Added
 
 * `ss04` for broken number signs. (`####`) [#28](https://github.com/mishamyrt/Lilex/pull/28)
 * `(*`, `*)`.
 
-## Fixed
+### Fixed
 
 * Aligning slash asterisk sequences. (`/*`, `*/`) [#29](https://github.com/mishamyrt/Lilex/pull/29)
 
 ## [2.300] — November 7, 2023
 
-## Added
+### Added
 
 * `cv11` for connected bar with less or greater. (`<|`, `|>`)
 
-## Fixed
+### Fixed
 
 * `Medium` naming.
 * Vertical align for some arrow parts. (`greater_greater_equal_end.seq`, `greater_greater_equal_middle.seq`)
 
 ## [2.200] — April 13, 2023
 
-## Fixed
+### Fixed
 
 * Long `----` and `====` are no longer breaking in iTerm2.
 * Metrics. (`underlineThickness`, `hhea`, `usWinAscent`, `usWinDescent`, `panose`)
@@ -85,11 +85,11 @@ All notable changes to this project will be documented in this file.
 * Arrows with `ss01`.
 * `||` distance in arrows.
 
-## Removed
+### Removed
 
 * OTF is no longer available in the bundle. But you still have the option of building it yourself.
 
-## Added
+### Added
 
 * `..=`, `#=`, `+=`, `^=`, `..<`, `#?`.
 * `:::`, `;;`, `%%`, `>>>`, `<<<`, `+++`, `??`.
@@ -107,12 +107,12 @@ All notable changes to this project will be documented in this file.
 
 ## [2.100] — April 2, 2023
 
-## Fixed
+### Fixed
 
 * `044B` (`ы`), `042B` (`Ы`) point order (In 400-700 the scaling was broken).
 * Updated the clock arrows (`↺`, `↻`) to make them round. The original arrows are available in `cv07`.
 
-## Added
+### Added
 
 * Medium and ExtraLight (they're back!)
 * Arrows (and Markdown tables). `~>`, `<~`, `<~~`, `<~>`, `<<-|->>`, `<<=|=>> `, `|--|--|`
@@ -122,15 +122,15 @@ All notable changes to this project will be documented in this file.
 
 ## [2.000] — March 28, 2023
 
-## Removed
+### Removed
 
 * Ugly `fl` and `fi`
 
-## Added
+### Added
 
 * Generative `##` and `__` ligatures. Sequences of these characters can now be of any length
 
-## Fixed
+### Fixed
 
 * `_` alignment
 
@@ -140,13 +140,13 @@ Based on IBM Plex Mono v6.0.0.
 
 Font rebuilt from scratch, ligatures redrawn. Improved alignment of many characters.
 
-## Added
+### Added
 
 * Thin weight (Now the weight range is from 100 to 700)
 * Boxes
 * `/**`
 
-## Removed (At least for now)
+### Removed (At least for now)
 
 * `www`
 * `~=`
