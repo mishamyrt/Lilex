@@ -45,14 +45,12 @@ jobs:
         name: Lilex
         path: build
 
-    - name: Generate source with new version
-      run: python scripts/lilex.py generate --version "${{ inputs.version }}"
-
-    - name: Save release notes
-      run: python scripts/changelog.py notes Next > notes.md
-
-    - name: Update changelog with new version
-      run: python scripts/changelog.py release "${{ inputs.version }}"
+    - name: Generate sources with new version
+      run: |
+        . venv/bin/activate
+        python scripts/lilex.py generate --version "${{ inputs.version }}"
+        python scripts/changelog.py notes Next > notes.md
+        python scripts/changelog.py release "${{ inputs.version }}"
 
     - name: Replace builded font files
       run: |
