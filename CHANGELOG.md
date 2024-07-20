@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## Next
 
+### Added
+
+* Circles. (`●`, `○◯`, `◐◑◒◓`, `◖◗`, `◔`, `◜◝◟◞`)
+
 ### Changed
 
 * Replaced the `ß` glyph, the previous version is available under the `cv12` variant.
