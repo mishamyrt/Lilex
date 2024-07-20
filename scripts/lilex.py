@@ -31,6 +31,7 @@ global_args(
 )
 def generate(args, font: GlyphsFont):
     """Saves the generated source file with features and classes"""
+    font.clear_opened_files()
     if args.params:
         for master in font.file.masters:
             names = []

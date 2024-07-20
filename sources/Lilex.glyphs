@@ -1,11 +1,6 @@
 {
-.appVersion = "3134";
+.appVersion = "3306";
 .formatVersion = 3;
-DisplayStrings = (
-"ё",
-"/bar_greater.liga.cv11",
-"/less_bar.liga.cv11"
-);
 axes = (
 {
 name = Weight;
@@ -132,7 +127,7 @@ size = 6;
 },
 {
 pos = 363;
-size = "-6";
+size = -6;
 },
 {
 pos = 335;
@@ -140,15 +135,15 @@ size = 6;
 },
 {
 pos = 329;
-size = "-6";
+size = -6;
 },
 {
 pos = 0;
-size = "-12";
+size = -12;
 },
 {
-pos = "-200";
-size = "-12";
+pos = -200;
+size = -12;
 }
 );
 },
@@ -146472,10 +146467,6 @@ value = "Copyright 2019-2023 The Lilex Project Authors (https://github.com/misha
 );
 },
 {
-key = designerURL;
-value = "https://myrt.co";
-},
-{
 key = designers;
 values = (
 {
@@ -146485,8 +146476,8 @@ value = "Mike Abbink, Paul van der Laan, Pieter van Rosmalen, Mikhael Khrustik";
 );
 },
 {
-key = licenseURL;
-value = "http://scripts.sil.org/OFL";
+key = designerURL;
+value = "https://myrt.co";
 },
 {
 key = licenses;
@@ -146498,8 +146489,8 @@ value = "This Font Software is licensed under the SIL Open Font License, Version
 );
 },
 {
-key = manufacturerURL;
-value = "https://myrt.co";
+key = licenseURL;
+value = "http://scripts.sil.org/OFL";
 },
 {
 key = manufacturers;
@@ -146509,6 +146500,10 @@ language = dflt;
 value = "Mikhael Khrustik";
 }
 );
+},
+{
+key = manufacturerURL;
+value = "https://myrt.co";
 }
 );
 stems = (

@@ -79,6 +79,9 @@ class GlyphsFont:
         self._font.versionMajor = int(parts[0])
         self._font.versionMinor = int(parts[1])
 
+    def clear_opened_files(self):
+        self._font.DisplayStrings = ""
+
     def build(self, formats: list[str], out_dir: str, store_temp=False) -> bool:
         print("Preparing build environment")
         temp_dir, ds_file = self._prepare_build()
