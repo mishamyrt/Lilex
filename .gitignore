@@ -2,8 +2,8 @@
 /build/
 /venv/
 /.vscode
-/Lilex (Autosaved).glyphs
+* (Autosaved).glyphs
+*.glyphspackage
 __pycache__
 .ruff_cache
 reports/
-bundle/
