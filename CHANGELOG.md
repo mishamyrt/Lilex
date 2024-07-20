@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Changed
+
+* Replaced the `ß` glyph, the previous version is available under the `cv12` variant.
+
 ## [2.520] — July 19, 2024
 
 ### Fixed
