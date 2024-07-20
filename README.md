@@ -2,11 +2,15 @@
     <img
         src="./images/main@2x.png"
         alt="Lilex. The font for developers."
-        width="362px">
+        width="362px"><br/>
+    <a href="https://github.com/mishamyrt/Lilex/actions/workflows/qa.yaml">
+        <img src="https://github.com/mishamyrt/Lilex/actions/workflows/qa.yaml/badge.svg" alt="Quality Assurance"/>
+    </a>
+    <a href="https://github.com/mishamyrt/Lilex/releases/latest">
+        <img src="https://img.shields.io/github/v/tag/mishamyrt/Lilex?sort=semver" alt="Version"/>
+    </a>
 <p>
-
-[![Build](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml/badge.svg)](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml) [![Version](https://img.shields.io/github/v/tag/mishamyrt/Lilex?sort=semver)](https://github.com/mishamyrt/Lilex/releases/latest)
-
+<hr>
 
 Lilex is the modern programming font containing a set of ligatures for common programming multi-character combinations.
 
