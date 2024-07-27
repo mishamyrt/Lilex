@@ -133,8 +133,15 @@ To do this, build the binaries from the source file with the features:
 ./scripts/lilex.py --features 'ss01,zero' build
 ```
 
+## License
+
+Lilex typeface is available under the [OFL-1.1 License](https://github.com/mishamyrt/Lilex/blob/master/OFL.txt) and can be used free of charge, for both commercial and non-commercial purposes.
+
+The source code is available under [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+
 ## Credits
 
 -   Author: Mikhael Khrustik
 -   Based on: [IBM Plex Mono](https://github.com/IBM/plex)
 -   Inspired by: [Fira Code](https://github.com/tonsky/FiraCode)
+
