@@ -1,0 +1,55 @@
+name: "Bug report 🐛"
+description: Report rendering issues or unexpected behavior
+body:
+- type: markdown
+  attributes:
+    value: |
+      Please make sure to [search for existing issues](https://github.com/mishamyrt/Lilex/issues) before filing a new one!
+
+- type: input
+  id: version
+  attributes:
+    label: Lilex font version
+    placeholder: "2.530, 2.500"
+  validations:
+    required: true
+
+- type: dropdown
+  id: format
+  attributes:
+    label: Font file format(s)
+    multiple: true
+    options:
+      - .ttf (variable)
+      - .ttf (static)
+      - I don't know
+  validations:
+    required: true
+
+- type: input
+  id: platform
+  attributes:
+    label: Platform
+    placeholder: "macOS 14.5; Linux (freetype 2.13.2); Windows 11"
+  validations:
+    required: true
+
+- type: textarea
+  id: software
+  attributes:
+    label: Other Software
+    description: If you're reporting a bug about Lilex's interaction with other software, what software? What versions?
+    placeholder: |
+      iTerm2
+      VS Code
+      Windows Terminal
+  validations:
+    required: false
+
+- type: textarea
+  id: what-happened
+  attributes:
+    label: What happened?
+    placeholder: Tell what's happening. Include some screenshots! Does it happen only at a certain font size or a certain pixel density?
+  validations:
+    required: true
