@@ -32,3 +32,59 @@ Here is how to contribute back some code, documentation or design:
 
 Please rebase (not merge) from the `master` branch if your PR needs to incorporate changes that occurred after your feature branch was created.
 
+## Build
+
+### Setup
+
+At the moment building is possible on Ubuntu and macOS. First, install the system dependencies.
+
+#### macOS
+
+```sh
+brew install cairo freetype harfbuzz pkg-config
+```
+
+#### Ubuntu
+
+```sh
+sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev
+```
+
+#### Common
+
+Clone the repository and navigate to the project folder:
+
+```
+git clone https://github.com/mishamyrt/Lilex
+cd Lilex
+```
+
+And then setup python virtual environment:
+
+```sh
+make configure
+```
+
+### Compile
+
+Now run the command to build Lilex.
+
+```sh
+make build
+```
+
+or
+
+```sh
+./scripts/lilex.py build
+```
+
+### Forced feature activation
+
+The builder gives you the ability to forcibly enable any font features. This works by moving their code to the calt. If the ligatures work, the selected features will also work.
+
+To do this, build the binaries from the source file with the features:
+
+```sh
+./scripts/lilex.py --features 'ss01,zero' build
+```

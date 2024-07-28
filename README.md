@@ -76,62 +76,9 @@ There is also a full set of single-character arrows (`↑`, `↓`, etc.) in the 
 
 <img src="./images/arrows@2x.png">
 
-## Build
+## Development
 
-### Setup
-
-At the moment building is possible on Ubuntu and macOS. First, install the system dependencies.
-
-#### macOS
-
-```sh
-brew install cairo freetype harfbuzz pkg-config
-```
-
-#### Ubuntu
-
-```sh
-sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev
-```
-
-#### Common
-
-Clone the repository and navigate to the project folder:
-
-```
-git clone https://github.com/mishamyrt/Lilex
-cd Lilex
-```
-
-And then setup python virtual environment:
-
-```sh
-make configure
-```
-
-### Compile
-
-Now run the command to build Lilex.
-
-```sh
-make build
-```
-
-or
-
-```sh
-./scripts/lilex.py build
-```
-
-### Forced feature activation
-
-The builder gives you the ability to forcibly enable any font features. This works by moving their code to the calt. If the ligatures work, the selected features will also work.
-
-To do this, build the binaries from the source file with the features:
-
-```sh
-./scripts/lilex.py --features 'ss01,zero' build
-```
+If you want to make improvements to the project, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
