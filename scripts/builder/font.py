@@ -1,6 +1,7 @@
 """Glyphs helper"""
 from __future__ import annotations
 
+from pathlib import Path
 from shutil import rmtree
 from tempfile import mkdtemp
 from typing import Callable
@@ -24,10 +25,15 @@ class GlyphsFont:
     """Glyphs font builder"""
     _font: GSFont = None
     _path: str
+    _name: str
 
-    def __init__(self, path: str):
+    def __init__(self, path: str, name: str = None):
         self._font = GSFont(path)
         self._path = path
+        if name is None:
+            self._name = Path(self._path).stem
+        else:
+            self._name = name
 
     @property
     def file(self) -> GSFont:
@@ -91,7 +97,7 @@ class GlyphsFont:
                 print(f'Unsupported format "{fmt}"')
                 break
             fmt_dir = f'{out_dir}/{fmt}'
-            success = success and make(self.file.familyName, ds_file, fmt, fmt_dir)
+            success = success and make(self._name, ds_file, fmt, fmt_dir)
         if store_temp:
             print(f'Build directory: {temp_dir}')
         else:
@@ -112,7 +118,11 @@ class GlyphsFont:
         temp_dir = mkdtemp(prefix="LilexBuild")
         glyphs_file = f'{temp_dir}/{self._font.familyName}.glyphs'
         ufo_dir = f'{temp_dir}/master_ufo'
-        ds_file = f"{ufo_dir}/{self._font.familyName}.designspace"
+        ds_file = f"{ufo_dir}/{self._name}.designspace"
         self.save_to(glyphs_file)
-        build_masters(glyphs_file, ufo_dir, write_skipexportglyphs=True)
+        build_masters(
+            glyphs_file,
+            ufo_dir,
+            write_skipexportglyphs=True
+        )
         return (temp_dir, ds_file)
