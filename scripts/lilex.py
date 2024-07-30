@@ -16,8 +16,10 @@ OUT_DIR = "build"
 
 global_args(
     arg("--input", "-i", default=FONT_FILE, help="Input .glyphs file"),
-    arg("--features", "-f",
-    help="A list of features that will be \"baked\" into the font. Comma separated, no spaces")
+    arg("--features", "-f", help=(
+        "A list of features that will be \"baked\" into the font. Comma separated, no spaces."
+        " Or you can pass \"ignore\" to use file's prebuilt features")
+    )
 )
 
 @command(
@@ -83,6 +85,10 @@ def move_to_calt(font: GSFont, features: list[str]):
 
 def create_font(args):
     font = GlyphsFont(args.input)
+
+    if args.features == "ignore":
+        print("Using prebuilt features")
+        return args, font
 
     cls = read_classes(CLASSES_DIR)
     fea = read_features(FEATURES_DIR)

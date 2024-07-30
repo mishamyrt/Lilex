@@ -6,6 +6,9 @@ from shutil import which
 STAT_CONFIG = 'sources/STAT.yaml'
 VARIABLE_SUFFIX = '[wght]'
 
+def _format_variable_path(font_dir: str, family_name: str) -> str:
+    return f"{font_dir}/{family_name}{VARIABLE_SUFFIX}.ttf"
+
 def _run(*args: str) -> bool:
     with sp.Popen(" ".join(args), shell=True, stdout=sp.PIPE) as child:
         child.communicate()
@@ -28,7 +31,7 @@ def _gftools(subcommand: str, *args: str) -> bool:
 
 def _fix_variable(font_dir, family_name) -> bool:
     """Generate STAT table for variable ttf"""
-    file_path = f'{font_dir}/{family_name}{VARIABLE_SUFFIX}.ttf'
+    file_path = _format_variable_path(font_dir, family_name)
     return _gftools(
         "fix-font",
         "--include-source-fixes",
@@ -73,7 +76,7 @@ def make(family_name: str, ds_path: str, fmt: str, out_dir: str) -> bool:
         "--filter DecomposeTransformedComponentsFilter"
     ]
     if fmt == "variable":
-        cmd.append(f'--output-path "{out_dir}/{family_name}{VARIABLE_SUFFIX}.ttf"')
+        cmd.append(f'--output-path "{_format_variable_path(out_dir, family_name)}"')
     else:
         cmd.append("--interpolate")
         cmd.append(f'--output-dir "{out_dir}"')
