@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Added
+
+* Italic.
+
 ## [2.530] — July 27, 2024
 
 ### Added

@@ -16,7 +16,7 @@ OUT_DIR = "build"
 
 global_args(
     arg("--input", "-i", default=FONT_FILE, help="Input .glyphs file"),
-    arg("--features", "-f", help=(
+    arg("--features", "-f", default="all", help=(
         "A list of features that will be \"baked\" into the font. Comma separated, no spaces."
         " Or you can pass \"ignore\" to use file's prebuilt features")
     )
@@ -90,20 +90,20 @@ def create_font(args):
         print("Using prebuilt features")
         return args, font
 
-    cls = read_classes(CLASSES_DIR)
-    fea = read_features(FEATURES_DIR)
+    if args.features == "all":
+        cls = read_classes(CLASSES_DIR)
+        fea = read_features(FEATURES_DIR)
 
-    calt = generate_calt(font)
-    fea.append(calt)
-    generate_spacers(font.ligatures(), font.file.glyphs)
-    font.set_classes(cls)
-    font.set_features(fea)
-
-    if args.features is not None:
-        features = args.features.split(",")
-        move_to_calt(font.file, features)
-        print_warn(f"Forced features: {', '.join(features)}")
+        calt = generate_calt(font)
+        fea.append(calt)
+        generate_spacers(font.ligatures(), font.file.glyphs)
+        font.set_classes(cls)
+        font.set_features(fea)
     return args, font
+    # if args.features is not None:
+    #     features = args.features.split(",")
+    #     move_to_calt(font.file, features)
+    #     print_warn(f"Forced features: {', '.join(features)}")
 
 if __name__ == "__main__":
     run(prepare=create_font)
