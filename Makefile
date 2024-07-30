@@ -1,17 +1,28 @@
-# Project paths
-# BUNDLE_DIR = bundle
-BUILD_DIR = build
-REPORTS_DIR = reports
-SCRIPTS_DIR = scripts
-GLYPHS_FILE = sources/Lilex.glyphs
+# Project directories
+BUILD_DIR := build
+REPORTS_DIR := reports
+SCRIPTS_DIR := scripts
+SOURCES_DIR := sources
+
+# Font sources
+LILEX_SOURCE = $(SOURCES_DIR)/Lilex.glyphs
+LILEX_ITALIC_SOURCE = $(SOURCES_DIR)/Lilex-Italic.glyphs
 
 # Internal build variables
 OS := $(shell uname)
 VENV_DIR = ./venv
 VENV = . $(VENV_DIR)/bin/activate;
 
+define build-glyphs
+	@$(VENV) python $(SCRIPTS_DIR)/lilex.py \
+		-i "$(1)" \
+		-f $(3) \
+		build $(2)
+endef
+
 define build-font
-	@$(VENV) python $(SCRIPTS_DIR)/lilex.py build $(1)
+	$(call build-glyphs,$(LILEX_SOURCE),$(1),all)
+	$(call build-glyphs,$(LILEX_ITALIC_SOURCE),$(1),ignore)
 endef
 
 define check-font
@@ -94,22 +105,6 @@ build-preview: ## build the preview
 .PHONY: run-preview
 run-preview: ## run the preview
 	cd preview; pnpm run dev
-
-# .PHONY: pack-bundle
-# pack-bundle: ## pack the bundle
-# 	rm -rf "$(BUNDLE_DIR)"
-# 	mkdir "$(BUNDLE_DIR)"
-# # Copy fonts
-# 	cp -r "$(BUILD_DIR)/"* "$(BUNDLE_DIR)/"
-# # Copy reports
-# 	cp "$(REPORTS_DIR)/"* "$(BUNDLE_DIR)/"
-# 	cd "$(BUNDLE_DIR)"; zip -r Lilex.zip ./*
-
-# .PHONY: bundle
-# bundle: ## build the bundle
-# 	@make build
-# 	@make check
-# 	@make pack-bundle
 
 .PHONY: release 
 release:
