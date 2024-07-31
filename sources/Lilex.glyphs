@@ -1091,10 +1091,10 @@ sub four [slash fraction] five by fourfifths;
 sub one [slash fraction] six by onesixth;
 sub five [slash fraction] six by fivesixths;
 sub one [slash fraction] seven by oneseventh;
-sub one [slash fraction] eight by uni215B;
-sub three [slash fraction] eight by uni215C;
-sub five [slash fraction] eight by uni215D;
-sub seven [slash fraction] eight by uni215E;
+sub one [slash fraction] eight by oneeighth;
+sub three [slash fraction] eight by threeeighths;
+sub five [slash fraction] eight by fiveeighths;
+sub seven [slash fraction] eight by seveneighths;
 sub one [slash fraction] nine by oneninth;
 ";
 tag = frac;
@@ -75546,7 +75546,7 @@ width = 600;
 unicode = 8528;
 },
 {
-glyphname = uni215B;
+glyphname = oneeighth;
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -75612,7 +75612,7 @@ width = 600;
 unicode = 8539;
 },
 {
-glyphname = uni215C;
+glyphname = threeeighths;
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -75678,7 +75678,7 @@ width = 600;
 unicode = 8540;
 },
 {
-glyphname = uni215D;
+glyphname = fiveeighths;
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -75744,7 +75744,7 @@ width = 600;
 unicode = 8541;
 },
 {
-glyphname = uni215E;
+glyphname = seveneighths;
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -89125,7 +89125,7 @@ width = 600;
 unicode = 95;
 },
 {
-glyphname = uni2012;
+glyphname = figuredash;
 lastChange = "2024-05-07 13:27:40 +0000";
 layers = (
 {
@@ -89210,7 +89210,7 @@ vertWidth = 0;
 width = 600;
 }
 );
-note = uni2012;
+note = figuredash;
 unicode = 8210;
 },
 {
@@ -123501,7 +123501,7 @@ unicode = 9619;
 },
 {
 color = 5;
-glyphname = uni25CF;
+glyphname = blackCircle;
 lastChange = "2024-07-20 14:39:37 +0000";
 layers = (
 {
@@ -123583,7 +123583,7 @@ nodes = (
 width = 600;
 }
 );
-note = uni25CF;
+note = blackCircle;
 unicode = 9679;
 },
 {
