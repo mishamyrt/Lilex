@@ -4,10 +4,9 @@ import sys
 from argparse import BooleanOptionalAction
 
 from arrrgs import arg, command, global_args, run
-from builder import DEFAULT_FORMATS, GlyphsFont
-from generator import generate_spacers, render_ligatures
 from glyphsLib import GSFeature, GSFont
-from utils import print_warn, read_classes, read_features, read_files
+from liblilex import DEFAULT_FORMATS, GlyphsFont, generate_spacers, render_ligatures
+from utils import read_classes, read_features, read_files
 
 FONT_FILE = "sources/Lilex.glyphs"
 CLASSES_DIR = "sources/classes"
