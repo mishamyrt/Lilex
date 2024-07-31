@@ -10,11 +10,11 @@ tag = wght;
 );
 classes = (
 {
-code = "uni0432 uni0434 uni0436 uni0437 uni043A uni043B uni0444 uni044E uni0414 uni041A uni041B uni0424 uni042F";
+code = "ve-cy de-cy zhe-cy ze-cy ka-cy el-cy ef-cy iu-cy De-cy Ka-cy El-cy Ef-cy Ia-cy";
 name = cyrl_dflt;
 },
 {
-code = "uni0432.loclBGR uni0434.loclBGR uni0436.loclBGR uni0437.loclBGR uni043A.loclBGR uni043B.loclBGR uni0444.loclBGR uni044E.loclBGR uni0414.loclBGR uni041A.loclBGR uni041B.loclBGR uni0424.loclBGR uni042F.loclBGR";
+code = "ve-cy.loclBGR de-cy.loclBGR zhe-cy.loclBGR ze-cy.loclBGR ka-cy.loclBGR el-cy.loclBGR ef-cy.loclBGR iu-cy.loclBGR De-cy.loclBGR Ka-cy.loclBGR El-cy.loclBGR Ef-cy.loclBGR Ia-cy.loclBGR";
 name = cyrl_locl_bgr;
 },
 {
@@ -26,11 +26,11 @@ code = "a.alt01 aacute.alt01 abreve.alt01 acircumflex.alt01 adieresis.alt01 adot
 name = lca_alt1;
 },
 {
-code = "uni0430 uni04D3 uni04D1";
+code = "a-cy adieresis-cy abreve-cy";
 name = lca_cyrl_dflt;
 },
 {
-code = "uni0430.alt01 uni04D3.alt01 uni04D1.alt01";
+code = "a-cy.alt01 adieresis-cy.alt01 abreve-cy.alt01";
 name = lca_cyrl_alt1;
 },
 {
@@ -190,22 +190,22 @@ code = "	sub a from [a.alt01]; # 1 glyph(s)
 	sub gcommaaccent from [gcommaaccent.alt01]; # 1 glyph(s)
 	sub gdotaccent from [gdotaccent.alt01]; # 1 glyph(s)
 	sub germandbls from [germandbls.alt01]; # 1 glyph(s)
-	sub uni0430 from [uni0430.alt01]; # 1 glyph(s)
-	sub uni0432 from [uni0432.loclBGR]; # 1 glyph(s)
-	sub uni0434 from [uni0434.loclBGR]; # 1 glyph(s)
-	sub uni0436 from [uni0436.loclBGR]; # 1 glyph(s)
-	sub uni0437 from [uni0437.loclBGR]; # 1 glyph(s)
-	sub uni043A from [uni043A.loclBGR]; # 1 glyph(s)
-	sub uni043B from [uni043B.loclBGR]; # 1 glyph(s)
-	sub uni0444 from [uni0444.loclBGR]; # 1 glyph(s)
-	sub uni044E from [uni044E.loclBGR]; # 1 glyph(s)
-	sub uni0414 from [uni0414.loclBGR]; # 1 glyph(s)
-	sub uni041A from [uni041A.loclBGR]; # 1 glyph(s)
-	sub uni041B from [uni041B.loclBGR]; # 1 glyph(s)
-	sub uni0424 from [uni0424.loclBGR]; # 1 glyph(s)
-	sub uni042F from [uni042F.loclBGR]; # 1 glyph(s)
-	sub uni04D3 from [uni04D3.alt01]; # 1 glyph(s)
-	sub uni04D1 from [uni04D1.alt01]; # 1 glyph(s)";
+	sub a-cy from [a-cy.alt01]; # 1 glyph(s)
+	sub ve-cy from [ve-cy.loclBGR]; # 1 glyph(s)
+	sub de-cy from [de-cy.loclBGR]; # 1 glyph(s)
+	sub zhe-cy from [zhe-cy.loclBGR]; # 1 glyph(s)
+	sub ze-cy from [ze-cy.loclBGR]; # 1 glyph(s)
+	sub ka-cy from [ka-cy.loclBGR]; # 1 glyph(s)
+	sub el-cy from [el-cy.loclBGR]; # 1 glyph(s)
+	sub ef-cy from [ef-cy.loclBGR]; # 1 glyph(s)
+	sub iu-cy from [iu-cy.loclBGR]; # 1 glyph(s)
+	sub De-cy from [De-cy.loclBGR]; # 1 glyph(s)
+	sub Ka-cy from [Ka-cy.loclBGR]; # 1 glyph(s)
+	sub El-cy from [El-cy.loclBGR]; # 1 glyph(s)
+	sub Ef-cy from [Ef-cy.loclBGR]; # 1 glyph(s)
+	sub Ia-cy from [Ia-cy.loclBGR]; # 1 glyph(s)
+	sub adieresis-cy from [adieresis-cy.alt01]; # 1 glyph(s)
+	sub abreve-cy from [abreve-cy.alt01]; # 1 glyph(s)";
 tag = aalt;
 },
 {
@@ -232,22 +232,22 @@ tag = ordn;
 {
 code = "	# fractions
 	sub one [slash fraction] two by onehalf;
-	sub one [slash fraction] three by uni2153;
-	sub two [slash fraction] three by uni2154;
+	sub one [slash fraction] three by onethird;
+	sub two [slash fraction] three by twothirds;
 	sub one [slash fraction] four by onequarter;
 	sub three [slash fraction] four by threequarters;
-	sub one [slash fraction] five by uni2155;
-	sub two [slash fraction] five by uni2156;
-	sub three [slash fraction] five by uni2157;
-	sub four [slash fraction] five by uni2158;
-	sub one [slash fraction] six by uni2159;
-	sub five [slash fraction] six by uni215A;
-	sub one [slash fraction] seven by uni2150;
-	sub one [slash fraction] eight by uni215B;
-	sub three [slash fraction] eight by uni215C;
-	sub five [slash fraction] eight by uni215D;
-	sub seven [slash fraction] eight by uni215E;
-	sub one [slash fraction] nine by uni2151;";
+	sub one [slash fraction] five by onefifth;
+	sub two [slash fraction] five by twofifths;
+	sub three [slash fraction] five by threefifths;
+	sub four [slash fraction] five by fourfifths;
+	sub one [slash fraction] six by onesixth;
+	sub five [slash fraction] six by fivesixths;
+	sub one [slash fraction] seven by oneseventh;
+	sub one [slash fraction] eight by oneeighth;
+	sub three [slash fraction] eight by threeeighths;
+	sub five [slash fraction] eight by fiveeighths;
+	sub seven [slash fraction] eight by seveneighths;
+	sub one [slash fraction] nine by oneninth;";
 tag = frac;
 },
 {
@@ -410,30 +410,30 @@ code = "	# Created: Mon Dec 11 16:49:17 2023
 	markClass caronslovakcomb <anchor 0 740> @MC_topright;
 	markClass ogonekcomb <anchor 0 0> @MC_bottomright;
 	lookup MARK_BASE_bottom {
-		@bGC_A_bottom = [A I M T V W Y Z Aacute Abreve Acaron Acircumflex Adieresis Agrave Ahook Amacron Aogonek Aring Aringacute Atilde Abreveacute Abrevegrave Abrevehook Abrevetilde Acircumflexacute Acircumflexgrave Acircumflexhook Acircumflextilde Iacute Ibreve Icaron Icircumflex Idieresis Idotaccent Igrave Ihook Imacron Iogonek Itilde Tbar Tcaron Wacute Wcircumflex Wdieresis Wgrave Yacute Ycircumflex Ydieresis Ygrave Yhook Ytilde Zacute Zcaron Zdotaccent uni0410 uni041C uni0422 uni04D2 uni04D0 uni04C0 uni04AE uni0406 uni0407];
-		@bGC_B_bottom = [B uni0412];
-		@bGC_C_bottom = [C Cacute Ccaron Ccircumflex Cdotaccent uni0421];
-		@bGC_E_bottom = [E K Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Egrave Ehook Emacron Eogonek Etilde Ecircumflexacute Ecircumflexgrave Ecircumflexhook Ecircumflextilde uni0415 uni0400 uni0401 uni04D6];
-		@bGC_F_bottom = [F P uni0420];
-		@bGC_H_bottom = [H Hcircumflex uni041D];
+		@bGC_A_bottom = [A I M T V W Y Z Aacute Abreve Acaron Acircumflex Adieresis Agrave Ahook Amacron Aogonek Aring Aringacute Atilde Abreveacute Abrevegrave Abrevehook Abrevetilde Acircumflexacute Acircumflexgrave Acircumflexhook Acircumflextilde Iacute Ibreve Icaron Icircumflex Idieresis Idotaccent Igrave Ihook Imacron Iogonek Itilde Tbar Tcaron Wacute Wcircumflex Wdieresis Wgrave Yacute Ycircumflex Ydieresis Ygrave Yhook Ytilde Zacute Zcaron Zdotaccent A-cy Em-cy Te-cy Adieresis-cy Abreve-cy Palochka-cy Ustrait-cy I-cy Yi-cy];
+		@bGC_B_bottom = [B Ve-cy];
+		@bGC_C_bottom = [C Cacute Ccaron Ccircumflex Cdotaccent Es-cy];
+		@bGC_E_bottom = [E K Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Egrave Ehook Emacron Eogonek Etilde Ecircumflexacute Ecircumflexgrave Ecircumflexhook Ecircumflextilde Ie-cy Iegrave-cy Io-cy Iebreve-cy];
+		@bGC_F_bottom = [F P Er-cy];
+		@bGC_H_bottom = [H Hcircumflex En-cy];
 		@bGC_L_bottom = [L Lacute Lcaron];
-		@bGC_N_bottom = [N R X Nacute Ncaron Ntilde Racute Rcaron uni0425];
-		@bGC_S_bottom = [S U Sacute Scaron Scircumflex Uacute Ubreve Ucaron Ucircumflex Udieresis Ugrave Uhook Uhungarumlaut Umacron Uogonek Uring Utilde Uhorn Uhornacute Uhorngrave Uhornhook Uhorntilde Udieresismacron Udieresisacute Udieresisgrave Udieresiscaron uni0405];
-		@bGC_a.alt01_bottom = [a.alt01 J aacute.alt01 abreve.alt01 acaron.alt01 acircumflex.alt01 adieresis.alt01 agrave.alt01 ahook.alt01 amacron.alt01 aogonek.alt01 aring.alt01 aringacute.alt01 atilde.alt01 abreveacute.alt01 abrevegrave.alt01 abrevehook.alt01 abrevetilde.alt01 acircumflexacute.alt01 acircumflexgrave.alt01 acircumflexhook.alt01 acircumflextilde.alt01 Jacute Jcircumflex uni0430.alt01 uni04D3.alt01 uni04D1.alt01 uni0408];
-		@bGC_a_bottom = [a aacute abreve acaron acircumflex adieresis agrave ahook amacron aogonek aring aringacute atilde abreveacute abrevegrave abrevehook abrevetilde acircumflexacute acircumflexgrave acircumflexhook acircumflextilde uni0430 uni04D3 uni04D1];
-		@bGC_c_bottom = [c cacute ccaron ccircumflex cdotaccent uni0441];
-		@bGC_e_bottom = [e G eacute ebreve ecaron ecircumflex edieresis edotaccent egrave ehook emacron eogonek etilde ecircumflexacute ecircumflexgrave ecircumflexhook ecircumflextilde Gbreve Gcircumflex Gdotaccent uni0435 uni0450 uni0451 uni04D7];
-		@bGC_h_bottom = [h n O hcircumflex nacute ncaron ntilde Oacute Obreve Ocaron Ocircumflex Odieresis Ograve Ohook Ohungarumlaut Omacron Oslash Oslashacute Otilde Ohorn Ohornacute Ohorngrave Ohornhook Ohorntilde Ocircumflexacute Ocircumflexgrave Ocircumflexhook Ocircumflextilde uni043F uni041E uni04BB uni04E6];
-		@bGC_i_bottom = [i dotlessi iacute ibreve icaron icircumflex idieresis igrave ihook imacron iogonek itilde uni0456 uni0457];
+		@bGC_N_bottom = [N R X Nacute Ncaron Ntilde Racute Rcaron Ha-cy];
+		@bGC_S_bottom = [S U Sacute Scaron Scircumflex Uacute Ubreve Ucaron Ucircumflex Udieresis Ugrave Uhook Uhungarumlaut Umacron Uogonek Uring Utilde Uhorn Uhornacute Uhorngrave Uhornhook Uhorntilde Udieresismacron Udieresisacute Udieresisgrave Udieresiscaron Dze-cy];
+		@bGC_a.alt01_bottom = [a.alt01 J aacute.alt01 abreve.alt01 acaron.alt01 acircumflex.alt01 adieresis.alt01 agrave.alt01 ahook.alt01 amacron.alt01 aogonek.alt01 aring.alt01 aringacute.alt01 atilde.alt01 abreveacute.alt01 abrevegrave.alt01 abrevehook.alt01 abrevetilde.alt01 acircumflexacute.alt01 acircumflexgrave.alt01 acircumflexhook.alt01 acircumflextilde.alt01 Jacute Jcircumflex a-cy.alt01 adieresis-cy.alt01 abreve-cy.alt01 Je-cy];
+		@bGC_a_bottom = [a aacute abreve acaron acircumflex adieresis agrave ahook amacron aogonek aring aringacute atilde abreveacute abrevegrave abrevehook abrevetilde acircumflexacute acircumflexgrave acircumflexhook acircumflextilde a-cy adieresis-cy abreve-cy];
+		@bGC_c_bottom = [c cacute ccaron ccircumflex cdotaccent es-cy];
+		@bGC_e_bottom = [e G eacute ebreve ecaron ecircumflex edieresis edotaccent egrave ehook emacron eogonek etilde ecircumflexacute ecircumflexgrave ecircumflexhook ecircumflextilde Gbreve Gcircumflex Gdotaccent ie-cy iegrave-cy io-cy iebreve-cy];
+		@bGC_h_bottom = [h n O hcircumflex nacute ncaron ntilde Oacute Obreve Ocaron Ocircumflex Odieresis Ograve Ohook Ohungarumlaut Omacron Oslash Oslashacute Otilde Ohorn Ohornacute Ohorngrave Ohornhook Ohorntilde Ocircumflexacute Ocircumflexgrave Ocircumflexhook Ocircumflextilde pe-cy O-cy shha-cy Odieresis-cy];
+		@bGC_i_bottom = [i dotlessi iacute ibreve icaron icircumflex idieresis igrave ihook imacron iogonek itilde i-cy yi-cy];
 		@bGC_l_bottom = [l lacute lcaron];
-		@bGC_m_bottom = [m uni0442];
-		@bGC_o_bottom = [o oacute obreve ocaron ocircumflex odieresis ograve ohook ohungarumlaut omacron oslash oslashacute otilde ohorn ohornacute ohorngrave ohornhook ohorntilde ocircumflexacute ocircumflexgrave ocircumflexhook ocircumflextilde uni043E uni04E7];
+		@bGC_m_bottom = [m te-cy];
+		@bGC_o_bottom = [o oacute obreve ocaron ocircumflex odieresis ograve ohook ohungarumlaut omacron oslash oslashacute otilde ohorn ohornacute ohorngrave ohornhook ohorntilde ocircumflexacute ocircumflexgrave ocircumflexhook ocircumflextilde o-cy odieresis-cy];
 		@bGC_r_bottom = [r racute rcaron];
-		@bGC_s_bottom = [s w sacute scaron scircumflex wacute wcircumflex wdieresis wgrave uni0455];
+		@bGC_s_bottom = [s w sacute scaron scircumflex wacute wcircumflex wdieresis wgrave dze-cy];
 		@bGC_t_bottom = [t tbar tcaron];
-		@bGC_u_bottom = [u uacute ubreve ucaron ucircumflex udieresis ugrave uhook uhungarumlaut umacron uogonek uring utilde uhorn uhornacute uhorngrave uhornhook uhorntilde udieresismacron udieresisacute udieresisgrave udieresiscaron uni0438 uni0439 uni04E5 uni045D uni04E3];
-		@bGC_v_bottom = [v y D yacute ycircumflex ydieresis ygrave yhook ytilde Dcaron uni0443 uni04EF uni04F1 uni04F3 uni045E];
-		@bGC_x_bottom = [x uni0445];
+		@bGC_u_bottom = [u uacute ubreve ucaron ucircumflex udieresis ugrave uhook uhungarumlaut umacron uogonek uring utilde uhorn uhornacute uhorngrave uhornhook uhorntilde udieresismacron udieresisacute udieresisgrave udieresiscaron ii-cy iishort-cy idieresis-cy iigrave-cy imacron-cy];
+		@bGC_v_bottom = [v y D yacute ycircumflex ydieresis ygrave yhook ytilde Dcaron u-cy umacron-cy udieresis-cy uhungarumlaut-cy ushort-cy];
+		@bGC_x_bottom = [x ha-cy];
 		@bGC_z_bottom = [z zacute zcaron zdotaccent];
 		pos base @bGC_A_bottom <anchor 257 0> mark @MC_bottom;
 		pos base @bGC_B_bottom <anchor 250 0> mark @MC_bottom;
@@ -466,15 +466,15 @@ code = "	# Created: Mon Dec 11 16:49:17 2023
 		pos base kgreenlandic <anchor 284 0> mark @MC_bottom;
 	} MARK_BASE_bottom;
 	lookup MARK_BASE_bottomright {
-		@bGC_A_bottomright = [A Aacute Abreve Acaron Acircumflex Adieresis Adotbelow Agrave Ahook Amacron Aring Aringacute Atilde Abreveacute Abrevedotbelow Abrevegrave Abrevehook Abrevetilde Acircumflexacute Acircumflexdotbelow Acircumflexgrave Acircumflexhook Acircumflextilde uni0410 uni04D2 uni04D0];
-		@bGC_E_bottomright = [E Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Edotbelow Egrave Ehook Emacron Etilde Ecircumflexacute Ecircumflexdotbelow Ecircumflexgrave Ecircumflexhook Ecircumflextilde uni0415 uni0400 uni0401 uni04D6];
-		@bGC_I_bottomright = [I Iacute Ibreve Icaron Icircumflex Idieresis Idotaccent Idotbelow Igrave Ihook Imacron Itilde uni04C0 uni0406 uni0407];
+		@bGC_A_bottomright = [A Aacute Abreve Acaron Acircumflex Adieresis Adotbelow Agrave Ahook Amacron Aring Aringacute Atilde Abreveacute Abrevedotbelow Abrevegrave Abrevehook Abrevetilde Acircumflexacute Acircumflexdotbelow Acircumflexgrave Acircumflexhook Acircumflextilde A-cy Adieresis-cy Abreve-cy];
+		@bGC_E_bottomright = [E Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Edotbelow Egrave Ehook Emacron Etilde Ecircumflexacute Ecircumflexdotbelow Ecircumflexgrave Ecircumflexhook Ecircumflextilde Ie-cy Iegrave-cy Io-cy Iebreve-cy];
+		@bGC_I_bottomright = [I Iacute Ibreve Icaron Icircumflex Idieresis Idotaccent Idotbelow Igrave Ihook Imacron Itilde Palochka-cy I-cy Yi-cy];
 		@bGC_U_bottomright = [U Uacute Ubreve Ucaron Ucircumflex Udieresis Udotbelow Ugrave Uhook Uhungarumlaut Umacron Uring Utilde Udieresismacron Udieresisacute Udieresisgrave Udieresiscaron];
-		@bGC_a.alt01_bottomright = [a.alt01 aacute.alt01 abreve.alt01 acaron.alt01 acircumflex.alt01 adieresis.alt01 adotbelow.alt01 agrave.alt01 ahook.alt01 amacron.alt01 aring.alt01 aringacute.alt01 atilde.alt01 abreveacute.alt01 abrevedotbelow.alt01 abrevegrave.alt01 abrevehook.alt01 abrevetilde.alt01 acircumflexacute.alt01 acircumflexdotbelow.alt01 acircumflexgrave.alt01 acircumflexhook.alt01 acircumflextilde.alt01 uni0430.alt01 uni04D3.alt01 uni04D1.alt01];
-		@bGC_a_bottomright = [a aacute abreve acaron acircumflex adieresis adotbelow agrave ahook amacron aring aringacute atilde abreveacute abrevedotbelow abrevegrave abrevehook abrevetilde acircumflexacute acircumflexdotbelow acircumflexgrave acircumflexhook acircumflextilde uni0430 uni04D3 uni04D1];
-		@bGC_e_bottomright = [e eacute ebreve ecaron ecircumflex edieresis edotaccent edotbelow egrave ehook emacron etilde ecircumflexacute ecircumflexdotbelow ecircumflexgrave ecircumflexhook ecircumflextilde uni0435 uni0450 uni0451 uni04D7];
-		@bGC_i_bottomright = [i dotlessi iacute ibreve icaron icircumflex idieresis idotbelow igrave ihook imacron itilde uni0456 uni0457];
-		@bGC_u_bottomright = [u uacute ubreve ucaron ucircumflex udieresis udotbelow ugrave uhook uhungarumlaut umacron uring utilde udieresismacron udieresisacute udieresisgrave udieresiscaron uni0438 uni0439 uni04E5 uni045D uni04E3];
+		@bGC_a.alt01_bottomright = [a.alt01 aacute.alt01 abreve.alt01 acaron.alt01 acircumflex.alt01 adieresis.alt01 adotbelow.alt01 agrave.alt01 ahook.alt01 amacron.alt01 aring.alt01 aringacute.alt01 atilde.alt01 abreveacute.alt01 abrevedotbelow.alt01 abrevegrave.alt01 abrevehook.alt01 abrevetilde.alt01 acircumflexacute.alt01 acircumflexdotbelow.alt01 acircumflexgrave.alt01 acircumflexhook.alt01 acircumflextilde.alt01 a-cy.alt01 adieresis-cy.alt01 abreve-cy.alt01];
+		@bGC_a_bottomright = [a aacute abreve acaron acircumflex adieresis adotbelow agrave ahook amacron aring aringacute atilde abreveacute abrevedotbelow abrevegrave abrevehook abrevetilde acircumflexacute acircumflexdotbelow acircumflexgrave acircumflexhook acircumflextilde a-cy adieresis-cy abreve-cy];
+		@bGC_e_bottomright = [e eacute ebreve ecaron ecircumflex edieresis edotaccent edotbelow egrave ehook emacron etilde ecircumflexacute ecircumflexdotbelow ecircumflexgrave ecircumflexhook ecircumflextilde ie-cy iegrave-cy io-cy iebreve-cy];
+		@bGC_i_bottomright = [i dotlessi iacute ibreve icaron icircumflex idieresis idotbelow igrave ihook imacron itilde i-cy yi-cy];
+		@bGC_u_bottomright = [u uacute ubreve ucaron ucircumflex udieresis udotbelow ugrave uhook uhungarumlaut umacron uring utilde udieresismacron udieresisacute udieresisgrave udieresiscaron ii-cy iishort-cy idieresis-cy iigrave-cy imacron-cy];
 		pos base @bGC_A_bottomright <anchor 505 0> mark @MC_bottomright;
 		pos base @bGC_E_bottomright <anchor 471 0> mark @MC_bottomright;
 		pos base @bGC_I_bottomright <anchor 465 0> mark @MC_bottomright;
@@ -486,35 +486,35 @@ code = "	# Created: Mon Dec 11 16:49:17 2023
 		pos base @bGC_u_bottomright <anchor 426 0> mark @MC_bottomright;
 	} MARK_BASE_bottomright;
 	lookup MARK_BASE_top {
-		@bGC_AE_top = [AE uni04D4];
-		@bGC_A_top = [A H I K N V X Y Z Adotbelow Aogonek Idotbelow Iogonek Kcommaaccent Ncommaaccent Eng Ydotbelow uni0410 uni041D uni0425 uni04C0 uni04AE uni0406];
-		@bGC_B_top = [B uni0412];
-		@bGC_C_top = [C E F Ccedilla Edotbelow Eogonek uni0415 uni0421 uni04AA];
+		@bGC_AE_top = [AE Aie-cy];
+		@bGC_A_top = [A H I K N V X Y Z Adotbelow Aogonek Idotbelow Iogonek Kcommaaccent Ncommaaccent Eng Ydotbelow A-cy En-cy Ha-cy Palochka-cy Ustrait-cy I-cy];
+		@bGC_B_top = [B Ve-cy];
+		@bGC_C_top = [C E F Ccedilla Edotbelow Eogonek Ie-cy Es-cy Esdescender-cy];
 		@bGC_G_top = [G Gcommaaccent];
-		@bGC_J_top = [J uni0408];
+		@bGC_J_top = [J Je-cy];
 		@bGC_L_top = [L Lcaron Lcommaaccent];
-		@bGC_M_top = [M uni0416 uni041C];
-		@bGC_O_top = [O Q Odotbelow Oslash Ohorn Ohorndotbelow uni041E];
-		@bGC_P_top = [P uni0420];
-		@bGC_R_top = [R Rcommaaccent uni0423 uni042B];
-		@bGC_S_top = [S Scedilla Scommaaccent uni0405];
-		@bGC_T_top = [T U W Tbar Tcommaaccent Tcedilla Udotbelow Uogonek Uhorn Uhorndotbelow uni0422];
-		@bGC_a_top = [a a.alt01 g adotbelow aogonek adotbelow.alt01 aogonek.alt01 uni0430 uni0430.alt01 uni0434.loclBGR];
-		@bGC_c_top = [c ccedilla uni0441 uni04AB];
-		@bGC_e_top = [e z edotbelow eogonek uni0435];
+		@bGC_M_top = [M Zhe-cy Em-cy];
+		@bGC_O_top = [O Q Odotbelow Oslash Ohorn Ohorndotbelow O-cy];
+		@bGC_P_top = [P Er-cy];
+		@bGC_R_top = [R Rcommaaccent U-cy Yeru-cy];
+		@bGC_S_top = [S Scedilla Scommaaccent Dze-cy];
+		@bGC_T_top = [T U W Tbar Tcommaaccent Tcedilla Udotbelow Uogonek Uhorn Uhorndotbelow Te-cy];
+		@bGC_a_top = [a a.alt01 g adotbelow aogonek adotbelow.alt01 aogonek.alt01 a-cy a-cy.alt01 de-cy.loclBGR];
+		@bGC_c_top = [c ccedilla es-cy esdescender-cy];
+		@bGC_e_top = [e z edotbelow eogonek ie-cy];
 		@bGC_g.alt01_top = [g.alt01 g.alt02];
-		@bGC_h_top = [h uni04BB];
+		@bGC_h_top = [h shha-cy];
 		@bGC_l_top = [l lcaron lcommaaccent];
-		@bGC_m_top = [m uni0442];
-		@bGC_n_top = [n ncommaaccent eng uni043F];
-		@bGC_o_top = [o odotbelow oslash ohorn ohorndotbelow uni043E];
-		@bGC_p_top = [p uni0440];
+		@bGC_m_top = [m te-cy];
+		@bGC_n_top = [n ncommaaccent eng pe-cy];
+		@bGC_o_top = [o odotbelow oslash ohorn ohorndotbelow o-cy];
+		@bGC_p_top = [p er-cy];
 		@bGC_q_top = [q dotlessi];
-		@bGC_r_top = [r ae rcommaaccent uni04D5];
-		@bGC_s_top = [s scedilla scommaaccent uni0455];
-		@bGC_u_top = [u y udotbelow uogonek uhorn uhorndotbelow ydotbelow uni0438 uni0443 uni0446];
-		@bGC_uni0436_top = [uni0436 uni0437 uni044B];
-		@bGC_x_top = [x uni0445];
+		@bGC_r_top = [r ae rcommaaccent aie-cy];
+		@bGC_s_top = [s scedilla scommaaccent dze-cy];
+		@bGC_u_top = [u y udotbelow uogonek uhorn uhorndotbelow ydotbelow ii-cy u-cy tse-cy];
+		@bGC_zhe-cy_top = [zhe-cy ze-cy yeru-cy];
+		@bGC_x_top = [x ha-cy];
 		pos base @bGC_AE_top <anchor 404 698> mark @MC_top;
 		pos base @bGC_A_top <anchor 374 698> mark @MC_top;
 		pos base @bGC_B_top <anchor 346 698> mark @MC_top;
@@ -542,18 +542,18 @@ code = "	# Created: Mon Dec 11 16:49:17 2023
 		pos base @bGC_r_top <anchor 365 516> mark @MC_top;
 		pos base @bGC_s_top <anchor 334 516> mark @MC_top;
 		pos base @bGC_u_top <anchor 338 516> mark @MC_top;
-		pos base @bGC_uni0436_top <anchor 343 516> mark @MC_top;
+		pos base @bGC_zhe-cy_top <anchor 343 516> mark @MC_top;
 		pos base @bGC_x_top <anchor 344 516> mark @MC_top;
 		pos base D <anchor 345 698> mark @MC_top;
 		pos base dotlessj <anchor 460 516> mark @MC_top;
-		pos base uni0413 <anchor 411 698> mark @MC_top;
-		pos base uni0417 <anchor 356 698> mark @MC_top;
-		pos base uni0418 <anchor 366 698> mark @MC_top;
-		pos base uni041A <anchor 354 698> mark @MC_top;
-		pos base uni0427 <anchor 355 698> mark @MC_top;
-		pos base uni0433 <anchor 350 516> mark @MC_top;
-		pos base uni043A <anchor 347 516> mark @MC_top;
-		pos base uni0447 <anchor 325 516> mark @MC_top;
+		pos base Ge-cy <anchor 411 698> mark @MC_top;
+		pos base Ze-cy <anchor 356 698> mark @MC_top;
+		pos base Ii-cy <anchor 366 698> mark @MC_top;
+		pos base Ka-cy <anchor 354 698> mark @MC_top;
+		pos base Che-cy <anchor 355 698> mark @MC_top;
+		pos base ge-cy <anchor 350 516> mark @MC_top;
+		pos base ka-cy <anchor 347 516> mark @MC_top;
+		pos base che-cy <anchor 325 516> mark @MC_top;
 		pos base v <anchor 337 516> mark @MC_top;
 		pos base w <anchor 362 516> mark @MC_top;
 	} MARK_BASE_top;
@@ -42320,7 +42320,7 @@ unicode = 186;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0410;
+glyphname = A-cy;
 layers = (
 {
 anchors = (
@@ -42395,7 +42395,7 @@ width = 600;
 unicode = 1040;
 },
 {
-glyphname = uni0411;
+glyphname = Be-cy;
 layers = (
 {
 layerId = m001;
@@ -42540,7 +42540,7 @@ unicode = 1041;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0412;
+glyphname = Ve-cy;
 layers = (
 {
 anchors = (
@@ -42603,7 +42603,7 @@ width = 600;
 unicode = 1042;
 },
 {
-glyphname = uni0413;
+glyphname = Ge-cy;
 layers = (
 {
 anchors = (
@@ -42691,13 +42691,13 @@ unicode = 1043;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0403;
+glyphname = Gje-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0413;
+ref = Ge-cy;
 },
 {
 pos = (111,0);
@@ -42710,7 +42710,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0413;
+ref = Ge-cy;
 },
 {
 pos = (102,0);
@@ -42723,7 +42723,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0413;
+ref = Ge-cy;
 },
 {
 pos = (92,0);
@@ -42736,7 +42736,7 @@ width = 600;
 unicode = 1027;
 },
 {
-glyphname = uni0490;
+glyphname = Gheupturn-cy;
 layers = (
 {
 layerId = m001;
@@ -42811,7 +42811,7 @@ width = 600;
 unicode = 1168;
 },
 {
-glyphname = uni04F6;
+glyphname = Gedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -42892,7 +42892,7 @@ width = 600;
 unicode = 1270;
 },
 {
-glyphname = uni0492;
+glyphname = Ghestroke-cy;
 layers = (
 {
 layerId = m001;
@@ -42985,7 +42985,7 @@ width = 600;
 unicode = 1170;
 },
 {
-glyphname = uni0494;
+glyphname = Ghemiddlehook-cy;
 layers = (
 {
 layerId = m001;
@@ -43150,7 +43150,7 @@ width = 600;
 unicode = 1172;
 },
 {
-glyphname = uni0414;
+glyphname = De-cy;
 layers = (
 {
 layerId = m001;
@@ -43283,7 +43283,7 @@ unicode = 1044;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0415;
+glyphname = Ie-cy;
 layers = (
 {
 anchors = (
@@ -43359,7 +43359,7 @@ unicode = 1045;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0400;
+glyphname = Iegrave-cy;
 layers = (
 {
 anchors = (
@@ -43435,7 +43435,7 @@ unicode = 1024;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0401;
+glyphname = Io-cy;
 layers = (
 {
 anchors = (
@@ -43510,7 +43510,7 @@ width = 600;
 unicode = 1025;
 },
 {
-glyphname = uni0416;
+glyphname = Zhe-cy;
 layers = (
 {
 anchors = (
@@ -43687,7 +43687,7 @@ width = 600;
 unicode = 1046;
 },
 {
-glyphname = uni0417;
+glyphname = Ze-cy;
 layers = (
 {
 anchors = (
@@ -43906,7 +43906,7 @@ width = 600;
 unicode = 1047;
 },
 {
-glyphname = uni0418;
+glyphname = Ii-cy;
 layers = (
 {
 anchors = (
@@ -44024,13 +44024,13 @@ unicode = 1048;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0419;
+glyphname = Iishort-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -44043,7 +44043,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -44056,7 +44056,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (70,0);
@@ -44070,13 +44070,13 @@ unicode = 1049;
 },
 {
 color = (153,251,255,255);
-glyphname = uni040D;
+glyphname = Iigrave-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -44089,7 +44089,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -44102,7 +44102,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (70,0);
@@ -44115,7 +44115,7 @@ width = 600;
 unicode = 1037;
 },
 {
-glyphname = uni041A;
+glyphname = Ka-cy;
 layers = (
 {
 anchors = (
@@ -44260,13 +44260,13 @@ unicode = 1050;
 },
 {
 color = (153,251,255,255);
-glyphname = uni040C;
+glyphname = Kje-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni041A;
+ref = Ka-cy;
 },
 {
 pos = (54,0);
@@ -44279,7 +44279,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni041A;
+ref = Ka-cy;
 },
 {
 pos = (62,0);
@@ -44292,7 +44292,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni041A;
+ref = Ka-cy;
 },
 {
 pos = (78,0);
@@ -44305,7 +44305,7 @@ width = 600;
 unicode = 1036;
 },
 {
-glyphname = uni041B;
+glyphname = El-cy;
 layers = (
 {
 layerId = m001;
@@ -44414,7 +44414,7 @@ unicode = 1051;
 },
 {
 color = (153,251,255,255);
-glyphname = uni041C;
+glyphname = Em-cy;
 layers = (
 {
 anchors = (
@@ -44478,7 +44478,7 @@ unicode = 1052;
 },
 {
 color = (153,251,255,255);
-glyphname = uni041D;
+glyphname = En-cy;
 layers = (
 {
 anchors = (
@@ -44542,7 +44542,7 @@ unicode = 1053;
 },
 {
 color = (153,251,255,255);
-glyphname = uni041E;
+glyphname = O-cy;
 layers = (
 {
 anchors = (
@@ -44605,7 +44605,7 @@ width = 600;
 unicode = 1054;
 },
 {
-glyphname = uni041F;
+glyphname = Pe-cy;
 layers = (
 {
 layerId = m001;
@@ -44681,7 +44681,7 @@ unicode = 1055;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0420;
+glyphname = Er-cy;
 layers = (
 {
 anchors = (
@@ -44745,7 +44745,7 @@ unicode = 1056;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0421;
+glyphname = Es-cy;
 layers = (
 {
 anchors = (
@@ -44809,7 +44809,7 @@ unicode = 1057;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0422;
+glyphname = Te-cy;
 layers = (
 {
 anchors = (
@@ -44872,7 +44872,7 @@ width = 600;
 unicode = 1058;
 },
 {
-glyphname = uni0423;
+glyphname = U-cy;
 layers = (
 {
 anchors = (
@@ -44990,13 +44990,13 @@ unicode = 1059;
 },
 {
 color = (153,251,255,255);
-glyphname = uni040E;
+glyphname = Ushort-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (64,0);
@@ -45009,7 +45009,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (74,0);
@@ -45022,7 +45022,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (66,0);
@@ -45035,7 +45035,7 @@ width = 600;
 unicode = 1038;
 },
 {
-glyphname = uni0424;
+glyphname = Ef-cy;
 layers = (
 {
 layerId = m001;
@@ -45237,7 +45237,7 @@ unicode = 1060;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0425;
+glyphname = Ha-cy;
 layers = (
 {
 anchors = (
@@ -45300,7 +45300,7 @@ width = 600;
 unicode = 1061;
 },
 {
-glyphname = uni0427;
+glyphname = Che-cy;
 layers = (
 {
 anchors = (
@@ -45450,7 +45450,7 @@ width = 600;
 unicode = 1063;
 },
 {
-glyphname = uni0426;
+glyphname = Tse-cy;
 lastChange = "2024-07-30 20:18:25 +0000";
 layers = (
 {
@@ -45589,7 +45589,7 @@ width = 600;
 unicode = 1062;
 },
 {
-glyphname = uni0428;
+glyphname = Sha-cy;
 layers = (
 {
 layerId = m001;
@@ -45676,7 +45676,7 @@ width = 600;
 unicode = 1064;
 },
 {
-glyphname = uni0429;
+glyphname = Shcha-cy;
 lastChange = "2024-07-30 20:18:38 +0000";
 layers = (
 {
@@ -45827,7 +45827,7 @@ width = 600;
 unicode = 1065;
 },
 {
-glyphname = uni040F;
+glyphname = Dzhe-cy;
 layers = (
 {
 layerId = m001;
@@ -45914,7 +45914,7 @@ width = 600;
 unicode = 1039;
 },
 {
-glyphname = uni042C;
+glyphname = Softsign-cy;
 layers = (
 {
 layerId = m001;
@@ -46052,7 +46052,7 @@ width = 600;
 unicode = 1068;
 },
 {
-glyphname = uni042B;
+glyphname = Yeru-cy;
 layers = (
 {
 anchors = (
@@ -46235,7 +46235,7 @@ width = 600;
 unicode = 1067;
 },
 {
-glyphname = uni042A;
+glyphname = Hardsign-cy;
 layers = (
 {
 layerId = m001;
@@ -46379,7 +46379,7 @@ width = 600;
 unicode = 1066;
 },
 {
-glyphname = uni0409;
+glyphname = Lje-cy;
 layers = (
 {
 layerId = m001;
@@ -46562,7 +46562,7 @@ width = 600;
 unicode = 1033;
 },
 {
-glyphname = uni040A;
+glyphname = Nje-cy;
 layers = (
 {
 layerId = m001;
@@ -46725,7 +46725,7 @@ unicode = 1034;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0405;
+glyphname = Dze-cy;
 layers = (
 {
 anchors = (
@@ -46788,7 +46788,7 @@ width = 600;
 unicode = 1029;
 },
 {
-glyphname = uni0404;
+glyphname = E-cy;
 lastChange = "2024-07-30 20:21:47 +0000";
 layers = (
 {
@@ -46936,7 +46936,7 @@ width = 600;
 unicode = 1028;
 },
 {
-glyphname = uni042D;
+glyphname = Ereversed-cy;
 lastChange = "2024-07-30 20:23:01 +0000";
 layers = (
 {
@@ -47085,7 +47085,7 @@ unicode = 1069;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0406;
+glyphname = I-cy;
 layers = (
 {
 anchors = (
@@ -47161,7 +47161,7 @@ unicode = 1030;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0407;
+glyphname = Yi-cy;
 layers = (
 {
 anchors = (
@@ -47237,7 +47237,7 @@ unicode = 1031;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0408;
+glyphname = Je-cy;
 layers = (
 {
 anchors = (
@@ -47300,7 +47300,7 @@ width = 600;
 unicode = 1032;
 },
 {
-glyphname = uni040B;
+glyphname = Tshe-cy;
 layers = (
 {
 layerId = m001;
@@ -47444,7 +47444,7 @@ width = 600;
 unicode = 1035;
 },
 {
-glyphname = uni042E;
+glyphname = Iu-cy;
 layers = (
 {
 layerId = m001;
@@ -47654,7 +47654,7 @@ width = 600;
 unicode = 1070;
 },
 {
-glyphname = uni042F;
+glyphname = Ia-cy;
 layers = (
 {
 layerId = m001;
@@ -47828,7 +47828,7 @@ width = 600;
 unicode = 1071;
 },
 {
-glyphname = uni0402;
+glyphname = Dje-cy;
 layers = (
 {
 layerId = m001;
@@ -47999,7 +47999,7 @@ width = 600;
 unicode = 1026;
 },
 {
-glyphname = uni0462;
+glyphname = Yat-cy;
 layers = (
 {
 layerId = m001;
@@ -48161,7 +48161,7 @@ width = 600;
 unicode = 1122;
 },
 {
-glyphname = uni046A;
+glyphname = Yusbig-cy;
 layers = (
 {
 layerId = m001;
@@ -48317,7 +48317,7 @@ width = 600;
 unicode = 1130;
 },
 {
-glyphname = uni0472;
+glyphname = Fita-cy;
 lastChange = "2024-07-30 20:29:51 +0000";
 layers = (
 {
@@ -48561,7 +48561,7 @@ width = 600;
 unicode = 1138;
 },
 {
-glyphname = uni0474;
+glyphname = Izhitsa-cy;
 lastChange = "2024-07-30 20:30:58 +0000";
 layers = (
 {
@@ -48658,7 +48658,7 @@ width = 600;
 unicode = 1140;
 },
 {
-glyphname = uni0496;
+glyphname = Zhedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -48829,7 +48829,7 @@ width = 600;
 unicode = 1174;
 },
 {
-glyphname = uni0498;
+glyphname = Zedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -49039,7 +49039,7 @@ width = 600;
 unicode = 1176;
 },
 {
-glyphname = uni049A;
+glyphname = Kadescender-cy;
 lastChange = "2024-07-30 20:33:58 +0000";
 layers = (
 {
@@ -49172,7 +49172,7 @@ width = 600;
 unicode = 1178;
 },
 {
-glyphname = uni049C;
+glyphname = Kaverticalstroke-cy;
 layers = (
 {
 layerId = m001;
@@ -49322,7 +49322,7 @@ width = 600;
 unicode = 1180;
 },
 {
-glyphname = uni049E;
+glyphname = Kastroke-cy;
 layers = (
 {
 layerId = m001;
@@ -49472,7 +49472,7 @@ width = 600;
 unicode = 1182;
 },
 {
-glyphname = uni04A0;
+glyphname = Kabashkir-cy;
 layers = (
 {
 layerId = m001;
@@ -49604,7 +49604,7 @@ width = 600;
 unicode = 1184;
 },
 {
-glyphname = uni04A2;
+glyphname = Endescender-cy;
 layers = (
 {
 layerId = m001;
@@ -49703,7 +49703,7 @@ width = 600;
 unicode = 1186;
 },
 {
-glyphname = uni04A4;
+glyphname = Enghe-cy;
 layers = (
 {
 layerId = m001;
@@ -49796,7 +49796,7 @@ width = 600;
 unicode = 1188;
 },
 {
-glyphname = uni04A6;
+glyphname = Pemiddlehook-cy;
 lastChange = "2024-07-30 20:35:24 +0000";
 layers = (
 {
@@ -49968,7 +49968,7 @@ width = 600;
 unicode = 1190;
 },
 {
-glyphname = uni0524;
+glyphname = Pedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -50055,7 +50055,7 @@ width = 600;
 unicode = 1316;
 },
 {
-glyphname = uni04A8;
+glyphname = Haabkhasian-cy;
 layers = (
 {
 layerId = m001;
@@ -50332,7 +50332,7 @@ unicode = 1192;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04AA;
+glyphname = Esdescender-cy;
 layers = (
 {
 anchors = (
@@ -50383,7 +50383,7 @@ width = 600;
 unicode = 1194;
 },
 {
-glyphname = uni04AC;
+glyphname = Tedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -50471,7 +50471,7 @@ unicode = 1196;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04AE;
+glyphname = Ustrait-cy;
 layers = (
 {
 anchors = (
@@ -50534,7 +50534,7 @@ width = 600;
 unicode = 1198;
 },
 {
-glyphname = uni04B0;
+glyphname = Ustraitstroke-cy;
 layers = (
 {
 layerId = m001;
@@ -50639,7 +50639,7 @@ width = 600;
 unicode = 1200;
 },
 {
-glyphname = uni04B2;
+glyphname = Hadescender-cy;
 lastChange = "2024-07-30 20:35:51 +0000";
 layers = (
 {
@@ -50757,7 +50757,7 @@ width = 600;
 unicode = 1202;
 },
 {
-glyphname = uni04B4;
+glyphname = Tetse-cy;
 lastChange = "2024-07-30 20:36:19 +0000";
 layers = (
 {
@@ -50908,7 +50908,7 @@ width = 600;
 unicode = 1204;
 },
 {
-glyphname = uni04B6;
+glyphname = Chedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -51052,7 +51052,7 @@ width = 600;
 unicode = 1206;
 },
 {
-glyphname = uni04B8;
+glyphname = Cheverticalstroke-cy;
 lastChange = "2024-07-30 20:36:33 +0000";
 layers = (
 {
@@ -51203,7 +51203,7 @@ width = 600;
 unicode = 1208;
 },
 {
-glyphname = uni04BA;
+glyphname = Shha-cy;
 layers = (
 {
 layerId = m001;
@@ -51335,7 +51335,7 @@ width = 600;
 unicode = 1210;
 },
 {
-glyphname = uni04BC;
+glyphname = Cheabkhasian-cy;
 lastChange = "2024-07-30 20:37:32 +0000";
 layers = (
 {
@@ -51552,7 +51552,7 @@ width = 600;
 unicode = 1212;
 },
 {
-glyphname = uni04BE;
+glyphname = Chedescenderabkhasian-cy;
 lastChange = "2024-07-30 20:37:44 +0000";
 layers = (
 {
@@ -51779,7 +51779,7 @@ unicode = 1214;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04C0;
+glyphname = Palochka-cy;
 layers = (
 {
 anchors = (
@@ -51855,13 +51855,13 @@ unicode = 1216;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04C1;
+glyphname = Zhebreve-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0416;
+ref = Zhe-cy;
 },
 {
 pos = (75,0);
@@ -51874,7 +51874,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0416;
+ref = Zhe-cy;
 },
 {
 pos = (74,0);
@@ -51887,7 +51887,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0416;
+ref = Zhe-cy;
 },
 {
 pos = (73,0);
@@ -51901,7 +51901,7 @@ unicode = 1217;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D0;
+glyphname = Abreve-cy;
 layers = (
 {
 anchors = (
@@ -51977,7 +51977,7 @@ unicode = 1232;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D2;
+glyphname = Adieresis-cy;
 layers = (
 {
 anchors = (
@@ -52053,7 +52053,7 @@ unicode = 1234;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D4;
+glyphname = Aie-cy;
 layers = (
 {
 anchors = (
@@ -52105,7 +52105,7 @@ unicode = 1236;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D6;
+glyphname = Iebreve-cy;
 layers = (
 {
 anchors = (
@@ -52181,7 +52181,7 @@ unicode = 1238;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D8;
+glyphname = Schwa-cy;
 layers = (
 {
 layerId = m001;
@@ -52215,13 +52215,13 @@ unicode = 1240;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04DC;
+glyphname = Zhedieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0416;
+ref = Zhe-cy;
 },
 {
 pos = (75,0);
@@ -52234,7 +52234,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0416;
+ref = Zhe-cy;
 },
 {
 pos = (74,0);
@@ -52247,7 +52247,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0416;
+ref = Zhe-cy;
 },
 {
 pos = (73,0);
@@ -52261,13 +52261,13 @@ unicode = 1244;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04DE;
+glyphname = Zedieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0417;
+ref = Ze-cy;
 },
 {
 pos = (56,0);
@@ -52280,7 +52280,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0417;
+ref = Ze-cy;
 },
 {
 pos = (60,0);
@@ -52293,7 +52293,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0417;
+ref = Ze-cy;
 },
 {
 pos = (57,0);
@@ -52306,7 +52306,7 @@ width = 600;
 unicode = 1246;
 },
 {
-glyphname = uni04E0;
+glyphname = Dzeabkhasian-cy;
 lastChange = "2024-07-30 20:39:48 +0000";
 layers = (
 {
@@ -52458,13 +52458,13 @@ unicode = 1248;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04E2;
+glyphname = Imacron-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -52477,7 +52477,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -52490,7 +52490,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (70,0);
@@ -52504,13 +52504,13 @@ unicode = 1250;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04E4;
+glyphname = Idieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -52523,7 +52523,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (66,0);
@@ -52536,7 +52536,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0418;
+ref = Ii-cy;
 },
 {
 pos = (70,0);
@@ -52550,7 +52550,7 @@ unicode = 1252;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04E6;
+glyphname = Odieresis-cy;
 layers = (
 {
 anchors = (
@@ -52613,7 +52613,7 @@ width = 600;
 unicode = 1254;
 },
 {
-glyphname = uni04E8;
+glyphname = Obarred-cy;
 lastChange = "2024-07-30 20:39:03 +0000";
 layers = (
 {
@@ -52795,13 +52795,13 @@ unicode = 1256;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04EE;
+glyphname = Umacron-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (64,0);
@@ -52814,7 +52814,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (74,0);
@@ -52827,7 +52827,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (66,0);
@@ -52841,13 +52841,13 @@ unicode = 1262;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F0;
+glyphname = Udieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (64,0);
@@ -52860,7 +52860,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (74,0);
@@ -52873,7 +52873,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (66,0);
@@ -52887,13 +52887,13 @@ unicode = 1264;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F2;
+glyphname = Uhungarumlaut-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (64,0);
@@ -52906,7 +52906,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (74,0);
@@ -52919,7 +52919,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0423;
+ref = U-cy;
 },
 {
 pos = (66,0);
@@ -52933,13 +52933,13 @@ unicode = 1266;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F4;
+glyphname = Chedieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0427;
+ref = Che-cy;
 },
 {
 pos = (55,0);
@@ -52952,7 +52952,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0427;
+ref = Che-cy;
 },
 {
 pos = (61,0);
@@ -52965,7 +52965,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0427;
+ref = Che-cy;
 },
 {
 pos = (59,0);
@@ -52979,13 +52979,13 @@ unicode = 1268;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F8;
+glyphname = Yerudieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni042B;
+ref = Yeru-cy;
 },
 {
 pos = (64,0);
@@ -52998,7 +52998,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni042B;
+ref = Yeru-cy;
 },
 {
 pos = (75,0);
@@ -53011,7 +53011,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni042B;
+ref = Yeru-cy;
 },
 {
 pos = (73,0);
@@ -53024,7 +53024,7 @@ width = 600;
 unicode = 1272;
 },
 {
-glyphname = uni0414.loclBGR;
+glyphname = De-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -53143,7 +53143,7 @@ width = 600;
 );
 },
 {
-glyphname = uni041A.loclBGR;
+glyphname = Ka-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -53253,7 +53253,7 @@ width = 600;
 );
 },
 {
-glyphname = uni041B.loclBGR;
+glyphname = El-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -53333,7 +53333,7 @@ width = 600;
 );
 },
 {
-glyphname = uni0424.loclBGR;
+glyphname = Ef-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -53533,7 +53533,7 @@ width = 600;
 );
 },
 {
-glyphname = uni042F.loclBGR;
+glyphname = Ia-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -53692,7 +53692,7 @@ width = 600;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0430;
+glyphname = a-cy;
 layers = (
 {
 anchors = (
@@ -53767,7 +53767,7 @@ width = 600;
 unicode = 1072;
 },
 {
-glyphname = uni0431;
+glyphname = be-cy;
 layers = (
 {
 layerId = m001;
@@ -53977,7 +53977,7 @@ width = 600;
 unicode = 1073;
 },
 {
-glyphname = uni0432;
+glyphname = ve-cy;
 layers = (
 {
 layerId = m001;
@@ -54223,7 +54223,7 @@ width = 600;
 unicode = 1074;
 },
 {
-glyphname = uni0433;
+glyphname = ge-cy;
 layers = (
 {
 anchors = (
@@ -54413,13 +54413,13 @@ unicode = 1075;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0453;
+glyphname = gje-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0433;
+ref = ge-cy;
 },
 {
 pos = (50,0);
@@ -54432,7 +54432,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0433;
+ref = ge-cy;
 },
 {
 pos = (43,0);
@@ -54445,7 +54445,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0433;
+ref = ge-cy;
 },
 {
 pos = (38,0);
@@ -54458,7 +54458,7 @@ width = 600;
 unicode = 1107;
 },
 {
-glyphname = uni0491;
+glyphname = gheupturn-cy;
 layers = (
 {
 layerId = m001;
@@ -54533,7 +54533,7 @@ width = 600;
 unicode = 1169;
 },
 {
-glyphname = uni04F7;
+glyphname = gedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -54713,7 +54713,7 @@ width = 600;
 unicode = 1271;
 },
 {
-glyphname = uni0493;
+glyphname = ghestroke-cy;
 layers = (
 {
 layerId = m001;
@@ -54806,7 +54806,7 @@ width = 600;
 unicode = 1171;
 },
 {
-glyphname = uni0495;
+glyphname = ghemiddlehook-cy;
 layers = (
 {
 layerId = m001;
@@ -54971,7 +54971,7 @@ width = 600;
 unicode = 1173;
 },
 {
-glyphname = uni0434;
+glyphname = de-cy;
 layers = (
 {
 layerId = m001;
@@ -55188,7 +55188,7 @@ unicode = 1076;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0435;
+glyphname = ie-cy;
 layers = (
 {
 anchors = (
@@ -55264,7 +55264,7 @@ unicode = 1077;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0450;
+glyphname = iegrave-cy;
 layers = (
 {
 anchors = (
@@ -55340,7 +55340,7 @@ unicode = 1104;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0451;
+glyphname = io-cy;
 layers = (
 {
 anchors = (
@@ -55415,7 +55415,7 @@ width = 600;
 unicode = 1105;
 },
 {
-glyphname = uni0436;
+glyphname = zhe-cy;
 lastChange = "2024-07-30 20:40:09 +0000";
 layers = (
 {
@@ -55677,7 +55677,7 @@ width = 600;
 unicode = 1078;
 },
 {
-glyphname = uni0437;
+glyphname = ze-cy;
 layers = (
 {
 anchors = (
@@ -55891,7 +55891,7 @@ unicode = 1079;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0438;
+glyphname = ii-cy;
 layers = (
 {
 anchors = (
@@ -55967,7 +55967,7 @@ unicode = 1080;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0439;
+glyphname = iishort-cy;
 layers = (
 {
 anchors = (
@@ -56043,7 +56043,7 @@ unicode = 1081;
 },
 {
 color = (153,251,255,255);
-glyphname = uni045D;
+glyphname = iigrave-cy;
 layers = (
 {
 anchors = (
@@ -56118,7 +56118,7 @@ width = 600;
 unicode = 1117;
 },
 {
-glyphname = uni043A;
+glyphname = ka-cy;
 layers = (
 {
 anchors = (
@@ -56263,13 +56263,13 @@ unicode = 1082;
 },
 {
 color = (153,251,255,255);
-glyphname = uni045C;
+glyphname = kje-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni043A;
+ref = ka-cy;
 },
 {
 pos = (47,0);
@@ -56282,7 +56282,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni043A;
+ref = ka-cy;
 },
 {
 pos = (36,0);
@@ -56295,7 +56295,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni043A;
+ref = ka-cy;
 },
 {
 pos = (30,0);
@@ -56308,7 +56308,7 @@ width = 600;
 unicode = 1116;
 },
 {
-glyphname = uni043B;
+glyphname = el-cy;
 layers = (
 {
 layerId = m001;
@@ -56416,7 +56416,7 @@ width = 600;
 unicode = 1083;
 },
 {
-glyphname = uni043C;
+glyphname = em-cy;
 layers = (
 {
 layerId = m001;
@@ -56518,7 +56518,7 @@ width = 600;
 unicode = 1084;
 },
 {
-glyphname = uni043D;
+glyphname = en-cy;
 layers = (
 {
 layerId = m001;
@@ -56606,7 +56606,7 @@ unicode = 1085;
 },
 {
 color = (153,251,255,255);
-glyphname = uni043E;
+glyphname = o-cy;
 layers = (
 {
 anchors = (
@@ -56670,7 +56670,7 @@ unicode = 1086;
 },
 {
 color = (153,251,255,255);
-glyphname = uni043F;
+glyphname = pe-cy;
 layers = (
 {
 anchors = (
@@ -56734,7 +56734,7 @@ unicode = 1087;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0440;
+glyphname = er-cy;
 layers = (
 {
 anchors = (
@@ -56786,7 +56786,7 @@ unicode = 1088;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0441;
+glyphname = es-cy;
 layers = (
 {
 anchors = (
@@ -56850,7 +56850,7 @@ unicode = 1089;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0442;
+glyphname = te-cy;
 layers = (
 {
 anchors = (
@@ -56914,7 +56914,7 @@ unicode = 1090;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0443;
+glyphname = u-cy;
 layers = (
 {
 anchors = (
@@ -56978,7 +56978,7 @@ unicode = 1091;
 },
 {
 color = (153,251,255,255);
-glyphname = uni045E;
+glyphname = ushort-cy;
 layers = (
 {
 anchors = (
@@ -57041,7 +57041,7 @@ width = 600;
 unicode = 1118;
 },
 {
-glyphname = uni0444;
+glyphname = ef-cy;
 layers = (
 {
 layerId = m001;
@@ -57387,7 +57387,7 @@ unicode = 1092;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0445;
+glyphname = ha-cy;
 layers = (
 {
 anchors = (
@@ -57450,7 +57450,7 @@ width = 600;
 unicode = 1093;
 },
 {
-glyphname = uni0447;
+glyphname = che-cy;
 layers = (
 {
 anchors = (
@@ -57600,7 +57600,7 @@ width = 600;
 unicode = 1095;
 },
 {
-glyphname = uni0446;
+glyphname = tse-cy;
 lastChange = "2024-07-30 21:06:01 +0000";
 layers = (
 {
@@ -57868,7 +57868,7 @@ width = 600;
 unicode = 1094;
 },
 {
-glyphname = uni0448;
+glyphname = sha-cy;
 layers = (
 {
 layerId = m001;
@@ -58075,7 +58075,7 @@ width = 600;
 unicode = 1096;
 },
 {
-glyphname = uni0449;
+glyphname = shcha-cy;
 lastChange = "2024-07-30 21:13:47 +0000";
 layers = (
 {
@@ -58391,7 +58391,7 @@ width = 600;
 unicode = 1097;
 },
 {
-glyphname = uni045F;
+glyphname = dzhe-cy;
 layers = (
 {
 layerId = m001;
@@ -58559,7 +58559,7 @@ width = 600;
 unicode = 1119;
 },
 {
-glyphname = uni044C;
+glyphname = softsign-cy;
 layers = (
 {
 layerId = m001;
@@ -58736,7 +58736,7 @@ width = 600;
 unicode = 1100;
 },
 {
-glyphname = uni044B;
+glyphname = yeru-cy;
 layers = (
 {
 anchors = (
@@ -58958,7 +58958,7 @@ width = 600;
 unicode = 1099;
 },
 {
-glyphname = uni044A;
+glyphname = hardsign-cy;
 layers = (
 {
 layerId = m001;
@@ -59177,7 +59177,7 @@ width = 600;
 unicode = 1098;
 },
 {
-glyphname = uni0459;
+glyphname = lje-cy;
 layers = (
 {
 layerId = m001;
@@ -59399,7 +59399,7 @@ width = 600;
 unicode = 1113;
 },
 {
-glyphname = uni045A;
+glyphname = nje-cy;
 layers = (
 {
 layerId = m001;
@@ -59601,7 +59601,7 @@ unicode = 1114;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0455;
+glyphname = dze-cy;
 layers = (
 {
 anchors = (
@@ -59664,7 +59664,7 @@ width = 600;
 unicode = 1109;
 },
 {
-glyphname = uni0454;
+glyphname = e-cy;
 lastChange = "2024-07-30 20:44:45 +0000";
 layers = (
 {
@@ -59812,7 +59812,7 @@ width = 600;
 unicode = 1108;
 },
 {
-glyphname = uni044D;
+glyphname = ereversed-cy;
 lastChange = "2024-07-30 20:45:41 +0000";
 layers = (
 {
@@ -59964,7 +59964,7 @@ unicode = 1101;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0456;
+glyphname = i-cy;
 layers = (
 {
 anchors = (
@@ -60028,7 +60028,7 @@ unicode = 1110;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0457;
+glyphname = yi-cy;
 layers = (
 {
 anchors = (
@@ -60104,7 +60104,7 @@ unicode = 1111;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0458;
+glyphname = je-cy;
 layers = (
 {
 layerId = m001;
@@ -60138,7 +60138,7 @@ unicode = 1112;
 },
 {
 color = (153,251,255,255);
-glyphname = uni045B;
+glyphname = tshe-cy;
 layers = (
 {
 layerId = m001;
@@ -60171,7 +60171,7 @@ width = 600;
 unicode = 1115;
 },
 {
-glyphname = uni044E;
+glyphname = iu-cy;
 lastChange = "2024-07-30 20:47:51 +0000";
 layers = (
 {
@@ -60373,7 +60373,7 @@ width = 600;
 unicode = 1102;
 },
 {
-glyphname = uni044F;
+glyphname = ia-cy;
 layers = (
 {
 layerId = m001;
@@ -60556,7 +60556,7 @@ width = 600;
 unicode = 1103;
 },
 {
-glyphname = uni0452;
+glyphname = dje-cy;
 layers = (
 {
 layerId = m001;
@@ -60748,7 +60748,7 @@ width = 600;
 unicode = 1106;
 },
 {
-glyphname = uni0463;
+glyphname = yat-cy;
 layers = (
 {
 layerId = m001;
@@ -60949,7 +60949,7 @@ width = 600;
 unicode = 1123;
 },
 {
-glyphname = uni046B;
+glyphname = yusbig-cy;
 layers = (
 {
 layerId = m001;
@@ -61105,7 +61105,7 @@ width = 600;
 unicode = 1131;
 },
 {
-glyphname = uni0473;
+glyphname = fita-cy;
 lastChange = "2024-07-30 20:48:49 +0000";
 layers = (
 {
@@ -61352,7 +61352,7 @@ width = 600;
 unicode = 1139;
 },
 {
-glyphname = uni0475;
+glyphname = izhitsa-cy;
 lastChange = "2024-07-30 20:49:25 +0000";
 layers = (
 {
@@ -61449,7 +61449,7 @@ width = 600;
 unicode = 1141;
 },
 {
-glyphname = uni0497;
+glyphname = zhedescender-cy;
 lastChange = "2024-07-30 20:50:26 +0000";
 layers = (
 {
@@ -61699,7 +61699,7 @@ width = 600;
 unicode = 1175;
 },
 {
-glyphname = uni0499;
+glyphname = zedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -61903,7 +61903,7 @@ width = 600;
 unicode = 1177;
 },
 {
-glyphname = uni049B;
+glyphname = kadescender-cy;
 lastChange = "2024-07-30 20:50:51 +0000";
 layers = (
 {
@@ -62036,7 +62036,7 @@ width = 600;
 unicode = 1179;
 },
 {
-glyphname = uni049D;
+glyphname = kaverticalstroke-cy;
 layers = (
 {
 layerId = m001;
@@ -62186,7 +62186,7 @@ width = 600;
 unicode = 1181;
 },
 {
-glyphname = uni049F;
+glyphname = kastroke-cy;
 layers = (
 {
 layerId = m001;
@@ -62336,7 +62336,7 @@ width = 600;
 unicode = 1183;
 },
 {
-glyphname = uni04A1;
+glyphname = kabashkir-cy;
 layers = (
 {
 layerId = m001;
@@ -62468,7 +62468,7 @@ width = 600;
 unicode = 1185;
 },
 {
-glyphname = uni04A3;
+glyphname = endescender-cy;
 layers = (
 {
 layerId = m001;
@@ -62567,7 +62567,7 @@ width = 600;
 unicode = 1187;
 },
 {
-glyphname = uni04A5;
+glyphname = enghe-cy;
 layers = (
 {
 layerId = m001;
@@ -62660,7 +62660,7 @@ width = 600;
 unicode = 1189;
 },
 {
-glyphname = uni0525;
+glyphname = pedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -62813,7 +62813,7 @@ width = 600;
 unicode = 1317;
 },
 {
-glyphname = uni04A7;
+glyphname = pemiddlehook-cy;
 layers = (
 {
 layerId = m001;
@@ -63059,7 +63059,7 @@ width = 600;
 unicode = 1191;
 },
 {
-glyphname = uni04A9;
+glyphname = haabkhasian-cy;
 lastChange = "2024-07-30 20:54:14 +0000";
 layers = (
 {
@@ -63337,7 +63337,7 @@ unicode = 1193;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04AB;
+glyphname = esdescender-cy;
 layers = (
 {
 anchors = (
@@ -63388,7 +63388,7 @@ width = 600;
 unicode = 1195;
 },
 {
-glyphname = uni04AD;
+glyphname = tedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -63607,7 +63607,7 @@ width = 600;
 unicode = 1197;
 },
 {
-glyphname = uni04AF;
+glyphname = ustrait-cy;
 layers = (
 {
 layerId = m001;
@@ -63694,7 +63694,7 @@ width = 600;
 unicode = 1199;
 },
 {
-glyphname = uni04B1;
+glyphname = ustraitstroke-cy;
 layers = (
 {
 layerId = m001;
@@ -63799,7 +63799,7 @@ width = 600;
 unicode = 1201;
 },
 {
-glyphname = uni04B3;
+glyphname = hadescender-cy;
 lastChange = "2024-07-30 20:59:06 +0000";
 layers = (
 {
@@ -64071,13 +64071,13 @@ unicode = 1203;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04B5;
+glyphname = tetse-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0446;
+ref = tse-cy;
 },
 {
 pos = (38,0);
@@ -64090,7 +64090,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0446;
+ref = tse-cy;
 },
 {
 pos = (23,0);
@@ -64103,7 +64103,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0446;
+ref = tse-cy;
 },
 {
 pos = (12,0);
@@ -64116,7 +64116,7 @@ width = 600;
 unicode = 1205;
 },
 {
-glyphname = uni04B7;
+glyphname = chedescender-cy;
 layers = (
 {
 layerId = m001;
@@ -64260,7 +64260,7 @@ width = 600;
 unicode = 1207;
 },
 {
-glyphname = uni04B9;
+glyphname = cheverticalstroke-cy;
 layers = (
 {
 layerId = m001;
@@ -64411,7 +64411,7 @@ unicode = 1209;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04BB;
+glyphname = shha-cy;
 layers = (
 {
 anchors = (
@@ -64474,7 +64474,7 @@ width = 600;
 unicode = 1211;
 },
 {
-glyphname = uni04BD;
+glyphname = cheabkhasian-cy;
 lastChange = "2024-07-30 21:00:33 +0000";
 layers = (
 {
@@ -64679,7 +64679,7 @@ width = 600;
 unicode = 1213;
 },
 {
-glyphname = uni04BF;
+glyphname = chedescenderabkhasian-cy;
 lastChange = "2024-07-30 21:01:42 +0000";
 layers = (
 {
@@ -64893,7 +64893,7 @@ width = 600;
 unicode = 1215;
 },
 {
-glyphname = uni04CF;
+glyphname = palochka-cy;
 layers = (
 {
 layerId = m001;
@@ -64969,13 +64969,13 @@ unicode = 1231;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04C2;
+glyphname = zhebreve-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0436;
+ref = zhe-cy;
 },
 {
 pos = (43,0);
@@ -64988,7 +64988,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0436;
+ref = zhe-cy;
 },
 {
 pos = (44,0);
@@ -65001,7 +65001,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0436;
+ref = zhe-cy;
 },
 {
 pos = (43,0);
@@ -65015,7 +65015,7 @@ unicode = 1218;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D1;
+glyphname = abreve-cy;
 layers = (
 {
 anchors = (
@@ -65091,7 +65091,7 @@ unicode = 1233;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D3;
+glyphname = adieresis-cy;
 layers = (
 {
 anchors = (
@@ -65167,7 +65167,7 @@ unicode = 1235;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D5;
+glyphname = aie-cy;
 layers = (
 {
 anchors = (
@@ -65219,7 +65219,7 @@ unicode = 1237;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D7;
+glyphname = iebreve-cy;
 layers = (
 {
 anchors = (
@@ -65295,7 +65295,7 @@ unicode = 1239;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D9;
+glyphname = schwa-cy;
 layers = (
 {
 layerId = m001;
@@ -65329,13 +65329,13 @@ unicode = 1241;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04DD;
+glyphname = zhedieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0436;
+ref = zhe-cy;
 },
 {
 pos = (43,0);
@@ -65348,7 +65348,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0436;
+ref = zhe-cy;
 },
 {
 pos = (44,0);
@@ -65361,7 +65361,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0436;
+ref = zhe-cy;
 },
 {
 pos = (43,0);
@@ -65375,13 +65375,13 @@ unicode = 1245;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04DF;
+glyphname = zedieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0437;
+ref = ze-cy;
 },
 {
 pos = (43,0);
@@ -65394,7 +65394,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0437;
+ref = ze-cy;
 },
 {
 pos = (40,0);
@@ -65407,7 +65407,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0437;
+ref = ze-cy;
 },
 {
 pos = (36,0);
@@ -65420,7 +65420,7 @@ width = 600;
 unicode = 1247;
 },
 {
-glyphname = uni04E1;
+glyphname = dzeabkhasian-cy;
 layers = (
 {
 layerId = m001;
@@ -65610,7 +65610,7 @@ unicode = 1249;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04E3;
+glyphname = imacron-cy;
 layers = (
 {
 anchors = (
@@ -65686,7 +65686,7 @@ unicode = 1251;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04E5;
+glyphname = idieresis-cy;
 layers = (
 {
 anchors = (
@@ -65762,7 +65762,7 @@ unicode = 1253;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04E7;
+glyphname = odieresis-cy;
 layers = (
 {
 anchors = (
@@ -65825,7 +65825,7 @@ width = 600;
 unicode = 1255;
 },
 {
-glyphname = uni04E9;
+glyphname = obarred-cy;
 lastChange = "2024-07-30 21:02:07 +0000";
 layers = (
 {
@@ -66007,7 +66007,7 @@ unicode = 1257;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04EF;
+glyphname = umacron-cy;
 layers = (
 {
 anchors = (
@@ -66071,7 +66071,7 @@ unicode = 1263;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F1;
+glyphname = udieresis-cy;
 layers = (
 {
 anchors = (
@@ -66135,7 +66135,7 @@ unicode = 1265;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F3;
+glyphname = uhungarumlaut-cy;
 layers = (
 {
 anchors = (
@@ -66199,13 +66199,13 @@ unicode = 1267;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F5;
+glyphname = chedieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni0447;
+ref = che-cy;
 },
 {
 pos = (25,0);
@@ -66218,7 +66218,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni0447;
+ref = che-cy;
 },
 {
 pos = (29,0);
@@ -66231,7 +66231,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni0447;
+ref = che-cy;
 },
 {
 pos = (32,0);
@@ -66245,13 +66245,13 @@ unicode = 1269;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04F9;
+glyphname = yerudieresis-cy;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
-ref = uni044B;
+ref = yeru-cy;
 },
 {
 pos = (43,0);
@@ -66264,7 +66264,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = uni044B;
+ref = yeru-cy;
 },
 {
 pos = (43,0);
@@ -66277,7 +66277,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = uni044B;
+ref = yeru-cy;
 },
 {
 pos = (43,0);
@@ -66291,7 +66291,7 @@ unicode = 1273;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0430.alt01;
+glyphname = a-cy.alt01;
 layers = (
 {
 anchors = (
@@ -66366,7 +66366,7 @@ width = 600;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D1.alt01;
+glyphname = abreve-cy.alt01;
 layers = (
 {
 anchors = (
@@ -66441,7 +66441,7 @@ width = 600;
 },
 {
 color = (153,251,255,255);
-glyphname = uni04D3.alt01;
+glyphname = adieresis-cy.alt01;
 layers = (
 {
 anchors = (
@@ -66515,7 +66515,7 @@ width = 600;
 );
 },
 {
-glyphname = uni0432.loclBGR;
+glyphname = ve-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -66764,7 +66764,7 @@ width = 600;
 },
 {
 color = (153,251,255,255);
-glyphname = uni0434.loclBGR;
+glyphname = de-cy.loclBGR;
 layers = (
 {
 anchors = (
@@ -66814,7 +66814,7 @@ width = 600;
 );
 },
 {
-glyphname = uni0436.loclBGR;
+glyphname = zhe-cy.loclBGR;
 lastChange = "2024-07-30 21:02:27 +0000";
 layers = (
 {
@@ -67057,7 +67057,7 @@ width = 600;
 );
 },
 {
-glyphname = uni0437.loclBGR;
+glyphname = ze-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -67257,7 +67257,7 @@ width = 600;
 );
 },
 {
-glyphname = uni043A.loclBGR;
+glyphname = ka-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -67382,7 +67382,7 @@ width = 600;
 );
 },
 {
-glyphname = uni043B.loclBGR;
+glyphname = el-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -67462,7 +67462,7 @@ width = 600;
 );
 },
 {
-glyphname = uni0444.loclBGR;
+glyphname = ef-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -67728,7 +67728,7 @@ width = 600;
 );
 },
 {
-glyphname = uni044E.loclBGR;
+glyphname = iu-cy.loclBGR;
 layers = (
 {
 layerId = m001;
@@ -75250,7 +75250,7 @@ unicode = 189;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2153;
+glyphname = onethird;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75318,7 +75318,7 @@ unicode = 8531;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2154;
+glyphname = twothirds;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75522,7 +75522,7 @@ unicode = 190;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2155;
+glyphname = onefifth;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75590,7 +75590,7 @@ unicode = 8533;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2156;
+glyphname = twofifths;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75658,7 +75658,7 @@ unicode = 8534;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2157;
+glyphname = threefifths;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75726,7 +75726,7 @@ unicode = 8535;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2158;
+glyphname = fourfifths;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75794,7 +75794,7 @@ unicode = 8536;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2159;
+glyphname = onesixth;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75862,7 +75862,7 @@ unicode = 8537;
 },
 {
 color = (153,251,255,255);
-glyphname = uni215A;
+glyphname = fivesixths;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75930,7 +75930,7 @@ unicode = 8538;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2150;
+glyphname = oneseventh;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -75998,7 +75998,7 @@ unicode = 8528;
 },
 {
 color = (153,251,255,255);
-glyphname = uni215B;
+glyphname = oneeighth;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -76066,7 +76066,7 @@ unicode = 8539;
 },
 {
 color = (153,251,255,255);
-glyphname = uni215C;
+glyphname = threeeighths;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -76134,7 +76134,7 @@ unicode = 8540;
 },
 {
 color = (153,251,255,255);
-glyphname = uni215D;
+glyphname = fiveeighths;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -76202,7 +76202,7 @@ unicode = 8541;
 },
 {
 color = (153,251,255,255);
-glyphname = uni215E;
+glyphname = seveneighths;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
@@ -76270,7 +76270,7 @@ unicode = 8542;
 },
 {
 color = (153,251,255,255);
-glyphname = uni2151;
+glyphname = oneninth;
 lastChange = "2024-07-29 08:17:14 +0000";
 layers = (
 {
