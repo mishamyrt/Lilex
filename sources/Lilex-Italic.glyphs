@@ -577,15 +577,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 780;
+value = 1025;
 },
 {
 name = typoDescender;
-value = -220;
-},
-{
-name = typoLineGap;
-value = 300;
+value = -275;
 },
 {
 name = hheaAscender;
@@ -600,12 +596,16 @@ name = hheaLineGap;
 value = 0;
 },
 {
+name = typoLineGap;
+value = 0;
+},
+{
 name = winAscent;
-value = 1025;
+value = 1150;
 },
 {
 name = winDescent;
-value = 275;
+value = 403;
 },
 {
 name = strikeoutPosition;
@@ -614,14 +614,6 @@ value = 304;
 {
 name = strikeoutSize;
 value = 16;
-},
-{
-name = underlineThickness;
-value = 16;
-},
-{
-name = underlinePosition;
-value = -192;
 },
 {
 name = subscriptXOffset;
@@ -658,6 +650,14 @@ value = 650;
 {
 name = "Master Icon Glyph Name";
 value = T;
+},
+{
+name = underlineThickness;
+value = 60;
+},
+{
+name = underlinePosition;
+value = -140;
 }
 );
 id = m001;
@@ -747,15 +747,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 780;
+value = 1025;
 },
 {
 name = typoDescender;
-value = -220;
-},
-{
-name = typoLineGap;
-value = 300;
+value = -275;
 },
 {
 name = hheaAscender;
@@ -770,12 +766,16 @@ name = hheaLineGap;
 value = 0;
 },
 {
+name = typoLineGap;
+value = 0;
+},
+{
 name = winAscent;
-value = 1025;
+value = 1150;
 },
 {
 name = winDescent;
-value = 275;
+value = 403;
 },
 {
 name = strikeoutPosition;
@@ -784,14 +784,6 @@ value = 304;
 {
 name = strikeoutSize;
 value = 60;
-},
-{
-name = underlineThickness;
-value = 60;
-},
-{
-name = underlinePosition;
-value = -170;
 },
 {
 name = subscriptXOffset;
@@ -828,6 +820,14 @@ value = 650;
 {
 name = "Master Icon Glyph Name";
 value = R;
+},
+{
+name = underlineThickness;
+value = 60;
+},
+{
+name = underlinePosition;
+value = -140;
 }
 );
 id = m002;
@@ -917,15 +917,11 @@ axesValues = (
 customParameters = (
 {
 name = typoAscender;
-value = 780;
+value = 1025;
 },
 {
 name = typoDescender;
-value = -220;
-},
-{
-name = typoLineGap;
-value = 300;
+value = -275;
 },
 {
 name = hheaAscender;
@@ -940,12 +936,16 @@ name = hheaLineGap;
 value = 0;
 },
 {
+name = typoLineGap;
+value = 0;
+},
+{
 name = winAscent;
-value = 1025;
+value = 1150;
 },
 {
 name = winDescent;
-value = 275;
+value = 403;
 },
 {
 name = strikeoutPosition;
@@ -954,14 +954,6 @@ value = 304;
 {
 name = strikeoutSize;
 value = 100;
-},
-{
-name = underlineThickness;
-value = 100;
-},
-{
-name = underlinePosition;
-value = -150;
 },
 {
 name = subscriptXOffset;
@@ -998,6 +990,14 @@ value = 650;
 {
 name = "Master Icon Glyph Name";
 value = B;
+},
+{
+name = underlineThickness;
+value = 60;
+},
+{
+name = underlinePosition;
+value = -140;
 }
 );
 iconName = Bold;
@@ -129213,7 +129213,7 @@ instanceInterpolations = {
 m001 = 0.66667;
 m002 = 0.33333;
 };
-name = "Extralight Italic";
+name = "ExtraLight Italic";
 weightClass = 200;
 },
 {
