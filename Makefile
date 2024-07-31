@@ -14,7 +14,7 @@ VENV_DIR = ./venv
 VENV = . $(VENV_DIR)/bin/activate;
 
 define build-glyphs
-	@$(VENV) python $(SCRIPTS_DIR)/lilex.py \
+	@$(VENV) python $(SCRIPTS_DIR)/font.py \
 		-i "$(1)" \
 		-f $(3) \
 		build $(2)
@@ -91,7 +91,7 @@ preview: ## show CLI special symbols preview
 
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
-	@$(VENV) python $(SCRIPTS_DIR)/lilex.py generate
+	@$(VENV) python $(SCRIPTS_DIR)/font.py generate
 
 .PHONY: build
 build: ## build the font

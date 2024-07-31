@@ -14,15 +14,15 @@ from glyphsLib import (
     build_masters,
 )
 
-from .const import NAME_TPL, SUPPORTED_FORMATS
-from .make import make
-from .name import feature_prefix, name_from_code
+from .build import SUPPORTED_FORMATS, make
+from .features import NAME_TPL, feature_prefix, name_from_code
 
-LIGATURE_SUFFIX = ".liga"
 GlyphFilter = Callable[[GSGlyph], bool]
 
+LIGATURE_SUFFIX = ".liga"
+
 class GlyphsFont:
-    """Glyphs font builder"""
+    """Glyphs font file controller"""
     _font: GSFont = None
     _path: str
     _name: str
