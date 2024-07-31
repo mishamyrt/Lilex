@@ -1,0 +1,30 @@
+name: Report Italic Progress
+
+on:
+  pull_request
+
+jobs:
+  build:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11' 
+
+    - name: Bootstrap environment
+      run: make configure
+
+    - name: Get progress
+      run: |
+        . venv/bin/activate
+        python scripts/porting.py progress -m > progress.md
+
+    - name: Post progress
+      uses: marocchino/sticky-pull-request-comment@v2
+      with:
+        path: progress.md
