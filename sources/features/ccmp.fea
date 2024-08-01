@@ -3,11 +3,11 @@
 lookup comb_combs {
     sub brevecomb acutecomb by breveacute;
     sub brevecomb gravecomb by brevegrave;
-    sub brevecomb hookcomb by brevehook;
+    sub brevecomb hookabovecomb by brevehook;
     sub brevecomb tildecomb by brevetilde;
     sub circumflexcomb acutecomb by circumflexacute;
     sub circumflexcomb gravecomb by circumflexgrave;
-    sub circumflexcomb hookcomb by circumflexhook;
+    sub circumflexcomb hookabovecomb by circumflexhook;
     sub circumflexcomb tildecomb by circumflextilde;
     sub circumflexcomb brevecomb by circumflexbreve;
     sub dieresiscomb acutecomb by dieresisacute;
@@ -17,8 +17,8 @@ lookup comb_combs {
 } comb_combs;
 
 lookup letter_combs {
-    sub [L d l t] caroncomb' by caronslovakcomb; # /Lcaron /dcaron /lcaron /tcaron
-    sub g commabelowcomb' by commaturnedtopcomb; # /gcommaaccent
+    sub [L d l t] caroncomb' by commaaboverightcomb; # /Lcaron /dcaron /lcaron /tcaron
+    sub g commaaccentcomb' by commaturnedabovecomb; # /gcommaaccent
 
     # Soft-dotted
     sub i' @acc_comb_top by idotless;
@@ -27,7 +27,7 @@ lookup letter_combs {
     sub i-cy' @acc_comb_bottom @acc_comb_top by idotless;
     sub iogonek' @acc_comb_top by idotlessogonek;
     sub idotbelow' @acc_comb_top by idotlessdotbelow;
-    sub j' @acc_comb_top by dotlessj;
-    sub j' @acc_comb_bottom @acc_comb_top by dotlessj;
+    sub j' @acc_comb_top by jdotless;
+    sub j' @acc_comb_bottom @acc_comb_top by jdotless;
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
 } letter_combs;

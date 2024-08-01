@@ -5,17 +5,19 @@ with human-readable names like "tetsecyrillic"
 """
 
 import os
-import re
 import sys
 import xml.etree.ElementTree as ET
 
 import requests
+from glyphsLib import GSComponent, GSFont, GSGlyph
 
 GIST_ID = "635b753408f9b3abf949eb82b1e40b28"
 GLYPHS_DATA_FILE = "glyphs-data.xml"
 GLYPHS_DATA_URL = f"https://gist.githubusercontent.com/mishamyrt/{GIST_ID}/raw/{GLYPHS_DATA_FILE}"
 GLYPHS_DATA_DIR = "/tmp/glyphs-data"
 GLYPHS_DATA_PATH = f"{GLYPHS_DATA_DIR}/{GLYPHS_DATA_FILE}"
+
+Rename = tuple[str, str]
 
 def _get_glyph_names():
     """Get names from the Glyphs database"""
@@ -35,47 +37,70 @@ def _get_glyph_names():
             names[elem.attrib["unicode"]] = elem.attrib["name"]
     return names
 
-def _replace_names(
-    glyphs_content: str,
+def _deep_rename(font: GSFont, renames: list[Rename]) -> None:
+    """Renames the glyph"""
+    for original, target in renames:
+        for glyph in font.glyphs:
+            if glyph.name == original:
+                glyph.name = target
+            for layer in glyph.layers:
+                for shape in layer.shapes:
+                    if isinstance(shape, GSComponent) and shape.name == original:
+                        shape.name = target
+
+def _find_renames(
+    font: GSFont,
     known_glyphs: dict[str, str]
-) -> tuple[str, int, list[str]]:
+) -> tuple[list[Rename], list[GSGlyph]]:
     """Renames uni-prefixed glyphs"""
-    content = glyphs_content
-    matches = re.findall(r"glyphname = uni(.*);", content, re.MULTILINE)
-    codes = list(set(matches))
-    changed = 0
-    not_found = []
-    for full_code in codes:
-        code_parts = full_code.split(".")
-        if len(code_parts) > 1:
-            code = code_parts[0]
-        else:
-            code = full_code
-        if code in known_glyphs:
-            content = content.replace(f"uni{code}", known_glyphs[code])
-            changed += 1
-        else:
-            not_found.append(f"uni{full_code}")
-    return content, changed, not_found
+    renames = []
+    unknown = []
+    for glyph in font.glyphs:
+        if glyph.name is None or glyph.unicode is None:
+            continue
+        code = glyph.unicode.zfill(4).upper()
+        if code not in known_glyphs:
+            unknown.append(glyph)
+            continue
+        original = glyph.name
+        target = known_glyphs[code]
+        if original != target:
+            renames.append((original, target))
+
+    changed_originals = [rename[0] for rename in renames]
+    additional_renames = []
+    for original, target in renames:
+        prefix = original + "."
+        for glyph in font.glyphs:
+            if glyph.name.startswith(prefix) and glyph.name not in changed_originals:
+                child_rename = glyph.name.replace(original, target)
+                additional_renames.append((glyph.name, child_rename))
+    renames += additional_renames
+    return sorted(renames, key=lambda rename: rename[0]), unknown
 
 def normalize_names(input_path: str, output_path: str):
     """Normalize the names of glyphs in the input file"""
-    with open(input_path, mode="r", encoding="utf-8") as file:
-        content = file.read()
-
     known_glyphs = _get_glyph_names()
-    print("Normalizing names...")
-    content, changed, unknown = _replace_names(content, known_glyphs)
+    print("Finding wrong names...")
+    font = GSFont(input_path)
+    renames, unknown = _find_renames(font, known_glyphs)
 
-    print(f"Changed {changed} names")
     if len(unknown) > 0:
-        print("Unknown names:")
-        for name in unknown:
-            print(f"- {name}")
+        print("Unknown glyphs:")
+        for glyph in unknown:
+            print(f"  {glyph.name} ({glyph.unicode})")
 
-    with open(output_path, mode="w", encoding="utf-8") as file:
-        file.write(content)
+    if len(renames) == 0:
+        print("No renames found")
+        return
 
+    print("Renaming...")
+    _deep_rename(font, renames)
+
+    for name, new_name in renames:
+        print(f"  {name} -> {new_name}")
+
+    font.save(output_path)
     print(f"Saved to {output_path}")
 
 if __name__ == "__main__":
