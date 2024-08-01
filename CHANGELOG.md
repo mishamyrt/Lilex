@@ -8,7 +8,8 @@ All notable changes to this project will be documented in this file.
 * Italic variant.
 * Cyrillic yus (`ѫ`, `Ѫ`).
 * Spaces. (enspace, emspace, enquad, emquad, threeperemspace, fourperemspace, sixperemspace, figurespace, thinspace, mediumspace-math)
-* Replacement glyph (`�`)
+* Replacement glyph. (`�`)
+* Cedi glyph. (`₵`)
 
 ## [2.530] — July 27, 2024
 
