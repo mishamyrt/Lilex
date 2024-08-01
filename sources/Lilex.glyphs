@@ -137999,6 +137999,64 @@ width = 600;
 );
 },
 {
+color = (153,251,255,255);
+glyphname = brevecomb.cyrl;
+lastChange = "2024-08-01 09:27:43 +0000";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (0,516);
+}
+);
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+alignment = -1;
+pos = (-300,0);
+ref = breve.cyrl;
+}
+);
+width = 600;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (0,516);
+}
+);
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+alignment = -1;
+pos = (-300,0);
+ref = breve.cyrl;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (0,516);
+}
+);
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+alignment = -1;
+pos = (-300,0);
+ref = breve.cyrl;
+}
+);
+width = 0;
+}
+);
+},
+{
 glyphname = dieresis;
 lastChange = "2024-05-11 09:48:23 +0000";
 layers = (
