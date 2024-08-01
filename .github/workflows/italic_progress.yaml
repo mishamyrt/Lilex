@@ -24,10 +24,18 @@ jobs:
     - name: Bootstrap environment
       run: make configure
 
+    - name: Download URL
+      uses: actions/download-artifact@v4
+      with:
+        name: URL
+        path: ./
+
     - name: Get progress
       run: |
         . venv/bin/activate
-        python scripts/porting.py progress -m > progress.md
+        python scripts/porting.py progress \
+          --markdown \
+          --download-url $(cat ./download_url.txt) > progress.md
 
     - name: Post progress
       uses: marocchino/sticky-pull-request-comment@v2
