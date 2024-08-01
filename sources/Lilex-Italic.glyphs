@@ -1,9 +1,11 @@
 {
 .appVersion = "3306";
 .formatVersion = 3;
+DisplayStrings = (
+"/plus_plus_plus.liga"
+);
 axes = (
 {
-default = 400;
 name = Weight;
 tag = wght;
 }
@@ -107,13 +109,13 @@ value = (
 name = "Axis Mappings";
 value = {
 wght = {
-100 = 100;
-200 = 200;
-300 = 300;
-400 = 400;
-500 = 500;
-600 = 600;
-700 = 700;
+"100" = 100;
+"200" = 200;
+"300" = 300;
+"400" = 400;
+"500" = 500;
+"600" = 600;
+"700" = 700;
 };
 };
 }
@@ -663,6 +665,7 @@ value = -140;
 id = m001;
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -677,9 +680,11 @@ pos = 516;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
+over = 0;
 pos = 9.5;
 },
 {
@@ -833,6 +838,7 @@ value = -140;
 id = m002;
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -847,9 +853,11 @@ pos = 516;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
+over = 0;
 pos = 9.5;
 },
 {
@@ -1004,6 +1012,7 @@ iconName = Bold;
 id = m003;
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1018,9 +1027,11 @@ pos = 516;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
+over = 0;
 pos = 9.5;
 },
 {
@@ -1609,7 +1620,7 @@ unicode = 7856;
 },
 {
 color = (153,251,255,255);
-glyphname = Abrevehook;
+glyphname = Abrevehookabove;
 layers = (
 {
 anchors = (
@@ -2141,7 +2152,7 @@ unicode = 7846;
 },
 {
 color = (153,251,255,255);
-glyphname = Acircumflexhook;
+glyphname = Acircumflexhookabove;
 layers = (
 {
 anchors = (
@@ -2521,7 +2532,7 @@ unicode = 192;
 },
 {
 color = (153,251,255,255);
-glyphname = Ahook;
+glyphname = Ahookabove;
 layers = (
 {
 anchors = (
@@ -2541,7 +2552,7 @@ ref = A;
 },
 {
 pos = (374,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -2564,7 +2575,7 @@ ref = A;
 },
 {
 pos = (374,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -2587,7 +2598,7 @@ ref = A;
 },
 {
 pos = (370,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -5262,7 +5273,7 @@ unicode = 7872;
 },
 {
 color = (153,251,255,255);
-glyphname = Ecircumflexhook;
+glyphname = Ecircumflexhookabove;
 layers = (
 {
 anchors = (
@@ -5718,7 +5729,7 @@ unicode = 200;
 },
 {
 color = (153,251,255,255);
-glyphname = Ehook;
+glyphname = Ehookabove;
 layers = (
 {
 anchors = (
@@ -5738,7 +5749,7 @@ ref = E;
 },
 {
 pos = (385,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -5761,7 +5772,7 @@ ref = E;
 },
 {
 pos = (379,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -5784,7 +5795,7 @@ ref = E;
 },
 {
 pos = (373,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -6754,7 +6765,7 @@ ref = G;
 },
 {
 pos = (271,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -6773,7 +6784,7 @@ ref = G;
 },
 {
 pos = (288,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -6792,7 +6803,7 @@ ref = G;
 },
 {
 pos = (298,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -8048,7 +8059,7 @@ unicode = 204;
 },
 {
 color = (153,251,255,255);
-glyphname = Ihook;
+glyphname = Ihookabove;
 layers = (
 {
 anchors = (
@@ -8068,7 +8079,7 @@ ref = I;
 },
 {
 pos = (374,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -8091,7 +8102,7 @@ ref = I;
 },
 {
 pos = (372,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -8114,7 +8125,7 @@ ref = I;
 },
 {
 pos = (374,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -8854,7 +8865,7 @@ ref = K;
 },
 {
 pos = (268,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -8873,7 +8884,7 @@ ref = K;
 },
 {
 pos = (266,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -8892,7 +8903,7 @@ ref = K;
 },
 {
 pos = (275,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -9109,7 +9120,7 @@ ref = L;
 },
 {
 pos = (55,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -9132,7 +9143,7 @@ ref = L;
 },
 {
 pos = (178,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -9155,7 +9166,7 @@ ref = L;
 },
 {
 pos = (263,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -9185,7 +9196,7 @@ ref = L;
 },
 {
 pos = (298,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -9208,7 +9219,7 @@ ref = L;
 },
 {
 pos = (283,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -9231,7 +9242,7 @@ ref = L;
 },
 {
 pos = (277,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -9781,7 +9792,7 @@ ref = N;
 },
 {
 pos = (258,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -9800,7 +9811,7 @@ ref = N;
 },
 {
 pos = (254,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -9819,7 +9830,7 @@ ref = N;
 },
 {
 pos = (258,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -10665,7 +10676,7 @@ unicode = 7890;
 },
 {
 color = (153,251,255,255);
-glyphname = Ocircumflexhook;
+glyphname = Ocircumflexhookabove;
 layers = (
 {
 anchors = (
@@ -10985,7 +10996,7 @@ unicode = 210;
 },
 {
 color = (153,251,255,255);
-glyphname = Ohook;
+glyphname = Ohookabove;
 layers = (
 {
 anchors = (
@@ -11001,7 +11012,7 @@ ref = O;
 },
 {
 pos = (369,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -11020,7 +11031,7 @@ ref = O;
 },
 {
 pos = (365,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -11039,7 +11050,7 @@ ref = O;
 },
 {
 pos = (358,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -11466,7 +11477,7 @@ unicode = 7900;
 },
 {
 color = (153,251,255,255);
-glyphname = Ohornhook;
+glyphname = Ohornhookabove;
 layers = (
 {
 anchors = (
@@ -11482,7 +11493,7 @@ ref = Ohorn;
 },
 {
 pos = (369,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -11501,7 +11512,7 @@ ref = Ohorn;
 },
 {
 pos = (365,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -11520,7 +11531,7 @@ ref = Ohorn;
 },
 {
 pos = (358,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -13127,7 +13138,7 @@ ref = R;
 },
 {
 pos = (258,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -13146,7 +13157,7 @@ ref = R;
 },
 {
 pos = (265,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -13165,7 +13176,7 @@ ref = R;
 },
 {
 pos = (275,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -13851,7 +13862,7 @@ ref = S;
 },
 {
 pos = (256,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -13870,7 +13881,7 @@ ref = S;
 },
 {
 pos = (269,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -13889,7 +13900,7 @@ ref = S;
 },
 {
 pos = (269,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -14537,7 +14548,7 @@ ref = T;
 },
 {
 pos = (257,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -14556,7 +14567,7 @@ ref = T;
 },
 {
 pos = (258,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -14575,7 +14586,7 @@ ref = T;
 },
 {
 pos = (258,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -15586,7 +15597,7 @@ unicode = 217;
 },
 {
 color = (153,251,255,255);
-glyphname = Uhook;
+glyphname = Uhookabove;
 layers = (
 {
 anchors = (
@@ -15606,7 +15617,7 @@ ref = U;
 },
 {
 pos = (373,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -15629,7 +15640,7 @@ ref = U;
 },
 {
 pos = (367,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -15652,7 +15663,7 @@ ref = U;
 },
 {
 pos = (371,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -16029,7 +16040,7 @@ unicode = 7914;
 },
 {
 color = (153,251,255,255);
-glyphname = Uhornhook;
+glyphname = Uhornhookabove;
 layers = (
 {
 anchors = (
@@ -16045,7 +16056,7 @@ ref = Uhorn;
 },
 {
 pos = (373,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -16064,7 +16075,7 @@ ref = Uhorn;
 },
 {
 pos = (367,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -16083,7 +16094,7 @@ ref = Uhorn;
 },
 {
 pos = (370,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -17762,7 +17773,7 @@ unicode = 7922;
 },
 {
 color = (153,251,255,255);
-glyphname = Yhook;
+glyphname = Yhookabove;
 layers = (
 {
 anchors = (
@@ -17778,7 +17789,7 @@ ref = Y;
 },
 {
 pos = (374,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -17797,7 +17808,7 @@ ref = Y;
 },
 {
 pos = (364,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -17816,7 +17827,7 @@ ref = Y;
 },
 {
 pos = (367,0);
-ref = hookcomb.case;
+ref = hookabovecomb.case;
 }
 );
 width = 600;
@@ -18813,7 +18824,7 @@ unicode = 7857;
 },
 {
 color = (153,251,255,255);
-glyphname = abrevehook;
+glyphname = abrevehookabove;
 layers = (
 {
 anchors = (
@@ -19345,7 +19356,7 @@ unicode = 7847;
 },
 {
 color = (153,251,255,255);
-glyphname = acircumflexhook;
+glyphname = acircumflexhookabove;
 layers = (
 {
 anchors = (
@@ -19725,7 +19736,7 @@ unicode = 224;
 },
 {
 color = (153,251,255,255);
-glyphname = ahook;
+glyphname = ahookabove;
 layers = (
 {
 anchors = (
@@ -19745,7 +19756,7 @@ ref = a;
 },
 {
 pos = (321,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -19768,7 +19779,7 @@ ref = a;
 },
 {
 pos = (316,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -19791,7 +19802,7 @@ ref = a;
 },
 {
 pos = (326,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -23244,7 +23255,7 @@ unicode = 7873;
 },
 {
 color = (153,251,255,255);
-glyphname = ecircumflexhook;
+glyphname = ecircumflexhookabove;
 layers = (
 {
 anchors = (
@@ -23700,7 +23711,7 @@ unicode = 232;
 },
 {
 color = (153,251,255,255);
-glyphname = ehook;
+glyphname = ehookabove;
 layers = (
 {
 anchors = (
@@ -23720,7 +23731,7 @@ ref = e;
 },
 {
 pos = (341,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -23743,7 +23754,7 @@ ref = e;
 },
 {
 pos = (354,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -23766,7 +23777,7 @@ ref = e;
 },
 {
 pos = (343,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -24837,7 +24848,7 @@ ref = g;
 },
 {
 pos = (21,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 600;
@@ -24850,7 +24861,7 @@ ref = g;
 },
 {
 pos = (28,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 600;
@@ -24863,7 +24874,7 @@ ref = g;
 },
 {
 pos = (31,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 600;
@@ -25522,7 +25533,7 @@ width = 600;
 unicode = 105;
 },
 {
-glyphname = dotlessi;
+glyphname = idotless;
 layers = (
 {
 anchors = (
@@ -25686,7 +25697,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -25709,7 +25720,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -25732,7 +25743,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -25762,7 +25773,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -25785,7 +25796,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -25808,7 +25819,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -25838,7 +25849,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -25861,7 +25872,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -25884,7 +25895,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -25914,7 +25925,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -25937,7 +25948,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -25960,7 +25971,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -25990,7 +26001,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -26013,7 +26024,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -26036,7 +26047,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -26130,7 +26141,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -26153,7 +26164,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -26176,7 +26187,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -26190,7 +26201,7 @@ unicode = 236;
 },
 {
 color = (153,251,255,255);
-glyphname = ihook;
+glyphname = ihookabove;
 layers = (
 {
 anchors = (
@@ -26206,11 +26217,11 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (313,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -26229,11 +26240,11 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (316,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -26252,11 +26263,11 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (318,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -26282,7 +26293,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -26305,7 +26316,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -26328,7 +26339,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -26611,7 +26622,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -26634,7 +26645,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -26657,7 +26668,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -27090,7 +27101,7 @@ width = 600;
 unicode = 106;
 },
 {
-glyphname = dotlessj;
+glyphname = jdotless;
 layers = (
 {
 anchors = (
@@ -27211,7 +27222,7 @@ layers = (
 layerId = m001;
 shapes = (
 {
-ref = dotlessj;
+ref = jdotless;
 },
 {
 pos = (160,0);
@@ -27224,7 +27235,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = dotlessj;
+ref = jdotless;
 },
 {
 pos = (135,0);
@@ -27237,7 +27248,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = dotlessj;
+ref = jdotless;
 },
 {
 pos = (105,0);
@@ -27256,7 +27267,7 @@ layers = (
 layerId = m001;
 shapes = (
 {
-ref = dotlessj;
+ref = jdotless;
 },
 {
 pos = (160,0);
@@ -27269,7 +27280,7 @@ width = 600;
 layerId = m002;
 shapes = (
 {
-ref = dotlessj;
+ref = jdotless;
 },
 {
 pos = (135,0);
@@ -27282,7 +27293,7 @@ width = 600;
 layerId = m003;
 shapes = (
 {
-ref = dotlessj;
+ref = jdotless;
 },
 {
 pos = (105,0);
@@ -27492,7 +27503,7 @@ ref = k;
 },
 {
 pos = (233,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -27505,7 +27516,7 @@ ref = k;
 },
 {
 pos = (251,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -27518,7 +27529,7 @@ ref = k;
 },
 {
 pos = (248,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -27882,7 +27893,7 @@ ref = l;
 },
 {
 pos = (162,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -27905,7 +27916,7 @@ ref = l;
 },
 {
 pos = (273,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -27928,7 +27939,7 @@ ref = l;
 },
 {
 pos = (333,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -27958,7 +27969,7 @@ ref = l;
 },
 {
 pos = (216,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -27981,7 +27992,7 @@ ref = l;
 },
 {
 pos = (248,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -28004,7 +28015,7 @@ ref = l;
 },
 {
 pos = (270,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -28916,7 +28927,7 @@ ref = n;
 },
 {
 pos = (262,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -28935,7 +28946,7 @@ ref = n;
 },
 {
 pos = (253,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -28954,7 +28965,7 @@ ref = n;
 },
 {
 pos = (261,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -29848,7 +29859,7 @@ unicode = 7891;
 },
 {
 color = (153,251,255,255);
-glyphname = ocircumflexhook;
+glyphname = ocircumflexhookabove;
 layers = (
 {
 anchors = (
@@ -30168,7 +30179,7 @@ unicode = 242;
 },
 {
 color = (153,251,255,255);
-glyphname = ohook;
+glyphname = ohookabove;
 layers = (
 {
 anchors = (
@@ -30184,7 +30195,7 @@ ref = o;
 },
 {
 pos = (333,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -30203,7 +30214,7 @@ ref = o;
 },
 {
 pos = (343,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -30222,7 +30233,7 @@ ref = o;
 },
 {
 pos = (343,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -30650,7 +30661,7 @@ unicode = 7901;
 },
 {
 color = (153,251,255,255);
-glyphname = ohornhook;
+glyphname = ohornhookabove;
 layers = (
 {
 anchors = (
@@ -30666,7 +30677,7 @@ ref = ohorn;
 },
 {
 pos = (333,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -30685,7 +30696,7 @@ ref = ohorn;
 },
 {
 pos = (343,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -30704,7 +30715,7 @@ ref = ohorn;
 },
 {
 pos = (343,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -32463,7 +32474,7 @@ ref = r;
 },
 {
 pos = (225,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -32482,7 +32493,7 @@ ref = r;
 },
 {
 pos = (218,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -32501,7 +32512,7 @@ ref = r;
 },
 {
 pos = (217,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -33197,7 +33208,7 @@ ref = s;
 },
 {
 pos = (275,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -33216,7 +33227,7 @@ ref = s;
 },
 {
 pos = (272,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -33235,7 +33246,7 @@ ref = s;
 },
 {
 pos = (263,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -33882,7 +33893,7 @@ ref = t;
 },
 {
 pos = (173,20);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -33901,7 +33912,7 @@ ref = t;
 },
 {
 pos = (261,20);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -33920,7 +33931,7 @@ ref = t;
 },
 {
 pos = (329,40);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 600;
@@ -34174,7 +34185,7 @@ ref = t;
 },
 {
 pos = (213,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -34193,7 +34204,7 @@ ref = t;
 },
 {
 pos = (233,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -34212,7 +34223,7 @@ ref = t;
 },
 {
 pos = (281,0);
-ref = commabelowcomb;
+ref = commaaccentcomb;
 }
 );
 width = 600;
@@ -35241,7 +35252,7 @@ unicode = 249;
 },
 {
 color = (153,251,255,255);
-glyphname = uhook;
+glyphname = uhookabove;
 layers = (
 {
 anchors = (
@@ -35261,7 +35272,7 @@ ref = u;
 },
 {
 pos = (338,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -35284,7 +35295,7 @@ ref = u;
 },
 {
 pos = (340,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -35307,7 +35318,7 @@ ref = u;
 },
 {
 pos = (338,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -35702,7 +35713,7 @@ unicode = 7915;
 },
 {
 color = (153,251,255,255);
-glyphname = uhornhook;
+glyphname = uhornhookabove;
 layers = (
 {
 anchors = (
@@ -35718,7 +35729,7 @@ ref = uhorn;
 },
 {
 pos = (338,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -35737,7 +35748,7 @@ ref = uhorn;
 },
 {
 pos = (340,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -35756,7 +35767,7 @@ ref = uhorn;
 },
 {
 pos = (338,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -38041,7 +38052,7 @@ unicode = 7923;
 },
 {
 color = (153,251,255,255);
-glyphname = yhook;
+glyphname = yhookabove;
 layers = (
 {
 anchors = (
@@ -38057,7 +38068,7 @@ ref = y;
 },
 {
 pos = (338,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -38076,7 +38087,7 @@ ref = y;
 },
 {
 pos = (345,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -38095,7 +38106,7 @@ ref = y;
 },
 {
 pos = (349,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -40991,7 +41002,7 @@ ref = g.alt01;
 },
 {
 pos = (29,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 600;
@@ -41004,7 +41015,7 @@ ref = g.alt01;
 },
 {
 pos = (40,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 600;
@@ -41017,7 +41028,7 @@ ref = g.alt01;
 },
 {
 pos = (34,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 600;
@@ -60044,7 +60055,7 @@ pos = (250,0);
 layerId = m001;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (13,0);
@@ -60067,7 +60078,7 @@ pos = (322,0);
 layerId = m002;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (16,0);
@@ -60090,7 +60101,7 @@ pos = (393,0);
 layerId = m003;
 shapes = (
 {
-ref = dotlessi;
+ref = idotless;
 },
 {
 pos = (18,0);
@@ -79685,7 +79696,7 @@ width = 600;
 unicode = 8193;
 },
 {
-glyphname = onethirdspace;
+glyphname = threeperemspace;
 layers = (
 {
 layerId = m001;
@@ -79703,7 +79714,7 @@ width = 600;
 unicode = 8196;
 },
 {
-glyphname = onefourthspace;
+glyphname = fourperemspace;
 layers = (
 {
 layerId = m001;
@@ -79721,7 +79732,7 @@ width = 600;
 unicode = 8197;
 },
 {
-glyphname = onesixthspace;
+glyphname = sixperemspace;
 layers = (
 {
 layerId = m001;
@@ -79988,7 +79999,7 @@ width = 0;
 unicode = 8205;
 },
 {
-glyphname = zerowidthnbspace;
+glyphname = zeroWidthNoBreakSpace;
 layers = (
 {
 layerId = m001;
@@ -80006,7 +80017,7 @@ width = 0;
 unicode = 65279;
 },
 {
-glyphname = thinnbspace;
+glyphname = narrownbspace;
 layers = (
 {
 layerId = m001;
@@ -80024,7 +80035,7 @@ width = 600;
 unicode = 8239;
 },
 {
-glyphname = mathspace;
+glyphname = "mediumspace-math";
 layers = (
 {
 layerId = m001;
@@ -80042,7 +80053,7 @@ width = 600;
 unicode = 8287;
 },
 {
-glyphname = ideographspace;
+glyphname = "space-han";
 layers = (
 {
 layerId = m001;
@@ -80442,6 +80453,54 @@ ref = colon;
 {
 pos = (-100,0);
 ref = colon;
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = exclam_exclam.liga;
+lastChange = "2024-07-31 22:57:30 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+pos = (-500,0);
+ref = exclam;
+},
+{
+pos = (-100,0);
+ref = exclam;
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+pos = (-500,0);
+ref = exclam;
+},
+{
+pos = (-100,0);
+ref = exclam;
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+pos = (-500,0);
+ref = exclam;
+},
+{
+pos = (-100,0);
+ref = exclam;
 }
 );
 width = 600;
@@ -82739,7 +82798,7 @@ unicode = 8213;
 },
 {
 color = (153,251,255,255);
-glyphname = hyphendash;
+glyphname = hyphentwo;
 layers = (
 {
 layerId = m001;
@@ -82773,7 +82832,7 @@ unicode = 8208;
 },
 {
 color = (153,251,255,255);
-glyphname = nbhyphen;
+glyphname = nonbreakinghyphen;
 layers = (
 {
 layerId = m001;
@@ -84040,7 +84099,7 @@ unicode = 8217;
 },
 {
 color = (153,251,255,255);
-glyphname = guillemotleft;
+glyphname = guillemetleft;
 layers = (
 {
 layerId = m001;
@@ -84089,7 +84148,7 @@ unicode = 171;
 },
 {
 color = (153,251,255,255);
-glyphname = guillemotright;
+glyphname = guillemetright;
 layers = (
 {
 layerId = m001;
@@ -84916,6 +84975,336 @@ width = 600;
 );
 },
 {
+glyphname = plus_plus.liga;
+lastChange = "2024-07-31 23:00:12 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-233,296,l),
+(246,296,l),
+(207,62,l),
+(228,62,l),
+(267,296,l),
+(495,296,l),
+(498,315,l),
+(270,315,l),
+(309,549,l),
+(288,549,l),
+(249,315,l),
+(-230,315,l),
+(-191,549,l),
+(-212,549,l),
+(-251,315,l),
+(-479,315,l),
+(-482,296,l),
+(-254,296,l),
+(-293,62,l),
+(-272,62,l)
+);
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-211,272,l),
+(215,272,l),
+(180,62,l),
+(254,62,l),
+(289,272,l),
+(487,272,l),
+(498,338,l),
+(300,338,l),
+(335,548,l),
+(261,548,l),
+(226,338,l),
+(-200,338,l),
+(-165,548,l),
+(-239,548,l),
+(-274,338,l),
+(-472,338,l),
+(-483,272,l),
+(-285,272,l),
+(-320,62,l),
+(-246,62,l)
+);
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-188,247,l),
+(186,247,l),
+(155,62,l),
+(281,62,l),
+(312,247,l),
+(487,247,l),
+(507,363,l),
+(331,363,l),
+(362,548,l),
+(236,548,l),
+(205,363,l),
+(-169,363,l),
+(-138,548,l),
+(-264,548,l),
+(-295,363,l),
+(-469,363,l),
+(-489,247,l),
+(-314,247,l),
+(-345,62,l),
+(-219,62,l)
+);
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = plus_plus_plus.liga;
+lastChange = "2024-07-31 23:02:26 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-783,296,l),
+(-304,296,l),
+(-343,62,l),
+(-322,62,l),
+(-283,296,l),
+(196,296,l),
+(157,62,l),
+(178,62,l),
+(217,296,l),
+(445,296,l),
+(448,315,l),
+(220,315,l),
+(259,549,l),
+(238,549,l),
+(199,315,l),
+(-280,315,l),
+(-241,549,l),
+(-262,549,l),
+(-301,315,l),
+(-780,315,l),
+(-741,549,l),
+(-762,549,l),
+(-801,315,l),
+(-1029,315,l),
+(-1032,296,l),
+(-804,296,l),
+(-843,62,l),
+(-822,62,l)
+);
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-761,272,l),
+(-335,272,l),
+(-370,62,l),
+(-296,62,l),
+(-261,272,l),
+(165,272,l),
+(130,62,l),
+(204,62,l),
+(239,272,l),
+(437,272,l),
+(448,338,l),
+(250,338,l),
+(285,548,l),
+(211,548,l),
+(176,338,l),
+(-250,338,l),
+(-215,548,l),
+(-289,548,l),
+(-324,338,l),
+(-750,338,l),
+(-715,548,l),
+(-789,548,l),
+(-824,338,l),
+(-1022,338,l),
+(-1033,272,l),
+(-835,272,l),
+(-870,62,l),
+(-796,62,l)
+);
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-738,247,l),
+(-364,247,l),
+(-395,62,l),
+(-269,62,l),
+(-238,247,l),
+(136,247,l),
+(105,62,l),
+(231,62,l),
+(262,247,l),
+(437,247,l),
+(457,363,l),
+(281,363,l),
+(312,548,l),
+(186,548,l),
+(155,363,l),
+(-219,363,l),
+(-188,548,l),
+(-314,548,l),
+(-345,363,l),
+(-719,363,l),
+(-688,548,l),
+(-814,548,l),
+(-845,363,l),
+(-1019,363,l),
+(-1039,247,l),
+(-864,247,l),
+(-895,62,l),
+(-769,62,l)
+);
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = less_less.liga;
+lastChange = "2024-07-31 22:54:57 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+pos = (-520,0);
+ref = less;
+},
+{
+pos = (-80,0);
+ref = less;
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+pos = (-520,0);
+ref = less;
+},
+{
+pos = (-80,0);
+ref = less;
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+pos = (-520,0);
+ref = less;
+},
+{
+pos = (-80,0);
+ref = less;
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = less_less_less.liga;
+lastChange = "2024-07-31 22:56:41 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+pos = (-1040,0);
+ref = less;
+},
+{
+pos = (-600,0);
+ref = less;
+},
+{
+pos = (-160,0);
+ref = less;
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+pos = (-1040,0);
+ref = less;
+},
+{
+pos = (-600,0);
+ref = less;
+},
+{
+pos = (-160,0);
+ref = less;
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+pos = (-1040,0);
+ref = less;
+},
+{
+pos = (-600,0);
+ref = less;
+},
+{
+pos = (-160,0);
+ref = less;
+}
+);
+width = 600;
+}
+);
+},
+{
 glyphname = percent_percent.liga;
 lastChange = "2024-07-31 22:06:01 +0000";
 layers = (
@@ -85045,7 +85434,7 @@ width = 600;
 unicode = 10003;
 },
 {
-glyphname = crossmark;
+glyphname = crossMark;
 layers = (
 {
 layerId = m001;
@@ -86877,7 +87266,7 @@ width = 600;
 unicode = 176;
 },
 {
-glyphname = prime;
+glyphname = minute;
 layers = (
 {
 layerId = m001;
@@ -86941,18 +87330,18 @@ unicode = 8242;
 },
 {
 color = (153,251,255,255);
-glyphname = primedbl;
+glyphname = second;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
 pos = (-76,0);
-ref = prime;
+ref = minute;
 },
 {
 pos = (77,0);
-ref = prime;
+ref = minute;
 }
 );
 width = 600;
@@ -86962,11 +87351,11 @@ layerId = m002;
 shapes = (
 {
 pos = (-89,0);
-ref = prime;
+ref = minute;
 },
 {
 pos = (88,0);
-ref = prime;
+ref = minute;
 }
 );
 width = 600;
@@ -86976,11 +87365,11 @@ layerId = m003;
 shapes = (
 {
 pos = (-112,0);
-ref = prime;
+ref = minute;
 },
 {
 pos = (113,0);
-ref = prime;
+ref = minute;
 }
 );
 width = 600;
@@ -87229,7 +87618,7 @@ width = 600;
 unicode = 8224;
 },
 {
-glyphname = litre;
+glyphname = literSign;
 layers = (
 {
 layerId = m001;
@@ -87691,7 +88080,7 @@ width = 600;
 unicode = 8494;
 },
 {
-glyphname = numerosign;
+glyphname = numero;
 layers = (
 {
 layerId = m001;
@@ -88159,7 +88548,7 @@ width = 600;
 unicode = 65533;
 },
 {
-glyphname = Euro;
+glyphname = euro;
 lastChange = "2024-07-30 21:47:53 +0000";
 layers = (
 {
@@ -88984,7 +89373,7 @@ width = 600;
 unicode = 162;
 },
 {
-glyphname = coloncurrency;
+glyphname = colonsign;
 lastChange = "2024-07-30 21:53:11 +0000";
 layers = (
 {
@@ -90761,7 +91150,7 @@ width = 600;
 unicode = 8356;
 },
 {
-glyphname = liraturkish;
+glyphname = liraTurkish;
 layers = (
 {
 layerId = m001;
@@ -91775,7 +92164,7 @@ width = 600;
 unicode = 8360;
 },
 {
-glyphname = rupeeindian;
+glyphname = rupeeIndian;
 lastChange = "2024-07-30 22:20:31 +0000";
 layers = (
 {
@@ -94516,7 +94905,7 @@ width = 600;
 unicode = 94;
 },
 {
-glyphname = infinity;
+glyphname = "infinity";
 layers = (
 {
 layerId = m001;
@@ -94870,7 +95259,7 @@ width = 600;
 unicode = 8747;
 },
 {
-glyphname = Omega;
+glyphname = Ohm;
 layers = (
 {
 layerId = m001;
@@ -95047,7 +95436,7 @@ width = 600;
 unicode = 8486;
 },
 {
-glyphname = Delta;
+glyphname = increment;
 layers = (
 {
 layerId = m001;
@@ -95585,7 +95974,7 @@ width = 600;
 unicode = 8706;
 },
 {
-glyphname = mu;
+glyphname = micro;
 layers = (
 {
 layerId = m001;
@@ -96474,7 +96863,7 @@ unicode = 8240;
 },
 {
 color = (153,251,255,255);
-glyphname = ratiosign;
+glyphname = ratio;
 layers = (
 {
 layerId = m001;
@@ -96519,7 +96908,7 @@ width = 600;
 unicode = 8758;
 },
 {
-glyphname = arrowup;
+glyphname = upArrow;
 layers = (
 {
 layerId = m001;
@@ -96615,7 +97004,7 @@ width = 600;
 unicode = 8593;
 },
 {
-glyphname = arrowupright;
+glyphname = northEastArrow;
 layers = (
 {
 layerId = m001;
@@ -96711,7 +97100,7 @@ width = 600;
 unicode = 8599;
 },
 {
-glyphname = arrowright;
+glyphname = rightArrow;
 layers = (
 {
 layerId = m001;
@@ -96807,7 +97196,7 @@ width = 600;
 unicode = 8594;
 },
 {
-glyphname = arrowdownright;
+glyphname = southEastArrow;
 layers = (
 {
 layerId = m001;
@@ -96903,7 +97292,7 @@ width = 600;
 unicode = 8600;
 },
 {
-glyphname = arrowdown;
+glyphname = downArrow;
 layers = (
 {
 layerId = m001;
@@ -96999,7 +97388,7 @@ width = 600;
 unicode = 8595;
 },
 {
-glyphname = arrowdownleft;
+glyphname = southWestArrow;
 layers = (
 {
 layerId = m001;
@@ -97095,7 +97484,7 @@ width = 600;
 unicode = 8601;
 },
 {
-glyphname = arrowleft;
+glyphname = leftArrow;
 layers = (
 {
 layerId = m001;
@@ -97191,7 +97580,7 @@ width = 600;
 unicode = 8592;
 },
 {
-glyphname = arrowupleft;
+glyphname = northWestArrow;
 layers = (
 {
 layerId = m001;
@@ -97287,7 +97676,7 @@ width = 600;
 unicode = 8598;
 },
 {
-glyphname = arrowleftright;
+glyphname = leftRightArrow;
 layers = (
 {
 layerId = m001;
@@ -97416,7 +97805,7 @@ width = 600;
 unicode = 8596;
 },
 {
-glyphname = arrowupdown;
+glyphname = upDownArrow;
 layers = (
 {
 layerId = m001;
@@ -97545,7 +97934,7 @@ width = 600;
 unicode = 8597;
 },
 {
-glyphname = arrowhookleft;
+glyphname = leftHookArrow;
 layers = (
 {
 layerId = m001;
@@ -97677,7 +98066,7 @@ width = 600;
 unicode = 8617;
 },
 {
-glyphname = arrowhookright;
+glyphname = rightHookArrow;
 layers = (
 {
 layerId = m001;
@@ -97809,7 +98198,7 @@ width = 600;
 unicode = 8618;
 },
 {
-glyphname = arrowupleftcorner;
+glyphname = upTipLeftArrow;
 layers = (
 {
 layerId = m001;
@@ -97911,7 +98300,7 @@ width = 600;
 unicode = 8624;
 },
 {
-glyphname = arrowuprightcorner;
+glyphname = upTipRightArrow;
 layers = (
 {
 layerId = m001;
@@ -98013,7 +98402,7 @@ width = 600;
 unicode = 8625;
 },
 {
-glyphname = arrowdownleftcorner;
+glyphname = downTipLeftArrow;
 layers = (
 {
 layerId = m001;
@@ -98115,7 +98504,7 @@ width = 600;
 unicode = 8626;
 },
 {
-glyphname = arrowdownrightcorner;
+glyphname = downTipRightArrow;
 layers = (
 {
 layerId = m001;
@@ -98217,7 +98606,7 @@ width = 600;
 unicode = 8627;
 },
 {
-glyphname = arrowrightdowncorner;
+glyphname = rightTipDownArrow;
 layers = (
 {
 layerId = m001;
@@ -98319,7 +98708,7 @@ width = 600;
 unicode = 11022;
 },
 {
-glyphname = arrowrightupcorner;
+glyphname = rightTipUpArrow;
 layers = (
 {
 layerId = m001;
@@ -98421,7 +98810,7 @@ width = 600;
 unicode = 11023;
 },
 {
-glyphname = arrowleftdowncorner;
+glyphname = leftArrowTipDown;
 layers = (
 {
 layerId = m001;
@@ -98523,7 +98912,7 @@ width = 600;
 unicode = 11024;
 },
 {
-glyphname = arrowleftupcorner;
+glyphname = leftArrowTipUp;
 layers = (
 {
 layerId = m001;
@@ -98625,7 +99014,7 @@ width = 600;
 unicode = 11025;
 },
 {
-glyphname = arrowdowncounterclockhalf;
+glyphname = topCircleLeftArrow;
 lastChange = "2024-07-30 21:57:33 +0000";
 layers = (
 {
@@ -98764,7 +99153,7 @@ width = 600;
 unicode = 8630;
 },
 {
-glyphname = arrowdownclockhalf;
+glyphname = topCircleRightArrow;
 lastChange = "2024-07-30 21:58:39 +0000";
 layers = (
 {
@@ -98772,7 +99161,7 @@ layerId = m001;
 shapes = (
 {
 pos = (600,0);
-ref = arrowdowncounterclockhalf;
+ref = topCircleLeftArrow;
 scale = (-1,1);
 }
 );
@@ -98787,7 +99176,7 @@ layerId = m002;
 shapes = (
 {
 pos = (600,0);
-ref = arrowdowncounterclockhalf;
+ref = topCircleLeftArrow;
 scale = (-1,1);
 }
 );
@@ -98802,7 +99191,7 @@ layerId = m003;
 shapes = (
 {
 pos = (600,0);
-ref = arrowdowncounterclockhalf;
+ref = topCircleLeftArrow;
 scale = (-1,1);
 }
 );
@@ -98816,7 +99205,7 @@ width = 600;
 unicode = 8631;
 },
 {
-glyphname = arrowupleftcounterclock;
+glyphname = anticlockwiseOpenCircleArrow;
 layers = (
 {
 layerId = m001;
@@ -98978,7 +99367,7 @@ width = 600;
 unicode = 8634;
 },
 {
-glyphname = arrowuprightclock;
+glyphname = clockwiseOpenCircleArrow;
 layers = (
 {
 layerId = m001;
@@ -99141,7 +99530,7 @@ unicode = 8635;
 },
 {
 color = (153,251,255,255);
-glyphname = arrowrightarrowleft;
+glyphname = rightOverLeftArrow;
 lastChange = "2024-07-30 21:59:36 +0000";
 layers = (
 {
@@ -99149,7 +99538,7 @@ layerId = m001;
 shapes = (
 {
 pos = (600,0);
-ref = arrowleftarrowright;
+ref = leftAndRightArrow;
 scale = (-1,1);
 }
 );
@@ -99160,7 +99549,7 @@ layerId = m002;
 shapes = (
 {
 pos = (600,0);
-ref = arrowleftarrowright;
+ref = leftAndRightArrow;
 scale = (-1,1);
 }
 );
@@ -99171,7 +99560,7 @@ layerId = m003;
 shapes = (
 {
 pos = (600,0);
-ref = arrowleftarrowright;
+ref = leftAndRightArrow;
 scale = (-1,1);
 }
 );
@@ -99182,18 +99571,18 @@ unicode = 8644;
 },
 {
 color = (153,251,255,255);
-glyphname = arrowleftarrowright;
+glyphname = leftAndRightArrow;
 layers = (
 {
 layerId = m001;
 shapes = (
 {
 pos = (0,-174);
-ref = arrowright;
+ref = rightArrow;
 },
 {
 pos = (0,174);
-ref = arrowleft;
+ref = leftArrow;
 }
 );
 width = 600;
@@ -99203,11 +99592,11 @@ layerId = m002;
 shapes = (
 {
 pos = (0,-154);
-ref = arrowright;
+ref = rightArrow;
 },
 {
 pos = (0,154);
-ref = arrowleft;
+ref = leftArrow;
 }
 );
 width = 600;
@@ -99217,11 +99606,11 @@ layerId = m003;
 shapes = (
 {
 pos = (0,-210);
-ref = arrowright;
+ref = rightArrow;
 },
 {
 pos = (0,210);
-ref = arrowleft;
+ref = leftArrow;
 }
 );
 width = 600;
@@ -99230,7 +99619,7 @@ width = 600;
 unicode = 8646;
 },
 {
-glyphname = dneighthblock;
+glyphname = lowerOneEighthBlock;
 layers = (
 {
 layerId = m001;
@@ -99293,7 +99682,7 @@ width = 600;
 unicode = 9601;
 },
 {
-glyphname = dnquarterblock;
+glyphname = lowerOneQuarterBlock;
 layers = (
 {
 layerId = m001;
@@ -99356,7 +99745,7 @@ width = 600;
 unicode = 9602;
 },
 {
-glyphname = dnthreeeighthsblock;
+glyphname = lowerThreeEighthsBlock;
 layers = (
 {
 layerId = m001;
@@ -99419,7 +99808,7 @@ width = 600;
 unicode = 9603;
 },
 {
-glyphname = dnhalfblock;
+glyphname = lowerHalfBlock;
 layers = (
 {
 layerId = m001;
@@ -99482,7 +99871,7 @@ width = 600;
 unicode = 9604;
 },
 {
-glyphname = dnfiveeighthsblock;
+glyphname = lowerFiveEighthsBlock;
 layers = (
 {
 layerId = m001;
@@ -99545,7 +99934,7 @@ width = 600;
 unicode = 9605;
 },
 {
-glyphname = dnthreequartersblock;
+glyphname = lowerThreeQuartersBlock;
 layers = (
 {
 layerId = m001;
@@ -99608,7 +99997,7 @@ width = 600;
 unicode = 9606;
 },
 {
-glyphname = dnseveneighthsblock;
+glyphname = lowerSevenEighthsBlock;
 layers = (
 {
 layerId = m001;
@@ -99671,7 +100060,7 @@ width = 600;
 unicode = 9607;
 },
 {
-glyphname = fullblock;
+glyphname = fullBlock;
 layers = (
 {
 layerId = m001;
@@ -99734,7 +100123,7 @@ width = 600;
 unicode = 9608;
 },
 {
-glyphname = uphalfblock;
+glyphname = upperHalfBlock;
 layers = (
 {
 layerId = m001;
@@ -99797,7 +100186,7 @@ width = 600;
 unicode = 9600;
 },
 {
-glyphname = upeighthblock;
+glyphname = upperOneEighthBlock;
 layers = (
 {
 layerId = m001;
@@ -99860,7 +100249,7 @@ width = 600;
 unicode = 9620;
 },
 {
-glyphname = lefteighthblock;
+glyphname = leftOneEighthBlock;
 layers = (
 {
 layerId = m001;
@@ -99923,7 +100312,7 @@ width = 600;
 unicode = 9615;
 },
 {
-glyphname = leftquarterblock;
+glyphname = leftOneQuarterBlock;
 layers = (
 {
 layerId = m001;
@@ -99986,7 +100375,7 @@ width = 600;
 unicode = 9614;
 },
 {
-glyphname = leftthreeeighthsblock;
+glyphname = leftThreeEighthsBlock;
 layers = (
 {
 layerId = m001;
@@ -100049,7 +100438,7 @@ width = 600;
 unicode = 9613;
 },
 {
-glyphname = lefthalfblock;
+glyphname = leftBlock;
 layers = (
 {
 layerId = m001;
@@ -100112,7 +100501,7 @@ width = 600;
 unicode = 9612;
 },
 {
-glyphname = leftfiveeighthsblock;
+glyphname = leftFiveEighthsBlock;
 layers = (
 {
 layerId = m001;
@@ -100175,7 +100564,7 @@ width = 600;
 unicode = 9611;
 },
 {
-glyphname = leftthreequartersblock;
+glyphname = leftThreeQuartersBlock;
 layers = (
 {
 layerId = m001;
@@ -100238,7 +100627,7 @@ width = 600;
 unicode = 9610;
 },
 {
-glyphname = leftseveneighthsblock;
+glyphname = leftSevenEighthsBlock;
 layers = (
 {
 layerId = m001;
@@ -100301,7 +100690,7 @@ width = 600;
 unicode = 9609;
 },
 {
-glyphname = righthalfblock;
+glyphname = rightBlock;
 layers = (
 {
 layerId = m001;
@@ -100364,7 +100753,7 @@ width = 600;
 unicode = 9616;
 },
 {
-glyphname = righteighthblock;
+glyphname = rightOneEighthBlock;
 layers = (
 {
 layerId = m001;
@@ -100427,7 +100816,7 @@ width = 600;
 unicode = 9621;
 },
 {
-glyphname = dnleftquadrant;
+glyphname = lowerLeftBlock;
 layers = (
 {
 layerId = m001;
@@ -100490,7 +100879,7 @@ width = 600;
 unicode = 9622;
 },
 {
-glyphname = dnrightquadrant;
+glyphname = lowerRightBlock;
 layers = (
 {
 layerId = m001;
@@ -100553,7 +100942,7 @@ width = 600;
 unicode = 9623;
 },
 {
-glyphname = upleftquadrant;
+glyphname = upperLeftBlock;
 layers = (
 {
 layerId = m001;
@@ -100616,7 +101005,7 @@ width = 600;
 unicode = 9624;
 },
 {
-glyphname = upleftdnleftdnrightquadrant;
+glyphname = upperLeftAndLowerLeftAndLowerRightBlock;
 layers = (
 {
 layerId = m001;
@@ -100685,7 +101074,7 @@ width = 600;
 unicode = 9625;
 },
 {
-glyphname = upleftdnrightquadrant;
+glyphname = upperLeftAndLowerRightBlock;
 layers = (
 {
 layerId = m001;
@@ -100775,7 +101164,7 @@ width = 600;
 unicode = 9626;
 },
 {
-glyphname = upleftuprightdnleftquadrant;
+glyphname = upperLeftAndUpperRightAndLowerLeftBlock;
 layers = (
 {
 layerId = m001;
@@ -100844,7 +101233,7 @@ width = 600;
 unicode = 9627;
 },
 {
-glyphname = upleftuprightdnrightquadrant;
+glyphname = upperLeftAndUpperRightAndLowerRightBlock;
 layers = (
 {
 layerId = m001;
@@ -100913,7 +101302,7 @@ width = 600;
 unicode = 9628;
 },
 {
-glyphname = uprightquadrant;
+glyphname = upperRightBlock;
 layers = (
 {
 layerId = m001;
@@ -100976,7 +101365,7 @@ width = 600;
 unicode = 9629;
 },
 {
-glyphname = uprightdnleftquadrant;
+glyphname = upperRightAndLowerLeftBlock;
 layers = (
 {
 layerId = m001;
@@ -101066,7 +101455,7 @@ width = 600;
 unicode = 9630;
 },
 {
-glyphname = uprightdnleftdnrightquadrant;
+glyphname = upperRightAndLowerLeftAndLowerRightBlock;
 layers = (
 {
 layerId = m001;
@@ -101135,7 +101524,7 @@ width = 600;
 unicode = 9631;
 },
 {
-glyphname = lightshade;
+glyphname = shadelight;
 layers = (
 {
 layerId = m001;
@@ -103313,7 +103702,7 @@ width = 600;
 unicode = 9617;
 },
 {
-glyphname = mediumshade;
+glyphname = shademedium;
 layers = (
 {
 layerId = m001;
@@ -105491,7 +105880,7 @@ width = 600;
 unicode = 9618;
 },
 {
-glyphname = darkshade;
+glyphname = shadedark;
 layers = (
 {
 layerId = m001;
@@ -107771,7 +108160,7 @@ width = 600;
 unicode = 9674;
 },
 {
-glyphname = dbldnhorzbxd;
+glyphname = boxDoubleDownAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -107900,7 +108289,7 @@ width = 600;
 unicode = 9574;
 },
 {
-glyphname = dbldnleftbxd;
+glyphname = boxDoubleDownAndLeft;
 layers = (
 {
 layerId = m001;
@@ -108002,7 +108391,7 @@ width = 600;
 unicode = 9559;
 },
 {
-glyphname = dbldnrightbxd;
+glyphname = boxDoubleDownAndRight;
 layers = (
 {
 layerId = m001;
@@ -108104,7 +108493,7 @@ width = 600;
 unicode = 9556;
 },
 {
-glyphname = dblhorzbxd;
+glyphname = boxDoubleHorizontal;
 layers = (
 {
 layerId = m001;
@@ -108194,7 +108583,7 @@ width = 600;
 unicode = 9552;
 },
 {
-glyphname = dbluphorzbxd;
+glyphname = boxDoubleUpAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -108323,7 +108712,7 @@ width = 600;
 unicode = 9577;
 },
 {
-glyphname = dblupleftbxd;
+glyphname = boxDoubleUpAndLeft;
 layers = (
 {
 layerId = m001;
@@ -108425,7 +108814,7 @@ width = 600;
 unicode = 9565;
 },
 {
-glyphname = dbluprightbxd;
+glyphname = boxDoubleUpAndRight;
 layers = (
 {
 layerId = m001;
@@ -108527,7 +108916,7 @@ width = 600;
 unicode = 9562;
 },
 {
-glyphname = dblvertbxd;
+glyphname = boxDoubleVertical;
 layers = (
 {
 layerId = m001;
@@ -108617,7 +109006,7 @@ width = 600;
 unicode = 9553;
 },
 {
-glyphname = dblverthorzbxd;
+glyphname = boxDoubleVerticalAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -108785,7 +109174,7 @@ width = 600;
 unicode = 9580;
 },
 {
-glyphname = dblvertleftbxd;
+glyphname = boxDoubleVerticalAndLeft;
 layers = (
 {
 layerId = m001;
@@ -108914,7 +109303,7 @@ width = 600;
 unicode = 9571;
 },
 {
-glyphname = dblvertrightbxd;
+glyphname = boxDoubleVerticalAndRight;
 layers = (
 {
 layerId = m001;
@@ -109043,7 +109432,7 @@ width = 600;
 unicode = 9568;
 },
 {
-glyphname = dndblhorzsngbxd;
+glyphname = boxDownDoubleAndHorizontalSingle;
 layers = (
 {
 layerId = m001;
@@ -109130,7 +109519,7 @@ width = 600;
 unicode = 9573;
 },
 {
-glyphname = dndblleftsngbxd;
+glyphname = boxDownDoubleAndLeftSingle;
 layers = (
 {
 layerId = m001;
@@ -109211,7 +109600,7 @@ width = 600;
 unicode = 9558;
 },
 {
-glyphname = dndblrightsngbxd;
+glyphname = boxDownDoubleAndRightSingle;
 layers = (
 {
 layerId = m001;
@@ -109292,7 +109681,7 @@ width = 600;
 unicode = 9555;
 },
 {
-glyphname = dnheavyhorzlightbxd;
+glyphname = boxDownHeavyAndHorizontalLight;
 layers = (
 {
 layerId = m001;
@@ -109367,7 +109756,7 @@ width = 600;
 unicode = 9520;
 },
 {
-glyphname = dnheavyleftlightbxd;
+glyphname = boxDownHeavyAndLeftLight;
 layers = (
 {
 layerId = m001;
@@ -109436,7 +109825,7 @@ width = 600;
 unicode = 9490;
 },
 {
-glyphname = dnheavyleftuplightbxd;
+glyphname = boxDownHeavyAndLeftUpLight;
 layers = (
 {
 layerId = m001;
@@ -109517,7 +109906,7 @@ width = 600;
 unicode = 9511;
 },
 {
-glyphname = dnheavyrightlightbxd;
+glyphname = boxDownHeavyAndRightLight;
 layers = (
 {
 layerId = m001;
@@ -109586,7 +109975,7 @@ width = 600;
 unicode = 9486;
 },
 {
-glyphname = dnheavyrightuplightbxd;
+glyphname = boxDownHeavyAndRightUpLight;
 layers = (
 {
 layerId = m001;
@@ -109667,7 +110056,7 @@ width = 600;
 unicode = 9503;
 },
 {
-glyphname = dnheavyuphorzlightbxd;
+glyphname = boxDownHeavyAndUpHorizontalLight;
 layers = (
 {
 layerId = m001;
@@ -109754,7 +110143,7 @@ width = 600;
 unicode = 9537;
 },
 {
-glyphname = dnlighthorzheavybxd;
+glyphname = boxDownLightAndHorizontalHeavy;
 layers = (
 {
 layerId = m001;
@@ -109829,7 +110218,7 @@ width = 600;
 unicode = 9519;
 },
 {
-glyphname = dnlightleftheavybxd;
+glyphname = boxDownLightAndLeftHeavy;
 layers = (
 {
 layerId = m001;
@@ -109898,7 +110287,7 @@ width = 600;
 unicode = 9489;
 },
 {
-glyphname = dnlightleftupheavybxd;
+glyphname = boxDownLightAndLeftUpHeavy;
 layers = (
 {
 layerId = m001;
@@ -109979,7 +110368,7 @@ width = 600;
 unicode = 9513;
 },
 {
-glyphname = dnlightrightheavybxd;
+glyphname = boxDownLightAndRightHeavy;
 layers = (
 {
 layerId = m001;
@@ -110048,7 +110437,7 @@ width = 600;
 unicode = 9485;
 },
 {
-glyphname = dnlightrightupheavybxd;
+glyphname = boxDownLightAndRightUpHeavy;
 layers = (
 {
 layerId = m001;
@@ -110129,7 +110518,7 @@ width = 600;
 unicode = 9505;
 },
 {
-glyphname = dnlightuphorzheavybxd;
+glyphname = boxDownLightAndUpHorizontalHeavy;
 layers = (
 {
 layerId = m001;
@@ -110216,7 +110605,7 @@ width = 600;
 unicode = 9543;
 },
 {
-glyphname = dnsnghorzdblbxd;
+glyphname = boxDownSingleAndHorizontalDouble;
 layers = (
 {
 layerId = m001;
@@ -110318,7 +110707,7 @@ width = 600;
 unicode = 9572;
 },
 {
-glyphname = dnsngleftdblbxd;
+glyphname = boxDownSingleAndLeftDouble;
 layers = (
 {
 layerId = m001;
@@ -110399,7 +110788,7 @@ width = 600;
 unicode = 9557;
 },
 {
-glyphname = dnsngrightdblbxd;
+glyphname = boxDownSingleAndRightDouble;
 layers = (
 {
 layerId = m001;
@@ -110480,7 +110869,7 @@ width = 600;
 unicode = 9554;
 },
 {
-glyphname = heavydbldashhorzbxd;
+glyphname = boxHeavyDoubleDashHorizontal;
 layers = (
 {
 layerId = m001;
@@ -110570,7 +110959,7 @@ width = 600;
 unicode = 9549;
 },
 {
-glyphname = heavydbldashvertbxd;
+glyphname = boxHeavyDoubleDashVertical;
 layers = (
 {
 layerId = m001;
@@ -110660,7 +111049,7 @@ width = 600;
 unicode = 9551;
 },
 {
-glyphname = heavydnbxd;
+glyphname = boxHeavyDown;
 layers = (
 {
 layerId = m001;
@@ -110723,7 +111112,7 @@ width = 600;
 unicode = 9595;
 },
 {
-glyphname = heavydnhorzbxd;
+glyphname = boxHeavyDownAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -110798,7 +111187,7 @@ width = 600;
 unicode = 9523;
 },
 {
-glyphname = heavydnleftbxd;
+glyphname = boxHeavyDownAndLeft;
 layers = (
 {
 layerId = m001;
@@ -110867,7 +111256,7 @@ width = 600;
 unicode = 9491;
 },
 {
-glyphname = heavydnrightbxd;
+glyphname = boxHeavyDownAndRight;
 layers = (
 {
 layerId = m001;
@@ -110936,7 +111325,7 @@ width = 600;
 unicode = 9487;
 },
 {
-glyphname = heavyhorzbxd;
+glyphname = boxHeavyHorizontal;
 layers = (
 {
 layerId = m001;
@@ -110999,7 +111388,7 @@ width = 600;
 unicode = 9473;
 },
 {
-glyphname = heavyleftbxd;
+glyphname = boxHeavyLeft;
 layers = (
 {
 layerId = m001;
@@ -111062,7 +111451,7 @@ width = 600;
 unicode = 9592;
 },
 {
-glyphname = heavyleftlightrightbxd;
+glyphname = boxHeavyLeftAndLightRight;
 layers = (
 {
 layerId = m001;
@@ -111137,7 +111526,7 @@ width = 600;
 unicode = 9598;
 },
 {
-glyphname = heavyquaddashhorzbxd;
+glyphname = boxHeavyQuadrupleDashHorizontal;
 layers = (
 {
 layerId = m001;
@@ -111281,7 +111670,7 @@ width = 600;
 unicode = 9481;
 },
 {
-glyphname = heavyquaddashvertbxd;
+glyphname = boxHeavyQuadrupleDashVertical;
 layers = (
 {
 layerId = m001;
@@ -111452,7 +111841,7 @@ width = 600;
 unicode = 9483;
 },
 {
-glyphname = heavyrightbxd;
+glyphname = boxHeavyRight;
 layers = (
 {
 layerId = m001;
@@ -111515,7 +111904,7 @@ width = 600;
 unicode = 9594;
 },
 {
-glyphname = heavytrpldashhorzbxd;
+glyphname = boxHeavyTripleDashHorizontal;
 layers = (
 {
 layerId = m001;
@@ -111632,7 +112021,7 @@ width = 600;
 unicode = 9477;
 },
 {
-glyphname = heavytrpldashvertbxd;
+glyphname = boxHeavyTripleDashVertical;
 layers = (
 {
 layerId = m001;
@@ -111776,7 +112165,7 @@ width = 600;
 unicode = 9479;
 },
 {
-glyphname = heavyupbxd;
+glyphname = boxHeavyUp;
 layers = (
 {
 layerId = m001;
@@ -111839,7 +112228,7 @@ width = 600;
 unicode = 9593;
 },
 {
-glyphname = heavyuphorzbxd;
+glyphname = boxHeavyUpAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -111914,7 +112303,7 @@ width = 600;
 unicode = 9531;
 },
 {
-glyphname = heavyupleftbxd;
+glyphname = boxHeavyUpAndLeft;
 layers = (
 {
 layerId = m001;
@@ -111983,7 +112372,7 @@ width = 600;
 unicode = 9499;
 },
 {
-glyphname = heavyuplightdnbxd;
+glyphname = boxHeavyUpAndLightDown;
 layers = (
 {
 layerId = m001;
@@ -112058,7 +112447,7 @@ width = 600;
 unicode = 9599;
 },
 {
-glyphname = heavyuprightbxd;
+glyphname = boxHeavyUpAndRight;
 layers = (
 {
 layerId = m001;
@@ -112127,7 +112516,7 @@ width = 600;
 unicode = 9495;
 },
 {
-glyphname = heavyvertbxd;
+glyphname = boxHeavyVertical;
 layers = (
 {
 layerId = m001;
@@ -112190,7 +112579,7 @@ width = 600;
 unicode = 9475;
 },
 {
-glyphname = heavyverthorzbxd;
+glyphname = boxHeavyVerticalAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -112277,7 +112666,7 @@ width = 600;
 unicode = 9547;
 },
 {
-glyphname = heavyvertleftbxd;
+glyphname = boxHeavyVerticalAndLeft;
 layers = (
 {
 layerId = m001;
@@ -112352,7 +112741,7 @@ width = 600;
 unicode = 9515;
 },
 {
-glyphname = heavyvertrightbxd;
+glyphname = boxHeavyVerticalAndRight;
 layers = (
 {
 layerId = m001;
@@ -112427,7 +112816,7 @@ width = 600;
 unicode = 9507;
 },
 {
-glyphname = leftdnheavyrightuplightbxd;
+glyphname = boxLeftDownHeavyAndRightUpLight;
 layers = (
 {
 layerId = m001;
@@ -112520,7 +112909,7 @@ width = 600;
 unicode = 9541;
 },
 {
-glyphname = leftheavyrightdnlightbxd;
+glyphname = boxLeftHeavyAndRightDownLight;
 layers = (
 {
 layerId = m001;
@@ -112601,7 +112990,7 @@ width = 600;
 unicode = 9517;
 },
 {
-glyphname = leftheavyrightuplightbxd;
+glyphname = boxLeftHeavyAndRightUpLight;
 layers = (
 {
 layerId = m001;
@@ -112682,7 +113071,7 @@ width = 600;
 unicode = 9525;
 },
 {
-glyphname = leftheavyrightvertlightbxd;
+glyphname = boxLeftHeavyAndRightVerticalLight;
 layers = (
 {
 layerId = m001;
@@ -112769,7 +113158,7 @@ width = 600;
 unicode = 9533;
 },
 {
-glyphname = leftlightrightdnheavybxd;
+glyphname = boxLeftLightAndRightDownHeavy;
 layers = (
 {
 layerId = m001;
@@ -112850,7 +113239,7 @@ width = 600;
 unicode = 9522;
 },
 {
-glyphname = leftlightrightupheavybxd;
+glyphname = boxLeftLightAndRightUpHeavy;
 layers = (
 {
 layerId = m001;
@@ -112931,7 +113320,7 @@ width = 600;
 unicode = 9530;
 },
 {
-glyphname = leftlightrightvertheavybxd;
+glyphname = boxLeftLightAndRightVerticalHeavy;
 layers = (
 {
 layerId = m001;
@@ -113018,7 +113407,7 @@ width = 600;
 unicode = 9546;
 },
 {
-glyphname = leftupheavyrightdnlightbxd;
+glyphname = boxLeftUpHeavyAndRightDownLight;
 layers = (
 {
 layerId = m001;
@@ -113111,7 +113500,7 @@ width = 600;
 unicode = 9539;
 },
 {
-glyphname = lightarcdnleftbxd;
+glyphname = boxLightArcDownAndLeft;
 layers = (
 {
 layerId = m001;
@@ -113198,7 +113587,7 @@ width = 600;
 unicode = 9582;
 },
 {
-glyphname = lightarcdnrightbxd;
+glyphname = boxLightArcDownAndRight;
 layers = (
 {
 layerId = m001;
@@ -113285,7 +113674,7 @@ width = 600;
 unicode = 9581;
 },
 {
-glyphname = lightarcupleftbxd;
+glyphname = boxLightArcUpAndLeft;
 layers = (
 {
 layerId = m001;
@@ -113372,7 +113761,7 @@ width = 600;
 unicode = 9583;
 },
 {
-glyphname = lightarcuprightbxd;
+glyphname = boxLightArcUpAndRight;
 layers = (
 {
 layerId = m001;
@@ -113459,7 +113848,7 @@ width = 600;
 unicode = 9584;
 },
 {
-glyphname = lightdbldashhorzbxd;
+glyphname = boxLightDoubleDashHorizontal;
 layers = (
 {
 layerId = m001;
@@ -113549,7 +113938,7 @@ width = 600;
 unicode = 9548;
 },
 {
-glyphname = lightdbldashvertbxd;
+glyphname = boxLightDoubleDashVertical;
 layers = (
 {
 layerId = m001;
@@ -113639,7 +114028,7 @@ width = 600;
 unicode = 9550;
 },
 {
-glyphname = lightdiagcrossbxd;
+glyphname = boxLightDiagonalCross;
 layers = (
 {
 layerId = m001;
@@ -113738,7 +114127,7 @@ width = 600;
 unicode = 9587;
 },
 {
-glyphname = lightdiagupleftdnrightbxd;
+glyphname = boxLightDiagonalUpperLeftToLowerRight;
 layers = (
 {
 layerId = m001;
@@ -113807,7 +114196,7 @@ width = 600;
 unicode = 9586;
 },
 {
-glyphname = lightdiaguprightdnleftbxd;
+glyphname = boxLightDiagonalUpperRightToLowerLeft;
 layers = (
 {
 layerId = m001;
@@ -113876,7 +114265,7 @@ width = 600;
 unicode = 9585;
 },
 {
-glyphname = lightdnbxd;
+glyphname = boxLightDown;
 layers = (
 {
 layerId = m001;
@@ -113939,7 +114328,7 @@ width = 600;
 unicode = 9591;
 },
 {
-glyphname = lightdnhorzbxd;
+glyphname = boxLightDownAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -114014,7 +114403,7 @@ width = 600;
 unicode = 9516;
 },
 {
-glyphname = lightdnleftbxd;
+glyphname = boxLightDownAndLeft;
 layers = (
 {
 layerId = m001;
@@ -114083,7 +114472,7 @@ width = 600;
 unicode = 9488;
 },
 {
-glyphname = lightdnrightbxd;
+glyphname = boxLightDownAndRight;
 layers = (
 {
 layerId = m001;
@@ -114152,7 +114541,7 @@ width = 600;
 unicode = 9484;
 },
 {
-glyphname = lighthorzbxd;
+glyphname = boxLightHorizontal;
 layers = (
 {
 layerId = m001;
@@ -114215,7 +114604,7 @@ width = 600;
 unicode = 9472;
 },
 {
-glyphname = lightleftbxd;
+glyphname = boxLightLeft;
 layers = (
 {
 layerId = m001;
@@ -114278,7 +114667,7 @@ width = 600;
 unicode = 9588;
 },
 {
-glyphname = lightleftheavyrightbxd;
+glyphname = boxLightLeftAndHeavyRight;
 layers = (
 {
 layerId = m001;
@@ -114353,7 +114742,7 @@ width = 600;
 unicode = 9596;
 },
 {
-glyphname = lightquaddashhorzbxd;
+glyphname = boxLightQuadrupleDashHorizontal;
 layers = (
 {
 layerId = m001;
@@ -114497,7 +114886,7 @@ width = 600;
 unicode = 9480;
 },
 {
-glyphname = lightquaddashvertbxd;
+glyphname = boxLightQuadrupleDashVertical;
 layers = (
 {
 layerId = m001;
@@ -114668,7 +115057,7 @@ width = 600;
 unicode = 9482;
 },
 {
-glyphname = lightrightbxd;
+glyphname = boxLightRight;
 layers = (
 {
 layerId = m001;
@@ -114731,7 +115120,7 @@ width = 600;
 unicode = 9590;
 },
 {
-glyphname = lighttrpldashhorzbxd;
+glyphname = boxLightTripleDashHorizontal;
 layers = (
 {
 layerId = m001;
@@ -114848,7 +115237,7 @@ width = 600;
 unicode = 9476;
 },
 {
-glyphname = lighttrpldashvertbxd;
+glyphname = boxLightTripleDashVertical;
 layers = (
 {
 layerId = m001;
@@ -114992,7 +115381,7 @@ width = 600;
 unicode = 9478;
 },
 {
-glyphname = lightupbxd;
+glyphname = boxLightUp;
 layers = (
 {
 layerId = m001;
@@ -115055,7 +115444,7 @@ width = 600;
 unicode = 9589;
 },
 {
-glyphname = lightupheavydnbxd;
+glyphname = boxLightUpAndHeavyDown;
 layers = (
 {
 layerId = m001;
@@ -115130,7 +115519,7 @@ width = 600;
 unicode = 9597;
 },
 {
-glyphname = lightuphorzbxd;
+glyphname = boxLightUpAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -115205,7 +115594,7 @@ width = 600;
 unicode = 9524;
 },
 {
-glyphname = lightupleftbxd;
+glyphname = boxLightUpAndLeft;
 layers = (
 {
 layerId = m001;
@@ -115274,7 +115663,7 @@ width = 600;
 unicode = 9496;
 },
 {
-glyphname = lightuprightbxd;
+glyphname = boxLightUpAndRight;
 layers = (
 {
 layerId = m001;
@@ -115343,7 +115732,7 @@ width = 600;
 unicode = 9492;
 },
 {
-glyphname = lightvertbxd;
+glyphname = boxLightVertical;
 layers = (
 {
 layerId = m001;
@@ -115406,7 +115795,7 @@ width = 600;
 unicode = 9474;
 },
 {
-glyphname = lightverthorzbxd;
+glyphname = boxLightVerticalAndHorizontal;
 layers = (
 {
 layerId = m001;
@@ -115493,7 +115882,7 @@ width = 600;
 unicode = 9532;
 },
 {
-glyphname = lightvertleftbxd;
+glyphname = boxLightVerticalAndLeft;
 layers = (
 {
 layerId = m001;
@@ -115568,7 +115957,7 @@ width = 600;
 unicode = 9508;
 },
 {
-glyphname = lightvertrightbxd;
+glyphname = boxLightVerticalAndRight;
 layers = (
 {
 layerId = m001;
@@ -115643,7 +116032,7 @@ width = 600;
 unicode = 9500;
 },
 {
-glyphname = rightdnheavyleftuplightbxd;
+glyphname = boxRightDownHeavyAndLeftUpLight;
 layers = (
 {
 layerId = m001;
@@ -115736,7 +116125,7 @@ width = 600;
 unicode = 9542;
 },
 {
-glyphname = rightheavyleftdnlightbxd;
+glyphname = boxRightHeavyAndLeftDownLight;
 layers = (
 {
 layerId = m001;
@@ -115817,7 +116206,7 @@ width = 600;
 unicode = 9518;
 },
 {
-glyphname = rightheavyleftuplightbxd;
+glyphname = boxRightHeavyAndLeftUpLight;
 layers = (
 {
 layerId = m001;
@@ -115898,7 +116287,7 @@ width = 600;
 unicode = 9526;
 },
 {
-glyphname = rightheavyleftvertlightbxd;
+glyphname = boxRightHeavyAndLeftVerticalLight;
 layers = (
 {
 layerId = m001;
@@ -115985,7 +116374,7 @@ width = 600;
 unicode = 9534;
 },
 {
-glyphname = rightlightleftdnheavybxd;
+glyphname = boxRightLightAndLeftDownHeavy;
 layers = (
 {
 layerId = m001;
@@ -116066,7 +116455,7 @@ width = 600;
 unicode = 9521;
 },
 {
-glyphname = rightlightleftupheavybxd;
+glyphname = boxRightLightAndLeftUpHeavy;
 layers = (
 {
 layerId = m001;
@@ -116147,7 +116536,7 @@ width = 600;
 unicode = 9529;
 },
 {
-glyphname = rightlightleftvertheavybxd;
+glyphname = boxRightLightAndLeftVerticalHeavy;
 layers = (
 {
 layerId = m001;
@@ -116234,7 +116623,7 @@ width = 600;
 unicode = 9545;
 },
 {
-glyphname = rightupheavyleftdnlightbxd;
+glyphname = boxRightUpHeavyAndLeftDownLight;
 layers = (
 {
 layerId = m001;
@@ -116327,7 +116716,7 @@ width = 600;
 unicode = 9540;
 },
 {
-glyphname = updblhorzsngbxd;
+glyphname = boxUpDoubleAndHorizontalSingle;
 layers = (
 {
 layerId = m001;
@@ -116414,7 +116803,7 @@ width = 600;
 unicode = 9576;
 },
 {
-glyphname = updblleftsngbxd;
+glyphname = boxUpDoubleAndLeftSingle;
 layers = (
 {
 layerId = m001;
@@ -116495,7 +116884,7 @@ width = 600;
 unicode = 9564;
 },
 {
-glyphname = updblrightsngbxd;
+glyphname = boxUpDoubleAndRightSingle;
 layers = (
 {
 layerId = m001;
@@ -116576,7 +116965,7 @@ width = 600;
 unicode = 9561;
 },
 {
-glyphname = upheavydnhorzlightbxd;
+glyphname = boxUpHeavyAndDownHorizontalLight;
 layers = (
 {
 layerId = m001;
@@ -116663,7 +117052,7 @@ width = 600;
 unicode = 9536;
 },
 {
-glyphname = upheavyhorzlightbxd;
+glyphname = boxUpHeavyAndHorizontalLight;
 layers = (
 {
 layerId = m001;
@@ -116738,7 +117127,7 @@ width = 600;
 unicode = 9528;
 },
 {
-glyphname = upheavyleftdnlightbxd;
+glyphname = boxUpHeavyAndLeftDownLight;
 layers = (
 {
 layerId = m001;
@@ -116819,7 +117208,7 @@ width = 600;
 unicode = 9510;
 },
 {
-glyphname = upheavyleftlightbxd;
+glyphname = boxUpHeavyAndLeftLight;
 layers = (
 {
 layerId = m001;
@@ -116888,7 +117277,7 @@ width = 600;
 unicode = 9498;
 },
 {
-glyphname = upheavyrightdnlightbxd;
+glyphname = boxUpHeavyAndRightDownLight;
 layers = (
 {
 layerId = m001;
@@ -116969,7 +117358,7 @@ width = 600;
 unicode = 9502;
 },
 {
-glyphname = upheavyrightlightbxd;
+glyphname = boxUpHeavyAndRightLight;
 layers = (
 {
 layerId = m001;
@@ -117038,7 +117427,7 @@ width = 600;
 unicode = 9494;
 },
 {
-glyphname = uplightdnhorzheavybxd;
+glyphname = boxUpLightAndDownHorizontalHeavy;
 layers = (
 {
 layerId = m001;
@@ -117125,7 +117514,7 @@ width = 600;
 unicode = 9544;
 },
 {
-glyphname = uplighthorzheavybxd;
+glyphname = boxUpLightAndHorizontalHeavy;
 layers = (
 {
 layerId = m001;
@@ -117200,7 +117589,7 @@ width = 600;
 unicode = 9527;
 },
 {
-glyphname = uplightleftdnheavybxd;
+glyphname = boxUpLightAndLeftDownHeavy;
 layers = (
 {
 layerId = m001;
@@ -117281,7 +117670,7 @@ width = 600;
 unicode = 9514;
 },
 {
-glyphname = uplightleftheavybxd;
+glyphname = boxUpLightAndLeftHeavy;
 layers = (
 {
 layerId = m001;
@@ -117350,7 +117739,7 @@ width = 600;
 unicode = 9497;
 },
 {
-glyphname = uplightrightdnheavybxd;
+glyphname = boxUpLightAndRightDownHeavy;
 layers = (
 {
 layerId = m001;
@@ -117431,7 +117820,7 @@ width = 600;
 unicode = 9506;
 },
 {
-glyphname = uplightrightheavybxd;
+glyphname = boxUpLightAndRightHeavy;
 layers = (
 {
 layerId = m001;
@@ -117500,7 +117889,7 @@ width = 600;
 unicode = 9493;
 },
 {
-glyphname = upsnghorzdblbxd;
+glyphname = boxUpSingleAndHorizontalDouble;
 layers = (
 {
 layerId = m001;
@@ -117602,7 +117991,7 @@ width = 600;
 unicode = 9575;
 },
 {
-glyphname = upsngleftdblbxd;
+glyphname = boxUpSingleAndLeftDouble;
 layers = (
 {
 layerId = m001;
@@ -117683,7 +118072,7 @@ width = 600;
 unicode = 9563;
 },
 {
-glyphname = upsngrightdblbxd;
+glyphname = boxUpSingleAndRightDouble;
 layers = (
 {
 layerId = m001;
@@ -117764,7 +118153,7 @@ width = 600;
 unicode = 9560;
 },
 {
-glyphname = vertdblhorzsngbxd;
+glyphname = boxVerticalDoubleAndHorizontalSingle;
 layers = (
 {
 layerId = m001;
@@ -117875,7 +118264,7 @@ width = 600;
 unicode = 9579;
 },
 {
-glyphname = vertdblleftsngbxd;
+glyphname = boxVerticalDoubleAndLeftSingle;
 layers = (
 {
 layerId = m001;
@@ -117977,7 +118366,7 @@ width = 600;
 unicode = 9570;
 },
 {
-glyphname = vertdblrightsngbxd;
+glyphname = boxVerticalDoubleAndRightSingle;
 layers = (
 {
 layerId = m001;
@@ -118079,7 +118468,7 @@ width = 600;
 unicode = 9567;
 },
 {
-glyphname = vertheavyhorzlightbxd;
+glyphname = boxVerticalHeavyAndHorizontalLight;
 layers = (
 {
 layerId = m001;
@@ -118166,7 +118555,7 @@ width = 600;
 unicode = 9538;
 },
 {
-glyphname = vertheavyleftlightbxd;
+glyphname = boxVerticalHeavyAndLeftLight;
 layers = (
 {
 layerId = m001;
@@ -118241,7 +118630,7 @@ width = 600;
 unicode = 9512;
 },
 {
-glyphname = vertheavyrightlightbxd;
+glyphname = boxVerticalHeavyAndRightLight;
 layers = (
 {
 layerId = m001;
@@ -118316,7 +118705,7 @@ width = 600;
 unicode = 9504;
 },
 {
-glyphname = vertlighthorzheavybxd;
+glyphname = boxVerticalLightAndHorizontalHeavy;
 layers = (
 {
 layerId = m001;
@@ -118403,7 +118792,7 @@ width = 600;
 unicode = 9535;
 },
 {
-glyphname = vertlightleftheavybxd;
+glyphname = boxVerticalLightAndLeftHeavy;
 layers = (
 {
 layerId = m001;
@@ -118478,7 +118867,7 @@ width = 600;
 unicode = 9509;
 },
 {
-glyphname = vertlightrightheavybxd;
+glyphname = boxVerticalLightAndRightHeavy;
 layers = (
 {
 layerId = m001;
@@ -118553,7 +118942,7 @@ width = 600;
 unicode = 9501;
 },
 {
-glyphname = vertsnghorzdblbxd;
+glyphname = boxVerticalSingleAndHorizontalDouble;
 layers = (
 {
 layerId = m001;
@@ -118664,7 +119053,7 @@ width = 600;
 unicode = 9578;
 },
 {
-glyphname = vertsngleftdblbxd;
+glyphname = boxVerticalSingleAndLeftDouble;
 layers = (
 {
 layerId = m001;
@@ -118751,7 +119140,7 @@ width = 600;
 unicode = 9569;
 },
 {
-glyphname = vertsngrightdblbxd;
+glyphname = boxVerticalSingleAndRightDouble;
 layers = (
 {
 layerId = m001;
@@ -119487,7 +119876,7 @@ width = 0;
 unicode = 772;
 },
 {
-glyphname = hookcomb;
+glyphname = hookabovecomb;
 layers = (
 {
 anchors = (
@@ -119593,7 +119982,7 @@ unicode = 777;
 },
 {
 color = (153,251,255,255);
-glyphname = commaturnedtopcomb;
+glyphname = commaturnedabovecomb;
 layers = (
 {
 anchors = (
@@ -119606,7 +119995,7 @@ layerId = m001;
 shapes = (
 {
 pos = (-300,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 0;
@@ -119622,7 +120011,7 @@ layerId = m002;
 shapes = (
 {
 pos = (-300,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 0;
@@ -119638,7 +120027,7 @@ layerId = m003;
 shapes = (
 {
 pos = (-300,0);
-ref = commaturnedtop;
+ref = commaturnedmod;
 }
 );
 width = 0;
@@ -119648,7 +120037,7 @@ unicode = 786;
 },
 {
 color = (153,251,255,255);
-glyphname = caronslovakcomb;
+glyphname = commaaboverightcomb;
 layers = (
 {
 anchors = (
@@ -119661,7 +120050,7 @@ layerId = m001;
 shapes = (
 {
 pos = (-300,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 0;
@@ -119677,7 +120066,7 @@ layerId = m002;
 shapes = (
 {
 pos = (-193,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 0;
@@ -119693,7 +120082,7 @@ layerId = m003;
 shapes = (
 {
 pos = (-137,0);
-ref = caronslovak;
+ref = apostrophemod;
 }
 );
 width = 0;
@@ -119786,6 +120175,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -119824,6 +120214,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -119862,6 +120253,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -119900,12 +120292,13 @@ width = 0;
 unicode = 803;
 },
 {
-glyphname = commabelowcomb;
+glyphname = commaaccentcomb;
 layers = (
 {
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -119930,6 +120323,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -119954,6 +120348,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -119986,6 +120381,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -120002,6 +120398,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -120018,6 +120415,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -120042,6 +120440,7 @@ layers = (
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -120058,6 +120457,7 @@ width = 0;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -120074,6 +120474,7 @@ width = 0;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -123526,7 +123927,7 @@ width = 600;
 );
 },
 {
-glyphname = caronslovak;
+glyphname = apostrophemod;
 layers = (
 {
 anchors = (
@@ -123607,7 +124008,7 @@ width = 600;
 unicode = 700;
 },
 {
-glyphname = commaturnedtop;
+glyphname = commaturnedmod;
 layers = (
 {
 anchors = (
@@ -126375,7 +126776,7 @@ width = 600;
 },
 {
 color = (153,251,255,255);
-glyphname = abrevehook.alt01;
+glyphname = abrevehookabove.alt01;
 layers = (
 {
 anchors = (
@@ -126450,7 +126851,7 @@ width = 600;
 },
 {
 color = (153,251,255,255);
-glyphname = acircumflexhook.alt01;
+glyphname = acircumflexhookabove.alt01;
 layers = (
 {
 anchors = (
@@ -126525,7 +126926,7 @@ width = 600;
 },
 {
 color = (153,251,255,255);
-glyphname = ahook.alt01;
+glyphname = ahookabove.alt01;
 layers = (
 {
 anchors = (
@@ -126545,7 +126946,7 @@ ref = a.alt01;
 },
 {
 pos = (321,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -126568,7 +126969,7 @@ ref = a.alt01;
 },
 {
 pos = (330,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -126591,7 +126992,7 @@ ref = a.alt01;
 },
 {
 pos = (340,0);
-ref = hookcomb;
+ref = hookabovecomb;
 }
 );
 width = 600;
@@ -128848,7 +129249,7 @@ width = 0;
 );
 },
 {
-glyphname = hookcomb.case;
+glyphname = hookabovecomb.case;
 layers = (
 {
 anchors = (
@@ -129217,9 +129618,11 @@ name = "ExtraLight Italic";
 weightClass = 200;
 },
 {
+active = 0;
 axesValues = (
 300
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -129241,7 +129644,6 @@ name = "TTFAutohint options";
 value = "--increase-x-height=0";
 }
 );
-exports = 0;
 instanceInterpolations = {
 m001 = 0.33333;
 m002 = 0.66667;
@@ -129375,6 +129777,8 @@ name = "Bold Italic";
 weightClass = 700;
 }
 );
+kerningLTR = {
+};
 metrics = (
 {
 type = ascender;

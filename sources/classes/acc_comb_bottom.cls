@@ -1,1 +1,1 @@
-dotbelowcomb commabelowcomb cedillacomb ogonekcomb
+dotbelowcomb commaaccentcomb cedillacomb ogonekcomb
