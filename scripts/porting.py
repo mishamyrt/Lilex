@@ -20,6 +20,7 @@ global_args(
 @command(
     arg("--markdown", "-m", action="store_true", help="Markdown output"),
     arg("--download-url", "-d", help="Download URL"),
+    arg("--filter", "-f", help="Filter glyphs by name")
 )
 def progress(args):
     """Finds missing ligatures"""
@@ -29,10 +30,13 @@ def progress(args):
     with open(snapshot_path, mode="r", encoding="utf-8") as file:
         stored_glyphs = json.load(file)
 
+    if args.filter:
+        missing_glyphs = list(filter(lambda glyph: args.filter in glyph, missing_glyphs))
+        stored_glyphs = list(filter(lambda glyph: args.filter in glyph, stored_glyphs))
+
     diff = len(stored_glyphs) - len(missing_glyphs)
     progress_value = (diff / len(stored_glyphs)) * 100
     if not args.markdown:
-        # ligatures = filter(lambda glyph: glyph.endswith(".liga"), missing_glyphs)
         for glyph in missing_glyphs:
             print(f"- {glyph}")
         print(f"Glyphs coverage: {progress_value:.2f}%")
