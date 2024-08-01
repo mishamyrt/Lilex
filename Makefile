@@ -5,7 +5,7 @@ SCRIPTS_DIR := scripts
 SOURCES_DIR := sources
 
 # Font sources
-LILEX_SOURCE = $(SOURCES_DIR)/Lilex.glyphs
+LILEX_ROMAN_SOURCE = $(SOURCES_DIR)/Lilex.glyphs
 LILEX_ITALIC_SOURCE = $(SOURCES_DIR)/Lilex-Italic.glyphs
 
 # Internal build variables
@@ -21,7 +21,7 @@ define build-glyphs
 endef
 
 define build-font
-	$(call build-glyphs,$(LILEX_SOURCE),$(1),all)
+	$(call build-glyphs,$(LILEX_ROMAN_SOURCE),$(1),all)
 	$(call build-glyphs,$(LILEX_ITALIC_SOURCE),$(1),ignore)
 endef
 
