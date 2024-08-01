@@ -19,6 +19,7 @@ global_args(
 
 @command(
     arg("--markdown", "-m", action="store_true", help="Markdown output"),
+    arg("--download-url", "-d", help="Download URL"),
 )
 def progress(args):
     """Finds missing ligatures"""
@@ -37,20 +38,24 @@ def progress(args):
         print(f"Glyphs coverage: {progress_value:.2f}%")
         return
 
-    # print("### Glyphs porting progress")
-    # print(f"![](https://geps.dev/progress/{progress_value:.0f})")
-    # print()
+    print("### Glyphs porting progress")
+    print(f"![](https://geps.dev/progress/{progress_value:.0f})")
+    print()
 
-    # print("<details>")
-    # print("<summary>Glyphs status</summary>")
-    # print("<ul>")
-    # for glyph in stored_glyphs:
-    #     if glyph in missing_glyphs:
-    #         print(f"<li>{glyph}</li>")
-    #     else:
-    #         print(f"<li><s>{glyph}</s></li>")
-    # print("</ul>")
-    # print("</details>")
+    print("<details>")
+    print("<summary>Glyphs status</summary>")
+    print("<ul>")
+    for glyph in stored_glyphs:
+        if glyph in missing_glyphs:
+            print(f"<li>{glyph}</li>")
+        else:
+            print(f"<li><s>{glyph}</s></li>")
+    print("</ul>")
+    print("</details>")
+
+    if args.download_url:
+        print()
+        print(f"**[Download]({args.download_url})** CI build")
 
 @command()
 def snapshot(args):
