@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
 """Lilex helper entrypoint"""
 import sys
+import os
 from argparse import BooleanOptionalAction
+import yaml
 
+from multiprocessing import Process
 from arrrgs import arg, command, global_args, run
 from glyphsLib import GSFeature, GSFont
 from liblilex import DEFAULT_FORMATS, GlyphsFont, generate_spacers, render_ligatures
 from utils import read_classes, read_features, read_files
+from typing import TypedDict
 
-FONT_FILE = "sources/Lilex.glyphs"
 CLASSES_DIR = "sources/classes"
 FEATURES_DIR = "sources/features"
 OUT_DIR = "build"
 
 global_args(
-    arg("--input", "-i", default=FONT_FILE, help="Input .glyphs file"),
-    arg("--features", "-f", default="all", help=(
-        "A list of features that will be \"baked\" into the font. Comma separated, no spaces."
-        " Or you can pass \"ignore\" to use file's prebuilt features")
-    )
+    arg("--config", "-c", default="family_config.yaml", help="Font config file")
 )
 
+AppConfig = TypedDict("AppConfig", {
+    "output": str,
+    "fonts": list[GlyphsFont],
+})
+
 @command(
-    arg("--output", "-o", default=FONT_FILE, help="Output file"),
     arg("--params", "-p", action=BooleanOptionalAction, help="Clear masters custom parameters"),
     arg("--calt_dump", "-c", action=BooleanOptionalAction,
         help="Save the resulting calt code to file (debugging)"),
@@ -30,23 +33,24 @@ global_args(
         help="Only run code without actually updating source file (debugging)"),
     arg("--version", "-v", default=None, help="Update version in generated file")
 )
-def generate(args, font: GlyphsFont):
+def generate(args, config: AppConfig):
     """Saves the generated source file with features and classes"""
-    font.clear_opened_files()
-    if args.params:
-        for master in font.file.masters:
-            names = []
-            for param in master.customParameters:
-                names.append(param.name)
-            for name in names:
-                del master.customParameters[name]
-    if args.version:
-        font.set_version(args.version)
-    if not args.dry_run:
-        font.save_to(args.output)
-    if args.calt_dump:
-        with open("calt.fea", mode="w", encoding="utf-8") as file:
-            file.write(font.file.features["calt"].code)
+    for font in config["fonts"]:
+        font.clear_opened_files()
+        if args.params:
+            for master in font.file.masters:
+                names = []
+                for param in master.customParameters:
+                    names.append(param.name)
+                for name in names:
+                    del master.customParameters[name]
+        if args.version:
+            font.set_version(args.version)
+        if not args.dry_run:
+            font.save()
+        if args.calt_dump:
+            with open(font.name + "-calt.fea", mode="w", encoding="utf-8") as file:
+                file.write(font.file.features["calt"].code)
     print("🟢 Font source successfully regenerated")
 
 @command(
@@ -54,13 +58,25 @@ def generate(args, font: GlyphsFont):
     arg("--store_temp", "-s", action=BooleanOptionalAction,
         help="Not to delete the temporary folder after build")
 )
-def build(args, font: GlyphsFont):
+def build(args, config: AppConfig):
     """Builds a binary font file"""
-    if font.build(args.formats, OUT_DIR, args.store_temp):
-        print("🟢 Font binaries successfully built")
-    else:
-        print("💔 Failed to build font binaries")
-        sys.exit(1)
+    if not os.path.exists(config["output"]):
+        os.makedirs(config["output"])
+    proc = []
+    for font in config["fonts"]:
+        p = Process(target=font.build, args=[
+            args.formats,
+            config["output"],
+            args.store_temp
+        ])
+        p.start()
+        proc.append(p)
+    for p in proc:
+        p.join()
+        if p.exitcode != 0:
+            print("Failed to build font")
+            sys.exit(1)
+    print("🟢 Font binaries successfully built")
 
 def generate_calt(font: GlyphsFont) -> GSFeature:
     glyphs = font.ligatures()
@@ -82,27 +98,27 @@ def move_to_calt(font: GSFont, features: list[str]):
         aalt = font.features["aalt"]
         aalt.code = aalt.code.replace(f"feature {fea};\n", "")
 
-def create_font(args):
-    font = GlyphsFont(args.input)
+def set_features(font: GlyphsFont, cls: list[str], fea: list[GSFeature]):
+    features = fea.copy()
+    calt = generate_calt(font)
+    features.append(calt)
+    generate_spacers(font.ligatures(), font.file.glyphs)
+    font.set_classes(cls)
+    font.set_features(features)
 
-    if args.features == "ignore":
-        print("Using prebuilt features")
-        return args, font
-
-    if args.features == "all":
-        cls = read_classes(CLASSES_DIR)
-        fea = read_features(FEATURES_DIR)
-
-        calt = generate_calt(font)
-        fea.append(calt)
-        generate_spacers(font.ligatures(), font.file.glyphs)
-        font.set_classes(cls)
-        font.set_features(fea)
-    return args, font
-    # if args.features is not None:
-    #     features = args.features.split(",")
-    #     move_to_calt(font.file, features)
-    #     print_warn(f"Forced features: {', '.join(features)}")
+def load_font(args):
+    with open(args.config, mode="r", encoding="utf-8") as file:
+        config_file = yaml.safe_load(file)
+    source_dir = config_file["source"]
+    cls = read_classes(os.path.join(source_dir, "classes"))
+    fea = read_features(os.path.join(source_dir, "features"))
+    config = AppConfig(output=config_file["output"], fonts=[])
+    for file in config_file["family"]:
+        font = GlyphsFont(os.path.join(source_dir, file))
+        config["fonts"].append(font)
+        if config_file["family"][file] == "all":
+            set_features(font, cls, fea)
+    return args, config
 
 if __name__ == "__main__":
-    run(prepare=create_font)
+    run(prepare=load_font)
