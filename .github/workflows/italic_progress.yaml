@@ -5,6 +5,8 @@ on:
 
 jobs:
   build:
+    uses: ./.github/workflows/build.yaml
+  publish:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
