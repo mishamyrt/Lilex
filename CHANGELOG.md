@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-* Italic.
+* Italic variant.
+* Cyrillic yus (`ѫ`, `Ѫ`)
 
 ## [2.530] — July 27, 2024
 
