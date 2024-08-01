@@ -1,0 +1,7 @@
+source: ./sources
+output: ./build
+family:
+  Lilex.glyphs:
+    features: all
+  Lilex-Italic.glyphs:
+    features: skip

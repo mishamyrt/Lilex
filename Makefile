@@ -13,16 +13,10 @@ OS := $(shell uname)
 VENV_DIR = ./venv
 VENV = . $(VENV_DIR)/bin/activate;
 
-define build-glyphs
-	@$(VENV) python $(SCRIPTS_DIR)/font.py \
-		-i "$(1)" \
-		-f $(3) \
-		build $(2)
-endef
-
 define build-font
-	$(call build-glyphs,$(LILEX_ROMAN_SOURCE),$(1),all)
-	$(call build-glyphs,$(LILEX_ITALIC_SOURCE),$(1),ignore)
+	@$(VENV) python $(SCRIPTS_DIR)/font.py \
+		--config "sources/family_config.yaml" \
+		build $(1)
 endef
 
 define check-font
@@ -91,7 +85,9 @@ preview: ## show CLI special symbols preview
 
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
-	@$(VENV) python $(SCRIPTS_DIR)/font.py generate
+	@$(VENV) python $(SCRIPTS_DIR)/font.py \
+		--config "sources/family_config.yaml" \
+		generate
 
 .PHONY: build
 build: ## build the font

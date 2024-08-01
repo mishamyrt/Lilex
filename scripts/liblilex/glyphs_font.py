@@ -39,6 +39,10 @@ class GlyphsFont:
     def file(self) -> GSFont:
         return self._font
 
+    @property
+    def name(self) -> str:
+        return self._name
+
     def ligatures(self) -> list[str]:
         glyphs = self.glyphs(lambda x: x.name.endswith(LIGATURE_SUFFIX))
         ligatures = []
@@ -59,7 +63,7 @@ class GlyphsFont:
         """Saves the file to the same path from which it was opened"""
         self._font.save(self._path)
 
-    def save_to(self, path: str) -> None:
+    def save_to(self, path: str = None) -> None:
         """Saves the file to the specified path"""
         self._font.save(path)
 

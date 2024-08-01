@@ -48,13 +48,13 @@ value = (
 name = "Axis Mappings";
 value = {
 wght = {
-100 = 100;
-200 = 200;
-300 = 300;
-400 = 400;
-500 = 500;
-600 = 600;
-700 = 700;
+"100" = 100;
+"200" = 200;
+"300" = 300;
+"400" = 400;
+"500" = 500;
+"600" = 600;
+"700" = 700;
 };
 };
 }
@@ -182,6 +182,7 @@ value = -140;
 id = m001;
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -196,9 +197,11 @@ pos = 516;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
+over = 0;
 pos = 9.5;
 },
 {
@@ -352,6 +355,7 @@ value = -140;
 id = m002;
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -366,9 +370,11 @@ pos = 516;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
+over = 0;
 pos = 9.5;
 },
 {
@@ -523,6 +529,7 @@ iconName = Bold;
 id = m003;
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -537,9 +544,11 @@ pos = 516;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
+over = 0;
 pos = 9.5;
 },
 {
@@ -94653,7 +94662,7 @@ width = 600;
 unicode = 94;
 },
 {
-glyphname = infinity;
+glyphname = "infinity";
 layers = (
 {
 layerId = m001;
@@ -119923,6 +119932,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -119961,6 +119971,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -119999,6 +120010,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -120043,6 +120055,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -120067,6 +120080,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -120091,6 +120105,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -120123,6 +120138,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -120139,6 +120155,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -120155,6 +120172,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -120179,6 +120197,7 @@ layers = (
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = m001;
@@ -120195,6 +120214,7 @@ width = 0;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = m002;
@@ -120211,6 +120231,7 @@ width = 0;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = m003;
@@ -129129,9 +129150,11 @@ name = "ExtraLight Italic";
 weightClass = 200;
 },
 {
+active = 0;
 axesValues = (
 300
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -129153,13 +129176,11 @@ name = "TTFAutohint options";
 value = "--increase-x-height=0";
 }
 );
-exports = 0;
 instanceInterpolations = {
 m001 = 0.33333;
 m002 = 0.66667;
 };
 name = "Light Italic";
-visible = 0;
 weightClass = 300;
 },
 {
@@ -129288,6 +129309,8 @@ name = "Bold Italic";
 weightClass = 700;
 }
 );
+kerningLTR = {
+};
 metrics = (
 {
 type = ascender;
