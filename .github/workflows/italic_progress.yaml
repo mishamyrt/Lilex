@@ -6,8 +6,11 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yaml
+    with:
+      download_url: true
   publish:
     permissions: write-all
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Checkout

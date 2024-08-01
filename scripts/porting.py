@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """A utility for developing pairings to fonts.
-I want Italic to have all the same features as a regular font,
+I want Italic to have all the same features as a roman font,
 this script will allow to control progress
 """
 import json
@@ -9,7 +9,7 @@ from os import makedirs
 from arrrgs import arg, command, global_args, run
 from glyphsLib import GSFont
 
-REGULAR_FONT_PATH = "sources/Lilex.glyphs"
+ROMAN_FONT_PATH = "sources/Lilex.glyphs"
 ITALIC_FONT_PATH = "sources/Lilex-Italic.glyphs"
 
 
@@ -31,23 +31,26 @@ def progress(args):
     diff = len(stored_glyphs) - len(missing_glyphs)
     progress_value = (diff / len(stored_glyphs)) * 100
     if not args.markdown:
+        # ligatures = filter(lambda glyph: glyph.endswith(".liga"), missing_glyphs)
+        for glyph in missing_glyphs:
+            print(f"- {glyph}")
         print(f"Glyphs coverage: {progress_value:.2f}%")
         return
 
-    print("### Glyphs porting progress")
-    print(f"![](https://geps.dev/progress/{progress_value:.0f})")
-    print()
+    # print("### Glyphs porting progress")
+    # print(f"![](https://geps.dev/progress/{progress_value:.0f})")
+    # print()
 
-    print("<details>")
-    print("<summary>Glyphs status</summary>")
-    print("<ul>")
-    for glyph in stored_glyphs:
-        if glyph in missing_glyphs:
-            print(f"<li>{glyph}</li>")
-        else:
-            print(f"<li><s>{glyph}</s></li>")
-    print("</ul>")
-    print("</details>")
+    # print("<details>")
+    # print("<summary>Glyphs status</summary>")
+    # print("<ul>")
+    # for glyph in stored_glyphs:
+    #     if glyph in missing_glyphs:
+    #         print(f"<li>{glyph}</li>")
+    #     else:
+    #         print(f"<li><s>{glyph}</s></li>")
+    # print("</ul>")
+    # print("</details>")
 
 @command()
 def snapshot(args):
@@ -60,7 +63,7 @@ def snapshot(args):
 
 def find_missing_glyphs() -> list[str]:
     """Finds missing glyphs"""
-    target_font = GSFont(REGULAR_FONT_PATH)
+    target_font = GSFont(ROMAN_FONT_PATH)
     source_font = GSFont(ITALIC_FONT_PATH)
     missing_glyphs = []
     for glyph in target_font.glyphs:
