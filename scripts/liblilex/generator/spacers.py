@@ -13,6 +13,8 @@ def generate_spacers(ligatures: list[str], glyphs: list[GSGlyph]) -> list[str]:
 
     unique = list(set(unique))
     template = glyphs["spacer.tpl"]
+    if template is None:
+        raise ValueError("Missing 'spacer.tpl' in glyphs font")
     for glh in unique:
         name = f"{glh}.spacer"
         if name not in glyphs:
