@@ -16,8 +16,8 @@ GLYPH_GROUPS = [
     ("Ligatures", ".liga"),
     ("Sequences", ".seq"),
     ("Bulgarian forms", ".loclBGR"),
-    ("Miscellaneous", None),
     ("Spacers", ".spacer"),
+    ("Miscellaneous", None),
 ]
 
 
@@ -31,18 +31,18 @@ global_args(
 )
 def progress(args):
     """Finds missing ligatures"""
-    missing_glyphs = find_missing_glyphs()
+    missing_glyphs = _find_missing_glyphs()
     snapshot_path = f"{args.snapshot_dir}/missing_glyphs.json"
 
     with open(snapshot_path, mode="r", encoding="utf-8") as file:
         stored_glyphs = json.load(file)
 
     diff = len(stored_glyphs) - len(missing_glyphs)
-    progress_value = (diff / len(stored_glyphs)) * 100
+    progress_value = (diff / len(stored_glyphs))
     if not args.markdown:
         for glyph in missing_glyphs:
             print(f"- {glyph}")
-        print(f"Glyphs coverage: {progress_value:.2f}%")
+        print(f"Glyphs coverage: {(progress_value * 100):.2f}%")
         return
 
     groups = {
@@ -61,7 +61,7 @@ def progress(args):
 
 
     print("## Glyphs porting progress")
-    print(f"![](https://geps.dev/progress/{progress_value:.0f})")
+    print(_progress_badge(progress_value))
     print()
 
     print("<details>")
@@ -70,7 +70,7 @@ def progress(args):
 
     for group, _ in GLYPH_GROUPS:
         glyphs = groups[group]
-        print(f"### {group}")
+        print(f"### {group} {_progress_badge(_group_coverage(glyphs, missing_glyphs))}")
         print()
         for glyph in glyphs:
             if glyph in missing_glyphs:
@@ -87,13 +87,23 @@ def progress(args):
 @command()
 def snapshot(args):
     """Dumps missing glyphs"""
-    glyphs = find_missing_glyphs()
+    glyphs = _find_missing_glyphs()
     makedirs(args.snapshot_dir, exist_ok=True)
     with open(f"{args.snapshot_dir}/missing_glyphs.json", mode="w", encoding="utf-8") as file:
         json.dump(glyphs, file)
     print(f"Missing glyphs saved to {args.snapshot_dir}/missing_glyphs.json")
 
-def find_missing_glyphs() -> list[str]:
+def _group_coverage(glyphs: list[str], missing_glyphs: list[str]) -> list[str]:
+    """Finds group coverage. Returns number in range 0-1"""
+    missing_in_group = list(filter(lambda glyph: glyph in missing_glyphs, glyphs))
+    return 1 - (len(missing_in_group) / len(glyphs))
+
+def _progress_badge(value: float) -> str:
+    """Generates progress badge"""
+    int_value = int(value * 100)
+    return f"![](https://geps.dev/progress/{int_value:.0f})"
+
+def _find_missing_glyphs() -> list[str]:
     """Finds missing glyphs"""
     target_font = GSFont(ROMAN_FONT_PATH)
     source_font = GSFont(ITALIC_FONT_PATH)
