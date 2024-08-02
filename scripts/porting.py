@@ -12,12 +12,13 @@ from glyphsLib import GSFont
 ROMAN_FONT_PATH = "sources/Lilex.glyphs"
 ITALIC_FONT_PATH = "sources/Lilex-Italic.glyphs"
 
-GLYPH_GROUPS = {
-    "Ligatures": ".liga",
-    "Sequences": ".seq",
-    "Spacers": ".spacer",
-    "Bulgarian forms": ".loclBGR",
-}
+GLYPH_GROUPS = [
+    ("Ligatures", ".liga"),
+    ("Sequences", ".seq"),
+    ("Bulgarian forms", ".loclBGR"),
+    ("Miscellaneous", None),
+    ("Spacers", ".spacer"),
+]
 
 
 global_args(
@@ -48,16 +49,15 @@ def progress(args):
         "Miscellaneous": [],
     }
     for glyph in stored_glyphs:
-        group_added = False
-        for group, suffix in GLYPH_GROUPS.items():
-            if suffix in glyph:
+        for group, suffix in GLYPH_GROUPS:
+            if suffix is None:
+                groups[group].append(glyph)
+                continue
+            elif suffix in glyph:
                 if group not in groups:
                     groups[group] = []
                 groups[group].append(glyph)
-                group_added = True
                 break
-        if not group_added:
-            groups["Miscellaneous"].append(glyph)
 
 
     print("## Glyphs porting progress")
@@ -68,7 +68,8 @@ def progress(args):
     print("<summary>Glyphs status</summary>")
     print()
 
-    for group, glyphs in groups.items():
+    for group, _ in GLYPH_GROUPS:
+        glyphs = groups[group]
         print(f"### {group}")
         print()
         for glyph in glyphs:
