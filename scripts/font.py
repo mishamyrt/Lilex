@@ -102,7 +102,6 @@ def set_features(font: GlyphsFont, cls: list[str], fea: list[GSFeature]):
     features = fea.copy()
     calt = generate_calt(font)
     features.append(calt)
-    generate_spacers(font.ligatures(), font.file.glyphs)
     font.set_classes(cls)
     font.set_features(features)
 
@@ -116,6 +115,7 @@ def load_font(args):
     for file in config_file["family"]:
         font = GlyphsFont(os.path.join(source_dir, file))
         config["fonts"].append(font)
+        generate_spacers(font.ligatures(), font.file.glyphs)
         if config_file["family"][file] == "all":
             set_features(font, cls, fea)
     return args, config
