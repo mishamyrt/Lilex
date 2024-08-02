@@ -12,6 +12,13 @@ from glyphsLib import GSFont
 ROMAN_FONT_PATH = "sources/Lilex.glyphs"
 ITALIC_FONT_PATH = "sources/Lilex-Italic.glyphs"
 
+GLYPH_GROUPS = {
+    "Ligatures": ".liga",
+    "Sequences": ".seq",
+    "Spacers": ".spacer",
+    "Bulgarian forms": ".loclBGR",
+}
+
 
 global_args(
     arg("--snapshot-dir", "-s", default="__snapshots__", help="Snapshot directory"),
@@ -20,7 +27,6 @@ global_args(
 @command(
     arg("--markdown", "-m", action="store_true", help="Markdown output"),
     arg("--download-url", "-d", help="Download URL"),
-    arg("--filter", "-f", help="Filter glyphs by name")
 )
 def progress(args):
     """Finds missing ligatures"""
@@ -30,10 +36,6 @@ def progress(args):
     with open(snapshot_path, mode="r", encoding="utf-8") as file:
         stored_glyphs = json.load(file)
 
-    if args.filter:
-        missing_glyphs = list(filter(lambda glyph: args.filter in glyph, missing_glyphs))
-        stored_glyphs = list(filter(lambda glyph: args.filter in glyph, stored_glyphs))
-
     diff = len(stored_glyphs) - len(missing_glyphs)
     progress_value = (diff / len(stored_glyphs)) * 100
     if not args.markdown:
@@ -42,19 +44,39 @@ def progress(args):
         print(f"Glyphs coverage: {progress_value:.2f}%")
         return
 
-    print("### Glyphs porting progress")
+    groups = {
+        "Miscellaneous": [],
+    }
+    for glyph in stored_glyphs:
+        group_added = False
+        for group, suffix in GLYPH_GROUPS.items():
+            if suffix in glyph:
+                if group not in groups:
+                    groups[group] = []
+                groups[group].append(glyph)
+                group_added = True
+                break
+        if not group_added:
+            groups["Miscellaneous"].append(glyph)
+
+
+    print("## Glyphs porting progress")
     print(f"![](https://geps.dev/progress/{progress_value:.0f})")
     print()
 
     print("<details>")
     print("<summary>Glyphs status</summary>")
     print()
-    for glyph in stored_glyphs:
-        if glyph in missing_glyphs:
-            print(f"- [ ] {glyph}")
-        else:
-            print(f"- [x] {glyph}")
-    print()
+
+    for group, glyphs in groups.items():
+        print(f"### {group}")
+        print()
+        for glyph in glyphs:
+            if glyph in missing_glyphs:
+                print(f"- [ ] {glyph}")
+            else:
+                print(f"- [x] {glyph}")
+        print()
     print("</details>")
 
     if args.download_url:
