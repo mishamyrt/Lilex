@@ -48,13 +48,13 @@ def progress(args):
 
     print("<details>")
     print("<summary>Glyphs status</summary>")
-    print("<ul>")
+    print()
     for glyph in stored_glyphs:
         if glyph in missing_glyphs:
-            print(f"<li>{glyph}</li>")
+            print(f"- [ ] {glyph}")
         else:
-            print(f"<li><s>{glyph}</s></li>")
-    print("</ul>")
+            print(f"- [x] {glyph}")
+    print()
     print("</details>")
 
     if args.download_url:
