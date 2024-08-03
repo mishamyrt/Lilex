@@ -2,8 +2,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from shutil import rmtree
-from tempfile import mkdtemp
 from typing import Callable
 
 from glyphsLib import (
@@ -11,10 +9,8 @@ from glyphsLib import (
     GSFeature,
     GSFont,
     GSGlyph,
-    build_masters,
 )
 
-from .build import SUPPORTED_FORMATS, make
 from .features import NAME_TPL, feature_prefix, name_from_code
 
 GlyphFilter = Callable[[GSGlyph], bool]
@@ -92,23 +88,7 @@ class GlyphsFont:
     def clear_opened_files(self):
         self._font.DisplayStrings = ""
 
-    def build(self, formats: list[str], out_dir: str, store_temp=False) -> bool:
-        print("Preparing build environment")
-        temp_dir, ds_file = self._prepare_build()
-        success = True
-        for fmt in formats:
-            if fmt not in SUPPORTED_FORMATS:
-                print(f'Unsupported format "{fmt}"')
-                break
-            fmt_dir = f'{out_dir}/{fmt}'
-            success = success and make(self._name, ds_file, fmt, fmt_dir)
-        if store_temp:
-            print(f'Build directory: {temp_dir}')
-        else:
-            rmtree(temp_dir)
-        return success
-
-    def _set_fea_names(self):
+    def set_fea_names(self):
         for fea in self._font.features:
             prefix = feature_prefix(fea.name)
             if prefix in NAME_TPL:
@@ -116,17 +96,3 @@ class GlyphsFont:
                 name = name_from_code(feature.code)
                 if name is not None:
                     feature.code = NAME_TPL[prefix].replace("$NAME", name) + feature.code
-
-    def _prepare_build(self) -> str:
-        self._set_fea_names()
-        temp_dir = mkdtemp(prefix="LilexBuild")
-        glyphs_file = f'{temp_dir}/{self._font.familyName}.glyphs'
-        ufo_dir = f'{temp_dir}/master_ufo'
-        ds_file = f"{ufo_dir}/{self._name}.designspace"
-        self.save_to(glyphs_file)
-        build_masters(
-            glyphs_file,
-            ufo_dir,
-            write_skipexportglyphs=True
-        )
-        return (temp_dir, ds_file)

@@ -2,7 +2,8 @@
 .appVersion = "3306";
 .formatVersion = 3;
 DisplayStrings = (
-"₲"
+"₲",
+"/greater_equal.liga"
 );
 axes = (
 {
@@ -94128,7 +94129,7 @@ width = 600;
 },
 {
 glyphname = greater_equal.liga;
-lastChange = "2024-08-01 19:48:23 +0000";
+lastChange = "2024-08-03 17:06:50 +0000";
 layers = (
 {
 guides = (
@@ -94206,11 +94207,6 @@ name = hr00;
 (247,186,l),
 (-287,-69,l)
 );
-},
-{
-pos = (-386,67);
-ref = greater;
-scale = (1.2362,0.9969);
 }
 );
 width = 600;
