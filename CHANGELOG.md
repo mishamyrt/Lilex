@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 * Spaces. (enspace, emspace, enquad, emquad, threeperemspace, fourperemspace, sixperemspace, figurespace, thinspace, mediumspace-math)
 * Replacement glyph. (`�`)
 * Cedi glyph. (`₵`)
+* Guarani glyph. (`₲`)
 
 ## [2.530] — July 27, 2024
 
