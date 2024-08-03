@@ -1,3 +1,4 @@
+"""Feature templates"""
 NAME_TPL = {
     "ss": (
         "featureNames {\n"
