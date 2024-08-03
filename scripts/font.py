@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """Lilex helper entrypoint"""
-import sys
 import os
+import sys
 from argparse import BooleanOptionalAction
-import yaml
-
-from multiprocessing import Process
-from arrrgs import arg, command, global_args, run
-from glyphsLib import GSFeature, GSFont
-from liblilex import DEFAULT_FORMATS, GlyphsFont, generate_spacers, render_ligatures
-from utils import read_classes, read_features, read_files
 from typing import TypedDict
+
+import yaml
+from arrrgs import arg, command, global_args, run
+from glyphsLib import GSFont
+from liblilex import (
+    FontFormat,
+    GlyphsFont,
+    OpenTypeFeatures,
+    build_family,
+    generate_spacers,
+    render_ligatures,
+)
 
 CLASSES_DIR = "sources/classes"
 FEATURES_DIR = "sources/features"
@@ -54,34 +59,28 @@ def generate(args, config: AppConfig):
     print("🟢 Font source successfully regenerated")
 
 @command(
-    arg("formats", nargs="*", help="Format list", default=DEFAULT_FORMATS),
+    arg("formats", nargs="*", help="Format list", default=['ttf', 'variable']),
     arg("--store_temp", "-s", action=BooleanOptionalAction,
         help="Not to delete the temporary folder after build")
 )
-def build(args, config: AppConfig):
+async def build(args, config: AppConfig):
     """Builds a binary font file"""
     if not os.path.exists(config["output"]):
         os.makedirs(config["output"])
-    proc = []
-    for font in config["fonts"]:
-        p = Process(target=font.build, args=[
-            args.formats,
-            config["output"],
-            args.store_temp
-        ])
-        p.start()
-        proc.append(p)
-    for p in proc:
-        p.join()
-        if p.exitcode != 0:
-            print("Failed to build font")
-            sys.exit(1)
+
+    formats = []
+    for fmt in args.formats:
+        formats.append(FontFormat(fmt))
+
+    print("Building font binaries...")
+    fonts = [font.file for font in config["fonts"]]
+    await build_family(fonts, config["output"], formats)
     print("🟢 Font binaries successfully built")
 
-def generate_calt(font: GlyphsFont) -> GSFeature:
-    glyphs = font.ligatures()
-    code = render_ligatures(glyphs) + read_files(f"{FEATURES_DIR}/calt")
-    return GSFeature("calt", code)
+# def generate_calt(font: GlyphsFont) -> GSFeature:
+#     glyphs = font.ligatures()
+#     code = render_ligatures(glyphs) + read_files(f"{FEATURES_DIR}/calt")
+#     return GSFeature("calt", code)
 
 def move_to_calt(font: GSFont, features: list[str]):
     for fea in features:
@@ -98,26 +97,29 @@ def move_to_calt(font: GSFont, features: list[str]):
         aalt = font.features["aalt"]
         aalt.code = aalt.code.replace(f"feature {fea};\n", "")
 
-def set_features(font: GlyphsFont, cls: list[str], fea: list[GSFeature]):
-    features = fea.copy()
-    calt = generate_calt(font)
-    features.append(calt)
-    font.set_classes(cls)
-    font.set_features(features)
-
 def load_font(args):
     with open(args.config, mode="r", encoding="utf-8") as file:
         config_file = yaml.safe_load(file)
     source_dir = config_file["source"]
-    cls = read_classes(os.path.join(source_dir, "classes"))
-    fea = read_features(os.path.join(source_dir, "features"))
+    features = OpenTypeFeatures(source_dir)
     config = AppConfig(output=config_file["output"], fonts=[])
     for file in config_file["family"]:
+        font_config = config_file["family"][file]
         font = GlyphsFont(os.path.join(source_dir, file))
-        config["fonts"].append(font)
+        skips = []
+        if font_config is not None and "skip-features" in font_config:
+            skips = font_config["skip-features"]
+        feats, cls = features.items(
+            ignore_features=skips,
+            data={
+                "calt": render_ligatures(font.ligatures()),
+            }
+        )
         generate_spacers(font.ligatures(), font.file.glyphs)
-        if config_file["family"][file] == "all":
-            set_features(font, cls, fea)
+        font.set_classes(cls)
+        font.set_features(feats)
+        font.set_fea_names()
+        config["fonts"].append(font)
     return args, config
 
 if __name__ == "__main__":
