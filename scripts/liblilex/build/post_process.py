@@ -36,7 +36,8 @@ async def _fix_variable(files: list[str]):
     for file in files:
         fix_tasks.append(_fix_font(file))
     await asyncio.gather(*fix_tasks)
-    config = load(open(STAT_CONFIG, encoding="utf-8"), Loader=SafeLoader)
+    with open(STAT_CONFIG, "r", encoding="utf-8") as file:
+        config = load(file, Loader=SafeLoader)
     fonts = [TTFont(f) for f in files]
     gen_stat_tables_from_config(config, fonts, has_italic=True)
     for font in fonts:

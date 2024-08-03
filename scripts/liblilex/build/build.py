@@ -1,3 +1,4 @@
+"""Glyphs builder"""
 import asyncio
 import os
 from shutil import rmtree

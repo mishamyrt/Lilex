@@ -38,7 +38,7 @@ def progress(args):
         stored_glyphs = json.load(file)
 
     diff = len(stored_glyphs) - len(missing_glyphs)
-    progress_value = (diff / len(stored_glyphs))
+    progress_value = diff / len(stored_glyphs)
     if not args.markdown:
         for glyph in missing_glyphs:
             print(f"- {glyph}")
@@ -53,7 +53,7 @@ def progress(args):
             if suffix is None:
                 groups[group].append(glyph)
                 continue
-            elif suffix in glyph:
+            if suffix in glyph:
                 if group not in groups:
                     groups[group] = []
                 groups[group].append(glyph)
