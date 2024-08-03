@@ -1,11 +1,6 @@
 {
 .appVersion = "3306";
 .formatVersion = 3;
-DisplayStrings = (
-"/less_exclam_hyphen_hyphen.liga",
-"/arrowhead-single-left.part",
-"/arrowhead-single-right.part"
-);
 axes = (
 {
 name = Weight;
@@ -66519,8 +66514,102 @@ width = 600;
 );
 },
 {
-color = (153,251,255,255);
+glyphname = "ge-cy.loclBGR";
+lastChange = "2024-08-03 00:35:26 +0000";
+layers = (
+{
+hints = (
+{
+horizontal = 1;
+place = (-12,19);
+type = Stem;
+},
+{
+horizontal = 1;
+place = (509,19);
+type = Stem;
+},
+{
+place = (100,21);
+type = Stem;
+},
+{
+place = (477,21);
+type = Stem;
+}
+);
+layerId = m001;
+shapes = (
+{
+ref = "ge-cy";
+}
+);
+width = 600;
+},
+{
+hints = (
+{
+horizontal = 1;
+place = (-12,68);
+type = Stem;
+},
+{
+horizontal = 1;
+place = (460,68);
+type = Stem;
+},
+{
+place = (81,83);
+type = Stem;
+},
+{
+place = (423,83);
+type = Stem;
+}
+);
+layerId = m002;
+shapes = (
+{
+ref = "ge-cy";
+}
+);
+width = 600;
+},
+{
+hints = (
+{
+horizontal = 1;
+place = (-12,106);
+type = Stem;
+},
+{
+horizontal = 1;
+place = (422,106);
+type = Stem;
+},
+{
+place = (72,143);
+type = Stem;
+},
+{
+place = (383,143);
+type = Stem;
+}
+);
+layerId = m003;
+shapes = (
+{
+ref = "ge-cy";
+}
+);
+width = 600;
+}
+);
+note = "ge-cy.loclBGR";
+},
+{
 glyphname = "de-cy.loclBGR";
+lastChange = "2024-08-03 00:42:34 +0000";
 layers = (
 {
 anchors = (
@@ -67013,6 +67102,116 @@ width = 600;
 );
 },
 {
+glyphname = "ii-cy.loclBGR";
+lastChange = "2024-08-03 00:36:53 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "ii-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "ii-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "ii-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = "iishort-cy.loclBGR";
+lastChange = "2024-08-03 00:37:39 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "iishort-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "iishort-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "iishort-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = "iigrave-cy.loclBGR";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "ii-cy.loclBGR";
+},
+{
+pos = (338,0);
+ref = gravecomb;
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "ii-cy.loclBGR";
+},
+{
+pos = (340,0);
+ref = gravecomb;
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "ii-cy.loclBGR";
+},
+{
+pos = (338,0);
+ref = gravecomb;
+}
+);
+width = 600;
+}
+);
+},
+{
 glyphname = "ka-cy.loclBGR";
 layers = (
 {
@@ -67213,6 +67412,72 @@ userData = {
 com.typemytype.robofont.pointLabels = {
 };
 };
+width = 600;
+}
+);
+},
+{
+glyphname = "pe-cy.loclBGR";
+lastChange = "2024-08-03 00:38:51 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "pe-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "pe-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "pe-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = "te-cy.loclBGR";
+lastChange = "2024-08-03 00:39:23 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "te-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "te-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "te-cy";
+}
+);
 width = 600;
 }
 );
@@ -67484,6 +67749,171 @@ width = 600;
 );
 },
 {
+glyphname = "tse-cy.loclBGR";
+lastChange = "2024-08-03 00:40:06 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "tse-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "tse-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "tse-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = "sha-cy.loclBGR";
+lastChange = "2024-08-03 00:40:35 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "sha-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "sha-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "sha-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = "shcha-cy.loclBGR";
+lastChange = "2024-08-03 00:41:03 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "shcha-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "shcha-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "shcha-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = "softsign-cy.loclBGR";
+lastChange = "2024-08-03 00:41:28 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "softsign-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "softsign-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "softsign-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = "hardsign-cy.loclBGR";
+lastChange = "2024-08-03 00:42:00 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "hardsign-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "hardsign-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "hardsign-cy";
+}
+);
+width = 600;
+}
+);
+},
+{
 glyphname = "iu-cy.loclBGR";
 layers = (
 {
@@ -67679,6 +68109,39 @@ userData = {
 com.typemytype.robofont.pointLabels = {
 };
 };
+width = 600;
+}
+);
+},
+{
+glyphname = "ia-cy.loclBGR";
+lastChange = "2024-08-03 00:42:27 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "ia-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "ia-cy";
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "ia-cy";
+}
+);
 width = 600;
 }
 );
