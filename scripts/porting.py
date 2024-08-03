@@ -64,13 +64,13 @@ def progress(args):
     print(_progress_badge(progress_value))
     print()
 
-    print("<details>")
-    print("<summary>Glyphs status</summary>")
-    print()
-
     for group, _ in GLYPH_GROUPS:
         glyphs = groups[group]
-        print(f"### {group} {_progress_badge(_group_coverage(glyphs, missing_glyphs))}")
+        coverage_url = _progress_url(_group_coverage(glyphs, missing_glyphs))
+        print("<details>")
+        print("<summary>")
+        print(f"<h3>{group}</h3>&nbsp;&nbsp;<img src=\"{coverage_url}\">")
+        print("</summary>")
         print()
         for glyph in glyphs:
             if glyph in missing_glyphs:
@@ -78,10 +78,10 @@ def progress(args):
             else:
                 print(f"- [x] {glyph}")
         print()
-    print("</details>")
+        print("</details>")
+        print()
 
     if args.download_url:
-        print()
         print(f"**[Download]({args.download_url})** CI build")
 
 @command()
@@ -100,8 +100,11 @@ def _group_coverage(glyphs: list[str], missing_glyphs: list[str]) -> list[str]:
 
 def _progress_badge(value: float) -> str:
     """Generates progress badge"""
-    int_value = int(value * 100)
-    return f"![](https://geps.dev/progress/{int_value:.0f})"
+    return f"![]({_progress_url(value)})"
+
+def _progress_url(value: float) -> str:
+    """Generates progress URL"""
+    return f"https://geps.dev/progress/{int(value * 100):.0f}"
 
 def _find_missing_glyphs() -> list[str]:
     """Finds missing glyphs"""
