@@ -3,6 +3,8 @@
   import FeatureToggle from './FeatureToggle.svelte'
   import { createFeaturesContext } from './context'
 
+  export let italic: boolean
+
   let unsubscribeFeatures: () => void
 
   const dispatch = createEventDispatcher()
@@ -19,7 +21,7 @@
   })
 </script>
 
-<div class="container">
+<div class="container" style:--selector-font-style={italic ? 'italic' : 'normal' }>
   <FeatureToggle title="Alt g" symbols="g" variants={['cv02', 'cv03']} />
   <FeatureToggle title="Alt zero" symbols="0" variants={['zero', 'cv04']} />
   <FeatureToggle title="Barless units" symbols="$¢" variants={['cv09']} />
@@ -42,5 +44,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-s) var(--space-m);
+    font-style: var(--selector-font-style);
   }
 </style>
