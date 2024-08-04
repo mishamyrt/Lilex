@@ -1,14 +1,14 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { load, Font } from 'opentype.js'
-  import { RangeSlider, Block } from '$components'
+  import { RangeSlider, Block, SegmentSelect } from '$components'
   import { renderGlyphs } from './render'
   import Glyph from './Glyph.svelte'
+  import { loadFamily, FONT_STYLES, FONT_WEIGHTS, type FontMap, type FontWeight, type FontStyle } from './fonts'
 
-  const VARIANTS = ['Thin', 'Regular', 'Bold']
+  let fonts: FontMap = {} as FontMap
+  let selectedWeight: FontWeight = 'Regular'
+  let selectedStyle: FontStyle = 'Roman'
 
-  const fonts: Font[] = []
-  let selectedVariant = 1
   let loading = true
 
   let fontSize = 70
@@ -43,10 +43,9 @@
   }
 
   onMount(() => {
-    const requests = VARIANTS.map(v => load(`./ttf/Lilex-${v}.ttf`))
-    Promise.all(requests)
+    loadFamily('Lilex', './ttf')
       .then(masters => {
-        fonts.push(...masters)
+        fonts = masters
         loading = false
       })
 
@@ -56,27 +55,20 @@
     }
   })
 
-  $: glyphs = loading || !(selectedVariant in fonts)
+  $: glyphs = loading || !(selectedStyle in fonts && selectedWeight in fonts[selectedStyle])
     ? []
-    : renderGlyphs(fonts[selectedVariant])
+    : renderGlyphs(fonts[selectedStyle][selectedWeight])
 </script>
 
 
 {#if !loading}
 <Block title="Glyphs" dark={true}>
   <svelte:fragment slot="toolbar">
-    <RangeSlider bind:value={fontSize} min={50} max={150} />
-    <ul class="variants">
-      {#each VARIANTS as variant, i}
-        <li class="variants-item">
-          <button
-            class:active="{selectedVariant === i}"
-            on:click={() => { selectedVariant = i }}>
-            {variant}
-          </button>
-        </li>
-      {/each}
-    </ul>
+    <div class="accessor">
+      <RangeSlider bind:value={fontSize} min={50} max={150} />
+      <SegmentSelect options={FONT_STYLES} bind:value={selectedStyle} />
+    </div>
+    <SegmentSelect options={FONT_WEIGHTS} bind:value={selectedWeight} />
   </svelte:fragment>
   <div
     style:--glyph-width="{width}px"
@@ -93,25 +85,7 @@
 {/if}
 
 <style>
-  .variants-item button {
-    appearance: none;
-    font-size: 15px;
-    line-height: 15px;
-    background-color: transparent;
-    border: none;
-    background-color: transparent;
-    color: var(--color-content);
-    font-family: var(--font-family);
-    border-radius: 16px;
-    padding: 6px 15px 5px;
-    cursor: pointer;
-  }
 
-  .variants-item button.active {
-    pointer-events: none;
-    background-color: var(--color-content);
-    color: var(--color-background);
-  }
 
   .glyphs {
     --card-padding: 16px;
@@ -133,11 +107,8 @@
     transition: opacity 0s;
   }
 
-  ul {
-    list-style: none;
+  .accessor {
     display: flex;
-    padding: 0;
-    gap: 8px;
-    margin: 0;
+    gap: var(--space-2xl);
   }
 </style>

@@ -1,6 +1,9 @@
 on:
   workflow_call:
     inputs:
+      download_url:
+        default: false
+        type: boolean
       check:
         default: false
         type: boolean
@@ -56,6 +59,7 @@ jobs:
       run: make build-preview
 
     - name: Upload build
+      id: build-upload-step
       uses: actions/upload-artifact@v4
       with:
         name: Lilex
@@ -74,3 +78,14 @@ jobs:
       with:
         name: Preview
         path: preview/dist
+
+    - name: Output download URL
+      if: inputs.download_url
+      run: echo "${{ steps.build-upload-step.outputs.artifact-url }}" > download_url.txt
+
+    - name: Upload URL
+      if: inputs.download_url
+      uses: actions/upload-artifact@v4
+      with:
+        name: URL
+        path: download_url.txt

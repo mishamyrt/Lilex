@@ -1,12 +1,12 @@
 # Name: Mark positioning
-@mGC_bottom_0_0 = [cedillacomb commabelowcomb dotbelowcomb];
-@mGC_top_0_516 = [acutecomb breveacute brevecomb brevegrave brevehook brevetilde caroncomb circumflexacute circumflexbreve circumflexcomb circumflexgrave circumflexhook circumflextilde commaturnedtopcomb dieresisacute dieresiscaron dieresiscomb dieresisgrave dieresismacron dotaccentcomb gravecomb hookcomb hungarumlautcomb macroncomb ringcomb tildecomb];
-@mGC_top_0_698 = [breveacute.case brevegrave.case brevehook.case brevetilde.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case circumflextilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case dieresismacron.case hookcomb.case];
+@mGC_bottom_0_0 = [cedillacomb commaaccentcomb dotbelowcomb];
+@mGC_top_0_516 = [acutecomb breveacute brevecomb brevegrave brevehook brevetilde caroncomb circumflexacute circumflexbreve circumflexcomb circumflexgrave circumflexhook circumflextilde commaturnedabovecomb dieresisacute dieresiscaron dieresiscomb dieresisgrave dieresismacron dotaccentcomb gravecomb hookabovecomb hungarumlautcomb macroncomb ringcomb tildecomb];
+@mGC_top_0_698 = [breveacute.case brevegrave.case brevehook.case brevetilde.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case circumflextilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case dieresismacron.case hookabovecomb.case];
 
 markClass @mGC_bottom_0_0 <anchor 0 0> @MC_bottom;
 markClass @mGC_top_0_516 <anchor 0 516> @MC_top;
 markClass @mGC_top_0_698 <anchor 0 698> @MC_top;
-markClass caronslovakcomb <anchor 0 740> @MC_topright;
+markClass commaaboverightcomb <anchor 0 740> @MC_topright;
 markClass ogonekcomb <anchor 0 0> @MC_bottomright;
 
 lookup MARK_BASE_bottom {
@@ -79,7 +79,7 @@ lookup MARK_BASE_top {
     pos base a <anchor 283 516> mark @MC_top;
     pos base c <anchor 313 516> mark @MC_top;
     pos base idotless <anchor 332 516> mark @MC_top;
-    pos base dotlessj <anchor 392 516> mark @MC_top;
+    pos base jdotless <anchor 392 516> mark @MC_top;
     pos base e <anchor 302 516> mark @MC_top;
     pos base h <anchor 138 698> mark @MC_top;
     pos base n <anchor 303 516> mark @MC_top;

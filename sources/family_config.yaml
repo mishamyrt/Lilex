@@ -1,0 +1,11 @@
+source: ./sources
+output: ./build
+family:
+  Lilex.glyphs:
+  Lilex-Italic.glyphs:
+    skip-features:
+      - aalt
+      - ss01
+      - calt/equal-arrows
+      - calt/hyphen-arrows
+      - calt/underscores

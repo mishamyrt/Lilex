@@ -1,6 +1,13 @@
 @font-face {
   font-family: "LilexVF";
   src: url('./variable/Lilex[wght].ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LilexVF";
+  src: url('./variable/Lilex-Italic[wght].ttf');
+  font-style: italic;
 }
 
 :root {

@@ -1,1 +1,0 @@
-breveacute.case brevegrave.case brevehook.case brevetilde.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case circumflextilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case dieresismacron.case hookcomb.case

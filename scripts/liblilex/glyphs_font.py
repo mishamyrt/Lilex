@@ -1,8 +1,7 @@
 """Glyphs helper"""
 from __future__ import annotations
 
-from shutil import rmtree
-from tempfile import mkdtemp
+from pathlib import Path
 from typing import Callable
 
 from glyphsLib import (
@@ -10,28 +9,35 @@ from glyphsLib import (
     GSFeature,
     GSFont,
     GSGlyph,
-    build_masters,
 )
 
-from .const import NAME_TPL, SUPPORTED_FORMATS
-from .make import make
-from .name import feature_prefix, name_from_code
+from .features import NAME_TPL, feature_prefix, name_from_code
 
-LIGATURE_SUFFIX = ".liga"
 GlyphFilter = Callable[[GSGlyph], bool]
 
+LIGATURE_SUFFIX = ".liga"
+
 class GlyphsFont:
-    """Glyphs font builder"""
+    """Glyphs font file controller"""
     _font: GSFont = None
     _path: str
+    _name: str
 
-    def __init__(self, path: str):
+    def __init__(self, path: str, name: str = None):
         self._font = GSFont(path)
         self._path = path
+        if name is None:
+            self._name = Path(self._path).stem
+        else:
+            self._name = name
 
     @property
     def file(self) -> GSFont:
         return self._font
+
+    @property
+    def name(self) -> str:
+        return self._name
 
     def ligatures(self) -> list[str]:
         glyphs = self.glyphs(lambda x: x.name.endswith(LIGATURE_SUFFIX))
@@ -53,7 +59,7 @@ class GlyphsFont:
         """Saves the file to the same path from which it was opened"""
         self._font.save(self._path)
 
-    def save_to(self, path: str) -> None:
+    def save_to(self, path: str = None) -> None:
         """Saves the file to the specified path"""
         self._font.save(path)
 
@@ -82,23 +88,7 @@ class GlyphsFont:
     def clear_opened_files(self):
         self._font.DisplayStrings = ""
 
-    def build(self, formats: list[str], out_dir: str, store_temp=False) -> bool:
-        print("Preparing build environment")
-        temp_dir, ds_file = self._prepare_build()
-        success = True
-        for fmt in formats:
-            if fmt not in SUPPORTED_FORMATS:
-                print(f'Unsupported format "{fmt}"')
-                break
-            fmt_dir = f'{out_dir}/{fmt}'
-            success = success and make(self.file.familyName, ds_file, fmt, fmt_dir)
-        if store_temp:
-            print(f'Build directory: {temp_dir}')
-        else:
-            rmtree(temp_dir)
-        return success
-
-    def _set_fea_names(self):
+    def set_fea_names(self):
         for fea in self._font.features:
             prefix = feature_prefix(fea.name)
             if prefix in NAME_TPL:
@@ -106,13 +96,3 @@ class GlyphsFont:
                 name = name_from_code(feature.code)
                 if name is not None:
                     feature.code = NAME_TPL[prefix].replace("$NAME", name) + feature.code
-
-    def _prepare_build(self) -> str:
-        self._set_fea_names()
-        temp_dir = mkdtemp(prefix="LilexBuild")
-        glyphs_file = f'{temp_dir}/{self._font.familyName}.glyphs'
-        ufo_dir = f'{temp_dir}/master_ufo'
-        ds_file = f"{ufo_dir}/{self._font.familyName}.designspace"
-        self.save_to(glyphs_file)
-        build_masters(glyphs_file, ufo_dir, write_skipexportglyphs=True)
-        return (temp_dir, ds_file)

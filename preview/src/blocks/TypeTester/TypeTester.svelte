@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { RangeSlider, SchemeSelect, FeatureSelector, FontPreview, Block } from '$components'
+  import { RangeSlider, SchemeSelect, FeatureSelector, FontPreview, Block, SegmentSelect } from '$components'
   import { isDark } from '$utils'
   import { INITIAL_TEXT, MAX_WEIGHT, MIN_WEIGHT } from './constants'
 
@@ -10,6 +10,7 @@
   let dark = isDark()
   let size = 70
   let features: string[] = []
+  let selectedStyle: string
 
   function handleMouseMove (e: MouseEvent) {
     const position = e.clientX
@@ -20,25 +21,27 @@
   function handleFeaturesChange (e: CustomEvent<string[]>) {
     features = e.detail
   }
+
+  $: italic = selectedStyle === 'Italic'
 </script>
 
 <Block on:mousemove={handleMouseMove} bind:dark>
   <svelte:fragment slot="toolbar">
     <div class="left-accessor">
       <RangeSlider bind:value={size} min={12} max={200} />
+      <SegmentSelect bind:value={selectedStyle} options={['Roman', 'Italic']} />
       <span class="weight">{weight.toFixed(0)}</span>
     </div>
     <SchemeSelect bind:dark />
   </svelte:fragment>
   <div class="layout">
     <div class="preview">
-      <FontPreview {weight} {size} {features} bind:value />
+      <FontPreview {italic} {weight} {size} {features} bind:value />
     </div>
     <div class="sidebar">
       <div class="feature-wrapper">
-        <FeatureSelector on:change={handleFeaturesChange} />
+        <FeatureSelector {italic} on:change={handleFeaturesChange} />
       </div>
-
     </div>
   </div>
 </Block>

@@ -25,5 +25,5 @@ sub dieresisacute by dieresisacute.case;
 sub dieresiscaron by dieresiscaron.case;
 sub dieresisgrave by dieresisgrave.case;
 sub dieresismacron by dieresismacron.case;
-sub hookcomb by hookcomb.case;
+sub hookabovecomb by hookabovecomb.case;
 sub ringacute by ringacute.case;
