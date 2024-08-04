@@ -7,6 +7,7 @@
   export let size: number
   export let weight: number
   export let features: string[]
+  export let italic: boolean
 
   let ref: HTMLTextAreaElement
   let height: number
@@ -53,6 +54,7 @@
   style:--preview-height="{height}px"
   style:--preview-weight={weight}
   style:--preview-features={featureString}
+  style:--preview-style="{italic ? 'italic' : 'normal'}"
   bind:this={ref}
   bind:value
   on:keydown={handleKeyDown}
@@ -63,6 +65,7 @@
     font-family: var(--font-family);
     font-size: var(--preview-size);
     font-weight: var(--preview-weight);
+    font-style: var(--preview-style);
     font-feature-settings: "locl", var(--preview-features);
     height: var(--preview-height);
 

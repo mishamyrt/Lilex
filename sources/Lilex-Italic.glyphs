@@ -1,11 +1,6 @@
 {
 .appVersion = "3306";
 .formatVersion = 3;
-DisplayStrings = (
-J,
-"ȷ",
-"₲"
-);
 axes = (
 {
 name = Weight;
@@ -86367,6 +86362,24 @@ width = 0;
 unicode = 8233;
 },
 {
+glyphname = "space-han";
+layers = (
+{
+layerId = m001;
+width = 600;
+},
+{
+layerId = m002;
+width = 600;
+},
+{
+layerId = m003;
+width = 600;
+}
+);
+unicode = 12288;
+},
+{
 glyphname = .notdef;
 layers = (
 {
@@ -86454,24 +86467,6 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 }
 );
-},
-{
-glyphname = "space-han";
-layers = (
-{
-layerId = m001;
-width = 600;
-},
-{
-layerId = m002;
-width = 600;
-},
-{
-layerId = m003;
-width = 600;
-}
-);
-unicode = 12288;
 },
 {
 glyphname = anoteleia;
@@ -89786,6 +89781,63 @@ nodes = (
 (235,-26,c),
 (-1190,-26,l),
 (-1209,-137,l)
+);
+}
+);
+width = 600;
+}
+);
+},
+{
+glyphname = hyphen_end.seq;
+lastChange = "2024-08-04 14:53:39 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+closed = 1;
+nodes = (
+(441,315,l),
+(2,315,l),
+(-1,295,l),
+(438,295,l)
+);
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+closed = 1;
+nodes = (
+(457,345,l),
+(7,345,l),
+(-7,263,l),
+(443,263,l)
+);
+}
+);
+width = 600;
+},
+{
+guides = (
+{
+angle = 80.3005;
+pos = (2,315);
+}
+);
+layerId = m003;
+shapes = (
+{
+closed = 1;
+nodes = (
+(479,375,l),
+(12,375,l),
+(-11,235,l),
+(456,235,l)
 );
 }
 );
