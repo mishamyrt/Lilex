@@ -66,10 +66,12 @@ def progress(args):
 
     for group, _ in GLYPH_GROUPS:
         glyphs = groups[group]
-        coverage_url = _progress_url(_group_coverage(glyphs, missing_glyphs))
+        coverage = _group_coverage(glyphs, missing_glyphs)
+        coverage_url = _progress_url(coverage)
+        counts = f"{int(len(glyphs)*coverage)} of {len(glyphs)}"
         print("<details>")
         print("<summary>")
-        print(f"<h3>{group}</h3>&nbsp;&nbsp;<img src=\"{coverage_url}\">")
+        print(f"<h3>{group} ({counts})</h3>&nbsp;&nbsp;<img src=\"{coverage_url}\">")
         print("</summary>")
         print()
         for glyph in glyphs:

@@ -29,7 +29,6 @@ async def _fix_font(file: str):
         f'"{file}"'
     )
 
-
 async def _fix_variable(files: list[str]):
     """Generate STAT table for variable ttf"""
     fix_tasks = []
