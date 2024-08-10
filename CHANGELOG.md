@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file.
 * Cedi glyph. (`₵`)
 * Guarani glyph. (`₲`)
 
+### Fixed
+
+* Bar-hyphen alignment. (`||-`)
+
 ## [2.530] — July 27, 2024
 
 ### Added

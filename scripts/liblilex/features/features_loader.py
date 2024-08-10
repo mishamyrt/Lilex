@@ -83,7 +83,7 @@ class OpenTypeFeatures:
                 fea_name = name.split("/")[0]
             if fea_name not in feat_map:
                 if data is not None and fea_name in data:
-                    feat_map[fea_name] = data[fea_name]
+                    feat_map[fea_name] = data[fea_name] + "\n" + feature.code
                 else:
                     feat_map[fea_name] = feature.code
             else:
