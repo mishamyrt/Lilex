@@ -8,6 +8,6 @@ ruff==0.5.3
 pylint==3.2.5
 colored==2.2.4
 pylance==0.14.1
-fontbakery==0.12.9
+fontbakery==0.12.10
 dehinter==4.0.0
 shaperglot==0.5.0
