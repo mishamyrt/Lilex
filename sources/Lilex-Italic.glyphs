@@ -175,6 +175,36 @@ name = Prefix;
 );
 features = (
 {
+code = "# Name: All alternatives
+
+feature frac;
+feature locl;
+feature numr;
+feature ordn;
+feature sinf;
+feature ss01;
+feature ss02;
+feature ss03;
+feature sups;
+feature zero; 
+feature cv01;
+# feature cv02; Ignore cv02 because zero will be used
+feature cv03;
+feature cv04;
+feature cv05;
+feature cv06;
+feature cv07;
+feature cv08;
+feature cv09;
+feature cv10;
+feature calt;
+feature subs;
+feature dnom;
+feature case;
+";
+tag = aalt;
+},
+{
 code = "lookup less_bar_greater {
   ignore sub less less' bar greater;
   ignore sub less' bar greater greater;
@@ -1466,6 +1496,34 @@ tag = sinf;
 },
 {
 code = "featureNames {
+  name 3 1 0x0409 \"Restore logical operations as arrows\";
+};
+# Name: Restore logical operations as arrows
+# Example: <<= >>= ||= |=
+lookup restore_greater_greater_equal {
+  sub greater_greater_equal_start.seq equal' by equal_end.seq;
+  sub greater_greater.liga' equal by greater_greater_equal_start.seq;
+} restore_greater_greater_equal;
+
+lookup restore_less_less_equal {
+  sub less_less_equal_start.seq equal' by equal_end.seq;
+  sub less_less.liga' equal by less_less_equal_start.seq;
+} restore_less_less_equal;
+
+lookup restore_bar_bar_equal {
+  sub bar_bar_equal_start.seq equal' by equal_end.seq;
+  sub bar_bar.liga' equal by bar_bar_equal_start.seq;
+} restore_bar_bar_equal;
+
+lookup restore_bar_equal {
+  sub bar_equal_start.seq equal' by equal_end.seq;
+  sub bar' equal by bar_equal_start.seq;
+} restore_bar_equal;
+";
+tag = ss01;
+},
+{
+code = "featureNames {
   name 3 1 0x0409 \"Broken equals ligatures\";
 };
 # Name: Broken equals ligatures
@@ -1516,64 +1574,6 @@ sub zero by zero.alt01;
 sub zero.tosf by zero.tosf.alt01;
 ";
 tag = zero;
-},
-{
-code = "# Name: All alternatives
-
-feature frac;
-feature locl;
-feature numr;
-feature ordn;
-feature sinf;
-feature ss01;
-feature ss02;
-feature ss03;
-feature sups;
-feature zero; 
-feature cv01;
-# feature cv02; Ignore cv02 because zero will be used
-feature cv03;
-feature cv04;
-feature cv05;
-feature cv06;
-feature cv07;
-feature cv08;
-feature cv09;
-feature cv10;
-feature calt;
-feature subs;
-feature dnom;
-feature case;
-";
-tag = aalt;
-},
-{
-code = "featureNames {
-  name 3 1 0x0409 \"Restore logical operations as arrows\";
-};
-# Name: Restore logical operations as arrows
-# Example: <<= >>= ||= |=
-lookup restore_greater_greater_equal {
-  sub greater_greater_equal_start.seq equal' by equal_end.seq;
-  sub greater_greater.liga' equal by greater_greater_equal_start.seq;
-} restore_greater_greater_equal;
-
-lookup restore_less_less_equal {
-  sub less_less_equal_start.seq equal' by equal_end.seq;
-  sub less_less.liga' equal by less_less_equal_start.seq;
-} restore_less_less_equal;
-
-lookup restore_bar_bar_equal {
-  sub bar_bar_equal_start.seq equal' by equal_end.seq;
-  sub bar_bar.liga' equal by bar_bar_equal_start.seq;
-} restore_bar_bar_equal;
-
-lookup restore_bar_equal {
-  sub bar_equal_start.seq equal' by equal_end.seq;
-  sub bar' equal by bar_equal_start.seq;
-} restore_bar_equal;
-";
-tag = ss01;
 }
 );
 fontMaster = (
@@ -106695,7 +106695,7 @@ width = 600;
 },
 {
 glyphname = equal_equal.liga.ss02;
-lastChange = "2024-08-02 23:45:34 +0000";
+lastChange = "2024-09-25 14:44:37 +0000";
 layers = (
 {
 layerId = m001;
@@ -106745,24 +106745,6 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(566,439,l),
-(67,439,l),
-(56,373,l),
-(555,373,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(533,240,l),
-(34,240,l),
-(23,174,l),
-(522,174,l)
-);
-},
-{
-closed = 1;
-nodes = (
 (-6,439,l),
 (-505,439,l),
 (-516,373,l),
@@ -106777,6 +106759,24 @@ nodes = (
 (-549,174,l),
 (-50,174,l)
 );
+},
+{
+closed = 1;
+nodes = (
+(566,439,l),
+(67,439,l),
+(56,373,l),
+(555,373,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(533,240,l),
+(34,240,l),
+(23,174,l),
+(522,174,l)
+);
 }
 );
 width = 600;
@@ -106784,24 +106784,6 @@ width = 600;
 {
 layerId = m003;
 shapes = (
-{
-closed = 1;
-nodes = (
-(576,478,l),
-(74,478,l),
-(54,362,l),
-(556,362,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(538,248,l),
-(36,248,l),
-(16,132,l),
-(518,132,l)
-);
-},
 {
 closed = 1;
 nodes = (
@@ -106819,6 +106801,24 @@ nodes = (
 (-558,132,l),
 (-58,132,l)
 );
+},
+{
+closed = 1;
+nodes = (
+(576,478,l),
+(74,478,l),
+(54,362,l),
+(556,362,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(538,248,l),
+(36,248,l),
+(16,132,l),
+(518,132,l)
+);
 }
 );
 width = 600;
@@ -106827,7 +106827,7 @@ width = 600;
 },
 {
 glyphname = equal_equal_equal.liga.ss02;
-lastChange = "2024-08-02 23:55:24 +0000";
+lastChange = "2024-09-25 15:02:36 +0000";
 layers = (
 {
 guides = (
@@ -106841,55 +106841,55 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(-599,385,l),
 (-596,404,l),
 (-1114,404,l),
-(-1117,385,l),
-(-599,385,l)
+(-1117,385,l)
 );
 },
 {
 closed = 1;
 nodes = (
+(-629,207,l),
 (-626,226,l),
 (-1144,226,l),
-(-1147,207,l),
-(-629,207,l)
+(-1147,207,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(563,404,l),
-(45,404,l),
-(42,385,l),
-(560,385,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(533,226,l),
-(15,226,l),
-(12,207,l),
-(530,207,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(-17,404,l),
-(-535,404,l),
-(-538,385,l),
-(-20,385,l)
-);
-},
-{
-closed = 1;
-nodes = (
+(-50,207,l),
 (-47,226,l),
 (-565,226,l),
-(-568,207,l),
-(-50,207,l)
+(-568,207,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(-20,385,l),
+(-17,404,l),
+(-535,404,l),
+(-538,385,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(530,207,l),
+(533,226,l),
+(15,226,l),
+(12,207,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(560,385,l),
+(563,404,l),
+(45,404,l),
+(42,385,l)
 );
 }
 );
@@ -106901,55 +106901,55 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(-601,373,l),
 (-590,439,l),
 (-1109,439,l),
-(-1120,373,l),
-(-601,373,l)
+(-1120,373,l)
 );
 },
 {
 closed = 1;
 nodes = (
+(-634,174,l),
 (-623,240,l),
 (-1142,240,l),
-(-1153,174,l),
-(-634,174,l)
+(-1153,174,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-11,439,l),
-(-530,439,l),
-(-541,373,l),
-(-22,373,l)
-);
-},
-{
-closed = 1;
-nodes = (
+(-55,174,l),
 (-44,240,l),
 (-563,240,l),
-(-574,174,l),
-(-55,174,l)
+(-574,174,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(568,439,l),
-(49,439,l),
-(38,373,l),
-(557,373,l)
+(-22,373,l),
+(-11,439,l),
+(-530,439,l),
+(-541,373,l)
 );
 },
 {
 closed = 1;
 nodes = (
+(524,174,l),
 (535,240,l),
 (16,240,l),
-(5,174,l),
-(524,174,l)
+(5,174,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(557,373,l),
+(568,439,l),
+(49,439,l),
+(38,373,l)
 );
 }
 );
@@ -106961,55 +106961,55 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(-604,362,l),
 (-584,478,l),
 (-1103,478,l),
-(-1123,362,l),
-(-604,362,l)
+(-1123,362,l)
 );
 },
 {
 closed = 1;
 nodes = (
+(-642,132,l),
 (-622,248,l),
 (-1141,248,l),
-(-1161,132,l),
-(-642,132,l)
+(-1161,132,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-4,478,l),
-(-523,478,l),
-(-543,362,l),
-(-24,362,l)
-);
-},
-{
-closed = 1;
-nodes = (
+(-62,132,l),
 (-42,248,l),
 (-561,248,l),
-(-581,132,l),
-(-62,132,l)
+(-581,132,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(576,478,l),
-(57,478,l),
-(37,362,l),
-(556,362,l)
+(-24,362,l),
+(-4,478,l),
+(-523,478,l),
+(-543,362,l)
 );
 },
 {
 closed = 1;
 nodes = (
+(518,132,l),
 (538,248,l),
 (19,248,l),
-(-1,132,l),
-(518,132,l)
+(-1,132,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(556,362,l),
+(576,478,l),
+(57,478,l),
+(37,362,l)
 );
 }
 );
