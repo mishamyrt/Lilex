@@ -3,7 +3,3 @@ output: ./build
 family:
   Lilex.glyphs:
   Lilex-Italic.glyphs:
-    skip-features:
-      - aalt
-      - ss01
-      - calt/equal-arrows
