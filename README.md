@@ -21,9 +21,10 @@ Compiled versions are available under [releases](https://github.com/mishamyrt/Li
 ## Installation
 
 1. [Download font](https://github.com/mishamyrt/Lilex/releases/latest).
-2. Unzip the archive and install the font:
-    * Mac: Select `Lilex-VF.ttf` in the `variable` folder and double-click it. Click the `Install Font` button.
-    * Windows: Select `Lilex-VF.ttf` in the `variable` folder, right-click it, then click `Install` from the menu.
+2. Unzip the archive.
+3. Install the font:
+    * Mac: Select all font files in the `variable` folder and double-click them. Click the `Install Font` button.
+    * Windows: Select all font files in the `variable` folder, right-click  any of them, then click `Install` from the menu.
 
 ### Visual Studio Code
 
