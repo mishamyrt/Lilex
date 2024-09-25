@@ -43,11 +43,9 @@ If you want to enable stylistic sets, list them instead of `true`. Like:
 2. If you have more than one profile, select the one you want to change. Or change the default one (with an asterisk).
 3. Click on the font name under the 'Font' heading, find `Lilex` and select it.
 
-> **Note** I recommend using ExtraThick instead of Regular for iTerm2, so the letter thickness will roughly match VS Code.
-
 ## Weight
 
-There are 6 font weights available in Lilex, ranging from Thin to Bold. In addition, a variable font is available.
+There are 5 font weights available in Lilex, ranging from Thin to Bold. In addition, a variable font is available.
 
 <img src="./images/styles@2x.png">
 
