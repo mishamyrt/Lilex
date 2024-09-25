@@ -12,9 +12,9 @@
 <p>
 <hr>
 
-Lilex is the modern programming font containing a set of ligatures for common programming multi-character combinations.
+Lilex is an extended font on top of [IBM Plex Mono](https://github.com/IBM/plex) designed for developers. It contains ligatures, special characters (e.g. PowerLine), Greek and exists in a variable format.
 
-This is just a font rendering feature: underlying code remains ASCII-compatible. This makes it easier to read and understand the code. In some cases, the ligatures connect closely related characters (`==`, `---`), while in others they optically align the glyphs (`..`, `??`).
+Ligatures is just a font rendering feature: underlying code remains ASCII-compatible. This makes it easier to read and understand the code. In some cases, the ligatures connect closely related characters (`==`, `---`), while in others they optically align the glyphs (`..`, `??`).
 
 Compiled versions are available under [releases](https://github.com/mishamyrt/Lilex/releases). Bleeding edge builds can be downloaded in the [build](https://github.com/mishamyrt/Lilex/actions/workflows/build.yaml) workflow artifacts.
 
