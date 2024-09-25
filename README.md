@@ -50,6 +50,12 @@ There are 6 font weights available in Lilex, ranging from Thin to Bold. In addit
 
 <img src="./images/styles@2x.png">
 
+## Italics
+
+Lilex comes with a full set of italics: all weights, ligatures, PowerLine. Lilex Italic can do everything that Lilex does.
+
+<img src="./images/italics@2x.png">
+
 ## Character Set
 
 The font has support for Latin, Cyrillic and Greek. It also includes ligatures and powerline symbols.
