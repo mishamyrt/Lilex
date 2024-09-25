@@ -174,13 +174,13 @@ value = (
 name = "Axis Mappings";
 value = {
 wght = {
-100 = 100;
-200 = 200;
-300 = 300;
-400 = 400;
-500 = 500;
-600 = 600;
-700 = 700;
+"100" = 100;
+"200" = 200;
+"300" = 300;
+"400" = 400;
+"500" = 500;
+"600" = 600;
+"700" = 700;
 };
 };
 }
@@ -860,7 +860,8 @@ lookup slash_slash {
   ignore sub slash' slash equal;
   sub slash.spacer slash' by slash_slash.liga;
   sub slash' slash by slash.spacer;
-} slash_slash;# Greater/less colon align
+} slash_slash;
+# Greater/less colon align
 # Example: :> :< >: <: :>: :<: <:> >:< <:<>:>
 lookup colon_less_greater {
     # :>= :<=
@@ -1045,12 +1046,13 @@ lookup underscores {
   sub underscore' underscore by underscore_start.seq; 
 } underscores;
 
-
 ";
 tag = calt;
 },
 {
-code = "feature frac;
+code = "# Name: All alternatives
+
+feature frac;
 feature locl;
 feature numr;
 feature ordn;
@@ -1374,14 +1376,24 @@ disabled = 1;
 tag = liga;
 },
 {
-code = "# Name: 16th-century lowercase eszett
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"16th-century lowercase eszett\";
+  };
+};
+# Name: 16th-century lowercase eszett
 
 sub germandbls by germandbls.cv05;
 ";
 tag = cv05;
 },
 {
-code = "# Name: Plain number zero
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Plain number zero\";
+  };
+};
+# Name: Plain number zero
 
 sub zero by zero.alt02;
 sub zero.tosf by zero.tosf.alt02;
@@ -1389,7 +1401,10 @@ sub zero.tosf by zero.tosf.alt02;
 tag = cv04;
 },
 {
-code = "# Name: Restore logical operations as arrows
+code = "featureNames {
+  name 3 1 0x0409 \"Restore logical operations as arrows\";
+};
+# Name: Restore logical operations as arrows
 # Example: <<= >>= ||= |=
 lookup restore_greater_greater_equal {
   sub greater_greater_equal_start.seq equal' by equal_end.seq;
@@ -1414,7 +1429,12 @@ lookup restore_bar_equal {
 tag = ss01;
 },
 {
-code = "# Name: One storey a
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"One storey a\";
+  };
+};
+# Name: One storey a
 
 sub @lca_dflt by @lca_alt1;
 sub @lca_cyrl_dflt by @lca_cyrl_alt1;
@@ -1424,21 +1444,36 @@ sub alphatonos by alphatonos.alt01;
 tag = cv01;
 },
 {
-code = "# Name: Low stem g
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Low stem g\";
+  };
+};
+# Name: Low stem g
 
 sub g by g.alt02;
 ";
 tag = cv03;
 },
 {
-code = "# Name: Open g
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Open g\";
+  };
+};
+# Name: Open g
 
 sub @lcg_dflt by @lcg_alt1;
 ";
 tag = cv02;
 },
 {
-code = "# Name: Elongated tilde
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Elongated tilde\";
+  };
+};
+# Name: Elongated tilde
 # Example: ~
 
 sub asciitilde by asciitilde.original;
@@ -1446,7 +1481,12 @@ sub asciitilde by asciitilde.original;
 tag = cv06;
 },
 {
-code = "# Name: Vertically extended clock arrows
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Vertically extended clock arrows\";
+  };
+};
+# Name: Vertically extended clock arrows
 # Example: ↻ ↺
 
 sub clockwiseOpenCircleArrow by clockwiseOpenCircleArrow.alt01;
@@ -1455,7 +1495,10 @@ sub anticlockwiseOpenCircleArrow by anticlockwiseOpenCircleArrow.alt01;
 tag = cv07;
 },
 {
-code = "# Name: Broken equals ligatures
+code = "featureNames {
+  name 3 1 0x0409 \"Broken equals ligatures\";
+};
+# Name: Broken equals ligatures
 # Example: != !==
 sub equal_equal.liga by equal_equal.liga.ss02;
 sub equal_equal_equal.liga by equal_equal_equal.liga.ss02;
@@ -1465,7 +1508,10 @@ sub exclam_equal_equal.liga by exclam_equal_equal.liga.ss02;
 tag = ss02;
 },
 {
-code = "# Name: Thin backslash
+code = "featureNames {
+  name 3 1 0x0409 \"Thin backslash\";
+};
+# Name: Thin backslash
 # Example: \\n \\\\ 
 
 lookup backslash_thin {
@@ -1513,7 +1559,12 @@ lookup letter_combs {
 tag = ccmp;
 },
 {
-code = "# Name: Classical greater/less then
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Classical greater/less then\";
+  };
+};
+# Name: Classical greater/less then
 
 sub greater_equal.liga by greater_equal.liga.cv08;
 sub less_equal.liga by less_equal.liga.cv08;
@@ -1521,7 +1572,12 @@ sub less_equal.liga by less_equal.liga.cv08;
 tag = cv08;
 },
 {
-code = "# Name: Empty dollar and cent
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Empty dollar and cent\";
+  };
+};
+# Name: Empty dollar and cent
 
 sub cent by cent.cv09;
 sub dollar by dollar.cv09;
@@ -1532,14 +1588,24 @@ sub less_dollar_greater.liga by less_dollar_greater.liga.cv09;
 tag = cv09;
 },
 {
-code = "# Name: High asterisk
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"High asterisk\";
+  };
+};
+# Name: High asterisk
 
 sub asterisk by asterisk.cv10;
 ";
 tag = cv10;
 },
 {
-code = "# Name: Connected bar with less or greater
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Connected bar with less or greater\";
+  };
+};
+# Name: Connected bar with less or greater
 
 sub bar_greater.liga by bar_greater.liga.cv11;
 sub less_bar.liga by less_bar.liga.cv11;
@@ -1547,7 +1613,10 @@ sub less_bar.liga by less_bar.liga.cv11;
 tag = cv11;
 },
 {
-code = "# Name: Broken number signs
+code = "featureNames {
+  name 3 1 0x0409 \"Broken number signs\";
+};
+# Name: Broken number signs
 
 sub numbersign_start.seq by numbersign_start.ss04.seq;
 sub numbersign_middle.seq by numbersign_middle.ss04.seq;
@@ -1556,7 +1625,12 @@ sub numbersign_end.seq by numbersign_end.ss04.seq;
 tag = ss04;
 },
 {
-code = "# Name: blackletter-adapted lowercase eszett
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"blackletter-adapted lowercase eszett\";
+  };
+};
+# Name: blackletter-adapted lowercase eszett
 
 sub germandbls by germandbls.cv12;
 ";
@@ -1650,6 +1724,7 @@ iconName = Light;
 id = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1660,6 +1735,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -1762,6 +1838,7 @@ value = 60;
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1772,6 +1849,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -1881,6 +1959,7 @@ iconName = Bold;
 id = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -1891,6 +1970,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -63238,6 +63318,7 @@ alignment = -1;
 angle = 3;
 pos = (-243,-45);
 ref = tonos;
+scale = (1,1);
 }
 );
 width = 600;
@@ -111339,7 +111420,7 @@ width = 600;
 unicode = 94;
 },
 {
-glyphname = infinity;
+glyphname = "infinity";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137640,6 +137721,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137672,6 +137754,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137704,6 +137787,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -137743,6 +137827,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137765,6 +137850,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137787,6 +137873,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -137815,6 +137902,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137831,6 +137919,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137847,6 +137936,7 @@ width = 600;
 anchors = (
 {
 name = _bottom;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -137870,6 +137960,7 @@ layers = (
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137886,6 +137977,7 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137902,6 +137994,7 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
+pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -148446,9 +148539,11 @@ name = ExtraLight;
 weightClass = 200;
 },
 {
+active = 0;
 axesValues = (
 300
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -148470,13 +148565,11 @@ name = "TTFAutohint options";
 value = "--increase-x-height=0";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.66667;
 "C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.33333;
 };
 name = Light;
-visible = 0;
 weightClass = 300;
 },
 {
@@ -148542,9 +148635,11 @@ name = Medium;
 weightClass = 500;
 },
 {
+active = 0;
 axesValues = (
 600
 );
+exports = 0;
 customParameters = (
 {
 name = panose;
@@ -148566,13 +148661,11 @@ name = "TTFAutohint options";
 value = "--increase-x-height=0";
 }
 );
-exports = 0;
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 0.66667;
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.33333;
 };
 name = SemiBold;
-visible = 0;
 weightClass = 600;
 },
 {
@@ -148607,6 +148700,8 @@ name = Bold;
 weightClass = 700;
 }
 );
+kerningLTR = {
+};
 metrics = (
 {
 type = ascender;
