@@ -1,0 +1,40 @@
+---
+import LayoutBlock from "../../components/LayoutBlock.astro";
+import Download from "./HeroDownload.astro";
+import HeroFooter from "./HeroFooter.astro";
+import Header from "./HeroHeader.astro";
+---
+
+<LayoutBlock theme="light" name="hero">
+	<div class="hero">
+		<Header />
+		<Download />
+		<HeroFooter />
+		<a target="_blank" href="https://github.com/mishamyrt/Lilex" class="github" />
+	</div>
+</LayoutBlock>
+
+<style lang="scss">
+	.hero {
+		width: 100%;
+		display: grid;
+		grid-template-rows: 1fr 1fr auto;
+	}
+
+	.github {
+		position: absolute;
+		top: var(--layout-margin);
+		right: var(--layout-margin);
+		width: 37px;
+		height: 37px;
+		background-image: url("/github-icon.svg");
+		background-size: contain;
+		opacity: 0.3;
+		transition: opacity var(--transition-slow);
+
+		&:hover {
+			transition: opacity 0s;
+			opacity: 0.7;
+		}
+	}
+</style>

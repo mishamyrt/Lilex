@@ -1,0 +1,72 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Lilex font" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+    font-family: 'LilexWeb';
+    src: url("/fonts/Lilex[wght].ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'LilexWeb';
+    font-style: italic;
+    src: url("/fonts/Lilex-Italic[wght].ttf") format("truetype");
+}
+
+	:root {
+		--layout-margin: 36px;
+		--layout-column-gap: 18px;
+		--font-text-m: 400 17px/25px 'LilexWeb';
+		--transition-slow: 0.3s ease-out;
+	}
+
+	body {
+		margin: 0;
+		font: var(--font-text-m);
+		font-variant-ligatures: common-ligatures;
+		font-feature-settings: "liga";
+		overflow-x: hidden;
+		overflow-y: hidden;
+		min-width: 390px;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.block.theme-light {
+			--color-background: #cecece;
+			--color-accent: #003ddb;
+			--color-accent-inverted: #db3500;
+		}
+
+	a {
+		color: var(--color-accent);
+		transition: color var(--transition-slow), font-weight var(--transition-slow);
+	}
+
+	a:hover {
+			color: var(--color-accent-inverted);
+			font-weight: 700;
+			transition: color 0s, font-weight 0s;
+		}
+</style>

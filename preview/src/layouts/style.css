@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'LilexWeb';
+    src: url("/fonts/Lilex[wght].ttf") format("ttf");
+}
+
+@font-face {
+    font-family: 'LilexWeb';
+    font-style: italic;
+    src: url("/fonts/Lilex-Italic[wght].ttf") format("ttf");
+}
