@@ -1,0 +1,22 @@
+---
+export interface Props {
+	name: string;
+	theme: "light" | "dark";
+} 
+
+const { name, theme } = Astro.props;
+---
+<div class=`block theme-${theme}` data-block-name={name}>
+	<slot />
+</div>
+
+<style>
+	.block {
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+    padding: var(--layout-margin);
+		background-color: var(--color-background);
+	}
+</style>
+
