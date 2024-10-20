@@ -76,7 +76,7 @@ make build
 or
 
 ```sh
-./scripts/lilex.py build
+./scripts/font.py build
 ```
 
 ### Forced feature activation
@@ -86,5 +86,5 @@ The builder gives you the ability to forcibly enable any font features. This wor
 To do this, build the binaries from the source file with the features:
 
 ```sh
-./scripts/lilex.py --features 'ss01,zero' build
+./scripts/font.py --features 'ss01,zero' build
 ```
