@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """Lilex helper entrypoint"""
 import os
-import sys
 from argparse import BooleanOptionalAction
 from typing import TypedDict
 
 import yaml
 from arrrgs import arg, command, global_args, run
-from glyphsLib import GSFont
 from liblilex import (
     FontFormat,
     GlyphsFont,
     OpenTypeFeatures,
     build_family,
+    force_features,
     generate_spacers,
     render_ligatures,
 )
@@ -22,7 +21,9 @@ FEATURES_DIR = "sources/features"
 OUT_DIR = "build"
 
 global_args(
-    arg("--config", "-c", default="family_config.yaml", help="Font config file")
+    arg("--config", "-c", default="sources/family_config.yaml", help="Font config file"),
+    arg("--features", "-o", default=None,
+        help="OpenType features that will be forced to be enabled")
 )
 
 AppConfig = TypedDict("AppConfig", {
@@ -60,6 +61,7 @@ def generate(args, config: AppConfig):
 
 @command(
     arg("formats", nargs="*", help="Format list", default=['ttf', 'variable']),
+    arg("--output", "-o", default=OUT_DIR, help="Output directory"),
     arg("--store_temp", "-s", action=BooleanOptionalAction,
         help="Not to delete the temporary folder after build")
 )
@@ -76,26 +78,6 @@ async def build(args, config: AppConfig):
     fonts = [font.file for font in config["fonts"]]
     await build_family(fonts, config["output"], formats)
     print("🟢 Font binaries successfully built")
-
-# def generate_calt(font: GlyphsFont) -> GSFeature:
-#     glyphs = font.ligatures()
-#     code = render_ligatures(glyphs) + read_files(f"{FEATURES_DIR}/calt")
-#     return GSFeature("calt", code)
-
-def move_to_calt(font: GSFont, features: list[str]):
-    for fea in features:
-        if fea not in font.features:
-            print(f"Unknown feature: '{fea}'")
-            print(font.features)
-            sys.exit(1)
-        # Move the code of the feature to the calt,
-        # which is executed in most cases
-        feature = font.features[fea]
-        feature.disabled = True
-        font.features["calt"].code += "\n" + feature.code
-        # Remove feature from aalt
-        aalt = font.features["aalt"]
-        aalt.code = aalt.code.replace(f"feature {fea};\n", "")
 
 def load_font(args):
     with open(args.config, mode="r", encoding="utf-8") as file:
@@ -115,6 +97,12 @@ def load_font(args):
                 "calt": render_ligatures(font.ligatures()),
             }
         )
+        if args.features is not None:
+            forced = args.features.split(",")
+            forced = map(lambda x: x.strip(), forced)
+            forced = filter(lambda x: len(x) > 0, forced)
+            forced = list(forced)
+            feats = force_features(feats, forced)
         generate_spacers(font.ligatures(), font.file.glyphs)
         font.set_classes(cls)
         font.set_features(feats)

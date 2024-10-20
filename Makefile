@@ -15,7 +15,6 @@ VENV = . $(VENV_DIR)/bin/activate;
 
 define build-font
 	@$(VENV) python $(SCRIPTS_DIR)/font.py \
-		--config "sources/family_config.yaml" \
 		build $(1)
 endef
 
