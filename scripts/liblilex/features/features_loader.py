@@ -74,21 +74,21 @@ class OpenTypeFeatures:
         data: dict[str, str] = None
     ) -> tuple[list[GSFeature], list[GSClass]]:
         """Returns a lists of features and classes"""
-        feat_map: dict[str, str] = {}
-        for name, feature in self._features.items():
-            if name in ignore_features:
+        fea_map: dict[str, str] = {}
+        for fea_name, feature in self._features.items():
+            if fea_name in ignore_features:
+                print(f"Ignoring '{fea_name}'")
                 continue
-            fea_name = name
-            if "/" in name:
-                fea_name = name.split("/")[0]
-            if fea_name not in feat_map:
+            if "/" in fea_name:
+                fea_name = fea_name.split("/")[0]
+            if fea_name not in fea_map:
                 if data is not None and fea_name in data:
-                    feat_map[fea_name] = data[fea_name] + "\n" + feature.code
+                    fea_map[fea_name] = data[fea_name] + "\n" + feature.code
                 else:
-                    feat_map[fea_name] = feature.code
+                    fea_map[fea_name] = feature.code
             else:
-                feat_map[fea_name] += "\n" + feature.code
+                fea_map[fea_name] += "\n" + feature.code
         feats = []
-        for name, code in feat_map.items():
+        for name, code in fea_map.items():
             feats.append(GSFeature(name, code))
         return feats, self._classes
