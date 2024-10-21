@@ -76,7 +76,7 @@ check-sequential: clean-reports ## check each font file quality
 lint: ## check code quality
 	$(VENV) ruff check $(SCRIPTS_DIR)/
 	$(VENV) pylint $(SCRIPTS_DIR)/
-	cd preview; pnpm eslint 'src/**/*.{svlete,ts}'
+	cd preview; pnpm astro-check
 
 .PHONY: preview
 preview: ## show CLI special symbols preview
