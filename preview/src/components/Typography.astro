@@ -1,0 +1,102 @@
+---
+export type Props<T extends TagName = "p"> = HTMLElementProps<T> & {
+	as?: T;
+	variant?:
+		| "text-s"
+		| "text-m"
+		| "text-m_accent"
+		| "heading-m"
+		| "heading-m_accent"
+		| "heading-m_bold"
+		| "heading-l"
+		| "heading-xl"
+		| "custom";
+	children?: HTMLCollection | string;
+	color?:
+		| "inherit"
+		| "primary"
+		| "secondary"
+		| "dimmed"
+		| "action"
+		| "action-hover"
+		| "custom";
+	class?: string;
+};
+
+const {
+	as = "p",
+	variant = "text-m",
+	color = "primary",
+	class: className,
+	...props
+} = Astro.props;
+
+const Tag = as;
+---
+
+<Tag
+	class:list={[
+		"typography",
+		variant !== "custom" && `variant-${variant}`,
+		color !== "custom" && `color-${color}`,
+		className,
+	]}
+	{...props as any}
+><slot /></Tag>
+
+<style lang="scss">
+	.typography {
+		font-family: var(--typography-font-family);
+		font-variant-ligatures: common-ligatures;
+		font-feature-settings: "liga";
+		margin: 0;
+
+		&.variant-text-s {
+			font: var(--typography-text-s);
+		}
+		&.variant-text-m {
+			font: var(--typography-text-m);
+		}
+		&.variant-text-m_accent {
+			font: var(--typography-text-m_accent);
+		}
+		&.variant-heading-m {
+			font: var(--typography-heading-m);
+		}
+		&.variant-heading-m_accent {
+			font: var(--typography-heading-m_accent);
+		}
+		&.variant-heading-m_bold {
+			font: var(--typography-heading-m_bold);
+		}
+		&.variant-heading-l {
+			font: var(--typography-heading-l);
+		}
+		&.variant-heading-xl {
+			font: var(--typography-heading-xl);
+		}
+
+		&.color-inherit {
+			color: inherit;
+		}
+		&.color-primary {
+			color: var(--color-content-primary);
+		}
+		&.color-secondary {
+			color: var(--color-content-secondary);
+		}
+		&.color-dimmed {
+			color: var(--color-content-dimmed);
+		}
+		&.color-action {
+			color: var(--color-content-action);
+		}
+		&.color-action-hover {
+			color: var(--color-content-action-hover);
+		}
+	}
+
+	p.typography + p.typography {
+		margin-top: var(--space-m);
+	}
+</style>

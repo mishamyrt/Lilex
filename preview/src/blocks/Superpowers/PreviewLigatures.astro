@@ -1,0 +1,42 @@
+---
+import Typography from "../../components/Typography.astro";
+---
+
+<Typography color="dimmed" variant="heading-m">
+	<span class="ligaturesPreview">
+		<span class="ligature">&lt;/</span>a<span class="ligature">&lt;=</span>b<span class="ligature">--</span>c<span class="ligature">/&gt;</span><br />
+		<span class="ligature">&lt;!--</span>d<span class="ligature">&lt;&lt;</span>e<span class="ligature">&lt;*&gt;</span><br />
+		f<span class="ligature">!==</span>g<span class="ligature">&lt;|&gt;</span>h<span class="ligature">++</span><br />
+		<span class="ligature">&lt;&lt;-&lt;-|-&gt;-&gt;&gt;</span><br />
+	</span>
+</Typography>
+
+<script>
+	import { $isSuperpowersEnabled } from "../../stores/superpowers";
+	const preview = document.querySelector<HTMLElement>(".ligaturesPreview");
+	if (!preview) {
+		throw new Error("Preview element not found");
+	}
+
+	$isSuperpowersEnabled.subscribe((enabled) => {
+		if (enabled) {
+			preview.classList.add("_rich");
+		} else {
+			preview.classList.remove("_rich");
+		}
+	})
+</script>
+
+<style lang="scss">
+	.ligaturesPreview {
+		line-height: 1.5;
+
+		&:not(._rich) {
+			font-feature-settings: "calt" off;
+		}
+	}
+
+	.ligature {
+		color: var(--color-content-primary);
+	}
+</style>

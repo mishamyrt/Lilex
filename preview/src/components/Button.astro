@@ -1,0 +1,63 @@
+---
+import Typography from './Typography.astro';
+
+export type Props<T extends "a" | "button" = "button"> = HTMLElementProps<T> & {
+	as?: T;
+	href: string;
+	class?: string;
+}
+
+const {
+	as = "button",
+	class: className,
+	...props
+} = Astro.props;
+
+const Tag = as;
+---
+
+<Tag
+	class:list={["button", className]}
+	{...props as any}
+>
+	{Astro.slots.has("icon") && (
+		<div class="button-icon">
+			<slot name="icon" />
+		</div>
+	)}
+	<Typography as="span" variant="custom" color="custom">
+		<slot />
+	</Typography>
+</Tag>
+
+<style lang="scss">
+	.button {
+		padding: var(--space-s) var(--space-m);
+		border-radius: var(--border-radius-m);
+		background-color: var(--color-background-action);
+		color: var(--color-background-primary);
+		font: var(--typography-heading-l);
+		display: inline-flex;
+		align-items: center;
+		transition: background-color var(--transition-slow), font-weight var(--transition-slow);
+		text-decoration: none;
+		gap: var(--space-s);
+
+		&:hover {
+			background-color: var(--color-background-action-hover);
+			transition: background-color 0s, font-weight 0s;
+			font-weight: bold;
+		}
+
+		&-icon {
+			margin-right: var(--space-xs);
+		}
+	}
+
+	@media (width <= 500px) {
+		.button {
+			font: var(--typography-heading-m_accent);
+		}
+	}
+</style>
+

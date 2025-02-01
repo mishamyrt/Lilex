@@ -1,0 +1,46 @@
+---
+import Button from "../../components/Button.astro";
+import Link from "../../components/Link.astro";
+import Typography from "../../components/Typography.astro";
+
+export type Props = {
+	class?: string;
+	version: string;
+}
+
+const { class: className, version } = Astro.props;
+
+const repositoryUrl = "https://github.com/mishamyrt/Lilex";
+const downloadUrl = `${repositoryUrl}/releases/download/${version}/Lilex.zip`;
+const releaseUrl = `${repositoryUrl}/releases/tag/${version}`;
+---
+
+<div class:list={["releaseLinks", className]}>
+	<Button as="a" href={downloadUrl} target="_blank">
+		<span slot="icon">↓</span>
+		Download
+	</Button>
+	<div class="releaseLinks-info">
+		<Typography>
+			<span>v{version}</span>
+		</Typography>
+		<Link target="_blank" href={releaseUrl}>
+			Release notes
+		</Link>
+	</div>
+</div>
+
+<style lang="scss">
+	.releaseLinks {
+		display: flex;
+		flex-direction: column;
+		width: fit-content;
+		height: fit-content;
+	
+		&-info {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 20px;
+		}
+	}
+</style>

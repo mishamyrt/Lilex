@@ -1,10 +1,133 @@
-<div class="block superpowers">
+---
+import LayoutBlock from "../../components/LayoutBlock.astro";
+import Stack from "../../components/Stack.astro";
+import Typography from "../../components/Typography.astro";
+import Switch from "./Switch.astro";
+import FeatureRow from "./FeatureRow.astro";
+import PreviewLigatures from "./PreviewLigatures.astro";
+import PreviewAligns from "./PreviewAligns.astro";
+import PreviewWeight from "./PreviewWeight.astro";
+import PreviewPowerline from "./PreviewPowerline.astro";
+import Link from "../../components/Link.astro";
+---
 
-</div>
+<LayoutBlock theme="dark" name="superpowers">
+	<div class="superpowers">
+		<div class="superpowers-headingWrapper">
+			<div class="superpowers-heading">
+				<Typography color="secondary">
+					Lilex is built on top of the IBM Plex Mono. It includes support for
+					variable weight and developer specific features.
+				</Typography>
+				<Switch class="superpowers-switch" />
+			</div>
+		</div>
+		<Stack class="superpowers-features" gap="xl">
+			<FeatureRow title="Ligatures" alignExample="description">
+				<Typography color="secondary">
+					The font replaces programming character sequences with special
+					glyphs. This makes it easier to read and understand the code.
+				</Typography>
+				<Typography color="secondary">
+					In addition to static ligatures, there are special ligatures that
+					are generated during the writing process. These ligatures cover the
+					needs of all developers.
+				</Typography>
+				<PreviewLigatures slot="preview" />
+			</FeatureRow>
+			<FeatureRow title="Aligns">
+				<Typography color="secondary">
+					Lilex is optmized for reading, for this purpose the font
+					automatically aligns some characters depending on the context.
+				</Typography>
+				<PreviewAligns slot="preview" />
+			</FeatureRow>
+			<FeatureRow title="Weight">
+				<Typography color="secondary">
+					In addition to the fixed weight, Lilex provides a variant option
+					that all possible weights from 100 to 700, for both italic and roman.
+				</Typography>
+				<PreviewWeight slot="preview" />
+			</FeatureRow>
+			<FeatureRow title="Powerline" alignExample="description">
+				<Typography color="secondary">
+					Lilex was created by a developer for developers,
+					so it takes into account the needs of professional terminal users.
+				</Typography>
+				<Typography color="secondary">
+					<span>
+						The font contains the necessary character set for correct <Link target="_blank" href="https://github.com/powerline/powerline">Powerline</Link>display.
+					</span>
+				</Typography>
+				<PreviewPowerline slot="preview" />
+			</FeatureRow>
+		</Stack>
+	</div>
+</LayoutBlock>
 
-<style>
-    .superpowers {
-        background-color: #000;
-        min-height: 200vh;
-    }
+
+
+<style lang="scss">
+	.superpowers {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: var(--layout-column-gap);
+
+		&-switch {
+			margin-top: var(--space-m);
+		}
+
+		&-feature {
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+		}
+
+		&-headingWrapper {
+			grid-column: 1/4;
+		}
+
+		&-heading {
+			position: sticky;
+			top: var(--space-m);
+		}
+
+		&-preview {
+			grid-row: 1/3;
+			display: flex;
+			height: 100%;
+			align-items: center;
+			grid-column: 5/9;
+
+			&._descriptionAligned {
+				grid-row: 2/3;
+			}
+		}
+
+		&-description {
+			grid-column: 1/4;
+		}
+	}
+
+	.superpowers-heading {
+		grid-column: 1/4;
+	}
+
+	.superpowers-features {
+		grid-column: 5/13;
+	}
+
+	@media (max-width: 1250px) {
+		.superpowers {
+			&-headingWrapper {
+				grid-column: 1/13;
+			}
+
+			&-features {
+				grid-column: 1/13;
+				margin-top: var(--space-xl);
+			}
+		}
+	}
 </style>

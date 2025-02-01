@@ -1,0 +1,51 @@
+---
+import WavingGlyphs from "../../components/GlyphAnimations/WavingGlyphs.astro";
+import Typography from "../../components/Typography.astro";
+---
+
+<div class="weightPreview-container">
+	<Typography as="span" class="weightPreview" variant="custom">
+		<WavingGlyphs class="weightPreview-animation" min={100} max={700} fillRatio={0.45} interval={1000}>
+			Lilex
+		</WavingGlyphs>
+	</Typography>
+	<Typography class="weightPreview-variants" color="secondary">
+		600 variants
+	</Typography>
+</div>
+
+<script>
+	import { $isSuperpowersEnabled } from "../../stores/superpowers";
+	import type { WavingGlyphsElement } from "../../utils/text-animation/web-components";
+
+	const preview = document.querySelector<WavingGlyphsElement>(".weightPreview-animation");
+	const variants = document.querySelector<HTMLElement>(".weightPreview-variants");
+	if (!preview || !variants) {
+		throw new Error("Weight preview DOM elements not found");
+	}
+	
+	$isSuperpowersEnabled.subscribe((enabled) => {
+		if (!preview.setThrottling) {
+			setTimeout(() => preview.setThrottling(!enabled), 100)
+			return
+		}
+		variants.innerText = enabled ? "600 variants" : "7 variants"
+		preview.setThrottling(!enabled)
+	})
+</script>
+
+<style lang="scss">
+	.weightPreview {
+		font-size: 75px;
+		line-height: 1.19;
+
+		&-container {
+			width: fit-content;
+		}
+
+		&-variants {
+			margin-top: 0;
+			margin-left: 6px;
+		}
+	}
+</style>

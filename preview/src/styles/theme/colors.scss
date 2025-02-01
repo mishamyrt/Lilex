@@ -1,0 +1,24 @@
+.lilexTheme.dark {
+    --color-background-primary: #0E1116;
+    --color-background-secondary: rgb(23 27 33);
+    --color-background-action: rgba(37, 89, 223, 90%);
+    --color-background-action-hover: rgba(184, 43, 45, 85%);
+    --color-background-success: rgba(73, 148, 37, 85%);
+    --color-content-primary: #DBE9FF;
+    --color-content-secondary: rgba(219, 233, 255, 40%);
+    --color-content-dimmed: rgba(219, 233, 255, 20%);
+    --color-content-action: #5B9BFF;
+    --color-content-action-hover: #FF7C79;
+}
+
+.lilexTheme.light {
+    --color-background-primary: #CECECE;
+    --color-background-action: #1C51D9;
+    --color-background-action-hover: #B11316;
+    --color-background-success: #38940D;
+    --color-content-primary: #000;
+    --color-content-secondary: rgba(0, 0, 0, 50%);
+    --color-content-dimmed: rgba(0, 0, 0, 25%);
+    --color-content-action: #003DDB;
+    --color-content-action-hover: #C90D00;
+}

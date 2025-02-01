@@ -1,0 +1,172 @@
+---
+import AnimatedGlyphs from './AnimatedGlyphs.astro';
+
+interface Props {
+	min: number;
+	max: number;
+	class?: string;
+}
+
+const { min, max, class: className, ...props } = Astro.props;
+---
+
+<AnimatedGlyphs />
+<magnifying-glass class={className} max={max} min={min} {...props}>
+	<div id="container">
+		<slot />
+	</div>
+	<div id="cursor"></div>
+</magnifying-glass>
+
+<script>
+	import { MagnifyingGlassAnimator, setProps } from "../../utils/text-animation";
+
+	const cursorSizeRatio = 2.5;
+
+	class MagnifyingGlassComponent extends HTMLElement {
+		private cursor!: HTMLElement;
+		private animator!: MagnifyingGlassAnimator;
+		private isCursorVisible = false;
+
+		private weightMin = 0;
+		private weightMax = 0;
+		private cursorRadius = 0;
+
+		static observedAttributes = ["max", "min"];
+
+		attributeChangedCallback(name: string, _: string, newValue: string) {
+			switch (name) {
+				case "min":
+					this.weightMin = parseInt(newValue, 10);
+					break;
+				case "max":
+					this.weightMax = parseInt(newValue, 10);
+					break;
+			}
+		}
+
+		public connectedCallback() {
+			const content = this.querySelector<HTMLElement>("#container");
+			const cursor = this.querySelector<HTMLElement>("#cursor");
+			if (!content || !cursor) {
+				throw new Error("MagnifyingText component not found");
+			}
+
+			this.cursor = cursor;
+			const cursorDiameter = this.calculateCursorDiameter();
+			this.setCursorSize(cursorDiameter);
+			this.animator = new MagnifyingGlassAnimator(
+				content,
+				{
+					min: this.weightMin,
+					max: this.weightMax,
+				},
+				this.cursorRadius
+			);
+
+			const onMouseMove = this.handleMouseMove.bind(this);
+			const onMouseOut = this.handleMouseOut.bind(this);
+			const onResize = this.handleResize.bind(this);
+
+			const observer = new IntersectionObserver(([entry]) => {
+				if (entry.isIntersecting) {
+					window.addEventListener("mousemove", onMouseMove);
+					window.addEventListener("resize", onResize);
+					window.addEventListener("mouseout", onMouseOut);
+				} else {
+					window.removeEventListener("mousemove", onMouseMove);
+					window.removeEventListener("resize", onResize);
+					window.removeEventListener("mouseout", onMouseOut);
+					this.setCursorVisibility(false);
+				}
+			});
+			observer.observe(content);
+		}
+
+		private handleResize() {
+			const cursorSize = this.calculateCursorDiameter();
+			this.setCursorSize(cursorSize);
+			this.animator.reactionSize = this.cursorRadius;
+			this.animator.handleResize();
+		}
+
+		private handleMouseMove(event: MouseEvent) {
+			if (!this.animator.isInReactionZone(event)) {
+				this.setCursorVisibility(false);
+				return;
+			}
+			this.setCursorVisibility(true);
+			this.setCursorCoordinate(event);
+			this.animator.handlePointerMove(event);
+		}
+
+		private handleMouseOut() {
+			this.setCursorVisibility(false);
+		}
+
+		private calculateCursorDiameter(): number {
+			const { fontSize } = getComputedStyle(this);
+			return parseInt(fontSize, 10) * cursorSizeRatio * 2;
+		}
+
+		private setCursorSize(diameter: number) {
+			this.cursorRadius = diameter / 2;
+			this.cursor.style.setProperty("--cursor-size", `${diameter}px`);
+		}
+
+		private setCursorCoordinate({ clientX, clientY }: MouseEvent) {
+			const x = window.scrollX + clientX - this.cursorRadius;
+			const y = window.scrollY + clientY - this.cursorRadius;
+			setProps(this.cursor, {
+				"--cursor-x": `${x}px`,
+				"--cursor-y": `${y}px`,
+			});
+		}
+
+		private setCursorVisibility(visible: boolean) {
+			if (this.isCursorVisible === visible) {
+				return;
+			}
+			this.isCursorVisible = visible;
+			if (visible) {
+				this.cursor.style.opacity = "1";
+				document.body.classList.add("no-cursor");
+			} else {
+				this.cursor.style.opacity = "0";
+				document.body.classList.remove("no-cursor");
+			}
+		}
+	}
+
+	customElements.define("magnifying-glass", MagnifyingGlassComponent);
+</script>
+
+<style>
+	:global(.no-cursor) {
+		cursor: none;
+	}
+
+	#container {
+		display: block;
+		position: relative;
+		transform: translateZ(0);
+		font: inherit;
+		width: var(--glyphsContainer-width, fit-content);
+		height: var(--glyphsContainer-height, initial);
+	}
+
+	#cursor {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		background-color: transparent;
+		box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.1);
+		pointer-events: none;
+		transition: opacity var(--transition-slow);
+		width: var(--cursor-size);
+		height: var(--cursor-size);
+		transform: translate(var(--cursor-x), var(--cursor-y));
+		opacity: 0;
+	}
+</style>

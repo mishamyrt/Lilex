@@ -1,0 +1,28 @@
+---
+import Typography from '../../components/Typography.astro';
+
+
+export type Props = {
+	title: string;
+	class?: string;
+}
+
+const { title, class: className } = Astro.props;
+---
+
+<div class:list={className}>
+	<div class="informationColumn-content">
+		<Typography as="span" variant="text-m_accent">{title}</Typography>
+		<slot />
+	</div>
+</div>
+
+<style lang="scss">
+	.informationColumn {
+		&-content {
+			display: flex;
+			flex-direction: column;
+			width: fit-content;
+		}
+	}
+</style>

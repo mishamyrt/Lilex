@@ -1,0 +1,93 @@
+---
+export type Props = {
+	name?: string;
+	value?: string | number;
+	checked?: boolean;
+	class?: string;
+	inputClass?: string;
+};
+
+const { name, value, checked, inputClass, class: className, ...props } = Astro.props;
+---
+
+<div class:list={["toggle", className]} {...props}>
+	<input
+		type="checkbox"
+		name={name}
+		value={value}
+		checked={checked}
+		class:list={["toggle-input", inputClass]}
+	/>
+</div>
+
+<style lang="scss">
+	.toggle {
+		--toggle-border-size: 1px;
+		--toggle-width: calc(var(--space-s) * 5);
+		--toggle-height: calc(var(--space-s) * 3);
+		--knob-gap: 3px;
+		--knob-size: calc(var(--toggle-height) - (var(--knob-gap) * 2));
+		position: relative;
+		width: var(--toggle-width);
+		height: var(--toggle-height);
+		display: inline-block;
+		cursor: pointer;
+
+		&-input {
+			width: 0;
+			height: 0;
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				width: var(--toggle-width);
+				height: var(--toggle-height);
+				display: block;
+				border-radius: 200px;
+				transition:
+					background-color var(--transition-slow),
+					box-shadow var(--transition-slow);
+				background-color: transparent;
+				outline: inset 0 0 1px transparent;
+				box-shadow:
+					0 0 0 transparent,
+					inset 0 0 0 var(--toggle-border-size) var(--color-content-secondary);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: var(--knob-size);
+				height: var(--knob-size);
+				transform: translate(var(--knob-gap), var(--knob-gap));
+				display: block;
+				transition: transform var(--transition-slow), width var(--transition-slow), height var(--transition-slow);
+				background-color: white;
+				border-radius: 50%;
+			}
+
+			&:checked {
+				&::before{
+					background-color: var(--color-background-success);
+					box-shadow:
+						0 2px 30px -11px var(--color-background-success),
+						inset 0 0 0 var(--toggle-border-size) var(--color-content-secondary);
+				}
+				&::after {
+					transform: translate(
+						calc(var(--toggle-width) - var(--knob-size) - var(--knob-gap)),
+						var(--knob-gap)
+					);
+				}
+			}
+		}
+	}
+
+	.toggle:active {
+		--knob-gap: 4px;
+	}
+</style>

@@ -6,17 +6,17 @@ export interface Props {
 
 const { name, theme } = Astro.props;
 ---
-<div class=`block theme-${theme}` data-block-name={name}>
+<div class:list={['layoutBlock', 'lilexTheme', theme]} data-block-name={name}>
 	<slot />
 </div>
 
 <style>
-	.block {
+	.layoutBlock {
 		width: 100%;
 		min-height: 100vh;
 		display: flex;
-    padding: var(--layout-margin);
-		background-color: var(--color-background);
+    padding: var(--space-l);
+		background-color: var(--color-background-primary);
 	}
 </style>
 
