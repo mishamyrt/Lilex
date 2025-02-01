@@ -3,6 +3,7 @@ BUILD_DIR := build
 REPORTS_DIR := reports
 SCRIPTS_DIR := scripts
 SOURCES_DIR := sources
+PYTHON_VERSION := 3.13
 
 # Font sources
 LILEX_ROMAN_SOURCE = $(SOURCES_DIR)/Lilex.glyphs
@@ -10,11 +11,11 @@ LILEX_ITALIC_SOURCE = $(SOURCES_DIR)/Lilex-Italic.glyphs
 
 # Internal build variables
 OS := $(shell uname)
-VENV_DIR = ./venv
+VENV_DIR = ./.venv
 VENV = . $(VENV_DIR)/bin/activate;
 
 define build-font
-	@$(VENV) python $(SCRIPTS_DIR)/font.py \
+	$(VENV) python $(SCRIPTS_DIR)/font.py \
 		--config "sources/family_config.yaml" \
 		build $(1)
 endef
@@ -46,9 +47,10 @@ help: ## print this message
 
 .PHONY: configure
 configure: requirements.txt ## setup build environment
-	@rm -rf $(VENV_DIR)
-	@make $(VENV_DIR)
-	@$(VENV) python -m youseedee A > /dev/null
+	@rm -rf "$(VENV_DIR)"
+	@uv venv --python $(PYTHON_VERSION)
+	@uv pip install -r requirements.txt
+	@uv run youseedee A > /dev/null
 
 .PHONY: configure
 configure-preview: ## setup preview environment
@@ -150,9 +152,3 @@ install-Darwin:
 install-Linux:
 	@rm -rf ~/.fonts/Lilex
 	@cp -r build/ttf ~/.fonts/Lilex
-
-$(VENV_DIR): requirements.txt
-	@rm -rf "$(VENV_DIR)"
-	@python3.11 -m venv "$(VENV_DIR)"
-	@$(VENV) pip install wheel
-	@$(VENV) pip install -r requirements.txt
