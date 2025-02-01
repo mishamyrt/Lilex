@@ -1,0 +1,96 @@
+---
+export type Props = {
+	class?: string;
+	gap?: "s" | "m" | "l" | "xl";
+	align?: "start" | "center" | "end";
+	justify?: "start" | "center" | "end" | "between" | "around";
+	direction?: "row" | "column";
+};
+
+const {
+	class: className,
+	gap = "s",
+	direction = "column",
+	align = "start",
+	justify = "start",
+	...props
+} = Astro.props;
+---
+
+<div
+	class:list={[
+		"stack",
+		`gap-${gap}`,
+		`direction-${direction}`,
+		`align-${align}`,
+		`justify-${justify}`,
+		className,
+	]}
+	{...props}
+>
+	<slot />
+</div>
+
+<style lang="scss">
+	.stack {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-s);
+
+		&.direction-column {
+			flex-direction: column;
+		}
+
+		&.direction-row {
+			flex-direction: row;
+		}
+
+		&.gap-s {
+			gap: var(--space-s);
+		}
+
+		&.gap-m {
+			gap: var(--space-m);
+		}
+
+		&.gap-l {
+			gap: var(--space-l);
+		}
+
+		&.gap-xl {
+			gap: var(--space-xl);
+		}
+
+		&.align-start {
+			align-items: flex-start;
+		}
+
+		&.align-center {
+			align-items: center;
+		}
+
+		&.align-end {
+			align-items: flex-end;
+		}
+
+		&.justify-start {
+			justify-content: flex-start;
+		}
+
+		&.justify-center {
+			justify-content: center;
+		}
+
+		&.justify-end {
+			justify-content: flex-end;
+		}
+
+		&.justify-between {
+			justify-content: space-between;
+		}
+
+		&.justify-around {
+			justify-content: space-around;
+		}
+	}
+</style>

@@ -1,0 +1,41 @@
+---
+import Typography from "../../components/Typography.astro";
+---
+
+<Typography class="alignsPreview" color="dimmed" variant="custom">
+	<span>
+		09<span class="aligned">:</span>57<br>
+		0<span class="aligned">x</span>FF
+	</span>
+</Typography>
+
+<script>
+	import { $isSuperpowersEnabled } from "../../stores/superpowers";
+	const preview = document.querySelector<HTMLElement>(".alignsPreview");
+	if (!preview) {
+		throw new Error("Preview element not found");
+	}
+
+	$isSuperpowersEnabled.subscribe((enabled) => {
+		if (enabled) {
+			preview.classList.add("_rich");
+		} else {
+			preview.classList.remove("_rich");
+		}
+	})
+</script>
+
+<style lang="scss">
+	.alignsPreview {
+		font-size: 75px;
+		line-height: 1.19;
+
+		&:not(._rich) {
+			font-feature-settings: "calt" off;
+		}
+
+		.aligned {
+			color: var(--color-content-primary);
+		}
+	}
+</style>

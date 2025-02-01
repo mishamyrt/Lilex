@@ -1,0 +1,47 @@
+---
+import Button from "./Button.astro";
+import Link from "./Link.astro";
+import Typography from "./Typography.astro";
+
+export type Props = {
+	class: string;
+}
+
+const { class: className } = Astro.props
+---
+
+<div class:list={["hero-download", className]}>
+	<Button as="a" href="https://github.com/mishamyrt/Lilex/releases/latest">
+		<span slot="icon">↓</span>
+		Download
+	</Button>
+	<div class="hero-releaseInfo">
+		<Typography class="hero-version">v2.600</Typography>
+		<Link target="_blank" href="https://github.com/mishamyrt/Lilex/releases/latest">
+			Release notes
+		</Link>
+	</div>
+</div>
+
+<style lang="scss">
+	.hero {
+		&-download {
+			display: flex;
+			flex-direction: column;
+			width: fit-content;
+			height: fit-content;
+		}
+
+		&-releaseInfo {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 20px;
+		}
+	}
+
+	@media (width <= 500px) {
+		.hero-download {
+			align-items: center;
+		}
+	}
+</style>

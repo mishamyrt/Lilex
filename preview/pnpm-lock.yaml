@@ -14,6 +14,9 @@ importers:
       astro:
         specifier: ^4.15.11
         version: 4.15.11(@types/node@22.7.4)(rollup@4.24.0)(sass@1.79.4)(typescript@5.6.2)
+      nanostores:
+        specifier: ^0.11.3
+        version: 0.11.3
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -1285,6 +1288,10 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  nanostores@0.11.3:
+    resolution: {integrity: sha512-TUes3xKIX33re4QzdxwZ6tdbodjmn3tWXCEc1uokiEmo14sI1EaGYNs2k3bU2pyyGNmBqFGAVl6jAGWd06AVIg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
 
   neotraverse@0.6.18:
     resolution: {integrity: sha512-Z4SmBUweYa09+o6pG+eASabEpP6QkQ70yHj351pQoEXIs8uHbaU2DWVmzBANKgflPa47A50PtB2+NgRpQvr7vA==}
@@ -3364,6 +3371,8 @@ snapshots:
   muggle-string@0.4.1: {}
 
   nanoid@3.3.7: {}
+
+  nanostores@0.11.3: {}
 
   neotraverse@0.6.18: {}
 

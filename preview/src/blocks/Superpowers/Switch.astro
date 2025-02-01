@@ -1,0 +1,36 @@
+---
+import Stack from "../../components/Stack.astro";
+import Toggle from "../../components/Toggle.astro";
+import Typography from "../../components/Typography.astro";
+
+export type Props = {
+	class?: string;
+};
+
+const { class: className, ...props } = Astro.props;
+---
+
+<div class:list={["superpowersSwitch", className]} {...props}>
+	<Stack justify="between" align="center" direction="row">
+		<Typography variant="heading-m_bold">Superpowers</Typography>
+		<Toggle class="superpowersSwitch-toggle" inputClass="superpowersSwitch-input" />
+	</Stack>
+</div>
+
+<script>
+	import { setSuperpowersEnabled } from "../../stores/superpowers";
+
+	const toggle = document.querySelector<HTMLInputElement>(".superpowersSwitch-input");
+	if (!toggle) {
+		throw new Error("Toggle element not found");
+	}
+	toggle.addEventListener("change", () => setSuperpowersEnabled(toggle.checked));
+</script>
+
+<style lang="scss">
+	.superpowersSwitch {
+		&-toggle {
+			margin-top: 5px;
+		}
+	}
+</style>
