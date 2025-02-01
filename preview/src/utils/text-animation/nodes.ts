@@ -39,3 +39,11 @@ export function wrapChars<T extends ElementTagName>(
   return result
 }
 
+export function setProps(
+	element: HTMLElement,
+	props: Record<string, string | number | boolean>
+) {
+	for (const [key, value] of Object.entries(props)) {
+		element.style.setProperty(key, value.toString())
+	}
+}

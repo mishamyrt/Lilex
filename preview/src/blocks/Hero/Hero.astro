@@ -1,16 +1,45 @@
 ---
+import MagnifyingGlass from "../../components/GlyphAnimations/MagnifyingGlass.astro";
 import LayoutBlock from "../../components/LayoutBlock.astro";
-import Download from "./HeroDownload.astro";
-import HeroFooter from "./HeroFooter.astro";
-import Header from "./HeroHeader.astro";
+import Link from "../../components/Link.astro";
+import Typography from "../../components/Typography.astro";
+
+import InformationColumn from "./InformationColumn.astro";
+import ReleaseLinks from "./ReleaseLinks.astro";
 ---
 
 <LayoutBlock theme="light" name="hero">
 	<div class="hero">
-		<Header />
-		<Download />
-		<HeroFooter />
-		<a target="_blank" href="https://github.com/mishamyrt/Lilex" class="github" />
+		<Typography class="hero-title" variant="custom" as="h1">
+			<MagnifyingGlass min={100} max={700}>
+				Lilex.<br />
+				The font<br />
+				for developers
+			</MagnifyingGlass>
+		</Typography>
+		<div class="hero-release">
+			<ReleaseLinks version="2.600" />
+		</div>
+		<div class="hero-footer">
+			<InformationColumn title="Based on">
+				<Link target="_blank" href="https://github.com/IBM/plex">
+					IBM Plex Mono
+				</Link>
+			</InformationColumn>
+			<InformationColumn class="column" title="Glyphs count">
+				<Typography as="span">1442</Typography>
+			</InformationColumn>
+			<div class="hero-designerColumn">
+				<InformationColumn title="Designed by">
+					<Link target="_blank" href="https://github.com/mishamyrt">
+						Mikhael Khrustik
+					</Link>
+				</InformationColumn>
+			</div>
+		</div>
+		<Link class="hero-repository" variant="text-m" target="_blank" href="https://github.com/mishamyrt/Lilex">
+			GitHub
+		</Link>
 	</div>
 </LayoutBlock>
 
@@ -19,22 +48,71 @@ import Header from "./HeroHeader.astro";
 		width: 100%;
 		display: grid;
 		grid-template-rows: 1fr 1fr auto;
-	}
 
-	.github {
-		position: absolute;
-		top: var(--layout-margin);
-		right: var(--layout-margin);
-		width: 37px;
-		height: 37px;
-		background-image: url("/github-icon.svg");
-		background-size: contain;
-		opacity: 0.3;
-		transition: opacity var(--transition-slow);
+		&-title {
+			font-size: 80px;
+			font-weight: 100;
+			line-height: 1.13;
+		}
 
-		&:hover {
-			transition: opacity 0s;
-			opacity: 0.7;
+		&-footer {
+			display: grid;
+			grid-template-columns: 2fr 2fr 8fr;
+			gap: var(--space-m);
+		}
+
+		&-designerColumn {
+			display: flex;
+			justify-content: end;
+		}
+
+		&-repository {
+			position: absolute;
+			top: var(--space-l);
+			right: var(--space-l);
+		}
+
+		&-release {
+			display: flex;
+			justify-content: end;
 		}
 	}
+
+	@media (width <= 1024px) {
+		.hero-footer {
+			grid-template-columns: 3fr 3fr 6fr;
+		}
+	}
+
+	@media (width <= 840px) {
+		.hero {
+			&-title {
+				font-size: 9.5vw;
+			}
+		}
+	}
+
+	@media (width <= 768px) {
+		.hero-footer {
+			grid-template-columns: 4fr 4fr 4fr;
+		}
+	}
+
+	@media (width <= 680px) {
+		.hero {
+			&-footer {
+				grid-template-columns: 1fr;
+			}
+			&-designerColumn {
+				justify-content: start;
+			}
+		}
+	}
+	
+	@media (width <= 500px) {
+		.hero-download {
+			align-items: center;
+		}
+	}
+
 </style>

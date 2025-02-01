@@ -1,0 +1,139 @@
+---
+const VC_BRANCH_CHAR = "\uE0A0"
+const LN_CHAR = "\uE0A1"
+const LOCK_CHAR = "\uE0A2"
+const RIGHT_BLACK_ARROW_CHAR = "\uE0B0"
+const RIGHT_ARROW_CHAR = "\uE0B1"
+const LEFT_BLACK_ARROW_CHAR = "\uE0B2"
+const LEFT_ARROW_CHAR = "\uE0B3"
+
+export type Part = {
+	text: string;
+	color?: 'grey_10' | 'grey_30' | 'grey_60' | 'yellow_60' | 'green' | 'red';
+	isPath?: boolean;
+	icon?: string;
+}
+
+export type Props = {
+	class?: string;
+	parts: Part[];
+	direction?: 'left' | 'right';
+}
+
+const { class: className, parts, direction = 'right', ...props } = Astro.props;
+
+const pathDelimiter = direction === 'right' ? RIGHT_ARROW_CHAR : LEFT_ARROW_CHAR
+
+const renderedParts = parts.map((part, i) => {
+	const text = part.isPath ? part.text.replaceAll('/', ` ${pathDelimiter} `) : part.text
+	return {
+		text,
+		color: part.color,
+		isPath: part.isPath,
+		icon: part.icon
+	}
+})
+---
+
+<div class:list={["powerline", className]} {...props}>
+	{renderedParts.map((part, i) => (
+		<div class:list={["powerline-part", `color-${part.color}`]}>
+			{direction === 'left' && (
+				<span class:list={[
+					"powerline-separator",
+					i !== 0 ? `color-${renderedParts[i-1].color}` : null
+				]}>{LEFT_BLACK_ARROW_CHAR}</span>
+			)}
+			<span class:list={["powerline-content", `direction-${direction}`]}>
+				{part.icon}
+				{part.text}
+			</span>
+			{direction === 'right' && (
+				<span class:list={[
+					"powerline-separator",
+					i !== parts.length - 1 ? `color-${renderedParts[i+1].color}` : null
+				]}>{RIGHT_BLACK_ARROW_CHAR}</span>
+			)}	
+		</div>
+	))}
+</div>
+
+<style lang="scss">
+	.powerline {
+		--powerline-color-grey_10: rgba(49, 49, 49, 1);
+		--powerline-color-grey_30: rgba(89, 89, 89, 1);
+		--powerline-color-grey_60: rgba(115, 115, 115, 1);
+		--powerline-color-yellow_60: #e0df00;
+		--powerline-color-green: #39bb29;
+		--powerline-color-red: #d86262;
+		--powerline-content-light: rgb(255 255 255 / 93%);
+		--powerline-content-dark: rgb(0 0 0 / 85%);
+
+		width: 100%;
+		display: flex;
+		background-color: var(--color-border);
+		font: var(--typography-text-s);
+		color: var(--color-content-primary);
+		white-space: nowrap;
+
+		&-separator {
+			color: var(--powerline-part-background);
+			background-color: var(--powerline-separator-background);
+
+			&.color-grey_10 {
+				--powerline-separator-background: var(--powerline-color-grey_10);
+			}
+			&.color-grey_30 {
+				--powerline-separator-background: var(--powerline-color-grey_30);
+			}
+			&.color-grey_60 {
+				--powerline-separator-background: var(--powerline-color-grey_60);
+			}
+			&.color-yellow_60 {
+				--powerline-separator-background: var(--powerline-color-yellow_60);
+			}
+			&.color-green {
+				--powerline-separator-background: var(--powerline-color-green);
+			}
+			&.color-red {
+				--powerline-separator-background: var(--powerline-color-red);
+			}
+		}
+
+		&-content {
+			background-color: var(--powerline-part-background);
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+
+		&-part {
+			display: flex;
+			color: var(--powerline-part-foreground);
+
+			&.color-grey_10 {
+				--powerline-part-background: var(--powerline-color-grey_10);
+				--powerline-part-foreground: var(--powerline-content-light);
+			}
+			&.color-grey_30 {
+				--powerline-part-background: var(--powerline-color-grey_30);
+				--powerline-part-foreground: var(--powerline-content-light);
+			}
+			&.color-grey_60 {
+				--powerline-part-background: var(--powerline-color-grey_60);
+				--powerline-part-foreground: var(--powerline-content-light);
+			}
+			&.color-yellow_60 {
+				--powerline-part-background: var(--powerline-color-yellow_60);
+				--powerline-part-foreground: var(--powerline-content-dark);
+			}
+			&.color-green {
+				--powerline-part-background: var(--powerline-color-green);
+				--powerline-part-foreground: var(--powerline-content-dark);
+			}
+			&.color-red {
+				--powerline-part-background: var(--powerline-color-red);
+				--powerline-part-foreground: var(--powerline-content-dark);
+			}
+		}
+	}
+</style>

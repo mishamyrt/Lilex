@@ -1,0 +1,92 @@
+---
+import Powerline from "../../components/Powerline.astro"
+
+
+const VC_BRANCH_CHAR = "\uE0A0"
+const LN_CHAR = "\uE0A1"
+const LOCK_CHAR = "\uE0A2"
+// const RIGHT_BLACK_ARROW_CHAR = "\uE0B0"
+// const RIGHT_ARROW_CHAR = "\uE0B1"
+// const LEFT_BLACK_ARROW_CHAR = "\uE0B2"
+// const LEFT_ARROW_CHAR = "\uE0B3"
+---
+
+<div class="powerlinePreview">
+	<Powerline
+		parts={[
+			{
+				text: "~",
+				color: "grey_10",
+			},
+			{
+				text: "Git/Lilex",
+				color: "grey_30",
+				isPath: true
+			},
+			{
+				text: "master",
+				color: "yellow_60",
+				icon: VC_BRANCH_CHAR
+			}
+		]}
+	/>
+	<Powerline
+		direction="left"
+		parts={[
+			{
+				text: "unix/utf-8/astro",
+				color: "grey_10",
+				isPath: true
+			},
+			{
+				text: "2%",
+				color: "grey_30",
+			},
+			{
+				text: "1:1",
+				color: "grey_60",
+				icon: LN_CHAR
+			}
+		]}
+	/>
+	<Powerline
+		direction="right"
+		parts={[
+			{
+				text: "Normal",
+				color: "green",
+			},
+			{
+				text: ".vimrc",
+				color: "grey_30",
+			},
+		]}
+	/>
+	<Powerline
+		direction="left"
+		parts={[
+			{
+				text: "SIGINT(2)",
+				color: "red",
+				isPath: true
+			},
+			{
+				text: "09:57",
+				color: "grey_30",
+			},
+			{
+				text: "mishamyrt",
+				color: "grey_60",
+				icon: LOCK_CHAR
+			}
+		]}
+	/>
+</div>
+
+<style lang="scss">
+	.powerlinePreview {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-m);
+	}
+</style>

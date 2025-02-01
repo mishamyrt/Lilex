@@ -1,0 +1,33 @@
+---
+import Typography, { type Props as TypographyProps } from './Typography.astro';
+
+export type Props = TypographyProps<'a'>
+
+const { href, class: className, ...props } = Astro.props;
+---
+
+<Typography
+	as="a"
+	href={href}
+	color="custom"
+	class:list={["link", className]}
+	{...props}
+>
+	<slot />
+</Typography>
+
+<style lang="scss">
+	.link {
+		text-decoration: underline;
+		color: var(--color-content-action);
+		cursor: pointer;
+		transition: color var(--transition-slow);
+		width: fit-content;
+    display: inline-block;
+
+		&:hover {
+			color: var(--color-content-action-hover);
+			transition: color 0s;
+		}
+	}
+</style>
