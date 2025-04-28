@@ -1,0 +1,40 @@
+---
+import Slider from '../../components/Slider.astro';
+import Typography from '../../components/Typography.astro';
+import { $glyphsWeight } from '../../stores/glyphs';
+---
+
+<Typography variant="heading-m">Weight</Typography>
+<Slider
+	value={$glyphsWeight.get()}
+	min={100}
+	max={700}
+	step={1}
+	class="weight-slider"
+/>
+<div class="weight-slider-marks">
+	<Typography as="div" variant="text-m">Thin</Typography>
+	<Typography as="div" variant="text-m">Bold</Typography>
+</div>
+
+<script>
+	import { setGlyphsWeight } from '../../stores/glyphs';
+
+	const slider = document.querySelector<HTMLInputElement>('.slider-input');
+	if (!slider) {
+		throw new Error('Slider element not found');
+	}
+
+	slider.addEventListener('input', () => setGlyphsWeight(slider.valueAsNumber));
+</script>
+
+<style lang="scss">
+	.weight-slider {
+		margin-top: var(--space-s);
+	}
+
+	.weight-slider-marks {
+		display: flex;
+		justify-content: space-between;
+	}
+</style>
