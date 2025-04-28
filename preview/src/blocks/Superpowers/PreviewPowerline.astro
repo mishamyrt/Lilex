@@ -87,11 +87,7 @@ const LOCK_CHAR = "\uE0A2"
 	}
 
 	$isSuperpowersEnabled.subscribe((enabled) => {
-		if (!enabled) {
-			previewNode.classList.remove("powerline-enabled")
-		} else {
-			previewNode.classList.add("powerline-enabled")
-		}
+		previewNode.classList.toggle("powerline-enabled", enabled);
 	})
 </script>
 
