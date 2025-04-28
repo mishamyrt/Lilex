@@ -34,7 +34,7 @@ const { title, alignExample = "block" } = Astro.props;
 </div>
 
 <script>
-import { $isSuperpowersEnabled } from "../../stores/superpowers";
+	import { $isSuperpowersEnabled } from "../../stores/superpowers";
 
 	const titles = document.querySelectorAll(".featureRow-title");
 	let active: HTMLElement;
@@ -47,7 +47,7 @@ import { $isSuperpowersEnabled } from "../../stores/superpowers";
 		} else if (active) {
 			active.classList.add("_active");
 		}
-	})
+	});
 
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -59,7 +59,7 @@ import { $isSuperpowersEnabled } from "../../stores/superpowers";
 					active = entry.target as HTMLElement;
 					if ($isSuperpowersEnabled.get()) {
 						active.classList.add("_active");
-					}	
+					}
 				}
 			});
 		},
@@ -148,15 +148,36 @@ import { $isSuperpowersEnabled } from "../../stores/superpowers";
 
 	@media (max-width: 850px) {
 		.featureRow {
-			&-preview, &-preview._descriptionAligned {
+			&-preview,
+			&-preview._descriptionAligned {
 				grid-row: 4;
-        grid-column: 1 / 13;
-        padding: var(--space-m) 0;
+				grid-column: 1 / 13;
+				padding: var(--space-m) 0;
 				margin-top: var(--space-m);
-        display: flex;
-        justify-content: center;
+				display: flex;
+				justify-content: center;
 				background-color: var(--color-background-secondary);
 				border-radius: var(--border-radius-m);
+			}
+		}
+
+		.featureRow-title.variant-heading-xl {
+			font: var(--typography-heading-l);
+		}
+	}
+
+	@media (max-width: 700px) {
+		.featureRow {
+			&-description {
+				grid-column: 1/8;
+			}
+		}
+	}
+
+	@media (max-width: 550px) {
+		.featureRow {
+			&-description {
+				grid-column: 1/13;
 			}
 		}
 	}
