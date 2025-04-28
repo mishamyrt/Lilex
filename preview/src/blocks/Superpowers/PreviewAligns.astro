@@ -17,11 +17,7 @@ import Typography from "../../components/Typography.astro";
 	}
 
 	$isSuperpowersEnabled.subscribe((enabled) => {
-		if (enabled) {
-			preview.classList.add("_rich");
-		} else {
-			preview.classList.remove("_rich");
-		}
+		preview.classList.toggle("_rich", enabled);
 	})
 </script>
 
