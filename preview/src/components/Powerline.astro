@@ -1,7 +1,4 @@
 ---
-const VC_BRANCH_CHAR = "\uE0A0"
-const LN_CHAR = "\uE0A1"
-const LOCK_CHAR = "\uE0A2"
 const RIGHT_BLACK_ARROW_CHAR = "\uE0B0"
 const RIGHT_ARROW_CHAR = "\uE0B1"
 const LEFT_BLACK_ARROW_CHAR = "\uE0B2"
@@ -25,9 +22,11 @@ const { class: className, parts, direction = 'right', ...props } = Astro.props;
 const pathDelimiter = direction === 'right' ? RIGHT_ARROW_CHAR : LEFT_ARROW_CHAR
 
 const renderedParts = parts.map((part, i) => {
-	const text = part.isPath ? part.text.replaceAll('/', ` ${pathDelimiter} `) : part.text
+	const textSegments = part.isPath 
+		? part.text.split('/').map(segment => segment.trim())
+		: [part.text];
 	return {
-		text,
+		textSegments,
 		color: part.color,
 		isPath: part.isPath,
 		icon: part.icon
@@ -35,7 +34,7 @@ const renderedParts = parts.map((part, i) => {
 })
 ---
 
-<div class:list={["powerline", className]} {...props}>
+<div style={`--powerline-path-delimiter: '${pathDelimiter}'`} class:list={["powerline", className]} {...props}>
 	{renderedParts.map((part, i) => (
 		<div class:list={["powerline-part", `color-${part.color}`]}>
 			{direction === 'left' && (
@@ -45,8 +44,22 @@ const renderedParts = parts.map((part, i) => {
 				]}>{LEFT_BLACK_ARROW_CHAR}</span>
 			)}
 			<span class:list={["powerline-content", `direction-${direction}`]}>
-				{part.icon}
-				{part.text}
+				<span class="powerline-content-icon">
+					{part.icon}
+				</span>
+				<span class="powerline-content-text">
+					{part.isPath 
+						? part.textSegments.map((segment, j) => (
+							<>
+								{segment}
+								{j < part.textSegments.length - 1 && (
+									<span class="powerline-path-delimiter"></span>
+								)}
+							</>
+						))
+						: part.textSegments[0]
+					}
+				</span>
 			</span>
 			{direction === 'right' && (
 				<span class:list={[
@@ -79,6 +92,7 @@ const renderedParts = parts.map((part, i) => {
 		&-separator {
 			color: var(--powerline-part-background);
 			background-color: var(--powerline-separator-background);
+			display: none;
 
 			&.color-grey_10 {
 				--powerline-separator-background: var(--powerline-color-grey_10);
@@ -104,6 +118,10 @@ const renderedParts = parts.map((part, i) => {
 			background-color: var(--powerline-part-background);
 			padding-right: 1em;
 			padding-left: 1em;
+
+			&-icon {
+				display: none;
+			}
 		}
 
 		&-part {
@@ -134,6 +152,28 @@ const renderedParts = parts.map((part, i) => {
 				--powerline-part-background: var(--powerline-color-red);
 				--powerline-part-foreground: var(--powerline-content-dark);
 			}
+		}
+
+		&-path-delimiter {
+			margin: 0 1em;
+
+			&::after {
+				content: '|';
+			}
+		}
+	}
+	
+	:global(.powerline-enabled) {
+		.powerline-content-icon {
+			display: inline;
+		}
+
+		.powerline-separator {
+			display: inline;
+		}
+
+		.powerline-path-delimiter::after {
+			content: var(--powerline-path-delimiter);
 		}
 	}
 </style>
