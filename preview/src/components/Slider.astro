@@ -1,0 +1,76 @@
+---
+export type Props = {
+	name?: string;
+	value?: number;
+	class?: string;
+	min?: number;
+	max?: number;
+	step?: number;
+};
+
+const {
+	name,
+	value,
+	min = 0,
+	max = 100,
+	step = 1,
+	class: className,
+	...props
+} = Astro.props;
+---
+
+<div class:list={['slider', className]} {...props}>
+	<input
+		type="range"
+		name={name}
+		value={value}
+		min={min}
+		max={max}
+		step={step}
+		class="slider-input"
+	/>
+</div>
+
+<style lang="scss">
+	.slider {
+		--slider-track-color: var(--color-content-primary);
+		--slider-track-height: 1px;
+		--slider-thumb-color: var(--color-content-primary);
+		--slider-thumb-size: 22px;
+		--slider-thumb-scale: 1;
+
+		position: relative;
+		height: var(--slider-thumb-size);
+
+		&:active {
+			--slider-thumb-scale: 0.9;
+		}
+
+		&-input {
+			width: 100%;
+			height: var(--slider-thumb-size);
+			margin: 0;
+			appearance: none;
+			background: transparent;
+
+			&::-webkit-slider-runnable-track {
+				height: var(--slider-track-height);
+				background-color: var(--slider-track-color);
+			}
+
+			&::-webkit-slider-thumb {
+				position: relative;
+				appearance: none;
+				width: var(--slider-thumb-size);
+				height: var(--slider-thumb-size);
+				top: calc(
+					(var(--slider-thumb-size) / 2) * -1 + var(--slider-track-height)
+				);
+				transform: scale(var(--slider-thumb-scale));
+				background-color: var(--slider-thumb-color);
+				border-radius: 50%;
+				transition: transform var(--transition-slow);
+			}
+		}
+	}
+</style>
