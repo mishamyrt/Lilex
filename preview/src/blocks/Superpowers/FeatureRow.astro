@@ -34,8 +34,20 @@ const { title, alignExample = "block" } = Astro.props;
 </div>
 
 <script>
+import { $isSuperpowersEnabled } from "../../stores/superpowers";
+
 	const titles = document.querySelectorAll(".featureRow-title");
 	let active: HTMLElement;
+
+	$isSuperpowersEnabled.subscribe((enabled) => {
+		if (!enabled) {
+			titles.forEach((title) => {
+				title.classList.remove("_active");
+			});
+		} else if (active) {
+			active.classList.add("_active");
+		}
+	})
 
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -45,7 +57,9 @@ const { title, alignExample = "block" } = Astro.props;
 						active.classList.remove("_active");
 					}
 					active = entry.target as HTMLElement;
-					active.classList.add("_active");
+					if ($isSuperpowersEnabled.get()) {
+						active.classList.add("_active");
+					}	
 				}
 			});
 		},
