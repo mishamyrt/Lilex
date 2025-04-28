@@ -1,0 +1,38 @@
+---
+import Typography from '../../components/Typography.astro';
+
+export type Props = {
+	title: string;
+	glyphs: string | string[];
+	class?: string;
+};
+
+const { class: className, title, glyphs } = Astro.props;
+
+const glyphsArray = Array.isArray(glyphs) ? glyphs : glyphs.split('');
+---
+
+<div class:list={['glyphsRow', className]}>
+	<Typography as="h2" variant="text-m_accent" color="secondary">
+		{title}
+	</Typography>
+	<div class="glyphsRow-list">
+		{glyphsArray.map((glyph) => <span>{glyph}</span>)}
+	</div>
+</div>
+
+<style lang="scss">
+	.glyphsRow-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 1em;
+		font: var(--typography-heading-m);
+		font-variation-settings: 'wght' var(--glyph-weight);
+	}
+
+	:global(.glyphs-italic) {
+		.glyphsRow-list {
+			font-style: italic;
+		}
+	}
+</style>
