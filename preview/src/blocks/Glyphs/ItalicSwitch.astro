@@ -1,0 +1,45 @@
+---
+import Stack from '../../components/Stack.astro';
+import Toggle from '../../components/Toggle.astro';
+import Typography from '../../components/Typography.astro';
+import { $isGlyphsItalicEnabled } from '../../stores/glyphs';
+
+export type Props = {
+	class?: string;
+};
+
+const { class: className, ...props } = Astro.props;
+---
+
+<div class:list={['glyphsItalicSwitch', className]} {...props}>
+	<Stack justify="between" align="center" direction="row">
+		<Typography variant="heading-m_accent">Italic</Typography>
+		<Toggle
+			class="glyphsItalicSwitch-toggle"
+			inputClass="glyphsItalicSwitch-input"
+			checked={$isGlyphsItalicEnabled.get()}
+		/>
+	</Stack>
+</div>
+
+<script>
+	import { setGlyphsItalicEnabled } from '../../stores/glyphs';
+
+	const toggle = document.querySelector<HTMLInputElement>(
+		'.glyphsItalicSwitch-input'
+	);
+	if (!toggle) {
+		throw new Error('Toggle element not found');
+	}
+	toggle.addEventListener('change', () =>
+		setGlyphsItalicEnabled(toggle.checked)
+	);
+</script>
+
+<style lang="scss">
+	.glyphsItalicSwitch {
+		&-toggle {
+			margin-top: 5px;
+		}
+	}
+</style>

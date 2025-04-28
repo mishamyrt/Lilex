@@ -1,0 +1,109 @@
+---
+import LayoutBlock from '../../components/LayoutBlock.astro';
+import Stack from '../../components/Stack.astro';
+import Typography from '../../components/Typography.astro';
+import GlyphsRow from './GlyphsRow.astro';
+import ItalicSwitch from './ItalicSwitch.astro';
+import LigaturesRow from './LigaturesRow.astro';
+import WeightSlider from './WeightSlider.astro';
+---
+
+<LayoutBlock theme="light" name="glyphs">
+	<div class="glyphs">
+		<div class="glyphs-headingWrapper">
+			<div class="glyphs-heading">
+				<Typography color="secondary">
+					Lilex contains 1444 glyphs. Available in sizes from Thin (100) to Bold
+					(700). Includes latin, cyrillic and greek.
+				</Typography>
+				<WeightSlider class="glyphs-weightSlider" />
+				<ItalicSwitch class="glyphs-italicSwitch" />
+			</div>
+		</div>
+		<Stack class="glyphs-features" gap="xl">
+			<GlyphsRow
+				title="Latin"
+				glyphs="AÁĂÆǼBCĈÇDÐĎEFGHĦỊIĮJKLMNŊOPQRSŞTUVWXYZabcdefghijklmnopqrstuvwxyz"
+			/>
+			<GlyphsRow
+				title="Кириллица"
+				glyphs="АӐӒӔБВГЃҐҒӶҔДЕҼҾӖЁЖҖӁЗҘӠИЙІЇКҚҜҞҠЛМНҢҤОПԤҦРСҪТҬҴУӮӰӲФҨѲХҲЦЧҶҸШЩЬЫӸЪѢѴЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя"
+			/>
+			<GlyphsRow
+				title="Ελληνικά"
+				glyphs="ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρσςτυφχψω"
+			/>
+			<GlyphsRow
+				title="Numbers & punctuation"
+				glyphs={`012345678901234567890123456789½⅓⅔¼¾.,:;…!¡?¿•‧*#/-⁃﹣‚′'"“„«»<>(){}[]`}
+			/>
+			<GlyphsRow
+				title="Symbols"
+				glyphs="❌&¶§°ℓ‡℮№€₿¢₡¤$₫₽₴₭₤₺₦₱₹₪£₸₮₩¥∞Ω∆∏∑✓√∂µ‰"
+			/>
+			<LigaturesRow />
+		</Stack>
+	</div>
+</LayoutBlock>
+
+<script>
+	import { $isGlyphsItalicEnabled, $glyphsWeight } from '../../stores/glyphs';
+
+	const glyphsElement = document.querySelector<HTMLElement>('.glyphs');
+	if (!glyphsElement) {
+		throw new Error('Glyphs element not found');
+	}
+
+	$isGlyphsItalicEnabled.subscribe((enabled) => {
+		glyphsElement.classList.toggle('glyphs-italic', enabled);
+	});
+
+	$glyphsWeight.subscribe((weight) => {
+		glyphsElement.style.setProperty('--glyph-weight', String(weight));
+	});
+</script>
+
+<style lang="scss">
+	.glyphs {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: var(--layout-column-gap);
+
+		&-weightSlider,
+		&-italicSwitch {
+			margin-top: var(--space-m);
+		}
+
+		&-headingWrapper {
+			grid-column: 1/4;
+		}
+
+		&-heading {
+			position: sticky;
+			top: var(--space-m);
+		}
+	}
+
+	.glyphs-heading {
+		grid-column: 1/4;
+	}
+
+	.glyphs-features {
+		grid-column: 5/13;
+	}
+
+	@media (max-width: 1250px) {
+		.glyphs {
+			&-headingWrapper {
+				grid-column: 1/13;
+			}
+
+			&-features {
+				grid-column: 1/13;
+				margin-top: var(--space-xl);
+			}
+		}
+	}
+</style>
