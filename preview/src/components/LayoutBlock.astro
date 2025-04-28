@@ -12,11 +12,19 @@ const { name, theme } = Astro.props;
 
 <style>
 	.layoutBlock {
+		--space-layout: var(--space-l);
+
 		width: 100%;
 		min-height: 100vh;
 		display: flex;
-    padding: var(--space-l);
+		padding: var(--space-layout);
 		background-color: var(--color-background-primary);
+	}
+
+	@media screen and (max-width: 768px) {
+		.layoutBlock {
+			--space-layout: var(--space-m);
+		}
 	}
 </style>
 

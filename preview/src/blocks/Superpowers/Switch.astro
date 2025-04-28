@@ -14,18 +14,26 @@ const { class: className, ...props } = Astro.props;
 <div class:list={["superpowersSwitch", className]} {...props}>
 	<Stack justify="between" align="center" direction="row">
 		<Typography variant="heading-m_bold">Superpowers</Typography>
-		<Toggle checked={$isSuperpowersEnabled.get()} class="superpowersSwitch-toggle" inputClass="superpowersSwitch-input" />
+		<Toggle
+			checked={$isSuperpowersEnabled.get()}
+			class="superpowersSwitch-toggle"
+			inputClass="superpowersSwitch-input"
+		/>
 	</Stack>
 </div>
 
 <script>
 	import { setSuperpowersEnabled } from "../../stores/superpowers";
 
-	const toggle = document.querySelector<HTMLInputElement>(".superpowersSwitch-input");
+	const toggle = document.querySelector<HTMLInputElement>(
+		".superpowersSwitch-input"
+	);
 	if (!toggle) {
 		throw new Error("Toggle element not found");
 	}
-	toggle.addEventListener("change", () => setSuperpowersEnabled(toggle.checked));
+	toggle.addEventListener("change", () =>
+		setSuperpowersEnabled(toggle.checked)
+	);
 </script>
 
 <style lang="scss">

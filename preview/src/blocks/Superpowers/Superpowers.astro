@@ -15,7 +15,7 @@ import Link from "../../components/Link.astro";
 	<div class="superpowers">
 		<div class="superpowers-headingWrapper">
 			<div class="superpowers-heading">
-				<Typography color="secondary">
+				<Typography class="superpowers-headingText" color="secondary">
 					Lilex is built on top of the IBM Plex Mono. It includes support for
 					variable weight and developer specific features.
 				</Typography>
@@ -25,38 +25,41 @@ import Link from "../../components/Link.astro";
 		<Stack class="superpowers-features" gap="xl">
 			<FeatureRow title="Ligatures" alignExample="description">
 				<Typography color="secondary">
-					The font replaces programming character sequences with special
-					glyphs. This makes it easier to read and understand the code.
+					The font replaces programming character sequences with special glyphs.
+					This makes it easier to read and understand the code.
 				</Typography>
 				<Typography color="secondary">
-					In addition to static ligatures, there are special ligatures that
-					are generated during the writing process. These ligatures cover the
-					needs of all developers.
+					In addition to static ligatures, there are special ligatures that are
+					generated during the writing process. These ligatures cover the needs
+					of all developers.
 				</Typography>
 				<PreviewLigatures slot="preview" />
 			</FeatureRow>
 			<FeatureRow title="Aligns">
 				<Typography color="secondary">
-					Lilex is optmized for reading, for this purpose the font
-					automatically aligns some characters depending on the context.
+					Lilex is optmized for reading, for this purpose the font automatically
+					aligns some characters depending on the context.
 				</Typography>
 				<PreviewAligns slot="preview" />
 			</FeatureRow>
 			<FeatureRow title="Weight">
 				<Typography color="secondary">
-					In addition to the fixed weight, Lilex provides a variant option
-					that all possible weights from 100 to 700, for both italic and roman.
+					In addition to the fixed weight, Lilex provides a variant option that
+					all possible weights from 100 to 700, for both italic and roman.
 				</Typography>
 				<PreviewWeight slot="preview" />
 			</FeatureRow>
 			<FeatureRow title="Powerline" alignExample="description">
 				<Typography color="secondary">
-					Lilex was created by a developer for developers,
-					so it takes into account the needs of professional terminal users.
+					Lilex was created by a developer for developers, so it takes into
+					account the needs of professional terminal users.
 				</Typography>
 				<Typography color="secondary">
 					<span>
-						The font contains the necessary character set for correct <Link target="_blank" href="https://github.com/powerline/powerline">Powerline</Link>display.
+						The font contains the necessary character set for correct <Link
+							target="_blank"
+							href="https://github.com/powerline/powerline">Powerline</Link
+						>display.
 					</span>
 				</Typography>
 				<PreviewPowerline slot="preview" />
@@ -65,7 +68,49 @@ import Link from "../../components/Link.astro";
 	</div>
 </LayoutBlock>
 
+<script>
+	const switchElement = document.querySelector<HTMLInputElement>(
+		".superpowers-switch"
+	);
+	if (!switchElement) {
+		throw new Error("Switch element not found");
+	}
+	const headingText = document.querySelector<HTMLDivElement>(
+		".superpowers-headingText"
+	);
+	if (!headingText) {
+		throw new Error("Heading text element not found");
+	}
 
+	const headerSentinel = document.createElement("div");
+	headerSentinel.classList.add("superpowers-headerSentinel");
+
+	switchElement.parentNode?.insertBefore(headerSentinel, switchElement);
+
+	const updateSentinelPosition = () => {
+		const headingTextRect = headingText.getBoundingClientRect();
+		headerSentinel.style.position = "absolute";
+		const sentinelOffset =
+			headingTextRect.top + headingTextRect.height + window.scrollY;
+		headerSentinel.style.top = `${sentinelOffset}px`;
+	};
+
+	updateSentinelPosition();
+	window.addEventListener("resize", updateSentinelPosition);
+
+	const observer = new IntersectionObserver(
+		([entry]) => {
+			const isSticky = !entry.isIntersecting && entry.intersectionRect.y <= 0;
+			switchElement.classList.toggle("_sticky", isSticky);
+		},
+		{
+			threshold: 0,
+			rootMargin: "0px 0px 0px 0px",
+		}
+	);
+
+	observer.observe(headerSentinel);
+</script>
 
 <style lang="scss">
 	.superpowers {
@@ -77,6 +122,8 @@ import Link from "../../components/Link.astro";
 
 		&-switch {
 			margin-top: var(--space-m);
+			border-bottom: 1px solid transparent;
+			transition: border-color 0.3s ease-in-out;
 		}
 
 		&-feature {
@@ -118,15 +165,75 @@ import Link from "../../components/Link.astro";
 		grid-column: 5/13;
 	}
 
+	.superpowers-headerSentinel {
+		display: none;
+	}
+
 	@media (max-width: 1250px) {
 		.superpowers {
 			&-headingWrapper {
-				grid-column: 1/13;
+				display: contents;
+			}
+
+			&-heading {
+				display: contents;
+				position: relative;
+
+				p {
+					grid-column: 1/6;
+				}
+			}
+
+			.superpowers-headerSentinel {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+			}
+
+			&-switch {
+				position: sticky;
+				top: 0;
+				background: transparent;
+				grid-column: 1 / 13;
+				backdrop-filter: blur(8px);
+				margin: 0 calc(var(--space-layout) * -1);
+				padding: var(--space-s) var(--space-layout);
+				z-index: 1;
+
+				&._sticky {
+					border-bottom: 1px solid rgba(255, 255, 255, 8%);
+				}
 			}
 
 			&-features {
 				grid-column: 1/13;
 				margin-top: var(--space-xl);
+			}
+		}
+	}
+
+	@media (max-width: 900px) {
+		.superpowers {
+			&-heading p {
+				grid-column: 1/7;
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		.superpowers {
+			&-heading p {
+				grid-column: 1/8;
+			}
+		}
+	}
+
+	@media (max-width: 550px) {
+		.superpowers {
+			&-heading p {
+				grid-column: 1/13;
 			}
 		}
 	}
