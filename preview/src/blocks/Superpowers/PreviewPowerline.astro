@@ -1,17 +1,12 @@
 ---
 import Powerline from "../../components/Powerline.astro"
 
-
 const VC_BRANCH_CHAR = "\uE0A0"
 const LN_CHAR = "\uE0A1"
 const LOCK_CHAR = "\uE0A2"
-// const RIGHT_BLACK_ARROW_CHAR = "\uE0B0"
-// const RIGHT_ARROW_CHAR = "\uE0B1"
-// const LEFT_BLACK_ARROW_CHAR = "\uE0B2"
-// const LEFT_ARROW_CHAR = "\uE0B3"
 ---
 
-<div class="powerlinePreview">
+<div class="powerlinePreview powerline-enabled">
 	<Powerline
 		parts={[
 			{
@@ -82,6 +77,23 @@ const LOCK_CHAR = "\uE0A2"
 		]}
 	/>
 </div>
+
+<script>
+	import { $isSuperpowersEnabled } from "../../stores/superpowers";
+
+	const previewNode = document.querySelector<HTMLElement>(".powerlinePreview")
+	if (!previewNode) {
+		throw new Error("Powerline preview node not found")
+	}
+
+	$isSuperpowersEnabled.subscribe((enabled) => {
+		if (!enabled) {
+			previewNode.classList.remove("powerline-enabled")
+		} else {
+			previewNode.classList.add("powerline-enabled")
+		}
+	})
+</script>
 
 <style lang="scss">
 	.powerlinePreview {
