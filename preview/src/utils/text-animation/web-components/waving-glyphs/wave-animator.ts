@@ -61,9 +61,9 @@ export class WaveAnimator extends WeightAnimator {
 		}
 		const ratio = 1 - (distance / this.fillRatio);
 		const weight = this.limits.min + (this.weightDelta * ratio)
-		if (!this.throttling) {
-			return weight
+		if (this.throttling) {
+			return Math.round(weight / 100) * 100
 		}
-		return Math.round(weight / 100) * 100
+		return weight
 	}
 }
