@@ -20,12 +20,22 @@ define build-font
 		build $(1)
 endef
 
-define check-font
+define check-static-dir 
 	$(VENV) fontbakery check-$(2) \
 		--auto-jobs \
 		--full-lists \
+		-x opentype/STAT/ital_axis \
+		-x fontdata_namecheck \
+		--html "$(REPORTS_DIR)/static_$(1).html" \
+		"$(BUILD_DIR)/$(1)/"*
+endef
+
+define check-variable-dir
+	$(VENV) fontbakery check-$(2) \
+		--auto-jobs \
+		--full-lists \
+		-x fontdata_namecheck \
 		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
-		-x com.google.fonts/check/fontdata_namecheck \
 		"$(BUILD_DIR)/$(1)/"*
 endef
 
@@ -33,7 +43,6 @@ define check-ttf-file
 	$(VENV) fontbakery check-$(2) \
 		--auto-jobs \
 		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
-		-x com.google.fonts/check/fontdata_namecheck \
 		"$(BUILD_DIR)/ttf/Lilex-$(1).ttf"
 endef
 
@@ -46,10 +55,10 @@ help: ## print this message
 		$(MAKEFILE_LIST)
 
 .PHONY: configure
-configure: requirements.txt ## setup build environment
+configure: ## setup build environment
 	@rm -rf "$(VENV_DIR)"
 	@uv venv --python $(PYTHON_VERSION)
-	@uv pip install -r requirements.txt
+	@uv sync
 	@uv run youseedee A > /dev/null
 
 .PHONY: configure
@@ -63,8 +72,8 @@ print-updates: ## print list of outdated packages
 
 .PHONY: check
 check: clean-reports ## check font quality
-	@$(call check-font,"ttf","googlefonts")
-	@$(call check-font,"variable","googlefonts")
+#	@$(call check-static-dir,"ttf","googlefonts")
+	@$(call check-variable-dir,"variable","googlefonts")
 
 .PHONY: check-sequential
 check-sequential: clean-reports ## check each font file quality
@@ -73,7 +82,7 @@ check-sequential: clean-reports ## check each font file quality
 	@$(call check-ttf-file,"Medium","googlefonts")
 	@$(call check-ttf-file,"Regular","googlefonts")
 	@$(call check-ttf-file,"Thin","googlefonts")
-	@$(call check-font,"variable","googlefonts")
+	@$(call check-variable-dir,"variable","googlefonts")
 		
 .PHONY: lint
 lint: ## check code quality
