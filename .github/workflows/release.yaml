@@ -25,6 +25,9 @@ jobs:
         ssh-key: ${{ secrets.RELEASE_PRIVATE_KEY }}
         fetch-depth: 0
         persist-credentials: true
+    
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v6
 
     - name: Setup GitHub Actions bot
       run: |
