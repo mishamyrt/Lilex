@@ -7,6 +7,24 @@ description = "The font for developers."
 readme = "README.md"
 requires-python = ">=3.13"
 version = "v0.0.0"
+dependencies = [
+    "arrrgs>=3.1.0",
+    "glyphslib>=6.11.1",
+    "pyyaml>=6.0.2",
+    "fontmake==3.10.0",
+    "fonttools==4.55.8",
+    "cu2qu==1.6.7.post2",
+    "gftools==0.9.77",
+    "ruff==0.9.4",
+    "pylint==3.3.4",
+    "colored==2.2.5",
+    "pylance==0.22.0",
+    "fontbakery==1.0.1",
+    "dehinter==4.0.0",
+    "shaperglot==1.0.2",
+    "youseedee==0.6.0",
+    "pyarrow==19.0.0",
+]
 
 [tool.ruff]
 lint.select = [
