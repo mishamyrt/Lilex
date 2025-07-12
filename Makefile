@@ -90,8 +90,20 @@ lint: ## check code quality
 	$(VENV) pylint $(SCRIPTS_DIR)/
 	cd preview; pnpm astro-check
 
+.PHONY: preview-env
+preview-env:
+	@$(VENV) python $(SCRIPTS_DIR)/preview_env.py generate fonts/ttf/Lilex-Regular.ttf preview/.env
+
 .PHONY: preview
-preview: ## show CLI special symbols preview
+preview: preview-env ## run the preview
+	cd preview; pnpm run dev
+
+.PHONY: build-preview
+build-preview: preview-env ## build the preview
+	cd preview; pnpm run build
+
+.PHONY: show
+show: ## show CLI special symbols preview
 	@$(VENV) python $(SCRIPTS_DIR)/show.py
 
 .PHONY: generate
@@ -104,14 +116,6 @@ generate: ## regenerate the font sources with classes and features
 build: ## build the font
 	@make clean-build
 	@$(call build-font)
-
-.PHONY: build-preview
-build-preview: ## build the preview
-	cd preview; pnpm run build
-
-.PHONY: run-preview
-run-preview: ## run the preview
-	cd preview; pnpm run dev
 
 .PHONY: release 
 release:

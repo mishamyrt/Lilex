@@ -6,6 +6,9 @@ import Typography from "../../components/Typography.astro";
 
 import InformationColumn from "./InformationColumn.astro";
 import ReleaseLinks from "./ReleaseLinks.astro";
+
+const version = import.meta.env.PUBLIC_LILEX_VERSION;
+const glyphsCount = import.meta.env.PUBLIC_LILEX_GLYPHS_COUNT;
 ---
 
 <LayoutBlock theme="light" name="hero">
@@ -18,7 +21,7 @@ import ReleaseLinks from "./ReleaseLinks.astro";
 			</MagnifyingGlass>
 		</Typography>
 		<div class="hero-release">
-			<ReleaseLinks version="2.600" />
+			<ReleaseLinks version={version} /> 
 		</div>
 		<div class="hero-footer">
 			<InformationColumn title="Based on">
@@ -27,7 +30,7 @@ import ReleaseLinks from "./ReleaseLinks.astro";
 				</Link>
 			</InformationColumn>
 			<InformationColumn class="column" title="Glyphs count">
-				<Typography as="span">1442</Typography>
+				<Typography as="span">{glyphsCount}</Typography>
 			</InformationColumn>
 			<div class="hero-designerColumn">
 				<InformationColumn title="Designed by">
