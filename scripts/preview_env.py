@@ -14,8 +14,7 @@ def find_version_in_name_table(font):
                 if record.platformID == 3 and record.platEncID in (1, 10):
                     version_string = record.string.decode("utf-16-be")
                     break
-                else:
-                    version_string = record.string.decode("latin-1")
+                version_string = record.string.decode("latin-1")
             except UnicodeDecodeError:
                 version_string = record.string.decode("utf-8", "ignore")
 
