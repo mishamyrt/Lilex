@@ -21,7 +21,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11' 
+        python-version: '3.13' 
     
     - name: Install the latest version of uv
       uses: astral-sh/setup-uv@v6
@@ -45,6 +45,25 @@ jobs:
     - name: Bootstrap preview
       if: inputs.preview
       run: make configure-preview
+
+    - name: Check if sources are available
+      uses: LIT-Protocol/artifact-exists-action@v0
+      id: check_sources
+      with:
+        name: "sources"
+
+    - name: Download updated sources
+      if: "${{ steps.check_sources.outputs.exists == 'true' }}"
+      uses: actions/download-artifact@v4
+      with:
+        name: sources
+        path: updated_sources/
+
+    - name: Replace sources
+      if: "${{ steps.check_sources.outputs.exists == 'true' }}"
+      run: |
+        rm sources/*.glyphs
+        cp -r updated_sources/* sources/
 
     - name: Build
       run: make build

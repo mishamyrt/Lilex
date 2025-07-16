@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Fixed
+
+* The font now shows the correct version corresponding to the current release (not n-1).
+
 ## [2.600] — September 25, 2024
 
 ### Added
