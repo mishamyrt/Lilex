@@ -87859,6 +87859,24 @@ width = 0;
 unicode = 8233;
 },
 {
+glyphname = "space-han";
+layers = (
+{
+layerId = m001;
+width = 600;
+},
+{
+layerId = m002;
+width = 600;
+},
+{
+layerId = m003;
+width = 600;
+}
+);
+unicode = 12288;
+},
+{
 glyphname = .notdef;
 layers = (
 {
@@ -87946,24 +87964,6 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 }
 );
-},
-{
-glyphname = "space-han";
-layers = (
-{
-layerId = m001;
-width = 600;
-},
-{
-layerId = m002;
-width = 600;
-},
-{
-layerId = m003;
-width = 600;
-}
-);
-unicode = 12288;
 },
 {
 glyphname = anoteleia;
@@ -154570,66 +154570,6 @@ width = 600;
 );
 },
 {
-glyphname = st.ordn;
-lastChange = "2024-08-03 01:31:27 +0000";
-layers = (
-{
-layerId = m001;
-shapes = (
-{
-alignment = -1;
-pos = (-324,385);
-ref = s;
-scale = (0.63,0.63);
-},
-{
-alignment = -1;
-pos = (70,385);
-ref = t;
-scale = (0.63,0.63);
-}
-);
-width = 600;
-},
-{
-layerId = m002;
-shapes = (
-{
-alignment = -1;
-pos = (-320,385);
-ref = s;
-scale = (0.63,0.63);
-},
-{
-alignment = -1;
-pos = (77,385);
-ref = t;
-scale = (0.63,0.63);
-}
-);
-width = 600;
-},
-{
-layerId = m003;
-shapes = (
-{
-alignment = -1;
-pos = (-316,385);
-ref = s;
-scale = (0.63,0.63);
-},
-{
-alignment = -1;
-pos = (68,385);
-ref = t;
-scale = (0.63,0.63);
-}
-);
-width = 600;
-}
-);
-},
-{
 export = 0;
 glyphname = "arrowhead-center-single-left.part";
 lastChange = "2024-08-10 18:55:34 +0000";
@@ -155527,6 +155467,67 @@ width = 600;
 },
 {
 layerId = m003;
+width = 600;
+}
+);
+},
+{
+export = 0;
+glyphname = st.ordn;
+lastChange = "2025-07-17 18:48:31 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+alignment = -1;
+pos = (-324,385);
+ref = s;
+scale = (0.63,0.63);
+},
+{
+alignment = -1;
+pos = (70,385);
+ref = t;
+scale = (0.63,0.63);
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+alignment = -1;
+pos = (-320,385);
+ref = s;
+scale = (0.63,0.63);
+},
+{
+alignment = -1;
+pos = (77,385);
+ref = t;
+scale = (0.63,0.63);
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+alignment = -1;
+pos = (-316,385);
+ref = s;
+scale = (0.63,0.63);
+},
+{
+alignment = -1;
+pos = (68,385);
+ref = t;
+scale = (0.63,0.63);
+}
+);
 width = 600;
 }
 );
