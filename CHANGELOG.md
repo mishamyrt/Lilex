@@ -9,7 +9,8 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-* Remove overlaps from half black circles (`◖`, `◗`).
+* Remove overlaps from half black circles. (`◖`, `◗`)
+* Greek capital letters with Tonos alignment in italic. (`Ά`, `Έ`, `Ή`, `Ί`, `Ό`, `Ύ`, `Ώ`)
 
 ### Removed
 

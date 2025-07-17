@@ -1359,7 +1359,8 @@ sub dieresiscaron by dieresiscaron.case;
 sub dieresisgrave by dieresisgrave.case;
 sub dieresismacron by dieresismacron.case;
 sub hookabovecomb by hookabovecomb.case;
-sub ringacute by ringacute.case;";
+sub ringacute by ringacute.case;
+";
 tag = case;
 },
 {
@@ -63267,7 +63268,7 @@ unicode = 937;
 {
 color = 5;
 glyphname = Alphatonos;
-lastChange = "2024-08-03 09:46:13 +0000";
+lastChange = "2025-07-17 19:19:37 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -79728,6 +79729,24 @@ note = paragraphseparator;
 unicode = 8233;
 },
 {
+glyphname = "space-han";
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+width = 600;
+}
+);
+unicode = 12288;
+},
+{
 glyphname = .notdef;
 layers = (
 {
@@ -79809,24 +79828,6 @@ nodes = (
 width = 600;
 }
 );
-},
-{
-glyphname = "space-han";
-layers = (
-{
-layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
-width = 600;
-},
-{
-layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
-width = 600;
-},
-{
-layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
-width = 600;
-}
-);
-unicode = 12288;
 },
 {
 color = 5;
@@ -136561,40 +136562,6 @@ unicode = 900;
 },
 {
 color = 5;
-glyphname = tonos.case;
-lastChange = "2024-08-03 09:43:18 +0000";
-layers = (
-{
-layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
-shapes = (
-{
-ref = tonos;
-}
-);
-width = 600;
-},
-{
-layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
-shapes = (
-{
-ref = tonos;
-}
-);
-width = 600;
-},
-{
-layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
-shapes = (
-{
-ref = tonos;
-}
-);
-width = 600;
-}
-);
-},
-{
-color = 5;
 glyphname = dieresistonos;
 lastChange = "2024-08-03 09:43:18 +0000";
 layers = (
@@ -136760,6 +136727,44 @@ width = 600;
 );
 metricWidth = space;
 unicode = 901;
+},
+{
+color = 5;
+export = 0;
+glyphname = tonos.case;
+lastChange = "2025-07-17 20:54:06 +0000";
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+pos = (0,152);
+ref = tonos;
+}
+);
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+pos = (0,152);
+ref = tonos;
+}
+);
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+pos = (0,152);
+ref = tonos;
+}
+);
+width = 600;
+}
+);
 },
 {
 glyphname = dieresiscomb;
