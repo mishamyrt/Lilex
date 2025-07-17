@@ -60,9 +60,13 @@ async def build_family(
     output_dir: str,
     formats: list[FontFormat]):
     """Builds a font family"""
+    # Extract version from the first font
+    source_font = fonts[0]
+    target_version = float(f"{source_font.versionMajor}.{source_font.versionMinor}")
+
     tasks = []
     for font in fonts:
         tasks.append(_build_font(font, output_dir, formats))
     files = await asyncio.gather(*tasks)
-    await post_process(_group_by_format(files))
+    await post_process(_group_by_format(files), target_version)
     return files

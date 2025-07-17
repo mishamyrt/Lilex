@@ -29,7 +29,12 @@ async def _fix_font(file: str):
         f'"{file}"'
     )
 
-async def _fix_variable(files: list[str]):
+def _normalize_version(font: TTFont, target_version: float):
+    """Normalize font version to fix floating point precision issues"""
+    if 'head' in font:
+        font['head'].fontRevision = target_version
+
+async def _fix_variable(files: list[str], target_version: float):
     """Generate STAT table for variable ttf"""
     fix_tasks = []
     for file in files:
@@ -40,27 +45,30 @@ async def _fix_variable(files: list[str]):
     fonts = [TTFont(f) for f in files]
     gen_stat_tables_from_config(config, fonts, has_italic=True)
     for font in fonts:
+        _normalize_version(font, target_version)
         dst = font.reader.file.name
         if os.path.isfile(dst):
             os.remove(dst)
         font.save(dst)
 
-async def _fix_ttf(files: list[str]):
+async def _fix_ttf(files: list[str], target_version: float):
     """Fix bold fsSelection and macStyle"""
     fix_tasks = []
     for file in files:
         fix_tasks.append(_fix_font(file))
     await asyncio.gather(*fix_tasks)
+    # Normalize versions to fix floating point precision issues
+    for file_path in files:
+        font = TTFont(file_path)
+        _normalize_version(font, target_version)
+        font.save(file_path)
 
-POST_FIXES = {
-    FontFormat.TTF: _fix_ttf,
-    FontFormat.VARIABLE: _fix_variable
-}
-
-async def post_process(font_map: dict[FontFormat, list[str]]):
+async def post_process(font_map: dict[FontFormat, list[str]], target_version: float):
     """Run post fixes"""
     tasks = []
     for fmt, files in font_map.items():
-        if fmt in POST_FIXES:
-            tasks.append(POST_FIXES[fmt](files))
+        if fmt == FontFormat.TTF:
+            tasks.append(_fix_ttf(files, target_version))
+        elif fmt == FontFormat.VARIABLE:
+            tasks.append(_fix_variable(files, target_version))
     await asyncio.gather(*tasks)
