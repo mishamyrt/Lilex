@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 * Unreachable glyphs (`IJacute`, `ijacute`).
+* Soft hyphen.
 
 ## [2.601] — July 16, 2025
 
