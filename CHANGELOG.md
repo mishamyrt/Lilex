@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Fixed
+
+* Remove overlaps from half black circles (`◖`, `◗`).
+
 ## [2.601] — July 16, 2025
 
 ### Fixed
