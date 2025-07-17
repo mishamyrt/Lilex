@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## Next
 
+### Added
+
+* Italic denominators. (`dnom`)
+
 ### Fixed
 
 * Remove overlaps from half black circles (`◖`, `◗`).

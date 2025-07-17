@@ -1574,6 +1574,13 @@ sub zero by zero.alt01;
 sub zero.tosf by zero.tosf.alt01;
 ";
 tag = zero;
+},
+{
+code = "# Denominators
+
+sub @numbers_dflt by @numbers_dnom;
+";
+tag = dnom;
 }
 );
 fontMaster = (

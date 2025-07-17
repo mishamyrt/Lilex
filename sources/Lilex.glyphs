@@ -1324,17 +1324,9 @@ sub nine by nineinferior;
 tag = subs;
 },
 {
-automatic = 1;
-code = "sub zero by zero.dnom;
-sub one by one.dnom;
-sub two by two.dnom;
-sub three by three.dnom;
-sub four by four.dnom;
-sub five by five.dnom;
-sub six by six.dnom;
-sub seven by seven.dnom;
-sub eight by eight.dnom;
-sub nine by nine.dnom;
+code = "# Denominators
+
+sub @numbers_dflt by @numbers_dnom;
 ";
 tag = dnom;
 },
