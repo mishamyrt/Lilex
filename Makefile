@@ -72,7 +72,7 @@ print-updates: ## print list of outdated packages
 
 .PHONY: check
 check: clean-reports ## check font quality
-#	@$(call check-static-dir,"ttf","googlefonts")
+	@$(call check-static-dir,"ttf","googlefonts")
 	@$(call check-variable-dir,"variable","googlefonts")
 
 .PHONY: check-sequential
