@@ -7,6 +7,10 @@ All notable changes to this project will be documented in this file.
 
 * Remove overlaps from half black circles (`◖`, `◗`).
 
+### Removed
+
+* Unreachable glyphs (`IJacute`, `ijacute`).
+
 ## [2.601] — July 16, 2025
 
 ### Fixed
