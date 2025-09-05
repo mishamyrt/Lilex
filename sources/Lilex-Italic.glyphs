@@ -87865,6 +87865,24 @@ width = 0;
 unicode = 8233;
 },
 {
+glyphname = "space-han";
+layers = (
+{
+layerId = m001;
+width = 600;
+},
+{
+layerId = m002;
+width = 600;
+},
+{
+layerId = m003;
+width = 600;
+}
+);
+unicode = 12288;
+},
+{
 glyphname = .notdef;
 layers = (
 {
@@ -87952,24 +87970,6 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 }
 );
-},
-{
-glyphname = "space-han";
-layers = (
-{
-layerId = m001;
-width = 600;
-},
-{
-layerId = m002;
-width = 600;
-},
-{
-layerId = m003;
-width = 600;
-}
-);
-unicode = 12288;
 },
 {
 glyphname = anoteleia;
@@ -107085,93 +107085,6 @@ width = 600;
 }
 );
 unicode = 10003;
-},
-{
-glyphname = crossMark;
-layers = (
-{
-layerId = m001;
-shapes = (
-{
-closed = 1;
-nodes = (
-(300,331,l),
-(520,19,l),
-(538,31,l),
-(314,348,l),
-(538,667,l),
-(520,679,l),
-(300,367,l),
-(80,679,l),
-(62,667,l),
-(286,350,l),
-(62,31,l),
-(80,19,l)
-);
-}
-);
-userData = {
-com.typemytype.robofont.pointLabels = {
-};
-};
-width = 600;
-},
-{
-layerId = m002;
-shapes = (
-{
-closed = 1;
-nodes = (
-(299,286,l),
-(487,15,l),
-(550,55,l),
-(346,347,l),
-(550,643,l),
-(487,683,l),
-(301,412,l),
-(113,683,l),
-(50,643,l),
-(254,351,l),
-(50,55,l),
-(113,15,l)
-);
-}
-);
-userData = {
-com.typemytype.robofont.pointLabels = {
-};
-};
-width = 600;
-},
-{
-layerId = m003;
-shapes = (
-{
-closed = 1;
-nodes = (
-(299,237,l),
-(479,-23,l),
-(590,47,l),
-(380,347,l),
-(590,652,l),
-(479,721,l),
-(301,461,l),
-(121,721,l),
-(10,651,l),
-(220,351,l),
-(10,46,l),
-(121,-23,l)
-);
-}
-);
-userData = {
-com.typemytype.robofont.pointLabels = {
-};
-};
-width = 600;
-}
-);
-unicode = 10060;
 },
 {
 glyphname = at;
