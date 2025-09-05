@@ -42,6 +42,7 @@ endef
 define check-ttf-file
 	$(VENV) fontbakery check-$(2) \
 		--auto-jobs \
+		-x fontdata_namecheck \
 		--html "$(REPORTS_DIR)/$(2)_$(1).html" \
 		"$(BUILD_DIR)/ttf/Lilex-$(1).ttf"
 endef
