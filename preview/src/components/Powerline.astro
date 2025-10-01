@@ -21,7 +21,7 @@ const { class: className, parts, direction = 'right', ...props } = Astro.props;
 
 const pathDelimiter = direction === 'right' ? RIGHT_ARROW_CHAR : LEFT_ARROW_CHAR
 
-const renderedParts = parts.map((part, i) => {
+const renderedParts = parts.map((part) => {
 	const textSegments = part.isPath 
 		? part.text.split('/').map(segment => segment.trim())
 		: [part.text];
