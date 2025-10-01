@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import { fileLinker } from './font-linker.mjs';
+import { fileLinker } from './file-linker.mjs';
 
 const FONTS_SOURCE = '../build/variable'
 const FONTS_TARGET = './public/fonts'
