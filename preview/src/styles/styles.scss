@@ -1,8 +1,8 @@
-@import './theme/border-radius.scss';
-@import './theme/colors.scss';
-@import './theme/spaces.scss';
-@import './theme/transitions.scss';
-@import './theme/typography.scss';
+@use './theme/border-radius.scss';
+@use './theme/colors.scss';
+@use './theme/spaces.scss';
+@use './theme/transitions.scss';
+@use './theme/typography.scss';
 
 body {
     margin: 0;
