@@ -4,13 +4,27 @@ import os
 from shutil import rmtree
 from tempfile import mkdtemp
 
-from glyphsLib import GSFont, build_masters
+from glyphsLib import GSFont, build_masters, GSInstance
 from glyphsLib.builder.axes import find_base_style
 
 from .constants import FontFormat
 from .fontmake import fontmake
 from .post_process import post_process
 
+async def build_family(
+    fonts: list[GSFont],
+    output_dir: str,
+    formats: list[FontFormat]):
+    """Builds a font family"""
+    # Extract version and stat values from the first font
+    source_font = fonts[0]
+    target_version = float(f"{source_font.versionMajor}.{source_font.versionMinor}")
+    stat = _stat_from_instances(source_font.instances)
+
+    tasks = [_build_font(font, output_dir, formats) for font in fonts]
+    files = await asyncio.gather(*tasks)
+    await post_process(_group_by_format(files), target_version, stat)
+    return files
 
 def _build_design_space(font: GSFont) -> str:
     """Creates temporary designspace"""
@@ -46,7 +60,10 @@ async def _build_font(
     rmtree(temp_dir)
     return files
 
-def _group_by_format(output: list[list[tuple[str, list[str]]]]) -> dict[FontFormat, list[str]]:
+def _group_by_format(
+    output: list[list[tuple[str, list[str]]]]
+) -> dict[FontFormat, list[str]]:
+    """Groups output file list by format"""
     result = {}
     for design_space in output:
         for fmt, files in design_space:
@@ -55,18 +72,17 @@ def _group_by_format(output: list[list[tuple[str, list[str]]]]) -> dict[FontForm
             result[fmt].extend(files)
     return result
 
-async def build_family(
-    fonts: list[GSFont],
-    output_dir: str,
-    formats: list[FontFormat]):
-    """Builds a font family"""
-    # Extract version from the first font
-    source_font = fonts[0]
-    target_version = float(f"{source_font.versionMajor}.{source_font.versionMinor}")
-
-    tasks = []
-    for font in fonts:
-        tasks.append(_build_font(font, output_dir, formats))
-    files = await asyncio.gather(*tasks)
-    await post_process(_group_by_format(files), target_version)
-    return files
+def _stat_from_instances(instances: list[GSInstance]) -> str:
+    """Creates a stat from instances"""
+    weight_values = []
+    for instance in instances:
+        weight_values.append({
+            "name": instance.name,
+            "value": instance.weightValue
+        })
+    weight_stat = {
+        "tag": "wght",
+        "name": "Weight",
+        "values": sorted(weight_values, key=lambda x: x["value"])
+    }
+    return [weight_stat]
