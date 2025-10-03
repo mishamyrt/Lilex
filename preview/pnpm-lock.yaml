@@ -11,6 +11,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(typescript@5.9.3)
+      '@speed-highlight/core':
+        specifier: ^1.2.7
+        version: 1.2.7
       astro:
         specifier: ^5.14.1
         version: 5.14.1(@types/node@24.6.1)(rollup@4.44.2)(sass@1.93.2)(typescript@5.9.3)(yaml@2.5.1)
@@ -27,6 +30,9 @@ importers:
       sass:
         specifier: ^1.93.2
         version: 1.93.2
+      shiki:
+        specifier: ^3.13.0
+        version: 3.13.0
 
 packages:
 
@@ -629,6 +635,9 @@ packages:
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
+
+  '@speed-highlight/core@1.2.7':
+    resolution: {integrity: sha512-0dxmVj4gxg3Jg879kvFS/msl4s9F3T9UXC1InxgOf7t5NvcPD97u/WTA5vL/IxWHMn7qSxBozqrnnE2wvl1m8g==}
 
   '@swc/helpers@0.5.17':
     resolution: {integrity: sha512-5IKx/Y13RsYd+sauPb2x+U/xZikHjolzfuDgTAl/Tdf3Q8rslRvC19NKDLgAJQ6wsqADk10ntlv08nPFw/gO/A==}
@@ -2418,6 +2427,8 @@ snapshots:
       '@types/hast': 3.0.4
 
   '@shikijs/vscode-textmate@10.0.2': {}
+
+  '@speed-highlight/core@1.2.7': {}
 
   '@swc/helpers@0.5.17':
     dependencies:

@@ -1,0 +1,179 @@
+---
+const code = `
+/**
+* JSDoc example
+* @param {Object} block - The block to be processed.
+* @param {string} cls - The class name to be added to the block.
+*/
+`;
+---
+
+<div class="codeInput">
+	<div class="codeInput-preview shj-lang-js"></div>
+	<textarea name="code" class="codeInput-input">
+		{code}
+	</textarea>
+</div>
+
+<script is:inline type="module">
+	import { highlightText } from "/node_modules/@speed-highlight/core";
+
+	const container = document.querySelector(".codeInput");
+	if (!container) {
+		throw new Error("CodeInput container element not found");
+	}
+
+	const preview = container.querySelector(".codeInput-preview");
+	if (!preview) {
+		throw new Error("Preview element not found");
+	}
+	const input = container.querySelector(".codeInput-input");
+	if (!input) {
+		throw new Error("Input element not found");
+	}
+
+	function highlightCode() {
+		highlightText(input.value, "ts").then((highlighted) => {
+			preview.innerHTML = highlighted;
+		});
+	}
+
+	highlightCode();
+	input.addEventListener("input", () => {
+		highlightCode();
+	});
+</script>
+
+<style lang="scss">
+	.codeInput {
+		--codeInput-font-size: 18px;
+		--codeInput-line-height: 24px;
+
+		display: flex;
+		width: 100%;
+		position: relative;
+	}
+
+	.codeInput-preview {
+		font: var(--typography-text-m);
+		color: var(--color-content-primary);
+	}
+
+	.codeInput :global([class*="shj-lang-"]),
+	.codeInput-input {
+		white-space: pre;
+		text-shadow: none;
+		box-sizing: border-box;
+		border-radius: 10px;
+		max-width: min(100%, 100vw);
+		font-family: var(--typography-font-family);
+		font-size: var(--codeInput-font-size);
+		line-height: var(--codeInput-line-height);
+		color: var(--color-content-primary);
+		border: none;
+	}
+
+	.codeInput-input {
+		position: absolute;
+		resize: none;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: none;
+		color: transparent;
+		padding-left: calc(3em + 15px);
+		margin: -2px 0;
+
+		&:focus {
+			outline: none;
+		}
+
+		::selection {
+			background: var(--color-background-selection);
+		}
+	}
+
+	:global(.shj-inline) {
+		border-radius: 5px;
+		margin: 0;
+		padding: 2px 5px;
+		display: inline-block;
+	}
+
+	:global([class*="shj-lang-"] > div) {
+		display: flex;
+		overflow: auto;
+
+		:last-child {
+			outline: none;
+			flex: 1;
+		}
+	}
+
+	:global(.shj-numbers) {
+		counter-reset: line;
+		width: calc(3em + 15px);
+
+		:global(div) {
+			padding-right: 5px;
+
+			&::before {
+				color: var(--color-content-secondary);
+				content: counter(line);
+				text-align: right;
+				counter-increment: line;
+				margin-right: 15px;
+				display: block;
+			}
+		}
+	}
+
+	:global(.shj-syn-cmnt) {
+		color: var(--color-content-secondary);
+		font-style: italic;
+	}
+
+	:global(.shj-syn-err, .shj-syn-kwd) {
+		color: var(--color-content-error);
+	}
+
+	:global(.shj-syn-num, .shj-syn-class) {
+		color: var(--color-content-warning);
+	}
+
+	:global(.shj-numbers) {
+		color: var(--color-content-primary);
+	}
+
+	:global(.shj-syn-insert, .shj-syn-str) {
+		color: var(--color-content-action);
+	}
+
+	:global(.shj-syn-bool) {
+		color: var(--color-content-info);
+	}
+
+	:global(.shj-syn-type, .shj-syn-oper) {
+		color: var(--color-content-action);
+	}
+
+	:global(.shj-syn-section, .shj-syn-func) {
+		color: var(--color-content-special);
+	}
+
+	:global(.shj-syn-deleted, .shj-syn-var) {
+		color: var(--color-content-error);
+	}
+
+	:global(.shj-oneline) {
+		padding: 12px 10px;
+	}
+
+	:global(.shj-lang-http.shj-oneline .shj-syn-kwd) {
+		color: var(--color-content-primary);
+		border-radius: 5px;
+		padding: 5px 7px;
+	}
+</style>

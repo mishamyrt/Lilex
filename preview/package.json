@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@speed-highlight/core": "^1.2.7",
     "astro": "^5.14.1",
     "nanostores": "^1.0.1",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@types/node": "^24.6.1",
-    "sass": "^1.93.2"
+    "sass": "^1.93.2",
+    "shiki": "^3.13.0"
   }
 }
