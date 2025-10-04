@@ -8,6 +8,7 @@ from gftools.stat import gen_stat_tables_from_config
 from .constants import FontFormat
 from .path import which
 
+
 async def _gftools(subcommand: str, *args: str):
     """Wrapper for fontmake"""
     cmd = [which("gftools"), subcommand, *args]

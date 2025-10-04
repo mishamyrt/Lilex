@@ -4,12 +4,13 @@ import os
 from shutil import rmtree
 from tempfile import mkdtemp
 
-from glyphsLib import GSFont, build_masters, GSInstance
+from glyphsLib import GSFont, GSInstance, build_masters
 from glyphsLib.builder.axes import find_base_style
 
 from .constants import FontFormat
 from .fontmake import fontmake
 from .post_process import post_process
+
 
 async def build_family(
     fonts: list[GSFont],
