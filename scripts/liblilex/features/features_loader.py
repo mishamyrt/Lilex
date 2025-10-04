@@ -8,8 +8,7 @@ from typing import TypeVar
 
 from glyphsLib import GSClass, GSFeature
 
-FEATURES_DIR = "features"
-CLASSES_DIR = f"{FEATURES_DIR}/_classes"
+CLASSES_DIR = "@classes"
 FEATURE_EXT = ".fea"
 CLASS_EXT = ".cls"
 
@@ -62,10 +61,9 @@ class OpenTypeFeatures:
     _classes: list[GSClass]
 
     def __init__(self, sources_dir: str):
-        fea_dir = os.path.join(sources_dir, FEATURES_DIR)
         cls_dir = os.path.join(sources_dir, CLASSES_DIR)
         self._path = sources_dir
-        self._features = _read_features(fea_dir)
+        self._features = _read_features(sources_dir)
         self._classes = _read_classes(cls_dir)
 
     def items(
@@ -76,7 +74,7 @@ class OpenTypeFeatures:
         """Returns a lists of features and classes"""
         fea_map: dict[str, str] = {}
         for fea_name, feature in self._features.items():
-            if fea_name in ignore_features:
+            if ignore_features is not None and fea_name in ignore_features:
                 print(f"Ignoring '{fea_name}'")
                 continue
             if "/" in fea_name:

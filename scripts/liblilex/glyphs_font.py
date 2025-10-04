@@ -22,10 +22,12 @@ class GlyphsFont:
     _font: GSFont = None
     _path: str
     _name: str
+    is_ephemeral: bool
 
     def __init__(self, path: str, name: str = None):
         self._font = GSFont(path)
         self._path = path
+        self.is_ephemeral = False
         if name is None:
             self._name = Path(self._path).stem
         else:
