@@ -73,7 +73,7 @@ def _group_by_format(
             result[fmt].extend(files)
     return result
 
-def _stat_from_instances(instances: list[GSInstance]) -> str:
+def _stat_from_instances(instances: list[GSInstance]) -> list[dict]:
     """Creates a stat from instances"""
     weight_values = []
     for instance in instances:
