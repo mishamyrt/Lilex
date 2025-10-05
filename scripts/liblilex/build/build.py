@@ -1,6 +1,7 @@
 """Glyphs builder"""
 import asyncio
 import os
+import re
 from shutil import rmtree
 from tempfile import mkdtemp
 
@@ -32,7 +33,7 @@ def _build_design_space(font: GSFont) -> str:
     temp_dir = mkdtemp(prefix="lilex")
     glyphs_file = os.path.join(temp_dir, "source.glyphs")
     ufo_dir = os.path.join(temp_dir, "master_ufo")
-    file_name = font.familyName
+    file_name = _to_upper_camel_case(font.familyName)
     base_style = find_base_style(font.masters)
     if base_style != "":
         file_name = f"{file_name}-{base_style}"
@@ -45,6 +46,11 @@ def _build_design_space(font: GSFont) -> str:
         designspace_path=ds_file,
     )
     return (temp_dir, ds_file)
+
+def _to_upper_camel_case(s: str) -> str:
+    """Converts a string to upper camel case"""
+    words = re.split(r'[^a-zA-Z0-9]+', s.strip())
+    return ''.join(w.capitalize() for w in words if w)
 
 async def _build_font(
     font: GSFont,
