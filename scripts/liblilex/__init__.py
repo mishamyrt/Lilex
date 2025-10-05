@@ -1,5 +1,6 @@
 """Lilex font library"""
 from .build import FontFormat, build_family
+from .config import FamilyConfig
 from .features import (
     OpenTypeFeatures,
     force_features,
@@ -7,3 +8,4 @@ from .features import (
     render_ligatures,
 )
 from .glyphs_font import GlyphsFont
+from .workspace import Workspace

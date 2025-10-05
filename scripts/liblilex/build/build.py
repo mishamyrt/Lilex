@@ -1,10 +1,11 @@
 """Glyphs builder"""
 import asyncio
 import os
+import re
 from shutil import rmtree
 from tempfile import mkdtemp
 
-from glyphsLib import GSFont, build_masters
+from glyphsLib import GSFont, GSInstance, build_masters
 from glyphsLib.builder.axes import find_base_style
 
 from .constants import FontFormat
@@ -12,12 +13,27 @@ from .fontmake import fontmake
 from .post_process import post_process
 
 
+async def build_family(
+    fonts: list[GSFont],
+    output_dir: str,
+    formats: list[FontFormat]):
+    """Builds a font family"""
+    # Extract version and stat values from the first font
+    source_font = fonts[0]
+    target_version = float(f"{source_font.versionMajor}.{source_font.versionMinor}")
+    stat = _stat_from_instances(source_font.instances)
+
+    tasks = [_build_font(font, output_dir, formats) for font in fonts]
+    files = await asyncio.gather(*tasks)
+    await post_process(_group_by_format(files), target_version, stat)
+    return files
+
 def _build_design_space(font: GSFont) -> str:
     """Creates temporary designspace"""
     temp_dir = mkdtemp(prefix="lilex")
     glyphs_file = os.path.join(temp_dir, "source.glyphs")
     ufo_dir = os.path.join(temp_dir, "master_ufo")
-    file_name = font.familyName
+    file_name = _to_upper_camel_case(font.familyName)
     base_style = find_base_style(font.masters)
     if base_style != "":
         file_name = f"{file_name}-{base_style}"
@@ -30,6 +46,11 @@ def _build_design_space(font: GSFont) -> str:
         designspace_path=ds_file,
     )
     return (temp_dir, ds_file)
+
+def _to_upper_camel_case(s: str) -> str:
+    """Converts a string to upper camel case"""
+    words = re.split(r'[^a-zA-Z0-9]+', s.strip())
+    return ''.join(w.capitalize() for w in words if w)
 
 async def _build_font(
     font: GSFont,
@@ -46,7 +67,10 @@ async def _build_font(
     rmtree(temp_dir)
     return files
 
-def _group_by_format(output: list[list[tuple[str, list[str]]]]) -> dict[FontFormat, list[str]]:
+def _group_by_format(
+    output: list[list[tuple[str, list[str]]]]
+) -> dict[FontFormat, list[str]]:
+    """Groups output file list by format"""
     result = {}
     for design_space in output:
         for fmt, files in design_space:
@@ -55,18 +79,17 @@ def _group_by_format(output: list[list[tuple[str, list[str]]]]) -> dict[FontForm
             result[fmt].extend(files)
     return result
 
-async def build_family(
-    fonts: list[GSFont],
-    output_dir: str,
-    formats: list[FontFormat]):
-    """Builds a font family"""
-    # Extract version from the first font
-    source_font = fonts[0]
-    target_version = float(f"{source_font.versionMajor}.{source_font.versionMinor}")
-
-    tasks = []
-    for font in fonts:
-        tasks.append(_build_font(font, output_dir, formats))
-    files = await asyncio.gather(*tasks)
-    await post_process(_group_by_format(files), target_version)
-    return files
+def _stat_from_instances(instances: list[GSInstance]) -> list[dict]:
+    """Creates a stat from instances"""
+    weight_values = []
+    for instance in instances:
+        weight_values.append({
+            "name": instance.name,
+            "value": instance.weightValue
+        })
+    weight_stat = {
+        "tag": "wght",
+        "name": "Weight",
+        "values": sorted(weight_values, key=lambda x: x["value"])
+    }
+    return [weight_stat]

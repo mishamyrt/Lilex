@@ -1,5 +1,8 @@
-source: ./sources
-output: ./build
-family:
-  Lilex.glyphs:
-  Lilex-Italic.glyphs:
+features: opentype_features
+fonts:
+  Lilex:
+    - source: Lilex.glyphs
+    - source: Lilex-Italic.glyphs
+  Lilex Duo:
+    - patch: LilexDuo.patch.glyphs
+      target: Lilex.glyphs

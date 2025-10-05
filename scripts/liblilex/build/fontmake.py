@@ -37,9 +37,23 @@ async def fontmake(
                                         stdout=asyncio.subprocess.PIPE,
                                         stderr=asyncio.subprocess.PIPE)
     _, stderr = await proc.communicate()
+    log_text = stderr.decode()
+    errors = _extract_errors(log_text)
+    if errors:
+        raise RuntimeError(f"Fontmake failed: {errors}")
+    files = _extract_files(log_text, out_dir)
+    if not files:
+        raise RuntimeError("Fontmake failed: no files found")
+    return fmt, files
+
+def _extract_errors(log_text: str) -> list[str]:
+    """Extracts error lines from log text."""
+    pattern = re.compile(r"^(?:ERROR:|.*\bError:).*$", re.MULTILINE)
+    return pattern.findall(log_text)
+
+def _extract_files(log_text: str, out_dir: str) -> list[str]:
+    """Extracts file lines from log text."""
     file_re = re.escape(out_dir) + r"/(.*)"
-    matches = re.findall(file_re, stderr.decode(), flags=re.MULTILINE)
-    files = []
-    for match in matches:
-        files.append(os.path.join(out_dir, match))
-    return fmt, list(set(files))
+    matches = re.findall(file_re, log_text, flags=re.MULTILINE)
+    files = map(lambda x: os.path.join(out_dir, x), matches)
+    return list(set(files))
