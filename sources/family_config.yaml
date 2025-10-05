@@ -4,5 +4,5 @@ fonts:
     - source: Lilex.glyphs
     - source: Lilex-Italic.glyphs
   Lilex Duo:
-    - patch: Lilex-Duo.patch.glyphs
+    - patch: LilexDuo.patch.glyphs
       target: Lilex.glyphs
