@@ -8,4 +8,4 @@ from .features import (
     render_ligatures,
 )
 from .glyphs_font import GlyphsFont
-from .workspace import Workspace, load_workspace
+from .workspace import Workspace

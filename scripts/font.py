@@ -9,8 +9,8 @@ from liblilex import (
     FamilyConfig,
     FontFormat,
     GlyphsFont,
+    Workspace,
     build_family,
-    load_workspace,
 )
 
 global_args(
@@ -55,28 +55,25 @@ AppConfig = TypedDict(
     ),
     arg("--version", "-v", default=None, help="Update version in generated file"),
 )
-def generate(args, config: AppConfig):
+def generate(args, workspace: Workspace):
     """Saves the generated source file with features and classes"""
-    workspace = load_workspace(config, args.features)
-    for fonts in workspace.values():
-        for font in fonts:
-            if font.is_ephemeral:
-                continue
-            font.clear_opened_files()
-            if args.params:
-                for master in font.file.masters:
-                    names = []
-                    for param in master.customParameters:
-                        names.append(param.name)
-                    for name in names:
-                        del master.customParameters[name]
-            if args.version:
-                font.set_version(args.version)
-            if not args.dry_run:
-                font.save()
-            if args.calt_dump:
-                with open(font.name + "-calt.fea", mode="w", encoding="utf-8") as file:
-                    file.write(font.file.features["calt"].code)
+    for _, font in workspace.sources():
+        font.clear_opened_files()
+        font.clear_features()
+        if args.params:
+            for master in font.file.masters:
+                names = []
+                for param in master.customParameters:
+                    names.append(param.name)
+                for name in names:
+                    del master.customParameters[name]
+        if args.version:
+            font.set_version(args.version)
+        if not args.dry_run:
+            font.save()
+        if args.calt_dump:
+            with open(font.name + "-calt.fea", mode="w", encoding="utf-8") as file:
+                file.write(font.file.features["calt"].code)
     print("🟢 Font source successfully regenerated")
 
 
@@ -90,31 +87,29 @@ def generate(args, config: AppConfig):
         help="Not to delete the temporary folder after build",
     ),
 )
-async def build(args, config: FamilyConfig):
+async def build(args, workspace: Workspace):
     """Builds a binary font file"""
-    workspace = load_workspace(config, args.features)
-
-    formats = []
+    fmts = []
     for fmt in args.formats:
-        formats.append(FontFormat(fmt))
+        fmts.append(FontFormat(fmt))
 
     print("Building font binaries...")
-    build_tasks = []
-    for _, fonts in workspace.items():
-        files = [font.file for font in fonts]
-        build_tasks.append(build_family(files, args.output, formats))
+    build_tasks = [
+        build_family(fonts, args.output, fmts) for fonts in workspace.gs_fonts()
+    ]
     await asyncio.gather(*build_tasks)
     print("🟢 Font binaries successfully built")
 
 
 def load_font(args):
     config = FamilyConfig(args.config)
+    workspace = Workspace(config)
     if args.features is not None:
         forced = args.features.split(",")
         forced = map(lambda x: x.strip(), forced)
         forced = filter(lambda x: len(x) > 0, forced)
         args.features = list(forced)
-    return args, config
+    return args, workspace
 
 
 if __name__ == "__main__":
