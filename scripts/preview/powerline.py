@@ -1,17 +1,19 @@
 """Powerline preview"""
+
 from colored import Style, back, fore
 
 from .base import FeaturePreview
 
 PowerlineEntry = tuple[str, str]
 
-VC_BRANCH_CHAR = "\uE0A0"
-LN_CHAR = "\uE0A1"
-LOCK_CHAR = "\uE0A2"
-RIGHT_BLACK_ARROW_CHAR = "\uE0B0"
-RIGHT_ARROW_CHAR = "\uE0B1"
-LEFT_BLACK_ARROW_CHAR = "\uE0B2"
-LEFT_ARROW_CHAR = "\uE0B3"
+VC_BRANCH_CHAR = "\ue0a0"
+LN_CHAR = "\ue0a1"
+LOCK_CHAR = "\ue0a2"
+RIGHT_BLACK_ARROW_CHAR = "\ue0b0"
+RIGHT_ARROW_CHAR = "\ue0b1"
+LEFT_BLACK_ARROW_CHAR = "\ue0b2"
+LEFT_ARROW_CHAR = "\ue0b3"
+
 
 class PowerlineFeature(FeaturePreview):
     name = "Powerline"
@@ -30,12 +32,13 @@ class PowerlineFeature(FeaturePreview):
         self._print_glyph(LEFT_ARROW_CHAR, "Leftwards arrowhead")
 
     def _print_examples(self):
-        self._print_line([
-            ("grey_11", "~"),
-            ("grey_30", "Git/Lilex"),
-            ("grey_46", f'{VC_BRANCH_CHAR} dev'),
-        ])
-
+        self._print_line(
+            [
+                ("grey_11", "~"),
+                ("grey_30", "Git/Lilex"),
+                ("grey_46", f"{VC_BRANCH_CHAR} dev"),
+            ]
+        )
 
     def _print_line(self, entries: list[PowerlineEntry], right=True):
         line = ""
@@ -47,16 +50,16 @@ class PowerlineFeature(FeaturePreview):
             arrow_black = LEFT_BLACK_ARROW_CHAR
         for i, entry in enumerate(entries):
             (color, text) = entry
-            content = f' {text.replace("/", f" {arrow} ")} '
-            template = f'{back(color)}{fore("light_gray")}{content}'
+            content = f" {text.replace('/', f' {arrow} ')} "
+            template = f"{back(color)}{fore('light_gray')}{content}"
             if i == len(entries) - 1:
-                template += f'{Style.reset}'
+                template += f"{Style.reset}"
             else:
-                template += f'{back(entries[i+1][0])}'
-            template += f'{fore(color)}{arrow_black}'
+                template += f"{back(entries[i + 1][0])}"
+            template += f"{fore(color)}{arrow_black}"
             line += template
         print(line)
 
     def _print_glyph(self, glyph: str, name: str, width=30):
-        padding = ' ' * (width - len(name))
-        print(f'{fore("dark_gray")}{name}{Style.reset}{padding}{glyph}')
+        padding = " " * (width - len(name))
+        print(f"{fore('dark_gray')}{name}{Style.reset}{padding}{glyph}")

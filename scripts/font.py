@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
 """Lilex helper entrypoint"""
-import asyncio
-from argparse import BooleanOptionalAction
-from typing import TypedDict
 
+from argparse import BooleanOptionalAction
+
+import rich
 from arrrgs import arg, command, global_args, run
-from liblilex import (
-    FamilyConfig,
-    FontFormat,
-    GlyphsFont,
-    Workspace,
-    build_family,
-)
+from liblilex import FamilyConfig, FontBuildResult, FontFormat, build_family
+from utils.stopwatch import Stopwatch
 
 global_args(
     arg(
@@ -23,14 +18,11 @@ global_args(
         default=None,
         help="OpenType features that will be forced to be enabled",
     ),
-)
-
-AppConfig = TypedDict(
-    "AppConfig",
-    {
-        "output": str,
-        "fonts": list[GlyphsFont],
-    },
+    arg(
+        "--profiling",
+        action=BooleanOptionalAction,
+        help="Enable extra logging for profiling",
+    ),
 )
 
 
@@ -55,7 +47,7 @@ AppConfig = TypedDict(
     ),
     arg("--version", "-v", default=None, help="Update version in generated file"),
 )
-def generate(args, workspace: Workspace):
+def generate(args, workspace):
     """Saves the generated source file with features and classes"""
     for _, font in workspace.sources():
         font.clear_opened_files()
@@ -87,29 +79,32 @@ def generate(args, workspace: Workspace):
         help="Not to delete the temporary folder after build",
     ),
 )
-async def build(args, workspace: Workspace):
+async def build(args, config: FamilyConfig):
     """Builds a binary font file"""
-    fmts = []
+    formats = []
     for fmt in args.formats:
-        fmts.append(FontFormat(fmt))
+        formats.append(FontFormat(fmt))
 
-    print("Building font binaries...")
-    build_tasks = [
-        build_family(fonts, args.output, fmts) for fonts in workspace.gs_fonts()
-    ]
-    await asyncio.gather(*build_tasks)
-    print("🟢 Font binaries successfully built")
+    with Stopwatch("Building family fonts", args.profiling):
+        build_contexts = await build_family(
+            config,
+            formats,
+            output_dir=args.output,
+            cache_path="./.builder_cache",
+        )
+
+    rich.print(FontBuildResult(build_contexts, args.output))
 
 
 def load_font(args):
-    config = FamilyConfig(args.config)
-    workspace = Workspace(config)
+    with Stopwatch("Loading font config", args.profiling):
+        config = FamilyConfig(args.config)
     if args.features is not None:
         forced = args.features.split(",")
         forced = map(lambda x: x.strip(), forced)
         forced = filter(lambda x: len(x) > 0, forced)
         args.features = list(forced)
-    return args, workspace
+    return args, config
 
 
 if __name__ == "__main__":

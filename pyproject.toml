@@ -24,6 +24,7 @@ dependencies = [
     "shaperglot==1.2.0",
     "youseedee==0.7.0",
     "pyarrow==21.0.0",
+    "rich>=14.0.0",
 ]
 
 [tool.ruff]
