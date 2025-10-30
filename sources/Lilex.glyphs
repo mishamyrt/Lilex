@@ -1,6 +1,9 @@
 {
-.appVersion = "3306";
+.appVersion = "3428";
 .formatVersion = 3;
+DisplayStrings = (
+"/brevecomb.cyrl/brevecomb.cyrl"
+);
 axes = (
 {
 name = Weight;
@@ -174,13 +177,13 @@ value = (
 name = "Axis Mappings";
 value = {
 wght = {
-"100" = 100;
-"200" = 200;
-"300" = 300;
-"400" = 400;
-"500" = 500;
-"600" = 600;
-"700" = 700;
+100 = 100;
+200 = 200;
+300 = 300;
+400 = 400;
+500 = 500;
+600 = 600;
+700 = 700;
 };
 };
 }
@@ -1717,7 +1720,6 @@ iconName = Light;
 id = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1728,7 +1730,6 @@ pos = 698;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
@@ -1831,7 +1832,6 @@ value = 60;
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1842,7 +1842,6 @@ pos = 698;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
@@ -1952,7 +1951,6 @@ iconName = Bold;
 id = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1963,7 +1961,6 @@ pos = 698;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
@@ -63311,7 +63308,6 @@ alignment = -1;
 angle = 3;
 pos = (-243,-45);
 ref = tonos;
-scale = (1,1);
 }
 );
 width = 600;
@@ -79707,12 +79703,12 @@ unicode = 8232;
 },
 {
 glyphname = paragraphseparator;
-lastChange = "2024-05-07 13:37:23 +0000";
+lastChange = "2025-10-30 10:08:46 +0000";
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 vertWidth = 0;
-width = 0;
+width = 600;
 },
 {
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -111314,7 +111310,7 @@ width = 600;
 unicode = 94;
 },
 {
-glyphname = "infinity";
+glyphname = infinity;
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137607,7 +137603,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137640,7 +137635,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137673,7 +137667,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -137713,7 +137706,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137736,7 +137728,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137759,7 +137750,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -137788,7 +137778,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137805,7 +137794,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137822,7 +137810,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -137846,7 +137833,6 @@ layers = (
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -137863,7 +137849,6 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -137880,7 +137865,6 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
@@ -138037,7 +138021,7 @@ width = 600;
 {
 color = (153,251,255,255);
 glyphname = brevecomb.cyrl;
-lastChange = "2024-08-01 09:27:43 +0000";
+lastChange = "2025-10-30 10:08:49 +0000";
 layers = (
 {
 anchors = (
@@ -138071,7 +138055,7 @@ pos = (-300,0);
 ref = breve.cyrl;
 }
 );
-width = 0;
+width = 600;
 },
 {
 anchors = (
@@ -138088,7 +138072,7 @@ pos = (-300,0);
 ref = breve.cyrl;
 }
 );
-width = 0;
+width = 600;
 }
 );
 },
@@ -148164,11 +148148,9 @@ name = ExtraLight;
 weightClass = 200;
 },
 {
-active = 0;
 axesValues = (
 300
 );
-exports = 0;
 customParameters = (
 {
 name = panose;
@@ -148195,6 +148177,7 @@ instanceInterpolations = {
 "C7B35BE3-AA13-4B78-992E-F05F1268D666" = 0.33333;
 };
 name = Light;
+visible = 0;
 weightClass = 300;
 },
 {
@@ -148260,11 +148243,9 @@ name = Medium;
 weightClass = 500;
 },
 {
-active = 0;
 axesValues = (
 600
 );
-exports = 0;
 customParameters = (
 {
 name = panose;
@@ -148291,6 +148272,7 @@ instanceInterpolations = {
 "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F" = 0.33333;
 };
 name = SemiBold;
+visible = 0;
 weightClass = 600;
 },
 {
@@ -148325,8 +148307,6 @@ name = Bold;
 weightClass = 700;
 }
 );
-kerningLTR = {
-};
 metrics = (
 {
 type = ascender;
