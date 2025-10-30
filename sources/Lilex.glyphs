@@ -1,9 +1,6 @@
 {
 .appVersion = "3428";
 .formatVersion = 3;
-DisplayStrings = (
-"/brevecomb.cyrl/brevecomb.cyrl"
-);
 axes = (
 {
 name = Weight;
@@ -148303,6 +148300,7 @@ value = "--increase-x-height=0";
 instanceInterpolations = {
 "055264FC-C366-4C37-95B8-CB5161C9C36E" = 1;
 };
+isBold = 1;
 name = Bold;
 weightClass = 700;
 }
