@@ -16,7 +16,7 @@ VENV = . $(VENV_DIR)/bin/activate;
 
 define build-font
 	@$(VENV) python $(SCRIPTS_DIR)/font.py \
-		--config "sources/family_config.yaml" \
+		--config "sources/config.yaml" \
 		build $(1)
 endef
 
@@ -110,7 +110,7 @@ show: ## show CLI special symbols preview
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
 	@$(VENV) python $(SCRIPTS_DIR)/font.py \
-		--config "sources/family_config.yaml" \
+		--config "sources/config.yaml" \
 		generate
 
 .PHONY: build
