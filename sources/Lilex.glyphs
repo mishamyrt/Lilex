@@ -1,6 +1,9 @@
 {
 .appVersion = "3428";
 .formatVersion = 3;
+DisplayStrings = (
+"̨˛ĄĘĮǪŲąęįǫų/aogonek.alt01/idotlessogonek"
+);
 axes = (
 {
 name = Weight;
@@ -28230,7 +28233,7 @@ unicode = 333;
 },
 {
 glyphname = oogonek;
-lastChange = "2024-05-11 08:29:46 +0000";
+lastChange = "2025-10-30 10:43:29 +0000";
 layers = (
 {
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
@@ -28240,7 +28243,7 @@ ref = o;
 },
 {
 alignment = -1;
-pos = (81,0);
+pos = (79,0);
 ref = ogonek;
 }
 );
@@ -28254,7 +28257,7 @@ ref = o;
 },
 {
 alignment = -1;
-pos = (83,0);
+pos = (76,0);
 ref = ogonek;
 }
 );
