@@ -2,7 +2,7 @@
 .appVersion = "3428";
 .formatVersion = 3;
 DisplayStrings = (
-"̨˛ĄĘĮǪŲąęįǫų/aogonek.alt01/idotlessogonek"
+"ї"
 );
 axes = (
 {
@@ -52028,18 +52028,17 @@ unicode = 1110;
 },
 {
 glyphname = "yi-cy";
+lastChange = "2025-10-30 10:47:34 +0000";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 shapes = (
 {
-alignment = -1;
 ref = idotless;
 },
 {
-alignment = -1;
-pos = (32,0);
-ref = dieresis;
+pos = (332,0);
+ref = dieresiscomb;
 }
 );
 width = 600;
@@ -52048,13 +52047,11 @@ width = 600;
 layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 shapes = (
 {
-alignment = -1;
 ref = idotless;
 },
 {
-alignment = -1;
-pos = (32,0);
-ref = dieresis;
+pos = (332,0);
+ref = dieresiscomb;
 }
 );
 width = 600;
@@ -52063,13 +52060,11 @@ width = 600;
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 shapes = (
 {
-alignment = -1;
 ref = idotless;
 },
 {
-alignment = -1;
-pos = (32,0);
-ref = dieresis;
+pos = (332,0);
+ref = dieresiscomb;
 }
 );
 width = 600;
