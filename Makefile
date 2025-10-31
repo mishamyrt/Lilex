@@ -68,7 +68,7 @@ configure-preview: ## setup preview environment
 
 .PHONY: print-updates
 print-updates: ## print list of outdated packages
-	@$(VENV) pip list --outdated
+	@$(VENV) uv pip list --outdated
 	@cd preview; pnpm outdated
 
 .PHONY: check
