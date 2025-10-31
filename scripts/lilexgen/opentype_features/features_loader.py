@@ -39,7 +39,7 @@ class OpenTypeFeatures:
             calt_fea = GSFeature("calt", "")
 
         for fea in forced:
-            if fea == "calt" or fea == "aalt":
+            if fea in ("calt", "aalt"):
                 raise ValueError("calt and aalt features are not allowed to be forced")
             if fea not in self._features:
                 raise ValueError(f"Unknown feature: '{fea}'")
