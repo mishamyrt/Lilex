@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Italic dzeabkhasian-cy (`Ӡ`), questiondown (`¿`), equal_colon_equal.liga (`=:=`), equal_exclam_equal.liga (`=!=`) interpolation issue.
 - yi-cy (`ї`) accent position.
 - oogonek (`ǫ`) ogonek position.
+- Caps centering.
 
 ## [2.610] — September 05, 2025
 

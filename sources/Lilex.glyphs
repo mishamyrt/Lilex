@@ -1,5 +1,5 @@
 {
-.appVersion = "3428";
+.appVersion = "3434";
 .formatVersion = 3;
 axes = (
 {
@@ -1642,11 +1642,11 @@ value = 1150;
 },
 {
 name = typoAscender;
-value = 1025;
+value = 999;
 },
 {
 name = hheaAscender;
-value = 1025;
+value = 999;
 },
 {
 name = winDescent;
@@ -1654,11 +1654,11 @@ value = 427;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -301;
 },
 {
 name = typoDescender;
-value = -275;
+value = -301;
 },
 {
 name = typoLineGap;
@@ -1757,11 +1757,11 @@ value = 1150;
 },
 {
 name = typoAscender;
-value = 1025;
+value = 999;
 },
 {
 name = hheaAscender;
-value = 1025;
+value = 999;
 },
 {
 name = winDescent;
@@ -1769,11 +1769,11 @@ value = 427;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -301;
 },
 {
 name = typoDescender;
-value = -275;
+value = -301;
 },
 {
 name = typoLineGap;
@@ -1877,11 +1877,11 @@ value = 1150;
 },
 {
 name = typoAscender;
-value = 1025;
+value = 999;
 },
 {
 name = hheaAscender;
-value = 1025;
+value = 999;
 },
 {
 name = winDescent;
@@ -1889,11 +1889,11 @@ value = 427;
 },
 {
 name = hheaDescender;
-value = -275;
+value = -301;
 },
 {
 name = typoDescender;
-value = -275;
+value = -301;
 },
 {
 name = typoLineGap;
