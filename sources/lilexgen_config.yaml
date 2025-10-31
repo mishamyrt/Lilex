@@ -1,0 +1,2 @@
+featuresDir: ./opentype_features
+gftoolsConfig: ./config.yaml

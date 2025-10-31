@@ -484,7 +484,7 @@ wheels = [
 
 [[package]]
 name = "fontbakery"
-version = "1.0.1"
+version = "1.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beziers" },
@@ -508,9 +508,9 @@ dependencies = [
     { name = "uharfbuzz" },
     { name = "vharfbuzz" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7c/6f/9c69f9235e63c64c2cc1a1bdebc298141f06ce45bc6237b5706bc00f2cc3/fontbakery-1.0.1.tar.gz", hash = "sha256:38f39434acbbd2c9bf92aaf1462eb53237d0a7be0076a661e86b7ddcb765994d", size = 49799634 }
+sdist = { url = "https://files.pythonhosted.org/packages/af/ae/15d305fe5c850851a2dde3a4864f4b772bfcf80843b212da10ec7120a3d5/fontbakery-1.1.0.tar.gz", hash = "sha256:70b40d8eba64f26dd19b55410b814d181edefc4fa18c8a9c4ad1520ea7d5224e", size = 49801646 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/50/94/705b33005614da7a4fbbb32efcf03b088681a3b0a16f785d463c7bf6e22f/fontbakery-1.0.1-py3-none-any.whl", hash = "sha256:2047efe0e88bf0732e49a112ef769ca4e4d0f8ab3015e5cca9e3c3f32332ee64", size = 557613 },
+    { url = "https://files.pythonhosted.org/packages/0c/eb/1d25b791eae8de3f0b6d1e0b87bb41ba4539e0c06c4fcd899d510115740b/fontbakery-1.1.0-py3-none-any.whl", hash = "sha256:745064eb21f953c944a8ab0bd497547be9c47bfd3a2eb5522a6254ebf674de53", size = 561908 },
 ]
 
 [[package]]
@@ -855,7 +855,7 @@ requires-dist = [
     { name = "colored", specifier = "==2.3.1" },
     { name = "cu2qu", specifier = "==1.6.7.post2" },
     { name = "dehinter", specifier = "==4.0.0" },
-    { name = "fontbakery", specifier = "==1.0.1" },
+    { name = "fontbakery", specifier = "==1.1.0" },
     { name = "fontmake", specifier = "==3.11.0" },
     { name = "fonttools", specifier = "==4.60.1" },
     { name = "gftools", specifier = "==0.9.91" },

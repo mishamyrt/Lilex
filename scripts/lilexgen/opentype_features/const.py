@@ -4,7 +4,7 @@ SKIP_IGNORES = [
     # <<*>> <<+>> <<$>>
     ("less", "asterisk", "greater"),
     ("less", "plus", "greater"),
-    ("less", "dollar", "greater")
+    ("less", "dollar", "greater"),
 ]
 
 IGNORE_PREFIXES = [
@@ -23,10 +23,7 @@ IGNORES = {
         "slash' asterisk slash",
         "asterisk slash' asterisk",
     ],
-    ("asterisk", "slash"): [
-        "slash asterisk' slash",
-        "asterisk' slash asterisk"
-    ],
+    ("asterisk", "slash"): ["slash asterisk' slash", "asterisk' slash asterisk"],
     ("asterisk", "asterisk"): [
         "slash asterisk' asterisk",
         "asterisk' asterisk slash",
@@ -44,26 +41,14 @@ IGNORES = {
         "[less greater] colon' colon colon",
     ],
     # <||>
-    ("less", "bar", "bar"): [
-        "less' bar bar greater"
-    ],
-    ("bar", "bar", "greater"): [
-        "less bar' bar greater"
-    ],
+    ("less", "bar", "bar"): ["less' bar bar greater"],
+    ("bar", "bar", "greater"): ["less bar' bar greater"],
     # {|}
-    ("braceleft", "bar"): [
-        "braceleft' bar braceright"
-    ],
-    ("bar", "braceright"): [
-        "braceleft bar' braceright"
-    ],
+    ("braceleft", "bar"): ["braceleft' bar braceright"],
+    ("bar", "braceright"): ["braceleft bar' braceright"],
     # [|]
-    ("bracketleft", "bar"): [
-        "bracketleft' bar bracketright"
-    ],
-    ("bar", "bracketright"): [
-        "bracketleft bar' bracketright"
-    ],
+    ("bracketleft", "bar"): ["bracketleft' bar bracketright"],
+    ("bar", "bracketright"): ["bracketleft bar' bracketright"],
     # <*>>> <+>>> <$>>> >>->> >>=>> >>=
     ("greater", "greater"): [
         "[asterisk plus dollar] greater' greater",
@@ -83,9 +68,7 @@ IGNORES = {
         "less' less equal [equal less greater bar colon exclam slash]",
     ],
     # <<<*> <<<+> <<<$>
-    ("less", "less", "less"): [
-        "less' less less [asterisk plus dollar]"
-    ],
+    ("less", "less", "less"): ["less' less less [asterisk plus dollar]"],
     # =:=
     ("colon", "equal"): [
         "equal colon' equal",
@@ -95,7 +78,7 @@ IGNORES = {
         "equal exclam' equal",
     ],
     # =!==
-    ("exclam" "equal" "equal"): [
+    ("exclamequalequal"): [
         "equal exclam' equal equal",
     ],
     # =<= <=< <=> <=| <=: <=! <=/
@@ -147,22 +130,10 @@ IGNORES = {
 # Replacement ignore templates map
 # ignore sub
 IGNORE_TPL = {
-    2: [
-        "1  1' 2",
-        "1' 2  2"
-    ],
-    3: [
-        "1  1' 2  3",
-        "1' 2  3  3"
-    ],
-    4: [
-        "1  1' 2  3  4",
-        "1' 2  3  4  4"
-    ],
-    5: [
-        "1  1' 2  3  4",
-        "1' 2  3  4  4"
-    ]
+    2: ["1  1' 2", "1' 2  2"],
+    3: ["1  1' 2  3", "1' 2  3  3"],
+    4: ["1  1' 2  3  4", "1' 2  3  4  4"],
+    5: ["1  1' 2  3  4", "1' 2  3  4  4"],
 }
 
 
@@ -188,26 +159,30 @@ PRIORITIES = {
 # Replacement templates map
 # sub
 REPLACE_TPL = {
-    2: [
-        "1.spacer 2' by 1_2.liga",
-        "1'       2  by 1.spacer"
-    ],
+    2: ["1.spacer 2' by 1_2.liga", "1'       2  by 1.spacer"],
     3: [
         "1.spacer 2.spacer 3' by 1_2_3.liga",
         "1.spacer 2'       3  by 2.spacer",
-        "1'       2        3  by 1.spacer"
+        "1'       2        3  by 1.spacer",
     ],
     4: [
         "1.spacer 2.spacer 3.spacer 4' by 1_2_3_4.liga",
         "1.spacer 2.spacer 3'       4  by 3.spacer",
         "1.spacer 2'       3        4  by 2.spacer",
-        "1'       2        3        4  by 1.spacer"
+        "1'       2        3        4  by 1.spacer",
     ],
     5: [
         "1.spacer 2.spacer 3.spacer 4.spacer 5' by 1_2_3_4_5.liga",
         "1.spacer 2.spacer 3.spacer 4'       5  by 4.spacer",
         "1.spacer 2.spacer 3'       4        5  by 3.spacer",
         "1.spacer 2'       3        4        5  by 2.spacer",
-        "1'       2        3        4        5  by 1.spacer"
-    ]
+        "1'       2        3        4        5  by 1.spacer",
+    ],
+}
+
+NAME_TPL = {
+    "ss": ('featureNames {\n  name 3 1 0x0409 "$NAME";\n};\n'),
+    "cv": (
+        'cvParameters {\n  FeatUILabelNameID{\n    name 3 1 0x0409 "$NAME";\n  };\n};\n'
+    ),
 }

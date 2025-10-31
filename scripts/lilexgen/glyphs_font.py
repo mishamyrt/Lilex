@@ -11,7 +11,7 @@ from glyphsLib import (
     GSGlyph,
 )
 
-from .features import NAME_TPL, feature_prefix, name_from_code
+from .opentype_features import NAME_TPL, feature_prefix, name_from_code
 
 GlyphFilter = Callable[[GSGlyph], bool]
 

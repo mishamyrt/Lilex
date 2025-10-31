@@ -109,26 +109,25 @@ show: ## show CLI special symbols preview
 
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
-	@$(VENV) python $(SCRIPTS_DIR)/font.py \
-		--config "sources/config.yaml" \
+	@$(VENV) python $(SCRIPTS_DIR)/generate.py \
+		--config "sources/lilexgen_config.yaml" \
 		generate
 
 .PHONY: build
 build: ## build the font
 	@make clean-build
-	@$(call build-font)
-
-.PHONY: release 
-release:
-	@make clean-build
 	@$(VENV) cd sources; gftools builder config.yaml
-	cp -r fonts build
+
+.PHONY: release
+release: ## release the font
+	@make build
+	@rm -rf fonts
+	@cp -r build fonts
 
 .PHONY: release-notes
 release-notes:
-	echo $(ARGS)
-#	@mkdir -p ./$(BUILD_DIR)
-#	$(VENV) python ./scripts/changelog.py notes Next > "./$(BUILD_DIR)/release-notes.md"
+	@mkdir -p ./$(BUILD_DIR)
+	$(VENV) python ./scripts/changelog.py notes Next > "./$(BUILD_DIR)/release-notes.md"
 
 .PHONY: clean
 clean: ## clean up
