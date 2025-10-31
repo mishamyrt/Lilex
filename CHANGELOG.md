@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## Next
 
+### Added
+
+- OTF and WOFF2.
+
 ### Fixed
 
 - Italic dzeabkhasian-cy (`Ӡ`), questiondown (`¿`), equal_colon_equal.liga (`=:=`), equal_exclam_equal.liga (`=!=`) interpolation issue.
