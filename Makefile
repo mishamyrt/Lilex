@@ -120,7 +120,9 @@ build: ## build the font
 
 .PHONY: release 
 release:
-	@make build
+	@make clean-build
+	@$(VENV) cd sources; gftools builder config.yaml
+	cp -r fonts build
 
 .PHONY: release-notes
 release-notes:
