@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - yi-cy (`ї`) accent position.
 - oogonek (`ǫ`) ogonek position.
 - Caps centering.
+- Italic arrows (hyphen and equal) alignment.
 
 ## [2.610] — September 05, 2025
 
