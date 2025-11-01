@@ -15,6 +15,7 @@ global_args(
         default=None,
         help="OpenType features that will be forced to be enabled",
     ),
+    arg("--version", "-v", default=None, help="Update version in generated file"),
 )
 
 
@@ -25,7 +26,6 @@ global_args(
         action=BooleanOptionalAction,
         help="Clear masters custom parameters",
     ),
-    arg("--version", "-v", default=None, help="Update version in generated file"),
     root=True,
 )
 def generate(args, config: LilexGenConfig):
@@ -36,7 +36,7 @@ def generate(args, config: LilexGenConfig):
         forced = map(lambda x: x.strip(), forced)
         forced = filter(lambda x: len(x) > 0, forced)
         forced_features = list(forced)
-    regenerate_sources(config, forced_features)
+    regenerate_sources(config, forced_features, args.version)
     print("🟢 Font source successfully regenerated")
 
 

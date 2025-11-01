@@ -25,7 +25,7 @@ jobs:
 
     - name: Set version
       run: |
-        uv run scripts/font.py --config "sources/family_config.yaml" \
+        uv run scripts/generate.py \
           generate --version "${{ inputs.version }}"
 
     - name: Upload sources

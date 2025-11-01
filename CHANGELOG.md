@@ -15,7 +15,7 @@ All notable changes to this project will be documented in this file.
 - oogonek (`ǫ`) ogonek position.
 - Caps centering.
 - Italic arrows (hyphen and equal) alignment.
-- bar_bar_equal_middle (=||=) alignment
+- bar_bar_equal_middle (`=||=`) alignment
 
 ## [2.610] — September 05, 2025
 

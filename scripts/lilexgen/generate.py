@@ -8,12 +8,24 @@ from .config import FontDescriptor, LilexGenConfig
 from .opentype_features import OpenTypeFeatures
 
 
-def regenerate_sources(config: LilexGenConfig, forced_features: list[str] = None):
+def set_version(font: GSFont, version: str):
+    parts = version.split(".")
+    assert len(parts) == 2
+    font.versionMajor = int(parts[0])
+    font.versionMinor = int(parts[1])
+
+def regenerate_sources(
+    config: LilexGenConfig,
+    forced_features: list[str] = None,
+    version: str = None,
+):
     """Regenerates the sources for a font family"""
     loader = FontLoader(config, forced_features)
     for descriptor in config.fonts:
         font = loader.load(descriptor)
         output_path = os.path.join(config.dir, descriptor.name)
+        if version:
+            set_version(font, version)
         font.save(output_path)
 
 
