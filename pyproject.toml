@@ -19,6 +19,7 @@ dependencies = [
     "pylint==4.0.2",
     "colored==2.3.1",
     "fontbakery==1.1.0",
+    "shaperglot>=1.2.0",
 ]
 
 [tool.ruff]

@@ -842,6 +842,7 @@ dependencies = [
     { name = "pylint" },
     { name = "pyyaml" },
     { name = "ruff" },
+    { name = "shaperglot" },
 ]
 
 [package.metadata]
@@ -857,6 +858,7 @@ requires-dist = [
     { name = "pylint", specifier = "==4.0.2" },
     { name = "pyyaml", specifier = "==6.0.3" },
     { name = "ruff", specifier = "==0.14.3" },
+    { name = "shaperglot", specifier = ">=1.2.0" },
 ]
 
 [[package]]
@@ -1514,6 +1516,30 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz", hash = "sha256:f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c", size = 1319958 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a3/dc/17031897dae0efacfea57dfd3a82fdd2a2aeb58e0ff71b77b87e44edc772/setuptools-80.9.0-py3-none-any.whl", hash = "sha256:062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922", size = 1201486 },
+]
+
+[[package]]
+name = "shaperglot"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/8a/1c/3e7c3cb09fe9110df1aab09590504775367468effc4a24de1e5a50a4df5b/shaperglot-1.2.0.tar.gz", hash = "sha256:c750bed821111b041299a21589412f341387dd6daaaa2f84a1ba522003a29e2d", size = 37741 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8b/0a/66928226810fa643ba7ce60ef62446a77a8d227ad7c72b18bed4de813dfc/shaperglot-1.2.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:f28971d7da1e3edf215405b54435a4e75a4fb81bca5611763120fab2deef764f", size = 1715425 },
+    { url = "https://files.pythonhosted.org/packages/12/8f/85bdd81327fb00b6299559b9d95975db1436df514fdd27893bce9d68b4a4/shaperglot-1.2.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:c8dbedc69f0ea5ac0e53b7fe6157bda1e5ed8bafc5d0c04ee8ce873431ec83d9", size = 1717257 },
+    { url = "https://files.pythonhosted.org/packages/91/29/d6f0e37d7daf128498f042e0ed16a9e175e34d016d86602d692d313b93f5/shaperglot-1.2.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f92984c31362168d112afdac7fe2409eb4d9442143cd08e30fbe3ffa34f692e0", size = 1782652 },
+    { url = "https://files.pythonhosted.org/packages/77/84/86fadef2f3305ac16cdf03f6e329e097780c95a7ee379351d92a5e7d3cef/shaperglot-1.2.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:821f42e6b0832fa055569fe9131dff29646a1ec1a7d92284126f50ffa05e9851", size = 1779662 },
+    { url = "https://files.pythonhosted.org/packages/9b/e6/56b57f07b45c3f9f81cd252c5fd04cf64cf2360baaf34a5a77c0868f530e/shaperglot-1.2.0-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:83687a5320480aed304bab6cf8758e49ddf1fbd264c9ec579fce3215b7c445e2", size = 2208398 },
+    { url = "https://files.pythonhosted.org/packages/db/e9/c29608e082ca42507bdb7c836b92bbac4bc66aac756a1b08e3720044515e/shaperglot-1.2.0-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:470b10f4af7e695f8f75540eb787b30affca9cff19732bee6ca0825d288b7420", size = 1878218 },
+    { url = "https://files.pythonhosted.org/packages/4b/29/7ffec892a321bb70d0b0d38de7b0feeb10100324e1cd79b6cca6f4dd4185/shaperglot-1.2.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6139b403d3fa8338782dc23db7904161fafd7ddc61962f52c76416c7c33f2061", size = 1787446 },
+    { url = "https://files.pythonhosted.org/packages/af/f2/f0da08cfbb3f558923a47e697a5f07bc0cd27d8d40fa87b8d7b79e4af9b4/shaperglot-1.2.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:c37e6ea50fe6da617b573b268895a2a3b76561dc6c196af955c4e81fd8110b8c", size = 1869272 },
+    { url = "https://files.pythonhosted.org/packages/78/10/1121df0fd7c1625c7add4cf391d8cb9caef088c4a729ecc961ed01324adf/shaperglot-1.2.0-cp313-cp313-win32.whl", hash = "sha256:acacb743a225a2d8df85feefb6de538a5c9cd3d55fede02c224459432066fc10", size = 1509698 },
+    { url = "https://files.pythonhosted.org/packages/02/d0/8632e8936b21ad416f644e4533623b583d5cfaa370e7feca01525deb497b/shaperglot-1.2.0-cp313-cp313-win_amd64.whl", hash = "sha256:328d7b88cdb7cb019335b8030474f451bb97774663b0f4e6735ef919d1a88590", size = 1533159 },
+    { url = "https://files.pythonhosted.org/packages/97/ae/5929665c48243ebd565fd75dbd17c39c7819cbf687297290f8376468d88e/shaperglot-1.2.0-cp313-cp313t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:24b215e32776ef9bfb7f8f6b9a5d8c3b46f8298b235f235a1084c8a8c8c082ca", size = 1781908 },
+    { url = "https://files.pythonhosted.org/packages/c5/68/c5091d532f64d3c2a1ecb32796ca7e9addf45ef6ce3db5ddc8193d3149e5/shaperglot-1.2.0-cp313-cp313t-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:20cb7075f4fe61cc7d3cf64a6520a32fedb8fbeed224ac6be74d6479d2b7126f", size = 1777383 },
+    { url = "https://files.pythonhosted.org/packages/7a/69/ba2b1748d43b264fc140dd413ffe7791f85abc57e7391f8ac9176a58b602/shaperglot-1.2.0-cp313-cp313t-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:c712690f262f38b7874770c228ea1dbae5dbd09b127236418c71d25a2e4ca6b4", size = 2207697 },
+    { url = "https://files.pythonhosted.org/packages/d2/0d/852b8150158003d32dbf1a348101588f9074dcd774394272d5999668c13a/shaperglot-1.2.0-cp313-cp313t-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:82204564a3bb2df5d26da092606884d46596fac47b6fbcbe0682c157eb73a536", size = 1876276 },
+    { url = "https://files.pythonhosted.org/packages/f3/fe/735a417056fbb68b86379af9fe66d0bf733df274123ffa99e30dc9e16852/shaperglot-1.2.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:44358a5f8707a7c08fa9ee87a272cfcc0a394533e7407ff3f1dcd958e2e4e16f", size = 1787847 },
+    { url = "https://files.pythonhosted.org/packages/9a/c4/8a59b8f6b164f93f6b1505083c65b94d203848243e5eec83acc43605c470/shaperglot-1.2.0-cp314-cp314-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:81920b2276c3a6cb8d132e33ec962de541b83729fe542fab7e8c7ca7c4dc0720", size = 1869413 },
 ]
 
 [[package]]
