@@ -90,7 +90,7 @@ def release(args):
         changelog = file.read()
     release_heading = format_version_heading(args.version)
     changelog = changelog.replace("## Next", release_heading)
-    changelog += "\n" + format_version_url(args.version) + "\n"
+    changelog += format_version_url(args.version) + "\n"
     with open(args.output, mode="w", encoding="utf-8") as file:
         file.write(changelog)
     print("🟢 Changelog successfully written")
