@@ -78,14 +78,15 @@ const { title, alignExample = "block" } = Astro.props;
 		&-title {
 			grid-column: 1/5;
 			margin-bottom: var(--space-l);
-			transition: font-weight var(--transition-slow);
+			font-variation-settings: 'wght' var(--preview-heading-weight, 200) !important;
+			transition: font-variation-settings var(--transition-slow);
 
 			&._descriptionAligned {
 				grid-column: 1/8;
 			}
 
 			&._active {
-				font-weight: 700;
+				--preview-heading-weight: 700;
 			}
 		}
 

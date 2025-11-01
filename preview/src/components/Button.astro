@@ -1,30 +1,25 @@
 ---
-import Typography from './Typography.astro';
+import Typography from "./Typography.astro";
 
 export type Props<T extends "a" | "button" = "button"> = HTMLElementProps<T> & {
 	as?: T;
 	href: string;
 	class?: string;
-}
+};
 
-const {
-	as = "button",
-	class: className,
-	...props
-} = Astro.props;
+const { as = "button", class: className, ...props } = Astro.props;
 
 const Tag = as;
 ---
 
-<Tag
-	class:list={["button", className]}
-	{...props as any}
->
-	{Astro.slots.has("icon") && (
-		<div class="button-icon">
-			<slot name="icon" />
-		</div>
-	)}
+<Tag class:list={["button", className]} {...props as any}>
+	{
+		Astro.slots.has("icon") && (
+			<div class="button-icon">
+				<slot name="icon" />
+			</div>
+		)
+	}
 	<Typography as="span" variant="custom" color="custom">
 		<slot />
 	</Typography>
@@ -37,16 +32,21 @@ const Tag = as;
 		background-color: var(--color-background-action);
 		color: var(--color-background-primary);
 		font: var(--typography-heading-l);
+		font-variation-settings: "wght" var(--button-weight, 200) !important;
 		display: inline-flex;
 		align-items: center;
-		transition: background-color var(--transition-slow), font-weight var(--transition-slow);
+		transition:
+			background-color var(--transition-slow),
+			font-variation-settings var(--transition-slow);
 		text-decoration: none;
 		gap: var(--space-s);
 
 		&:hover {
 			background-color: var(--color-background-action-hover);
-			transition: background-color 0s, font-weight 0s;
-			font-weight: bold;
+			transition:
+				background-color 0s,
+				font-weight 0s;
+			--button-weight: 700;
 		}
 
 		&-icon {
@@ -60,4 +60,3 @@ const Tag = as;
 		}
 	}
 </style>
-
