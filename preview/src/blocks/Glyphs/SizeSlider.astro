@@ -1,0 +1,58 @@
+---
+import Slider from '../../components/Slider.astro';
+import Typography from '../../components/Typography.astro';
+import { $glyphsSize } from '../../stores/glyphs';
+
+export type Props = {
+	class?: string;
+};
+
+const { class: className, ...props } = Astro.props;
+---
+
+<div class:list={['sizeSlider', className]} {...props}>
+	<Typography variant="heading-s">Size</Typography>
+	<Slider
+		value={$glyphsSize.get()}
+		min={12}
+		max={80}
+		step={1}
+		class="size-slider"
+	/>
+</div>
+
+<script>
+	import { $glyphsSize, setGlyphsSize } from '../../stores/glyphs';
+
+	const sliders = document.querySelectorAll<HTMLInputElement>('.size-slider .slider-input');
+
+	if (!sliders.length) {
+		throw new Error('Slider element not found');
+	}
+
+	$glyphsSize.subscribe((size) => {
+		sliders.forEach((slider) => {
+			slider.value = String(size);
+		});
+	});
+
+	sliders.forEach((slider) => {
+		slider.addEventListener('input', () => setGlyphsSize(slider.valueAsNumber));
+	});
+</script>
+
+<style lang="scss">
+	.sizeSlider {
+		// display: flex;
+		// justify-content: space-between;
+	}
+
+	.size-slider {
+		margin-top: var(--space-s);
+	}
+
+	.size-slider-marks {
+		display: flex;
+		justify-content: space-between;
+	}
+</style>

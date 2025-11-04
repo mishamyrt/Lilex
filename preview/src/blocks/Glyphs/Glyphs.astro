@@ -1,11 +1,38 @@
 ---
-import LayoutBlock from '../../components/LayoutBlock.astro';
-import Stack from '../../components/Stack.astro';
-import Typography from '../../components/Typography.astro';
-import GlyphsRow from './GlyphsRow.astro';
-import ItalicSwitch from './ItalicSwitch.astro';
-import LigaturesRow from './LigaturesRow.astro';
-import WeightSlider from './WeightSlider.astro';
+import LayoutBlock from "../../components/LayoutBlock.astro";
+import Stack from "../../components/Stack.astro";
+import Typography from "../../components/Typography.astro";
+import GlyphsRow from "./GlyphsRow.astro";
+import ItalicSwitch from "./ItalicSwitch.astro";
+import LigaturesRow from "./LigaturesRow.astro";
+import Preview from "./Preview.astro";
+import SizeSlider from "./SizeSlider.astro";
+import WeightSlider from "./WeightSlider.astro";
+
+const glyphsCount = import.meta.env.PUBLIC_LILEX_GLYPHS_COUNT as string;
+
+/* spell-checker: disable */
+const glyphSets = {
+	latin: "AÁĂÆǼBCĈÇDÐĎEFGHĦỊIĮJKLMNŊOPQRSŞTUVWXYZabcdefghijklmnopqrstuvwxyz",
+	cyrillic:
+		"АӐӒӔБВГЃҐҒӶҔДЕҼҾӖЁЖҖӁЗҘӠИЙІЇКҚҜҞҠЛМНҢҤОПԤҦРСҪТҬҴУӮӰӲФҨѲХҲЦЧҶҸШЩЬЫӸЪѢѴЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя",
+	greek: "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρσςτυφχψω",
+	numbersAndPunctuation:
+		"012345678901234567890123456789½⅓⅔¼¾.,:;…!¡?¿•*#/-–—‚′'\"“„«»<>(){}[]",
+	symbols: "&¶§°ℓ‡℮№€₿¢₡¤$₫₽₴₭₤₺₦₱₹₪£₸₮₩¥∞Ω∆∏∑✓√∂µ‰",
+};
+/* spell-checker: enable */
+
+const previewText = `
+Big fuzzy koalas jump quickly when vexed.
+Jumping wizards vex bold, quirky foxes.
+
+Эй, жгучая фея, вздёрни шёлковый пух, целуй янтарь!
+Быстро фыркнув, ёж съел чужой жакет и упал.
+
+Ψάχνω ζωντανό φως, κι όμως βρέχω την ξύλινη γη.
+Ξανθιά ψυχή βλέπει φως και ζυγίζει όνειρα.
+`;
 ---
 
 <LayoutBlock theme="light" name="glyphs">
@@ -13,54 +40,201 @@ import WeightSlider from './WeightSlider.astro';
 		<div class="glyphs-headingWrapper">
 			<div class="glyphs-heading">
 				<Typography color="secondary">
-					Lilex contains 1444 glyphs. Available in sizes from Thin (100) to Bold
-					(700). Includes latin, cyrillic and greek.
+					{
+						`Lilex contains ${glyphsCount} glyphs. Available in sizes from Thin (100) to Bold
+					(700). Includes latin, cyrillic and greek.`
+					}
 				</Typography>
-				<WeightSlider class="glyphs-weightSlider" />
 				<ItalicSwitch class="glyphs-italicSwitch" />
+				<WeightSlider class="glyphs-weightSlider" />
+				<SizeSlider class="glyphs-sizeSlider" />
 			</div>
 		</div>
 		<Stack class="glyphs-features" gap="xl">
-			<GlyphsRow
-				title="Latin"
-				glyphs="AÁĂÆǼBCĈÇDÐĎEFGHĦỊIĮJKLMNŊOPQRSŞTUVWXYZabcdefghijklmnopqrstuvwxyz"
-			/>
-			<GlyphsRow
-				title="Кириллица"
-				glyphs="АӐӒӔБВГЃҐҒӶҔДЕҼҾӖЁЖҖӁЗҘӠИЙІЇКҚҜҞҠЛМНҢҤОПԤҦРСҪТҬҴУӮӰӲФҨѲХҲЦЧҶҸШЩЬЫӸЪѢѴЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюя"
-			/>
-			<GlyphsRow
-				title="Ελληνικά"
-				glyphs="ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρσςτυφχψω"
-			/>
+			<GlyphsRow title="Latin" glyphs={glyphSets.latin} />
+			<GlyphsRow title="Кириллица" glyphs={glyphSets.cyrillic} />
+			<GlyphsRow title="Ελληνικά" glyphs={glyphSets.greek} />
 			<GlyphsRow
 				title="Numbers & punctuation"
-				glyphs={`012345678901234567890123456789½⅓⅔¼¾.,:;…!¡?¿•*#/-–—‚′'"“„«»<>(){}[]`}
+				glyphs={glyphSets.numbersAndPunctuation}
 			/>
-			<GlyphsRow
-				title="Symbols"
-				glyphs="&¶§°ℓ‡℮№€₿¢₡¤$₫₽₴₭₤₺₦₱₹₪£₸₮₩¥∞Ω∆∏∑✓√∂µ‰"
-			/>
+			<GlyphsRow title="Symbols" glyphs={glyphSets.symbols} />
 			<LigaturesRow />
+			<div class="glyphs-previewSection">
+				<Preview text={previewText} />
+				<div class="preview-static-control">
+					<SizeSlider class="preview-slider" />
+				</div>
+			</div>
 		</Stack>
 	</div>
 </LayoutBlock>
 
 <script>
-	import { $isGlyphsItalicEnabled, $glyphsWeight } from '../../stores/glyphs';
+	import {
+		$isGlyphsItalicEnabled,
+		$glyphsWeight,
+		$glyphsSize,
+	} from "../../stores/glyphs";
 
-	const glyphsElement = document.querySelector<HTMLElement>('.glyphs');
+	const glyphsElement = document.querySelector<HTMLElement>(".glyphs");
 	if (!glyphsElement) {
-		throw new Error('Glyphs element not found');
+		throw new Error("Glyphs element not found");
+	}
+
+	const stickyHeading =
+		glyphsElement.querySelector<HTMLElement>(".glyphs-heading");
+	const previewSection = glyphsElement.querySelector<HTMLElement>(
+		".glyphs-previewSection"
+	);
+	const attachedSlider =
+		glyphsElement.querySelector<HTMLElement>(".glyphs-sizeSlider");
+	const staticControl = glyphsElement.querySelector<HTMLElement>(
+		".preview-static-control"
+	);
+
+	if (!stickyHeading || !previewSection || !attachedSlider || !staticControl) {
+		throw new Error("Glyphs size slider elements not found");
 	}
 
 	$isGlyphsItalicEnabled.subscribe((enabled) => {
-		glyphsElement.classList.toggle('glyphs-italic', enabled);
+		glyphsElement.classList.toggle("glyphs-italic", enabled);
 	});
 
 	$glyphsWeight.subscribe((weight) => {
-		glyphsElement.style.setProperty('--glyph-weight', String(weight));
+		glyphsElement.style.setProperty("--glyph-weight", String(weight));
 	});
+
+	const COMPACT_BREAKPOINT = 1250;
+
+	let staticIntersecting = false;
+	let scrollListenerAttached = false;
+	let layoutSyncScheduled = false;
+	let isAttached = false;
+	let pendingScrollEvaluation = false;
+	let stickyBottom = 0;
+	let previewTop = 0;
+	let staticHeight = 0;
+
+	const setAttachedState = (attached: boolean) => {
+		if (isAttached === attached) {
+			return;
+		}
+		isAttached = attached;
+		glyphsElement.classList.toggle("size-attached", isAttached);
+		previewSection.classList.toggle("size-attached", isAttached);
+	};
+
+	const getStickyBottom = () => {
+		const topOffset = parseFloat(getComputedStyle(stickyHeading).top || "0");
+		return stickyHeading.offsetHeight + topOffset;
+	};
+
+	const handleScroll = () => {
+		if (pendingScrollEvaluation) {
+			return;
+		}
+
+		pendingScrollEvaluation = true;
+		requestAnimationFrame(() => {
+			pendingScrollEvaluation = false;
+			if (window.innerWidth <= COMPACT_BREAKPOINT) {
+				setAttachedState(true);
+				return;
+			}
+
+			const staticTop = previewTop - window.scrollY;
+			const staticBottom = staticTop + staticHeight;
+
+			if (isAttached) {
+				setAttachedState(staticBottom <= stickyBottom);
+			} else {
+				setAttachedState(staticTop <= stickyBottom);
+			}
+		});
+	};
+
+	const attachScrollListener = () => {
+		if (scrollListenerAttached) {
+			return;
+		}
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		scrollListenerAttached = true;
+	};
+
+	const detachScrollListener = () => {
+		if (!scrollListenerAttached) {
+			return;
+		}
+
+		window.removeEventListener("scroll", handleScroll);
+		scrollListenerAttached = false;
+	};
+
+	const updateScrollBinding = () => {
+		if (window.innerWidth <= COMPACT_BREAKPOINT) {
+			detachScrollListener();
+			setAttachedState(true);
+			return;
+		}
+
+		if (staticIntersecting) {
+			attachScrollListener();
+			handleScroll();
+		} else {
+			detachScrollListener();
+		}
+	};
+
+	const runLayoutSync = () => {
+		layoutSyncScheduled = false;
+		const previewRect = previewSection.getBoundingClientRect();
+		stickyBottom = getStickyBottom();
+		previewTop = previewRect.top + window.scrollY;
+		staticHeight = staticControl.offsetHeight;
+
+		if (window.innerWidth <= COMPACT_BREAKPOINT) {
+			setAttachedState(true);
+			return;
+		}
+
+		handleScroll();
+		updateScrollBinding();
+	};
+
+	const scheduleLayoutSync = () => {
+		if (layoutSyncScheduled) {
+			return;
+		}
+
+		layoutSyncScheduled = true;
+		requestAnimationFrame(runLayoutSync);
+	};
+
+	$glyphsSize.subscribe((size) => {
+		glyphsElement.style.setProperty("--glyphs-size", `${size}px`);
+		scheduleLayoutSync();
+	});
+
+	const staticControlObserver = new IntersectionObserver((entries) => {
+		staticIntersecting = entries.some((entry) => entry.isIntersecting);
+		updateScrollBinding();
+	});
+	staticControlObserver.observe(staticControl);
+
+	window.addEventListener("resize", scheduleLayoutSync);
+
+	const stickyResizeObserver = new ResizeObserver(scheduleLayoutSync);
+	stickyResizeObserver.observe(stickyHeading);
+
+	const previewResizeObserver = new ResizeObserver(scheduleLayoutSync);
+	previewResizeObserver.observe(previewSection);
+
+	const staticResizeObserver = new ResizeObserver(scheduleLayoutSync);
+	staticResizeObserver.observe(staticControl);
+
+	scheduleLayoutSync();
 </script>
 
 <style lang="scss">
@@ -72,7 +246,8 @@ import WeightSlider from './WeightSlider.astro';
 		gap: var(--layout-column-gap);
 
 		&-weightSlider,
-		&-italicSwitch {
+		&-italicSwitch,
+		&-sizeSlider {
 			margin-top: var(--space-m);
 		}
 
@@ -94,6 +269,32 @@ import WeightSlider from './WeightSlider.astro';
 		grid-column: 5/13;
 	}
 
+	.glyphs-previewSection {
+		width: 100%;
+		position: relative;
+	}
+
+	.glyphs-sizeSlider {
+		display: none;
+	}
+
+	.glyphs.size-attached .glyphs-sizeSlider {
+		display: block;
+	}
+
+	.preview-static-control {
+		width: 37.5%;
+		position: absolute;
+		top: 0;
+		left: -50%;
+		padding-top: var(--space-m);
+	}
+
+	.glyphs-previewSection.size-attached .preview-static-control {
+		opacity: 0;
+		pointer-events: none;
+	}
+
 	@media (max-width: 1250px) {
 		.glyphs {
 			&-headingWrapper {
@@ -104,6 +305,15 @@ import WeightSlider from './WeightSlider.astro';
 				grid-column: 1/13;
 				margin-top: var(--space-xl);
 			}
+		}
+
+		.glyphs-sizeSlider {
+			display: block;
+			margin-top: var(--space-m);
+		}
+
+		.preview-static-control {
+			display: none;
 		}
 	}
 </style>

@@ -8,6 +8,7 @@ export type Props<T extends TagName = "p"> = HTMLElementProps<T> & {
 		| "heading-m"
 		| "heading-m_accent"
 		| "heading-m_bold"
+		| "heading-s"
 		| "heading-l"
 		| "heading-xl"
 		| "custom";
@@ -68,6 +69,9 @@ const Tag = as;
 		}
 		&.variant-heading-m_bold {
 			font: var(--typography-heading-m_bold);
+		}
+		&.variant-heading-s {
+			font: var(--typography-heading-s);
 		}
 		&.variant-heading-l {
 			font: var(--typography-heading-l);

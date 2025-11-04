@@ -1,31 +1,37 @@
 ---
-import Slider from '../../components/Slider.astro';
-import Typography from '../../components/Typography.astro';
-import { $glyphsWeight } from '../../stores/glyphs';
+import Slider from "../../components/Slider.astro";
+import Typography from "../../components/Typography.astro";
+import { $glyphsWeight } from "../../stores/glyphs";
+
+export type Props = {
+	class?: string;
+};
+
+const { class: className, ...props } = Astro.props;
 ---
 
-<Typography variant="heading-m">Weight</Typography>
-<Slider
-	value={$glyphsWeight.get()}
-	min={100}
-	max={700}
-	step={1}
-	class="weight-slider"
-/>
-<div class="weight-slider-marks">
-	<Typography as="div" variant="text-m">Thin</Typography>
-	<Typography as="div" variant="text-m">Bold</Typography>
+<div class={className} {...props}>
+	<Typography variant="heading-s">Weight</Typography>
+	<Slider
+		value={$glyphsWeight.get()}
+		min={100}
+		max={700}
+		step={1}
+		class="weight-slider"
+	/>
 </div>
 
 <script>
-	import { setGlyphsWeight } from '../../stores/glyphs';
+	import { setGlyphsWeight } from "../../stores/glyphs";
 
-	const slider = document.querySelector<HTMLInputElement>('.slider-input');
+	const slider = document.querySelector<HTMLInputElement>(
+		".weight-slider .slider-input"
+	);
 	if (!slider) {
-		throw new Error('Slider element not found');
+		throw new Error("Slider element not found");
 	}
 
-	slider.addEventListener('input', () => setGlyphsWeight(slider.valueAsNumber));
+	slider.addEventListener("input", () => setGlyphsWeight(slider.valueAsNumber));
 </script>
 
 <style lang="scss">

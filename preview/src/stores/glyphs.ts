@@ -10,6 +10,11 @@ export function setGlyphsItalicEnabled(enabled: boolean) {
 export const $glyphsWeight = atom(400);
 
 export function setGlyphsWeight(weight: number) {
-	console.log('setGlyphsWeight', weight)
 	$glyphsWeight.set(weight);
+}
+
+export const $glyphsSize = atom(24);
+
+export function setGlyphsSize(size: number) {
+	$glyphsSize.set(size);
 }
