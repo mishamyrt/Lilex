@@ -109,13 +109,8 @@ show: ## show CLI special symbols preview
 
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
-<<<<<<< HEAD
-	@$(VENV) python $(SCRIPTS_DIR)/font.py \
-		--config "sources/config.yaml" \
-=======
 	@$(VENV) python $(SCRIPTS_DIR)/generate.py \
 		--config "sources/lilexgen_config.yaml" \
->>>>>>> bc21f070d1326b5ce935695d3b5ebc48c88c2722
 		generate
 
 .PHONY: build
