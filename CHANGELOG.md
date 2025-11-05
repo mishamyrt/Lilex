@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Fixed
+
+- Italic rupee sign kink (`₹`)
+
 ## [2.620] — November 02, 2025
 
 ### Added
