@@ -1,6 +1,9 @@
 {
-.appVersion = "3434";
+.appVersion = "3428";
 .formatVersion = 3;
+DisplayStrings = (
+"₹"
+);
 axes = (
 {
 name = Weight;
@@ -133,13 +136,13 @@ value = (
 name = "Axis Mappings";
 value = {
 wght = {
-"100" = 100;
-"200" = 200;
-"300" = 300;
-"400" = 400;
-"500" = 500;
-"600" = 600;
-"700" = 700;
+100 = 100;
+200 = 200;
+300 = 300;
+400 = 400;
+500 = 500;
+600 = 600;
+700 = 700;
 };
 };
 }
@@ -1678,7 +1681,6 @@ value = -140;
 id = m001;
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1693,11 +1695,9 @@ pos = 516;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
-over = 0;
 pos = 9.5;
 },
 {
@@ -1852,7 +1852,6 @@ value = -140;
 id = m002;
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -1867,11 +1866,9 @@ pos = 516;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
-over = 0;
 pos = 9.5;
 },
 {
@@ -2027,7 +2024,6 @@ iconName = Bold;
 id = m003;
 metricValues = (
 {
-over = 0;
 pos = 780;
 },
 {
@@ -2042,11 +2038,9 @@ pos = 516;
 over = -12;
 },
 {
-over = 0;
 pos = -220;
 },
 {
-over = 0;
 pos = 9.5;
 },
 {
@@ -115141,7 +115135,7 @@ unicode = 8360;
 },
 {
 glyphname = rupeeIndian;
-lastChange = "2024-07-30 22:20:31 +0000";
+lastChange = "2025-11-05 14:30:56 +0000";
 layers = (
 {
 layerId = m001;
@@ -115247,11 +115241,11 @@ closed = 1;
 nodes = (
 (483,0,l),
 (316,263,l),
-(367,280,o),
-(407,310,o),
-(434,348,cs),
-(450,372,o),
-(461,398,o),
+(329,267,o),
+(341,273,o),
+(353,279,cs),
+(415,310,o),
+(454,362,o),
 (467,428,c),
 (593,428,l),
 (608,520,l),
@@ -118170,7 +118164,7 @@ width = 600;
 );
 },
 {
-glyphname = "infinity";
+glyphname = infinity;
 layers = (
 {
 layerId = m001;
@@ -145128,7 +145122,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m001;
@@ -145167,7 +145160,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m002;
@@ -145206,7 +145198,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m003;
@@ -145252,7 +145243,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m001;
@@ -145277,7 +145267,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m002;
@@ -145302,7 +145291,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m003;
@@ -145335,7 +145323,6 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m001;
@@ -145352,7 +145339,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m002;
@@ -145369,7 +145355,6 @@ width = 600;
 anchors = (
 {
 name = _bottom;
-pos = (0,0);
 }
 );
 layerId = m003;
@@ -145394,7 +145379,6 @@ layers = (
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = m001;
@@ -145411,7 +145395,6 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = m002;
@@ -145428,7 +145411,6 @@ width = 600;
 anchors = (
 {
 name = _bottomright;
-pos = (0,0);
 }
 );
 layerId = m003;
@@ -156247,8 +156229,6 @@ name = "Bold Italic";
 weightClass = 700;
 }
 );
-kerningLTR = {
-};
 metrics = (
 {
 type = ascender;
