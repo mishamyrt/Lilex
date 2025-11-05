@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import { fileLinker } from './file-linker.mjs';
 
-const FONTS_SOURCE = '../build/variable'
+const FONTS_SOURCE = '../build/webfonts'
 const FONTS_TARGET = './public/fonts'
 
 

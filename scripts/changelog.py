@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
 """Utility script release notes generation.
 
-Usage: release_notes.py <version>
+Usage:
+Print release notes for a given version:
+    changelog.py notes <version> [--input <path>]
+Write the changelog with selected version:
+    changelog.py release <version> [--input <path>] [--output <path>]
 """
 import datetime
 
 from arrrgs import arg, command, run
 
-NEXT_VERSION_HEADING = "Next"
 CHANGELOG_PATH = "CHANGELOG.md"
 REPO_URL = "https://github.com/mishamyrt/Lilex"
 
-def read_changelog() -> str:
-    with open(CHANGELOG_PATH, mode="r", encoding="utf-8") as file:
-        return file.read()
 
 def parse_version_heading(line: str) -> str:
+    """Parse well-formed version heading from the changelog.
+    "## [2.610] — September 05, 2025" -> "2.610"
+    """
     version = line[3:]
     if not version.startswith("["):
         return version
@@ -24,16 +27,25 @@ def parse_version_heading(line: str) -> str:
         return version
     return version[1:end]
 
+
 def format_version_heading(version: str) -> str:
+    """Format a well-formed version heading.
+    "2.610" -> "## [2.610] — September 05, 2025"
+    """
     timestamp = datetime.date.today().strftime("%B %d, %Y")
     release_heading = f"## [{version}] — {timestamp}"
     return release_heading
 
+
 def format_version_url(version: str) -> str:
     return f"[{version}]: {REPO_URL}/releases/tag/{version}"
 
-def collect_notes() -> dict[str, str]:
-    lines = read_changelog().split("\n")
+
+def collect_notes(changelog_path: str) -> dict[str, str]:
+    """Collects all version notes from the changelog"""
+    with open(changelog_path, mode="r", encoding="utf-8") as file:
+        changelog = file.read()
+    lines = changelog.split("\n")
     releases = {}
     version = ""
     notes = ""
@@ -49,37 +61,40 @@ def collect_notes() -> dict[str, str]:
         notes += line + "\n"
     return releases
 
+
 @command(
     arg("version", help="Version number"),
-    name="notes"
+    arg("--input", "-i", default=CHANGELOG_PATH, help="Input file"),
+    name="notes",
 )
-def print_notes(args):
-    """Saves the generated source file with features and classes"""
-    releases = collect_notes()
+def handle_notes(args):
+    """Prints selected version notes to the console"""
+    releases = collect_notes(args.input)
     if args.version not in releases:
         print(f"Version {args.version} not found")
         print("Available versions:")
         for version in releases:
             print(f"- {version}")
         return
-    for version, notes in releases.items():
-        if version == args.version:
-            print(notes)
+    print(releases[args.version])
+
 
 @command(
-    arg("version", help="Version number")
+    arg("version", help="Version number"),
+    arg("--input", "-i", default=CHANGELOG_PATH, help="Input file"),
+    arg("--output", "-o", default=CHANGELOG_PATH, help="Output file"),
 )
 def release(args):
-    """Regenerates the changelog with the new version"""
-    # May 10, 2024
-    timestamp = datetime.date.today().strftime("%B %d, %Y")
-    release_heading = f"## [{args.version}] — {timestamp}"
-    changelog = read_changelog()
-    changelog = changelog.replace(f"## {NEXT_VERSION_HEADING}", release_heading)
-    changelog += "\n" + format_version_url(args.version) + "\n"
-    with open(CHANGELOG_PATH, mode="w", encoding="utf-8") as file:
+    """Writes the changelog with selected version"""
+    with open(args.input, mode="r", encoding="utf-8") as file:
+        changelog = file.read()
+    release_heading = format_version_heading(args.version)
+    changelog = changelog.replace("## Next", release_heading)
+    changelog += format_version_url(args.version) + "\n"
+    with open(args.output, mode="w", encoding="utf-8") as file:
         file.write(changelog)
-    print("🟢 Changelog successfully updated")
+    print("🟢 Changelog successfully written")
+
 
 if __name__ == "__main__":
     run()

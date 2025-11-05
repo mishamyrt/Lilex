@@ -68,7 +68,7 @@ configure-preview: ## setup preview environment
 
 .PHONY: print-updates
 print-updates: ## print list of outdated packages
-	@$(VENV) pip list --outdated
+	@$(VENV) uv pip list --outdated
 	@cd preview; pnpm outdated
 
 .PHONY: check
@@ -109,24 +109,30 @@ show: ## show CLI special symbols preview
 
 .PHONY: generate
 generate: ## regenerate the font sources with classes and features
+<<<<<<< HEAD
 	@$(VENV) python $(SCRIPTS_DIR)/font.py \
 		--config "sources/config.yaml" \
+=======
+	@$(VENV) python $(SCRIPTS_DIR)/generate.py \
+		--config "sources/lilexgen_config.yaml" \
+>>>>>>> bc21f070d1326b5ce935695d3b5ebc48c88c2722
 		generate
 
 .PHONY: build
 build: ## build the font
 	@make clean-build
-	@$(call build-font)
+	@$(VENV) cd sources; gftools builder config.yaml
 
-.PHONY: release 
-release:
+.PHONY: release
+release: ## release the font
 	@make build
+	@rm -rf fonts
+	@cp -r build fonts
 
 .PHONY: release-notes
 release-notes:
-	echo $(ARGS)
-#	@mkdir -p ./$(BUILD_DIR)
-#	$(VENV) python ./scripts/changelog.py notes Next > "./$(BUILD_DIR)/release-notes.md"
+	@mkdir -p ./$(BUILD_DIR)
+	$(VENV) python ./scripts/changelog.py notes Next > "./$(BUILD_DIR)/release-notes.md"
 
 .PHONY: clean
 clean: ## clean up

@@ -1,4 +1,5 @@
 """Ligatures feature generator module"""
+
 from __future__ import annotations
 
 from re import sub
@@ -6,21 +7,36 @@ from re import sub
 from .const import IGNORE_TPL, IGNORES, PRIORITIES, REPLACE_TPL, SKIP_IGNORES
 
 
+def render_ligature_lookups(items: list[str]) -> str:
+    """Renders the list of ligatures in the OpenType feature"""
+    lookups = []
+    for name in items:
+        lookups.append(LigatureLookup(name))
+    lookups.sort(key=lambda x: (x.priority, -len(x.glyphs), x.name))
+    code = ""
+    for lookup in lookups:
+        code += f"{lookup}\n\n"
+    return code.rstrip()
+
+
 def _populate_tpl(templates: list[str], prefix: str) -> str:
     """Renders fea statements"""
     result = ""
     for value in templates:
         normalized_value = sub(" +", " ", value)
-        result += f'  {prefix} {normalized_value};\n'
+        result += f"  {prefix} {normalized_value};\n"
     return result
+
 
 def _populate_ignore(templates: list[str]) -> str:
     """Renders ignore sub statements"""
     return _populate_tpl(templates, "ignore sub")
 
+
 def _populate_sub(templates: list[str]) -> str:
     """Renders sub statements"""
     return _populate_tpl(templates, "sub")
+
 
 class LigatureLookup:
     ignores: list[str] = []
@@ -61,14 +77,3 @@ class LigatureLookup:
         for i, glyph in enumerate(self.glyphs):
             result = result.replace(str(i + 1), glyph)
         return result
-
-def render_ligatures(items: list[str]) -> str:
-    """Renders the list of ligatures in the OpenType feature"""
-    lookups = []
-    for name in items:
-        lookups.append(LigatureLookup(name))
-    lookups.sort(key=lambda x: (x.priority, -len(x.glyphs), x.name))
-    code = ""
-    for lookup in lookups:
-        code += f"{lookup}\n\n"
-    return code.rstrip()

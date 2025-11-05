@@ -9,3 +9,8 @@ __pycache__
 reports/
 .netlify
 /preview/.env
+
+# gftools build artifacts
+/sources/instance_ufos
+/sources/.ninja_log
+/sources/build.ninja

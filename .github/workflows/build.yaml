@@ -67,7 +67,7 @@ jobs:
         cp -r updated_sources/* sources/
 
     - name: Build
-      run: make build
+      run: make release
 
     - name: Check
       if: inputs.check

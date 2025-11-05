@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "^5.14.1",
+    "@astrojs/check": "^0.9.5",
+    "astro": "^5.15.3",
     "nanostores": "^1.0.1",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/node": "^24.6.1",
-    "sass": "^1.93.2"
+    "@types/node": "^24.9.2",
+    "sass": "^1.93.3"
   }
 }

@@ -73,12 +73,6 @@ Now run the command to build Lilex.
 make build
 ```
 
-or
-
-```sh
-./scripts/font.py build
-```
-
 ### Forced feature activation
 
 The builder gives you the ability to forcibly enable any font features. This works by moving their code to the calt. If the ligatures work, the selected features will also work.
@@ -86,5 +80,5 @@ The builder gives you the ability to forcibly enable any font features. This wor
 To do this, build the binaries from the source file with the features:
 
 ```sh
-./scripts/font.py --features 'ss01,zero' build
+./scripts/generate.py --features 'ss01,zero'
 ```
