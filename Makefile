@@ -88,7 +88,6 @@ check-sequential: clean-reports ## check each font file quality
 .PHONY: lint
 lint: ## check code quality
 	$(VENV) ruff check $(SCRIPTS_DIR)/
-	$(VENV) pylint $(SCRIPTS_DIR)/
 	cd preview; pnpm astro-check
 
 .PHONY: preview-env

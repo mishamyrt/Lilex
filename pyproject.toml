@@ -15,8 +15,6 @@ dependencies = [
     "fonttools==4.60.1",
     "cu2qu==1.6.7.post2",
     "gftools==0.9.95",
-    "ruff==0.14.3",
-    "pylint==4.0.2",
     "colored==2.3.1",
     "fontbakery==1.1.0",
     "shaperglot>=1.2.0",
@@ -24,11 +22,22 @@ dependencies = [
 
 [tool.ruff]
 lint.select = [
-    "E",  # pycodestyle errors
-    "W",  # pycodestyle warnings
-    "F",  # pyflakes
-    "I",  # isort
-    "B",  # flake8-bugbear
+    "F",        # Pyflakes rules
+    "W",        # PyCodeStyle warnings
+    "E",        # PyCodeStyle errors
+    "I",        # Sort imports properly
+    "UP",       # Warn if certain things can changed due to newer Python versions
+    "C4",       # Catch incorrect use of comprehensions, dict, list, etc
+    "FA",       # Enforce from __future__ import annotations
+    "ISC",      # Good use of string concatenation
+    "ICN",      # Use common import conventions
+    "RET",      # Good return practices
+    "SIM",      # Common simplification rules
+    "TID",      # Some good import practices
+    "TC",       # Enforce importing certain types in a TYPE_CHECKING block
+    "PTH",      # Use pathlib instead of os.path
+    "TD",       # Be diligent with TODO comments
+    "NPY",      # Some numpy-specific things
 ]
 lint.ignore = [
     "E501",  # line too long, handled by black
@@ -38,3 +47,8 @@ lint.ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.3",
+]

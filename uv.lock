@@ -841,8 +841,12 @@ dependencies = [
     { name = "glyphslib" },
     { name = "pylint" },
     { name = "pyyaml" },
-    { name = "ruff" },
     { name = "shaperglot" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "ruff" },
 ]
 
 [package.metadata]
@@ -857,9 +861,11 @@ requires-dist = [
     { name = "glyphslib", specifier = "==6.12.2" },
     { name = "pylint", specifier = "==4.0.2" },
     { name = "pyyaml", specifier = "==6.0.3" },
-    { name = "ruff", specifier = "==0.14.3" },
     { name = "shaperglot", specifier = ">=1.2.0" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ruff", specifier = ">=0.14.3" }]
 
 [[package]]
 name = "lxml"
