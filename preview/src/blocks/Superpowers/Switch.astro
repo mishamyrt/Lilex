@@ -12,8 +12,13 @@ const { class: className, ...props } = Astro.props;
 ---
 
 <div class:list={["superpowersSwitch", className]} {...props}>
-	<Stack justify="between" align="center" direction="row">
-		<Typography variant="heading-m_bold">Superpowers</Typography>
+	<Stack
+		class="superpowersSwitch-content"
+		justify="between"
+		align="center"
+		direction="row"
+	>
+		<Typography class="superpowersSwitch-text" variant="custom">Superpowers</Typography>
 		<Toggle
 			checked={$isSuperpowersEnabled.get()}
 			class="superpowersSwitch-toggle"
@@ -23,23 +28,95 @@ const { class: className, ...props } = Astro.props;
 </div>
 
 <script>
-	import { setSuperpowersEnabled } from "../../stores/superpowers";
+	import {
+		$isSuperpowersEnabled,
+		setSuperpowersEnabled,
+	} from "../../stores/superpowers";
 
-	const toggle = document.querySelector<HTMLInputElement>(
+	const switches =
+		document.querySelectorAll<HTMLDivElement>(".superpowersSwitch");
+	if (!switches) {
+		throw new Error("Switch element not found");
+	}
+
+	const toggles = document.querySelectorAll<HTMLInputElement>(
 		".superpowersSwitch-input"
 	);
-	if (!toggle) {
+	if (!toggles) {
 		throw new Error("Toggle element not found");
 	}
-	toggle.addEventListener("change", () =>
-		setSuperpowersEnabled(toggle.checked)
-	);
+
+	const invertToggle = () => {
+		setSuperpowersEnabled(!$isSuperpowersEnabled.get());
+	};
+
+	for (const switchNode of switches) {
+		switchNode.addEventListener("click", invertToggle);
+	}
+
+	for (const toggle of toggles) {
+		toggle.addEventListener("change", () =>
+			setSuperpowersEnabled(toggle.checked)
+		);
+		$isSuperpowersEnabled.subscribe((enabled) => {
+			toggle.checked = enabled;
+		});
+	}
 </script>
 
 <style lang="scss">
 	.superpowersSwitch {
-		&-toggle {
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+
+		&-text {
+			font: var(--typography-heading-m_accent);
+			-webkit-user-select: none;
+			-moz-user-select: none; 
+			user-select: none; 
+		}
+
+		&-content {
+			transition: background-color var(--transition-slow);
 			margin-top: 5px;
+		}
+	}
+
+	@media (max-width: 1250px) {
+		.superpowersSwitch {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: calc(100vw - (var(--space-layout) * 2));
+			transition: transform var(--transition-slow);
+
+			&-text {
+				font: var(--typography-text-m);
+				color: var(--color-content-primary);
+			}
+
+			&-toggle {
+				margin-left: var(--space-s);
+				margin-right: calc(((var(--space-m_plus) / 2) * -1) + 2px);
+			}
+
+			&-content {
+				background-color: var(--color-background-overlay);
+				backdrop-filter: blur(7px);
+				padding: var(--space-s_plus) var(--space-m_plus);
+				border-radius: 500px;
+				margin: 0 calc(var(--space-layout) * -1);
+				margin-top: var(--space-l);
+				width: fit-content;
+			}
+
+			&:active {
+				transform: scale(0.95);
+
+				.superpowersSwitch-content {
+					background-color: var(--color-background-overlay_active);
+				}
+			}
 		}
 	}
 </style>

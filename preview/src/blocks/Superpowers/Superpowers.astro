@@ -65,6 +65,7 @@ import Link from "../../components/Link.astro";
 				<PreviewPowerline slot="preview" />
 			</FeatureRow>
 		</Stack>
+		<Switch class="superpowers-switchMobile" />
 	</div>
 </LayoutBlock>
 
@@ -75,41 +76,6 @@ import Link from "../../components/Link.astro";
 	if (!switchElement) {
 		throw new Error("Switch element not found");
 	}
-	const headingText = document.querySelector<HTMLDivElement>(
-		".superpowers-headingText"
-	);
-	if (!headingText) {
-		throw new Error("Heading text element not found");
-	}
-
-	const headerSentinel = document.createElement("div");
-	headerSentinel.classList.add("superpowers-headerSentinel");
-
-	switchElement.parentNode?.insertBefore(headerSentinel, switchElement);
-
-	const updateSentinelPosition = () => {
-		const headingTextRect = headingText.getBoundingClientRect();
-		headerSentinel.style.position = "absolute";
-		const sentinelOffset =
-			headingTextRect.top + headingTextRect.height + window.scrollY;
-		headerSentinel.style.top = `${sentinelOffset}px`;
-	};
-
-	updateSentinelPosition();
-	window.addEventListener("resize", updateSentinelPosition);
-
-	const observer = new IntersectionObserver(
-		([entry]) => {
-			const isSticky = !entry.isIntersecting && entry.intersectionRect.y <= 0;
-			switchElement.classList.toggle("_sticky", isSticky);
-		},
-		{
-			threshold: 0,
-			rootMargin: "0px 0px 0px 0px",
-		}
-	);
-
-	observer.observe(headerSentinel);
 </script>
 
 <style lang="scss">
@@ -122,8 +88,10 @@ import Link from "../../components/Link.astro";
 
 		&-switch {
 			margin-top: var(--space-m);
-			border-bottom: 1px solid transparent;
-			transition: border-color 0.3s ease-in-out;
+		}
+
+		&-switchMobile {
+			display: none;
 		}
 
 		&-feature {
@@ -171,14 +139,9 @@ import Link from "../../components/Link.astro";
 
 	@media (max-width: 1250px) {
 		.superpowers {
-			&-headingWrapper {
-				display: contents;
-			}
-
 			&-heading {
-				display: contents;
-				position: relative;
-
+				display: grid;
+				grid-template-columns: repeat(12, 1fr);
 				p {
 					grid-column: 1/6;
 				}
@@ -193,18 +156,13 @@ import Link from "../../components/Link.astro";
 			}
 
 			&-switch {
-				position: sticky;
-				top: 0;
-				background: transparent;
-				grid-column: 1 / 13;
-				backdrop-filter: blur(8px);
-				margin: 0 calc(var(--space-layout) * -1);
-				padding: var(--space-s) var(--space-layout);
-				z-index: 1;
+				display: none;
+			}
 
-				&._sticky {
-					border-bottom: 1px solid rgba(255, 255, 255, 8%);
-				}
+			&-switchMobile {
+				display: flex;
+				position: sticky;
+				bottom: calc(var(--space-layout) * 2);
 			}
 
 			&-features {
@@ -213,6 +171,18 @@ import Link from "../../components/Link.astro";
 			}
 		}
 	}
+
+	// @media (max-width: 1050px) {
+	// 	.superpowers {
+	// 		&-heading {
+	// 			display: grid;
+	// 			grid-template-columns: repeat(12, 1fr);
+	// 			p {
+	// 				grid-column: 1/5;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	@media (max-width: 900px) {
 		.superpowers {
@@ -223,6 +193,14 @@ import Link from "../../components/Link.astro";
 	}
 
 	@media (max-width: 800px) {
+		.superpowers {
+			&-heading p {
+				grid-column: 1/7;
+			}
+		}
+	}
+
+	@media (max-width: 700px) {
 		.superpowers {
 			&-heading p {
 				grid-column: 1/8;
