@@ -27,14 +27,16 @@ All of the active development work for the next release will take place in the `
 Here is how to contribute back some code, documentation or design:
 
 1. Fork repo;
-2. Install the dependencies: `make configure`. This command will require you to have [uv](https://docs.astral.sh/uv/) installed.
+2. Install the dependencies and setup hooks:
+    1. If you are planning to work on the font sources, run `make configure`. This command will require you to have [uv](https://docs.astral.sh/uv/) installed.
+    2. If you are planning to work on the preview website, also run `make configure-preview`. This command will require you to have [pnpm](https://pnpm.io/) installed.
 3. Create a feature branch off of the `master` branch;
 4. Make some useful changes;
-5. Verify the changes:
-   1. If code changes are made, run `make lint` to check for errors;
-   2. If font sources are changed, run `make build` to build the fonts and `make check` to check the fonts;
-   3. If the website is changed, run `make build-preview` to build the preview and `make preview` to run the preview.
-6. Submit a pull request against the `master` branch;
+5. Verify the changes.
+    - If font sources are changed, run `make build` to build the fonts and `make check` to check the fonts;
+    - If the website is changed, run `make build-preview`.
+6. Commit the changes. Repository hooks will automatically run `make generate` to regenerate normalized font sources and linting to check for code errors.
+7. Submit a pull request against the `master` branch;
 
 Please rebase (not merge) from the `master` branch if your PR needs to incorporate changes that occurred after your feature branch was created.
 
