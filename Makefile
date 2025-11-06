@@ -55,6 +55,7 @@ configure: ## setup build environment
 	@uv venv --python $(PYTHON_VERSION)
 	@uv sync
 	@uv run youseedee A > /dev/null
+	uv tool run lefthook install
 
 .PHONY: configure
 configure-preview: ## setup preview environment

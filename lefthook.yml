@@ -1,0 +1,23 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: regenerate font sources
+      stage_fixed: true
+      glob:
+        - sources/**/*
+        - sources/*
+      run: make generate
+
+    - name: lint python code
+      stage_fixed: true
+      glob:
+        - scripts/**/*.py
+        - scripts/*.py
+      run: make format-py
+
+    - name: lint preview website code
+      stage_fixed: true
+      glob:
+        - preview/**/*
+        - preview/*
+      run: make format-preview

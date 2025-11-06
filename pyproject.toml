@@ -34,7 +34,6 @@ lint.select = [
     "RET",      # Good return practices
     "SIM",      # Common simplification rules
     "TID",      # Some good import practices
-    "TC",       # Enforce importing certain types in a TYPE_CHECKING block
     "PTH",      # Use pathlib instead of os.path
     "TD",       # Be diligent with TODO comments
     "NPY",      # Some numpy-specific things
@@ -48,7 +47,3 @@ lint.ignore = [
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
 
-[dependency-groups]
-dev = [
-    "ruff>=0.14.3",
-]
