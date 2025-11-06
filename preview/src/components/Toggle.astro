@@ -7,7 +7,14 @@ export type Props = {
 	inputClass?: string;
 };
 
-const { name, value, checked, inputClass, class: className, ...props } = Astro.props;
+const {
+	name,
+	value,
+	checked,
+	inputClass,
+	class: className,
+	...props
+} = Astro.props;
 ---
 
 <div class:list={["toggle", className]} {...props}>
@@ -23,10 +30,15 @@ const { name, value, checked, inputClass, class: className, ...props } = Astro.p
 <style lang="scss">
 	.toggle {
 		--toggle-border-size: 1px;
-		--toggle-width: calc(var(--space-s) * 5);
-		--toggle-height: calc(var(--space-s) * 3);
+		--toggle-base-size: 8px;
+		--toggle-width: calc(var(--toggle-base-size) * 5);
+		--toggle-height: calc(var(--toggle-base-size) * 3);
+		--toggle-border-radius: calc(var(--toggle-height) / 2);
 		--knob-gap: 3px;
-		--knob-size: calc(var(--toggle-height) - (var(--knob-gap) * 2));
+		--knob-height: calc(var(--toggle-height) - (var(--knob-gap) * 2));
+		--knob-width: calc(var(--knob-height) * 1);
+		--knob-border-radius: calc(var(--toggle-border-radius) - var(--knob-gap));
+
 		position: relative;
 		width: var(--toggle-width);
 		height: var(--toggle-height);
@@ -46,15 +58,11 @@ const { name, value, checked, inputClass, class: className, ...props } = Astro.p
 				width: var(--toggle-width);
 				height: var(--toggle-height);
 				display: block;
-				border-radius: 200px;
+				border-radius: var(--toggle-border-radius);
 				transition:
 					background-color var(--transition-slow),
 					box-shadow var(--transition-slow);
-				background-color: transparent;
-				outline: inset 0 0 1px transparent;
-				box-shadow:
-					0 0 0 transparent,
-					inset 0 0 0 var(--toggle-border-size) var(--color-content-secondary);
+				background-color: var(--color-content-dimmed);
 			}
 
 			&::after {
@@ -62,25 +70,29 @@ const { name, value, checked, inputClass, class: className, ...props } = Astro.p
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: var(--knob-size);
-				height: var(--knob-size);
+				width: var(--knob-width);
+				height: var(--knob-height);
 				transform: translate(var(--knob-gap), var(--knob-gap));
 				display: block;
-				transition: transform var(--transition-slow), width var(--transition-slow), height var(--transition-slow);
-				background-color: white;
-				border-radius: 50%;
+				transition:
+					transform var(--transition-slow),
+					width var(--transition-slow),
+					height var(--transition-slow);
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+				background-color: rgba(255, 255, 255, 0.95);
+				border-radius: var(--knob-border-radius);
 			}
 
 			&:checked {
-				&::before{
+				&::before {
 					background-color: var(--color-background-success);
-					box-shadow:
-						0 2px 30px -11px var(--color-background-success),
-						inset 0 0 0 var(--toggle-border-size) var(--color-content-secondary);
+					// box-shadow:
+					// 	0 2px 30px -11px var(--color-background-success),
+					// 	inset 0 0 0 var(--toggle-border-size) var(--color-content-secondary);
 				}
 				&::after {
 					transform: translate(
-						calc(var(--toggle-width) - var(--knob-size) - var(--knob-gap)),
+						calc(var(--toggle-width) - var(--knob-width) - var(--knob-gap)),
 						var(--knob-gap)
 					);
 				}
