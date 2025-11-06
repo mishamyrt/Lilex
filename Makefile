@@ -14,13 +14,7 @@ OS := $(shell uname)
 VENV_DIR = ./.venv
 VENV = . $(VENV_DIR)/bin/activate;
 
-define build-font
-	@$(VENV) python $(SCRIPTS_DIR)/font.py \
-		--config "sources/config.yaml" \
-		build $(1)
-endef
-
-define check-static-dir 
+define check-static-dir
 	$(VENV) fontbakery check-$(2) \
 		--auto-jobs \
 		--full-lists \
@@ -85,9 +79,12 @@ check-sequential: clean-reports ## check each font file quality
 	@$(call check-ttf-file,"Thin","googlefonts")
 	@$(call check-variable-dir,"variable","googlefonts")
 		
-.PHONY: lint
-lint: ## check code quality
-	$(VENV) ruff check $(SCRIPTS_DIR)/
+.PHONY: lint-py
+lint-py: ## check font builder code quality
+	uv tool run ruff check --fix $(SCRIPTS_DIR)/
+
+.PHONY: lint-preview
+lint-preview: ## check preview website code quality
 	cd preview; pnpm astro-check
 
 .PHONY: preview-env
@@ -141,14 +138,6 @@ clean-build: ## clean up build artifacts
 clean-reports: ## clean up reports
 	@rm -rf "$(REPORTS_DIR)"
 	@mkdir "$(REPORTS_DIR)"
-
-.PHONY: ttf
-ttf: ## build ttf font
-	$(call build-font,ttf)
-
-.PHONY: otf
-otf: ## build otf font
-	$(call build-font,otf)
 
 .PHONY: variable
 variable: ## build variable font

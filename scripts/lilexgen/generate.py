@@ -1,6 +1,7 @@
 """Font loader"""
+from __future__ import annotations
 
-import os
+from pathlib import Path
 
 from glyphsLib import GSFont
 
@@ -8,7 +9,7 @@ from .config import FontDescriptor, LilexGenConfig
 from .opentype_features import OpenTypeFeatures
 
 
-def set_version(font: GSFont, version: str):
+def _set_version(font: GSFont, version: str):
     parts = version.split(".")
     assert len(parts) == 2
     font.versionMajor = int(parts[0])
@@ -23,15 +24,17 @@ def regenerate_sources(
     loader = FontLoader(config, forced_features)
     for descriptor in config.fonts:
         font = loader.load(descriptor)
-        output_path = os.path.join(config.dir, descriptor.name)
+        output_path = config.dir / descriptor.name
         if version:
-            set_version(font, version)
+            _set_version(font, version)
         font.save(output_path)
 
 
 class FontLoader:
+    """Font loader"""
+
     _cache: dict[str, GSFont]
-    _dir: str
+    _dir: Path
     _features: OpenTypeFeatures
 
     def __init__(
@@ -45,11 +48,12 @@ class FontLoader:
         self._features = OpenTypeFeatures(config.features_dir, forced_features)
 
     def load(self, descriptor: FontDescriptor) -> GSFont:
+        """Loads a font from a descriptor"""
         if descriptor.name in self._cache.values():
             return self._cache[descriptor.name]
 
-        source_path = os.path.join(self._dir, descriptor.name)
-        font = GSFont(source_path)
+        source_path = self._dir / descriptor.name
+        font = GSFont(source_path.as_posix())
         self._features.inject(font)
         self._cache[descriptor.name] = font
         return font

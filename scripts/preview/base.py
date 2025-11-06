@@ -1,9 +1,12 @@
 """Feature preview base"""
+from __future__ import annotations
+
 from colored import Style
 
 
-class FeaturePreview():
+class FeaturePreview:
     """Feature preview baseclass"""
+
     name: str = ""
 
     def __init__(self) -> None:
@@ -12,7 +15,9 @@ class FeaturePreview():
     def show(self):
         """Prints feature"""
 
+
 def print_features(features: list[FeaturePreview]):
+    """Prints given feature previews"""
     for fea in features:
-        print(f'{Style.BOLD}{fea.name}{Style.reset}')
+        print(f"{Style.BOLD}{fea.name}{Style.reset}")
         fea.show()

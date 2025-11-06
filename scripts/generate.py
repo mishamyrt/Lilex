@@ -33,7 +33,7 @@ def generate(args, config: LilexGenConfig):
     forced_features = None
     if args.features is not None:
         forced = args.features.split(",")
-        forced = map(lambda x: x.strip(), forced)
+        forced = [x.strip() for x in forced]
         forced = filter(lambda x: len(x) > 0, forced)
         forced_features = list(forced)
     regenerate_sources(config, forced_features, args.version)

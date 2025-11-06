@@ -7,7 +7,10 @@ Print release notes for a given version:
 Write the changelog with selected version:
     changelog.py release <version> [--input <path>] [--output <path>]
 """
+from __future__ import annotations
+
 import datetime
+from pathlib import Path
 
 from arrrgs import arg, command, run
 
@@ -28,22 +31,21 @@ def parse_version_heading(line: str) -> str:
     return version[1:end]
 
 
-def format_version_heading(version: str) -> str:
+def _format_version_heading(version: str) -> str:
     """Format a well-formed version heading.
     "2.610" -> "## [2.610] — September 05, 2025"
     """
     timestamp = datetime.date.today().strftime("%B %d, %Y")
-    release_heading = f"## [{version}] — {timestamp}"
-    return release_heading
+    return f"## [{version}] — {timestamp}"
 
 
-def format_version_url(version: str) -> str:
+def _format_version_url(version: str) -> str:
     return f"[{version}]: {REPO_URL}/releases/tag/{version}"
 
 
-def collect_notes(changelog_path: str) -> dict[str, str]:
+def collect_notes(changelog_path: Path) -> dict[str, str]:
     """Collects all version notes from the changelog"""
-    with open(changelog_path, mode="r", encoding="utf-8") as file:
+    with changelog_path.open(encoding="utf-8") as file:
         changelog = file.read()
     lines = changelog.split("\n")
     releases = {}
@@ -86,12 +88,15 @@ def handle_notes(args):
 )
 def release(args):
     """Writes the changelog with selected version"""
-    with open(args.input, mode="r", encoding="utf-8") as file:
+    input_path = Path(args.input)
+    with input_path.open(encoding="utf-8") as file:
         changelog = file.read()
-    release_heading = format_version_heading(args.version)
+    release_heading = _format_version_heading(args.version)
     changelog = changelog.replace("## Next", release_heading)
-    changelog += format_version_url(args.version) + "\n"
-    with open(args.output, mode="w", encoding="utf-8") as file:
+    changelog += _format_version_url(args.version) + "\n"
+
+    output_path = Path(args.output)
+    with output_path.open(mode="w", encoding="utf-8") as file:
         file.write(changelog)
     print("🟢 Changelog successfully written")
 

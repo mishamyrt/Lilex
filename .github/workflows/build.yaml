@@ -47,6 +47,14 @@ jobs:
       if: inputs.preview
       run: make configure-preview
 
+    - name: Lint builder
+      if: inputs.check
+      run: make lint-py
+
+    - name: Lint preview
+      if: inputs.preview && inputs.check
+      run: make lint-preview
+
     - name: Check if sources are available
       uses: LIT-Protocol/artifact-exists-action@v0
       id: check_sources
@@ -72,10 +80,6 @@ jobs:
     - name: Check
       if: inputs.check
       run: make check-sequential
-
-    - name: Lint
-      if: inputs.preview && inputs.check
-      run: make lint
       
     - name: Build preview
       if: inputs.preview

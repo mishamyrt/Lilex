@@ -1,4 +1,5 @@
 """Spacer generator"""
+from __future__ import annotations
 
 from glyphsLib import GSFont, GSGlyph
 

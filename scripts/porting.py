@@ -3,8 +3,10 @@
 I want Italic to have all the same features as a roman font,
 this script will allow to control progress
 """
+from __future__ import annotations
+
 import json
-from os import makedirs
+from pathlib import Path
 
 from arrrgs import arg, command, global_args, run
 from glyphsLib import GSFont
@@ -34,7 +36,7 @@ def progress(args):
     missing_glyphs = _find_missing_glyphs()
     snapshot_path = f"{args.snapshot_dir}/missing_glyphs.json"
 
-    with open(snapshot_path, mode="r", encoding="utf-8") as file:
+    with Path(snapshot_path).open("r", encoding="utf-8") as file:
         stored_glyphs = json.load(file)
 
     diff = len(stored_glyphs) - len(missing_glyphs)
@@ -90,8 +92,8 @@ def progress(args):
 def snapshot(args):
     """Dumps missing glyphs"""
     glyphs = _find_missing_glyphs()
-    makedirs(args.snapshot_dir, exist_ok=True)
-    with open(f"{args.snapshot_dir}/missing_glyphs.json", mode="w", encoding="utf-8") as file:
+    Path(args.snapshot_dir).mkdir(parents=True, exist_ok=True)
+    with Path(f"{args.snapshot_dir}/missing_glyphs.json").open("w", encoding="utf-8") as file:
         json.dump(glyphs, file)
     print(f"Missing glyphs saved to {args.snapshot_dir}/missing_glyphs.json")
 

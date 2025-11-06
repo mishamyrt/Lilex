@@ -3,10 +3,11 @@
 Uses names from the Glyphs database and replaces names like "uni04B5"
 with human-readable names like "tetsecyrillic"
 """
+from __future__ import annotations
 
-import os
 import sys
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 import requests
 from glyphsLib import GSComponent, GSFont, GSGlyph
@@ -21,11 +22,11 @@ Rename = tuple[str, str]
 
 def _get_glyph_names():
     """Get names from the Glyphs database"""
-    os.makedirs(GLYPHS_DATA_DIR, exist_ok=True)
-    if GLYPHS_DATA_FILE not in os.listdir(GLYPHS_DATA_DIR):
+    Path(GLYPHS_DATA_DIR).mkdir(parents=True, exist_ok=True)
+    if GLYPHS_DATA_FILE not in Path(GLYPHS_DATA_DIR).iterdir():
         print(f"Downloading data from {GLYPHS_DATA_URL}...")
         response = requests.get(GLYPHS_DATA_URL, timeout=10)
-        with open(GLYPHS_DATA_PATH, mode="wb") as file:
+        with Path(GLYPHS_DATA_PATH).open("wb") as file:
             file.write(response.content)
     else:
         print("Using cached data")

@@ -1,12 +1,13 @@
 """Generate .env file for the preview site."""
 
 import re
+from pathlib import Path
 
 from arrrgs import arg, command, run
 from fontTools.ttLib import TTFont
 
 
-def find_version_in_name_table(font):
+def _find_version_in_name_table(font):
     version_string = ""
     for record in font["name"].names:
         if record.nameID == 5:
@@ -34,7 +35,7 @@ def generate(args):
     """Generate .env file for the preview site."""
 
     font = TTFont(args.font_path)
-    version = find_version_in_name_table(font)
+    version = _find_version_in_name_table(font)
 
     if not version:
         version_number = font["head"].fontRevision
@@ -42,7 +43,7 @@ def generate(args):
 
     glyphs_count = len(font.getGlyphOrder())
 
-    with open(args.output_path, "w", encoding="utf-8") as f:
+    with Path(args.output_path).open("w", encoding="utf-8") as f:
         f.write(f"PUBLIC_LILEX_VERSION={version}\n")
         f.write(f"PUBLIC_LILEX_GLYPHS_COUNT={glyphs_count}\n")
 

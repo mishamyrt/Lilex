@@ -2,9 +2,8 @@
 
 from __future__ import annotations
 
-import os
 import re
-from typing import TypeVar
+from pathlib import Path
 
 from glyphsLib import GSClass, GSFeature, GSFont
 
@@ -20,12 +19,13 @@ CLASS_EXT = ".cls"
 class OpenTypeFeatures:
     """Utility class for loading OpenType code files. Can filter features fo sub-font."""
 
-    _path: str
+    _path: Path
     _features: dict[str, GSFeature]
     _classes: list[GSClass]
 
-    def __init__(self, sources_dir: str, forced: list[str] = None):
-        cls_dir = os.path.join(sources_dir, CLASSES_DIR)
+    def __init__(self, sources_dir: str | Path, forced: list[str] = None):
+        sources_dir = Path(sources_dir)
+        cls_dir = sources_dir / CLASSES_DIR
         self._path = sources_dir
         self._features = _read_features(sources_dir)
         self._classes = _read_classes(cls_dir)
@@ -73,8 +73,7 @@ class OpenTypeFeatures:
     def _find_ligatures(self, font: GSFont) -> list[str]:
         """Finds ligatures glyphs in the font and returns their names"""
         glyphs = filter(lambda x: x.name.endswith(".liga") and x.export, font.glyphs)
-        glyph_names = map(lambda x: x.name, glyphs)
-        return list(glyph_names)
+        return [x.name for x in glyphs]
 
     def _render_features(
         self, ligatures: list[str], forced: list[str] = None
@@ -118,7 +117,7 @@ class OpenTypeFeatures:
         return list(fea_map.values())
 
 
-def _read_features(features_path: str) -> dict[str, GSFeature]:
+def _read_features(features_path: Path) -> dict[str, GSFeature]:
     """Read all features in the directory.
     Also it will correctly load feature names.
     Nested features will be merged into the feature with root directory name.
@@ -126,7 +125,7 @@ def _read_features(features_path: str) -> dict[str, GSFeature]:
     feature_paths = _list_files(features_path)
     features = {}
     for path in feature_paths:
-        if CLASSES_DIR in path:
+        if CLASSES_DIR in path.parts:
             continue
         name = _name_from_path(path, features_path)
         feature = _read_gs_file(path, GSFeature)
@@ -147,13 +146,14 @@ FEATURE_NAME_RE = re.compile(r"Name:(.*)")
 FEATURE_PREFIX_RE = re.compile(r"([a-z]+)")
 
 
-def _name_from_path(path: str, features_path: str) -> str:
+def _name_from_path(path: Path, features_path: Path) -> str:
     """Extracts the name from the feature path.
     For nested features, it will return root directory name.
     - `sources/opentype_features/calt.fea` -> `calt`
     - `sources/opentype_features/calt/colon.fea` -> `calt`
     """
-    rel_name = os.path.relpath(path, features_path).removesuffix(FEATURE_EXT)
+    rel_path = path.relative_to(features_path)
+    rel_name = rel_path.as_posix().removesuffix(FEATURE_EXT)
     return rel_name.split("/")[0]
 
 
@@ -175,7 +175,7 @@ def _feature_prefix(name: str) -> str | None:
         return None
 
 
-def _read_classes(dir_path: str) -> list[GSClass]:
+def _read_classes(dir_path: Path) -> list[GSClass]:
     """Read all classes in the directory"""
     classes = []
     for path in _list_files(dir_path):
@@ -184,30 +184,28 @@ def _read_classes(dir_path: str) -> list[GSClass]:
     return classes
 
 
-T = TypeVar("T")
-
-
-def _read_gs_file(path: str, constructor: T) -> T:
+def _read_gs_file[T](path: Path, constructor: T) -> T:
     """Read a glyphsLib file"""
-    name = os.path.basename(path).split(".")[0]
-    with open(path, mode="r", encoding="utf-8") as file:
+    target = Path(path)
+    with target.open("r", encoding="utf-8") as file:
+        name = target.stem
         return constructor(name, file.read())
 
 
-def _list_files(dir_path: str) -> list[str]:
+def _list_files(dir_path: Path) -> list[Path]:
     """List matching files in the directory.
     Ignores files starting with a dot and with .disabled suffix.
     Recursively lists files in subdirectories.
     """
-    files = []
-    for file in os.listdir(dir_path):
-        name = os.path.splitext(file)[0]
-        if os.path.splitext(file)[0].endswith(".disabled"):
-            print(f'WARN: "{os.path.splitext(name)[0]}" is ignored')
+    files: list[Path] = []
+    target = Path(dir_path)
+    for file in target.iterdir():
+        name = file.stem
+        if file.suffix == ".disabled":
+            print(f'WARN: "{name}" is ignored')
             continue
-        file_path = os.path.join(dir_path, file)
-        if os.path.isfile(file_path) and not file.startswith("."):
-            files.append(file_path)
-        elif os.path.isdir(file_path):
-            files.extend(_list_files(file_path))
-    return sorted(files)
+        if file.is_file() and not file.name.startswith("."):
+            files.append(file)
+        elif file.is_dir():
+            files.extend(_list_files(file))
+    return sorted(files, key=lambda item: item.as_posix())

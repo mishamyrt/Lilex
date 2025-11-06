@@ -1,4 +1,6 @@
 """Powerline preview"""
+from __future__ import annotations
+
 from colored import Style, back, fore
 
 from .base import FeaturePreview
@@ -13,7 +15,10 @@ RIGHT_ARROW_CHAR = "\uE0B1"
 LEFT_BLACK_ARROW_CHAR = "\uE0B2"
 LEFT_ARROW_CHAR = "\uE0B3"
 
+
 class PowerlineFeature(FeaturePreview):
+    """Powerline feature preview"""
+
     name = "Powerline"
 
     def show(self):
@@ -30,12 +35,13 @@ class PowerlineFeature(FeaturePreview):
         self._print_glyph(LEFT_ARROW_CHAR, "Leftwards arrowhead")
 
     def _print_examples(self):
-        self._print_line([
-            ("grey_11", "~"),
-            ("grey_30", "Git/Lilex"),
-            ("grey_46", f'{VC_BRANCH_CHAR} dev'),
-        ])
-
+        self._print_line(
+            [
+                ("grey_11", "~"),
+                ("grey_30", "Git/Lilex"),
+                ("grey_46", f"{VC_BRANCH_CHAR} dev"),
+            ]
+        )
 
     def _print_line(self, entries: list[PowerlineEntry], right=True):
         line = ""
@@ -50,13 +56,13 @@ class PowerlineFeature(FeaturePreview):
             content = f' {text.replace("/", f" {arrow} ")} '
             template = f'{back(color)}{fore("light_gray")}{content}'
             if i == len(entries) - 1:
-                template += f'{Style.reset}'
+                template += f"{Style.reset}"
             else:
-                template += f'{back(entries[i+1][0])}'
-            template += f'{fore(color)}{arrow_black}'
+                template += f"{back(entries[i+1][0])}"
+            template += f"{fore(color)}{arrow_black}"
             line += template
         print(line)
 
     def _print_glyph(self, glyph: str, name: str, width=30):
-        padding = ' ' * (width - len(name))
+        padding = " " * (width - len(name))
         print(f'{fore("dark_gray")}{name}{Style.reset}{padding}{glyph}')
