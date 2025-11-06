@@ -53,6 +53,7 @@ const { title, alignExample = "block" } = Astro.props;
 		(entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
+					console.log("intersecting", entry.target);
 					if (active) {
 						active.classList.remove("_active");
 					}
@@ -64,7 +65,8 @@ const { title, alignExample = "block" } = Astro.props;
 			});
 		},
 		{
-			rootMargin: "-40%",
+			rootMargin: "-30% 0%",
+			threshold: 0.1,
 		}
 	);
 	titles.forEach((title) => observer.observe(title));
