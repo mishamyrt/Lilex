@@ -49,11 +49,11 @@ jobs:
 
     - name: Lint builder
       if: inputs.check
-      run: make lint-py
+      run: make format-py
 
     - name: Lint preview
       if: inputs.preview && inputs.check
-      run: make lint-preview
+      run: make format-preview
 
     - name: Check if sources are available
       uses: LIT-Protocol/artifact-exists-action@v0
