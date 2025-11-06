@@ -1,22 +1,24 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev --host 0.0.0.0",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.5",
-    "astro": "^5.15.3",
-    "nanostores": "^1.0.1",
-    "typescript": "^5.9.3"
-  },
-  "devDependencies": {
-    "@types/node": "^24.9.2",
-    "sass": "^1.93.3"
-  }
+	"name": "",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev --host 0.0.0.0",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"format": "prettier --write . && astro check"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.5",
+		"astro": "^5.15.3",
+		"nanostores": "^1.0.1",
+		"typescript": "^5.9.3"
+	},
+	"devDependencies": {
+		"@types/node": "^24.9.2",
+		"prettier": "^3.6.2",
+		"sass": "^1.93.3"
+	}
 }

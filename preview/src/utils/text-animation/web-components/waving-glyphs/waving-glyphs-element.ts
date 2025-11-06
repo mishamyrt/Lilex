@@ -34,7 +34,7 @@ export class WavingGlyphsElement extends HTMLElement {
 				max: this.weightMax,
 			},
 			this.fillRatio,
-			this.interval
+			this.interval,
 		);
 
 		const observer = new IntersectionObserver(([entry]) => {
@@ -48,6 +48,6 @@ export class WavingGlyphsElement extends HTMLElement {
 	}
 
 	public setThrottling(throttling: boolean) {
-		this.animator.setThrottle(throttling)
+		this.animator.setThrottle(throttling);
 	}
 }

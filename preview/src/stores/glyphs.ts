@@ -1,10 +1,10 @@
-import { atom } from 'nanostores'
+import { atom } from "nanostores";
 
-export const $isGlyphsItalicEnabled = atom(false)
+export const $isGlyphsItalicEnabled = atom(false);
 
 export function setGlyphsItalicEnabled(enabled: boolean) {
-	console.log('setGlyphsItalicEnabled', enabled)
-  $isGlyphsItalicEnabled.set(enabled);
+	console.log("setGlyphsItalicEnabled", enabled);
+	$isGlyphsItalicEnabled.set(enabled);
 }
 
 export const $glyphsWeight = atom(400);

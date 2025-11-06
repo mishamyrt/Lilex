@@ -80,12 +80,12 @@ check-sequential: clean-reports ## check each font file quality
 	@$(call check-variable-dir,"variable","googlefonts")
 		
 .PHONY: lint-py
-lint-py: ## check font builder code quality
+format-py: ## check font builder code quality
 	uv tool run ruff check --fix $(SCRIPTS_DIR)/
 
-.PHONY: lint-preview
-lint-preview: ## check preview website code quality
-	cd preview; pnpm astro-check
+.PHONY: format-preview
+format-preview: ## check preview website code quality
+	cd preview; pnpm format
 
 .PHONY: preview-env
 preview-env:

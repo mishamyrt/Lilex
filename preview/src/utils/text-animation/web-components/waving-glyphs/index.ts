@@ -1,1 +1,1 @@
-export * from './waving-glyphs-element'
+export * from "./waving-glyphs-element";

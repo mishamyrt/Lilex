@@ -1,1 +1,1 @@
-export * from './waving-glyphs'
+export * from "./waving-glyphs";

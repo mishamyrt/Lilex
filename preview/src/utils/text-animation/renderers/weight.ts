@@ -5,7 +5,7 @@ export type WeightLimits = {
 	max: number;
 };
 
-const conditionalPx = (value: number | null) => value ? `${value}px` : "";
+const conditionalPx = (value: number | null) => (value ? `${value}px` : "");
 
 export abstract class WeightAnimator {
 	protected elements: HTMLElement[];
@@ -31,7 +31,7 @@ export abstract class WeightAnimator {
 
 	protected handleContainerResize(): DOMRect {
 		// Get first glyph
-		const glyph = this.elements[0]
+		const glyph = this.elements[0];
 		// Reset and update glyph size
 		this.setGlyphsSize(0, 0);
 		const glyphRect = glyph.getBoundingClientRect();
@@ -40,20 +40,20 @@ export abstract class WeightAnimator {
 		this.setContainerSize(0, 0);
 		const containerRect = this.container.getBoundingClientRect();
 		this.setContainerSize(containerRect.width, containerRect.height);
-		return containerRect
+		return containerRect;
 	}
 
 	private setGlyphsSize(width: number, height: number) {
 		setProps(this.container, {
 			"--glyph-width": conditionalPx(width),
 			"--glyph-height": conditionalPx(height),
-		})
+		});
 	}
 
 	private setContainerSize(width: number, height: number) {
 		setProps(this.container, {
 			"--glyphsContainer-width": conditionalPx(width),
 			"--glyphsContainer-height": conditionalPx(height),
-		})
+		});
 	}
 }

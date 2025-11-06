@@ -1,15 +1,15 @@
-@use './theme/border-radius.scss';
-@use './theme/colors.scss';
-@use './theme/spaces.scss';
-@use './theme/transitions.scss';
-@use './theme/typography.scss';
+@use "./theme/border-radius.scss";
+@use "./theme/colors.scss";
+@use "./theme/spaces.scss";
+@use "./theme/transitions.scss";
+@use "./theme/typography.scss";
 
 body {
-    margin: 0;
-    overflow-x: hidden;
-    min-width: 390px;
+  margin: 0;
+  overflow-x: hidden;
+  min-width: 390px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
