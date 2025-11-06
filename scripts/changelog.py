@@ -71,7 +71,8 @@ def collect_notes(changelog_path: Path) -> dict[str, str]:
 )
 def handle_notes(args):
     """Prints selected version notes to the console"""
-    releases = collect_notes(args.input)
+    input_path = Path(args.input)
+    releases = collect_notes(input_path)
     if args.version not in releases:
         print(f"Version {args.version} not found")
         print("Available versions:")
