@@ -23,12 +23,12 @@ Compiled versions are available under [releases](https://github.com/mishamyrt/Li
 1. [Download font](https://github.com/mishamyrt/Lilex/releases/latest).
 2. Unzip the archive.
 3. Install the font:
-    * Mac: Select all font files in the `variable` folder and double-click them. Click the `Install Font` button.
-    * Windows: Select all font files in the `variable` folder, right-click  any of them, then click `Install` from the menu.
+   - Mac: Select all font files in the `variable` folder and double-click them. Click the `Install Font` button.
+   - Windows: Select all font files in the `variable` folder, right-click any of them, then click `Install` from the menu.
 
 ### Visual Studio Code
 
-1. From the `Code` menu (`File` on Windows)  go to `Preferences` → `Settings`, or use keyboard shortcut <kbd>⌘</kbd>+<kbd>,</kbd> (<kbd>Ctrl</kbd>+<kbd>,</kbd> on Windows).
+1. From the `Code` menu (`File` on Windows) go to `Preferences` → `Settings`, or use keyboard shortcut <kbd>⌘</kbd>+<kbd>,</kbd> (<kbd>Ctrl</kbd>+<kbd>,</kbd> on Windows).
 2. In the `Editor: Font Family` input box type `Lilex`.
 3. To enable ligatures, go to `Editor: Font Ligatures`, click `Edit in settings.json`, and copy `"editor.fontLigatures": true` into file.
 
@@ -38,10 +38,21 @@ If you want to enable stylistic sets, list them instead of `true`. Like:
 "editor.fontLigatures": "'calt', 'ss02', 'ss04'"
 ```
 
+### Cursor
+
+Same as Visual Studio Code, but menu `Settings` → `VS Code Settings`
+
 ### iTerm2
+
 1. From the `iTerm2` menu go to `Settings`. Under `Profiles`, find the `Text` tab.
 2. If you have more than one profile, select the one you want to change. Or change the default one (with an asterisk).
 3. Click on the font name under the 'Font' heading, find `Lilex` and select it.
+
+### Ghostty
+
+1. From the `Ghostty` menu go to `Settings…`, or use keyboard shortcut <kbd>⌘</kbd>+<kbd>,</kbd>.
+2. Add `font-family = Lilex` to config file.
+3. Restart Ghostty (or reload configuration with <kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd>,</kbd>)
 
 ## Weight
 
@@ -93,7 +104,6 @@ The source code is available under [Apache 2.0 License](https://www.apache.org/l
 
 ## Credits
 
--   Author: Mikhael Khrustik
--   Based on: [IBM Plex Mono](https://github.com/IBM/plex)
--   Inspired by: [Fira Code](https://github.com/tonsky/FiraCode)
-
+- Author: Mikhael Khrustik
+- Based on: [IBM Plex Mono](https://github.com/IBM/plex)
+- Inspired by: [Fira Code](https://github.com/tonsky/FiraCode)
