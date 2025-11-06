@@ -3,22 +3,62 @@ import Typography from "../../components/Typography.astro";
 ---
 
 <Typography class="alignsPreview" color="dimmed" variant="custom">
-	<span>
-		09<span class="aligned">:</span>57<br>
-		0<span class="aligned">x</span>FF
-	</span>
+	<>
+		<span class="alignsPreview-hours">09</span><span class="alignedGlyph"
+			>:</span
+		><span class="alignsPreview-minutes">57</span><br />
+		0<span class="alignedGlyph">x</span>FF
+	</>
 </Typography>
 
 <script>
 	import { $isSuperpowersEnabled } from "../../stores/superpowers";
-	const preview = document.querySelector<HTMLElement>(".alignsPreview");
-	if (!preview) {
+	import { checkIsSafari } from "../../utils/environment";
+	const previewNode = document.querySelector<HTMLElement>(".alignsPreview")!;
+	if (!previewNode) {
 		throw new Error("Preview element not found");
 	}
+	const hoursNode = document.querySelector<HTMLElement>(
+		".alignsPreview-hours"
+	)!;
+	const minutesNode = document.querySelector<HTMLElement>(
+		".alignsPreview-minutes"
+	)!;
+	if (!hoursNode || !minutesNode) {
+		throw new Error("Time elements not found");
+	}
+
+	const isSafari = checkIsSafari();
+
+	const padTime = (value: number) => String(value).padStart(2, "0");
+
+	function render() {
+		requestAnimationFrame(() => {
+			const now = new Date();
+			const hours = padTime(now.getHours());
+			const minutes = padTime(now.getMinutes());
+
+			if (isSafari) {
+				previewNode.innerHTML = `
+					${hours}:${minutes}<br />
+					0xFF`;
+			} else {
+				hoursNode.textContent = hours;
+				minutesNode.textContent = minutes;
+			}
+		});
+	}
+
+	if (isSafari) {
+		previewNode.classList.add("_safari");
+	}
+
+	render();
+	setInterval(render, 10000);
 
 	$isSuperpowersEnabled.subscribe((enabled) => {
-		preview.classList.toggle("_rich", enabled);
-	})
+		previewNode.classList.toggle("_rich", enabled);
+	});
 </script>
 
 <style lang="scss">
@@ -30,8 +70,13 @@ import Typography from "../../components/Typography.astro";
 			font-feature-settings: "calt" off;
 		}
 
-		.aligned {
+		.alignedGlyph {
 			color: var(--color-content-primary);
+		}
+
+		&._safari {
+			color: var(--color-content-primary);
+			font-weight: 300;
 		}
 	}
 </style>
