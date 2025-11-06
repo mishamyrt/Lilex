@@ -1,6 +1,6 @@
 <p align="center">
     <img
-        src="./images/main@2x.png"
+        src="./images/logo.svg"
         alt="Lilex. The font for developers."
         width="362px"><br/>
     <a href="https://github.com/mishamyrt/Lilex/actions/workflows/qa.yaml">
