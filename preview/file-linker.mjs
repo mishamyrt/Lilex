@@ -14,7 +14,13 @@ import { existsSync, statSync } from "node:fs";
  */
 export function fileLinker(source, target) {
   if (!existsSync(source)) {
-    throw new Error(`Source ${source} does not exist`);
+    console.warn(`[fileLinker] Source ${source} does not exist`);
+    return {
+      name: "fileLinker",
+      hooks: {
+        "astro:server:setup": () => {},
+      },
+    };
   }
 
   const createSymlink = statSync(source).isDirectory()
