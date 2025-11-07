@@ -17,17 +17,21 @@ const { href, class: className, ...props } = Astro.props;
 </Typography>
 
 <style lang="scss">
-	.link {
+	.link, .link:global(.typography) {
+		--link-weight: 400;
+
 		text-decoration: underline;
 		color: var(--color-content-action);
 		cursor: pointer;
-		transition: color var(--transition-slow);
+		transition: color var(--transition-slow), font-variation-settings var(--transition-slow);
 		width: fit-content;
     display: inline-block;
+		font-variation-settings: 'wght' var(--link-weight);
 
 		&:hover {
+			font-variation-settings: 'wght' 700;
 			color: var(--color-content-action_hover);
-			transition: color 0s;
+			transition: color 0s, font-variation-settings 0s;
 		}
 	}
 </style>
