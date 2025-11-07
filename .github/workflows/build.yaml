@@ -11,26 +11,28 @@ on:
         default: false
         type: boolean
 
+env:
+    PNPM_VERSION: '10.13.1'
+    NODE_VERSION: '22.13.1'
+    PYTHON_VERSION: '3.13'
+    UV_VERSION: '0.9.7'
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Setup Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
-        python-version: '3.13' 
+        python-version: '${{ env.PYTHON_VERSION }}'
     
-    - name: Install the latest version of uv
+    - name: Setup uv
       uses: astral-sh/setup-uv@v6
-
-    - name: Setup pnpm
-      if: inputs.preview
-      uses: pnpm/action-setup@v4
       with:
-        version: '10.13.1'
+        version: '${{ env.UV_VERSION }}'
 
     - name: Bootstrap font builder
       run: |
@@ -42,6 +44,12 @@ jobs:
           libffi-dev \
           libgit2-dev
         make configure
+
+    - name: Setup pnpm
+      if: inputs.preview
+      uses: pnpm/action-setup@v4
+      with:
+        version: '${{ env.PNPM_VERSION }}'
 
     - name: Bootstrap preview
       if: inputs.preview
