@@ -1,0 +1,119 @@
+---
+export type Props = {
+	class?: string;
+	spellcheck?: boolean;
+	value?: string;
+};
+
+const { class: className, spellcheck = false, value } = Astro.props;
+
+const defaultFontSize = 30;
+---
+
+<textarea
+	data-font-size={defaultFontSize}
+	style={`--textarea-font-size: ${defaultFontSize}px;`}
+	class:list={["textArea", className]}
+	spellcheck={spellcheck}>{value}</textarea
+>
+
+<script>
+	const PLUS_CHAR = "=";
+	const MINUS_CHAR = "-";
+
+	const inputs = document.querySelectorAll<HTMLTextAreaElement>(".textArea");
+	if (!inputs) {
+		throw new Error(".textArea elements not found");
+	}
+
+	for (const input of inputs) {
+		input.addEventListener("input", () => requestAutoResize(input));
+		input.addEventListener("keydown", handleFontSizeChange);
+
+		requestAutoResize(input);
+	}
+
+	const inputObserver = new ResizeObserver((entries) => {
+		for (const entry of entries) {
+			const input = entry.target as HTMLTextAreaElement;
+			requestAutoResize(input);
+		}
+	});
+
+	for (const input of inputs) {
+		inputObserver.observe(input);
+	}
+
+	function handleFontSizeChange(event: KeyboardEvent) {
+		if (!(event.metaKey || event.ctrlKey)) {
+			return;
+		}
+		if (event.key !== PLUS_CHAR && event.key !== MINUS_CHAR) {
+			return;
+		}
+		event.preventDefault();
+		requestAnimationFrame(() => {
+			const input = event.target as HTMLTextAreaElement;
+			const fontSizeAttr = input.dataset.fontSize;
+			if (!fontSizeAttr) {
+				throw new Error("Text size not found on textarea element");
+			}
+			const fontSize = parseInt(fontSizeAttr, 10);
+			const newFontSize = fontSize + (event.key === PLUS_CHAR ? 1 : -1);
+			if (newFontSize < 8 || newFontSize > 120) {
+				return;
+			}
+
+			input.dataset.fontSize = String(newFontSize);
+			input.style.setProperty("--textarea-font-size", `${newFontSize}px`);
+			autoResize(input);
+		});
+	}
+
+	function requestAutoResize(node: HTMLTextAreaElement) {
+		requestAnimationFrame(() => {
+			autoResize(node);
+		});
+	}
+
+	function autoResize(node: HTMLTextAreaElement) {
+		const currentScrollY = window.scrollY;
+		node.style.height = "auto";
+		node.style.height = `${node.scrollHeight}px`;
+
+		if (currentScrollY !== window.scrollY) {
+			window.scrollTo(0, currentScrollY);
+		}
+	}
+</script>
+
+<style lang="scss">
+	.textArea {
+		--internal-font-weight: var(--textarea-font-weight, 300);
+		--internal-line-height: var(--textarea-line-height, 1.3);
+
+		width: 100%;
+		margin: var(--space-xs) 0 0 0;
+		min-height: calc(
+			var(--textarea-font-size) * var(--internal-line-height) * 2
+		); /* 2 lines */
+		padding: 0;
+		resize: none;
+		border: none;
+		outline: none;
+		background: transparent;
+		color: var(--color-content-primary);
+		font-family: "LilexWeb";
+		font-size: var(--textarea-font-size);
+		line-height: var(--internal-line-height);
+		font-variation-settings: "wght" var(--internal-font-weight);
+		font-feature-settings: "liga";
+		white-space: pre-wrap;
+		tab-size: 4;
+		-moz-tab-size: 4;
+	}
+
+	:global(.font-italic) .textArea {
+		font-style: italic;
+	}
+</style>

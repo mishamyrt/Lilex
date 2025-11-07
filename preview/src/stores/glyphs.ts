@@ -7,7 +7,7 @@ export function setGlyphsItalicEnabled(enabled: boolean) {
 	$isGlyphsItalicEnabled.set(enabled);
 }
 
-export const $glyphsWeight = atom(400);
+export const $glyphsWeight = atom(300);
 
 export function setGlyphsWeight(weight: number) {
 	$glyphsWeight.set(weight);

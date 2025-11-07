@@ -1,0 +1,28 @@
+---
+import TextArea from "../../components/TextArea.astro";
+import Typography from "../../components/Typography.astro";
+
+export type Props = {
+	title: string;
+	text: string;
+};
+
+const { title, text } = Astro.props;
+---
+
+<div class="previewRow">
+	<Typography as="h2" variant="text-m_accent" color="secondary">
+		{title}
+	</Typography>
+	<TextArea value={text} />
+</div>
+
+<style lang="scss">
+	.previewRow {
+		width: 100%;
+	}
+
+	.previewRow + .previewRow {
+		margin-top: var(--space-xl);
+	}
+</style>
