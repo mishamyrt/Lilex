@@ -28,9 +28,9 @@ jobs:
 
     - name: Setup pnpm
       if: inputs.preview
-      uses: pnpm/action-setup@v3
+      uses: pnpm/action-setup@v4
       with:
-        version: '8.10.2'
+        version: '10.13.1'
 
     - name: Bootstrap font builder
       run: |
