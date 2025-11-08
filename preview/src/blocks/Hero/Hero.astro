@@ -15,9 +15,11 @@ const glyphsCount = import.meta.env.PUBLIC_LILEX_GLYPHS_COUNT;
 	<div class="hero">
 		<Typography class="hero-title" variant="custom" as="h1">
 			<MagnifyingGlass min={100} max={700}>
-				Lilex.<br />
-				The font<br />
-				for developers
+				<span>
+					Lilex.<br />
+					The font<br />
+					for developers
+				</span>
 			</MagnifyingGlass>
 		</Typography>
 		<div class="hero-release">
@@ -110,12 +112,29 @@ const glyphsCount = import.meta.env.PUBLIC_LILEX_GLYPHS_COUNT;
 			&-designerColumn {
 				justify-content: start;
 			}
+			&-title {
+				font-size: 70px;
+			}
+			&-release {
+				justify-content: start;
+				margin-top: var(--space-xl);
+			}
 		}
 	}
 	
 	@media (width <= 500px) {
 		.hero-download {
 			align-items: center;
+		}
+
+		.hero-repository {
+			top: unset;
+			bottom: var(--space-layout);
+			right: var(--space-layout);
+		}
+
+		.hero-title {
+			font-size: 55px;
 		}
 	}
 

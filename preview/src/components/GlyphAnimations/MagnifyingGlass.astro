@@ -1,5 +1,5 @@
 ---
-import AnimatedGlyphs from './AnimatedGlyphs.astro';
+import AnimatedGlyphs from "./AnimatedGlyphs.astro";
 
 interface Props {
 	min: number;
@@ -19,7 +19,11 @@ const { min, max, class: className, ...props } = Astro.props;
 </magnifying-glass>
 
 <script>
-	import { MagnifyingGlassAnimator, setProps } from "../../utils/text-animation";
+	import {
+		MagnifyingGlassAnimator,
+		setProps,
+		type CoordinatedEvent,
+	} from "../../utils/text-animation";
 
 	const cursorSizeRatio = 2.5;
 
@@ -67,20 +71,86 @@ const { min, max, class: className, ...props } = Astro.props;
 			const onMouseMove = this.handleMouseMove.bind(this);
 			const onMouseOut = this.handleMouseOut.bind(this);
 			const onResize = this.handleResize.bind(this);
+			const onTouchStart = this.handleTouchStart.bind(this);
+			const onTouchMove = this.handleTouchMove.bind(this);
+			const onTouchEnd = this.handleTouchEnd.bind(this);
+			const onTouchCancel = this.handleTouchCancel.bind(this);
 
 			const observer = new IntersectionObserver(([entry]) => {
 				if (entry.isIntersecting) {
 					window.addEventListener("mousemove", onMouseMove);
 					window.addEventListener("resize", onResize);
 					window.addEventListener("mouseout", onMouseOut);
+					window.addEventListener("touchstart", onTouchStart, {
+						passive: true,
+					});
+					window.addEventListener("touchmove", onTouchMove, {
+						passive: true,
+					});
+					window.addEventListener("touchend", onTouchEnd, { passive: true });
+					window.addEventListener("touchcancel", onTouchCancel, {
+						passive: true,
+					});
 				} else {
 					window.removeEventListener("mousemove", onMouseMove);
 					window.removeEventListener("resize", onResize);
 					window.removeEventListener("mouseout", onMouseOut);
+					window.removeEventListener("touchstart", onTouchStart);
+					window.removeEventListener("touchmove", onTouchMove);
+					window.removeEventListener("touchend", onTouchEnd);
+					window.removeEventListener("touchcancel", onTouchCancel);
 					this.setCursorVisibility(false);
 				}
 			});
 			observer.observe(content);
+		}
+
+		private getTouchPoint(event: TouchEvent): Touch | null {
+			if (event.touches.length > 0) {
+				return event.touches[0];
+			}
+			if (event.changedTouches.length > 0) {
+				return event.changedTouches[0];
+			}
+			return null;
+		}
+
+		private toCoordinatedEvent(point: Touch): CoordinatedEvent {
+			return {
+				clientX: point.clientX,
+				clientY: point.clientY,
+			};
+		}
+
+		private handleTouchStart(event: TouchEvent) {
+			this.updateFromTouch(event);
+		}
+
+		private handleTouchMove(event: TouchEvent) {
+			this.updateFromTouch(event);
+		}
+
+		private handleTouchEnd() {
+			this.setCursorVisibility(false);
+		}
+
+		private handleTouchCancel() {
+			this.setCursorVisibility(false);
+		}
+
+		private updateFromTouch(event: TouchEvent) {
+			const touch = this.getTouchPoint(event);
+			if (!touch) {
+				return;
+			}
+			const pointer = this.toCoordinatedEvent(touch);
+			if (!this.animator.isInReactionZone(pointer)) {
+				this.setCursorVisibility(false);
+				return;
+			}
+			this.setCursorVisibility(true);
+			this.setCursorCoordinate(pointer);
+			this.animator.handlePointerMove(pointer);
 		}
 
 		private handleResize() {
@@ -114,7 +184,7 @@ const { min, max, class: className, ...props } = Astro.props;
 			this.cursor.style.setProperty("--cursor-size", `${diameter}px`);
 		}
 
-		private setCursorCoordinate({ clientX, clientY }: MouseEvent) {
+		private setCursorCoordinate({ clientX, clientY }: CoordinatedEvent) {
 			const x = window.scrollX + clientX - this.cursorRadius;
 			const y = window.scrollY + clientY - this.cursorRadius;
 			setProps(this.cursor, {
@@ -151,6 +221,7 @@ const { min, max, class: className, ...props } = Astro.props;
 		position: relative;
 		transform: translateZ(0);
 		font: inherit;
+		touch-action: none;
 		width: var(--glyphsContainer-width, fit-content);
 		height: var(--glyphsContainer-height, initial);
 	}
