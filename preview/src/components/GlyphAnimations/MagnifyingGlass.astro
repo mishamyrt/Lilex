@@ -224,6 +224,8 @@ const { min, max, class: className, ...props } = Astro.props;
 		touch-action: none;
 		width: var(--glyphsContainer-width, fit-content);
 		height: var(--glyphsContainer-height, initial);
+		overflow: hidden;
+    max-width: 100%;
 	}
 
 	#cursor {
