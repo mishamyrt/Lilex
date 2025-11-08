@@ -21,6 +21,7 @@ const { min, max, class: className, ...props } = Astro.props;
 <script>
 	import {
 		MagnifyingGlassAnimator,
+		Rectangle,
 		setProps,
 		type CoordinatedEvent,
 	} from "../../utils/text-animation";
@@ -28,9 +29,11 @@ const { min, max, class: className, ...props } = Astro.props;
 	const cursorSizeRatio = 2.5;
 
 	class MagnifyingGlassComponent extends HTMLElement {
+		private content!: HTMLElement;
 		private cursor!: HTMLElement;
 		private animator!: MagnifyingGlassAnimator;
 		private isCursorVisible = false;
+		private touchRect: Rectangle | null = null;
 
 		private weightMin = 0;
 		private weightMax = 0;
@@ -56,6 +59,7 @@ const { min, max, class: className, ...props } = Astro.props;
 				throw new Error("MagnifyingText component not found");
 			}
 
+			this.content = content;
 			this.cursor = cursor;
 			const cursorDiameter = this.calculateCursorDiameter();
 			this.setCursorSize(cursorDiameter);
@@ -67,6 +71,7 @@ const { min, max, class: className, ...props } = Astro.props;
 				},
 				this.cursorRadius
 			);
+			this.updateTouchRect();
 
 			const onMouseMove = this.handleMouseMove.bind(this);
 			const onMouseOut = this.handleMouseOut.bind(this);
@@ -144,6 +149,10 @@ const { min, max, class: className, ...props } = Astro.props;
 				return;
 			}
 			const pointer = this.toCoordinatedEvent(touch);
+			if (!this.isInTouchZone(pointer)) {
+				this.setCursorVisibility(false);
+				return;
+			}
 			if (!this.animator.isInReactionZone(pointer)) {
 				this.setCursorVisibility(false);
 				return;
@@ -158,6 +167,7 @@ const { min, max, class: className, ...props } = Astro.props;
 			this.setCursorSize(cursorSize);
 			this.animator.reactionSize = this.cursorRadius;
 			this.animator.handleResize();
+			this.updateTouchRect();
 		}
 
 		private handleMouseMove(event: MouseEvent) {
@@ -177,6 +187,27 @@ const { min, max, class: className, ...props } = Astro.props;
 		private calculateCursorDiameter(): number {
 			const { fontSize } = getComputedStyle(this);
 			return parseInt(fontSize, 10) * cursorSizeRatio * 2;
+		}
+
+		private calculateTouchMargin(): number {
+			return Math.min(this.cursorRadius * 0.5, 32);
+		}
+
+		private updateTouchRect() {
+			if (!this.content) {
+				return;
+			}
+			const rect = this.content.getBoundingClientRect();
+			const margin = this.calculateTouchMargin();
+			this.touchRect = Rectangle.fromDOMRect(rect);
+			this.touchRect.expandBy(margin, margin);
+		}
+
+		private isInTouchZone(event: CoordinatedEvent): boolean {
+			if (!this.touchRect) {
+				this.updateTouchRect();
+			}
+			return this.touchRect ? this.touchRect.contains(event) : false;
 		}
 
 		private setCursorSize(diameter: number) {
