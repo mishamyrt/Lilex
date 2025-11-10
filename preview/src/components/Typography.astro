@@ -9,6 +9,7 @@ export type Props<T extends TagName = "p"> = HTMLElementProps<T> & {
 		| "heading-m_accent"
 		| "heading-m_bold"
 		| "heading-s"
+		| "heading-s_accent"
 		| "heading-l"
 		| "heading-xl"
 		| "custom";
@@ -29,7 +30,7 @@ const {
 	variant = "text-m",
 	color = "primary",
 	class: className,
-	...props
+	...rest
 } = Astro.props;
 
 const Tag = as;
@@ -42,8 +43,8 @@ const Tag = as;
 		color !== "custom" && `color-${color}`,
 		className,
 	]}
-	{...props as any}
-><slot /></Tag>
+	{...rest as any}><slot /></Tag
+>
 
 <style lang="scss">
 	.typography {
@@ -72,6 +73,9 @@ const Tag = as;
 		}
 		&.variant-heading-s {
 			font: var(--typography-heading-s);
+		}
+		&.variant-heading-s_accent {
+			font: var(--typography-heading-s_accent);
 		}
 		&.variant-heading-l {
 			font: var(--typography-heading-l);

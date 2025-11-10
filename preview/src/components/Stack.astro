@@ -5,6 +5,7 @@ export type Props = {
 	align?: "start" | "center" | "end";
 	justify?: "start" | "center" | "end" | "between" | "around";
 	direction?: "row" | "column";
+	fullWidth?: boolean;
 };
 
 const {
@@ -13,6 +14,7 @@ const {
 	direction = "column",
 	align = "start",
 	justify = "start",
+	fullWidth = false,
 	...props
 } = Astro.props;
 ---
@@ -20,10 +22,11 @@ const {
 <div
 	class:list={[
 		"stack",
-		`gap-${gap}`,
-		`direction-${direction}`,
-		`align-${align}`,
-		`justify-${justify}`,
+		`_gap-${gap}`,
+		`_direction-${direction}`,
+		`_align-${align}`,
+		`_justify-${justify}`,
+		fullWidth && "_fullWidth",
 		className,
 	]}
 	{...props}
@@ -37,60 +40,64 @@ const {
 		flex-direction: column;
 		gap: var(--space-s);
 
-		&.direction-column {
+		&._direction-column {
 			flex-direction: column;
 		}
 
-		&.direction-row {
+		&._direction-row {
 			flex-direction: row;
 		}
 
-		&.gap-s {
+		&._gap-s {
 			gap: var(--space-s);
 		}
 
-		&.gap-m {
+		&._gap-m {
 			gap: var(--space-m);
 		}
 
-		&.gap-l {
+		&._gap-l {
 			gap: var(--space-l);
 		}
 
-		&.gap-xl {
+		&._gap-xl {
 			gap: var(--space-xl);
 		}
 
-		&.align-start {
+		&._align-start {
 			align-items: flex-start;
 		}
 
-		&.align-center {
+		&._align-center {
 			align-items: center;
 		}
 
-		&.align-end {
+		&._align-end {
 			align-items: flex-end;
 		}
 
-		&.justify-start {
+		&._justify-start {
 			justify-content: flex-start;
 		}
 
-		&.justify-center {
+		&._justify-center {
 			justify-content: center;
 		}
 
-		&.justify-end {
+		&._justify-end {
 			justify-content: flex-end;
 		}
 
-		&.justify-between {
+		&._justify-between {
 			justify-content: space-between;
 		}
 
-		&.justify-around {
+		&._justify-around {
 			justify-content: space-around;
+		}
+
+		&._fullWidth {
+			width: 100%;
 		}
 	}
 </style>

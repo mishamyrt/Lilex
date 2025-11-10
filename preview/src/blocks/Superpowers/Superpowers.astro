@@ -2,25 +2,46 @@
 import LayoutBlock from "../../components/LayoutBlock.astro";
 import Stack from "../../components/Stack.astro";
 import Typography from "../../components/Typography.astro";
-import Switch from "./Switch.astro";
 import FeatureRow from "./FeatureRow.astro";
 import PreviewLigatures from "./PreviewLigatures.astro";
 import PreviewAligns from "./PreviewAligns.astro";
 import PreviewWeight from "./PreviewWeight.astro";
 import PreviewPowerline from "./PreviewPowerline.astro";
 import Link from "../../components/Link.astro";
+import {
+	FloatingPanel,
+	FloatingToggle,
+} from "../../components/FloatingActions";
+import { $isSuperpowersEnabled } from "../../stores/superpowers";
+import Toggle from "../../components/Toggle.astro";
+
+const isSuperpowersEnabled = $isSuperpowersEnabled.get();
 ---
 
 <LayoutBlock theme="dark" name="superpowers">
 	<div class="superpowers">
-		<div class="superpowers-headingWrapper">
-			<div class="superpowers-heading">
-				<Typography class="superpowers-headingText" color="secondary">
+		<div class="superpowers-scrollContainer">
+			<Stack class="superpowers-heading" gap="m">
+				<Typography color="secondary">
 					Lilex is built on top of the IBM Plex Mono. It includes support for
 					variable weight and developer specific features.
 				</Typography>
-				<Switch class="superpowers-switch" />
-			</div>
+				<Stack
+					class="superpowers-toggleDesktop"
+					fullWidth
+					justify="between"
+					align="center"
+					direction="row"
+				>
+					<Typography as="h1" variant="heading-m_accent">Superpowers</Typography
+					>
+					<Toggle
+						checked={isSuperpowersEnabled}
+						inputClass="superpowers-toggleInput"
+						align="x-height"
+					/>
+				</Stack>
+			</Stack>
 		</div>
 		<Stack class="superpowers-features" gap="xl">
 			<FeatureRow title="Ligatures" alignExample="description">
@@ -65,17 +86,40 @@ import Link from "../../components/Link.astro";
 				<PreviewPowerline slot="preview" />
 			</FeatureRow>
 		</Stack>
-		<Switch class="superpowers-switchMobile" />
+		<FloatingPanel class="superpowers-toggleMobile">
+			<FloatingToggle
+				title="Superpowers"
+				inputClass="superpowers-toggleInput"
+				checked={isSuperpowersEnabled}
+			/>
+		</FloatingPanel>
 	</div>
 </LayoutBlock>
 
 <script>
-	const switchElement = document.querySelector<HTMLInputElement>(
-		".superpowers-switch"
+	import {
+		$isSuperpowersEnabled,
+		setSuperpowersEnabled,
+	} from "../../stores/superpowers";
+
+	const toggles = document.querySelectorAll<HTMLInputElement>(
+		".superpowers-toggleInput"
 	);
-	if (!switchElement) {
-		throw new Error("Switch element not found");
+	if (!toggles) {
+		throw new Error("Toggle element not found");
 	}
+
+	for (const toggle of toggles) {
+		toggle.addEventListener("change", () =>
+			setSuperpowersEnabled(toggle.checked)
+		);
+	}
+
+	$isSuperpowersEnabled.subscribe((enabled) => {
+		toggles.forEach((toggle) => {
+			toggle.checked = enabled;
+		});
+	});
 </script>
 
 <style lang="scss">
@@ -86,42 +130,20 @@ import Link from "../../components/Link.astro";
 		grid-template-columns: repeat(12, 1fr);
 		gap: var(--layout-column-gap);
 
-		&-switch {
+		&-toggleDesktop {
 			margin-top: var(--space-m);
 		}
-
-		&-switchMobile {
+		&-toggleMobile {
 			display: none;
 		}
 
-		&-feature {
-			display: grid;
-			grid-template-columns: repeat(8, 1fr);
-		}
-
-		&-headingWrapper {
+		&-scrollContainer {
 			grid-column: 1/4;
 		}
 
 		&-heading {
 			position: sticky;
 			top: var(--space-m);
-		}
-
-		&-preview {
-			grid-row: 1/3;
-			display: flex;
-			height: 100%;
-			align-items: center;
-			grid-column: 5/9;
-
-			&._descriptionAligned {
-				grid-row: 2/3;
-			}
-		}
-
-		&-description {
-			grid-column: 1/4;
 		}
 	}
 
@@ -133,36 +155,18 @@ import Link from "../../components/Link.astro";
 		grid-column: 5/13;
 	}
 
-	.superpowers-headerSentinel {
-		display: none;
-	}
-
 	@media (max-width: 1250px) {
 		.superpowers {
-			&-heading {
-				display: grid;
-				grid-template-columns: repeat(12, 1fr);
-				p {
-					grid-column: 1/6;
-				}
+			&-scrollContainer {
+				grid-column: 1/6;
 			}
 
-			.superpowers-headerSentinel {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 1px;
-			}
-
-			&-switch {
+			&-toggleDesktop {
 				display: none;
 			}
 
-			&-switchMobile {
+			&-toggleMobile {
 				display: flex;
-				position: sticky;
-				bottom: calc(var(--space-layout) * 2);
 			}
 
 			&-features {
@@ -172,35 +176,21 @@ import Link from "../../components/Link.astro";
 		}
 	}
 
-	@media (max-width: 900px) {
-		.superpowers {
-			&-heading p {
-				grid-column: 1/7;
-			}
-		}
-	}
-
-	@media (max-width: 800px) {
-		.superpowers {
-			&-heading p {
-				grid-column: 1/7;
-			}
+	@media (max-width: 850px) {
+		.superpowers-scrollContainer {
+			grid-column: 1/7;
 		}
 	}
 
 	@media (max-width: 700px) {
-		.superpowers {
-			&-heading p {
-				grid-column: 1/8;
-			}
+		.superpowers-scrollContainer {
+			grid-column: 1/8;
 		}
 	}
 
 	@media (max-width: 550px) {
-		.superpowers {
-			&-heading p {
-				grid-column: 1/13;
-			}
+		.superpowers-scrollContainer {
+			grid-column: 1/13;
 		}
 	}
 </style>

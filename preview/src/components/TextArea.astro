@@ -5,7 +5,7 @@ export type Props = {
 	value?: string;
 };
 
-const { class: className, spellcheck = false, value } = Astro.props;
+const { class: className, spellcheck = false, value, ...rest } = Astro.props;
 
 const defaultFontSize = 30;
 ---
@@ -14,7 +14,8 @@ const defaultFontSize = 30;
 	data-font-size={defaultFontSize}
 	style={`--textarea-font-size: ${defaultFontSize}px;`}
 	class:list={["textArea", className]}
-	spellcheck={spellcheck}>{value}</textarea
+	spellcheck={spellcheck}
+	{...rest as any}>{value}</textarea
 >
 
 <script>

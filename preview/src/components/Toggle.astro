@@ -5,6 +5,7 @@ export type Props = {
 	checked?: boolean;
 	class?: string;
 	inputClass?: string;
+	align?: "caps" | "x-height";
 };
 
 const {
@@ -13,11 +14,12 @@ const {
 	checked,
 	inputClass,
 	class: className,
+	align = "caps",
 	...props
 } = Astro.props;
 ---
 
-<div class:list={["toggle", className]} {...props}>
+<div class:list={["toggle", className, align === "x-height" && "_x-height"]} {...props}>
 	<input
 		type="checkbox"
 		name={name}
@@ -44,6 +46,10 @@ const {
 		height: var(--toggle-height);
 		display: inline-block;
 		cursor: pointer;
+
+		&._x-height {
+			margin-top: 5px;
+		}
 
 		&-input {
 			width: 0;

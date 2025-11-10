@@ -1,0 +1,37 @@
+---
+export type Props = {
+	class?: string;
+	position?: "bottom" | "top";
+};
+
+const { class: className, position = "bottom", ...props } = Astro.props;
+---
+
+<div
+	class:list={["floatingPanel", `_position-${position}`, className]}
+	{...props}
+>
+	<slot />
+</div>
+
+<style lang="scss">
+	.floatingPanel {
+		--floatingPanel-offset: var(--space-layout);
+		--floatingPanel-width: calc(100vw - (var(--space-layout) * 2));
+
+		position: sticky;
+		width: var(--floatingPanel-width);
+		display: flex;
+		justify-content: center;
+		grid-column: 1/13;
+		margin-top: var(--space-l);
+
+		&._position-bottom {
+			bottom: var(--floatingPanel-offset);
+		}
+
+		&._position-top {
+			top: var(--floatingPanel-offset);
+		}
+	}
+</style>

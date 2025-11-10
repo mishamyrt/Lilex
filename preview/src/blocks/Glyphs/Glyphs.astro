@@ -1,59 +1,93 @@
 ---
+import {
+	FloatingPanel,
+	FloatingToggle,
+} from "../../components/FloatingActions";
 import LayoutBlock from "../../components/LayoutBlock.astro";
+import Slider from "../../components/Slider.astro";
 import Stack from "../../components/Stack.astro";
+import Toggle from "../../components/Toggle.astro";
 import Typography from "../../components/Typography.astro";
-import ItalicSwitch from "./ItalicSwitch.astro";
+import { $glyphsWeight, $isGlyphsItalicEnabled } from "../../stores/glyphs";
 import PreviewRow from "./PreviewRow.astro";
-import WeightSlider from "./WeightSlider.astro";
 
 const glyphsCount = import.meta.env.PUBLIC_LILEX_GLYPHS_COUNT as string;
 
 /* spell-checker: disable */
 const glyphSets = {
 	latin: `A Á Ă Æ Ǽ B C Ĉ Ç D Ð Ď E F G H Ħ Ị I Į J K L M N Ŋ O P Q R S Ş T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
-
 Big fuzzy koalas jump quickly when vexed.
 Jumping wizards vex bold, quirky foxes.`,
-	cyrillic:
-		`А Ӑ Ӓ Ӕ Б В Г Ѓ Ґ Ғ Ӷ Ҕ Д Е Ҽ Ҿ Ӗ Ё Ж Җ Ӂ З Ҙ Ӡ И Й І Ї К Қ Ҝ Ҟ Ҡ Л М Н Ң Ҥ О П Ԥ Ҧ Р С Ҫ Т Ҭ Ҵ У Ӯ Ӱ Ӳ Ф Ҩ Ѳ Х Ҳ Ц Ч Ҷ Ҹ Ш Щ Ь Ы Ӹ Ъ Ѣ Ѵ Э Ю Я а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ь ы ъ э ю я
-
+	cyrillic: `А Ӑ Ӓ Ӕ Б В Г Ѓ Ґ Ғ Ӷ Ҕ Д Е Ҽ Ҿ Ӗ Ё Ж Җ Ӂ З Ҙ Ӡ И Й І Ї К Қ Ҝ Ҟ Ҡ Л М Н Ң Ҥ О П Ԥ Ҧ Р С Ҫ Т Ҭ Ҵ У Ӯ Ӱ Ӳ Ф Ҩ Ѳ Х Ҳ Ц Ч Ҷ Ҹ Ш Щ Ь Ы Ӹ Ъ Ѣ Ѵ Э Ю Я а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ь ы ъ э ю я
 Эй, жгучая фея, вздёрни шёлковый пух, целуй янтарь!
 Быстро фыркнув, ёж съел чужой жакет и упал.`,
 	greek: `Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ ς τ υ φ χ ψ ω
-
 Ψάχνω ζωντανό φως, κι όμως βρέχω την ξύλινη γη.
 Ξανθιά ψυχή βλέπει φως και ζυγίζει όνειρα.`,
-	numbersAndPunctuation:
-		"0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 ½ ⅓ ⅔ ¼ ¾ . , : ; … ! ¡ ? ¿ • * # / - – — ‚ ′ ' \" “ „ « » < > ( ) { } [ ]",
+	numbersAndSymbols:
+		"0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 ½ ⅓ ⅔ ¼ ¾ . , : ; … ! ¡ ? ¿ • * # / - – — ‚ ′ ' \" “ „ « » < > ( ) { } [ ] & ¶ § ° ℓ ‡ ℮ № € ₿ ¢ ₡ ¤ $ ₫ ₽ ₴ ₭ ₤ ₺ ₦ ₱ ₹ ₪ £ ₸ ₮ ₩ ¥ ∞ Ω ∆ ∏ ∑ ✓ √ ∂ µ ‰   ",
 	ligatures:
 		"++ +++ -- --- ~~ ;; !! && %% {| |} [| |] |> <| <> </ </> /> << <<< <= >= <*> *** /** /* #[ ]# #( #{ #[ #! // /// != !== := ::= .= ..= := /= .. ... .< .? :: :::",
-	symbols: "& ¶ § ° ℓ ‡ ℮ № € ₿ ¢ ₡ ¤ $ ₫ ₽ ₴ ₭ ₤ ₺ ₦ ₱ ₹ ₪ £ ₸ ₮ ₩ ¥ ∞ Ω ∆ ∏ ∑ ✓ √ ∂ µ ‰   ",
 };
 /* spell-checker: enable */
 ---
 
 <LayoutBlock theme="light" name="glyphs">
 	<div class="glyphs">
-		<div class="glyphs-headingWrapper">
-			<div class="glyphs-heading">
+		<div class="glyphs-scrollContainer">
+			<Stack fullWidth class="glyphs-heading" gap="m">
 				<Typography color="secondary">
 					{
 						`Lilex contains ${glyphsCount} glyphs. Available in sizes from Thin (100) to Bold
 					(700). Includes latin, cyrillic and greek.`
 					}
 				</Typography>
-				<ItalicSwitch class="glyphs-italicSwitch" />
-				<WeightSlider class="glyphs-weightSlider" />
-			</div>
+				<Stack fullWidth class="glyphs-controlsDesktop" gap="m">
+					<Stack fullWidth justify="between" align="center" direction="row">
+						<Typography as="span" variant="heading-s_accent">Italic</Typography>
+						<Toggle
+							inputClass="glyphs-toggleItalic"
+							checked={$isGlyphsItalicEnabled.get()}
+						/>
+					</Stack>
+					<Stack fullWidth>
+						<Stack fullWidth justify="between" align="center" direction="row">
+							<Typography as="span" variant="heading-s">Weight</Typography>
+							<Typography
+								as="span"
+								variant="heading-s"
+								class="glyphs-weightValue"
+								color="secondary">{$glyphsWeight.get().toString()}</Typography
+							>
+						</Stack>
+						<Slider
+							value={$glyphsWeight.get()}
+							min={100}
+							max={700}
+							step={1}
+							inputClass="glyphs-weightSlider"
+						/>
+					</Stack>
+				</Stack>
+			</Stack>
 		</div>
 		<Stack class="glyphs-features">
 			<PreviewRow title="Latin" text={glyphSets.latin} />
 			<PreviewRow title="Кириллица" text={glyphSets.cyrillic} />
 			<PreviewRow title="Ελληνικά" text={glyphSets.greek} />
-			<PreviewRow title="Numbers & punctuation" text={glyphSets.numbersAndPunctuation} />
-			<PreviewRow title="Symbols" text={glyphSets.symbols} />
+			<PreviewRow
+				title="Numbers & symbols"
+				text={glyphSets.numbersAndSymbols}
+			/>
 			<PreviewRow title="Ligatures" text={glyphSets.ligatures} />
 		</Stack>
+		<FloatingPanel class="glyphs-toggleMobile">
+			<FloatingToggle
+				inputClass="glyphs-toggleItalic"
+				title="Italic"
+				checked={$isGlyphsItalicEnabled.get()}
+			/>
+		</FloatingPanel>
 	</div>
 </LayoutBlock>
 
@@ -61,7 +95,8 @@ Jumping wizards vex bold, quirky foxes.`,
 	import {
 		$isGlyphsItalicEnabled,
 		$glyphsWeight,
-		$glyphsSize,
+		setGlyphsWeight,
+		setGlyphsItalicEnabled,
 	} from "../../stores/glyphs";
 
 	const glyphsNode = document.querySelector<HTMLElement>(".glyphs");
@@ -69,14 +104,49 @@ Jumping wizards vex bold, quirky foxes.`,
 		throw new Error("Glyphs node not found");
 	}
 
+	const slider = document.querySelector<HTMLInputElement>(
+		".glyphs-weightSlider"
+	);
+	if (!slider) {
+		throw new Error("Slider element not found");
+	}
+
+	const weightValue = document.querySelector<HTMLElement>(
+		".glyphs-weightValue"
+	);
+	if (!weightValue) {
+		throw new Error("Weight value element not found");
+	}
+
+	const italicToggles = document.querySelectorAll<HTMLInputElement>(
+		".glyphs-toggleItalic"
+	);
+	if (!italicToggles) {
+		throw new Error("Toggle italic element not found");
+	}
+
+	for (const toggle of italicToggles) {
+		toggle.addEventListener("change", () =>
+			setGlyphsItalicEnabled(toggle.checked)
+		);
+	}
+
+	slider.addEventListener("input", () => setGlyphsWeight(slider.valueAsNumber));
+
 	$isGlyphsItalicEnabled.subscribe((enabled) => {
 		glyphsNode.classList.toggle("font-italic", enabled);
+		italicToggles.forEach((toggle) => {
+			toggle.checked = enabled;
+		});
+	});
+
+	$glyphsWeight.subscribe((weight) => {
+		weightValue.innerText = weight.toString();
 	});
 
 	$glyphsWeight.subscribe((weight) => {
 		glyphsNode.style.setProperty("--textarea-font-weight", weight.toString());
 	});
-
 </script>
 
 <style lang="scss">
@@ -87,19 +157,17 @@ Jumping wizards vex bold, quirky foxes.`,
 		grid-template-columns: repeat(12, 1fr);
 		gap: var(--layout-column-gap);
 
-		&-weightSlider,
-		&-italicSwitch,
-		&-sizeSlider {
-			margin-top: var(--space-m);
-		}
-
-		&-headingWrapper {
+		&-scrollContainer {
 			grid-column: 1/4;
 		}
 
 		&-heading {
 			position: sticky;
 			top: var(--space-m);
+		}
+
+		&-toggleMobile {
+			display: none;
 		}
 	}
 
@@ -139,13 +207,25 @@ Jumping wizards vex bold, quirky foxes.`,
 
 	@media (max-width: 1250px) {
 		.glyphs {
-			&-headingWrapper {
+			&-controlsDesktop {
+				display: none;
+			}
+
+			&-toggleMobile {
+				display: flex;
+			}
+
+			&-scrollContainer {
 				grid-column: 1/13;
 			}
 
 			&-features {
 				grid-column: 1/13;
 				margin-top: var(--space-xl);
+			}
+
+			&-scrollContainer {
+				grid-column: 1/6;
 			}
 		}
 
@@ -156,6 +236,24 @@ Jumping wizards vex bold, quirky foxes.`,
 
 		.preview-static-control {
 			display: none;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.glyphs-scrollContainer {
+			grid-column: 1/7;
+		}
+	}
+
+	@media (max-width: 715px) {
+		.glyphs-scrollContainer {
+			grid-column: 1/8;
+		}
+	}
+
+	@media (max-width: 550px) {
+		.glyphs-scrollContainer {
+			grid-column: 1/13;
 		}
 	}
 </style>

@@ -1,0 +1,36 @@
+---
+import Stack from "../Stack.astro";
+
+export type Props = {
+	class?: string;
+};
+
+const { class: className, ...props } = Astro.props;
+---
+
+<Stack
+	class:list={["floatingAction", className]}
+	align="center"
+	gap="m"
+	direction="row"
+	{...props}
+>
+	<slot />
+</Stack>
+
+<style lang="scss">
+	.floatingAction {
+		--floatingAction-padding-horizontal: var(--space-m_plus);
+		--floatingAction-padding-vertical: var(--space-s_plus);
+		--floatingAction-height: 48px;
+
+		background-color: var(--color-background-overlay);
+		backdrop-filter: blur(7px);
+		padding: var(--floatingAction-padding-vertical)
+			var(--floatingAction-padding-horizontal);
+		border-radius: 500px;
+		width: fit-content;
+		height: var(--floatingAction-height);
+		transition: background-color var(--transition-slow);
+	}
+</style>

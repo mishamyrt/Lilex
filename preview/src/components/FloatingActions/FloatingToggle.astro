@@ -1,0 +1,80 @@
+---
+import Toggle from "../Toggle.astro";
+import Typography from "../Typography.astro";
+import FloatingAction from "./FloatingAction.astro";
+
+export type Props = {
+	title?: string;
+	class?: string;
+	titleClass?: string;
+	toggleClass?: string;
+	inputClass?: string;
+	checked?: boolean;
+};
+
+const {
+	class: className,
+	titleClass,
+	toggleClass,
+	inputClass = "",
+	title,
+	checked,
+	...rest
+} = Astro.props;
+---
+
+<FloatingAction class:list={["floatingToggle", className]} {...rest}>
+	{
+		title && (
+			<Typography
+				as="span"
+				class:list={["floatingToggle-title", titleClass]}
+				variant="custom"
+			>
+				{title}
+			</Typography>
+		)
+	}
+	<Toggle
+		checked={checked}
+		class={toggleClass}
+		inputClass={`floatingToggle-input ${inputClass}`}
+	/>
+</FloatingAction>
+
+<script>
+	const toggles = document.querySelectorAll<HTMLDivElement>(`.floatingToggle`);
+	if (!toggles) {
+		throw new Error("Toggle element not found");
+	}
+	for (const toggle of toggles) {
+		const input = toggle.querySelector<HTMLInputElement>(
+			`.floatingToggle-input`
+		);
+		if (!input) {
+			throw new Error("Input element not found");
+		}
+		toggle.addEventListener("click", () => {
+			input.click();
+		});
+	}
+</script>
+
+<style lang="scss">
+	.floatingToggle {
+		padding-right: var(--space-s_plus);
+		transform: scale(1);
+		transition-property: transform, background-color;
+
+		&-title {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		&:active {
+			transform: scale(0.93);
+			background-color: var(--color-background-overlay_active);
+		}
+	}
+</style>

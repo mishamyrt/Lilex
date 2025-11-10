@@ -3,6 +3,7 @@ export type Props = {
 	name?: string;
 	value?: number;
 	class?: string;
+	inputClass?: string;
 	min?: number;
 	max?: number;
 	step?: number;
@@ -15,6 +16,7 @@ const {
 	max = 100,
 	step = 1,
 	class: className,
+	inputClass,
 	...props
 } = Astro.props;
 ---
@@ -27,7 +29,7 @@ const {
 		min={min}
 		max={max}
 		step={step}
-		class="slider-input"
+		class:list={["slider-input", inputClass]}
 	/>
 </div>
 
@@ -41,6 +43,7 @@ const {
 
 		position: relative;
 		height: var(--slider-thumb-size);
+		width: 100%;
 
 		&:active {
 			--slider-thumb-scale: 0.9;
