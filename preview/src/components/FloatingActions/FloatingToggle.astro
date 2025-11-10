@@ -54,7 +54,11 @@ const {
 		if (!input) {
 			throw new Error("Input element not found");
 		}
-		toggle.addEventListener("click", () => {
+		toggle.addEventListener("click", (event: MouseEvent) => {
+			if (event.target === input) {
+				return;
+			}
+			event.preventDefault();
 			input.click();
 		});
 	}
