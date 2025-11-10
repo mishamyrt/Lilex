@@ -1,11 +1,13 @@
 @font-face {
   font-family: "LilexWeb";
+  font-display: block;
   src: url("/fonts/Lilex[wght].woff2") format("woff2");
 }
 
 @font-face {
   font-family: "LilexWeb";
   font-style: italic;
+  font-display: block;
   src: url("/fonts/Lilex-Italic[wght].woff2") format("woff2");
 }
 
