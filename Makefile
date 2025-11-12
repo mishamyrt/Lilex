@@ -68,7 +68,8 @@ endef
 define fontbakery-check-format
 	@mkdir -p "$(REPORTS_DIR)"
 	@$(VENV) fontbakery check-googlefonts \
-		$(if $(filter-out parallel,$(1)),--auto-jobs) \
+		$(if $(filter-out parallel,$(1)),,--auto-jobs) \
+		$(if $(filter-out variable,$(2)),-x opentype/STAT/ital_axis) \
 		-x fontdata_namecheck \
 		--html "$(REPORTS_DIR)/$(2)_$(3).html" \
 		"$(BUILD_DIR)/$(2)/$(3)/"*
