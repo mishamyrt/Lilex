@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 import { fileLinker } from "./file-linker.mjs";
 import typograf from "astro-typograf";
 
-const FONTS_SOURCE = "../build/webfonts";
+const FONTS_SOURCE = "../build/Lilex/webfonts";
 const FONTS_TARGET = "./public/fonts";
 
 // https://astro.build/config
