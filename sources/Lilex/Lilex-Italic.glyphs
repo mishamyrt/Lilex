@@ -1,5 +1,5 @@
 {
-.appVersion = "3428";
+.appVersion = "3434";
 .formatVersion = 3;
 DisplayStrings = (
 "₹"
@@ -156056,6 +156056,8 @@ value = "--increase-x-height=0";
 instanceInterpolations = {
 m001 = 1;
 };
+isItalic = 1;
+linkStyle = Thin;
 name = "Thin Italic";
 weightClass = 100;
 },
@@ -156088,6 +156090,8 @@ instanceInterpolations = {
 m001 = 0.66667;
 m002 = 0.33333;
 };
+isItalic = 1;
+linkStyle = ExtraLight;
 name = "ExtraLight Italic";
 weightClass = 200;
 },
@@ -156120,6 +156124,8 @@ instanceInterpolations = {
 m001 = 0.33333;
 m002 = 0.66667;
 };
+isItalic = 1;
+linkStyle = Light;
 name = "Light Italic";
 weightClass = 300;
 },
@@ -156151,6 +156157,7 @@ value = "--increase-x-height=0";
 instanceInterpolations = {
 m002 = 1;
 };
+isItalic = 1;
 name = Italic;
 },
 {
@@ -156182,6 +156189,8 @@ instanceInterpolations = {
 m002 = 0.66667;
 m003 = 0.33333;
 };
+isItalic = 1;
+linkStyle = Medium;
 name = "Medium Italic";
 weightClass = 500;
 },
@@ -156214,6 +156223,8 @@ instanceInterpolations = {
 m002 = 0.33333;
 m003 = 0.66667;
 };
+isItalic = 1;
+linkStyle = SemiBold;
 name = "SemiBold Italic";
 weightClass = 600;
 },
