@@ -1156,13 +1156,13 @@ lookup locl_cyr_bgr {
 	sub shcha-cy by shcha-cy.loclBGR;
 	sub hardsign-cy by hardsign-cy.loclBGR;
 	sub softsign-cy by softsign-cy.loclBGR;
-	sub iu-cy by iu-cy.loclBGR;
-	sub ia-cy by ia-cy.loclBGR;
+	sub yu-cy by yu-cy.loclBGR;
+	sub ya-cy by ya-cy.loclBGR;
 	sub De-cy by De-cy.loclBGR;
 	sub Ka-cy by Ka-cy.loclBGR;
 	sub El-cy by El-cy.loclBGR;
 	sub Ef-cy by Ef-cy.loclBGR;
-	sub Ia-cy by Ia-cy.loclBGR;
+	sub Ya-cy by Ya-cy.loclBGR;
 	sub iigrave-cy by iigrave-cy.loclBGR;
 } locl_cyr_bgr;
 ";
@@ -37807,7 +37807,7 @@ width = 600;
 unicode = 1027;
 },
 {
-glyphname = "Gheupturn-cy";
+glyphname = "Geupturn-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -37946,7 +37946,7 @@ width = 600;
 unicode = 1270;
 },
 {
-glyphname = "Ghestroke-cy";
+glyphname = "Gestroke-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -38033,7 +38033,7 @@ width = 600;
 unicode = 1170;
 },
 {
-glyphname = "Ghemiddlehook-cy";
+glyphname = "Gemiddlehook-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -41751,7 +41751,7 @@ width = 600;
 unicode = 1035;
 },
 {
-glyphname = "Iu-cy";
+glyphname = "Yu-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -41910,7 +41910,7 @@ width = 600;
 unicode = 1070;
 },
 {
-glyphname = "Ia-cy";
+glyphname = "Ya-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -43814,7 +43814,7 @@ width = 600;
 unicode = 1186;
 },
 {
-glyphname = "Enghe-cy";
+glyphname = "EnGe-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -44632,7 +44632,7 @@ width = 600;
 unicode = 1196;
 },
 {
-glyphname = "Ustrait-cy";
+glyphname = "Ustraight-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -44668,7 +44668,7 @@ width = 600;
 unicode = 1198;
 },
 {
-glyphname = "Ustraitstroke-cy";
+glyphname = "Ustraightstroke-cy";
 lastChange = "2023-03-22 21:36:03 +0000";
 layers = (
 {
@@ -47403,7 +47403,7 @@ width = 600;
 note = "Ef-cy.loclBGR";
 },
 {
-glyphname = "Ia-cy.loclBGR";
+glyphname = "Ya-cy.loclBGR";
 lastChange = "2024-05-09 07:27:56 +0000";
 layers = (
 {
@@ -48154,7 +48154,7 @@ width = 600;
 unicode = 1107;
 },
 {
-glyphname = "gheupturn-cy";
+glyphname = "geupturn-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -48293,7 +48293,7 @@ width = 600;
 unicode = 1271;
 },
 {
-glyphname = "ghestroke-cy";
+glyphname = "gestroke-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -48380,7 +48380,7 @@ width = 600;
 unicode = 1171;
 },
 {
-glyphname = "ghemiddlehook-cy";
+glyphname = "gemiddlehook-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -52149,7 +52149,7 @@ width = 600;
 unicode = 1115;
 },
 {
-glyphname = "iu-cy";
+glyphname = "yu-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -52308,7 +52308,7 @@ width = 600;
 unicode = 1102;
 },
 {
-glyphname = "ia-cy";
+glyphname = "ya-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -54215,7 +54215,7 @@ width = 600;
 unicode = 1187;
 },
 {
-glyphname = "enghe-cy";
+glyphname = "enge-cy";
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -55030,7 +55030,7 @@ width = 600;
 unicode = 1197;
 },
 {
-glyphname = "ustrait-cy";
+glyphname = "ustraight-cy";
 lastChange = "2023-03-22 21:54:57 +0000";
 layers = (
 {
@@ -55117,7 +55117,7 @@ width = 600;
 unicode = 1199;
 },
 {
-glyphname = "ustraitstroke-cy";
+glyphname = "ustraightstroke-cy";
 lastChange = "2023-03-22 21:56:07 +0000";
 layers = (
 {
@@ -61470,7 +61470,7 @@ width = 600;
 note = "hardsign-cy.loclBGR";
 },
 {
-glyphname = "iu-cy.loclBGR";
+glyphname = "yu-cy.loclBGR";
 lastChange = "2024-05-09 07:27:56 +0000";
 layers = (
 {
@@ -61750,7 +61750,7 @@ width = 600;
 note = "iu-cy.loclBGR";
 },
 {
-glyphname = "ia-cy.loclBGR";
+glyphname = "ya-cy.loclBGR";
 lastChange = "2024-05-09 07:27:56 +0000";
 layers = (
 {
@@ -91551,7 +91551,7 @@ width = 600;
 unicode = 39;
 },
 {
-glyphname = florin;
+glyphname = fhook;
 layers = (
 {
 layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
@@ -104705,7 +104705,7 @@ width = 600;
 unicode = 9214;
 },
 {
-glyphname = replacement;
+glyphname = replacementCharacter;
 layers = (
 {
 layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
