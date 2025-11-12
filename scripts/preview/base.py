@@ -1,4 +1,5 @@
 """Feature preview base"""
+
 from __future__ import annotations
 
 from colored import Style

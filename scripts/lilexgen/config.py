@@ -1,4 +1,5 @@
 """Lilex font config module"""
+
 from __future__ import annotations
 
 from enum import Enum
@@ -77,7 +78,9 @@ class LilexGeneratorConfig:
                     raise ValueError(f"Invalid source params: {params}")
 
                 source_path = self._dir / font / file_name
-                self._descriptors[file_name] = FontDescriptor(source_path, source_type, params)
+                self._descriptors[file_name] = FontDescriptor(
+                    source_path, source_type, params
+                )
 
     @staticmethod
     def from_file(path: str | Path) -> LilexGeneratorConfig:

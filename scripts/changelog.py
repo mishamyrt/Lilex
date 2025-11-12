@@ -7,6 +7,7 @@ Print release notes for a given version:
 Write the changelog with selected version:
     changelog.py release <version> [--input <path>] [--output <path>]
 """
+
 from __future__ import annotations
 
 import datetime
