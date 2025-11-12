@@ -402,6 +402,7 @@ lookup equal_exclam_equal {
 lookup exclam_equal_equal {
   ignore sub exclam exclam' equal equal;
   ignore sub exclam' equal equal equal;
+  ignore sub equal exclam' equal equal;
   sub exclam.spacer equal.spacer equal' by exclam_equal_equal.liga;
   sub exclam.spacer equal' equal by equal.spacer;
   sub exclam' equal equal by exclam.spacer;
