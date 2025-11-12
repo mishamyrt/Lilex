@@ -130,11 +130,11 @@ install: ## install font to system (macOS and Linux only)
 .PHONY: install-Darwin
 install-Darwin:
 	@rm -rf ~/Library/Fonts/Lilex
-	@cp -r build/variable ~/Library/Fonts/Lilex
+	@cp -r $(BUILD_DIR)/Lilex/variable ~/Library/Fonts/Lilex
 
 install-Linux:
 	@rm -rf ~/.fonts/Lilex
-	@cp -r build/ttf ~/.fonts/Lilex
+	@cp -r $(BUILD_DIR)/Lilex/ttf ~/.fonts/Lilex
 
 # Utilities
 
