@@ -51,12 +51,12 @@ lookup locl_cyr_bgr {
 	sub shcha-cy by shcha-cy.loclBGR;
 	sub hardsign-cy by hardsign-cy.loclBGR;
 	sub softsign-cy by softsign-cy.loclBGR;
-	sub iu-cy by iu-cy.loclBGR;
-	sub ia-cy by ia-cy.loclBGR;
+	sub yu-cy by yu-cy.loclBGR;
+	sub ya-cy by ya-cy.loclBGR;
 	sub De-cy by De-cy.loclBGR;
 	sub Ka-cy by Ka-cy.loclBGR;
 	sub El-cy by El-cy.loclBGR;
 	sub Ef-cy by Ef-cy.loclBGR;
-	sub Ia-cy by Ia-cy.loclBGR;
+	sub Ya-cy by Ya-cy.loclBGR;
 	sub iigrave-cy by iigrave-cy.loclBGR;
 } locl_cyr_bgr;

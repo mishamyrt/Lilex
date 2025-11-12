@@ -105,6 +105,7 @@ iconName = Light;
 id = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -115,6 +116,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -216,6 +218,7 @@ value = 60;
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -226,6 +229,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -335,6 +339,7 @@ iconName = Bold;
 id = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -345,6 +350,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -2793,7 +2799,7 @@ note = uni040A;
 unicode = 1034;
 },
 {
-glyphname = "Iu-cy";
+glyphname = "Yu-cy";
 kernRight = uni041E;
 lastChange = "2025-10-21 16:42:43 +0000";
 layers = (
@@ -2949,7 +2955,7 @@ note = uni042E;
 unicode = 1070;
 },
 {
-glyphname = "Enghe-cy";
+glyphname = "EnGe-cy";
 layers = (
 {
 anchors = (
@@ -4126,7 +4132,7 @@ note = uni045A;
 unicode = 1114;
 },
 {
-glyphname = "iu-cy";
+glyphname = "yu-cy";
 kernLeft = uni0432;
 kernRight = uni0431;
 lastChange = "2025-10-21 16:39:10 +0000";
@@ -5136,7 +5142,7 @@ width = 900;
 note = uni0449.loclBGR;
 },
 {
-glyphname = "iu-cy.loclBGR";
+glyphname = "yu-cy.loclBGR";
 kernRight = uni0431;
 lastChange = "2025-10-21 16:39:59 +0000";
 layers = (
@@ -5807,6 +5813,10 @@ note = Psi;
 unicode = 936;
 }
 );
+instances = (
+);
+kerningLTR = {
+};
 metrics = (
 {
 type = ascender;
