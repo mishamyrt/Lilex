@@ -29,11 +29,17 @@ generate: ## regenerate the font sources
 		generate
 
 .PHONY: build
-build: build-mono ## build the font
+build: ## build the font
+	@make build-mono
+	@make build-duo
 
 .PHONY: build-mono
 build-mono: ## build Lilex monospaced font
 	@$(call build-font,Lilex)
+
+.PHONY: build-duo
+build-duo: ## build Lilex Duo font
+	@$(call build-font,LilexDuo)
 
 .PHONY: release
 release: build ## release the font
@@ -50,14 +56,20 @@ endef
 .PHONY: check
 check: ## check Lilex font quality
 	@make check-mono
+	@make check-duo
 
 .PHONY: check-mono 
 check-mono: ## check Lilex font quality
 	$(call fontbakery-check,parallel,Lilex)
 
+.PHONY: check-duo
+check-duo: ## check Lilex Duo font quality
+	$(call fontbakery-check,parallel,LilexDuo)
+
 .PHONY: check-sequential
 check-sequential: ## check Lilex font quality sequentially (for CI)
 	$(call fontbakery-check,sequential,Lilex)
+	$(call fontbakery-check,sequential,LilexDuo)
 
 define fontbakery-check
 	$(call fontbakery-check-format,$(1),$(2),variable)
@@ -130,12 +142,17 @@ install: ## install font to system (macOS and Linux only)
 
 .PHONY: install-Darwin
 install-Darwin:
-	@rm -rf ~/Library/Fonts/Lilex
+	@rm -rf ~/Library/Fonts/Lilex ~/Library/Fonts/LilexDuo
+	@mkdir -p ~/Library/Fonts/Lilex ~/Library/Fonts/LilexDuo
 	@cp -r $(BUILD_DIR)/Lilex/variable ~/Library/Fonts/Lilex
+	@cp -r $(BUILD_DIR)/LilexDuo/variable ~/Library/Fonts/LilexDuo
+
 
 install-Linux:
-	@rm -rf ~/.fonts/Lilex
+	@rm -rf ~/.fonts/Lilex ~/.fonts/LilexDuo
+	@mkdir -p ~/.fonts/Lilex ~/.fonts/LilexDuo
 	@cp -r $(BUILD_DIR)/Lilex/ttf ~/.fonts/Lilex
+	@cp -r $(BUILD_DIR)/LilexDuo/ttf ~/.fonts/LilexDuo
 
 # Utilities
 
