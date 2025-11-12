@@ -99,7 +99,7 @@ scripts-lint: ## lint scripts
 
 .PHONY: scripts-format
 scripts-format: ## format scripts
-	@uv tool run ruff check --fix $(SCRIPTS_DIR)/
+	@uv tool run ruff format $(SCRIPTS_DIR)/
 
 # Website
 
