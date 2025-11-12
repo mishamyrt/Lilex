@@ -17,7 +17,7 @@ Here are the basic requirements to consider when requesting a pull request:
 5. If changes are made to the font sources, [CHANGELOG.md](CHANGELOG.md) must be updated;
 6. Commits are named according to the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/):
 
-- If the edit concerns the website ([preview/](preview/) folder), the commit must contain `preview` scope: `fix(preview): ...`;
+- If the edit concerns the website ([website/](website/) directory), the commit must contain `website` scope: `fix(website): ...`;
 - There are no other scopes.
 
 ## Project repository usage
@@ -29,12 +29,12 @@ Here is how to contribute back some code, documentation or design:
 1. Fork repo;
 2. Install the dependencies and setup hooks:
     1. If you are planning to work on the font sources, run `make configure`. This command will require you to have [uv](https://docs.astral.sh/uv/) installed.
-    2. If you are planning to work on the preview website, also run `make configure-preview`. This command will require you to have [pnpm](https://pnpm.io/) installed.
+    2. If you are planning to work on the website, also run `make website-configure`. This command will require you to have [pnpm](https://pnpm.io/) installed.
 3. Create a feature branch off of the `master` branch;
 4. Make some useful changes;
 5. Verify the changes.
     - If font sources are changed, run `make build` to build the fonts and `make check` to check the fonts;
-    - If the website is changed, run `make build-preview`.
+    - If the website is changed, run `make website-build`.
 6. Commit the changes. Repository hooks will automatically run `make generate` to regenerate normalized font sources and linting to check for code errors.
 7. Submit a pull request against the `master` branch;
 

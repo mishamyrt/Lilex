@@ -53,15 +53,15 @@ jobs:
 
     - name: Bootstrap preview
       if: inputs.preview
-      run: make configure-preview
+      run: make website-configure
 
     - name: Lint builder
       if: inputs.check
-      run: make format-py
+      run: make scripts-lint
 
     - name: Lint preview
       if: inputs.preview && inputs.check
-      run: make format-preview
+      run: make website-lint
 
     - name: Check if sources are available
       uses: LIT-Protocol/artifact-exists-action@v0
@@ -89,9 +89,9 @@ jobs:
       if: inputs.check
       run: make check-sequential
       
-    - name: Build preview
+    - name: Build website
       if: inputs.preview
-      run: make build-preview
+      run: make website-build
 
     - name: Upload build
       id: build-upload-step
