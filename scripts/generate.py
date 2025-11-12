@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Lilex helper entrypoint"""
+
 from argparse import BooleanOptionalAction
 
 from arrrgs import arg, command, global_args, run
@@ -8,7 +9,12 @@ from lilexgen import LilexGeneratorConfig, generate_sources
 OUT_DIR = "build"
 
 global_args(
-    arg("--config", "-c", default="sources/lilexgen_config.yaml", help="Font config file"),
+    arg(
+        "--config",
+        "-c",
+        default="sources/lilexgen_config.yaml",
+        help="Font config file",
+    ),
     arg(
         "--features",
         "-o",

@@ -11,4 +11,4 @@ class UnderlineFeature(FeaturePreview):
     name = "Underline alignment"
 
     def show(self):
-        print(f'{Style.underline}Te{Style.bold}st{Style.reset}')
+        print(f"{Style.underline}Te{Style.bold}st{Style.reset}")
