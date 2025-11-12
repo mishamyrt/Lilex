@@ -6,88 +6,73 @@ Thank you for your interest in improving Lilex.
 
 In most cases, submitting an issue is the first step to contributing to Lilex. Check existing issues and see if your issue has not already been described. Then use one of the templates to ask a question, report an issue or suggest an improvement.
 
-## Pull Request
-
-Here are the basic requirements to consider when requesting a pull request:
-
-1. Make sure your PR does not duplicate another PR;
-2. The request is directed to the correct branch;
-3. All changes have been checked, nothing unnecessary has been added to the PR;
-4. Affected issues and linked PRs are linked;
-5. If changes are made to the font sources, [CHANGELOG.md](CHANGELOG.md) must be updated;
-6. Commits are named according to the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/):
-
-- If the edit concerns the website ([website/](website/) directory), the commit must contain `website` scope: `fix(website): ...`;
-- There are no other scopes.
-
-## Project repository usage
-
-All of the active development work for the next release will take place in the `master` branch.
-
-Here is how to contribute back some code, documentation or design:
-
-1. Fork repo;
-2. Install the dependencies and setup hooks:
-    1. If you are planning to work on the font sources, run `make configure`. This command will require you to have [uv](https://docs.astral.sh/uv/) installed.
-    2. If you are planning to work on the website, also run `make website-configure`. This command will require you to have [pnpm](https://pnpm.io/) installed.
-3. Create a feature branch off of the `master` branch;
-4. Make some useful changes;
-5. Verify the changes.
-    - If font sources are changed, run `make build` to build the fonts and `make check` to check the fonts;
-    - If the website is changed, run `make website-build`.
-6. Commit the changes. Repository hooks will automatically run `make generate` to regenerate normalized font sources and linting to check for code errors.
-7. Submit a pull request against the `master` branch;
-
-Please rebase (not merge) from the `master` branch if your PR needs to incorporate changes that occurred after your feature branch was created.
-
-## Build
+## Contribute improvements or fixes
 
 ### Setup
 
-At the moment building is possible on Ubuntu, Debian and macOS. First, install the system dependencies.
+Whatever you plan to do with the project (except perhaps changing the documentation), you will need to configure the builder.
 
-#### macOS
+At the moment building is possible on Ubuntu, Debian and macOS. First, install the system dependencies:
+
+on **macOS** run:
 
 ```sh
 brew install cairo freetype harfbuzz pkg-config
 ```
 
-#### Ubuntu / Debian
+on **Ubuntu / Debian** run:
 
 ```sh
 sudo apt install python3-setuptools ttfautohint build-essential libffi-dev libgit2-dev
 ```
 
-#### Common
-
-Clone the repository and navigate to the project folder:
-
-```
-git clone https://github.com/mishamyrt/Lilex
-cd Lilex
-```
-
-And then setup python virtual environment using [uv](https://docs.astral.sh/uv/):
+Then install project level dependencies and setup git hooks. It will require you to have [uv](https://docs.astral.sh/uv/) installed.
 
 ```sh
 make configure
 ```
 
-### Compile
+#### Website
 
-Now run the command to build Lilex.
-
-```sh
-make build
-```
-
-### Forced feature activation
-
-The builder gives you the ability to forcibly enable any font features. This works by moving their code to the calt. If the ligatures work, the selected features will also work.
-
-To do this, generate custom sources with the features and then build the fonts:
+If you are planning to change the preview website in the [`website/`](website/) directory, you need also install the node dependencies:
 
 ```sh
-./scripts/generate.py --features 'ss01,zero'
-make build
+make website-configure
 ```
+
+### Changing font sources
+
+Following the instructions in the [`sources/README.md`](sources/README.md) file.
+
+Run `make build` to build the font.
+
+### Changing scripts
+
+After changing the scripts, ensure that the interface for interacting with Makefile remains functional.
+
+Run `make scripts-lint` to check the scripts for errors.
+
+### Changing website
+
+After changing the website, ensure that the interface for interacting with Makefile remains functional.
+
+Run `make website-lint` to check the website code for errors.
+Run `make website-build` to build the website. The font MUST be built before building the website.
+
+### Commit messages
+
+Commit messages are named according to the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/):
+
+- If the edit concerns the website ([website/](website/) directory), the commit must contain `website` scope: `fix(website): ...`;
+- There are no other scopes.
+
+### Pull Request
+
+Here are the basic requirements to consider when requesting a pull request:
+
+1. Make sure your PR does not duplicate another PR;
+2. The request is directed to the `master` branch;
+3. All changes have been checked, nothing unnecessary has been added to the PR;
+4. Affected issues and linked PRs are linked;
+5. If changes are made to the font sources, [CHANGELOG.md](CHANGELOG.md) must be updated;
+

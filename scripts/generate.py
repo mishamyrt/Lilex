@@ -3,7 +3,7 @@
 from argparse import BooleanOptionalAction
 
 from arrrgs import arg, command, global_args, run
-from lilexgen import LilexGenConfig, regenerate_sources
+from lilexgen import LilexGeneratorConfig, generate_sources
 
 OUT_DIR = "build"
 
@@ -28,7 +28,7 @@ global_args(
     ),
     root=True,
 )
-def generate(args, config: LilexGenConfig):
+def generate(args, config: LilexGeneratorConfig):
     """Saves the generated source file with features and classes"""
     forced_features = None
     if args.features is not None:
@@ -36,12 +36,13 @@ def generate(args, config: LilexGenConfig):
         forced = [x.strip() for x in forced]
         forced = filter(lambda x: len(x) > 0, forced)
         forced_features = list(forced)
-    regenerate_sources(config, forced_features, args.version)
+    generate_sources(config, forced_features, args.version)
     print("🟢 Font source successfully regenerated")
 
 
 def load_config(args):
-    config = LilexGenConfig(args.config)
+    """Loads the config"""
+    config = LilexGeneratorConfig.from_file(args.config)
     return args, config
 
 

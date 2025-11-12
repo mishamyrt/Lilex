@@ -1,12 +1,14 @@
 sources:
   - Lilex.glyphs
   - Lilex-Italic.glyphs
-outputDir: ../build
+outputDir: ../../build/Lilex
 axisOrder:
   - wght
   - ital
 familyName: "Lilex"
 cleanUp: true
+
+recipeProvider: googlefonts
 stat:
   Lilex[wght].ttf:
     - name: Weight

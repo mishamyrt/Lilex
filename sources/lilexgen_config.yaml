@@ -1,2 +1,10 @@
 featuresDir: ./opentype_features
-gftoolsConfig: ./config.yaml
+sources:
+  Lilex:
+    Lilex.glyphs:
+    Lilex-Italic.glyphs:
+
+  LilexDuo:
+    LilexDuo.glyphs:
+      source: Lilex.glyphs
+      patch: LilexDuo.patch.glyphs

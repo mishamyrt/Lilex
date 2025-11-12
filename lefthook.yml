@@ -8,16 +8,16 @@ pre-commit:
         - sources/*
       run: make generate
 
-    - name: lint python code
+    - name: lint (fix) python code
       stage_fixed: true
       glob:
         - scripts/**/*.py
         - scripts/*.py
-      run: make format-py
+      run: make scripts-format
 
-    - name: lint preview website code
+    - name: lint (fix) preview website code
       stage_fixed: true
       glob:
         - preview/**/*
         - preview/*
-      run: make format-preview
+      run: make website-format
