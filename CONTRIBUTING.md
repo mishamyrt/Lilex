@@ -75,6 +75,6 @@ Here are the basic requirements to consider when requesting a pull request:
 1. Make sure your PR does not duplicate another PR;
 2. The request is directed to the `master` branch;
 3. All changes have been checked, nothing unnecessary has been added to the PR;
-4. Affected issues and linked PRs are linked;
-5. If changes are made to the font sources, [CHANGELOG.md](CHANGELOG.md) must be updated;
-
+4. All CI checks are passing;
+5. Affected issues and linked PRs are linked;
+6. If changes are made to the font sources, [CHANGELOG.md](CHANGELOG.md) must be updated;
