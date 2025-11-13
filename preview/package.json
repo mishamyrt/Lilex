@@ -12,7 +12,7 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.5",
-		"astro": "^5.15.3",
+		"astro": "^5.15.6",
 		"astro-typograf": "^3.2.1",
 		"nanostores": "^1.0.1",
 		"typescript": "^5.9.3"
