@@ -17,7 +17,7 @@ At the moment building is possible on Ubuntu, Debian and macOS. First, install t
 on **macOS** run:
 
 ```sh
-brew install cairo freetype harfbuzz pkg-config
+brew install cairo freetype harfbuzz pkg-config libgit2 
 ```
 
 on **Ubuntu / Debian** run:
