@@ -11,19 +11,27 @@
   src: url("/fonts/Lilex-Italic[wght].woff2") format("woff2");
 }
 
-.lilexTheme {
-  --typography-font-family: "LilexWeb";
+@font-face {
+  font-family: "LilexDuoWeb";
+  font-display: block;
+  src: url("/fonts/LilexDuo[wght].woff2") format("woff2");
+}
 
-  --typography-text-s: 430 13px/1.4 var(--typography-font-family);
-  --typography-text-m: 400 17px/1.56 var(--typography-font-family);
-  --typography-text-m_accent: italic 400 17px/1.56 var(--typography-font-family);
-  --typography-heading-s: 400 26px/1.56 var(--typography-font-family);
+.lilexTheme {
+  --typography-font-family-mono: "LilexWeb";
+  --typography-font-family-duo: "LilexDuoWeb";
+
+  --typography-text-s: 430 13px/1.4 var(--typography-font-family-mono);
+  --typography-text-s_accent: italic 430 13px/1.4 var(--typography-font-family-mono);
+  --typography-text-m: 400 17px/1.56 var(--typography-font-family-mono);
+  --typography-text-m_accent: italic 400 17px/1.56 var(--typography-font-family-mono);
+  --typography-heading-s: 400 26px/1.56 var(--typography-font-family-mono);
   --typography-heading-s_accent: italic 400 26px/1.56
-    var(--typography-font-family);
-  --typography-heading-m: 300 35px/1.16 var(--typography-font-family);
+    var(--typography-font-family-mono);
+  --typography-heading-m: 300 35px/1.16 var(--typography-font-family-mono);
   --typography-heading-m_accent: italic 300 35px/1.16
-    var(--typography-font-family);
-  --typography-heading-m_bold: 600 35px/1.16 var(--typography-font-family);
-  --typography-heading-l: italic 400 49px/1.16 var(--typography-font-family);
-  --typography-heading-xl: italic 200 87px/0.99 var(--typography-font-family);
+    var(--typography-font-family-mono);
+  --typography-heading-m_bold: 600 35px/1.16 var(--typography-font-family-mono);
+  --typography-heading-l: italic 400 49px/1.16 var(--typography-font-family-mono);
+  --typography-heading-xl: italic 200 87px/0.99 var(--typography-font-family-mono);
 }

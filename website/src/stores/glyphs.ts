@@ -3,9 +3,20 @@ import { atom } from "nanostores";
 export const $isGlyphsItalicEnabled = atom(false);
 
 export function setGlyphsItalicEnabled(enabled: boolean) {
-	console.log("setGlyphsItalicEnabled", enabled);
 	$isGlyphsItalicEnabled.set(enabled);
 }
+
+export const $isGlyphsDuoEnabled = atom(false);
+
+export function setGlyphsDuoEnabled(enabled: boolean) {
+	$isGlyphsDuoEnabled.set(enabled);
+}
+
+$isGlyphsDuoEnabled.subscribe((enabled) => {
+	if (enabled) {
+		$isGlyphsItalicEnabled.set(false);
+	}
+});
 
 export const $glyphsWeight = atom(300);
 

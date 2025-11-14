@@ -19,7 +19,10 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={["toggle", className, align === "x-height" && "_x-height"]} {...props}>
+<div
+	class:list={["toggle", className, align === "x-height" && "_x-height"]}
+	{...props}
+>
 	<input
 		type="checkbox"
 		name={name}
@@ -66,6 +69,7 @@ const {
 				display: block;
 				border-radius: var(--toggle-border-radius);
 				transition:
+					opacity var(--transition-slow),
 					background-color var(--transition-slow),
 					box-shadow var(--transition-slow);
 				background-color: var(--color-content-dimmed);
@@ -81,6 +85,7 @@ const {
 				transform: translate(var(--knob-gap), var(--knob-gap));
 				display: block;
 				transition:
+					opacity var(--transition-slow),
 					transform var(--transition-slow),
 					width var(--transition-slow),
 					height var(--transition-slow);
@@ -92,15 +97,20 @@ const {
 			&:checked {
 				&::before {
 					background-color: var(--color-background-success);
-					// box-shadow:
-					// 	0 2px 30px -11px var(--color-background-success),
-					// 	inset 0 0 0 var(--toggle-border-size) var(--color-content-secondary);
 				}
 				&::after {
 					transform: translate(
 						calc(var(--toggle-width) - var(--knob-width) - var(--knob-gap)),
 						var(--knob-gap)
 					);
+				}
+			}
+
+			&:disabled {
+				&::before,
+				&::after {
+					opacity: 0.5;
+					cursor: default;
 				}
 			}
 		}
