@@ -1,20 +1,26 @@
 // @ts-check
 
-import { execSync } from "node:child_process";
-import { existsSync, statSync } from "node:fs";
-
+import path from "node:path";
+import { unlink, rmdir, mkdir, link } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import glob from "fast-glob";
 /**
  * Create a file linker integration for Astro
  *
- * It will create a symlink to the source directory in the target directory.
+ * It will create a link to the source files in the target directory.
  *
- * @param {string} source source directory or file
- * @param {string} target target directory or file
+ * @param {string[]} paths paths to source files. It can be a glob pattern.
+ * @param {string} targetDir target directory
  * @returns {import('astro').AstroIntegration}
  */
-export function fileLinker(source, target) {
-  if (!existsSync(source)) {
-    console.warn(`[fileLinker] Source ${source} does not exist`);
+export function fileLinker(paths, targetDir) {
+  const sources = glob.sync(paths);
+  console.log(sources);
+  const missing = sources.filter((source) => !existsSync(source));
+  if (missing.length > 0) {
+    console.error(
+      `[fileLinker] Sources ${missing.join(", ")} do not exist. Skipping linking...`
+    );
     return {
       name: "fileLinker",
       hooks: {
@@ -23,44 +29,33 @@ export function fileLinker(source, target) {
     };
   }
 
-  const createSymlink = statSync(source).isDirectory()
-    ? createDirectoryLinker(source, target)
-    : createFileLinker(source, target);
+  const createSymlinks = async () => {
+    await rmdir(targetDir, { recursive: true });
+    await mkdir(targetDir, { recursive: true });
+    const targets = sources.map(source => linkFile(source, targetDir));
+    await Promise.all(targets);
+  };
 
   return {
     name: "fileLinker",
     hooks: {
-      "astro:build:setup": createSymlink,
-      "astro:server:setup": createSymlink,
+      "astro:build:setup": createSymlinks,
+      "astro:server:setup": createSymlinks,
     },
   };
 }
 
 /**
- * Create a file linker function
+ * Creates a symlink to a file in a directory
  *
  * @param {string} source source file
- * @param {string} target target file
- * @returns {() => void}
+ * @param {string} targetDir target directory
+ * @returns {Promise<void>}
  */
-function createFileLinker(source, target) {
-  return () => {
-    execSync(`rm -f "${target}"`);
-    execSync(`ln "${source}" "${target}"`);
-  };
-}
-
-/**
- * Create a directory linker function
- *
- * @param {string} source source directory
- * @param {string} target target directory
- * @returns {() => void}
- */
-function createDirectoryLinker(source, target) {
-  return () => {
-    execSync(`rm -rf "${target}"`);
-    execSync(`mkdir "${target}"`);
-    execSync(`ln "${source}"/* "${target}"`);
-  };
+async function linkFile(source, targetDir) {
+    const target = path.join(targetDir, path.basename(source));
+    if (existsSync(target)) {
+        await unlink(target);
+    }
+    await link(source, target);
 }
