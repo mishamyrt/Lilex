@@ -17,6 +17,9 @@ importers:
       astro-typograf:
         specifier: ^3.2.1
         version: 3.2.1(unified@11.0.5)(unist-util-visit@5.0.0)
+      fast-glob:
+        specifier: 3.3.2
+        version: 3.3.2
       nanostores:
         specifier: ^1.0.1
         version: 1.0.1
