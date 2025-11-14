@@ -97,6 +97,10 @@ scripts-print-updates: ## print list of outdated packages
 scripts-lint: ## lint scripts
 	@uv tool run ruff check $(SCRIPTS_DIR)/
 
+.PHONY: scripts-lint-fix
+scripts-lint-fix: ## lint scripts and autofix errors
+	@uv tool run ruff check --fix $(SCRIPTS_DIR)/
+
 .PHONY: scripts-format
 scripts-format: ## format scripts
 	@uv tool run ruff format $(SCRIPTS_DIR)/
