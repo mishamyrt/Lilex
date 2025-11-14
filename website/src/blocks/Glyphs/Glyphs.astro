@@ -1,4 +1,5 @@
 ---
+import BetaTag from "./BetaTag.astro";
 import {
 	FloatingPanel,
 	FloatingToggle,
@@ -8,7 +9,11 @@ import Slider from "../../components/Slider.astro";
 import Stack from "../../components/Stack.astro";
 import Toggle from "../../components/Toggle.astro";
 import Typography from "../../components/Typography.astro";
-import { $glyphsWeight, $isGlyphsItalicEnabled } from "../../stores/glyphs";
+import {
+	$glyphsWeight,
+	$isGlyphsDuoEnabled,
+	$isGlyphsItalicEnabled,
+} from "../../stores/glyphs";
 import PreviewRow from "./PreviewRow.astro";
 
 const glyphsCount = import.meta.env.PUBLIC_LILEX_GLYPHS_COUNT as string;
@@ -48,6 +53,16 @@ Jumping wizards vex bold, quirky foxes.`,
 						<Toggle
 							inputClass="glyphs-toggleItalic"
 							checked={$isGlyphsItalicEnabled.get()}
+						/>
+					</Stack>
+					<Stack fullWidth justify="between" align="center" direction="row">
+						<Stack direction="row" align="center">
+							<Typography as="span" variant="heading-s">Duospaced</Typography>
+							<BetaTag />
+						</Stack>
+						<Toggle
+							inputClass="glyphs-toggleDuo"
+							checked={$isGlyphsDuoEnabled.get()}
 						/>
 					</Stack>
 					<Stack fullWidth>
@@ -97,6 +112,7 @@ Jumping wizards vex bold, quirky foxes.`,
 		$glyphsWeight,
 		setGlyphsWeight,
 		setGlyphsItalicEnabled,
+		setGlyphsDuoEnabled,
 	} from "../../stores/glyphs";
 
 	const glyphsNode = document.querySelector<HTMLElement>(".glyphs");
@@ -118,6 +134,12 @@ Jumping wizards vex bold, quirky foxes.`,
 		throw new Error("Weight value element not found");
 	}
 
+	const duoToggle =
+		document.querySelector<HTMLInputElement>(".glyphs-toggleDuo");
+	if (!duoToggle) {
+		throw new Error("Duo toggle element not found");
+	}
+
 	const italicToggles = document.querySelectorAll<HTMLInputElement>(
 		".glyphs-toggleItalic"
 	);
@@ -130,6 +152,15 @@ Jumping wizards vex bold, quirky foxes.`,
 			setGlyphsItalicEnabled(toggle.checked)
 		);
 	}
+
+	duoToggle.addEventListener("change", () => {
+		const isDuoEnabled = duoToggle.checked;
+		setGlyphsDuoEnabled(isDuoEnabled);
+		italicToggles.forEach((toggle) => {
+			toggle.disabled = isDuoEnabled;
+		});
+		glyphsNode.classList.toggle("font-duo", isDuoEnabled);
+	});
 
 	slider.addEventListener("input", () => setGlyphsWeight(slider.valueAsNumber));
 

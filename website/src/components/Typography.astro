@@ -3,6 +3,7 @@ export type Props<T extends TagName = "p"> = HTMLElementProps<T> & {
 	as?: T;
 	variant?:
 		| "text-s"
+		| "text-s_accent"
 		| "text-m"
 		| "text-m_accent"
 		| "heading-m"
@@ -48,13 +49,16 @@ const Tag = as;
 
 <style lang="scss">
 	.typography {
-		font-family: var(--typography-font-family);
+		font-family: var(--typography-font-family-mono);
 		font-variant-ligatures: common-ligatures;
 		font-feature-settings: "liga";
 		margin: 0;
 
 		&.variant-text-s {
 			font: var(--typography-text-s);
+		}
+		&.variant-text-s_accent {
+			font: var(--typography-text-s_accent);
 		}
 		&.variant-text-m {
 			font: var(--typography-text-m);

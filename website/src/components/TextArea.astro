@@ -104,7 +104,7 @@ const defaultFontSize = 30;
 		outline: none;
 		background: transparent;
 		color: var(--color-content-primary);
-		font-family: "LilexWeb";
+		font-family: var(--typography-font-family-mono);
 		font-size: var(--textarea-font-size);
 		line-height: var(--internal-line-height);
 		font-variation-settings: "wght" var(--internal-font-weight);
@@ -116,5 +116,9 @@ const defaultFontSize = 30;
 
 	:global(.font-italic) .textArea {
 		font-style: italic;
+	}
+
+	:global(.font-duo) .textArea {
+		font-family: var(--typography-font-family-duo);
 	}
 </style>
