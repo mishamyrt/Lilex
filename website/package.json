@@ -13,15 +13,15 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.5",
-		"astro": "^5.15.3",
+		"astro": "^5.15.7",
 		"astro-typograf": "^3.2.1",
 		"fast-glob": "3.3.2",
 		"nanostores": "^1.0.1",
 		"typescript": "^5.9.3"
 	},
 	"devDependencies": {
-		"@types/node": "^24.9.2",
+		"@types/node": "^24.10.1",
 		"prettier": "^3.6.2",
-		"sass": "^1.93.3"
+		"sass": "^1.94.0"
 	}
 }
