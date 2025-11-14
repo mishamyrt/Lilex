@@ -1,12 +1,13 @@
-"""Powerline preview"""
+#!/usr/bin/env python3
+"""Utility script for terminal feature proofing.
+Prints test cases in stdout.
+
+Usage: ansi_features.py
+"""
 
 from __future__ import annotations
 
 from colored import Style, back, fore
-
-from .base import FeaturePreview
-
-PowerlineEntry = tuple[str, str]
 
 VC_BRANCH_CHAR = "\ue0a0"
 LN_CHAR = "\ue0a1"
@@ -16,11 +17,25 @@ RIGHT_ARROW_CHAR = "\ue0b1"
 LEFT_BLACK_ARROW_CHAR = "\ue0b2"
 LEFT_ARROW_CHAR = "\ue0b3"
 
+PowerlineEntry = tuple[str, str]
+
+
+class FeaturePreview:
+    """Feature preview baseclass"""
+
+    name: str = ""
+
+    def __init__(self) -> None:
+        """Initialized feature"""
+
+    def show(self):
+        """Prints feature"""
+
 
 class PowerlineFeature(FeaturePreview):
     """Powerline feature preview"""
 
-    name = "Powerline"
+    name = "Powerline symbols"
 
     def show(self):
         self._print_glyphs()
@@ -67,3 +82,18 @@ class PowerlineFeature(FeaturePreview):
     def _print_glyph(self, glyph: str, name: str, width=30):
         padding = " " * (width - len(name))
         print(f"{fore('dark_gray')}{name}{Style.reset}{padding}{glyph}")
+
+
+class UnderlineFeature(FeaturePreview):
+    """Underline alignment feature preview"""
+
+    name = "Underline alignment"
+
+    def show(self):
+        print(f"{Style.underline}Te{Style.bold}st{Style.reset}")
+
+
+if __name__ == "__main__":
+    for fea in [PowerlineFeature(), UnderlineFeature()]:
+        print(f"- {Style.reset}{Style.BOLD}{fea.name}{Style.reset}")
+        fea.show()

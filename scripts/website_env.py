@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Generate .env file for the preview site."""
 
 import re
