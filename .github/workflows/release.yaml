@@ -103,10 +103,10 @@ jobs:
         git commit -m "chore: release ${{ inputs.version }} 🔥"
         git tag "${{ inputs.version }}"
 
-    - name: Pack build
+    - name: Pack release files
       run: |
-        cd fonts; zip -r ../Lilex.zip .
-        cd ..
+        cd fonts/Lilex; zip -r ../../Lilex.zip .; cd ../..
+        cd fonts/LilexDuo; zip -r ../../LilexDuo.zip .; cd ../../..
 
     - name: Push changes
       uses: ad-m/github-push-action@master
@@ -124,3 +124,4 @@ jobs:
         prerelease: ${{ contains(inputs.version, '-') }}
         files: |
           Lilex.zip
+          LilexDuo.zip
