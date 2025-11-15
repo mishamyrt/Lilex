@@ -18,10 +18,13 @@ def generate_sources(
 ):
     """Regenerates the sources for a font family"""
     loader = FontLoader(config, forced_features)
+    if version:
+        (version_major, version_minor) = _parse_version(version)
     for descriptor in config.descriptors:
         font = loader.load(descriptor)
         if version:
-            _set_version(font, version)
+            font.versionMajor = version_major
+            font.versionMinor = version_minor
         font.save(descriptor.path.as_posix())
 
 
@@ -93,8 +96,20 @@ def _find_glyph_index(font: GSFont, glyph_name: str) -> int:
     return -1
 
 
-def _set_version(font: GSFont, version: str):
+GSFontVersion = tuple[int, int]
+
+
+def _parse_version(version: str) -> GSFontVersion:
+    """Parses a version string into a tuple of major and minor version numbers.
+    Example:
+    "2.700" -> (2, 700)
+    "2.700-beta" -> (2, 700)
+    """
+    if "-" in version:
+        print(
+            f"Warning: Version {version} contains a hyphen, using only the first part"
+        )
+        version = version.split("-")[0]
     parts = version.split(".")
     assert len(parts) == 2
-    font.versionMajor = int(parts[0])
-    font.versionMinor = int(parts[1])
+    return (int(parts[0]), int(parts[1]))
