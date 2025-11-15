@@ -19,7 +19,7 @@ export function fileLinker(paths, targetDir) {
   const missing = sources.filter((source) => !existsSync(source));
   if (missing.length > 0) {
     console.error(
-      `[fileLinker] Sources ${missing.join(", ")} do not exist. Skipping linking...`
+      `[fileLinker] Sources ${missing.join(", ")} do not exist. Skipping linking...`,
     );
     return {
       name: "fileLinker",
@@ -32,7 +32,7 @@ export function fileLinker(paths, targetDir) {
   const createSymlinks = async () => {
     await rmdir(targetDir, { recursive: true });
     await mkdir(targetDir, { recursive: true });
-    const targets = sources.map(source => linkFile(source, targetDir));
+    const targets = sources.map((source) => linkFile(source, targetDir));
     await Promise.all(targets);
   };
 
@@ -53,9 +53,9 @@ export function fileLinker(paths, targetDir) {
  * @returns {Promise<void>}
  */
 async function linkFile(source, targetDir) {
-    const target = path.join(targetDir, path.basename(source));
-    if (existsSync(target)) {
-        await unlink(target);
-    }
-    await link(source, target);
+  const target = path.join(targetDir, path.basename(source));
+  if (existsSync(target)) {
+    await unlink(target);
+  }
+  await link(source, target);
 }
