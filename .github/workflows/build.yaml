@@ -7,7 +7,7 @@ on:
       check:
         default: false
         type: boolean
-      preview:
+      website:
         default: false
         type: boolean
 
@@ -46,21 +46,21 @@ jobs:
         make configure
 
     - name: Setup pnpm
-      if: inputs.preview
+      if: inputs.website
       uses: pnpm/action-setup@v4
       with:
         version: '${{ env.PNPM_VERSION }}'
 
-    - name: Bootstrap preview
-      if: inputs.preview
+    - name: Bootstrap website
+      if: inputs.website
       run: make website-configure
 
     - name: Lint builder
       if: inputs.check
       run: make scripts-lint
 
-    - name: Lint preview
-      if: inputs.preview && inputs.check
+    - name: Lint website
+      if: inputs.website && inputs.check
       run: make website-lint
 
     - name: Check if sources are available
@@ -90,7 +90,7 @@ jobs:
       run: make check-sequential
       
     - name: Build website
-      if: inputs.preview
+      if: inputs.website
       run: make website-build
 
     - name: Upload build
@@ -107,12 +107,12 @@ jobs:
         name: Reports
         path: reports/
 
-    - name: Upload preview
-      if: inputs.preview
+    - name: Upload website
+      if: inputs.website
       uses: actions/upload-artifact@v4
       with:
-        name: Preview
-        path: preview/dist
+        name: Website
+        path: website/dist
 
     - name: Output download URL
       if: inputs.download_url

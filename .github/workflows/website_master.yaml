@@ -18,12 +18,9 @@ jobs:
   build:
     uses: ./.github/workflows/build.yaml
     with:
-      preview: true
+      website: true
 
   publish:
-    environment:
-      name: PR preview
-      url: https://preview--lilex.netlify.app
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -33,16 +30,16 @@ jobs:
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v6
 
-      - name: Download preview
+      - name: Download website
         uses: actions/download-artifact@v4
         with:
-          name: Preview
-          path: preview/dist
+          name: Website
+          path: website/dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./preview/dist
+          path: ./website/dist
 
   deploy:
     environment:

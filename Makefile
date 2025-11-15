@@ -81,7 +81,7 @@ define fontbakery-check-format
 	@mkdir -p "$(REPORTS_DIR)"
 	@$(VENV) fontbakery check-googlefonts \
 		$(if $(filter-out parallel,$(1)),,--auto-jobs) \
-		$(if $(filter-out variable,$(2)),-x opentype/STAT/ital_axis) \
+		$(if $(filter-out variable,$(3)),-x opentype/STAT/ital_axis) \
 		-x fontdata_namecheck \
 		--html "$(REPORTS_DIR)/$(2)_$(3).html" \
 		"$(BUILD_DIR)/$(2)/$(3)/"*
@@ -107,7 +107,7 @@ scripts-format: ## format scripts
 
 # Website
 
-.PHONY: configure
+.PHONY: website-configure
 website-configure: ## setup website environment
 	@cd $(WEBSITE_DIR); pnpm install
 
