@@ -39,7 +39,7 @@ jobs:
     needs: set-version
     with:
       check: true
-      preview: true
+      website: true
   
   publish:
     runs-on: ubuntu-latest
