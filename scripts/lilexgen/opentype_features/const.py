@@ -78,7 +78,7 @@ IGNORES = {
         "equal exclam' equal",
     ],
     # =!==
-    ("exclamequalequal"): [
+    ("exclam", "equal", "equal"): [
         "equal exclam' equal equal",
     ],
     # =<= <=< <=> <=| <=: <=! <=/

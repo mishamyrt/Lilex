@@ -1,0 +1,27 @@
+---
+import Typography from "../../components/Typography.astro";
+
+export type Props = {
+	class?: string;
+};
+
+const { class: className, ...props } = Astro.props;
+---
+
+<Typography
+	class:list={["betaTag", className]}
+	as="span"
+	variant="text-s_accent"
+	color="custom"
+	{...props}>Beta</Typography
+>
+
+<style lang="scss">
+	.betaTag {
+		background-color: var(--color-background-secondary);
+		color: var(--color-content-primary);
+		padding: var(--space-xxs) var(--space-s);
+		border-radius: var(--border-radius-m);
+		margin-top: 2px;
+	}
+</style>

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Added
+
+- Lilex Duo font (experimental).
+
+### Fixed
+
+- Link italic styles.
+- Italic fsselection.
+
 ## [2.621] — November 06, 2025
 
 ### Fixed
