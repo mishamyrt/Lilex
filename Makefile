@@ -89,7 +89,7 @@ endef
 
 # Scripts and scripts management
 
-.PHONY: print-updates
+.PHONY: scripts-print-updates
 scripts-print-updates: ## print list of outdated packages
 	@uv tree --depth 1 --outdated
 
