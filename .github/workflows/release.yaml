@@ -106,7 +106,7 @@ jobs:
     - name: Pack release files
       run: |
         cd fonts/Lilex; zip -r ../../Lilex.zip .; cd ../..
-        cd fonts/LilexDuo; zip -r ../../LilexDuo.zip .; cd ../../..
+        cd fonts/LilexDuo; zip -r ../../LilexDuo.zip .; cd ../..
 
     - name: Push changes
       uses: ad-m/github-push-action@master

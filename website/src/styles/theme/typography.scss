@@ -22,9 +22,11 @@
   --typography-font-family-duo: "LilexDuoWeb";
 
   --typography-text-s: 430 13px/1.4 var(--typography-font-family-mono);
-  --typography-text-s_accent: italic 430 13px/1.4 var(--typography-font-family-mono);
+  --typography-text-s_accent: italic 430 13px/1.4
+    var(--typography-font-family-mono);
   --typography-text-m: 400 17px/1.56 var(--typography-font-family-mono);
-  --typography-text-m_accent: italic 400 17px/1.56 var(--typography-font-family-mono);
+  --typography-text-m_accent: italic 400 17px/1.56
+    var(--typography-font-family-mono);
   --typography-heading-s: 400 26px/1.56 var(--typography-font-family-mono);
   --typography-heading-s_accent: italic 400 26px/1.56
     var(--typography-font-family-mono);
@@ -32,6 +34,8 @@
   --typography-heading-m_accent: italic 300 35px/1.16
     var(--typography-font-family-mono);
   --typography-heading-m_bold: 600 35px/1.16 var(--typography-font-family-mono);
-  --typography-heading-l: italic 400 49px/1.16 var(--typography-font-family-mono);
-  --typography-heading-xl: italic 200 87px/0.99 var(--typography-font-family-mono);
+  --typography-heading-l: italic 400 49px/1.16
+    var(--typography-font-family-mono);
+  --typography-heading-xl: italic 200 87px/0.99
+    var(--typography-font-family-mono);
 }
