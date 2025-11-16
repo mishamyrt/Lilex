@@ -15,7 +15,6 @@ import glob from "fast-glob";
  */
 export function fileLinker(paths, targetDir) {
   const sources = glob.sync(paths);
-  console.log(sources);
   const missing = sources.filter((source) => !existsSync(source));
   if (missing.length > 0) {
     console.error(
@@ -30,7 +29,9 @@ export function fileLinker(paths, targetDir) {
   }
 
   const createSymlinks = async () => {
-    await rmdir(targetDir, { recursive: true });
+    if (existsSync(targetDir)) {
+      await rmdir(targetDir, { recursive: true });
+    }
     await mkdir(targetDir, { recursive: true });
     const targets = sources.map((source) => linkFile(source, targetDir));
     await Promise.all(targets);
