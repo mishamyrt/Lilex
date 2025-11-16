@@ -33,7 +33,8 @@ class SourceType(Enum):
     """Font source type"""
 
     SOURCE = "source"
-    PATCH = "patch"
+    PATCH_SOURCE = "patch_source"
+    PATCH_TARGET = "patch_target"
 
 
 class FontDescriptor:
@@ -71,16 +72,21 @@ class LilexGeneratorConfig:
         for font, sources in self._raw["sources"].items():
             for file_name, params in sources.items():
                 if params is None:
-                    source_type = SourceType.SOURCE
+                    source_path = self._dir / font / file_name
+                    self._descriptors[file_name] = FontDescriptor(
+                        source_path, SourceType.SOURCE, params
+                    )
                 elif "source" in params and "patch" in params:
-                    source_type = SourceType.PATCH
+                    source_path = self._dir / font / params["patch"]
+                    self._descriptors[params["patch"]] = FontDescriptor(
+                        source_path, SourceType.PATCH_SOURCE, params
+                    )
+                    target_path = self._dir / font / file_name
+                    self._descriptors[file_name] = FontDescriptor(
+                        target_path, SourceType.PATCH_TARGET, params
+                    )
                 else:
                     raise ValueError(f"Invalid source params: {params}")
-
-                source_path = self._dir / font / file_name
-                self._descriptors[file_name] = FontDescriptor(
-                    source_path, source_type, params
-                )
 
     @staticmethod
     def from_file(path: str | Path) -> LilexGeneratorConfig:
