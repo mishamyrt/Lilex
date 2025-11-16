@@ -36,16 +36,18 @@ const { title, alignExample = "block" } = Astro.props;
 <script>
 	import { $isSuperpowersEnabled } from "../../stores/superpowers";
 
+	const ACTIVE_CLASS = "_active";
+
 	const titles = document.querySelectorAll(".featureRow-title");
 	let active: HTMLElement;
 
 	$isSuperpowersEnabled.subscribe((enabled) => {
 		if (!enabled) {
 			titles.forEach((title) => {
-				title.classList.remove("_active");
+				title.classList.remove(ACTIVE_CLASS);
 			});
 		} else if (active) {
-			active.classList.add("_active");
+			active.classList.add(ACTIVE_CLASS);
 		}
 	});
 
@@ -53,13 +55,13 @@ const { title, alignExample = "block" } = Astro.props;
 		(entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					console.log("intersecting", entry.target);
 					if (active) {
-						active.classList.remove("_active");
+						active.classList.remove(ACTIVE_CLASS);
 					}
+
 					active = entry.target as HTMLElement;
 					if ($isSuperpowersEnabled.get()) {
-						active.classList.add("_active");
+						active.classList.add(ACTIVE_CLASS);
 					}
 				}
 			});
