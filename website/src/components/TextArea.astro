@@ -29,6 +29,7 @@ const defaultFontSize = 30;
 
 	for (const input of inputs) {
 		input.addEventListener("input", () => requestAutoResize(input));
+		input.addEventListener("load", () => requestAutoResize(input));
 		input.addEventListener("keydown", handleFontSizeChange);
 
 		requestAutoResize(input);

@@ -18,8 +18,8 @@
 }
 
 .lilexTheme {
-  --typography-font-family-mono: "LilexWeb";
-  --typography-font-family-duo: "LilexDuoWeb";
+  --typography-font-family-mono: "LilexWeb", monospace;
+  --typography-font-family-duo: "LilexDuoWeb", monospace;
 
   --typography-text-s: 430 13px/1.4 var(--typography-font-family-mono);
   --typography-text-s_accent: italic 430 13px/1.4

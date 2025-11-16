@@ -85,6 +85,7 @@ const { min, max, class: className, ...props } = Astro.props;
 				if (entry.isIntersecting) {
 					window.addEventListener("mousemove", onMouseMove);
 					window.addEventListener("resize", onResize);
+					window.addEventListener("load", onResize);
 					window.addEventListener("mouseout", onMouseOut);
 					window.addEventListener("touchstart", onTouchStart, {
 						passive: true,
