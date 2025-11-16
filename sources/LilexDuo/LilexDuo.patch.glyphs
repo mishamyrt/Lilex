@@ -102,6 +102,7 @@ iconName = Light;
 id = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -112,6 +113,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -213,6 +215,7 @@ value = 60;
 id = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -223,6 +226,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -331,6 +335,7 @@ iconName = Bold;
 id = "055264FC-C366-4C37-95B8-CB5161C9C36E";
 metricValues = (
 {
+over = 0;
 pos = 780;
 },
 {
@@ -341,6 +346,7 @@ pos = 698;
 over = -12;
 },
 {
+over = 0;
 pos = -220;
 },
 {
@@ -6799,6 +6805,8 @@ instanceInterpolations = {
 name = Bold;
 }
 );
+kerningLTR = {
+};
 metrics = (
 {
 type = ascender;
