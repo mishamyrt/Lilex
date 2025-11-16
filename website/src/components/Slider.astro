@@ -21,7 +21,7 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={['slider', className]} {...props}>
+<div class:list={["slider", className]} {...props}>
 	<input
 		type="range"
 		name={name}
@@ -61,9 +61,30 @@ const {
 				background-color: var(--slider-track-color);
 			}
 
+			&::-moz-range-track {
+				height: var(--slider-track-height);
+				background-color: var(--slider-track-color);
+			}
+
 			&::-webkit-slider-thumb {
 				position: relative;
 				appearance: none;
+				border: none;
+				width: var(--slider-thumb-size);
+				height: var(--slider-thumb-size);
+				top: calc(
+					(var(--slider-thumb-size) / 2) * -1 + var(--slider-track-height)
+				);
+				transform: scale(var(--slider-thumb-scale));
+				background-color: var(--slider-thumb-color);
+				border-radius: 50%;
+				transition: transform var(--transition-slow);
+			}
+
+			&::-moz-range-thumb {
+				position: relative;
+				appearance: none;
+				border: none;
 				width: var(--slider-thumb-size);
 				height: var(--slider-thumb-size);
 				top: calc(
