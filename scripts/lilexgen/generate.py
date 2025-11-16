@@ -18,11 +18,13 @@ def generate_sources(
 ):
     """Regenerates the sources for a font family"""
     loader = FontLoader(config, forced_features)
+    version_major = None
+    version_minor = None
     if version:
         (version_major, version_minor) = _parse_version(version)
     for descriptor in config.descriptors:
         font = loader.load(descriptor)
-        if version:
+        if version and descriptor.type != SourceType.PATCH_SOURCE:
             font.versionMajor = version_major
             font.versionMinor = version_minor
         font.save(descriptor.path.as_posix())
@@ -53,11 +55,13 @@ class FontLoader:
         if descriptor.type == SourceType.SOURCE:
             font = GSFont(descriptor.path.as_posix())
             self._features.inject(font)
-        elif descriptor.type == SourceType.PATCH:
+        elif descriptor.type == SourceType.PATCH_SOURCE:
+            font = GSFont(descriptor.path.as_posix())
+        elif descriptor.type == SourceType.PATCH_TARGET:
             source_descriptor = self._config.get_descriptor(descriptor.params["source"])
             source_font = self.load(source_descriptor)
-            patch_path = descriptor.dir / descriptor.params["patch"]
-            patch_font = GSFont(patch_path.as_posix())
+            patch_descriptor = self._config.get_descriptor(descriptor.params["patch"])
+            patch_font = GSFont(patch_descriptor.path.as_posix())
             font = _merge_fonts(source_font, patch_font)
         else:
             raise ValueError(f"Invalid source type: {descriptor.type}")
