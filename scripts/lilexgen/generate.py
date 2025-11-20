@@ -76,12 +76,10 @@ def _merge_fonts(base: GSFont, patch: GSFont) -> GSFont:
     font.familyName = patch.familyName
     # Merge glyphs
     for glyph in patch.glyphs:
-        if not glyph.export:
-            continue
         glyph_idx = _find_glyph_index(font, glyph.name)
         if glyph_idx == -1:
             font.glyphs.append(glyph)
-        else:
+        elif glyph.export:
             font.glyphs[glyph_idx] = glyph
     # Merge custom parameters
     for param in patch.customParameters:
