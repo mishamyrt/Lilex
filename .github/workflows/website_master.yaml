@@ -21,6 +21,7 @@ jobs:
       website: true
 
   publish:
+    if: github.repository == 'mishamyrt/Lilex'
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -42,6 +43,7 @@ jobs:
           path: ./website/dist
 
   deploy:
+    if: github.repository == 'mishamyrt/Lilex'
     environment:
       name: Production
       url: https://lilex.myrt.co

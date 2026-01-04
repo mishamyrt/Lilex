@@ -10,6 +10,7 @@ on:
 
 jobs:
   set-version:
+    if: github.repository == 'mishamyrt/Lilex'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -42,6 +43,7 @@ jobs:
       website: true
   
   publish:
+    if: github.repository == 'mishamyrt/Lilex'
     runs-on: ubuntu-latest
     needs: build
     steps:

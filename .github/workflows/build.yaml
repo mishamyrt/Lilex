@@ -19,6 +19,7 @@ env:
 
 jobs:
   build:
+    if: github.repository == 'mishamyrt/Lilex'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
