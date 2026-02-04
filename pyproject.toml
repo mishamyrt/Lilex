@@ -12,7 +12,7 @@ dependencies = [
     "glyphslib==6.12.2",
     "pyyaml==6.0.3",
     "fontmake==3.11.0",
-    "fonttools==4.60.1",
+    "fonttools==4.60.2",
     "cu2qu==1.6.7.post2",
     "gftools==0.9.95",
     "colored==2.3.1",
