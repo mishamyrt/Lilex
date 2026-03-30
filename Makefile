@@ -41,6 +41,24 @@ build-mono: ## build Lilex monospaced font
 build-duo: ## build Lilex Duo font
 	@$(call build-font,LilexDuo)
 
+.PHONY: build-nerd
+build-nerd: ## build Lilex Nerd font
+	@echo "Building Lilex Nerd font..."
+	@rm -rf "$(BUILD_DIR)/LilexNerd"
+	@mkdir -p $(BUILD_DIR)/LilexNerd/input
+	@cp $(BUILD_DIR)/Lilex/ttf/Lilex-Bold*.ttf $(BUILD_DIR)/LilexNerd/input/
+	@cp $(BUILD_DIR)/Lilex/ttf/Lilex-Regular.ttf $(BUILD_DIR)/LilexNerd/input/
+	@cp $(BUILD_DIR)/Lilex/ttf/Lilex-Italic.ttf $(BUILD_DIR)/LilexNerd/input/
+	@docker run --rm \
+		-v ./$(BUILD_DIR)/LilexNerd/input:/in:Z \
+		-v ./$(BUILD_DIR)/LilexNerd/output:/out:Z \
+		nerdfonts/patcher \
+			--careful \
+			--complete \
+			--mono
+	@cp $(BUILD_DIR)/LilexNerd/output/* $(BUILD_DIR)/LilexNerd/
+	@rm -rf "$(BUILD_DIR)/LilexNerd/input" "$(BUILD_DIR)/LilexNerd/output"
+
 .PHONY: release
 release: build ## release the font
 	@rm -rf $(RELEASE_DIR)
@@ -58,7 +76,7 @@ check: ## check Lilex font quality
 	@make check-mono
 	@make check-duo
 
-.PHONY: check-mono 
+.PHONY: check-mono
 check-mono: ## check Lilex font quality
 	$(call fontbakery-check,parallel,Lilex)
 
@@ -150,6 +168,11 @@ install-Darwin:
 	@mkdir -p ~/Library/Fonts/Lilex ~/Library/Fonts/LilexDuo
 	@cp -r $(BUILD_DIR)/Lilex/variable ~/Library/Fonts/Lilex
 	@cp -r $(BUILD_DIR)/LilexDuo/variable ~/Library/Fonts/LilexDuo
+	@if [ -d "$(BUILD_DIR)/LilexNerd" ]; then \
+		rm -rf ~/Library/Fonts/LilexNerd; \
+		mkdir -p ~/Library/Fonts/LilexNerd; \
+        cp -r $(BUILD_DIR)/LilexNerd ~/Library/Fonts/LilexNerd; \
+    fi
 
 
 install-Linux:
@@ -157,6 +180,11 @@ install-Linux:
 	@mkdir -p ~/.fonts/Lilex ~/.fonts/LilexDuo
 	@cp -r $(BUILD_DIR)/Lilex/ttf ~/.fonts/Lilex
 	@cp -r $(BUILD_DIR)/LilexDuo/ttf ~/.fonts/LilexDuo
+	if [ -d "$(BUILD_DIR)/LilexNerd" ]; then \
+		rm -rf ~/.fonts/LilexNerd; \
+		mkdir -p ~/.fonts/LilexNerd; \
+        cp -r $(BUILD_DIR)/LilexNerd/ttf ~/.fonts/LilexNerd; \
+    fi
 
 # Utilities
 
