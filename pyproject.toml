@@ -9,15 +9,15 @@ requires-python = ">=3.13"
 version = "v0.0.0"
 dependencies = [
     "arrrgs>=3.1.0",
-    "glyphslib==6.12.2",
+    "glyphslib==6.13.0",
     "pyyaml==6.0.3",
-    "fontmake==3.11.0",
-    "fonttools==4.60.1",
+    "fontmake==3.11.1",
+    "fonttools==4.62.1",
     "cu2qu==1.6.7.post2",
-    "gftools==0.9.95",
-    "colored==2.3.1",
+    "gftools==0.9.994",
+    "colored==2.3.2",
     "fontbakery==1.1.0",
-    "shaperglot>=1.2.0",
+    "shaperglot==1.2.0",
 ]
 
 [tool.ruff]
@@ -46,4 +46,3 @@ lint.ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
-
