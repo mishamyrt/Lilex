@@ -1,7 +1,8 @@
 {
-	"name": "",
+	"name": "lilex-website",
 	"type": "module",
 	"version": "0.0.1",
+	"private": true,
 	"scripts": {
 		"dev": "astro dev --host 0.0.0.0",
 		"start": "astro dev",
@@ -12,16 +13,16 @@
 		"lint": "prettier --check . && astro check"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.5",
-		"astro": "^5.15.7",
-		"astro-typograf": "^3.2.1",
+		"@astrojs/check": "0.9.8",
+		"astro": "6.1.2",
+		"astro-typograf": "3.2.1",
 		"fast-glob": "3.3.2",
-		"nanostores": "^1.0.1",
-		"typescript": "^5.9.3"
+		"nanostores": "1.2.0",
+		"typescript": "6.0.2"
 	},
 	"devDependencies": {
-		"@types/node": "^24.10.1",
-		"prettier": "^3.6.2",
-		"sass": "^1.94.0"
+		"@types/node": "25.5.0",
+		"prettier": "3.8.1",
+		"sass": "1.98.0"
 	}
 }

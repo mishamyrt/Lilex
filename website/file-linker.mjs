@@ -1,7 +1,7 @@
 // @ts-check
 
 import path from "node:path";
-import { unlink, rmdir, mkdir, link } from "node:fs/promises";
+import { unlink, rm, mkdir, link } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import glob from "fast-glob";
 /**
@@ -30,7 +30,7 @@ export function fileLinker(paths, targetDir) {
 
   const createSymlinks = async () => {
     if (existsSync(targetDir)) {
-      await rmdir(targetDir, { recursive: true });
+      await rm(targetDir, { recursive: true, force: true });
     }
     await mkdir(targetDir, { recursive: true });
     const targets = sources.map((source) => linkFile(source, targetDir));
