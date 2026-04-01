@@ -8,32 +8,38 @@ on:
         required: true
         type: string
 
+env:
+  PYTHON_VERSION: "3.13"
+  UV_VERSION: "0.11.2"
+
 jobs:
   set-version:
     if: github.repository == 'mishamyrt/Lilex'
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.13' 
-    
-    - name: Install the latest version of uv
-      uses: astral-sh/setup-uv@v6
+      - name: Checkout
+        uses: actions/checkout@v6
 
-    - name: Set version
-      run: |
-        uv run scripts/generate.py \
-           --version "${{ inputs.version }}"
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "${{ env.PYTHON_VERSION }}"
 
-    - name: Upload sources
-      uses: actions/upload-artifact@v4
-      with:
-        name: sources
-        path: sources/**/*.glyphs
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v8.0.0
+        with:
+          version: "${{ env.UV_VERSION }}"
+
+      - name: Set version
+        run: |
+          uv run scripts/generate.py \
+             --version "${{ inputs.version }}"
+
+      - name: Upload sources
+        uses: actions/upload-artifact@v7
+        with:
+          name: sources
+          path: sources/**/*.glyphs
 
   build:
     uses: ./.github/workflows/build.yaml
@@ -41,88 +47,90 @@ jobs:
     with:
       check: true
       website: true
-  
+
   publish:
     if: github.repository == 'mishamyrt/Lilex'
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        ref: ${{ github.head_ref }}
-        ssh-key: ${{ secrets.RELEASE_PRIVATE_KEY }}
-        fetch-depth: 0
-        persist-credentials: true
-    
-    - name: Install the latest version of uv
-      uses: astral-sh/setup-uv@v6
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
+          ssh-key: ${{ secrets.RELEASE_PRIVATE_KEY }}
+          fetch-depth: 0
+          persist-credentials: true
 
-    - name: Setup GitHub Actions bot
-      run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "${{ env.PYTHON_VERSION }}"
 
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.13'
-    
-    - name: Generate changelog
-      run: |
-        uv run scripts/changelog.py notes Next > notes.md
-        uv run scripts/changelog.py release "${{ inputs.version }}"
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v8.0.0
+        with:
+          version: "${{ env.UV_VERSION }}"
 
-    - name: Download build
-      uses: actions/download-artifact@v4
-      with:
-        name: Lilex
-        path: build
+      - name: Setup GitHub Actions bot
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
 
-    - name: Download sources
-      uses: actions/download-artifact@v4
-      with:
-        name: sources
-        path: updated_sources/
+      - name: Generate changelog
+        run: |
+          uv run scripts/changelog.py notes Next > notes.md
+          uv run scripts/changelog.py release "${{ inputs.version }}"
 
-    - name: Replace sources
-      run: |
-        rm sources/**/*.glyphs
-        cp -r updated_sources/ sources/
+      - name: Download build
+        uses: actions/download-artifact@v8
+        with:
+          name: Lilex
+          path: build
 
-    - name: Replace builded font files
-      run: |
-        rm -rf fonts
-        mv build fonts
+      - name: Download sources
+        uses: actions/download-artifact@v8
+        with:
+          name: sources
+          path: updated_sources/
 
-    - name: Create git commit and tag
-      run: |
-        git add sources/**/*.glyphs
-        git add CHANGELOG.md
-        git add fonts
-        git status
-        git commit -m "chore: release ${{ inputs.version }} 🔥"
-        git tag "${{ inputs.version }}"
+      - name: Replace sources
+        run: |
+          rm sources/**/*.glyphs
+          cp -r updated_sources/ sources/
 
-    - name: Pack release files
-      run: |
-        cd fonts/Lilex; zip -r ../../Lilex.zip .; cd ../..
-        cd fonts/LilexDuo; zip -r ../../LilexDuo.zip .; cd ../..
+      - name: Replace builded font files
+        run: |
+          rm -rf fonts
+          mv build fonts
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        ssh: true
-        tags: true
+      - name: Create git commit and tag
+        run: |
+          git add sources/**/*.glyphs
+          git add CHANGELOG.md
+          git add fonts
+          git status
+          git commit -m "chore: release ${{ inputs.version }} 🔥"
+          git tag "${{ inputs.version }}"
 
-    - name: Create GitHub release
-      uses: softprops/action-gh-release@v2
-      with:
-        name: ${{ inputs.version }}
-        tag_name: ${{ inputs.version }}
-        body_path: notes.md
-        token: ${{ secrets.USER_PAT }}
-        prerelease: ${{ contains(inputs.version, '-') }}
-        files: |
-          Lilex.zip
-          LilexDuo.zip
+      - name: Pack release files
+        run: |
+          cd fonts/Lilex; zip -r ../../Lilex.zip .; cd ../..
+          cd fonts/LilexDuo; zip -r ../../LilexDuo.zip .; cd ../..
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v1
+        with:
+          ssh: true
+          tags: true
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ inputs.version }}
+          tag_name: ${{ inputs.version }}
+          body_path: notes.md
+          token: ${{ secrets.USER_PAT }}
+          prerelease: ${{ contains(inputs.version, '-') }}
+          files: |
+            Lilex.zip
+            LilexDuo.zip

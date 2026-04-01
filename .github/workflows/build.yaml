@@ -12,116 +12,116 @@ on:
         type: boolean
 
 env:
-    PNPM_VERSION: '10.13.1'
-    NODE_VERSION: '22.13.1'
-    PYTHON_VERSION: '3.13'
-    UV_VERSION: '0.9.7'
+  PNPM_VERSION: "10.33.0"
+  NODE_VERSION: "25.8.2"
+  PYTHON_VERSION: "3.13"
+  UV_VERSION: "0.11.2"
 
 jobs:
   build:
     if: github.repository == 'mishamyrt/Lilex'
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v6
 
-    - name: Setup Python
-      uses: actions/setup-python@v6
-      with:
-        python-version: '${{ env.PYTHON_VERSION }}'
-    
-    - name: Setup uv
-      uses: astral-sh/setup-uv@v6
-      with:
-        version: '${{ env.UV_VERSION }}'
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "${{ env.PYTHON_VERSION }}"
 
-    - name: Bootstrap font builder
-      run: |
-        sudo apt update
-        sudo apt install -y \
-          python3-setuptools \
-          ttfautohint \
-          build-essential \
-          libffi-dev \
-          libgit2-dev
-        make configure
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v8.0.0
+        with:
+          version: "${{ env.UV_VERSION }}"
 
-    - name: Setup pnpm
-      if: inputs.website
-      uses: pnpm/action-setup@v4
-      with:
-        version: '${{ env.PNPM_VERSION }}'
+      - name: Setup pnpm
+        if: inputs.website
+        uses: pnpm/action-setup@v5
+        with:
+          version: "${{ env.PNPM_VERSION }}"
 
-    - name: Bootstrap website
-      if: inputs.website
-      run: make website-configure
+      - name: Bootstrap font builder
+        run: |
+          sudo apt update
+          sudo apt install -y \
+            python3-setuptools \
+            ttfautohint \
+            build-essential \
+            libffi-dev \
+            libgit2-dev
+          make configure
 
-    - name: Lint builder
-      if: inputs.check
-      run: make scripts-lint
+      - name: Bootstrap website
+        if: inputs.website
+        run: make website-configure
 
-    - name: Lint website
-      if: inputs.website && inputs.check
-      run: make website-lint
+      - name: Lint builder
+        if: inputs.check
+        run: make scripts-lint
 
-    - name: Check if sources are available
-      uses: LIT-Protocol/artifact-exists-action@v0
-      id: check_sources
-      with:
-        name: "sources"
+      - name: Lint website
+        if: inputs.website && inputs.check
+        run: make website-lint
 
-    - name: Download updated sources
-      if: "${{ steps.check_sources.outputs.exists == 'true' }}"
-      uses: actions/download-artifact@v4
-      with:
-        name: sources
-        path: updated_sources/
+      - name: Check if sources are available
+        uses: LIT-Protocol/artifact-exists-action@v0
+        id: check_sources
+        with:
+          name: "sources"
 
-    - name: Replace sources
-      if: "${{ steps.check_sources.outputs.exists == 'true' }}"
-      run: |
-        rm sources/*.glyphs
-        cp -r updated_sources/* sources/
+      - name: Download updated sources
+        if: "${{ steps.check_sources.outputs.exists == 'true' }}"
+        uses: actions/download-artifact@v8
+        with:
+          name: sources
+          path: updated_sources/
 
-    - name: Build
-      run: make release
+      - name: Replace sources
+        if: "${{ steps.check_sources.outputs.exists == 'true' }}"
+        run: |
+          rm sources/*.glyphs
+          cp -r updated_sources/* sources/
 
-    - name: Check
-      if: inputs.check
-      run: make check-sequential
-      
-    - name: Build website
-      if: inputs.website
-      run: make website-build
+      - name: Build
+        run: make release
 
-    - name: Upload build
-      id: build-upload-step
-      uses: actions/upload-artifact@v4
-      with:
-        name: Lilex
-        path: build/
-    
-    - name: Upload reports
-      if: inputs.check
-      uses: actions/upload-artifact@v4
-      with:
-        name: Reports
-        path: reports/
+      - name: Check
+        if: inputs.check
+        run: make check-sequential
 
-    - name: Upload website
-      if: inputs.website
-      uses: actions/upload-artifact@v4
-      with:
-        name: Website
-        path: website/dist
+      - name: Build website
+        if: inputs.website
+        run: make website-build
 
-    - name: Output download URL
-      if: inputs.download_url
-      run: echo "${{ steps.build-upload-step.outputs.artifact-url }}" > download_url.txt
+      - name: Upload build
+        id: build-upload-step
+        uses: actions/upload-artifact@v7
+        with:
+          name: Lilex
+          path: build/
 
-    - name: Upload URL
-      if: inputs.download_url
-      uses: actions/upload-artifact@v4
-      with:
-        name: URL
-        path: download_url.txt
+      - name: Upload reports
+        if: inputs.check
+        uses: actions/upload-artifact@v7
+        with:
+          name: Reports
+          path: reports/
+
+      - name: Upload website
+        if: inputs.website
+        uses: actions/upload-artifact@v7
+        with:
+          name: Website
+          path: website/dist
+
+      - name: Output download URL
+        if: inputs.download_url
+        run: echo "${{ steps.build-upload-step.outputs.artifact-url }}" > download_url.txt
+
+      - name: Upload URL
+        if: inputs.download_url
+        uses: actions/upload-artifact@v7
+        with:
+          name: URL
+          path: download_url.txt
