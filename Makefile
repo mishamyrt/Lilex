@@ -129,7 +129,7 @@ scripts-format: ## format scripts
 website-configure: ## setup website environment
 	@cd $(WEBSITE_DIR); pnpm install
 
-.PHONY: website-run
+.PHONY: website-serve
 website-serve: _website-env ## run the website
 	@cd $(WEBSITE_DIR); pnpm run dev
 

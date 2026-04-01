@@ -35,6 +35,11 @@ jobs:
         with:
           version: "${{ env.UV_VERSION }}"
 
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
       - name: Setup pnpm
         if: inputs.website
         uses: pnpm/action-setup@v5
