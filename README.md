@@ -25,6 +25,14 @@ Compiled versions are available under [releases](https://github.com/mishamyrt/Li
 3. Install the font:
    - Mac: Select all font files in the `variable` folder and double-click them. Click the `Install Font` button.
    - Windows: Select all font files in the `variable` folder, right-click any of them, then click `Install` from the menu.
+ 
+### Zed
+
+By default, Zed uses the Lilex font (as an alias for ZedMono), but it doesn't let you use the version of the font installed on your system.
+
+This means that even if you install the latest version of the font on your system, it will only update in Zed once the developers include it in a new release.
+
+If this is an issue for you too, let the developers know in [the issue](https://github.com/zed-industries/zed/issues/52987).
 
 ### Visual Studio Code
 
