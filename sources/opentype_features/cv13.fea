@@ -1,0 +1,8 @@
+# Name: curvier parentheses
+
+sub parenleft by parenleft.cv13;
+sub parenright by parenright.cv13;
+sub underscore_underscore_parenleft.liga by underscore_underscore_parenleft.liga.cv13;
+sub parenleft_asterisk.liga by parenleft_asterisk.liga.cv13;
+sub numbersign_parenleft.liga by numbersign_parenleft.liga.cv13;
+sub asterisk_parenright.liga by asterisk_parenright.liga.cv13;
