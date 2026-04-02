@@ -33,6 +33,13 @@ build: ## build the font
 	@make build-mono
 	@make build-duo
 
+.PHONY: build-dev
+build-dev: build ## build the font and rename to LilexDev
+	@$(VENV) python $(SCRIPTS_DIR)/rename_font.py \
+		--source Lilex \
+		--target LilexDev \
+		$(BUILD_DIR)/Lilex
+
 .PHONY: build-mono
 build-mono: ## build Lilex monospaced font
 	@$(call build-font,Lilex)
@@ -162,6 +169,11 @@ _website-env:
 install: ## install font to system (macOS and Linux only)
 	@make install-$(OS)
 
+
+.PHONY: install-dev
+install-dev: ## install dev font to system (macOS only)
+	@make install-dev-$(OS)
+
 .PHONY: install-Darwin
 install-Darwin:
 	@rm -rf ~/Library/Fonts/Lilex ~/Library/Fonts/LilexDuo
@@ -174,7 +186,6 @@ install-Darwin:
         cp -r $(BUILD_DIR)/LilexNerd ~/Library/Fonts/LilexNerd; \
     fi
 
-
 install-Linux:
 	@rm -rf ~/.fonts/Lilex ~/.fonts/LilexDuo
 	@mkdir -p ~/.fonts/Lilex ~/.fonts/LilexDuo
@@ -185,6 +196,18 @@ install-Linux:
 		mkdir -p ~/.fonts/LilexNerd; \
         cp -r $(BUILD_DIR)/LilexNerd/ttf ~/.fonts/LilexNerd; \
     fi
+
+.PHONY: install-dev-Darwin
+install-dev-Darwin:
+	@rm -rf ~/Library/Fonts/LilexDev
+	@mkdir -p ~/Library/Fonts/LilexDev
+	@cp -r $(BUILD_DIR)/LilexDev/variable ~/Library/Fonts/LilexDev
+
+.PHONY: install-dev-Linux
+install-dev-Linux:
+	@rm -rf ~/.fonts/LilexDev
+	@mkdir -p ~/.fonts/LilexDev
+	@cp -r $(BUILD_DIR)/LilexDev/ttf ~/.fonts/LilexDev
 
 # Utilities
 
