@@ -1,14 +1,19 @@
+# macOS junk
 .DS_Store
-/build/
-/venv/
+
+# IDE files
 /.vscode
+.cursor
+
+# Development artifacts
 * (Autosaved).glyphs
 *.glyphspackage
 __pycache__
 .ruff_cache
-reports/
+.venv
 .netlify
-/preview/.env
+/build/
+/reports/
 
 # gftools build artifacts
 /sources/instance_ufos
