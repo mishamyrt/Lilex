@@ -1600,6 +1600,19 @@ sub numbersign_parenleft.liga by numbersign_parenleft.liga.cv13;
 sub asterisk_parenright.liga by asterisk_parenright.liga.cv13;
 ";
 tag = cv13;
+},
+{
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Backslashed zero\";
+  };
+};
+# Name: Backslashed zero
+
+sub zero by zero.cv14;
+sub zero.tosf by zero.tosf.cv14;
+";
+tag = cv14;
 }
 );
 fontMaster = (
@@ -78052,6 +78065,90 @@ width = 600;
 );
 },
 {
+glyphname = zero.cv14;
+lastChange = "2026-04-02 16:00:21 +0000";
+layers = (
+{
+guides = (
+{
+pos = (102,147);
+},
+{
+pos = (524,551);
+},
+{
+angle = 222.0399;
+pos = (468,476);
+}
+);
+layerId = m001;
+shapes = (
+{
+ref = zero.alt02;
+},
+{
+closed = 1;
+nodes = (
+(162,554,l),
+(148,542,l),
+(465,142,l),
+(479,154,l)
+);
+}
+);
+userData = {
+com.typemytype.robofont.pointLabels = {
+};
+};
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = zero.alt02;
+},
+{
+closed = 1;
+nodes = (
+(178,566,l),
+(132,530,l),
+(449,130,l),
+(495,166,l)
+);
+}
+);
+userData = {
+com.typemytype.robofont.pointLabels = {
+};
+};
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = zero.alt02;
+},
+{
+closed = 1;
+nodes = (
+(189,575,l),
+(121,521,l),
+(438,121,l),
+(506,175,l)
+);
+}
+);
+userData = {
+com.typemytype.robofont.pointLabels = {
+};
+};
+width = 600;
+}
+);
+},
+{
 glyphname = zero.tosf;
 layers = (
 {
@@ -80012,6 +80109,86 @@ nodes = (
 (391,147,o),
 (343,101,o),
 (272,101,cs)
+);
+}
+);
+userData = {
+com.typemytype.robofont.pointLabels = {
+};
+};
+width = 600;
+}
+);
+},
+{
+glyphname = zero.tosf.cv14;
+lastChange = "2026-04-02 15:59:57 +0000";
+layers = (
+{
+guides = (
+{
+pos = (487,443);
+},
+{
+pos = (104,83);
+}
+);
+layerId = m001;
+shapes = (
+{
+ref = zero.tosf.alt02;
+},
+{
+closed = 1;
+nodes = (
+(166,449,l),
+(150,437,l),
+(432,77,l),
+(448,89,l)
+);
+}
+);
+userData = {
+com.typemytype.robofont.pointLabels = {
+};
+};
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = zero.tosf.alt02;
+},
+{
+closed = 1;
+nodes = (
+(180,460,l),
+(136,426,l),
+(418,66,l),
+(462,100,l)
+);
+}
+);
+userData = {
+com.typemytype.robofont.pointLabels = {
+};
+};
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = zero.tosf.alt02;
+},
+{
+closed = 1;
+nodes = (
+(194,471,l),
+(122,415,l),
+(404,55,l),
+(476,111,l)
 );
 }
 );
