@@ -1,0 +1,18 @@
+# Name: Dashed number sign
+
+sub numbersign by numbersign.cv15;
+sub bracketright_numbersign.liga by bracketright_numbersign.liga.cv15;
+sub numbersign_braceleft.liga by numbersign_braceleft.liga.cv15;
+sub numbersign_bracketleft.liga by numbersign_bracketleft.liga.cv15;
+sub numbersign_colon.liga by numbersign_colon.liga.cv15;
+sub numbersign_exclam.liga by numbersign_exclam.liga.cv15;
+sub numbersign_question.liga by numbersign_question.liga.cv15;
+sub numbersign_end.seq by numbersign_end.seq.cv15;
+sub numbersign_middle.seq by numbersign_middle.seq.cv15;
+sub numbersign_start.seq by numbersign_start.seq.cv15;
+sub numbersign_parenleft.liga by numbersign_parenleft.liga.cv15;
+sub numbersign_parenleft.liga.cv13 by numbersign_parenleft.liga.cv13.cv15;
+sub numbersign_end.ss04.seq by numbersign_end.ss04.seq.cv15;
+sub numbersign_middle.ss04.seq by numbersign_middle.ss04.seq.cv15;
+sub numbersign_start.ss04.seq by numbersign_start.ss04.seq.cv15;
+sub numbersign_equal.liga by numbersign_equal.liga.cv15;
