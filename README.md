@@ -84,7 +84,11 @@ A full glyph table can be found on the [preview page](https://mishamyrt.github.i
 
 ## Features
 
-The font has additional styles for some characters, so it can be configured to better fit your needs. Instructions on how to activate OpenType features in your IDE can be found on the internet, or [build your own variation](#forced-feature-activation) of the font with forced features
+Lilex supports a wide range of OpenType features, allowing it to be used for various formats.
+
+<img src="./images/features@2x.png">
+    
+The font has additional styles for some characters, so it can be configured to better fit your needs. Instructions on how to activate OpenType features in your IDE can be found on the internet.
 
 <img src="./images/alternatives@2x.png">
 
