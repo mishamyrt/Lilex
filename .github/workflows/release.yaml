@@ -95,8 +95,8 @@ jobs:
 
       - name: Replace sources
         run: |
-          rm sources/**/*.glyphs
-          cp -r updated_sources/ sources/
+          rm -rf sources/Lilex*/*.glyphs
+          cp -r updated_sources/* sources/
 
       - name: Replace builded font files
         run: |

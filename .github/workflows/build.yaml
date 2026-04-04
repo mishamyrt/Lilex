@@ -85,7 +85,7 @@ jobs:
       - name: Replace sources
         if: "${{ steps.check_sources.outputs.exists == 'true' }}"
         run: |
-          rm sources/*.glyphs
+          rm -rf sources/Lilex*/*.glyphs
           cp -r updated_sources/* sources/
 
       - name: Build
