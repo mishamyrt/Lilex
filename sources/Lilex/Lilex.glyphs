@@ -1271,7 +1271,7 @@ lookup MARK_BASE_topright {
 tag = mark;
 },
 {
-code = "# Name: numerators
+code = "# Name: Numerators
 sub @numbers_dflt by @numbers_numr;
 ";
 tag = numr;
@@ -1621,10 +1621,10 @@ tag = ss04;
 {
 code = "cvParameters {
   FeatUILabelNameID{
-    name 3 1 0x0409 \"blackletter-adapted lowercase eszett\";
+    name 3 1 0x0409 \"Blackletter-adapted lowercase eszett\";
   };
 };
-# Name: blackletter-adapted lowercase eszett
+# Name: Blackletter-adapted lowercase eszett
 
 sub germandbls by germandbls.cv12;
 ";
@@ -1633,10 +1633,10 @@ tag = cv12;
 {
 code = "cvParameters {
   FeatUILabelNameID{
-    name 3 1 0x0409 \"curvier parentheses\";
+    name 3 1 0x0409 \"Curvier parentheses\";
   };
 };
-# Name: curvier parentheses
+# Name: Curvier parentheses
 
 sub parenleft by parenleft.cv13;
 sub parenright by parenright.cv13;
@@ -1663,10 +1663,10 @@ tag = cv14;
 {
 code = "cvParameters {
   FeatUILabelNameID{
-    name 3 1 0x0409 \"Dashed number sign\";
+    name 3 1 0x0409 \"Number sign with crossbars\";
   };
 };
-# Name: Dashed number sign
+# Name: Number sign with crossbars
 
 sub numbersign by numbersign.cv15;
 sub bracketright_numbersign.liga by bracketright_numbersign.liga.cv15;

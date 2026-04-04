@@ -1,4 +1,4 @@
-# Name: Dashed number sign
+# Name: Number sign with crossbars
 
 sub numbersign by numbersign.cv15;
 sub bracketright_numbersign.liga by bracketright_numbersign.liga.cv15;

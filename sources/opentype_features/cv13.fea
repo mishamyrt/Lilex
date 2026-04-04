@@ -1,4 +1,4 @@
-# Name: curvier parentheses
+# Name: Curvier parentheses
 
 sub parenleft by parenleft.cv13;
 sub parenright by parenright.cv13;

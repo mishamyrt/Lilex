@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
 - Lilex Duo font (experimental).
 - Curvier parentheses (`cv13`).
 - Backslashed zero (`cv14`).
-- Dashed number sign (`cv15`).
+- Number sign with crossbars (`cv15`).
 
 ### Fixed
 

@@ -1,2 +1,2 @@
-# Name: numerators
+# Name: Numerators
 sub @numbers_dflt by @numbers_numr;
