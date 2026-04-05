@@ -1,0 +1,766 @@
+{
+.appVersion = "3434";
+.formatVersion = 3;
+axes = (
+{
+name = Weight;
+tag = wght;
+}
+);
+customParameters = (
+{
+name = isFixedPitch;
+value = 0;
+}
+);
+date = "2026-04-05 20:02:36 +0000";
+familyName = "Lilex Duo";
+fontMaster = (
+{
+axesValues = (
+100
+);
+customParameters = (
+{
+name = typoAscender;
+value = 999;
+},
+{
+name = typoDescender;
+value = -301;
+},
+{
+name = hheaAscender;
+value = 999;
+},
+{
+name = hheaDescender;
+value = -301;
+},
+{
+name = hheaLineGap;
+value = 0;
+},
+{
+name = typoLineGap;
+value = 0;
+},
+{
+name = winAscent;
+value = 1150;
+},
+{
+name = winDescent;
+value = 427;
+},
+{
+name = strikeoutPosition;
+value = 304;
+},
+{
+name = strikeoutSize;
+value = 16;
+},
+{
+name = subscriptXOffset;
+value = 0;
+},
+{
+name = subscriptXSize;
+value = 700;
+},
+{
+name = subscriptYOffset;
+value = 140;
+},
+{
+name = subscriptYSize;
+value = 650;
+},
+{
+name = superscriptXOffset;
+value = 0;
+},
+{
+name = superscriptXSize;
+value = 700;
+},
+{
+name = superscriptYOffset;
+value = 477;
+},
+{
+name = superscriptYSize;
+value = 650;
+},
+{
+name = "Master Icon Glyph Name";
+value = T;
+},
+{
+name = underlineThickness;
+value = 60;
+},
+{
+name = underlinePosition;
+value = -140;
+}
+);
+id = m001;
+metricValues = (
+{
+over = 0;
+pos = 780;
+},
+{
+over = 12;
+pos = 698;
+},
+{
+over = 12;
+pos = 516;
+},
+{
+over = -12;
+},
+{
+over = 0;
+pos = -220;
+},
+{
+over = 0;
+pos = 9.5;
+},
+{
+over = 6;
+pos = 335;
+},
+{
+over = 6;
+pos = 369;
+},
+{
+over = 12;
+pos = 536;
+},
+{
+over = 12;
+pos = 740;
+},
+{
+over = -12;
+pos = -200;
+},
+{
+over = -12;
+pos = -164;
+},
+{
+over = -6;
+pos = 329;
+},
+{
+over = -6;
+pos = 363;
+}
+);
+name = "Thin Italic";
+stemValues = (
+21,
+19,
+58,
+68,
+19,
+17,
+54,
+62,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0
+);
+userData = {
+layerinfo.color = "0.5,0,0.5,0.7";
+};
+visible = 1;
+},
+{
+axesValues = (
+400
+);
+customParameters = (
+{
+name = typoAscender;
+value = 999;
+},
+{
+name = typoDescender;
+value = -301;
+},
+{
+name = hheaAscender;
+value = 999;
+},
+{
+name = hheaDescender;
+value = -301;
+},
+{
+name = hheaLineGap;
+value = 0;
+},
+{
+name = typoLineGap;
+value = 0;
+},
+{
+name = winAscent;
+value = 1150;
+},
+{
+name = winDescent;
+value = 427;
+},
+{
+name = strikeoutPosition;
+value = 304;
+},
+{
+name = strikeoutSize;
+value = 60;
+},
+{
+name = subscriptXOffset;
+value = 0;
+},
+{
+name = subscriptXSize;
+value = 700;
+},
+{
+name = subscriptYOffset;
+value = 140;
+},
+{
+name = subscriptYSize;
+value = 650;
+},
+{
+name = superscriptXOffset;
+value = 0;
+},
+{
+name = superscriptXSize;
+value = 700;
+},
+{
+name = superscriptYOffset;
+value = 477;
+},
+{
+name = superscriptYSize;
+value = 650;
+},
+{
+name = "Master Icon Glyph Name";
+value = R;
+},
+{
+name = underlineThickness;
+value = 60;
+},
+{
+name = underlinePosition;
+value = -140;
+}
+);
+id = m002;
+metricValues = (
+{
+over = 0;
+pos = 780;
+},
+{
+over = 12;
+pos = 698;
+},
+{
+over = 12;
+pos = 516;
+},
+{
+over = -12;
+},
+{
+over = 0;
+pos = -220;
+},
+{
+over = 0;
+pos = 9.5;
+},
+{
+over = 6;
+pos = 335;
+},
+{
+over = 6;
+pos = 369;
+},
+{
+over = 12;
+pos = 536;
+},
+{
+over = 12;
+pos = 740;
+},
+{
+over = -12;
+pos = -200;
+},
+{
+over = -12;
+pos = -158;
+},
+{
+over = -6;
+pos = 329;
+},
+{
+over = -6;
+pos = 363;
+}
+);
+name = Italic;
+stemValues = (
+68,
+68,
+68,
+68,
+72,
+72,
+72,
+72,
+79,
+84,
+115,
+47,
+67,
+0,
+0,
+0,
+0,
+0
+);
+userData = {
+layerinfo.color = "0.5,0,0.5,0.7";
+};
+},
+{
+axesValues = (
+700
+);
+customParameters = (
+{
+name = typoAscender;
+value = 999;
+},
+{
+name = typoDescender;
+value = -301;
+},
+{
+name = hheaAscender;
+value = 999;
+},
+{
+name = hheaDescender;
+value = -301;
+},
+{
+name = hheaLineGap;
+value = 0;
+},
+{
+name = typoLineGap;
+value = 0;
+},
+{
+name = winAscent;
+value = 1150;
+},
+{
+name = winDescent;
+value = 427;
+},
+{
+name = strikeoutPosition;
+value = 304;
+},
+{
+name = strikeoutSize;
+value = 100;
+},
+{
+name = subscriptXOffset;
+value = 0;
+},
+{
+name = subscriptXSize;
+value = 700;
+},
+{
+name = subscriptYOffset;
+value = 140;
+},
+{
+name = subscriptYSize;
+value = 650;
+},
+{
+name = superscriptXOffset;
+value = 0;
+},
+{
+name = superscriptXSize;
+value = 700;
+},
+{
+name = superscriptYOffset;
+value = 477;
+},
+{
+name = superscriptYSize;
+value = 650;
+},
+{
+name = "Master Icon Glyph Name";
+value = B;
+},
+{
+name = underlineThickness;
+value = 60;
+},
+{
+name = underlinePosition;
+value = -140;
+}
+);
+iconName = Bold;
+id = m003;
+metricValues = (
+{
+over = 0;
+pos = 780;
+},
+{
+over = 12;
+pos = 698;
+},
+{
+over = 12;
+pos = 516;
+},
+{
+over = -12;
+},
+{
+over = 0;
+pos = -220;
+},
+{
+over = 0;
+pos = 9.5;
+},
+{
+over = 6;
+pos = 335;
+},
+{
+over = 6;
+pos = 369;
+},
+{
+over = 12;
+pos = 536;
+},
+{
+over = 12;
+pos = 740;
+},
+{
+over = -12;
+pos = -200;
+},
+{
+over = -12;
+pos = -154;
+},
+{
+over = -6;
+pos = 329;
+},
+{
+over = -6;
+pos = 363;
+}
+);
+name = "Bold Italic";
+stemValues = (
+122,
+122,
+122,
+122,
+113,
+113,
+113,
+113,
+122,
+122,
+122,
+113,
+113,
+96,
+147,
+164,
+76,
+122
+);
+userData = {
+layerinfo.color = "0.5,0,0.5,0.7";
+};
+}
+);
+glyphs = (
+);
+instances = (
+{
+axesValues = (
+100
+);
+instanceInterpolations = {
+m001 = 1;
+};
+isItalic = 1;
+linkStyle = Thin;
+name = "Thin Italic";
+weightClass = 100;
+},
+{
+axesValues = (
+300
+);
+instanceInterpolations = {
+m001 = 0.33333;
+m002 = 0.66667;
+};
+isItalic = 1;
+linkStyle = Light;
+name = "Light Italic";
+weightClass = 300;
+},
+{
+axesValues = (
+400
+);
+instanceInterpolations = {
+m002 = 1;
+};
+isItalic = 1;
+name = Italic;
+},
+{
+axesValues = (
+500
+);
+instanceInterpolations = {
+m002 = 0.66667;
+m003 = 0.33333;
+};
+isItalic = 1;
+linkStyle = Medium;
+name = "Medium Italic";
+weightClass = 500;
+},
+{
+axesValues = (
+700
+);
+instanceInterpolations = {
+m003 = 1;
+};
+isBold = 1;
+isItalic = 1;
+name = "Bold Italic";
+weightClass = 700;
+}
+);
+kerningLTR = {
+};
+metrics = (
+{
+type = ascender;
+},
+{
+type = "cap height";
+},
+{
+type = "x-height";
+},
+{
+type = baseline;
+},
+{
+type = descender;
+},
+{
+type = "italic angle";
+},
+{
+name = "zone 1";
+},
+{
+name = "zone 2";
+},
+{
+name = "zone 3";
+},
+{
+name = "zone 4";
+},
+{
+name = "zone 5";
+},
+{
+name = "zone 6";
+},
+{
+name = "zone 7";
+},
+{
+name = "zone 8";
+}
+);
+properties = (
+{
+key = copyrights;
+values = (
+{
+language = dflt;
+value = "";
+}
+);
+},
+{
+key = designers;
+values = (
+{
+language = dflt;
+value = "";
+}
+);
+},
+{
+key = licenses;
+values = (
+{
+language = dflt;
+value = "";
+}
+);
+},
+{
+key = manufacturers;
+values = (
+{
+language = dflt;
+value = "";
+}
+);
+}
+);
+settings = {
+disablesNiceNames = 1;
+keepAlternatesTogether = 1;
+};
+stems = (
+{
+name = vStem0;
+},
+{
+name = vStem0;
+},
+{
+name = vStem0;
+},
+{
+name = vStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+},
+{
+name = vStem0;
+},
+{
+name = vStem0;
+},
+{
+name = vStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+},
+{
+name = vStem0;
+},
+{
+name = vStem0;
+},
+{
+name = vStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+},
+{
+horizontal = 1;
+name = hStem0;
+}
+);
+unitsPerEm = 1000;
+userData = {
+GSDimensionPlugin.Dimensions = {
+m002 = {
+};
+};
+};
+versionMajor = 0;
+versionMinor = 0;
+}

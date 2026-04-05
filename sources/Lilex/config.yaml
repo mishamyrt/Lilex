@@ -7,8 +7,8 @@ axisOrder:
   - ital
 familyName: "Lilex"
 cleanUp: true
-
 recipeProvider: googlefonts
+
 stat:
   Lilex[wght].ttf:
     - name: Weight
