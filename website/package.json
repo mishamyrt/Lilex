@@ -1,8 +1,8 @@
 {
 	"name": "lilex-website",
-	"type": "module",
 	"version": "0.0.1",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "astro dev --host 0.0.0.0",
 		"start": "astro dev",
@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "25.5.2",
-		"prettier": "3.8.1",
+		"oxfmt": "0.44.0",
 		"sass": "1.99.0"
 	}
 }
