@@ -9,8 +9,8 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && astro check"
+		"format": "oxfmt .",
+		"lint": "oxfmt --check . && astro check"
 	},
 	"dependencies": {
 		"@astrojs/check": "0.9.8",
