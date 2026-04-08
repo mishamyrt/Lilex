@@ -1,8 +1,6 @@
 type ElementTagName = keyof HTMLElementTagNameMap;
 
-type CreatedElements<T extends ElementTagName> = Array<
-	HTMLElementTagNameMap[T]
->;
+type CreatedElements<T extends ElementTagName> = Array<HTMLElementTagNameMap[T]>;
 
 function charElements<T extends ElementTagName>(
 	input: string,

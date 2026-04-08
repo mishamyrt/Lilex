@@ -27,10 +27,7 @@ export function featureCollector(path, target, ignore = []) {
     const files = await readdir(path);
     const features = [];
     for (const fileName of files) {
-      if (
-        fileName.endsWith(".fea") &&
-        !ignore.some((i) => fileName.startsWith(i))
-      ) {
+      if (fileName.endsWith(".fea") && !ignore.some((i) => fileName.startsWith(i))) {
         const content = await readFile(join(path, fileName), "utf-8");
         const name = extractName(content);
         const code = fileName.substring(0, fileName.length - 4); // remove .fea extension

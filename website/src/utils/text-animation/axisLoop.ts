@@ -39,12 +39,7 @@ export function createAxisLoop(el: HTMLElement, config: AxisLoopConfig) {
 
 	function drawAnimationFrame(time: number = 0) {
 		for (let i = 0; i < elements.length; i++) {
-			values[i] = loopAxisValue(
-				config.min,
-				config.max,
-				time - delta * i,
-				duration,
-			);
+			values[i] = loopAxisValue(config.min, config.max, time - delta * i, duration);
 		}
 
 		for (let i = 0; i < elements.length; i++) {
