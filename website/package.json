@@ -14,8 +14,8 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "0.9.8",
-		"astro": "6.1.3",
-		"astro-typograf": "3.2.1",
+		"astro": "6.1.4",
+		"astro-typograf": "3.3.0",
 		"fast-glob": "3.3.3",
 		"nanostores": "1.2.0",
 		"typescript": "6.0.2"

@@ -11,11 +11,11 @@ importers:
         specifier: 0.9.8
         version: 0.9.8(prettier@3.8.1)(typescript@6.0.2)
       astro:
-        specifier: 6.1.3
-        version: 6.1.3(@types/node@25.5.2)(rollup@4.44.2)(sass@1.99.0)(typescript@6.0.2)(yaml@2.8.3)
+        specifier: 6.1.4
+        version: 6.1.4(@types/node@25.5.2)(rollup@4.44.2)(sass@1.99.0)(typescript@6.0.2)(yaml@2.8.3)
       astro-typograf:
-        specifier: 3.2.1
-        version: 3.2.1(unified@10.1.2)(unist-util-visit@5.1.0)
+        specifier: 3.3.0
+        version: 3.3.0(unified@11.0.5)(unist-util-visit@5.1.0)
       fast-glob:
         specifier: 3.3.3
         version: 3.3.3
@@ -1266,12 +1266,6 @@ packages:
         integrity: sha512-tO4ZIRKNC+MDWV4qKVZe3Ql/woTnmHDr5JD8UI5hn2pwBrHEwOEMZK7WlNb5RKB6EoJ02gwmQS9OrjuFnZYdpg==,
       }
 
-  "@types/unist@2.0.11":
-    resolution:
-      {
-        integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==,
-      }
-
   "@types/unist@3.0.3":
     resolution:
       {
@@ -1391,19 +1385,19 @@ packages:
         integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==,
       }
 
-  astro-typograf@3.2.1:
+  astro-typograf@3.3.0:
     resolution:
       {
-        integrity: sha512-Vhjw7mIgBPt631AChzNVf7TXSTJ/46Vkp396I64FI+UxmdFeut0QmIYoihEHeIuX7ZflQG7uEG9UlMuuVN9j5g==,
+        integrity: sha512-k6SLrh/WoSPlzp+op7TRJm2eXslolReBOM+v4rWVyuDRP8bLV0PEYTW1y6YsmptQlIYAz6LPCJqCgW1hueYHSg==,
       }
     peerDependencies:
-      unified: 10.1.2
-      unist-util-visit: ^4.1.2
+      unified: ^11.0.5
+      unist-util-visit: ^5.1.0
 
-  astro@6.1.3:
+  astro@6.1.4:
     resolution:
       {
-        integrity: sha512-FUKbBYOdYYrRNZwDd9I5CVSfR6Nj9aZeNzcjcvh1FgHwR0uXawkYFR3HiGxmdmAB2m8fs0iIkDdsiUfwGeO8qA==,
+        integrity: sha512-SRy1bONuCHkGWhI5JiWCQKVDVbeaXOikjAVZs/Nz+lvUvubtdLoZfnacmuZHQ9RL2IOkU54M8/qZYm9ypJDKrg==,
       }
     engines: { node: ">=22.12.0", npm: ">=9.6.5", pnpm: ">=7.1.0" }
     hasBin: true
@@ -1464,10 +1458,10 @@ packages:
         integrity: sha512-9v9kG0LvzrlcungtnJtpGNxY+fzECQKhK4EGJX2vByejiMX84MFNQw4UxPJl3bFbTMw+Dfs37XaIkCwTZfLh4g==,
       }
 
-  cheerio@1.1.2:
+  cheerio@1.2.0:
     resolution:
       {
-        integrity: sha512-IkxPpb5rS/d1IiLbHMgfPuS0FgiWTtFIm/Nj+2woXDLTZ7fOT2eqzgYbdMlLweqlHbsZjxEChoVK+7iph7jyQg==,
+        integrity: sha512-WDrybc/gKFpTYQutKIK6UvfcuxijIZfMfXaYm8NMsPQxSYvf+13fXUJ4rztGGbJcBQ/GF55gvrZ0Bc0bj/mqvg==,
       }
     engines: { node: ">=20.18.1" }
 
@@ -1740,6 +1734,13 @@ packages:
       }
     engines: { node: ">=0.12" }
 
+  entities@7.0.1:
+    resolution:
+      {
+        integrity: sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==,
+      }
+    engines: { node: ">=0.12" }
+
   es-module-lexer@2.0.0:
     resolution:
       {
@@ -1974,10 +1975,10 @@ packages:
         integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==,
       }
 
-  htmlparser2@10.0.0:
+  htmlparser2@10.1.0:
     resolution:
       {
-        integrity: sha512-TwAZM+zE5Tq3lrEHvOlvwgj1XLWQCtaaibSN11Q+gGBAS7Y1uZSWwXXRe4iF6OXnaq1riyQAPFOBtYc77Mxq0g==,
+        integrity: sha512-VTZkM9GWRAtEpveh7MSF6SjjrpNVNNVJfFup7xTY3UpFtm67foy9HDVXneLtFVt4pMz5kZtgNcvCniNFb1hlEQ==,
       }
 
   http-cache-semantics@4.2.0:
@@ -2004,13 +2005,6 @@ packages:
       {
         integrity: sha512-feOM6FaSr6rEABp/eDfVseKyTMDt+KGpeB35SkVn9Tyn0CqvVsY3EwI0v5i8nMHyJnzCIQf7nsy3p41TPkJZhg==,
       }
-
-  is-buffer@2.0.5:
-    resolution:
-      {
-        integrity: sha512-i2R6zNFDwgEHJyQUtJEk0XFi1i0dPFn/oqjK3/vPCcDeJvW5NQ83V8QbicfF1SupOaB0h8ntgBC2YiE7dfyctQ==,
-      }
-    engines: { node: ">=4" }
 
   is-docker@3.0.0:
     resolution:
@@ -3036,18 +3030,12 @@ packages:
         integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==,
       }
 
-  undici@7.16.0:
+  undici@7.24.7:
     resolution:
       {
-        integrity: sha512-QEg3HPMll0o3t2ourKwOeUAZ159Kn9mx5pnzHRQO8+Wixmh88YdZRiIwat0iNzNNXn0yoEtXJqFpyW7eM8BV7g==,
+        integrity: sha512-H/nlJ/h0ggGC+uRL3ovD+G0i4bqhvsDOpbDv7At5eFLlj2b41L8QliGbnl2H7SnDiYhENphh1tQFJZf+MyfLsQ==,
       }
     engines: { node: ">=20.18.1" }
-
-  unified@10.1.2:
-    resolution:
-      {
-        integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==,
-      }
 
   unified@11.0.5:
     resolution:
@@ -3089,12 +3077,6 @@ packages:
     resolution:
       {
         integrity: sha512-Hp5Kh3wLxv0PHj9m2yZhhLt58KzPtEYKQQ4yxfYFEO7EvHwzyDYnduhHnY1mDxoqr7VUwVuHXk9RXKIiYS1N8Q==,
-      }
-
-  unist-util-stringify-position@3.0.3:
-    resolution:
-      {
-        integrity: sha512-k5GzIBZ/QatR8N5X2y+drfpWG8IDBzdnVj6OInRNWm1oXrzydiaAT2OQiA8DPRRZyAKb9b6I2a6PxYklZD0gKg==,
       }
 
   unist-util-stringify-position@4.0.0:
@@ -3192,22 +3174,10 @@ packages:
         integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==,
       }
 
-  vfile-message@3.1.4:
-    resolution:
-      {
-        integrity: sha512-fa0Z6P8HUrQN4BZaX05SIVXic+7kE3b05PWAtPuYP9QLHsLKYR7/AlLW3NtOrpXRLeawpDLMsVkmk5DG0NXgWw==,
-      }
-
   vfile-message@4.0.2:
     resolution:
       {
         integrity: sha512-jRDZ1IMLttGj41KcZvlrYAaI3CfqpLpfpf+Mfig13viT6NKvRzWZ+lXz0Y5D60w6uJIBAOGq9mSHf0gktF0duw==,
-      }
-
-  vfile@5.3.7:
-    resolution:
-      {
-        integrity: sha512-r7qlzkgErKjobAmyNIkkSpizsFPYiUPuJb5pNW1RB4JcYVZhs4lIbVqk8XPk033CV/1z8ss5pkax8SuhGpcG8g==,
       }
 
   vfile@6.0.3:
@@ -4111,8 +4081,6 @@ snapshots:
     dependencies:
       undici-types: 7.18.2
 
-  "@types/unist@2.0.11": {}
-
   "@types/unist@3.0.3": {}
 
   "@ungap/structured-clone@1.2.0": {}
@@ -4195,16 +4163,16 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro-typograf@3.2.1(unified@10.1.2)(unist-util-visit@5.1.0):
+  astro-typograf@3.3.0(unified@11.0.5)(unist-util-visit@5.1.0):
     dependencies:
-      cheerio: 1.1.2
+      cheerio: 1.2.0
       deepmerge: 4.3.1
       kleur: 4.1.5
       typograf: 7.6.0
-      unified: 10.1.2
+      unified: 11.0.5
       unist-util-visit: 5.1.0
 
-  astro@6.1.3(@types/node@25.5.2)(rollup@4.44.2)(sass@1.99.0)(typescript@6.0.2)(yaml@2.8.3):
+  astro@6.1.4(@types/node@25.5.2)(rollup@4.44.2)(sass@1.99.0)(typescript@6.0.2)(yaml@2.8.3):
     dependencies:
       "@astrojs/compiler": 3.0.1
       "@astrojs/internal-helpers": 0.8.0
@@ -4325,18 +4293,18 @@ snapshots:
       domhandler: 5.0.3
       domutils: 3.2.2
 
-  cheerio@1.1.2:
+  cheerio@1.2.0:
     dependencies:
       cheerio-select: 2.1.0
       dom-serializer: 2.0.0
       domhandler: 5.0.3
       domutils: 3.2.2
       encoding-sniffer: 0.2.1
-      htmlparser2: 10.0.0
+      htmlparser2: 10.1.0
       parse5: 7.3.0
       parse5-htmlparser2-tree-adapter: 7.1.0
       parse5-parser-stream: 7.1.2
-      undici: 7.16.0
+      undici: 7.24.7
       whatwg-mimetype: 4.0.0
 
   chokidar@4.0.3:
@@ -4468,6 +4436,8 @@ snapshots:
   entities@4.5.0: {}
 
   entities@6.0.1: {}
+
+  entities@7.0.1: {}
 
   es-module-lexer@2.0.0: {}
 
@@ -4668,12 +4638,12 @@ snapshots:
 
   html-void-elements@3.0.0: {}
 
-  htmlparser2@10.0.0:
+  htmlparser2@10.1.0:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
       domutils: 3.2.2
-      entities: 6.0.1
+      entities: 7.0.1
 
   http-cache-semantics@4.2.0: {}
 
@@ -4684,8 +4654,6 @@ snapshots:
   immutable@5.1.5: {}
 
   iron-webcrypto@1.2.1: {}
-
-  is-buffer@2.0.5: {}
 
   is-docker@3.0.0: {}
 
@@ -5473,17 +5441,7 @@ snapshots:
 
   undici-types@7.18.2: {}
 
-  undici@7.16.0: {}
-
-  unified@10.1.2:
-    dependencies:
-      "@types/unist": 2.0.11
-      bail: 2.0.2
-      extend: 3.0.2
-      is-buffer: 2.0.5
-      is-plain-obj: 4.1.0
-      trough: 2.2.0
-      vfile: 5.3.7
+  undici@7.24.7: {}
 
   unified@11.0.5:
     dependencies:
@@ -5524,10 +5482,6 @@ snapshots:
       "@types/unist": 3.0.3
       unist-util-visit: 5.1.0
 
-  unist-util-stringify-position@3.0.3:
-    dependencies:
-      "@types/unist": 2.0.11
-
   unist-util-stringify-position@4.0.0:
     dependencies:
       "@types/unist": 3.0.3
@@ -5563,22 +5517,10 @@ snapshots:
       "@types/unist": 3.0.3
       vfile: 6.0.3
 
-  vfile-message@3.1.4:
-    dependencies:
-      "@types/unist": 2.0.11
-      unist-util-stringify-position: 3.0.3
-
   vfile-message@4.0.2:
     dependencies:
       "@types/unist": 3.0.3
       unist-util-stringify-position: 4.0.0
-
-  vfile@5.3.7:
-    dependencies:
-      "@types/unist": 2.0.11
-      is-buffer: 2.0.5
-      unist-util-stringify-position: 3.0.3
-      vfile-message: 3.1.4
 
   vfile@6.0.3:
     dependencies:
