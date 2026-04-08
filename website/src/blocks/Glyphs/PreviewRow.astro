@@ -5,16 +5,17 @@ import Typography from "../../components/Typography.astro";
 export type Props = {
 	title: string;
 	text: string;
+	id: string;
 };
 
-const { title, text } = Astro.props;
+const { title, text, id } = Astro.props;
 ---
 
 <div class="previewRow">
 	<Typography as="h2" variant="text-m_accent" color="secondary">
 		{title}
 	</Typography>
-	<TextArea value={text} />
+	<TextArea value={text} name={id} />
 </div>
 
 <style lang="scss">

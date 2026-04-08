@@ -1325,7 +1325,7 @@ sub nine by nineinferior;
 tag = subs;
 },
 {
-code = "# Denominators
+code = "# Name: Denominators
 
 sub @numbers_dflt by @numbers_dnom;
 ";

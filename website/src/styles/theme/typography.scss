@@ -21,6 +21,8 @@
   --typography-font-family-mono: "LilexWeb", monospace;
   --typography-font-family-duo: "LilexDuoWeb", monospace;
 
+  --typography-text-2xs: 400 10px/1.4 var(--typography-font-family-mono);
+  --typography-text-xs: 400 12px/1.4 var(--typography-font-family-mono);
   --typography-text-s: 430 13px/1.4 var(--typography-font-family-mono);
   --typography-text-s_accent: italic 430 13px/1.4
     var(--typography-font-family-mono);

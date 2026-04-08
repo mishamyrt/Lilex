@@ -30,7 +30,7 @@ Jumping wizards vex bold, quirky foxes.`,
 Ψάχνω ζωντανό φως, κι όμως βρέχω την ξύλινη γη.
 Ξανθιά ψυχή βλέπει φως και ζυγίζει όνειρα.`,
 	numbersAndSymbols:
-		"0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 ½ ⅓ ⅔ ¼ ¾ . , : ; … ! ¡ ? ¿ • * # / - – — ‚ ′ ' \" “ „ « » < > ( ) { } [ ] & ¶ § ° ℓ ‡ ℮ № € ₿ ¢ ₡ ¤ $ ₫ ₽ ₴ ₭ ₤ ₺ ₦ ₱ ₹ ₪ £ ₸ ₮ ₩ ¥ ∞ Ω ∆ ∏ ∑ ✓ √ ∂ µ ‰   ",
+		"0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 ½ ⅓ ⅔ ¼ ¾ . , : ; … ! ¡ ? ¿ • * # / ~ - – — ‚ ′ ' \" “ „ « » < > ( ) { } [ ] & ¶ § ° ℓ ‡ ℮ № € ₿ ¢ ₡ ¤ $ ₫ ₽ ₴ ₭ ₤ ₺ ₦ ₱ ₹ ₪ £ ₸ ₮ ₩ ¥ ∞ Ω ∆ ∏ ∑ ✓ √ ∂ µ ‰   ",
 	ligatures:
 		"++ +++ -- --- ~~ ;; !! && %% {| |} [| |] |> <| <> </ </> /> << <<< <= >= <*> *** /** /* #[ ]# #( #{ #[ #! // /// != !== := ::= .= ..= := /= .. ... .< .? :: :::",
 };
@@ -87,14 +87,15 @@ Jumping wizards vex bold, quirky foxes.`,
 			</Stack>
 		</div>
 		<Stack class="glyphs-features">
-			<PreviewRow title="Latin" text={glyphSets.latin} />
-			<PreviewRow title="Кириллица" text={glyphSets.cyrillic} />
-			<PreviewRow title="Ελληνικά" text={glyphSets.greek} />
+			<PreviewRow id="latin" title="Latin" text={glyphSets.latin} />
+			<PreviewRow id="cyrillic" title="Кириллица" text={glyphSets.cyrillic} />
+			<PreviewRow id="greek" title="Ελληνικά" text={glyphSets.greek} />
 			<PreviewRow
+				id="numbersAndSymbols"
 				title="Numbers & symbols"
 				text={glyphSets.numbersAndSymbols}
 			/>
-			<PreviewRow title="Ligatures" text={glyphSets.ligatures} />
+			<PreviewRow id="ligatures" title="Ligatures" text={glyphSets.ligatures} />
 		</Stack>
 		<FloatingPanel class="glyphs-toggleMobile">
 			<FloatingToggle
@@ -121,14 +122,14 @@ Jumping wizards vex bold, quirky foxes.`,
 	}
 
 	const slider = document.querySelector<HTMLInputElement>(
-		".glyphs-weightSlider"
+		".glyphs-weightSlider",
 	);
 	if (!slider) {
 		throw new Error("Slider element not found");
 	}
 
 	const weightValue = document.querySelector<HTMLElement>(
-		".glyphs-weightValue"
+		".glyphs-weightValue",
 	);
 	if (!weightValue) {
 		throw new Error("Weight value element not found");
@@ -141,7 +142,7 @@ Jumping wizards vex bold, quirky foxes.`,
 	}
 
 	const italicToggles = document.querySelectorAll<HTMLInputElement>(
-		".glyphs-toggleItalic"
+		".glyphs-toggleItalic",
 	);
 	if (!italicToggles) {
 		throw new Error("Toggle italic element not found");
@@ -149,7 +150,7 @@ Jumping wizards vex bold, quirky foxes.`,
 
 	for (const toggle of italicToggles) {
 		toggle.addEventListener("change", () =>
-			setGlyphsItalicEnabled(toggle.checked)
+			setGlyphsItalicEnabled(toggle.checked),
 		);
 	}
 

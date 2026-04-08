@@ -3,15 +3,23 @@ export type Props = {
 	class?: string;
 	spellcheck?: boolean;
 	value?: string;
+	name?: string;
 };
 
-const { class: className, spellcheck = false, value, ...rest } = Astro.props;
+const {
+	class: className,
+	spellcheck = false,
+	value,
+	name,
+	...rest
+} = Astro.props;
 
 const defaultFontSize = 30;
 ---
 
 <textarea
 	data-font-size={defaultFontSize}
+	data-textarea-id={name}
 	style={`--textarea-font-size: ${defaultFontSize}px;`}
 	class:list={["textArea", className]}
 	spellcheck={spellcheck}
@@ -19,21 +27,152 @@ const defaultFontSize = 30;
 >
 
 <script>
+	import {
+		$features,
+		$textareaFeatures,
+		loadFeatures,
+		toggleFeature,
+		getFeatureSettings,
+	} from "../stores/features";
+
 	const PLUS_CHAR = "=";
 	const MINUS_CHAR = "-";
+	const MENU_ID = "textAreaFeatures";
+
+	let activeTextareaId: string | null = null;
+	let menu: HTMLElement | null = null;
+
+	const glyphsBlock = document.querySelector('[data-block-name="glyphs"]')!;
+	if (!glyphsBlock) {
+		throw new Error("glyphs block element not found");
+	}
+
+	async function initMenu() {
+		if (document.getElementById(MENU_ID)) return;
+		await loadFeatures();
+
+		const el = document.createElement("div");
+		el.id = MENU_ID;
+
+		for (const feature of $features.get()) {
+			const item = document.createElement("div");
+			item.classList.add("textAreaFeatures-item");
+			item.dataset.featureCode = feature.code;
+			item.innerHTML = `
+				<div class="textAreaFeatures-checkboxContainer">
+					<input type="checkbox" class="textAreaFeatures-checkbox" data-code="${feature.code}">
+				</div>
+				<span class="textAreaFeatures-title">${feature.name}</span>
+				<span class="textAreaFeatures-code">${feature.code}</span>
+			`;
+
+			const checkbox = item.querySelector<HTMLInputElement>(
+				".textAreaFeatures-checkbox",
+			)!;
+			checkbox.addEventListener("change", () => {
+				if (!activeTextareaId) return;
+				toggleFeature(activeTextareaId, feature.code);
+			});
+
+			item.addEventListener("click", (e) => {
+				if ((e.target as HTMLElement).tagName === "INPUT") return;
+				checkbox.checked = !checkbox.checked;
+				checkbox.dispatchEvent(new Event("change"));
+			});
+
+			el.appendChild(item);
+		}
+
+		glyphsBlock.appendChild(el);
+		menu = el;
+	}
+
+	function showMenu(x: number, y: number, textareaId: string) {
+		if (!menu) return;
+		activeTextareaId = textareaId;
+
+		const enabled = $textareaFeatures.get()[textareaId] ?? [];
+		for (const cb of menu.querySelectorAll<HTMLInputElement>(
+			".textAreaFeatures-checkbox",
+		)) {
+			cb.checked = enabled.includes(cb.dataset.code!);
+		}
+
+		menu.style.left = "0px";
+		menu.style.top = "0px";
+		menu.classList.add("textAreaFeatures--visible");
+
+		const rect = menu.getBoundingClientRect();
+		let left = x;
+		let top = y;
+
+		if (x + rect.width > window.innerWidth) {
+			left = x - rect.width;
+		}
+		if (y + rect.height > window.innerHeight) {
+			top = y - rect.height;
+		}
+
+		menu.style.left = `${Math.max(0, left)}px`;
+		menu.style.top = `${Math.max(0, top)}px`;
+
+		document.body.style.overflow = "hidden";
+	}
+
+	function hideMenu() {
+		if (!menu) return;
+		menu.classList.remove("textAreaFeatures--visible");
+		activeTextareaId = null;
+		document.body.style.overflow = "";
+	}
+
+	document.addEventListener("click", (e) => {
+		if (menu && !menu.contains(e.target as Node)) {
+			hideMenu();
+		}
+	});
+
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape") hideMenu();
+	});
 
 	const inputs = document.querySelectorAll<HTMLTextAreaElement>(".textArea");
 	if (!inputs) {
 		throw new Error(".textArea elements not found");
 	}
 
+	initMenu();
+
 	for (const input of inputs) {
 		input.addEventListener("input", () => requestAutoResize(input));
 		input.addEventListener("load", () => requestAutoResize(input));
 		input.addEventListener("keydown", handleFontSizeChange);
+		input.addEventListener("contextmenu", (e) => {
+			const id = input.dataset.textareaId;
+			if (!id || !menu) return;
+			e.preventDefault();
+			showMenu(e.clientX, e.clientY, id);
+		});
 
 		requestAutoResize(input);
 	}
+
+	$textareaFeatures.subscribe(() => {
+		for (const input of inputs) {
+			const id = input.dataset.textareaId;
+			if (!id) continue;
+			input.style.fontFeatureSettings = getFeatureSettings(id);
+		}
+
+		if (activeTextareaId && menu) {
+			const enabled = $textareaFeatures.get()[activeTextareaId] ?? [];
+			for (const cb of menu.querySelectorAll<HTMLInputElement>(
+				".textAreaFeatures-checkbox",
+			)) {
+				cb.checked = enabled.includes(cb.dataset.code!);
+			}
+		}
+	});
 
 	const inputObserver = new ResizeObserver((entries) => {
 		for (const entry of entries) {
@@ -121,5 +260,70 @@ const defaultFontSize = 30;
 
 	:global(.font-duo) .textArea {
 		font-family: var(--typography-font-family-duo);
+	}
+
+	:global(#textAreaFeatures) {
+		display: none;
+		max-height: 490px;
+		overflow-y: auto;
+		background-color: var(--color-background-overlay);
+		backdrop-filter: blur(16px);
+		position: fixed;
+		z-index: 1000;
+		padding: 4px;
+		border-radius: 10px;
+		border: 0.5px solid var(--color-border-overlay);
+	}
+
+	:global(#textAreaFeatures.textAreaFeatures--visible) {
+		display: block;
+		user-select: none;
+	}
+
+	:global(.textAreaFeatures-item) {
+		position: relative;
+		display: flex;
+		height: 24px;
+		align-items: center;
+		padding: 8px;
+
+		&:hover {
+			background-color: var(--color-background-overlay_active);
+			border-radius: 6px;
+		}
+	}
+
+	:global(.textAreaFeatures-title) {
+		font: var(--typography-text-xs);
+		margin-right: 20px;
+		cursor: default;
+	}
+
+	:global(.textAreaFeatures-code) {
+		font: var(--typography-text-2xs);
+		color: var(--color-content-dimmed);
+		margin-left: auto;
+		cursor: default;
+	}
+
+	:global(.textAreaFeatures-checkbox) {
+		appearance: none;
+		width: 11px;
+		height: 6px;
+		border-bottom: 2px solid var(--color-content-primary);
+		border-left: 2px solid var(--color-content-primary);
+		transform: rotate(-45deg);
+		opacity: 0;
+
+		&:checked {
+			opacity: 1;
+		}
+	}
+
+	:global(.textAreaFeatures-checkboxContainer) {
+		width: 16px;
+		height: 16px;
+		margin-right: 8px;
+		margin-top: -3px;
 	}
 </style>

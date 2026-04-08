@@ -4,6 +4,7 @@ import path from "node:path";
 import { unlink, rm, mkdir, link } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import glob from "fast-glob";
+
 /**
  * Create a file linker integration for Astro
  *

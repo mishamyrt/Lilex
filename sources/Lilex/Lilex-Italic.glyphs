@@ -1581,7 +1581,7 @@ sub zero.tosf by zero.tosf.alt01;
 tag = zero;
 },
 {
-code = "# Denominators
+code = "# Name: Denominators
 
 sub @numbers_dflt by @numbers_dnom;
 ";

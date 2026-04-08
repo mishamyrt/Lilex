@@ -23,6 +23,6 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# fonts
+# font artifacts
 public/fonts
-
+public/opentype_features.json
