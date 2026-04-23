@@ -22,6 +22,11 @@ configure: ## setup font build environment
 	@uv run youseedee A > /dev/null
 	uv tool run lefthook install
 
+.PHONY: print-updates
+print-updates: ## print list of outdated packages
+	@make website-print-updates
+	@make scripts-print-updates
+
 .PHONY: generate
 generate: ## regenerate the font sources
 	@$(VENV) python $(SCRIPTS_DIR)/generate.py \
@@ -144,7 +149,7 @@ website-serve: _website-env ## run the website
 website-build: _website-env ## build the website
 	@cd $(WEBSITE_DIR); pnpm run build
 
-.PHONY: print-updates
+.PHONY: website-print-updates
 website-print-updates: ## print list of outdated packages
 	@cd $(WEBSITE_DIR); pnpm outdated
 
