@@ -665,7 +665,7 @@ wheels = [
 
 [[package]]
 name = "gftools"
-version = "0.9.994"
+version = "0.9.995"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "absl-py" },
@@ -708,9 +708,9 @@ dependencies = [
     { name = "vharfbuzz" },
     { name = "vttlib" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/90/25/449f3a45b097d5d928ad95b6224033dcece11c485a0daca79728ffc6dd5f/gftools-0.9.994.tar.gz", hash = "sha256:a0b6aace11de8916a83d89784c73b9d23cc78113cb8aeb02b5ca611490e32f71", size = 8448985, upload-time = "2026-03-04T14:33:37.196Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c8/69/36a1168a58acb24926b74739b85efcc6d37554280b29221af4cac39a2795/gftools-0.9.995.tar.gz", hash = "sha256:93b513aab965ba87d1687524db1f653042032950fb84ba6936706898a571c5bc", size = 8449035, upload-time = "2026-04-08T12:12:17.493Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/b2/d9fb73366a81fd35c568439fd8e5ded9906cdaf1e19c3891bd542023e2ce/gftools-0.9.994-py3-none-any.whl", hash = "sha256:f08bac7e81b1a34a6a91a611636ad7de48e79763f7664cd6d01ae4417a3bbae5", size = 2116219, upload-time = "2026-03-04T14:33:35.216Z" },
+    { url = "https://files.pythonhosted.org/packages/98/51/366e5898b790f6ac0af7585f72acb0bbba7d28e8ddc2b914a5c5d48f1f3c/gftools-0.9.995-py3-none-any.whl", hash = "sha256:c02c785f736b7dc768e93c05a689739a58a2fe336dc6fee1f43e87feb3f4d72e", size = 2116132, upload-time = "2026-04-08T12:12:15.782Z" },
 ]
 
 [[package]]
@@ -760,16 +760,16 @@ wheels = [
 
 [[package]]
 name = "glyphslib"
-version = "6.13.0"
+version = "6.13.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "fonttools", extra = ["unicode"] },
     { name = "openstep-plist" },
     { name = "ufolib2" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7e/86/069a2c8c26787af2b4f591f25f830a8c0978d758fc03764a4c89401641b9/glyphslib-6.13.0.tar.gz", hash = "sha256:7527baa1310be6c41d504ced6efec37423cccaa8ad950f8db675e54456324a1f", size = 25966113, upload-time = "2026-03-09T16:12:06.173Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ac/0f/d3e7796375d1262774b2104cde9c32d563065bb86a1d89a89f01d8b627e2/glyphslib-6.13.1.tar.gz", hash = "sha256:00e3db77ee360bfcf4c2fa108ab0a9c2b8774e5eccd499958220b956bbac7097", size = 25969247, upload-time = "2026-04-28T16:55:02.185Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/bb/03/86d0aee438492588fb93d445eb92c264f3462f66cbb5389f306f2470a273/glyphslib-6.13.0-py3-none-any.whl", hash = "sha256:0f1d03fcf72b924baa930f006e359237de00c7885a7feb7ba0fd3e772574daea", size = 913100, upload-time = "2026-03-09T16:12:04.266Z" },
+    { url = "https://files.pythonhosted.org/packages/eb/44/ec367bdc1a80930f0218145389ef7e09b65c00a465e22213b3a199a6aed2/glyphslib-6.13.1-py3-none-any.whl", hash = "sha256:1201806c73f1f2f1526114d5ce8a3f53596e33f4ac28b7b66147a65cffb413e4", size = 915137, upload-time = "2026-04-28T16:54:59.679Z" },
 ]
 
 [[package]]
@@ -827,8 +827,8 @@ requires-dist = [
     { name = "fontbakery", specifier = "==1.1.0" },
     { name = "fontmake", specifier = "==3.11.1" },
     { name = "fonttools", specifier = "==4.62.1" },
-    { name = "gftools", specifier = "==0.9.994" },
-    { name = "glyphslib", specifier = "==6.13.0" },
+    { name = "gftools", specifier = "==0.9.995" },
+    { name = "glyphslib", specifier = "==6.13.1" },
     { name = "pyyaml", specifier = "==6.0.3" },
     { name = "shaperglot", specifier = "==1.2.0" },
 ]
