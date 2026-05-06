@@ -2,11 +2,14 @@
 import Typography from "../../components/Typography.astro";
 ---
 
-<Typography color="dimmed" variant="heading-m">
+<Typography as="span" color="dimmed" variant="heading-m">
 	<span class="ligaturesPreview">
-		<span class="ligature">&lt;/</span>a<span class="ligature">&lt;=</span>b<span class="ligature">--</span>c<span class="ligature">/&gt;</span><br />
-		<span class="ligature">&lt;!--</span>d<span class="ligature">&lt;&lt;</span>e<span class="ligature">&lt;*&gt;</span><br />
-		f<span class="ligature">!==</span>g<span class="ligature">&lt;|&gt;</span>h<span class="ligature">++</span><br />
+		<span class="ligature">&lt;/</span>a<span class="ligature">&lt;=</span
+		>b<span class="ligature">--</span>c<span class="ligature">/&gt;</span><br />
+		<span class="ligature">&lt;!--</span>d<span class="ligature">&lt;&lt;</span
+		>e<span class="ligature">&lt;*&gt;</span><br />
+		f<span class="ligature">!==</span>g<span class="ligature">&lt;|&gt;</span
+		>h<span class="ligature">++</span><br />
 		<span class="ligature">&lt;&lt;-&lt;-|-&gt;-&gt;&gt;</span><br />
 	</span>
 </Typography>
@@ -20,7 +23,7 @@ import Typography from "../../components/Typography.astro";
 
 	$isSuperpowersEnabled.subscribe((enabled) => {
 		preview.classList.toggle("_rich", enabled);
-	})
+	});
 </script>
 
 <style lang="scss">
