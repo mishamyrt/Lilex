@@ -92563,6 +92563,69 @@ width = 600;
 unicode = 35;
 },
 {
+glyphname = overline;
+layers = (
+{
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+closed = 1;
+nodes = (
+(540,713,l),
+(60,713,l),
+(60,694,l),
+(540,694,l)
+);
+}
+);
+userData = {
+"com.type-invaders.name.final" = uni203E;
+"com.type-invaders.name.production" = overline;
+};
+width = 600;
+},
+{
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+closed = 1;
+nodes = (
+(540,740,l),
+(60,740,l),
+(60,666,l),
+(540,666,l)
+);
+}
+);
+userData = {
+"com.type-invaders.name.final" = uni203E;
+"com.type-invaders.name.production" = overline;
+};
+width = 600;
+},
+{
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+closed = 1;
+nodes = (
+(540,764,l),
+(60,764,l),
+(60,643,l),
+(540,643,l)
+);
+}
+);
+userData = {
+"com.type-invaders.name.final" = uni203E;
+"com.type-invaders.name.production" = overline;
+};
+width = 600;
+}
+);
+unicode = 8254;
+},
+{
 glyphname = slash;
 layers = (
 {

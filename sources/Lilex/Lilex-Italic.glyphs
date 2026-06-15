@@ -1,9 +1,6 @@
 {
 .appVersion = "3434";
 .formatVersion = 3;
-DisplayStrings = (
-"/bracketright_numbersign.liga.cv15"
-);
 axes = (
 {
 name = Weight;
@@ -98903,6 +98900,83 @@ layerId = m003;
 width = 600;
 }
 );
+},
+{
+glyphname = overline;
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+closed = 1;
+nodes = (
+(615,713,l),
+(135,713,l),
+(132,694,l),
+(612,694,l)
+);
+}
+);
+userData = {
+"com.type-invaders.name.final" = uni203E;
+"com.type-invaders.name.production" = overline;
+};
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+closed = 1;
+nodes = (
+(618,740,l),
+(143,740,l),
+(131,668,l),
+(606,668,l)
+);
+}
+);
+userData = {
+"com.type-invaders.name.final" = uni203E;
+"com.type-invaders.name.production" = overline;
+};
+width = 600;
+},
+{
+guides = (
+{
+angle = 80.5;
+pos = (8,-72);
+},
+{
+angle = 80.5;
+pos = (483,-72);
+}
+);
+layerId = m003;
+shapes = (
+{
+closed = 1;
+nodes = (
+(622,763,l),
+(147,763,l),
+(127,644,l),
+(602,644,l)
+);
+}
+);
+userData = {
+"com.type-invaders.name.final" = uni203E;
+"com.type-invaders.name.production" = overline;
+com.typemytype.robofont.guideline.magnetic.J8LXDX0bn2 = 5;
+com.typemytype.robofont.guideline.magnetic.MsaRxUJ7tE = 5;
+com.typemytype.robofont.guideline.showMeasurements.J8LXDX0bn2 = 0;
+com.typemytype.robofont.guideline.showMeasurements.MsaRxUJ7tE = 0;
+};
+width = 600;
+}
+);
+unicode = 8254;
 },
 {
 glyphname = slash;

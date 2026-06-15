@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Added
+
+- Overline (`‾`).
+
 ## [2.700] — April 04, 2026
 
 ### Added
