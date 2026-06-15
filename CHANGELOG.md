@@ -7,7 +7,8 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Overline (`‾`).
-- ASCII control pictures (uni2400—uni2421)
+- ASCII control pictures (uni2400—uni2421).
+- Rounded comma and quotes (`ss05`).
 
 ## [2.700] — April 04, 2026
 
