@@ -1,10 +1,6 @@
 {
 .appVersion = "3434";
 .formatVersion = 3;
-DisplayStrings = (
-"◌",
-"˛̨"
-);
 axes = (
 {
 name = Weight;
@@ -56692,6 +56688,55 @@ width = 600;
 unicode = 1217;
 },
 {
+glyphname = "Entail-cy";
+lastChange = "2026-06-16 21:08:32 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = "En-cy";
+},
+{
+alignment = -1;
+pos = (24,0);
+ref = cyrtail.part;
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = "En-cy";
+},
+{
+alignment = -1;
+pos = (15,0);
+ref = cyrtail.part;
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "En-cy";
+},
+{
+alignment = -1;
+pos = (20,0);
+ref = cyrtail.part;
+}
+);
+width = 600;
+}
+);
+unicode = 1225;
+},
+{
 glyphname = "Abreve-cy";
 lastChange = "2026-06-16 09:01:31 +0000";
 layers = (
@@ -64799,9 +64844,15 @@ unicode = 1099;
 },
 {
 glyphname = "hardsign-cy";
-lastChange = "2026-06-16 09:01:31 +0000";
+lastChange = "2026-06-16 20:02:59 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m001;
 shapes = (
 {
@@ -64873,6 +64924,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (341,516);
+}
+);
 layerId = m002;
 shapes = (
 {
@@ -64944,6 +65001,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (345,516);
+}
+);
 layerId = m003;
 shapes = (
 {
@@ -65541,9 +65604,15 @@ unicode = 1109;
 },
 {
 glyphname = "e-cy";
-lastChange = "2026-06-16 09:01:31 +0000";
+lastChange = "2026-06-16 19:58:18 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m001;
 shapes = (
 {
@@ -65591,6 +65660,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m002;
 shapes = (
 {
@@ -65638,6 +65713,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m003;
 shapes = (
 {
@@ -65689,9 +65770,15 @@ unicode = 1108;
 },
 {
 glyphname = "ereversed-cy";
-lastChange = "2026-06-16 09:01:31 +0000";
+lastChange = "2026-06-16 19:42:04 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m001;
 shapes = (
 {
@@ -65740,6 +65827,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m002;
 shapes = (
 {
@@ -65788,6 +65881,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m003;
 shapes = (
 {
@@ -66048,9 +66147,15 @@ unicode = 1115;
 },
 {
 glyphname = "yu-cy";
-lastChange = "2026-06-16 09:01:31 +0000";
+lastChange = "2026-06-16 19:43:41 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m001;
 shapes = (
 {
@@ -66116,6 +66221,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m002;
 shapes = (
 {
@@ -66181,6 +66292,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m003;
 shapes = (
 {
@@ -66451,9 +66568,15 @@ width = 600;
 },
 {
 glyphname = "ya-cy";
-lastChange = "2026-06-16 09:01:31 +0000";
+lastChange = "2026-06-16 19:45:09 +0000";
 layers = (
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m001;
 shapes = (
 {
@@ -66513,6 +66636,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m002;
 shapes = (
 {
@@ -66572,6 +66701,12 @@ com.typemytype.robofont.pointLabels = {
 width = 600;
 },
 {
+anchors = (
+{
+name = top;
+pos = (343,516);
+}
+);
 layerId = m003;
 shapes = (
 {
@@ -71140,6 +71275,51 @@ width = 600;
 }
 );
 unicode = 1218;
+},
+{
+glyphname = "entail-cy";
+layers = (
+{
+layerId = m002;
+shapes = (
+{
+ref = "en-cy";
+},
+{
+alignment = -1;
+ref = cyrtail.part;
+}
+);
+width = 600;
+},
+{
+layerId = m001;
+shapes = (
+{
+ref = "en-cy";
+},
+{
+alignment = -1;
+ref = cyrtail.part;
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = "en-cy";
+},
+{
+alignment = -1;
+ref = cyrtail.part;
+}
+);
+width = 600;
+}
+);
+unicode = 1226;
 },
 {
 glyphname = "abreve-cy";
@@ -170381,51 +170561,6 @@ width = 600;
 );
 },
 {
-glyphname = dotlessjdotbelow;
-lastChange = "2024-08-03 01:28:03 +0000";
-layers = (
-{
-layerId = m001;
-shapes = (
-{
-ref = jdotless;
-},
-{
-pos = (326,-195);
-ref = dotbelowcomb;
-}
-);
-width = 600;
-},
-{
-layerId = m002;
-shapes = (
-{
-ref = jdotless;
-},
-{
-pos = (278,-198);
-ref = dotbelowcomb;
-}
-);
-width = 600;
-},
-{
-layerId = m003;
-shapes = (
-{
-ref = jdotless;
-},
-{
-pos = (256,-225);
-ref = dotbelowcomb;
-}
-);
-width = 600;
-}
-);
-},
-{
 glyphname = hookcomb.case;
 lastChange = "2026-06-16 09:02:15 +0000";
 layers = (
@@ -172091,6 +172226,110 @@ ref = period;
 {
 pos = (56,374);
 ref = period;
+}
+);
+width = 600;
+}
+);
+},
+{
+export = 0;
+glyphname = cyrtail.part;
+lastChange = "2026-06-16 21:00:01 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+closed = 1;
+nodes = (
+(427,-136,l),
+(503,21,l),
+(423,21,l),
+(423,0,l),
+(470,0,l),
+(403,-136,l)
+);
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+closed = 1;
+nodes = (
+(472,-136,l),
+(567,73,l),
+(422,73,l),
+(422,0,l),
+(454,0,l),
+(391,-136,l)
+);
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+closed = 1;
+nodes = (
+(525,-136,l),
+(620,90,l),
+(423,90,l),
+(423,0,l),
+(438,0,l),
+(381,-136,l)
+);
+}
+);
+width = 600;
+}
+);
+},
+{
+export = 0;
+glyphname = dotlessjdotbelow;
+lastChange = "2026-06-16 19:36:53 +0000";
+layers = (
+{
+layerId = m001;
+shapes = (
+{
+ref = jdotless;
+},
+{
+pos = (326,-195);
+ref = dotbelowcomb;
+}
+);
+width = 600;
+},
+{
+layerId = m002;
+shapes = (
+{
+ref = jdotless;
+},
+{
+pos = (278,-198);
+ref = dotbelowcomb;
+}
+);
+width = 600;
+},
+{
+layerId = m003;
+shapes = (
+{
+ref = jdotless;
+},
+{
+pos = (256,-225);
+ref = dotbelowcomb;
 }
 );
 width = 600;

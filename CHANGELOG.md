@@ -11,11 +11,13 @@ All notable changes to this project will be documented in this file.
 - Rounded comma and quotes (`ss05`).
 - More combs (`uni0331`, `uni032D`, `uni032E`).
 - Dotted circle (`◌`).
+- Sami-cyrillic en letter (`Ӊ`, `ӊ`)
 
 ### Fixed
 
 - Rendering order (`Λ`, `┇`, `┆`, `┋`).
 - Soft dotted glyphs (`i`, `j`).
+- Diacritics positioning with `э`, `є`, `я`, `ю`, `ъ`.
 
 ## [2.700] — April 04, 2026
 
