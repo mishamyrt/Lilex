@@ -10,7 +10,7 @@ on:
 
 env:
   PYTHON_VERSION: "3.13"
-  UV_VERSION: "0.11.2"
+  UV_VERSION: "0.11.21"
 
 jobs:
   set-version:

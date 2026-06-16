@@ -14,15 +14,15 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "0.9.9",
-		"astro": "6.2.2",
+		"astro": "6.4.6",
 		"astro-typograf": "3.3.0",
 		"fast-glob": "3.3.3",
 		"nanostores": "1.3.0",
 		"typescript": "6.0.3"
 	},
 	"devDependencies": {
-		"@types/node": "25.6.0",
-		"oxfmt": "0.48.0",
-		"sass": "1.99.0"
+		"@types/node": "25.9.3",
+		"oxfmt": "0.54.0",
+		"sass": "1.101.0"
 	}
 }
