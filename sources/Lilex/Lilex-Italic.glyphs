@@ -2,8 +2,8 @@
 .appVersion = "3434";
 .formatVersion = 3;
 DisplayStrings = (
-"┊",
-"┋"
+"◌",
+"˛̨"
 );
 axes = (
 {
@@ -1382,108 +1382,6 @@ lookup locl_cyr_bgr {
 } locl_cyr_bgr;
 ";
 tag = locl;
-},
-{
-code = "# Name: Mark positioning
-@mGC_bottom_0_0 = [cedillacomb commaaccentcomb dotbelowcomb];
-@mGC_top_0_516 = [acutecomb breveacute brevecomb brevegrave brevehook brevetilde caroncomb circumflexacute circumflexbreve circumflexcomb circumflexgrave circumflexhook circumflextilde commaturnedabovecomb dieresisacute dieresiscaron dieresiscomb dieresisgrave dieresismacron dotaccentcomb gravecomb hookabovecomb hungarumlautcomb macroncomb ringcomb tildecomb];
-@mGC_top_0_698 = [breveacute.case brevegrave.case brevehook.case brevetilde.case circumflexacute.case circumflexbreve.case circumflexgrave.case circumflexhook.case circumflextilde.case dieresisacute.case dieresiscaron.case dieresisgrave.case dieresismacron.case hookabovecomb.case];
-
-markClass @mGC_bottom_0_0 <anchor 0 0> @MC_bottom;
-markClass @mGC_top_0_516 <anchor 0 516> @MC_top;
-markClass @mGC_top_0_698 <anchor 0 698> @MC_top;
-markClass commaaboverightcomb <anchor 0 740> @MC_topright;
-markClass ogonekcomb <anchor 0 0> @MC_bottomright;
-
-lookup MARK_BASE_bottom {
-    @bGC_D_bottom = [D J];
-    @bGC_F_bottom = [F P];
-    @bGC_c_bottom = [c h n];
-    @bGC_f_bottom = [f C R];
-    @bGC_i_bottom = [i idotless];
-    @bGC_l_bottom = [l m o v w x z A G H I M N O T U V W X Y Z ohorn Ohorn Uhorn];
-    @bGC_u_bottom = [u S uhorn];
-    pos base @bGC_D_bottom <anchor 277 0> mark @MC_bottom;
-    pos base @bGC_F_bottom <anchor 132 0> mark @MC_bottom;
-    pos base @bGC_c_bottom <anchor 303 0> mark @MC_bottom;
-    pos base @bGC_f_bottom <anchor 308 0> mark @MC_bottom;
-    pos base @bGC_i_bottom <anchor 332 0> mark @MC_bottom;
-    pos base @bGC_l_bottom <anchor 300 0> mark @MC_bottom;
-    pos base @bGC_u_bottom <anchor 297 0> mark @MC_bottom;
-    pos base B <anchor 315 0> mark @MC_bottom;
-    pos base E <anchor 305 0> mark @MC_bottom;
-    pos base K <anchor 322 0> mark @MC_bottom;
-    pos base L <anchor 327 0> mark @MC_bottom;
-    pos base a <anchor 283 0> mark @MC_bottom;
-    pos base a.alt01 <anchor 287 0> mark @MC_bottom;
-    pos base b <anchor 317 0> mark @MC_bottom;
-    pos base d <anchor 282 0> mark @MC_bottom;
-    pos base e <anchor 309 0> mark @MC_bottom;
-    pos base k <anchor 323 0> mark @MC_bottom;
-    pos base r <anchor 268 0> mark @MC_bottom;
-    pos base s <anchor 294 0> mark @MC_bottom;
-    pos base t <anchor 375 0> mark @MC_bottom;
-    pos base y <anchor 460 0> mark @MC_bottom;
-} MARK_BASE_bottom;
-
-
-lookup MARK_BASE_bottomright {
-    @bGC_i_bottomright = [i idotless];
-    pos base @bGC_i_bottomright <anchor 546 0> mark @MC_bottomright;
-    pos base A <anchor 570 0> mark @MC_bottomright;
-    pos base E <anchor 520 0> mark @MC_bottomright;
-    pos base I <anchor 516 0> mark @MC_bottomright;
-    pos base U <anchor 394 0> mark @MC_bottomright;
-    pos base a <anchor 550 0> mark @MC_bottomright;
-    pos base a.alt01 <anchor 505 0> mark @MC_bottomright;
-    pos base e <anchor 391 0> mark @MC_bottomright;
-    pos base u <anchor 502 0> mark @MC_bottomright;
-} MARK_BASE_bottomright;
-
-
-lookup MARK_BASE_top {
-    @bGC_J_top = [J K];
-    @bGC_a.alt01_top = [a.alt01 g.alt01];
-    @bGC_g.alt02_top = [g.alt02 m o v w x y z ae oslash ohorn];
-    @bGC_g_top = [g u uhorn];
-    @bGC_l_top = [l A H I M N O P Q T U V W X Y Z Oslash Ohorn Uhorn];
-    pos base @bGC_J_top <anchor 313 698> mark @MC_top;
-    pos base @bGC_a.alt01_top <anchor 287 516> mark @MC_top;
-    pos base @bGC_g.alt02_top <anchor 300 516> mark @MC_top;
-    pos base @bGC_g_top <anchor 297 516> mark @MC_top;
-    pos base @bGC_l_top <anchor 300 698> mark @MC_top;
-    pos base AE <anchor 393 698> mark @MC_top;
-    pos base B <anchor 295 698> mark @MC_top;
-    pos base C <anchor 328 698> mark @MC_top;
-    pos base D <anchor 277 698> mark @MC_top;
-    pos base E <anchor 305 698> mark @MC_top;
-    pos base F <anchor 310 698> mark @MC_top;
-    pos base G <anchor 306 698> mark @MC_top;
-    pos base L <anchor 162 698> mark @MC_top;
-    pos base R <anchor 308 698> mark @MC_top;
-    pos base S <anchor 298 698> mark @MC_top;
-    pos base a <anchor 283 516> mark @MC_top;
-    pos base c <anchor 313 516> mark @MC_top;
-    pos base idotless <anchor 332 516> mark @MC_top;
-    pos base jdotless <anchor 392 516> mark @MC_top;
-    pos base e <anchor 302 516> mark @MC_top;
-    pos base h <anchor 138 698> mark @MC_top;
-    pos base n <anchor 303 516> mark @MC_top;
-    pos base p <anchor 317 516> mark @MC_top;
-    pos base q <anchor 282 516> mark @MC_top;
-    pos base r <anchor 353 516> mark @MC_top;
-    pos base s <anchor 298 516> mark @MC_top;
-} MARK_BASE_top;
-
-
-lookup MARK_BASE_topright {
-    pos base L <anchor 290 740> mark @MC_topright;
-    pos base d <anchor 567 740> mark @MC_topright;
-    pos base l <anchor 426 740> mark @MC_topright;
-    pos base t <anchor 387 760> mark @MC_topright;
-} MARK_BASE_topright;
-";
-tag = mark;
 },
 {
 code = "# Name: Numerators
@@ -147302,6 +147200,493 @@ width = 600;
 }
 );
 unicode = 9684;
+},
+{
+glyphname = dottedCircle;
+lastChange = "2026-06-16 17:59:53 +0000";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (300,0);
+},
+{
+name = bottomright;
+pos = (457,0);
+},
+{
+name = center;
+pos = (300,351);
+},
+{
+name = horn;
+pos = (479,624);
+},
+{
+name = top;
+pos = (300,698);
+},
+{
+name = topright;
+pos = (504,624);
+}
+);
+layerId = m002;
+shapes = (
+{
+closed = 1;
+nodes = (
+(557,506,l),
+(533,548,o),
+(498,583,o),
+(455,608,c),
+(416,543,l),
+(448,525,o),
+(474,499,o),
+(492,467,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(184,159,l),
+(152,177,o),
+(126,203,o),
+(108,235,c),
+(42,196,l),
+(67,153,o),
+(102,118,o),
+(145,93,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(325,53,o),
+(349,56,o),
+(372,61,c),
+(354,135,l),
+(337,131,o),
+(319,129,o),
+(300,129,c),
+(281,129,o),
+(263,131,o),
+(246,135,c),
+(228,61,l),
+(251,56,o),
+(275,53,o),
+(300,53,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(84,297,l),
+(80,314,o),
+(78,332,o),
+(78,351,c),
+(78,370,o),
+(80,388,o),
+(84,405,c),
+(10,423,l),
+(5,400,o),
+(2,376,o),
+(2,351,c),
+(2,326,o),
+(5,302,o),
+(10,279,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(128,497,o),
+(154,523,o),
+(186,542,c),
+(146,607,l),
+(104,582,o),
+(69,547,o),
+(43,505,c),
+(109,466,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(498,118,o),
+(532,153,o),
+(557,196,c),
+(492,236,l),
+(474,203,o),
+(448,177,o),
+(416,158,c),
+(455,93,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(594,302,o),
+(597,326,o),
+(597,351,c),
+(597,376,o),
+(594,400,o),
+(589,423,c),
+(515,405,l),
+(519,388,o),
+(521,370,o),
+(521,351,c),
+(521,332,o),
+(519,314,o),
+(515,297,c),
+(589,279,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(264,570,o),
+(281,572,o),
+(300,572,c),
+(319,572,o),
+(337,570,o),
+(354,566,c),
+(372,640,l),
+(349,645,o),
+(325,648,o),
+(300,648,c),
+(275,648,o),
+(251,645,o),
+(228,640,c),
+(246,566,l)
+);
+}
+);
+width = 600;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (300,0);
+},
+{
+name = bottomright;
+pos = (457,0);
+},
+{
+name = center;
+pos = (300,351);
+},
+{
+name = horn;
+pos = (479,624);
+},
+{
+name = top;
+pos = (300,698);
+},
+{
+name = topright;
+pos = (504,624);
+}
+);
+layerId = m001;
+shapes = (
+{
+closed = 1;
+nodes = (
+(560,501,l),
+(534,548,o),
+(497,585,o),
+(450,610,c),
+(438,589,l),
+(481,566,o),
+(515,532,o),
+(538,489,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(162,113,l),
+(120,137,o),
+(85,171,o),
+(62,213,c),
+(41,201,l),
+(66,155,o),
+(104,117,o),
+(150,92,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(327,54,o),
+(353,57,o),
+(377,63,c),
+(371,86,l),
+(348,81,o),
+(325,78,o),
+(300,78,c),
+(275,78,o),
+(252,81,o),
+(229,86,c),
+(223,63,l),
+(247,57,o),
+(273,54,o),
+(300,54,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(35,280,l),
+(30,303,o),
+(27,326,o),
+(27,351,c),
+(27,376,o),
+(30,399,o),
+(36,422,c),
+(13,428,l),
+(6,404,o),
+(3,378,o),
+(3,351,c),
+(3,324,o),
+(6,298,o),
+(12,274,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(87,530,o),
+(122,564,o),
+(163,588,c),
+(151,608,l),
+(106,583,o),
+(68,546,o),
+(42,500,c),
+(63,488,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(496,117,o),
+(534,155,o),
+(559,201,c),
+(538,213,l),
+(515,171,o),
+(481,136,o),
+(438,112,c),
+(450,91,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(593,298,o),
+(596,324,o),
+(596,351,c),
+(596,378,o),
+(593,404,o),
+(587,428,c),
+(564,422,l),
+(569,399,o),
+(572,376,o),
+(572,351,c),
+(572,326,o),
+(569,303,o),
+(564,280,c),
+(587,274,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(252,620,o),
+(276,623,o),
+(300,623,c),
+(325,623,o),
+(348,620,o),
+(371,615,c),
+(377,638,l),
+(353,644,o),
+(327,647,o),
+(300,647,c),
+(274,647,o),
+(248,644,o),
+(223,637,c),
+(230,614,l)
+);
+}
+);
+width = 600;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (300,0);
+},
+{
+name = bottomright;
+pos = (457,0);
+},
+{
+name = center;
+pos = (300,351);
+},
+{
+name = horn;
+pos = (479,624);
+},
+{
+name = top;
+pos = (300,698);
+},
+{
+name = topright;
+pos = (504,624);
+}
+);
+layerId = m003;
+shapes = (
+{
+closed = 1;
+nodes = (
+(555,510,l),
+(531,549,o),
+(498,582,o),
+(459,606,c),
+(394,501,l),
+(417,487,o),
+(436,468,o),
+(450,445,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(206,200,l),
+(183,214,o),
+(163,234,o),
+(149,257,c),
+(45,192,l),
+(69,153,o),
+(102,120,o),
+(141,96,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(323,53,o),
+(346,55,o),
+(367,60,c),
+(339,180,l),
+(327,177,o),
+(314,176,o),
+(300,175.5,c),
+(286,176,o),
+(273,177,o),
+(260,179,c),
+(232,60,l),
+(254,55,o),
+(277,53,o),
+(300,52.5,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(129,311,l),
+(126,324,o),
+(125,337,o),
+(124.5,351,c),
+(125,365,o),
+(126,378,o),
+(129,391,c),
+(9,418,l),
+(4,397,o),
+(2,374,o),
+(1.5,351,c),
+(2,328,o),
+(4,305,o),
+(9,284,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(164,468,o),
+(184,487,o),
+(207,501,c),
+(141,605,l),
+(103,581,o),
+(70,549,o),
+(46,510,c),
+(150,445,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(498,120,o),
+(531,153,o),
+(555,192,c),
+(450,257,l),
+(436,234,o),
+(417,214,o),
+(394,201,c),
+(459,96,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(595,305,o),
+(598,328,o),
+(597.5,351,c),
+(598,374,o),
+(595,397,o),
+(591,418,c),
+(471,391,l),
+(473,378,o),
+(475,365,o),
+(474.5,351,c),
+(475,337,o),
+(473,324,o),
+(471,312,c),
+(591,284,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(273,524,o),
+(286,526,o),
+(300,525.5,c),
+(314,526,o),
+(327,524,o),
+(339,522,c),
+(367,642,l),
+(346,646,o),
+(323,649,o),
+(300,648.5,c),
+(277,649,o),
+(255,646,o),
+(233,642,c),
+(260,522,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 9676;
 },
 {
 glyphname = upperLeftArc;

@@ -7,9 +7,10 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Overline (`‾`).
-- ASCII control pictures (uni2400—uni2421).
+- ASCII control pictures (`uni2400`—`uni2421`).
 - Rounded comma and quotes (`ss05`).
 - More combs (`uni0331`, `uni032D`, `uni032E`).
+- Dotted circle (`◌`).
 
 ### Fixed
 
