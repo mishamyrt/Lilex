@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - Rendering order (`Λ`, `┇`, `┆`, `┋`).
+- Soft dotted glyphs (`i`, `j`).
 
 ## [2.700] — April 04, 2026
 

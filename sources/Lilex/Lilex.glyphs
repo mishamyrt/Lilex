@@ -72,7 +72,8 @@ code = "acutecomb breveacute brevecomb brevegrave brevehook brevetilde caroncomb
 name = acc_comb_top;
 },
 {
-code = "breveacute brevegrave brevehook brevetilde circumflexacute circumflexbreve circumflexgrave circumflexhook circumflextilde dieresisacute dieresiscaron dieresisgrave dieresismacron hookabovecomb";
+code = "breveacute brevegrave brevehook brevetilde circumflexacute circumflexbreve circumflexgrave circumflexhook circumflextilde dieresisacute dieresiscaron dieresisgrave dieresismacron hookabovecomb
+";
 name = acc_comb_dflt;
 },
 {
@@ -84,7 +85,8 @@ code = "A AE Aogonek B C Ccedilla D E Eogonek F G H I Iogonek J K L M N O OE Oho
 name = uc_basic;
 },
 {
-code = "dotbelowcomb commaaccentcomb cedillacomb ogonekcomb";
+code = "dotbelowcomb commaaccentcomb cedillacomb ogonekcomb circumflexbelowcomb brevebelowcomb macronbelowcomb
+";
 name = acc_comb_bottom;
 },
 {
@@ -1447,14 +1449,8 @@ lookup letter_combs {
     sub g commaaccentcomb' by commaturnedabovecomb; # /gcommaaccent
 
     # Soft-dotted
-    sub i' @acc_comb_top by idotless;
-    sub i' @acc_comb_bottom @acc_comb_top by idotless;
-    sub i-cy' @acc_comb_top by idotless;
-    sub i-cy' @acc_comb_bottom @acc_comb_top by idotless;
-    sub iogonek' @acc_comb_top by idotlessogonek;
-    sub idotbelow' @acc_comb_top by idotlessdotbelow;
-    sub j' @acc_comb_top by jdotless;
-    sub j' @acc_comb_bottom @acc_comb_top by jdotless;
+    sub [i i-cy iogonek idotbelow j je-cy]' @acc_comb_top by [idotless idotless idotlessogonek idotlessdotbelow jdotless jdotless];
+    sub [i i-cy iogonek idotbelow j je-cy]' @acc_comb_bottom @acc_comb_top by [idotless idotless idotlessogonek idotlessdotbelow jdotless jdotless];
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
 } letter_combs;
 ";
@@ -152153,6 +152149,58 @@ width = 600;
 unicode = 9566;
 },
 {
+export = 0;
+glyphname = "brevecomb-cy";
+lastChange = "2026-06-16 19:04:14 +0000";
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (0,516);
+}
+);
+layerId = "A5F3D33E-00A1-4213-AAE8-48E0A2B2F36F";
+shapes = (
+{
+ref = brevecomb;
+}
+);
+width = 600;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (0,516);
+}
+);
+layerId = "C7B35BE3-AA13-4B78-992E-F05F1268D666";
+shapes = (
+{
+ref = brevecomb;
+}
+);
+width = 600;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (0,516);
+}
+);
+layerId = "055264FC-C366-4C37-95B8-CB5161C9C36E";
+shapes = (
+{
+ref = brevecomb;
+}
+);
+width = 600;
+}
+);
+},
+{
 color = 5;
 glyphname = tonos;
 lastChange = "2024-08-03 09:43:18 +0000";
@@ -153726,7 +153774,7 @@ unicode = 813;
 },
 {
 glyphname = brevebelowcomb;
-lastChange = "2026-06-16 08:26:30 +0000";
+lastChange = "2026-06-16 18:46:10 +0000";
 layers = (
 {
 anchors = (
@@ -153811,7 +153859,7 @@ userData = {
 "com.type-invaders.name.final" = uni032E;
 "com.type-invaders.name.production" = brevebelowcomb;
 };
-width = 0;
+width = 600;
 },
 {
 anchors = (
