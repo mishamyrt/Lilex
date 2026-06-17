@@ -1,10 +1,6 @@
 {
 .appVersion = "3434";
 .formatVersion = 3;
-DisplayStrings = (
-"α",
-"/alpha.alt01"
-);
 axes = (
 {
 name = Weight;
@@ -154,6 +150,7 @@ wght = {
 "300" = 300;
 "400" = 400;
 "500" = 500;
+"555" = 550;
 "600" = 600;
 "700" = 700;
 };

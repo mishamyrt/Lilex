@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Rendering order (`Λ`, `┇`, `┆`, `┋`).
 - Soft dotted glyphs (`i`, `j`).
 - Diacritics positioning.
+- Force AVAR table to be present.
 
 ## [2.700] — April 04, 2026
 
