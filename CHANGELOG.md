@@ -11,14 +11,16 @@ All notable changes to this project will be documented in this file.
 - Rounded comma and quotes (`ss05`).
 - More combs (`uni0331`, `uni032D`, `uni032E`).
 - Dotted circle (`◌`).
-- Sami-cyrillic en letter (`Ӊ`, `ӊ`)
+- Sami-cyrillic en letter (`Ӊ`, `ӊ`).
+- Meta table (language tags).
 
 ### Fixed
 
 - Rendering order (`Λ`, `┇`, `┆`, `┋`).
 - Soft dotted glyphs (`i`, `j`).
 - Diacritics positioning.
-- Force AVAR table to be present.
+- Force AVAR table to be present in variable font.
+- Missaligned lines. (`plus_plus.liga`, `greater_greater_hyphen_middle.seq`, `greater_greater_hyphen_start.seq`, `greater_hyphen_start.seq`, `exclam_equal_equal.liga`, `Ђ`, `₩`, `₹`).
 
 ## [2.700] — April 04, 2026
 

@@ -155,6 +155,19 @@ wght = {
 "700" = 700;
 };
 };
+},
+{
+name = "meta Table";
+value = (
+{
+data = Latn;
+tag = dlng;
+},
+{
+data = "Latn,Cyrl,Grek";
+tag = slng;
+}
+);
 }
 );
 date = "2024-07-29 10:53:25 +0000";
@@ -111107,7 +111120,7 @@ width = 600;
 },
 {
 glyphname = less_hyphen_middle.seq;
-lastChange = "2025-11-01 09:18:48 +0000";
+lastChange = "2026-06-17 21:15:42 +0000";
 layers = (
 {
 guides = (
@@ -111180,9 +111193,6 @@ width = 600;
 guides = (
 {
 pos = (483,367);
-},
-{
-pos = (481,245);
 }
 );
 layerId = m003;
