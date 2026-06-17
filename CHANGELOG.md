@@ -17,7 +17,7 @@ All notable changes to this project will be documented in this file.
 
 - Rendering order (`Λ`, `┇`, `┆`, `┋`).
 - Soft dotted glyphs (`i`, `j`).
-- Diacritics positioning with `э`, `є`, `я`, `ю`, `ъ`.
+- Diacritics positioning.
 
 ## [2.700] — April 04, 2026
 
