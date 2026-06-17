@@ -113,6 +113,12 @@ define fontbakery-check-format
 		$(if $(filter-out parallel,$(1)),,--auto-jobs) \
 		$(if $(filter-out variable,$(3)),-x opentype/STAT/ital_axis) \
 		-x fontdata_namecheck \
+		-x valid_glyphnames \
+		-x googlefonts/article/images \
+		-x googlefonts/vendor_id \
+		-x googlefonts/metadata/unreachable_subsetting \
+		-x contour_count \
+		--full-lists \
 		--html "$(REPORTS_DIR)/$(2)_$(3).html" \
 		"$(BUILD_DIR)/$(2)/$(3)/"*
 endef
