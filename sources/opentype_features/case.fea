@@ -8,6 +8,7 @@ sub hungarumlaut by hungarumlaut.case;
 sub circumflex by circumflex.case;
 sub caron by caron.case;
 sub breve by breve.case;
+sub breve.cyrl by breve_case.cyrl_;
 sub ring by ring.case;
 sub tilde by tilde.case;
 sub macron by macron.case;

@@ -25,3 +25,8 @@ lookup letter_combs {
     sub [i i-cy iogonek idotbelow j je-cy]' @acc_comb_bottom @acc_comb_top by [idotless idotless idotlessogonek idotlessdotbelow jdotless jdotless];
     sub @uc_basic @acc_comb_dflt' by @acc_comb_case; # case accents
 } letter_combs;
+
+lookup ij_acute_combs {
+    sub IJ acutecomb by IJacute;
+    sub ij acutecomb by ijacute;
+} ij_acute_combs;

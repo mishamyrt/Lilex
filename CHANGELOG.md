@@ -20,6 +20,8 @@ All notable changes to this project will be documented in this file.
 - Soft dotted glyphs (`i`, `j`).
 - Diacritics positioning.
 - Force AVAR table to be present in variable font.
+- acaron (`ǎ`) with `cv01`.
+- ijcaron composition (`Ĳ́`, `ĳ́`).
 - Missaligned lines. (`plus_plus.liga`, `greater_greater_hyphen_middle.seq`, `greater_greater_hyphen_start.seq`, `greater_hyphen_start.seq`, `exclam_equal_equal.liga`, `Ђ`, `₩`, `₹`).
 
 ## [2.700] — April 04, 2026
