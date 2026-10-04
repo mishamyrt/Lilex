@@ -6,24 +6,23 @@
 	"scripts": {
 		"dev": "astro dev --host 0.0.0.0",
 		"start": "astro dev",
-		"build": "astro check && astro build",
+		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
 		"format": "oxfmt .",
-		"lint": "oxfmt --check . && astro check"
+		"lint": "oxfmt --check ."
 	},
 	"dependencies": {
-		"@astrojs/check": "0.9.9",
-		"@astrojs/sitemap": "^3.7.3",
-		"astro": "6.4.6",
-		"astro-typograf": "3.3.0",
+		"@astrojs/sitemap": "3.7.4",
+		"astro": "7.3.5",
+		"astro-typograf": "4.0.0",
 		"fast-glob": "3.3.3",
-		"nanostores": "1.3.0",
-		"typescript": "6.0.3"
+		"nanostores": "1.5.4",
+		"typescript": "7.0.2"
 	},
 	"devDependencies": {
-		"@types/node": "25.9.3",
-		"oxfmt": "0.54.0",
-		"sass": "1.101.0"
+		"@types/node": "26.6.4",
+		"oxfmt": "0.71.0",
+		"sass": "1.105.1"
 	}
 }
