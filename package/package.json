@@ -1,6 +1,6 @@
 {
   "name": "lilex-font",
-  "version": "2.7.0",
+  "version": "2.6.30",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mishamyrt/Lilex.git"
@@ -10,8 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-  	"font",
-   	"ligatures"
+    "font",
+    "ligatures"
   ],
   "author": "mishamyrt",
   "license": "OFL",
