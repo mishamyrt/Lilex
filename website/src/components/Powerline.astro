@@ -1,72 +1,84 @@
 ---
-const RIGHT_BLACK_ARROW_CHAR = "\uE0B0"
-const RIGHT_ARROW_CHAR = "\uE0B1"
-const LEFT_BLACK_ARROW_CHAR = "\uE0B2"
-const LEFT_ARROW_CHAR = "\uE0B3"
+const RIGHT_BLACK_ARROW_CHAR = "\uE0B0";
+const RIGHT_ARROW_CHAR = "\uE0B1";
+const LEFT_BLACK_ARROW_CHAR = "\uE0B2";
+const LEFT_ARROW_CHAR = "\uE0B3";
 
 export type Part = {
 	text: string;
-	color?: 'grey_10' | 'grey_30' | 'grey_60' | 'yellow_60' | 'green' | 'red';
+	color?: "grey_10" | "grey_30" | "grey_60" | "yellow_60" | "green" | "red";
 	isPath?: boolean;
 	icon?: string;
-}
+};
 
 export type Props = {
 	class?: string;
 	parts: Part[];
-	direction?: 'left' | 'right';
-}
+	direction?: "left" | "right";
+};
 
-const { class: className, parts, direction = 'right', ...props } = Astro.props;
+const { class: className, parts, direction = "right", ...props } = Astro.props;
 
-const pathDelimiter = direction === 'right' ? RIGHT_ARROW_CHAR : LEFT_ARROW_CHAR
+const pathDelimiter =
+	direction === "right" ? RIGHT_ARROW_CHAR : LEFT_ARROW_CHAR;
 
 const renderedParts = parts.map((part) => {
-	const textSegments = part.isPath 
-		? part.text.split('/').map(segment => segment.trim())
+	const textSegments = part.isPath
+		? part.text.split("/").map((segment) => segment.trim())
 		: [part.text];
 	return {
 		textSegments,
 		color: part.color,
 		isPath: part.isPath,
-		icon: part.icon
-	}
-})
+		icon: part.icon,
+	};
+});
 ---
 
-<div style={`--powerline-path-delimiter: '${pathDelimiter}'`} class:list={["powerline", className]} {...props}>
+<div
+	style={`--powerline-path-delimiter: '${pathDelimiter}'`}
+	class:list={["powerline", className]}
+	{...props}
+>
 	{renderedParts.map((part, i) => (
 		<div class:list={["powerline-part", `color-${part.color}`]}>
-			{direction === 'left' && (
-				<span class:list={[
-					"powerline-separator",
-					i !== 0 ? `color-${renderedParts[i-1].color}` : null
-				]}>{LEFT_BLACK_ARROW_CHAR}</span>
+			{direction === "left" && (
+				<span
+					class:list={[
+						"powerline-separator",
+						i !== 0 ? `color-${renderedParts[i - 1].color}` : null,
+					]}
+				>
+					{LEFT_BLACK_ARROW_CHAR}
+				</span>
 			)}
 			<span class:list={["powerline-content", `direction-${direction}`]}>
-				<span class="powerline-content-icon">
-					{part.icon}
-				</span>
+				<span class="powerline-content-icon">{part.icon}</span>
 				<span class="powerline-content-text">
-					{part.isPath 
+					{part.isPath
 						? part.textSegments.map((segment, j) => (
-							<>
-								{segment}
-								{j < part.textSegments.length - 1 && (
-									<span class="powerline-path-delimiter"></span>
-								)}
-							</>
-						))
-						: part.textSegments[0]
-					}
+								<>
+									{segment}
+									{j < part.textSegments.length - 1 && (
+										<span class="powerline-path-delimiter"></span>
+									)}
+								</>
+							))
+						: part.textSegments[0]}
 				</span>
 			</span>
-			{direction === 'right' && (
-				<span class:list={[
-					"powerline-separator",
-					i !== parts.length - 1 ? `color-${renderedParts[i+1].color}` : null
-				]}>{RIGHT_BLACK_ARROW_CHAR}</span>
-			)}	
+			{direction === "right" && (
+				<span
+					class:list={[
+						"powerline-separator",
+						i !== parts.length - 1
+							? `color-${renderedParts[i + 1].color}`
+							: null,
+					]}
+				>
+					{RIGHT_BLACK_ARROW_CHAR}
+				</span>
+			)}
 		</div>
 	))}
 </div>
@@ -158,14 +170,15 @@ const renderedParts = parts.map((part) => {
 			margin: 0 1em;
 
 			&::after {
-				content: '|';
+				content: "|";
 			}
 		}
 	}
-	
+
 	:global(.powerline-enabled) {
 		.powerline-content-icon {
 			display: inline;
+			margin-right: 1em;
 		}
 
 		.powerline-separator {

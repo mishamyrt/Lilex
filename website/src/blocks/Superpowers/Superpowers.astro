@@ -33,8 +33,9 @@ const isSuperpowersEnabled = $isSuperpowersEnabled.get();
 					align="center"
 					direction="row"
 				>
-					<Typography as="h2" variant="heading-m_accent">Superpowers</Typography
-					>
+					<Typography as="h2" variant="heading-m_accent">
+						Superpowers
+					</Typography>
 					<Toggle
 						checked={isSuperpowersEnabled}
 						inputClass="superpowers-toggleInput"
@@ -77,10 +78,11 @@ const isSuperpowersEnabled = $isSuperpowersEnabled.get();
 				</Typography>
 				<Typography color="secondary">
 					<span>
-						The font contains the necessary character set for correct <Link
-							target="_blank"
-							href="https://github.com/powerline/powerline">Powerline</Link
-						>display.
+						The font contains the necessary character set for correct{" "}
+						<Link target="_blank" href="https://github.com/powerline/powerline">
+							Powerline
+						</Link>
+						 display.
 					</span>
 				</Typography>
 				<PreviewPowerline slot="preview" />
@@ -103,7 +105,7 @@ const isSuperpowersEnabled = $isSuperpowersEnabled.get();
 	} from "../../stores/superpowers";
 
 	const toggles = document.querySelectorAll<HTMLInputElement>(
-		".superpowers-toggleInput"
+		".superpowers-toggleInput",
 	);
 	if (!toggles) {
 		throw new Error("Toggle element not found");
@@ -111,7 +113,7 @@ const isSuperpowersEnabled = $isSuperpowersEnabled.get();
 
 	for (const toggle of toggles) {
 		toggle.addEventListener("change", () =>
-			setSuperpowersEnabled(toggle.checked)
+			setSuperpowersEnabled(toggle.checked),
 		);
 	}
 
