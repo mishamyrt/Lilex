@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Next
+
+### Added
+
+- Less equal arrow (`cv16`).
+
 ## [2.630] — October 05, 2026
 
 ### Added

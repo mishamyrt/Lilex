@@ -1574,6 +1574,20 @@ code = "featureNames {
 sub @comma_dflt by @comma_rounded;
 ";
 tag = ss05;
+},
+{
+code = "cvParameters {
+  FeatUILabelNameID{
+    name 3 1 0x0409 \"Less tand equal as an arrow\";
+  };
+};
+# Name: Less tand equal as an arrow
+# Example: <=
+
+sub less_equal_start.seq less_equal.liga' by equal_end.seq;
+sub less.spacer' less_equal.liga by less_equal_start.seq;
+";
+tag = cv16;
 }
 );
 fontMaster = (
